@@ -1,0 +1,8 @@
+//
+// Created by dirii on 04/03/2023.
+//
+
+#ifndef VISUALGO_CS162_MAINWINDOW_H
+#define VISUALGO_CS162_MAINWINDOW_H
+
+#endif //VISUALGO_CS162_MAINWINDOW_H
