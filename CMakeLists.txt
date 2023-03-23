@@ -8,6 +8,6 @@ find_package(SFML COMPONENTS audio graphics window system REQUIRED)
 
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
-add_executable(Visualgo_CS162 main.cpp)
+add_executable(Visualgo_CS162 main.cpp include/Window.cpp include/Window.h)
 
 target_link_libraries(Visualgo_CS162 sfml-graphics sfml-window sfml-system)
