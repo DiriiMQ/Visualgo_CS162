@@ -1,6 +1,13 @@
-#include <iostream>
+#include "Window.hpp"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    Window window;
+
+    while (window.running()) {
+        window.update();
+
+        window.render();
+    }
+
     return 0;
 }
