@@ -28,6 +28,7 @@ private:
     bool isClick;
 
     void init();
+
 public:
     Button(sf::RenderWindow* window, sf::Vector2f position, sf::Vector2f size, std::string textString, std::string changedTextString, int textSize, sf::Color textColor, sf::Color color, sf::Color hoverColor, sf::Color clickColor);
 
