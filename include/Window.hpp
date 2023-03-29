@@ -10,6 +10,7 @@
 #include "MousePosition.hpp"
 #include "Constants.hpp"
 #include "Stuff.hpp"
+#include "libScene/AllScenes.hpp"
 
 class Window : public MousePosition{
 private:
@@ -17,11 +18,16 @@ private:
     sf::VideoMode videoMode;
     sf::Event event{};
 
+    // scenes
+    class BaseScene* scenes[constants::sceneVariables::SCENE_COUNT];
+    constants::sceneVariables::Scene currentScene;
+
     // buttons
     Button* submenuButton,
             *demoCodeButton;
 
     void initWindow();
+    void initScenes();
     void init();
 public:
     Window();

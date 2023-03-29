@@ -20,8 +20,8 @@ void Button::init() {
     this->text.setString(this->textString);
     this->text.setCharacterSize(this->textSize);
     this->text.setFillColor(this->textColor);
-    this->text.setPosition(this->position.x + this->size.x / 2 - this->text.getGlobalBounds().width / 2,
-                           this->position.y + this->size.y / 2 - this->text.getGlobalBounds().height / 2);
+    this->text.setPosition(this->position.x + this->size.x / 2.0 - this->text.getGlobalBounds().width / 2.0,
+                           this->position.y + this->size.y / 2.0 - this->text.getGlobalBounds().height / 1.1);
 }
 
 Button::Button(sf::RenderWindow *window, sf::Vector2f position, sf::Vector2f size,
@@ -37,7 +37,7 @@ Button::Button(sf::RenderWindow *window, sf::Vector2f position, sf::Vector2f siz
     this->textColor = textColor;
     this->hoverColor = hoverColor;
     this->clickColor = clickColor;
-    this->font.loadFromFile("../assets/fonts/OpenSans.ttf");
+    this->font.loadFromFile(constants::fontPath);
 
     this->init();
 }
@@ -77,4 +77,16 @@ void Button::render() {
 
 bool Button::checkClicked() const {
     return this->isClick and this->isHover;
+}
+
+std::string Button::getTextString() const {
+    return this->textString;
+}
+
+void Button::setColor(sf::Color color) {
+    this->color = color;
+}
+
+Button::Button() {
+
 }
