@@ -5,7 +5,7 @@
 #ifndef VISUALGO_CS162_TEXTBOX_HPP
 #define VISUALGO_CS162_TEXTBOX_HPP
 
-#include "constants.hpp"
+#include "Constants.hpp"
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <string>
