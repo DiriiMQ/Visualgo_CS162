@@ -11,7 +11,7 @@ class StackScene : public BaseScene{
 public:
     explicit StackScene(sf::RenderWindow* window);
 
-    void pollEvent(sf::Vector2f mousePosView) override;
+    void pollEvent(sf::Event event, sf::Vector2f mousePosView) override;
     void update() override;
     void render() override;
 };

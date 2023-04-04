@@ -11,7 +11,7 @@ class MainMenu : public BaseScene{
 public:
     explicit MainMenu(sf::RenderWindow* window);
 
-    void pollEvent(sf::Vector2f mousePosView) override;
+    void pollEvent(sf::Event event, sf::Vector2f mousePosView) override;
     void update() override;
     void render() override;
 };

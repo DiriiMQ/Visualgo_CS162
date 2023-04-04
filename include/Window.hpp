@@ -9,7 +9,7 @@
 #include <SFML/Graphics.hpp>
 #include "MousePosition.hpp"
 #include "Constants.hpp"
-#include "Stuff.hpp"
+#include "stuff/button.hpp"
 #include "libScene/AllScenes.hpp"
 
 class Window : public MousePosition{
@@ -29,6 +29,7 @@ private:
     void initWindow();
     void initScenes();
     void init();
+
 public:
     Window();
     ~Window() = default;

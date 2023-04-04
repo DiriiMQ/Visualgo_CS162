@@ -16,6 +16,6 @@ CLLScene::CLLScene(sf::RenderWindow *window) : BaseScene(window) {
 
 }
 
-void CLLScene::pollEvent(sf::Vector2f mousePosView) {
+void CLLScene::pollEvent(sf::Event event, sf::Vector2f mousePosView) {
 
 }

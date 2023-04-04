@@ -6,7 +6,7 @@
 #define VISUALGO_CS162_BASESCENE_HPP
 
 #include <SFML/Graphics.hpp>
-#include "Stuff.hpp"
+#include "stuff/button.hpp"
 
 class BaseScene{
 protected:
@@ -21,7 +21,7 @@ public:
 
     void createModeButton(sf::Vector2f position, std::string textString);
 
-    virtual void pollEvent(sf::Vector2f mousePosView) = 0;
+    virtual void pollEvent(sf::Event event, sf::Vector2f mousePosView) = 0;
     virtual void update() = 0;
     virtual void render() = 0;
 };

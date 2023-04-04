@@ -16,6 +16,6 @@ void StaticArrayScene::render() {
 
 }
 
-void StaticArrayScene::pollEvent(sf::Vector2f mousePosView) {
+void StaticArrayScene::pollEvent(sf::Event event, sf::Vector2f mousePosView) {
 
 }

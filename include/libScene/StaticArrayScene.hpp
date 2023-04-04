@@ -11,7 +11,7 @@ class StaticArrayScene : public BaseScene{
 public:
     explicit StaticArrayScene(sf::RenderWindow* window);
 
-    void pollEvent(sf::Vector2f mousePosView) override;
+    void pollEvent(sf::Event event, sf::Vector2f mousePosView) override;
     void update() override;
     void render() override;
 };

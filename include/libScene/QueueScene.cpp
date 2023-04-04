@@ -16,6 +16,6 @@ void QueueScene::render() {
 
 }
 
-void QueueScene::pollEvent(sf::Vector2f mousePosView) {
+void QueueScene::pollEvent(sf::Event event, sf::Vector2f mousePosView) {
 
 }

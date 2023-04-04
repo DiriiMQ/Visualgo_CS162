@@ -16,6 +16,6 @@ void DynamicArrayScene::render() {
 
 }
 
-void DynamicArrayScene::pollEvent(sf::Vector2f mousePosView) {
+void DynamicArrayScene::pollEvent(sf::Event event, sf::Vector2f mousePosView) {
 
 }

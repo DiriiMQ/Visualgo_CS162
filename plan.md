@@ -6,3 +6,6 @@
 - next, back, pause button?
 - step by step or run at once
 - speed of the animation
+
+design lại option menu cho Create, Add, Delete, Search, Update
+Create tạo ra box để nhập dữ liệu number of nodes và value

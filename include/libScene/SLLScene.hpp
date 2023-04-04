@@ -6,19 +6,24 @@
 #define VISUALGO_CS162_SLLSCENE_HPP
 
 #include "BaseScene.hpp"
-#include "Stuff.hpp"
+#include "stuff/button.hpp"
+#include "MenuLinkedList.hpp"
 
-class SLLScene : public BaseScene{
+class SLLScene : public BaseScene {
 private:
     sf::Text* text;
     sf::Font* font;
+    MenuLinkedList* menu;
 
     void init();
+    void initMenu();
 
 public:
     explicit SLLScene(sf::RenderWindow* window);
 
-    void pollEvent(sf::Vector2f mousePosView) override;
+    void reset();
+
+    void pollEvent(sf::Event event, sf::Vector2f mousePosView) override;
     void update() override;
     void render() override;
 };

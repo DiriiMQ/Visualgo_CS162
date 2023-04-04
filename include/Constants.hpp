@@ -48,13 +48,62 @@ namespace constants{
         };
     }
 
+    namespace MenuLinkedList {
+        constexpr int BUTTON_COUNT = 5;
+        enum Button {
+            CREATE_BUTTON,
+            ADD_BUTTON,
+            DELETE_BUTTON,
+            UPDATE_BUTTON,
+            SEARCH_BUTTON,
+            NONE
+        };
+        constexpr char BUTTON_NAMES[BUTTON_COUNT][50] = {
+                "Create",
+                "Add",
+                "Delete",
+                "Update",
+                "Search"
+        };
+        constexpr int BUTTON_NAME_SIZE = 15;
+
+        namespace CreateMode {
+            constexpr int BUTTON_COUNT = 3;
+            enum Button {
+                RANDOM_BUTTON,
+                DEFINED_LIST_BUTTON,
+                FILE_BUTTON,
+                NONE
+            };
+            constexpr char BUTTON_NAMES[BUTTON_COUNT][50] = {
+                    "Random",
+                    "Defined List",
+                    "File"
+            };
+            constexpr int NAME_SIZE = 15;
+
+            constexpr int TEXTBOX_COUNT = 2;
+            constexpr char TEXTBOX_NAMES[2][50] = {
+                    "Amount = ",
+                    "List = "
+            };
+
+            constexpr int TEXTBOX_LENGTH[2] = {
+                    2,
+                    30 // for input a defined list
+            };
+        }
+    }
+
+    // information of window
     static int Width = 1760,
-        Height = 992;
+            Height = 992;
     constexpr char titleWindow[] = "Visualgo CS162 - Phan Minh Quang";
     static int fps = 144;
 
     constexpr char fontPath[] = "../assets/fonts/OpenSans.ttf";
 
+    // colors
     static sf::Color normalGreen = sf::Color(0, 255, 0),
                         hoverGreen = sf::Color(0, 200, 0),
                         clickGreen = sf::Color(0, 150, 0);
@@ -65,12 +114,14 @@ namespace constants{
 
     // positions of buttons
     static sf::Vector2f submenuButtonPos = sf::Vector2f(0, 700),
-            demoCodeButtonPos = sf::Vector2f(1736, 700),
-            modeButtonPos = sf::Vector2f(10, 10);
+                        demoCodeButtonPos = sf::Vector2f(1736, 700),
+                        modeButtonPos = sf::Vector2f(10, 10);
 
     // size of buttons
-    static sf::Vector2f sideButtonSize = sf::Vector2f(24, 180),
-            modeButtonSize = sf::Vector2f(150, 40);
+    static sf::Vector2f sideButtonSize = sf::Vector2f(24, 200),
+                        modeButtonSize = sf::Vector2f(150, 40),
+                        optionButtonSize = sf::Vector2f(100, sideButtonSize.y / static_cast<float>(5) - 1),
+                        goButtonSize = sf::Vector2f(50, 30);
     static float distance2ModeButtons = 10;
 
     // size text of buttons

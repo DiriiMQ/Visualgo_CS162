@@ -78,7 +78,7 @@ void Window::pollEvent() {
 
         if (this->submenuButton->pollEvent(this->mousePosView)) {
             std::cout << "You have clicked on submenu button!\n";
-            this->scenes[this->currentScene]->isMenuOpen = (this->submenuButton->getTextString() == ">");
+            this->scenes[this->currentScene]->isMenuOpen = (this->submenuButton->getTextString() == "<");
         }
 
         if (this->demoCodeButton->pollEvent(this->mousePosView)) {
@@ -90,10 +90,12 @@ void Window::pollEvent() {
             if (this->scenes[i]->modeButton->pollEvent(this->mousePosView)) {
                 std::cout << "You have clicked on " << constants::sceneVariables::SCENE_NAMES[i] << " scene!\n";
                 this->currentScene = static_cast<constants::sceneVariables::Scene>(i);
+                this->scenes[this->currentScene]->isMenuOpen = (this->submenuButton->getTextString() == "<");
+                this->scenes[this->currentScene]->isDemoCodeOpen = (this->demoCodeButton->getTextString() == ">");
             }
         }
 
-        this->scenes[this->currentScene]->pollEvent(this->mousePosView);
+        this->scenes[this->currentScene]->pollEvent(this->event, this->mousePosView);
     }
 }
 

@@ -2,7 +2,9 @@
 // Created by dirii on 25/03/2023.
 //
 
-#include "Stuff.hpp"
+#include "button.hpp"
+
+#include <utility>
 
 void Button::init() {
     this->isHover = this->isClick = false;
@@ -30,8 +32,8 @@ Button::Button(sf::RenderWindow *window, sf::Vector2f position, sf::Vector2f siz
     this->window = window;
     this->position = position;
     this->size = size;
-    this->textString = textString;
-    this->changedTextString = changedTextString;
+    this->textString = std::move(textString);
+    this->changedTextString = std::move(changedTextString);
     this->textSize = textSize;
     this->color = color;
     this->textColor = textColor;
@@ -83,10 +85,16 @@ std::string Button::getTextString() const {
     return this->textString;
 }
 
-void Button::setColor(sf::Color color) {
-    this->color = color;
+void Button::setColor(sf::Color _color) {
+    this->color = _color;
 }
 
-Button::Button() {
+Button::Button() {}
 
+sf::Vector2f Button::getPosition() const {
+    return this->position;
+}
+
+sf::Vector2f Button::getSize() const {
+    return this->size;
 }

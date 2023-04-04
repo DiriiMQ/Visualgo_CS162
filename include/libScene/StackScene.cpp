@@ -16,6 +16,6 @@ void StackScene::render() {
 
 }
 
-void StackScene::pollEvent(sf::Vector2f mousePosView) {
+void StackScene::pollEvent(sf::Event event, sf::Vector2f mousePosView) {
 
 }

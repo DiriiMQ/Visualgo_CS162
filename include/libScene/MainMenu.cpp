@@ -8,7 +8,7 @@ MainMenu::MainMenu(sf::RenderWindow *window) : BaseScene(window) {
     this->modeButton = new Button;
 }
 
-void MainMenu::pollEvent(sf::Vector2f mousePosView) {
+void MainMenu::pollEvent(sf::Event event, sf::Vector2f mousePosView) {
 
 }
 
