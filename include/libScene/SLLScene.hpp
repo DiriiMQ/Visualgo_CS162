@@ -11,12 +11,11 @@
 
 class SLLScene : public BaseScene {
 private:
-    sf::Text* text;
-    sf::Font* font;
+//    sf::Text* text;
+//    sf::Font* font;
     MenuLinkedList* menu;
 
     void init();
-    void initMenu();
 
 public:
     explicit SLLScene(sf::RenderWindow* window);

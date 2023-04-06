@@ -101,7 +101,7 @@ namespace constants{
     constexpr char titleWindow[] = "Visualgo CS162 - Phan Minh Quang";
     static int fps = 144;
 
-    constexpr char fontPath[] = "../assets/fonts/OpenSans.ttf";
+    constexpr char fontPath[] = "../assets/fonts/Hack_reg.ttf";
 
     // colors
     static sf::Color normalGreen = sf::Color(0, 255, 0),

@@ -18,7 +18,7 @@ void SLLScene::render() {
     if (this->isMenuOpen)
         this->menu->render();
 
-    this->window->draw(*this->text);
+//    this->window->draw(*this->text);
 }
 
 SLLScene::SLLScene(sf::RenderWindow *window) : BaseScene(window) {
@@ -26,16 +26,12 @@ SLLScene::SLLScene(sf::RenderWindow *window) : BaseScene(window) {
 }
 
 void SLLScene::init() {
-    this->font = new sf::Font();
-    this->font->loadFromFile(constants::fontPath);
-    this->text = new sf::Text("SLL", *this->font, 30);
-    this->text->setFillColor(sf::Color::Black);
-    this->text->setPosition(100, 100);
+//    this->font = new sf::Font();
+//    this->font->loadFromFile(constants::fontPath);
+//    this->text = new sf::Text("SLL", *this->font, 30);
+//    this->text->setFillColor(sf::Color::Black);
+//    this->text->setPosition(100, 100);
 
-    this->initMenu();
-}
-
-void SLLScene::initMenu() {
     this->menu = new MenuLinkedList(this->window);
 }
 
