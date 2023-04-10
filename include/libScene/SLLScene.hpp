@@ -8,12 +8,14 @@
 #include "BaseScene.hpp"
 #include "stuff/button.hpp"
 #include "MenuLinkedList.hpp"
+#include "draw/NodeInfo.hpp"
 
 class SLLScene : public BaseScene {
 private:
 //    sf::Text* text;
 //    sf::Font* font;
     MenuLinkedList* menu;
+//    NodeInfo* node;
 
     void init();
 

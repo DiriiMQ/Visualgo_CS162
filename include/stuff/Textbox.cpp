@@ -11,13 +11,13 @@ TextBox::TextBox(sf::RenderWindow* window, sf::Vector2f position, int size, sf::
     this->cursor = "|";
 
     this->box.setPosition(position);
-    this->box.setSize(sf::Vector2f(static_cast<float>((maxLength + 1) * 11), static_cast<float>(size * 1.5)));
+    this->box.setSize(sf::Vector2f(static_cast<float>((maxLength + 1) * 12), static_cast<float>(size * 1.5)));
     this->box.setFillColor(boxColor);
     this->box.setOutlineColor(sf::Color::Black);
     this->box.setOutlineThickness(1);
 
-    font.loadFromFile(constants::fontPath);
-    this->text.setFont(font);
+    this->font.loadFromFile(constants::fontPath);
+    this->text.setFont(this->font);
     this->text.setCharacterSize(size);
     this->text.setFillColor(textColor);
     this->text.setPosition(position);
@@ -35,21 +35,19 @@ void TextBox::pollEvent(sf::Event event) {
     {
         if (event.text.unicode == '\b')
         {
-            if (!inputString.empty())
+            if (!this->inputString.empty())
             {
-                inputString.pop_back();
+                this->inputString.pop_back();
             }
         }
-        else if (((48 <= event.text.unicode && event.text.unicode <= 57) || event.text.unicode == static_cast<int>(',')) && inputString.size() < maxLength)
+        else if (((48 <= event.text.unicode && event.text.unicode <= 57) || event.text.unicode == static_cast<int>(',')) && this->inputString.size() < this->maxLength)
         {
-            inputString += static_cast<char>(event.text.unicode);
-//            std::cout << inputString << std::endl;
+            this->inputString += static_cast<char>(event.text.unicode);
         }
 
-        text.setString(inputString);
+        this->text.setString(this->inputString);
     }
 
-//    std::cout << inputString << std::endl;
 //    if (event.type == sf::Event::Resized)
 //    {
 //        box.setPosition(
@@ -62,24 +60,24 @@ void TextBox::pollEvent(sf::Event event) {
 }
 
 void TextBox::update() {
-    if (flickerClock.getElapsedTime().asSeconds() >= 0.5)
+    if (this->flickerClock.getElapsedTime().asSeconds() >= 0.5)
     {
-        cursorVisible = !cursorVisible;
-        flickerClock.restart();
+        this->cursorVisible = !this->cursorVisible;
+        this->flickerClock.restart();
     }
 
-    if (cursorVisible)
+    if (this->cursorVisible)
     {
-        text.setString(inputString + cursor);
+        this->text.setString(this->inputString + this->cursor);
     }
     else
     {
-        text.setString(inputString);
+        this->text.setString(this->inputString);
     }
 }
 
 void TextBox::render() {
-    this->window->draw(box);
+    this->window->draw(this->box);
     this->window->draw(this->text);
 }
 

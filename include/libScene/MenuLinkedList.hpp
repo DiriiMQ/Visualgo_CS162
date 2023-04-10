@@ -5,11 +5,11 @@
 #ifndef VISUALGO_CS162_MENULINKEDLIST_HPP
 #define VISUALGO_CS162_MENULINKEDLIST_HPP
 
+#include <iostream>
 #include <SFML/Graphics.hpp>
 #include "stuff/button.hpp"
 #include "stuff/CustomTextbox.hpp"
 #include "Constants.hpp"
-#include <iostream>
 
 class MenuLinkedList {
 protected:

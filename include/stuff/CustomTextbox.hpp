@@ -29,7 +29,6 @@ public:
     void render();
 
     std::string getTextString();
-//    [[nodiscard]] bool checkClicked() const;
 };
 
 #endif //VISUALGO_CS162_CUSTOMTEXTBOX_HPP

@@ -19,6 +19,7 @@ void SLLScene::render() {
         this->menu->render();
 
 //    this->window->draw(*this->text);
+//    this->node->render();
 }
 
 SLLScene::SLLScene(sf::RenderWindow *window) : BaseScene(window) {
@@ -33,10 +34,9 @@ void SLLScene::init() {
 //    this->text->setPosition(100, 100);
 
     this->menu = new MenuLinkedList(this->window);
+//    this->node = new NodeInfo(this->window, "123", sf::Vector2f(32, 32));
 }
 
 void SLLScene::reset() {
     this->menu->resetActiveOptionMenu();
 }
-
-

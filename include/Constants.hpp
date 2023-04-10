@@ -95,6 +95,13 @@ namespace constants{
         }
     }
 
+    namespace NodeInfo{
+        static float radius = 30,
+                    outlineThickness = 2;
+        static int pointCount = 200,
+                    fontSize = 20;
+    }
+
     // information of window
     static int Width = 1760,
             Height = 992;
@@ -113,14 +120,14 @@ namespace constants{
                         clickGray = sf::Color(100, 100, 100);
 
     // positions of buttons
-    static sf::Vector2f submenuButtonPos = sf::Vector2f(0, 700),
-                        demoCodeButtonPos = sf::Vector2f(1736, 700),
+    static sf::Vector2f submenuButtonPos = sf::Vector2f(0, 730),
+                        demoCodeButtonPos = sf::Vector2f(1736, 730),
                         modeButtonPos = sf::Vector2f(10, 10);
 
     // size of buttons
     static sf::Vector2f sideButtonSize = sf::Vector2f(24, 200),
                         modeButtonSize = sf::Vector2f(150, 40),
-                        optionButtonSize = sf::Vector2f(100, sideButtonSize.y / static_cast<float>(5) - 1),
+                        optionButtonSize = sf::Vector2f(130, sideButtonSize.y / static_cast<float>(5) - 1),
                         goButtonSize = sf::Vector2f(50, 30);
     static float distance2ModeButtons = 10;
 
@@ -128,8 +135,8 @@ namespace constants{
     static int sizeTextModeButton = 15;
 
     // rounding button
-    static int CORNER_POINT_COUNT_BUTTON = 15,
-                CORNER_RADIUS_BUTTON = 5;
+    static int CORNER_POINT_COUNT_BUTTON = 15;
+    static float CORNER_RADIUS_BUTTON = 5;
 }
 
 #endif //VISUALGO_CS162_CONSTANTS_HPP
