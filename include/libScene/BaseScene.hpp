@@ -7,10 +7,12 @@
 
 #include <SFML/Graphics.hpp>
 #include "stuff/button.hpp"
+#include "ControlMenu.hpp"
 
 class BaseScene{
 protected:
     sf::RenderWindow* window{};
+    ControlMenu* controlMenu;
 
     void setWindow(sf::RenderWindow* window);
 public:

@@ -29,6 +29,7 @@ public:
     void render();
 
     std::string getTextString();
+    void resetInput();
 };
 
 #endif //VISUALGO_CS162_CUSTOMTEXTBOX_HPP

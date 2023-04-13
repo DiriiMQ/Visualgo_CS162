@@ -20,6 +20,7 @@ public:
 
     std::string getTextString() const;
     sf::RectangleShape getBox() const;
+    void resetInput();
 
 private:
     sf::RenderWindow* window;

@@ -37,9 +37,7 @@ public:
     const bool running() const;
 
     void pollEvent();
-
     void update();
-
     void render();
 };
 

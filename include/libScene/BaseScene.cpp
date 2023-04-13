@@ -27,4 +27,6 @@ BaseScene::BaseScene(sf::RenderWindow *window) {
     this->setWindow(window);
     this->isMenuOpen = false;
     this->isDemoCodeOpen = false;
+
+    this->controlMenu = new ControlMenu(this->window);
 }

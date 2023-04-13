@@ -88,3 +88,8 @@ std::string TextBox::getTextString() const {
 sf::RectangleShape TextBox::getBox() const {
     return this->box;
 }
+
+void TextBox::resetInput() {
+    this->inputString = "";
+    this->text.setString(this->inputString);
+}

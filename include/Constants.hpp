@@ -7,12 +7,6 @@
 
 #include <SFML/Graphics.hpp>
 
-// create struct node for circular linked list
-struct Node {
-    int data;
-    struct Node *next;
-};
-
 namespace constants{
     namespace sceneVariables {
         constexpr int SCENE_COUNT = 8;
@@ -93,6 +87,56 @@ namespace constants{
                     30 // for input a defined list
             };
         }
+        namespace AddMode{
+            constexpr int TEXTBOX_COUNT = 2;
+            constexpr char TEXTBOX_NAMES[2][50] = {
+                    "Position = ",
+                    "Value = "
+            };
+            constexpr int TEXTBOX_LENGTH[2] = {
+                    2,
+                    2
+            };
+            enum Textbox{
+                POSITION_TEXTBOX,
+                VALUE_TEXTBOX,
+                NONE
+            };
+        }
+        namespace DeleteMode{
+            constexpr int TEXTBOX_COUNT = 1;
+            constexpr char TEXTBOX_NAME[50] = "Position = ";
+            constexpr int TEXTBOX_LENGTH = 2;
+            enum Textbox{
+                POSITION_TEXTBOX,
+                NONE
+            };
+        }
+        namespace UpdateMode{
+            constexpr int TEXTBOX_COUNT = 2;
+            constexpr char TEXTBOX_NAMES[2][50] = {
+                    "Position = ",
+                    "Value = "
+            };
+            constexpr int TEXTBOX_LENGTH[2] = {
+                    2,
+                    2
+            };
+            enum Textbox{
+                POSITION_TEXTBOX,
+                VALUE_TEXTBOX,
+                NONE
+            };
+        }
+        namespace SearchMode{
+            constexpr int TEXTBOX_COUNT = 1;
+            constexpr char TEXTBOX_NAME[50] = "Value = ";
+            constexpr int TEXTBOX_LENGTH = 2;
+            enum Textbox{
+                VALUE_TEXTBOX,
+                NONE
+            };
+        }
     }
 
     namespace NodeInfo{
@@ -109,6 +153,40 @@ namespace constants{
                             sizeRectangle(192, 37);
         static sf::Vector2f defaultScaleArrow(0.2f, 0.2f),
                             defaultScaleRectangle(0.6f, 0.21f);
+    }
+
+    namespace ControlMenu{
+        enum class Button{
+            PREVIOUS,
+            PLAY,
+            NEXT,
+            SPEED_DOWN,
+            SPEED_UP,
+            None
+        };
+
+        constexpr int BUTTON_COUNT = 5,
+                        BUTTON_NAME_SIZE = 15,
+                        TEXT_SIZE = 15;
+        constexpr char BUTTON_NAMES[BUTTON_COUNT][50] = {
+                "<",
+                "[=]",
+                ">",
+                "<<",
+                ">>"
+        };
+
+        static sf::Vector2f buttonSize(50, 50);
+        static float coordinateY = 930,
+                    middleX = 1760 / 2.0f,
+                    leftX = 1760 / 7.0f;
+        static sf::Vector2f buttonPos[5] = {
+                sf::Vector2f(middleX - 2 * buttonSize.x, coordinateY),
+                sf::Vector2f(middleX, coordinateY),
+                sf::Vector2f(middleX + 2 * buttonSize.x, coordinateY),
+                sf::Vector2f(leftX, coordinateY),
+                sf::Vector2f(leftX + 3 * buttonSize.x, coordinateY)
+        };
     }
 
     // information of window

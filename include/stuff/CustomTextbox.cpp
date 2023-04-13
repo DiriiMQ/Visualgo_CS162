@@ -74,3 +74,7 @@ std::string CustomTextbox::getTextString(){
     }
     return "None";
 }
+
+void CustomTextbox::resetInput() {
+    this->textbox->resetInput();
+}
