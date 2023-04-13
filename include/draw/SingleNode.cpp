@@ -30,3 +30,20 @@ void SingleNode::render() {
     this->window->draw(this->circle);
     this->window->draw(this->label);
 }
+
+void SingleNode::toggleActiveColor() {
+    this->circle.setOutlineColor(constants::normalOrange);
+}
+
+void SingleNode::resetColor() {
+    this->circle.setOutlineColor(sf::Color::Black);
+}
+
+void SingleNode::setPosition(sf::Vector2f position) {
+    this->circle.setPosition(position);
+    this->label.setPosition(position);
+}
+
+sf::Vector2f SingleNode::getPosition() {
+    return this->circle.getPosition();
+}

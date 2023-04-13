@@ -19,6 +19,10 @@ private:
 public:
     SingleNode(sf::RenderWindow* window, std::string value, sf::Vector2f position);
     void render() override;
+    void toggleActiveColor();
+    void resetColor();
+    void setPosition(sf::Vector2f position);
+    sf::Vector2f getPosition();
 };
 
 #endif //VISUALGO_CS162_SINGLENODE_HPP

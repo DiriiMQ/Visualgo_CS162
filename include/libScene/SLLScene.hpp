@@ -8,7 +8,7 @@
 #include "BaseScene.hpp"
 #include "stuff/button.hpp"
 #include "MenuLinkedList.hpp"
-#include "draw/NodeInfo.hpp"
+#include "core/LinkedList.hpp"
 
 class SLLScene : public BaseScene {
 private:
@@ -16,6 +16,8 @@ private:
 //    sf::Font* font;
     MenuLinkedList* menu;
 //    NodeInfo* node;
+//    Arrow* arrow;
+    LinkedList* linkedList;
 
     void init();
 

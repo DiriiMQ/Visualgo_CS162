@@ -100,6 +100,15 @@ namespace constants{
                     outlineThickness = 2;
         static int pointCount = 200,
                     fontSize = 20;
+        static sf::Vector2f originNode(100, 300);
+        static float offsetX = 151;
+    }
+
+    namespace Arrow{
+        static sf::Vector2i sizeArrow(752, 214),
+                            sizeRectangle(192, 37);
+        static sf::Vector2f defaultScaleArrow(0.2f, 0.2f),
+                            defaultScaleRectangle(0.6f, 0.21f);
     }
 
     // information of window
@@ -111,13 +120,15 @@ namespace constants{
     constexpr char fontPath[] = "../assets/fonts/Hack_reg.ttf";
 
     // colors
-    static sf::Color normalGreen = sf::Color(0, 255, 0),
-                        hoverGreen = sf::Color(0, 200, 0),
-                        clickGreen = sf::Color(0, 150, 0);
+    static sf::Color normalGreen(0, 255, 0),
+                        hoverGreen(0, 200, 0),
+                        clickGreen(0, 150, 0);
 
-    static sf::Color normalGray = sf::Color(200, 200, 200),
-                        hoverGray = sf::Color(150, 150, 150),
-                        clickGray = sf::Color(100, 100, 100);
+    static sf::Color normalGray(200, 200, 200),
+                        hoverGray(150, 150, 150),
+                        clickGray(100, 100, 100);
+
+    static sf::Color normalOrange(255, 145, 77);
 
     // positions of buttons
     static sf::Vector2f submenuButtonPos = sf::Vector2f(0, 730),

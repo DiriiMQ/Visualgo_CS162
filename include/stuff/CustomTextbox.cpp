@@ -74,7 +74,3 @@ std::string CustomTextbox::getTextString(){
     }
     return "None";
 }
-
-//bool CustomTextbox::checkClicked() const{
-//    return false;
-//}
