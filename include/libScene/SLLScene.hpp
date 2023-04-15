@@ -9,7 +9,7 @@
 #include "MenuLinkedList.hpp"
 #include "core/LinkedList.hpp"
 
-#include "HIghlighter.hpp"
+#include "Highlighter.hpp"
 
 class SLLScene : public BaseScene {
 private:
