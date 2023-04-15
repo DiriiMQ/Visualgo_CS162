@@ -2,9 +2,7 @@
 // Created by dirii on 15/04/2023.
 //
 
-#include "HIghlighter.hpp"
-
-#include <utility>
+#include "Highlighter.hpp"
 
 Highlighter::Highlighter(sf::RenderWindow *window, int linesCount, const char *codePath) {
     this->window = window;
