@@ -6,9 +6,10 @@
 #define VISUALGO_CS162_SLLSCENE_HPP
 
 #include "BaseScene.hpp"
-#include "stuff/button.hpp"
 #include "MenuLinkedList.hpp"
 #include "core/LinkedList.hpp"
+
+#include "HIghlighter.hpp"
 
 class SLLScene : public BaseScene {
 private:
@@ -18,6 +19,7 @@ private:
 //    NodeInfo* node;
 //    Arrow* arrow;
     LinkedList* linkedList;
+    Highlighter* highlighter;
 
     void init();
 

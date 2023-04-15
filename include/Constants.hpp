@@ -145,14 +145,14 @@ namespace constants{
         static int pointCount = 200,
                     fontSize = 20;
         static sf::Vector2f originNode(100, 300);
-        static float offsetX = 151;
+        static float offsetX = 170;
     }
 
     namespace Arrow{
         static sf::Vector2i sizeArrow(752, 214),
                             sizeRectangle(192, 37);
-        static sf::Vector2f defaultScaleArrow(0.2f, 0.2f),
-                            defaultScaleRectangle(0.6f, 0.21f);
+        static sf::Vector2f defaultScaleArrow(0.2f, 0.15f),
+                            defaultScaleRectangle(0.6f, 0.16f);
     }
 
     namespace ControlMenu{
@@ -178,7 +178,7 @@ namespace constants{
 
         static sf::Vector2f buttonSize(50, 50);
         static float coordinateY = 930,
-                    middleX = 1760 / 2.0f,
+                    middleX = 1760 / 2.0f  - buttonSize.x / 2.0f,
                     leftX = 1760 / 7.0f;
         static sf::Vector2f buttonPos[5] = {
                 sf::Vector2f(middleX - 2 * buttonSize.x, coordinateY),
@@ -187,6 +187,21 @@ namespace constants{
                 sf::Vector2f(leftX, coordinateY),
                 sf::Vector2f(leftX + 3 * buttonSize.x, coordinateY)
         };
+    }
+
+    namespace Highlighter{
+        static sf::Vector2f codePos(1726, 930),
+                            codeScale(0.6f, 0.6f);
+
+        namespace SLL{
+            const std::pair<const char*, const int> CODES_PATH[5] = {
+                std::make_pair("../assets/code/SLL/insert.png", 12),
+                std::make_pair("../assets/code/SLL/add.png", 1),
+                std::make_pair("../assets/code/SLL/delete.png", 13),
+                std::make_pair("../assets/code/SLL/update.png", 3),
+                std::make_pair("../assets/code/SLL/search.png", 4)
+            };
+        }
     }
 
     // information of window
@@ -198,9 +213,10 @@ namespace constants{
     constexpr char fontPath[] = "../assets/fonts/Hack_reg.ttf";
 
     // colors
-    static sf::Color normalGreen(0, 255, 0),
-                        hoverGreen(0, 200, 0),
-                        clickGreen(0, 150, 0);
+    static sf::Color normalGreen(189, 210, 182),
+                        hoverGreen(162, 178, 159),
+                        clickGreen(121, 135, 119),
+                        transparentGreen(189, 210, 182, 150);
 
     static sf::Color normalGray(200, 200, 200),
                         hoverGray(150, 150, 150),
