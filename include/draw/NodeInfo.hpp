@@ -5,37 +5,73 @@
 #ifndef VISUALGO_CS162_NODEINFO_HPP
 #define VISUALGO_CS162_NODEINFO_HPP
 
-#include <string>
-#include <SFML/Graphics.hpp>
 #include "BaseDraw.hpp"
 #include "SingleNode.hpp"
 #include "Arrow.hpp"
 
 class NodeInfo : public BaseDraw {
-private:
-    sf::Vector2f position;
-    SingleNode* node;
-    Arrow* arrows[2];
-
 public:
-    bool isInList;
-
-    enum ArrowType {
+    enum class ArrowType {
         LEFT,
         RIGHT
     };
-    NodeInfo(sf::RenderWindow* window, std::string value, sf::Vector2f position);
+
+    enum class StatusNode{
+        InChain,
+        OutChain,
+        Visible
+    };
+
+    enum class TypeNode{
+        Normal,
+        Outside,
+        Effective
+    };
+
+    NodeInfo(sf::RenderWindow* window, std::string value, sf::Vector2f position, bool _isDLL);
+    ~NodeInfo();
+    void updateNode();
+    void updateArrows(ArrowType type, sf::Vector2f end);
     void render() override;
+
     void initArrow(ArrowType type, sf::Vector2f start, sf::Vector2f end);
-    void setPosition(sf::Vector2f _position);
-    void setStartArrow(ArrowType type, sf::Vector2f start);
+    void reInitPos();
+    void reInitPreVal();
+
+    void setEffectivePosition(sf::Vector2f start);
+    void setArrows(ArrowType type, sf::Vector2f start, sf::Vector2f end);
+    void setValue(std::string value);
     sf::Vector2f getPosition();
-    // can cac ham de to mau node va canh noi giua cac node
+    std::string getValue();
+
     void toggleActiveColorNode();
     void toggleActiveColorArrow(ArrowType type);
+
+    void setPrintPreVal();
+    void setPrintNormal();
+
+    void setNodeInChain();
+    void setNodeOutside();
+    void setNodeVisible();
+
+    void hide(ArrowType type);
+    void show(ArrowType type);
+
+    StatusNode getStatusNode();
+    
     void resetColorNode();
     void resetColorArrow(ArrowType type);
+
     void reset();
+
+private:
+    sf::Vector2f positions[3];
+    SingleNode* node;
+    Arrow* arrows[2][2];
+    std::string values[2];
+
+    StatusNode statusNode;
+    bool isPrintPreVal, isDLL, isPrintNormal;
 };
 
 #endif //VISUALGO_CS162_NODEINFO_HPP

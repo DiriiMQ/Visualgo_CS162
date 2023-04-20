@@ -34,6 +34,7 @@ public:
     void pollEvents(sf::Event event, sf::Vector2f mousePosView);
     void update();
     void render();
+    void reset();
 
     ControlMenu::StatusCode getStatus();
     [[nodiscard]] float getSpeed() const;

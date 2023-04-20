@@ -9,17 +9,10 @@
 #include "MenuLinkedList.hpp"
 #include "core/LinkedList.hpp"
 
-#include "Highlighter.hpp"
-
 class SLLScene : public BaseScene {
 private:
-//    sf::Text* text;
-//    sf::Font* font;
     MenuLinkedList* menu;
-//    NodeInfo* node;
-//    Arrow* arrow;
     LinkedList* linkedList;
-    Highlighter* highlighter;
 
     void init();
 

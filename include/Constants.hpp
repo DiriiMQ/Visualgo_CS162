@@ -145,7 +145,8 @@ namespace constants{
         static int pointCount = 200,
                     fontSize = 20;
         static sf::Vector2f originNode(100, 300);
-        static float offsetX = 170;
+        static float offsetX = 170,
+                    offsetY = 150;
     }
 
     namespace Arrow{
@@ -202,6 +203,10 @@ namespace constants{
                 std::make_pair("../assets/code/SLL/search.png", 4)
             };
         }
+    }
+
+    namespace LinkedList{
+        static float DELAY_TIME = 1.0f;
     }
 
     // information of window

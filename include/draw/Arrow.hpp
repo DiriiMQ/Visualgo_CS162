@@ -19,15 +19,21 @@ private:
     sf::Texture rectangleTexture[2];
     sf::Sprite rectangleSprite;
 
+    bool hasSetMid;
+
 public:
     Arrow(sf::RenderWindow* window, sf::Vector2f start, sf::Vector2f end);
     void render() override;
     void toggleActiveColor();
     void resetColor();
-    void setPosition(sf::Vector2f start);
+    void setStart(sf::Vector2f start, bool needSetMid);
+    void setPositions(sf::Vector2f start, sf::Vector2f end, bool needSetMid);
     void setMid();
     void autoRotate();
     void autoScale();
+
+    void hide();
+    void show();
 };
 
 #endif //VISUALGO_CS162_ARROW_HPP

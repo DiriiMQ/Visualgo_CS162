@@ -21,6 +21,7 @@ public:
     void render() override;
     void toggleActiveColor();
     void resetColor();
+    void setText(std::string _value);
     void setPosition(sf::Vector2f position);
     sf::Vector2f getPosition();
 };

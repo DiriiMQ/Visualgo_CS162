@@ -52,6 +52,8 @@ Arrow::Arrow(sf::RenderWindow *window, sf::Vector2f start, sf::Vector2f end) : B
     );
     this->rectangleSprite.setPosition(sf::Vector2f(50, 200));
 //    this->rectangleSprite.setRotation(angle);
+
+    this->hasSetMid = false;
 }
 
 void Arrow::render() {
@@ -69,11 +71,18 @@ void Arrow::resetColor() {
     this->rectangleSprite.setTexture(this->rectangleTexture[0]);
 }
 
-void Arrow::setPosition(sf::Vector2f start) {
+void Arrow::setPositions(sf::Vector2f start, sf::Vector2f end, bool needSetMid) {
     this->points[0] = start;
-    this->arrowSprite.setPosition(this->points[0]);
-    this->autoScale();
-    this->autoRotate();
+    this->points[1] = end;
+    if (needSetMid) {
+        this->hasSetMid = false;
+        this->setMid();
+    }
+    else {
+        this->arrowSprite.setPosition(this->points[0]);
+        this->autoScale();
+        this->autoRotate();
+    }
 }
 
 void Arrow::autoRotate() {
@@ -86,7 +95,7 @@ void Arrow::autoScale() {
     this->length = static_cast<float>(
             sqrt(
                     pow(this->points[1].x - this->points[0].x, 2) + pow(this->points[1].y - this->points[0].y, 2)
-            ) - constants::NodeInfo::radius
+            ) - constants::NodeInfo::radius - 2.f
             );
     this->arrowSprite.setScale(
             this->length / this->arrowSprite.getLocalBounds().width,
@@ -100,9 +109,27 @@ void Arrow::autoScale() {
 }
 
 void Arrow::setMid() {
+    if (this->hasSetMid) return;
+    this->hasSetMid = true;
     this->points[0] = sf::Vector2f(
             (this->points[0].x + this->points[1].x) / 2.0f,
             (this->points[0].y + this->points[1].y) / 2.0f
     );
-    this->arrowSprite.setPosition(this->points[0]);
+    this->setStart(this->points[0], false);
+}
+
+void Arrow::setStart(sf::Vector2f start, bool needSetMid) {
+    this->setPositions(start, this->points[1], needSetMid);
+}
+
+void Arrow::hide() {
+    sf::Color tmp = this->arrowSprite.getColor();
+    tmp.a = 0;
+    this->arrowSprite.setColor(tmp);
+}
+
+void Arrow::show() {
+    sf::Color tmp = this->arrowSprite.getColor();
+    tmp.a = 255;
+    this->arrowSprite.setColor(tmp);
 }

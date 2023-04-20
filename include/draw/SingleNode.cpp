@@ -32,7 +32,7 @@ void SingleNode::render() {
 }
 
 void SingleNode::toggleActiveColor() {
-    this->circle.setOutlineColor(constants::normalOrange);
+    this->circle.setOutlineColor(constants::normalGreen);
 }
 
 void SingleNode::resetColor() {
@@ -46,4 +46,12 @@ void SingleNode::setPosition(sf::Vector2f position) {
 
 sf::Vector2f SingleNode::getPosition() {
     return this->circle.getPosition();
+}
+
+void SingleNode::setText(std::string _value) {
+    this->value = std::move(_value);
+    this->label.setString(this->value);
+    sf::FloatRect bounds = this->label.getLocalBounds();
+    this->label.setOrigin(bounds.left + bounds.width / 2.0f, bounds.top + bounds.height / 2.0f);
+    this->label.setPosition(this->circle.getPosition());
 }
