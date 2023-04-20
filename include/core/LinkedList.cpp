@@ -279,6 +279,7 @@ void LinkedList::renderHighlighter() {
         this->highlighter->render();
 }
 
+// addNode hien tai chi dung dc cho singly linked list can phai doi cho dll
 void LinkedList::addNode(int position, std::string value) {
     if (position < 0 || position > this->size) return;
 
@@ -302,6 +303,12 @@ void LinkedList::addNode(int position, std::string value) {
             this->typeLinkedList == TypeLinkedList::DOUBLY
     ));
     ++this->size;
+    if (this->typeLinkedList == TypeLinkedList::DOUBLY && this->size > 1)
+        this->nodes.back()->initArrow(
+                NodeInfo::ArrowType::LEFT,
+                this->nodes.back()->getPosition(),
+                this->nodes[this->nodes.size() - 2]->getPosition()
+        );
     for (int i = this->size - 1; i > position; --i) {
         this->nodes[i]->setValue(this->nodes[i - 1]->getValue());
         this->nodes[i]->reInitPreVal();
