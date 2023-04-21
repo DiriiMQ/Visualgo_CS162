@@ -1,0 +1,8 @@
+//
+// Created by dirii on 22/04/2023.
+//
+
+#ifndef VISUALGO_CS162_FILEDIALOG_H
+#define VISUALGO_CS162_FILEDIALOG_H
+
+#endif //VISUALGO_CS162_FILEDIALOG_H
