@@ -190,10 +190,10 @@ void LinkedList::resetEvents() {
         }
     }
 
-    for (auto &node : this->nodes){
-        node->reset();
-        node->reInitPos();
-        node->reInitPreVal();
+    for (int i = 0;  i < this->size; i++){
+        this->nodes[i]->reset();
+        this->nodes[i]->reInitPos(i);
+        this->nodes[i]->reInitPreVal();
     }
 }
 
@@ -280,7 +280,7 @@ void LinkedList::renderHighlighter() {
 }
 
 // addNode hien tai chi dung dc cho singly linked list can phai doi cho dll
-void LinkedList::addNode(int position, std::string value) {
+void LinkedList::addNode(int position, std::string value, std::vector<EventAnimation> listEvents) {
     if (position < 0 || position > this->size) return;
 
     this->resetEvents();
@@ -320,38 +320,11 @@ void LinkedList::addNode(int position, std::string value) {
             constants::Highlighter::SLL::CODES_PATH[0].first
             );
 
-//    this->toggleLines(std::vector<int>{0, 5, 2});
     this->chosenNode = position;
     this->currentEvent = 0;
-    EventAnimation event;
 
-    // set positions for textNode
-    // ...
-
-    event.hiddenArrows.emplace_back(this->chosenNode, NodeInfo::ArrowType::RIGHT);
-    event.colorNodes.push_back(this->chosenNode);
-    event.statusChosenNode = NodeInfo::StatusNode::OutChain;
-    event.lines.push_back(0);
-
-    this->events.emplace_back(event);
-
-    if (this->chosenNode == 0) {
-        if (this->size > 1) {
-            event = EventAnimation();
-            event.colorNodes = std::vector<int>{0, 1};
-            event.colorArrows.emplace_back(0, NodeInfo::ArrowType::RIGHT);
-            event.statusChosenNode = NodeInfo::StatusNode::OutChain;
-            event.isPrintNormal = true;
-            event.lines = std::vector<int>{3, 4};
-
-            this->events.emplace_back(event);
-        }
-
-        event = EventAnimation();
-        event.lines.push_back(5);
-        event.statusChosenNode = NodeInfo::StatusNode::InChain;
-        this->events.emplace_back(event);
-    }
+    for (auto &e : listEvents)
+        this->events.emplace_back(e);
 }
 
 void LinkedList::processControlMenu(ControlMenu::StatusCode status) {
@@ -363,7 +336,7 @@ void LinkedList::processControlMenu(ControlMenu::StatusCode status) {
                 --this->currentEvent;
             break;
         case ControlMenu::StatusCode::PAUSE:
-            std::cout << "PAUSE" << std::endl;
+//            std::cout << "PAUSE" << std::endl;
             break;
         case ControlMenu::StatusCode::PLAY:
             if (this->currentEvent + 1 < this->events.size()) {
@@ -381,4 +354,8 @@ void LinkedList::processControlMenu(ControlMenu::StatusCode status) {
 
 void LinkedList::setSpeed(float _speed) {
     this->speed = _speed;
+}
+
+int LinkedList::getSize() const {
+    return this->size;
 }

@@ -89,8 +89,11 @@ sf::Vector2f NodeInfo::getPosition() {
     return this->node->getPosition();
 }
 
-void NodeInfo::reInitPos() {
-    this->positions[(int)TypeNode::Normal] = this->positions[(int)TypeNode::Effective];
+void NodeInfo::reInitPos(int index) {
+    this->positions[(int)TypeNode::Normal] = sf::Vector2f(
+            constants::NodeInfo::originNode.x + static_cast<float>(index) * constants::NodeInfo::offsetX,
+            constants::NodeInfo::originNode.y
+    );
     this->positions[(int)TypeNode::Outside] = sf::Vector2f(
             this->positions[(int)TypeNode::Effective].x,
             this->positions[(int)TypeNode::Effective].y + constants::NodeInfo::offsetY

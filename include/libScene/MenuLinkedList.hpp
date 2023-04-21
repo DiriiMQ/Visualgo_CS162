@@ -6,7 +6,9 @@
 #define VISUALGO_CS162_MENULINKEDLIST_HPP
 
 #include <iostream>
+#include <fstream>
 #include <SFML/Graphics.hpp>
+#include "core/FileDialog.h"
 #include "stuff/button.hpp"
 #include "stuff/CustomTextbox.hpp"
 #include "Constants.hpp"
@@ -22,6 +24,7 @@ protected:
     Button* subCreateMode[constants::MenuLinkedList::CreateMode::BUTTON_COUNT];
     CustomTextbox* createTextbox[constants::MenuLinkedList::CreateMode::BUTTON_COUNT];
     constants::MenuLinkedList::CreateMode::Button activeCreateMode;
+    bool isOpenFileDialog = false;
 
     void initCreateMode();
     void pollEventCreateMode(sf::Event event, sf::Vector2f mousePosView);

@@ -33,6 +33,8 @@ public:
 
     void setSpeed(float speed);
 
+    [[nodiscard]] int getSize() const;
+
     void update();
     void updateAnimation();
     void render();
@@ -51,7 +53,7 @@ public:
     // operations of linked list
     void createLinkedList(int size);
     void createLinkedList(std::vector<std::string> values);
-    void addNode(int position, std::string value);
+    void addNode(int position, std::string value, std::vector<EventAnimation> listEvents);
 
 private:
     sf::RenderWindow* window;

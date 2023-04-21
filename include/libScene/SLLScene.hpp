@@ -24,6 +24,11 @@ public:
     void pollEvent(sf::Event event, sf::Vector2f mousePosView) override;
     void update() override;
     void render() override;
+
+    std::vector<EventAnimation> addModeEvents(int chosenNode);
+    std::vector<EventAnimation> deleteModeEvents();
+    std::vector<EventAnimation> updateModeEvents();
+    std::vector<EventAnimation> searchModeEvents();
 };
 
 #endif //VISUALGO_CS162_SLLSCENE_HPP

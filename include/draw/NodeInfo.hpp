@@ -35,7 +35,7 @@ public:
     void render() override;
 
     void initArrow(ArrowType type, sf::Vector2f start, sf::Vector2f end);
-    void reInitPos();
+    void reInitPos(int index);
     void reInitPreVal();
 
     void setEffectivePosition(sf::Vector2f start);

@@ -171,6 +171,7 @@ void MenuLinkedList::initCreateMode() {
             };
         this->createModeValue[i] = "None";
     }
+    this->isOpenFileDialog = false;
 }
 void MenuLinkedList::pollEventCreateMode(sf::Event event, sf::Vector2f mousePosView) {
     if (this->activeCreateMode != constants::MenuLinkedList::CreateMode::Button::NONE)
@@ -179,6 +180,8 @@ void MenuLinkedList::pollEventCreateMode(sf::Event event, sf::Vector2f mousePosV
     for (int i = 0; i < constants::MenuLinkedList::CreateMode::BUTTON_COUNT; i++) {
         if (this->subCreateMode[i]->pollEvent(mousePosView)) {
             this->activeCreateMode = static_cast<constants::MenuLinkedList::CreateMode::Button>(i);
+            if (i == constants::MenuLinkedList::CreateMode::Button::FILE_BUTTON)
+                this->isOpenFileDialog = true;
             std::cout << "Button " << i << " is clicked" << std::endl;
         }
     }
@@ -204,6 +207,19 @@ void MenuLinkedList::updateCreateMode() {
             this->createTextbox[this->activeCreateMode]->resetInput();
         }
         this->createModeValue[this->activeCreateMode] = inputUser;
+    } else if (this->activeCreateMode == constants::MenuLinkedList::CreateMode::FILE_BUTTON) {
+        if (this->isOpenFileDialog) {
+            auto f = pfd::open_file("Choose files to read", pfd::path::home(),
+                                    {"Text Files (.txt .text)", "*.txt *.text",
+                                     "All Files", "*"});
+            if (!f.result().empty()) {
+                std::ifstream file(f.result()[0]);
+                std::string line;
+                file >> line;
+                this->createModeValue[this->activeCreateMode] = line;
+            }
+        }
+        this->isOpenFileDialog = false;
     }
 }
 void MenuLinkedList::renderCreateMode() {

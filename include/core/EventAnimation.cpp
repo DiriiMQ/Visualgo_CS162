@@ -11,3 +11,16 @@ EventAnimation::EventAnimation() {
     this->statusChosenNode = NodeInfo::StatusNode::InChain;
     this->isPrintPreVal = this->isPrintNormal = false;
 }
+
+void EventAnimation::reset() {
+    for (int& i : this->textNode)
+        i = -1;
+
+    this->colorArrows.clear();
+    this->hiddenArrows.clear();
+    this->colorNodes.clear();
+    this->lines.clear();
+
+    this->statusChosenNode = NodeInfo::StatusNode::InChain;
+    this->isPrintPreVal = this->isPrintNormal = false;
+}

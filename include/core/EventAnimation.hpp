@@ -18,6 +18,8 @@ public:
     std::vector<int> lines;
 
     EventAnimation();
+
+    void reset();
 };
 
 #endif //VISUALGO_CS162_EVENTANIMATION_HPP

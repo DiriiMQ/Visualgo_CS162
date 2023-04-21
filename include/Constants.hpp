@@ -196,8 +196,7 @@ namespace constants{
 
         namespace SLL{
             const std::pair<const char*, const int> CODES_PATH[5] = {
-                std::make_pair("../assets/code/SLL/insert.png", 12),
-                std::make_pair("../assets/code/SLL/add.png", 1),
+                std::make_pair("../assets/code/SLL/add.png", 12),
                 std::make_pair("../assets/code/SLL/delete.png", 13),
                 std::make_pair("../assets/code/SLL/update.png", 3),
                 std::make_pair("../assets/code/SLL/search.png", 4)
