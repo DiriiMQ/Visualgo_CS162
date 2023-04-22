@@ -79,6 +79,32 @@ void SLLScene::update() {
                 this->menu->deleteModeValue = "None";
                 this->controlMenu->reset();
                 break;
+            case constants::MenuLinkedList::Button::UPDATE_BUTTON:
+                if (this->menu->updateModeValue[0] == "None" || this->menu->updateModeValue[1] == "None" || this->menu->updateModeValue[0].empty())
+                    break;
+
+                this->linkedList->updateNode(
+                        std::stoi(this->menu->updateModeValue[0]),
+                        this->menu->updateModeValue[1],
+                        this->updateModeEvents(std::stoi(this->menu->updateModeValue[0]))
+                        );
+
+                std::cout << "Update: " << this->menu->updateModeValue[0] << " " << this->menu->updateModeValue[1] << std::endl;
+                this->menu->updateModeValue[0] = this->menu->updateModeValue[1] = "None";
+                this->controlMenu->reset();
+                break;
+            case constants::MenuLinkedList::Button::SEARCH_BUTTON:
+                if (this->menu->searchModeValue == "None" || this->menu->searchModeValue.empty())
+                    break;
+
+                this->linkedList->searchNode(
+                        this->searchModeEvents(this->linkedList->findValue(this->menu->searchModeValue))
+                        );
+
+                std::cout << "Search: " << this->menu->searchModeValue << std::endl;
+                this->menu->searchModeValue = "None";
+                this->controlMenu->reset();
+                break;
         }
     }
 
@@ -379,9 +405,119 @@ std::vector<EventAnimation> SLLScene::deleteModeEvents(int chosenNode) {
 }
 
 std::vector<EventAnimation> SLLScene::updateModeEvents(int chosenNode) {
-    return std::vector<EventAnimation>();
+    if (chosenNode < 0 || chosenNode >= this->linkedList->getSize())
+        return {};
+
+    this->linkedList->resetEvents();
+
+    std::vector<EventAnimation> events;
+    EventAnimation event;
+
+    event.titleNodes.emplace_back(0, "head|current");
+    event.colorNodes.push_back(0);
+    event.isPrintPreVal = true;
+    event.lines = {0};
+
+    events.emplace_back(event);
+
+    if (chosenNode) {
+        for (int i = 0; i <= chosenNode; ++i) {
+            event.reset();
+            event.titleNodes = {
+                    {0, "head"},
+                    {i, "current"}
+            };
+            event.colorNodes.push_back(i);
+            event.isPrintPreVal = true;
+            event.lines = {1};
+
+            events.emplace_back(event);
+
+            if (i == chosenNode) break;
+
+            event.reset();
+            event.titleNodes = {
+                    {0, "head"},
+                    {i, "current"}
+            };
+            event.colorNodes.push_back(i);
+            event.colorArrows.emplace_back(i, NodeInfo::ArrowType::RIGHT);
+            event.isPrintPreVal = true;
+            event.lines = {2};
+
+            events.emplace_back(event);
+        }
+    }
+
+    event.reset();
+    event.titleNodes = {
+            {0, "head"},
+            {chosenNode, "current"}
+    };
+    event.lines = {3};
+
+    events.emplace_back(event);
+
+    return events;
 }
 
 std::vector<EventAnimation> SLLScene::searchModeEvents(int chosenNode) {
-    return std::vector<EventAnimation>();
+    this->linkedList->resetEvents();
+
+    std::vector<EventAnimation> events;
+    EventAnimation event;
+
+    event.titleNodes.emplace_back(0, "head|current");
+    event.colorNodes.push_back(0);
+    event.lines = {0};
+
+    events.emplace_back(event);
+
+    for (int i = 0; i <= chosenNode; ++i) {
+        if (i == chosenNode && chosenNode == this->linkedList->getSize())
+            break;
+
+        event.reset();
+        event.titleNodes = {
+                {0, "head"},
+                {i, "current"}
+        };
+        event.colorNodes.push_back(i);
+        event.lines = {1};
+
+        events.emplace_back(event);
+
+        if (i == chosenNode) break;
+
+        event.reset();
+        event.titleNodes = {
+                {0, "head"},
+                {i, "current"}
+        };
+        event.colorNodes.push_back(i);
+        event.colorArrows.emplace_back(i, NodeInfo::ArrowType::RIGHT);
+        event.lines = {4};
+
+        events.emplace_back(event);
+    }
+
+    if (chosenNode == this->linkedList->getSize()) {
+        event.reset();
+        event.titleNodes.emplace_back(0, "head");
+        event.lines = {5};
+
+        events.emplace_back(event);
+    } else {
+        event.reset();
+        event.titleNodes = {
+                {0, "head"},
+                {chosenNode, "current"}
+        };
+        event.colorNodes.push_back(chosenNode);
+        event.lines = {2, 3};
+
+        events.emplace_back(event);
+    }
+
+    return events;
 }

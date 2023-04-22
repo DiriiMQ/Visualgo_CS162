@@ -32,6 +32,7 @@ public:
     LinkedList(sf::RenderWindow* window, TypeLinkedList typeLinkedList, std::vector<std::string> values);
 
     void setSpeed(float speed);
+    int findValue(const std::string& value);
 
     [[nodiscard]] int getSize() const;
 
@@ -55,11 +56,13 @@ public:
     void createLinkedList(std::vector<std::string> values);
     void addNode(int position, std::string value, const std::vector<EventAnimation>& listEvents);
     void deleteNode(int position, const std::vector<EventAnimation>& listEvents);
+    void updateNode(int position, std::string value, const std::vector<EventAnimation>& listEvents);
+    void searchNode(const std::vector<EventAnimation>& listEvents);
 
 private:
     sf::RenderWindow* window;
     sf::Clock clock;
-    int chosenNode = 0;
+    int chosenNode = 0, deletedNode = -1;
     TypeLinkedList typeLinkedList;
 
     std::vector<NodeInfo*> nodes;

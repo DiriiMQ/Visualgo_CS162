@@ -195,11 +195,11 @@ namespace constants{
                             codeScale(0.6f, 0.6f);
 
         namespace SLL{
-            const std::pair<const char*, const int> CODES_PATH[5] = {
+            const std::pair<const char*, const int> CODES_PATH[4] = {
                 std::make_pair("../assets/code/SLL/add.png", 10),
                 std::make_pair("../assets/code/SLL/delete.png", 11),
-                std::make_pair("../assets/code/SLL/update.png", 3),
-                std::make_pair("../assets/code/SLL/search.png", 4)
+                std::make_pair("../assets/code/SLL/update.png", 4),
+                std::make_pair("../assets/code/SLL/search.png", 6)
             };
         }
     }

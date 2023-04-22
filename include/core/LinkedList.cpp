@@ -148,15 +148,23 @@ void LinkedList::resetEvents() {
 
     // xoa Node Visible ra khoi chain
     // ...
-    for (int i = 0; i < this->size; i++){
-        if (this->nodes[i]->getStatusNode() == NodeInfo::StatusNode::Visible){
-            this->nodes.erase(this->nodes.begin() + i);
-            --this->size;
-            if (i == this->size)
-                this->nodes.back()->destroyArrow(NodeInfo::ArrowType::RIGHT);
-            break;
-        }
+//    for (int i = 0; i < this->size; i++){
+//        if (this->nodes[i]->getStatusNode() == NodeInfo::StatusNode::Visible){
+//            this->nodes.erase(this->nodes.begin() + i);
+//            --this->size;
+//            if (i == this->size)
+//                this->nodes.back()->destroyArrow(NodeInfo::ArrowType::RIGHT);
+//            break;
+//        }
+//    }
+
+    if (this->deletedNode != -1){
+        this->nodes.erase(this->nodes.begin() + this->deletedNode);
+        --this->size;
+        if (this->deletedNode == this->size)
+            this->nodes.back()->destroyArrow(NodeInfo::ArrowType::RIGHT);
     }
+    this->deletedNode = -1;
 
     for (int i = 0;  i < this->size; i++){
         this->nodes[i]->reset();
@@ -328,6 +336,8 @@ void LinkedList::addNode(int position, std::string value, const std::vector<Even
 void LinkedList::deleteNode(int position, const std::vector<EventAnimation>& listEvents) {
     if (position < 0 || position >= this->size) return;
 
+    this->deletedNode = position;
+
     this->initHighlighter(
             constants::Highlighter::SLL::CODES_PATH[1].second,
             constants::Highlighter::SLL::CODES_PATH[1].first
@@ -338,4 +348,41 @@ void LinkedList::deleteNode(int position, const std::vector<EventAnimation>& lis
 
     for (auto &e : listEvents)
         this->events.emplace_back(e);
+}
+
+void LinkedList::updateNode(int position, std::string value, const std::vector<EventAnimation> &listEvents) {
+    if (position < 0 || position >= this->size) return;
+
+    this->nodes[position]->setValue(std::move(value));
+
+    this->initHighlighter(
+            constants::Highlighter::SLL::CODES_PATH[2].second,
+            constants::Highlighter::SLL::CODES_PATH[2].first
+    );
+
+    this->chosenNode = position;
+    this->currentEvent = 0;
+
+    for (auto &e : listEvents)
+        this->events.emplace_back(e);
+}
+
+void LinkedList::searchNode(const std::vector<EventAnimation> &listEvents) {
+    this->initHighlighter(
+            constants::Highlighter::SLL::CODES_PATH[3].second,
+            constants::Highlighter::SLL::CODES_PATH[3].first
+    );
+
+    this->chosenNode = 0;
+    this->currentEvent = 0;
+
+    for (auto &e : listEvents)
+        this->events.emplace_back(e);
+}
+
+int LinkedList::findValue(const std::string& value) {
+    for (int i = 0; i < this->size; ++i)
+        if (this->nodes[i]->getValue() == value)
+            return i;
+    return this->size;
 }
