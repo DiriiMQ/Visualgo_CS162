@@ -59,18 +59,6 @@ void LinkedList::updateAnimation() {
         node->reset();
     }
 
-    // xu ly animation hien tai
-    // ....
-//    this->chosenNode = 5;
-//    this->nodes[5]->setNodeVisible();
-//    this->nodes[4]->hide(NodeInfo::ArrowType::RIGHT);
-//    this->nodes[2]->toggleActiveColorNode();
-//    this->nodes[3]->toggleActiveColorArrow(NodeInfo::ArrowType::RIGHT);
-//    this->nodes[3]->toggleActiveColorArrow(NodeInfo::ArrowType::LEFT);
-//    this->nodes[3]->hide(NodeInfo::ArrowType::RIGHT);
-//    this->nodes[3]->show(NodeInfo::ArrowType::RIGHT);
-//    this->nodes[4]->setPrintNormal();
-
     EventAnimation &event = this->events[this->currentEvent];
     for (auto &arrow: event.colorArrows)
         this->nodes[arrow.first]->toggleActiveColorArrow(arrow.second);
@@ -98,34 +86,17 @@ void LinkedList::updateAnimation() {
 
     this->calculateEffectivePositions();
 
-    // set arrows after calculate effective positions of the chosen node
-    if (this->chosenNode < this->size - 1)
-        this->nodes[this->chosenNode]->setArrows(
-                NodeInfo::ArrowType::RIGHT,
-                this->nodes[this->chosenNode]->getPosition(),
-                this->nodes[this->chosenNode + 1]->getPosition()
-        );
-    if (this->typeLinkedList == TypeLinkedList::DOUBLY && this->chosenNode > 0)
-        this->nodes[this->chosenNode]->setArrows(
-                NodeInfo::ArrowType::LEFT,
-                this->nodes[this->chosenNode]->getPosition(),
-                this->nodes[this->chosenNode - 1]->getPosition()
-        );
-//    this->nodes[3]->setArrows(
-//            NodeInfo::ArrowType::RIGHT,
-//            this->nodes[3]->getPosition(),
-//            this->nodes[4]->getPosition()
-//    );
-
-//    this->nodes[3]->setArrows(
-//            NodeInfo::ArrowType::LEFT,
-//            this->nodes[3]->getPosition(),
-//            this->nodes[2]->getPosition()
-//    );
-
     for (auto &node : this->nodes){
         node->updateNode();
     }
+
+    for (auto &i : event.titleNodes)
+        this->nodes[i.first]->setTitle(i.second);
+
+    if (this->chosenNode < this->size - 1)
+        this->nodes[this->chosenNode]->updateArrows(NodeInfo::ArrowType::RIGHT, this->nodes[this->chosenNode + 1]->getPosition());
+    if (this->chosenNode > 0)
+        this->nodes[this->chosenNode]->updateArrows(NodeInfo::ArrowType::LEFT, this->nodes[this->chosenNode - 1]->getPosition());
 
     int lastInChain = 0;
     if (this->nodes[lastInChain]->getStatusNode() != NodeInfo::StatusNode::InChain){
@@ -138,11 +109,6 @@ void LinkedList::updateAnimation() {
             lastInChain = i;
         }
     }
-
-    if (this->chosenNode < this->size - 1)
-        this->nodes[this->chosenNode]->updateArrows(NodeInfo::ArrowType::RIGHT, this->nodes[this->chosenNode + 1]->getPosition());
-    if (this->chosenNode > 0)
-        this->nodes[this->chosenNode]->updateArrows(NodeInfo::ArrowType::LEFT, this->nodes[this->chosenNode - 1]->getPosition());
 }
 
 void LinkedList::calculateEffectivePositions() {
@@ -186,6 +152,8 @@ void LinkedList::resetEvents() {
         if (this->nodes[i]->getStatusNode() == NodeInfo::StatusNode::Visible){
             this->nodes.erase(this->nodes.begin() + i);
             --this->size;
+            if (i == this->size)
+                this->nodes.back()->destroyArrow(NodeInfo::ArrowType::RIGHT);
             break;
         }
     }
@@ -279,54 +247,6 @@ void LinkedList::renderHighlighter() {
         this->highlighter->render();
 }
 
-// addNode hien tai chi dung dc cho singly linked list can phai doi cho dll
-void LinkedList::addNode(int position, std::string value, std::vector<EventAnimation> listEvents) {
-    if (position < 0 || position > this->size) return;
-
-    this->resetEvents();
-
-    sf::Vector2f newPosition(
-        constants::NodeInfo::originNode.x + static_cast<float>(this->nodes.size()) * constants::NodeInfo::offsetX,
-        constants::NodeInfo::originNode.y
-    );
-    if (this->size) {
-        this->nodes.back()->initArrow(
-                NodeInfo::ArrowType::RIGHT,
-                this->nodes.back()->getPosition(),
-                newPosition
-        );
-    }
-    this->nodes.push_back(new NodeInfo(
-            this->window,
-            "10",
-            newPosition,
-            this->typeLinkedList == TypeLinkedList::DOUBLY
-    ));
-    ++this->size;
-    if (this->typeLinkedList == TypeLinkedList::DOUBLY && this->size > 1)
-        this->nodes.back()->initArrow(
-                NodeInfo::ArrowType::LEFT,
-                this->nodes.back()->getPosition(),
-                this->nodes[this->nodes.size() - 2]->getPosition()
-        );
-    for (int i = this->size - 1; i > position; --i) {
-        this->nodes[i]->setValue(this->nodes[i - 1]->getValue());
-        this->nodes[i]->reInitPreVal();
-    }
-    this->nodes[position]->setValue(std::move(value));
-
-    this->initHighlighter(
-            constants::Highlighter::SLL::CODES_PATH[0].second,
-            constants::Highlighter::SLL::CODES_PATH[0].first
-            );
-
-    this->chosenNode = position;
-    this->currentEvent = 0;
-
-    for (auto &e : listEvents)
-        this->events.emplace_back(e);
-}
-
 void LinkedList::processControlMenu(ControlMenu::StatusCode status) {
     if (this->clock.getElapsedTime().asSeconds() < this->delayTime / this->speed)
         return;
@@ -358,4 +278,64 @@ void LinkedList::setSpeed(float _speed) {
 
 int LinkedList::getSize() const {
     return this->size;
+}
+
+void LinkedList::addNode(int position, std::string value, const std::vector<EventAnimation>& listEvents) {
+    if (position < 0 || position > this->size) return;
+
+    sf::Vector2f newPosition(
+            constants::NodeInfo::originNode.x + static_cast<float>(this->nodes.size()) * constants::NodeInfo::offsetX,
+            constants::NodeInfo::originNode.y
+    );
+    if (this->size) {
+        this->nodes.back()->initArrow(
+                NodeInfo::ArrowType::RIGHT,
+                this->nodes.back()->getPosition(),
+                newPosition
+        );
+    }
+    this->nodes.push_back(new NodeInfo(
+            this->window,
+            "10",
+            newPosition,
+            this->typeLinkedList == TypeLinkedList::DOUBLY
+    ));
+    ++this->size;
+    if (this->typeLinkedList == TypeLinkedList::DOUBLY && this->size > 1)
+        this->nodes.back()->initArrow(
+                NodeInfo::ArrowType::LEFT,
+                this->nodes.back()->getPosition(),
+                this->nodes[this->nodes.size() - 2]->getPosition()
+        );
+    for (int i = this->size - 1; i > position; --i) {
+        this->nodes[i]->setValue(this->nodes[i - 1]->getValue());
+        this->nodes[i]->reInitPreVal();
+    }
+    this->nodes[position]->setValue(std::move(value));
+
+    this->initHighlighter(
+            constants::Highlighter::SLL::CODES_PATH[0].second,
+            constants::Highlighter::SLL::CODES_PATH[0].first
+    );
+
+    this->chosenNode = position;
+    this->currentEvent = 0;
+
+    for (auto &e : listEvents)
+        this->events.emplace_back(e);
+}
+
+void LinkedList::deleteNode(int position, const std::vector<EventAnimation>& listEvents) {
+    if (position < 0 || position >= this->size) return;
+
+    this->initHighlighter(
+            constants::Highlighter::SLL::CODES_PATH[1].second,
+            constants::Highlighter::SLL::CODES_PATH[1].first
+    );
+
+    this->chosenNode = position;
+    this->currentEvent = 0;
+
+    for (auto &e : listEvents)
+        this->events.emplace_back(e);
 }

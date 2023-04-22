@@ -7,7 +7,7 @@ if position == 0:
 else:
     current = list.head
     for i in range(1, position):
-        current = currentNode.next
+        current = current.next
     temp = current.next
     current.next = current.next.next
     delete temp

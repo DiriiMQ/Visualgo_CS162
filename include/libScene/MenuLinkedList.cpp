@@ -212,6 +212,13 @@ void MenuLinkedList::updateCreateMode() {
             auto f = pfd::open_file("Choose files to read", pfd::path::home(),
                                     {"Text Files (.txt .text)", "*.txt *.text",
                                      "All Files", "*"});
+
+            // wait for the user to select a file unless the window will be not responsive
+            while (!f.ready(100)) {
+                sf::Event event{};
+                this->window->pollEvent(event);
+            }
+
             if (!f.result().empty()) {
                 std::ifstream file(f.result()[0]);
                 std::string line;

@@ -26,9 +26,9 @@ public:
     void render() override;
 
     std::vector<EventAnimation> addModeEvents(int chosenNode);
-    std::vector<EventAnimation> deleteModeEvents();
-    std::vector<EventAnimation> updateModeEvents();
-    std::vector<EventAnimation> searchModeEvents();
+    std::vector<EventAnimation> deleteModeEvents(int chosenNode);
+    std::vector<EventAnimation> updateModeEvents(int chosenNode);
+    std::vector<EventAnimation> searchModeEvents(int chosenNode);
 };
 
 #endif //VISUALGO_CS162_SLLSCENE_HPP

@@ -9,7 +9,7 @@
 
 class EventAnimation{
 public:
-    int textNode[4]{};
+    std::vector<std::pair<int, std::string>> titleNodes;
     std::vector<std::pair<int, NodeInfo::ArrowType>> colorArrows;
     std::vector<std::pair<int, NodeInfo::ArrowType>> hiddenArrows;
     std::vector<int> colorNodes;

@@ -53,7 +53,8 @@ public:
     // operations of linked list
     void createLinkedList(int size);
     void createLinkedList(std::vector<std::string> values);
-    void addNode(int position, std::string value, std::vector<EventAnimation> listEvents);
+    void addNode(int position, std::string value, const std::vector<EventAnimation>& listEvents);
+    void deleteNode(int position, const std::vector<EventAnimation>& listEvents);
 
 private:
     sf::RenderWindow* window;

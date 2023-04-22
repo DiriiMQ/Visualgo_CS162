@@ -45,7 +45,6 @@ void ControlMenu::pollEvents(sf::Event event, sf::Vector2f mousePosView) {
         if (buttons[i]->pollEvent(mousePosView)) {
             switch (i) {
                 case 0:
-//                    if (this->status != StatusCode::PLAY)
                     this->status = StatusCode::PREVIOUS;
                     break;
                 case 1:
@@ -55,7 +54,6 @@ void ControlMenu::pollEvents(sf::Event event, sf::Vector2f mousePosView) {
                         this->status = StatusCode::PLAY;
                     break;
                 case 2:
-//                    if (this->status != StatusCode::PLAY)
                     this->status = StatusCode::NEXT;
                     break;
                 case 3:

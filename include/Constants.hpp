@@ -208,6 +208,11 @@ namespace constants{
         static float DELAY_TIME = 1.0f;
     }
 
+    namespace TitleNode{
+        static int fontSize = 20;
+        static float offsetY = 50;
+    }
+
     // information of window
     static int Width = 1760,
             Height = 992;
@@ -227,6 +232,8 @@ namespace constants{
                         clickGray(100, 100, 100);
 
     static sf::Color normalOrange(255, 145, 77);
+
+    static sf::Color titleGreen(64, 81, 59);
 
     // positions of buttons
     static sf::Vector2f submenuButtonPos = sf::Vector2f(0, 730),

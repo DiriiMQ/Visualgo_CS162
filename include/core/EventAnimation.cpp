@@ -5,17 +5,12 @@
 #include "EventAnimation.hpp"
 
 EventAnimation::EventAnimation() {
-    for (int& i : this->textNode)
-        i = -1;
-
     this->statusChosenNode = NodeInfo::StatusNode::InChain;
     this->isPrintPreVal = this->isPrintNormal = false;
 }
 
 void EventAnimation::reset() {
-    for (int& i : this->textNode)
-        i = -1;
-
+    this->titleNodes.clear();
     this->colorArrows.clear();
     this->hiddenArrows.clear();
     this->colorNodes.clear();

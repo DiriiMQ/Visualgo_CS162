@@ -25,6 +25,11 @@ NodeInfo::NodeInfo(sf::RenderWindow *window, std::string value, sf::Vector2f pos
         arrow[(int)ArrowType::LEFT] = arrow[(int)ArrowType::RIGHT] = nullptr;
 
     this->isPrintPreVal = this->isPrintNormal = false;
+
+    this->title.setFont(this->node->font);
+    this->title.setCharacterSize(constants::TitleNode::fontSize);
+    this->title.setFillColor(constants::titleGreen);
+    this->title.setString("");
 }
 
 void NodeInfo::render() {
@@ -43,6 +48,7 @@ void NodeInfo::render() {
             this->arrows[0][(int)ArrowType::RIGHT]->render();
     }
     this->node->render();
+    this->window->draw(this->title);
 }
 
 void NodeInfo::initArrow(NodeInfo::ArrowType type, sf::Vector2f start, sf::Vector2f end) {
@@ -77,6 +83,7 @@ void NodeInfo::reset() {
     this->resetColorNode();
     this->resetColorArrow(ArrowType::LEFT);
     this->resetColorArrow(ArrowType::RIGHT);
+    this->resetTitle();
     this->isPrintNormal = this->isPrintPreVal = false;
     this->statusNode = StatusNode::InChain;
     this->show(ArrowType::LEFT);
@@ -198,4 +205,28 @@ void NodeInfo::setValue(std::string value) {
 
 std::string NodeInfo::getValue() {
     return this->values[0];
+}
+
+void NodeInfo::setTitle(const std::string& _title) {
+    this->title.setString(_title);
+    sf::Vector2f pos = this->node->getPosition();
+    this->title.setOrigin(
+            this->title.getGlobalBounds().width / 2,
+            this->title.getGlobalBounds().height / 2
+            );
+    this->title.setPosition(
+            pos.x,
+            pos.y + constants::TitleNode::offsetY
+            );
+}
+
+void NodeInfo::resetTitle() {
+    this->title.setString("");
+}
+
+void NodeInfo::destroyArrow(NodeInfo::ArrowType type) {
+    delete this->arrows[0][(int)type];
+    delete this->arrows[1][(int)type];
+    this->arrows[0][(int)type] = nullptr;
+    this->arrows[1][(int)type] = nullptr;
 }

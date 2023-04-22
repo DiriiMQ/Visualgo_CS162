@@ -13,10 +13,11 @@ class SingleNode : public BaseDraw{
 private:
     sf::CircleShape circle;
     sf::Text label;
-    sf::Font font;
     std::string value;
 
 public:
+    sf::Font font;
+
     SingleNode(sf::RenderWindow* window, std::string value, sf::Vector2f position);
     void render() override;
     void toggleActiveColor();

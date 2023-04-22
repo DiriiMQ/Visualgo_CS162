@@ -35,12 +35,15 @@ public:
     void render() override;
 
     void initArrow(ArrowType type, sf::Vector2f start, sf::Vector2f end);
+    void destroyArrow(ArrowType type);
+
     void reInitPos(int index);
     void reInitPreVal();
 
     void setEffectivePosition(sf::Vector2f start);
     void setArrows(ArrowType type, sf::Vector2f start, sf::Vector2f end);
     void setValue(std::string value);
+
     sf::Vector2f getPosition();
     std::string getValue();
 
@@ -54,6 +57,8 @@ public:
     void setNodeOutside();
     void setNodeVisible();
 
+    void setTitle(const std::string& title);
+
     void hide(ArrowType type);
     void show(ArrowType type);
 
@@ -61,6 +66,7 @@ public:
     
     void resetColorNode();
     void resetColorArrow(ArrowType type);
+    void resetTitle();
 
     void reset();
 
@@ -69,6 +75,7 @@ private:
     SingleNode* node;
     Arrow* arrows[2][2];
     std::string values[2];
+    sf::Text title;
 
     StatusNode statusNode;
     bool isPrintPreVal, isDLL, isPrintNormal;
