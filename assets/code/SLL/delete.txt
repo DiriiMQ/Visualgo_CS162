@@ -1,5 +1,3 @@
-if list.head is null:
-    return "Error: List is empty"
 if position == 0:
     temp = list.head
     list.head = list.head.next

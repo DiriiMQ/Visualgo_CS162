@@ -1,6 +1,4 @@
 temp = new Node(value)
-if list.head == null and position != 0:
-    return "Error: List is empty"
 if position == 0:
     temp.next = list.head
     list.head = temp

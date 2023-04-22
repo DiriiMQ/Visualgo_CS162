@@ -153,14 +153,14 @@ std::vector<EventAnimation> SLLScene::addModeEvents(int chosenNode) {
             event.colorArrows.emplace_back(0, NodeInfo::ArrowType::RIGHT);
             event.statusChosenNode = NodeInfo::StatusNode::OutChain;
             event.isPrintNormal = true;
-            event.lines = {3, 4};
+            event.lines = {1, 2};
 
             events.emplace_back(event);
         }
 
         event.reset();
         event.titleNodes.emplace_back(chosenNode, "head|temp");
-        event.lines = {5};
+        event.lines = {3};
         event.statusChosenNode = NodeInfo::StatusNode::InChain;
         events.emplace_back(event);
     } else {
@@ -174,7 +174,7 @@ std::vector<EventAnimation> SLLScene::addModeEvents(int chosenNode) {
         if (chosenNode == this->linkedList->getSize())
             event.hiddenArrows.emplace_back(chosenNode - 1, NodeInfo::ArrowType::RIGHT);
         event.statusChosenNode = NodeInfo::StatusNode::OutChain;
-        event.lines = {7};
+        event.lines = {5};
 
         events.emplace_back(event);
 
@@ -190,7 +190,7 @@ std::vector<EventAnimation> SLLScene::addModeEvents(int chosenNode) {
             if (chosenNode == this->linkedList->getSize())
                 event.hiddenArrows.emplace_back(chosenNode - 1, NodeInfo::ArrowType::RIGHT);
             event.statusChosenNode = NodeInfo::StatusNode::OutChain;
-            event.lines = {8};
+            event.lines = {6};
 
             events.emplace_back(event);
 
@@ -208,7 +208,7 @@ std::vector<EventAnimation> SLLScene::addModeEvents(int chosenNode) {
             if (chosenNode == this->linkedList->getSize())
                 event.hiddenArrows.emplace_back(chosenNode - 1, NodeInfo::ArrowType::RIGHT);
             event.statusChosenNode = NodeInfo::StatusNode::OutChain;
-            event.lines = {9};
+            event.lines = {7};
 
             events.emplace_back(event);
         }
@@ -224,7 +224,7 @@ std::vector<EventAnimation> SLLScene::addModeEvents(int chosenNode) {
             event.colorArrows.emplace_back(chosenNode, NodeInfo::ArrowType::RIGHT);
             event.statusChosenNode = NodeInfo::StatusNode::OutChain;
             event.isPrintNormal = true;
-            event.lines = {10};
+            event.lines = {8};
 
             events.emplace_back(event);
         }
@@ -235,7 +235,7 @@ std::vector<EventAnimation> SLLScene::addModeEvents(int chosenNode) {
                 {chosenNode, "temp"}
         };
         event.statusChosenNode = NodeInfo::StatusNode::InChain;
-        event.lines = {11};
+        event.lines = {9};
 
         events.emplace_back(event);
     }
@@ -256,7 +256,7 @@ std::vector<EventAnimation> SLLScene::deleteModeEvents(int chosenNode) {
         event.titleNodes.emplace_back(chosenNode, "head|temp");
         event.colorNodes.push_back(chosenNode);
         event.statusChosenNode = NodeInfo::StatusNode::InChain;
-        event.lines = {2, 3};
+        event.lines = {0, 1};
 
         events.emplace_back(event);
 
@@ -270,7 +270,7 @@ std::vector<EventAnimation> SLLScene::deleteModeEvents(int chosenNode) {
             event.colorArrows.emplace_back(chosenNode, NodeInfo::ArrowType::RIGHT);
             event.isPrintNormal = true;
             event.statusChosenNode = NodeInfo::StatusNode::OutChain;
-            event.lines = {4};
+            event.lines = {2};
 
             events.emplace_back(event);
         }
@@ -278,7 +278,7 @@ std::vector<EventAnimation> SLLScene::deleteModeEvents(int chosenNode) {
         event.reset();
         event.titleNodes.emplace_back(1, "head");
         event.statusChosenNode = NodeInfo::StatusNode::Visible;
-        event.lines = {5};
+        event.lines = {3};
 
         events.emplace_back(event);
     } else {
@@ -286,7 +286,7 @@ std::vector<EventAnimation> SLLScene::deleteModeEvents(int chosenNode) {
         event.titleNodes.emplace_back(0, "head|current");
         event.colorNodes.push_back(0);
         event.statusChosenNode = NodeInfo::StatusNode::InChain;
-        event.lines = {7};
+        event.lines = {5};
 
         events.emplace_back(event);
 
@@ -298,7 +298,7 @@ std::vector<EventAnimation> SLLScene::deleteModeEvents(int chosenNode) {
             };
             event.colorNodes.push_back(i);
             event.statusChosenNode = NodeInfo::StatusNode::InChain;
-            event.lines = {8};
+            event.lines = {6};
 
             events.emplace_back(event);
 
@@ -312,7 +312,7 @@ std::vector<EventAnimation> SLLScene::deleteModeEvents(int chosenNode) {
             event.colorNodes.push_back(i);
             event.colorArrows.emplace_back(i, NodeInfo::ArrowType::RIGHT);
             event.statusChosenNode = NodeInfo::StatusNode::InChain;
-            event.lines = {9};
+            event.lines = {7};
 
             events.emplace_back(event);
         }
@@ -326,7 +326,7 @@ std::vector<EventAnimation> SLLScene::deleteModeEvents(int chosenNode) {
         event.colorNodes.push_back(chosenNode);
         event.colorArrows.emplace_back(chosenNode - 1, NodeInfo::ArrowType::RIGHT);
         event.statusChosenNode = NodeInfo::StatusNode::InChain;
-        event.lines = {10};
+        event.lines = {8};
 
         events.emplace_back(event);
 
@@ -341,14 +341,14 @@ std::vector<EventAnimation> SLLScene::deleteModeEvents(int chosenNode) {
             event.colorArrows.emplace_back(chosenNode - 1, NodeInfo::ArrowType::RIGHT);
             event.statusChosenNode = NodeInfo::StatusNode::OutChain;
             event.isPrintNormal = true;
-            event.lines = {11};
+            event.lines = {9};
 
             events.emplace_back(event);
 
             event.reset();
             event.titleNodes.emplace_back(0, "head");
             event.statusChosenNode = NodeInfo::StatusNode::Visible;
-            event.lines = {12};
+            event.lines = {10};
 
             events.emplace_back(event);
         } else {
@@ -361,7 +361,7 @@ std::vector<EventAnimation> SLLScene::deleteModeEvents(int chosenNode) {
             event.colorNodes.push_back(chosenNode);
             event.hiddenArrows.emplace_back(chosenNode - 1, NodeInfo::ArrowType::RIGHT);
             event.statusChosenNode = NodeInfo::StatusNode::OutChain;
-            event.lines = {11};
+            event.lines = {9};
 
             events.emplace_back(event);
 
@@ -369,7 +369,7 @@ std::vector<EventAnimation> SLLScene::deleteModeEvents(int chosenNode) {
             event.titleNodes.emplace_back(0, "head");
             event.hiddenArrows.emplace_back(chosenNode - 1, NodeInfo::ArrowType::RIGHT);
             event.statusChosenNode = NodeInfo::StatusNode::Visible;
-            event.lines = {12};
+            event.lines = {10};
 
             events.emplace_back(event);
         }
