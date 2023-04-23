@@ -146,18 +146,6 @@ void LinkedList::resetEvents() {
     this->events.clear();
     this->chosenNode = 0;
 
-    // xoa Node Visible ra khoi chain
-    // ...
-//    for (int i = 0; i < this->size; i++){
-//        if (this->nodes[i]->getStatusNode() == NodeInfo::StatusNode::Visible){
-//            this->nodes.erase(this->nodes.begin() + i);
-//            --this->size;
-//            if (i == this->size)
-//                this->nodes.back()->destroyArrow(NodeInfo::ArrowType::RIGHT);
-//            break;
-//        }
-//    }
-
     if (this->deletedNode != -1){
         this->nodes.erase(this->nodes.begin() + this->deletedNode);
         --this->size;
