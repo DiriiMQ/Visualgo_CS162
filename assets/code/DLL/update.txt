@@ -1,0 +1,4 @@
+current = list.head
+for i in range(0, position):
+    current = current.next
+current.data = value

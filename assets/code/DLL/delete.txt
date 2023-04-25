@@ -1,0 +1,64 @@
+if position == 0:
+    temp = list.head
+    list.head = temp.next
+    list.prev = null
+    delete temp
+else if position == list.size - 1:
+    temp = list.tail
+    list.tail = temp.prev
+    list.tail.next = null
+    delete temp
+else:
+    temp = list.head
+    for i in range(0, position):
+        temp = temp.next
+    temp.prev.next = temp.next
+    temp.next.prev = temp.prev
+    delete temp
+
+
+
+
+
+
+
+
+### delete at a beginning of a doubly linked list
+if position == 0:
+    temp = list.head
+    list.head = temp.next
+    if list.head != null:
+        list.head.prev = null
+    else:
+        list.tail = null
+    delete temp
+
+### delete at the end of a doubly linked list
+if position == list.size - 1:
+    temp = list.tail
+    list.tail = temp.prev
+    list.tail.next = null
+    delete temp
+
+### delete at a middle of a doubly linked list
+if position != 0 and position != list.size - 1:
+    temp = list.head
+    for i in range(0, position):
+        temp = temp.next
+    temp.prev.next = temp.next
+    temp.next.prev = temp.prev
+    delete temp
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -141,10 +141,14 @@ void SLLScene::reset() {
 }
 
 std::vector<EventAnimation> SLLScene::addModeEvents(int chosenNode) {
+    this->linkedList->resetEvents();
     if (chosenNode < 0 || chosenNode > this->linkedList->getSize())
         return {};
 
-    this->linkedList->resetEvents();
+    this->linkedList->initHighlighter(
+            constants::Highlighter::SLL::CODES_PATH[0].second,
+            constants::Highlighter::SLL::CODES_PATH[0].first
+    );
 
     std::vector<EventAnimation> events;
     EventAnimation event;
@@ -175,7 +179,7 @@ std::vector<EventAnimation> SLLScene::addModeEvents(int chosenNode) {
                     {1, "head"},
                     {chosenNode, "temp"}
             };
-            event.colorNodes = std::vector<int>{0, 1};
+            event.colorNodes = std::vector<int>{0};
             event.colorArrows.emplace_back(0, NodeInfo::ArrowType::RIGHT);
             event.statusChosenNode = NodeInfo::StatusNode::OutChain;
             event.isPrintNormal = true;
@@ -270,10 +274,14 @@ std::vector<EventAnimation> SLLScene::addModeEvents(int chosenNode) {
 }
 
 std::vector<EventAnimation> SLLScene::deleteModeEvents(int chosenNode) {
+    this->linkedList->resetEvents();
     if (chosenNode < 0 || chosenNode >= this->linkedList->getSize())
         return {};
 
-    this->linkedList->resetEvents();
+    this->linkedList->initHighlighter(
+            constants::Highlighter::SLL::CODES_PATH[1].second,
+            constants::Highlighter::SLL::CODES_PATH[1].first
+    );
 
     std::vector<EventAnimation> events;
     EventAnimation event;
@@ -405,10 +413,14 @@ std::vector<EventAnimation> SLLScene::deleteModeEvents(int chosenNode) {
 }
 
 std::vector<EventAnimation> SLLScene::updateModeEvents(int chosenNode) {
+    this->linkedList->resetEvents();
     if (chosenNode < 0 || chosenNode >= this->linkedList->getSize())
         return {};
 
-    this->linkedList->resetEvents();
+    this->linkedList->initHighlighter(
+            constants::Highlighter::SLL::CODES_PATH[2].second,
+            constants::Highlighter::SLL::CODES_PATH[2].first
+    );
 
     std::vector<EventAnimation> events;
     EventAnimation event;
@@ -450,10 +462,13 @@ std::vector<EventAnimation> SLLScene::updateModeEvents(int chosenNode) {
     }
 
     event.reset();
-    event.titleNodes = {
-            {0, "head"},
-            {chosenNode, "current"}
-    };
+    if (chosenNode == 0)
+        event.titleNodes.emplace_back(0, "head|current");
+    else
+        event.titleNodes = {
+                {0, "head"},
+                {chosenNode, "current"}
+        };
     event.lines = {3};
 
     events.emplace_back(event);
@@ -463,6 +478,10 @@ std::vector<EventAnimation> SLLScene::updateModeEvents(int chosenNode) {
 
 std::vector<EventAnimation> SLLScene::searchModeEvents(int chosenNode) {
     this->linkedList->resetEvents();
+    this->linkedList->initHighlighter(
+            constants::Highlighter::SLL::CODES_PATH[3].second,
+            constants::Highlighter::SLL::CODES_PATH[3].first
+    );
 
     std::vector<EventAnimation> events;
     EventAnimation event;

@@ -202,6 +202,19 @@ namespace constants{
                 std::make_pair("../assets/code/SLL/search.png", 6)
             };
         }
+
+        namespace DLL{
+            const std::pair<const char*, const int> CODES_PATH[] = {
+                std::make_pair("../assets/code/DLL/add_beginning.png", 8),
+                std::make_pair("../assets/code/DLL/add_ending.png", 5),
+                std::make_pair("../assets/code/DLL/add_middle.png", 9),
+                std::make_pair("../assets/code/DLL/delete_beginning.png", 8),
+                std::make_pair("../assets/code/DLL/delete_ending.png", 5),
+                std::make_pair("../assets/code/DLL/delete_middle.png", 7),
+                std::make_pair("../assets/code/DLL/update.png", 4),
+                std::make_pair("../assets/code/DLL/search.png", 6)
+            };
+        }
     }
 
     namespace LinkedList{

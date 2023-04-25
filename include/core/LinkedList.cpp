@@ -151,6 +151,8 @@ void LinkedList::resetEvents() {
         --this->size;
         if (this->deletedNode == this->size)
             this->nodes.back()->destroyArrow(NodeInfo::ArrowType::RIGHT);
+        if (this->size && this->deletedNode == 0)
+            this->nodes[0]->destroyArrow(NodeInfo::ArrowType::LEFT);
     }
     this->deletedNode = -1;
 
@@ -309,11 +311,6 @@ void LinkedList::addNode(int position, std::string value, const std::vector<Even
     }
     this->nodes[position]->setValue(std::move(value));
 
-    this->initHighlighter(
-            constants::Highlighter::SLL::CODES_PATH[0].second,
-            constants::Highlighter::SLL::CODES_PATH[0].first
-    );
-
     this->chosenNode = position;
     this->currentEvent = 0;
 
@@ -325,12 +322,6 @@ void LinkedList::deleteNode(int position, const std::vector<EventAnimation>& lis
     if (position < 0 || position >= this->size) return;
 
     this->deletedNode = position;
-
-    this->initHighlighter(
-            constants::Highlighter::SLL::CODES_PATH[1].second,
-            constants::Highlighter::SLL::CODES_PATH[1].first
-    );
-
     this->chosenNode = position;
     this->currentEvent = 0;
 
@@ -342,12 +333,6 @@ void LinkedList::updateNode(int position, std::string value, const std::vector<E
     if (position < 0 || position >= this->size) return;
 
     this->nodes[position]->setValue(std::move(value));
-
-    this->initHighlighter(
-            constants::Highlighter::SLL::CODES_PATH[2].second,
-            constants::Highlighter::SLL::CODES_PATH[2].first
-    );
-
     this->chosenNode = position;
     this->currentEvent = 0;
 
@@ -356,11 +341,6 @@ void LinkedList::updateNode(int position, std::string value, const std::vector<E
 }
 
 void LinkedList::searchNode(const std::vector<EventAnimation> &listEvents) {
-    this->initHighlighter(
-            constants::Highlighter::SLL::CODES_PATH[3].second,
-            constants::Highlighter::SLL::CODES_PATH[3].first
-    );
-
     this->chosenNode = 0;
     this->currentEvent = 0;
 

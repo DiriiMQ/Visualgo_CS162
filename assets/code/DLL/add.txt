@@ -1,0 +1,46 @@
+### WRONG
+temp = new Node(value)
+if position == 0:
+    temp.next = list.head
+    list.head.prev = temp
+    list.head = temp
+else if position == list.size:
+    list.tail.next = temp
+    temp.prev = list.tail
+    list.tail = temp
+else:
+    current = self.head
+    for i in range(1, position):
+        current = current.next
+    temp.next = current.next
+    temp.prev = current
+    current.next.prev = temp
+    current.next = temp
+
+### adding a node at a beginning of a doubly linked list
+if position == 0:
+    temp = new Node(value)
+    temp.next = list.head
+    if list.head != null:
+        list.head.prev = temp
+    else:
+        list.tail = temp
+    list.head = temp
+
+### adding a node at a ending of a doubly linked list
+if position == list.size:
+    temp = new Node(value)
+    temp.prev = list.tail
+    list.tail.next = temp
+    list.tail = temp
+
+### adding a node at other positions
+if position != 0 and position != list.size:
+    temp = new Node(value)
+    current = list.head
+    for i in range(1, position):
+        current = current.next
+    temp.next = current.next
+    temp.prev = current
+    current.next.prev = temp
+    current.next = temp
