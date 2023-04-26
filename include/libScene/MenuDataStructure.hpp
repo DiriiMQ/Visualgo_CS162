@@ -7,7 +7,7 @@
 
 #include <fstream>
 #include "Constants.hpp"
-#include "stuff/Button.hpp"
+#include "stuff/button.hpp"
 #include "stuff/CustomTextbox.hpp"
 #include "core/FileDialog.h"
 
