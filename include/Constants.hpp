@@ -42,6 +42,60 @@ namespace constants{
         };
     }
 
+    namespace MenuDataStructure{
+        constexpr int BUTTON_COUNT = 4;
+        enum Button{
+            CREATE_BUTTON,
+            PUSH_BUTTON,
+            POP_BUTTON,
+            CLEAR_BUTTON,
+            NONE
+        };
+        constexpr char BUTTON_NAMES[BUTTON_COUNT][50] = {
+                "Create",
+                "Push",
+                "Pop",
+                "Clear"
+        };
+        constexpr int BUTTON_NAME_SIZE = 15;
+
+        namespace CreateMode {
+            constexpr int BUTTON_COUNT = 3;
+            enum Button {
+                RANDOM_BUTTON,
+                DEFINED_LIST_BUTTON,
+                FILE_BUTTON,
+                NONE
+            };
+            constexpr char BUTTON_NAMES[BUTTON_COUNT][50] = {
+                    "Random",
+                    "Defined List",
+                    "File"
+            };
+            constexpr int NAME_SIZE = 15;
+
+            constexpr int TEXTBOX_COUNT = 2;
+            constexpr char TEXTBOX_NAMES[2][50] = {
+                    "Amount = ",
+                    "List = "
+            };
+
+            constexpr int TEXTBOX_LENGTH[2] = {
+                    2,
+                    30 // for input a defined list
+            };
+        }
+        namespace PushMode{
+            constexpr int TEXTBOX_COUNT = 1;
+            constexpr char TEXTBOX_NAME[50] = "Value = ";
+            constexpr int TEXTBOX_LENGTH = 2;
+            enum Textbox{
+                VALUE_TEXTBOX,
+                NONE
+            };
+        }
+    }
+
     namespace MenuLinkedList {
         constexpr int BUTTON_COUNT = 5;
         enum Button {

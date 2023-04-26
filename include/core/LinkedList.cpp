@@ -82,7 +82,8 @@ void LinkedList::updateAnimation() {
     if (this->chosenNode < this->size - 1 && event.isPrintNormal)
         this->nodes[this->chosenNode + 1]->setPrintNormal();
 
-    this->highlighter->toggle(event.lines);
+    if (this->highlighter)
+        this->highlighter->toggle(event.lines);
 
     this->calculateEffectivePositions();
 
