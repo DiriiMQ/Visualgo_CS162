@@ -11,14 +11,11 @@
 #include "Constants.hpp"
 
 class Arrow : public BaseDraw{
-private:
+protected:
     sf::Vector2f points[2];
     sf::Texture arrowTexture[2];
     sf::Sprite arrowSprite;
     float length;
-    sf::Texture rectangleTexture[2];
-    sf::Sprite rectangleSprite;
-
     bool hasSetMid;
 
 public:

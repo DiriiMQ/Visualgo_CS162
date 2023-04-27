@@ -14,7 +14,8 @@ public:
     std::vector<std::pair<int, NodeInfo::ArrowType>> hiddenArrows;
     std::vector<int> colorNodes;
     NodeInfo::StatusNode statusChosenNode;
-    bool isPrintPreVal, isPrintNormal;
+    bool isPrintPreVal, isPrintNormal, isShowBackArrow;
+    sf::Vector2f posBackArrow[2];
     std::vector<int> lines;
 
     EventAnimation();

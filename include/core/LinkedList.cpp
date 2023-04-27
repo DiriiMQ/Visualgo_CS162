@@ -9,6 +9,12 @@ LinkedList::LinkedList(sf::RenderWindow* window, TypeLinkedList typeLinkedList) 
     this->typeLinkedList = typeLinkedList;
     this->highlighter = nullptr;
     this->delayTime = constants::LinkedList::DELAY_TIME;
+    this->backArrow = new BackArrow(this->window, {0, 0}, {0, 0});
+
+    if (this->typeLinkedList == TypeLinkedList::CIRCULAR)
+        this->backArrow->show();
+    else
+        this->backArrow->hide();
 
     this->createLinkedList(0);
 }
@@ -21,6 +27,10 @@ void LinkedList::clear() {
 }
 
 void LinkedList::render() {
+    if (this->size > 1) {
+//        this->backArrow->toggleActiveColorNode();
+        this->backArrow->render();
+    }
     for (auto &node : this->nodes){
         node->render();
     }
@@ -31,6 +41,12 @@ LinkedList::LinkedList(sf::RenderWindow* window, TypeLinkedList typeLinkedList, 
     this->typeLinkedList = typeLinkedList;
     this->highlighter = nullptr;
     this->delayTime = constants::LinkedList::DELAY_TIME;
+    this->backArrow = new BackArrow(this->window, {0, 0}, {0, 0});
+
+    if (this->typeLinkedList == TypeLinkedList::CIRCULAR)
+        this->backArrow->show();
+    else
+        this->backArrow->hide();
 
     this->createLinkedList(size);
 }
@@ -40,6 +56,12 @@ LinkedList::LinkedList(sf::RenderWindow* window, TypeLinkedList typeLinkedList, 
     this->typeLinkedList = typeLinkedList;
     this->highlighter = nullptr;
     this->delayTime = constants::LinkedList::DELAY_TIME;
+    this->backArrow = new BackArrow(this->window, {0, 0}, {0, 0});
+
+    if (this->typeLinkedList == TypeLinkedList::CIRCULAR)
+        this->backArrow->show();
+    else
+        this->backArrow->hide();
 
     this->createLinkedList(std::move(values));
 }
@@ -82,6 +104,8 @@ void LinkedList::updateAnimation() {
     if (this->chosenNode < this->size - 1 && event.isPrintNormal)
         this->nodes[this->chosenNode + 1]->setPrintNormal();
 
+    this->backArrow->setPosition(event.posBackArrow[0], event.posBackArrow[1]);
+
     if (this->highlighter)
         this->highlighter->toggle(event.lines);
 
@@ -91,8 +115,9 @@ void LinkedList::updateAnimation() {
         node->updateNode();
     }
 
-    for (auto &i : event.titleNodes)
+    for (auto &i : event.titleNodes) {
         this->nodes[i.first]->setTitle(i.second);
+    }
 
     if (this->chosenNode < this->size - 1)
         this->nodes[this->chosenNode]->updateArrows(NodeInfo::ArrowType::RIGHT, this->nodes[this->chosenNode + 1]->getPosition());
@@ -150,7 +175,7 @@ void LinkedList::resetEvents() {
     if (this->deletedNode != -1){
         this->nodes.erase(this->nodes.begin() + this->deletedNode);
         --this->size;
-        if (this->deletedNode == this->size)
+        if (this->size && this->deletedNode == this->size)
             this->nodes.back()->destroyArrow(NodeInfo::ArrowType::RIGHT);
         if (this->size && this->deletedNode == 0)
             this->nodes[0]->destroyArrow(NodeInfo::ArrowType::LEFT);
@@ -194,6 +219,8 @@ void LinkedList::createLinkedList(int _size) {
                 );
         }
     }
+    if (this->size > 1)
+        this->backArrow->setPosition(this->nodes.back()->getPosition(), this->nodes[0]->getPosition());
 }
 
 void LinkedList::createLinkedList(std::vector<std::string> values) {
@@ -226,6 +253,8 @@ void LinkedList::createLinkedList(std::vector<std::string> values) {
                 );
         }
     }
+    if (this->size > 1)
+        this->backArrow->setPosition(this->nodes.back()->getPosition(), this->nodes[0]->getPosition());
 }
 
 void LinkedList::initHighlighter(int linesCount, const char *codePath) {

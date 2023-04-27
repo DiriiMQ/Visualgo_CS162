@@ -7,9 +7,11 @@
 
 #include <random>
 #include "draw/NodeInfo.hpp"
+#include "draw/BackArrow.hpp"
 #include "libScene/Highlighter.hpp"
 #include "libScene/ControlMenu.hpp"
 #include "EventAnimation.hpp"
+#include "core/Vector.h"
 
 namespace Random{
     static std::mt19937 rng(std::random_device{}());
@@ -65,8 +67,10 @@ private:
     int chosenNode = 0, deletedNode = -1;
     TypeLinkedList typeLinkedList;
 
-    std::vector<NodeInfo*> nodes;
+    Vector<NodeInfo*> nodes;
     int size;
+
+    BackArrow* backArrow;
 
     Highlighter* highlighter;
 

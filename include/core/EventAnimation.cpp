@@ -6,7 +6,8 @@
 
 EventAnimation::EventAnimation() {
     this->statusChosenNode = NodeInfo::StatusNode::InChain;
-    this->isPrintPreVal = this->isPrintNormal = false;
+    this->isPrintPreVal = this->isPrintNormal = this->isShowBackArrow = false;
+    this->posBackArrow[0] = this->posBackArrow[1] = sf::Vector2f(0, 0);
 }
 
 void EventAnimation::reset() {
@@ -17,5 +18,6 @@ void EventAnimation::reset() {
     this->lines.clear();
 
     this->statusChosenNode = NodeInfo::StatusNode::InChain;
-    this->isPrintPreVal = this->isPrintNormal = false;
+    this->isPrintPreVal = this->isPrintNormal = this->isShowBackArrow = false;
+    this->posBackArrow[0] = this->posBackArrow[1] = sf::Vector2f(0, 0);
 }

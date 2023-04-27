@@ -208,7 +208,11 @@ std::string NodeInfo::getValue() {
 }
 
 void NodeInfo::setTitle(const std::string& _title) {
-    this->title.setString(_title);
+    std::string preTitle = this->title.getString();
+    if (!preTitle.empty())
+        preTitle += "|";
+    preTitle += _title;
+    this->title.setString(preTitle);
     sf::Vector2f pos = this->node->getPosition();
     this->title.setOrigin(
             this->title.getGlobalBounds().width / 2,
@@ -225,8 +229,10 @@ void NodeInfo::resetTitle() {
 }
 
 void NodeInfo::destroyArrow(NodeInfo::ArrowType type) {
-    delete this->arrows[0][(int)type];
-    delete this->arrows[1][(int)type];
+    if (this->arrows[0][(int)type])
+        delete this->arrows[0][(int)type];
+    if (this->arrows[1][(int)type])
+        delete this->arrows[1][(int)type];
     this->arrows[0][(int)type] = nullptr;
     this->arrows[1][(int)type] = nullptr;
 }

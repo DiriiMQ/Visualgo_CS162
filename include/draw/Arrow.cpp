@@ -29,28 +29,28 @@ Arrow::Arrow(sf::RenderWindow *window, sf::Vector2f start, sf::Vector2f end) : B
     this->autoScale();
     this->autoRotate();
 
-    this->rectangleTexture[0].loadFromFile("../assets/rectangle/rectangle_black.png");
-    this->rectangleTexture[1].loadFromFile("../assets/rectangle/rectangle_orange.png");
-    topLeftCorner = sf::Vector2i(
-            static_cast<int>(this->rectangleTexture[0].getSize().x / 2.0 - constants::Arrow::sizeRectangle.x / 2.0),
-            static_cast<int>(this->rectangleTexture[0].getSize().y / 2.0 - constants::Arrow::sizeRectangle.y / 2.0)
-    );
-    this->rectangleSprite.setTexture(this->rectangleTexture[0]);
-    this->rectangleSprite.setTextureRect(sf::IntRect(
-            topLeftCorner.x,
-            topLeftCorner.y,
-            constants::Arrow::sizeRectangle.x,
-            constants::Arrow::sizeRectangle.y
-    ));
-    this->rectangleSprite.setScale(
-            constants::Arrow::defaultScaleRectangle.x,
-            constants::Arrow::defaultScaleRectangle.y
-            );
-    this->rectangleSprite.setOrigin(
-            0,
-            this->rectangleSprite.getLocalBounds().height / 2.0f
-    );
-    this->rectangleSprite.setPosition(sf::Vector2f(50, 200));
+//    this->rectangleTexture[0].loadFromFile("../assets/rectangle/rectangle_black.png");
+//    this->rectangleTexture[1].loadFromFile("../assets/rectangle/rectangle_orange.png");
+//    topLeftCorner = sf::Vector2i(
+//            static_cast<int>(this->rectangleTexture[0].getSize().x / 2.0 - constants::Arrow::sizeRectangle.x / 2.0),
+//            static_cast<int>(this->rectangleTexture[0].getSize().y / 2.0 - constants::Arrow::sizeRectangle.y / 2.0)
+//    );
+//    this->rectangleSprite.setTexture(this->rectangleTexture[0]);
+//    this->rectangleSprite.setTextureRect(sf::IntRect(
+//            topLeftCorner.x,
+//            topLeftCorner.y,
+//            constants::Arrow::sizeRectangle.x,
+//            constants::Arrow::sizeRectangle.y
+//    ));
+//    this->rectangleSprite.setScale(
+//            constants::Arrow::defaultScaleRectangle.x,
+//            constants::Arrow::defaultScaleRectangle.y
+//            );
+//    this->rectangleSprite.setOrigin(
+//            0,
+//            this->rectangleSprite.getLocalBounds().height / 2.0f
+//    );
+//    this->rectangleSprite.setPosition(sf::Vector2f(50, 200));
 //    this->rectangleSprite.setRotation(angle);
 
     this->hasSetMid = false;
@@ -63,12 +63,12 @@ void Arrow::render() {
 
 void Arrow::toggleActiveColor() {
     this->arrowSprite.setTexture(this->arrowTexture[1]);
-    this->rectangleSprite.setTexture(this->rectangleTexture[1]);
+//    this->rectangleSprite.setTexture(this->rectangleTexture[1]);
 }
 
 void Arrow::resetColor() {
     this->arrowSprite.setTexture(this->arrowTexture[0]);
-    this->rectangleSprite.setTexture(this->rectangleTexture[0]);
+//    this->rectangleSprite.setTexture(this->rectangleTexture[0]);
 }
 
 void Arrow::setPositions(sf::Vector2f start, sf::Vector2f end, bool needSetMid) {
