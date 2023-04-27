@@ -117,8 +117,9 @@ T &Vector<T>::operator[](int index) {
 
 template<class T>
 void Vector<T>::resize(int _capacity) {
+    this->_size = _capacity;
     if (_capacity > 0) {
-        this->capacity = this->_size = _capacity;
+        this->capacity = _capacity;
         T* temp = new T[this->capacity];
         for (int i = 0; i < this->_size; i++) {
             temp[i] = this->arr[i];

@@ -73,6 +73,10 @@ void BackArrow::resetColor() {
 void BackArrow::setPosition(sf::Vector2f start, sf::Vector2f end) {
     this->points[0] = end;
     this->points[1] = start;
+    if (end == start) {
+        this->hide();
+        return;
+    }
     this->points[2] = sf::Vector2f(
             this->points[0].x,
             this->points[0].y - constants::NodeInfo::offsetX

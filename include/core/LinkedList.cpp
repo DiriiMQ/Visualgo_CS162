@@ -81,6 +81,9 @@ void LinkedList::updateAnimation() {
         node->reset();
     }
 
+    if (this->typeLinkedList == TypeLinkedList::CIRCULAR)
+        this->backArrow->show();
+
     EventAnimation &event = this->events[this->currentEvent];
     for (auto &arrow: event.colorArrows)
         this->nodes[arrow.first]->toggleActiveColorArrow(arrow.second);
@@ -104,8 +107,6 @@ void LinkedList::updateAnimation() {
     if (this->chosenNode < this->size - 1 && event.isPrintNormal)
         this->nodes[this->chosenNode + 1]->setPrintNormal();
 
-    this->backArrow->setPosition(event.posBackArrow[0], event.posBackArrow[1]);
-
     if (this->highlighter)
         this->highlighter->toggle(event.lines);
 
@@ -123,6 +124,12 @@ void LinkedList::updateAnimation() {
         this->nodes[this->chosenNode]->updateArrows(NodeInfo::ArrowType::RIGHT, this->nodes[this->chosenNode + 1]->getPosition());
     if (this->chosenNode > 0)
         this->nodes[this->chosenNode]->updateArrows(NodeInfo::ArrowType::LEFT, this->nodes[this->chosenNode - 1]->getPosition());
+
+    if (event.indexBackArrow.first != -1 and event.indexBackArrow.second != -1)
+        this->backArrow->setPosition(
+                this->nodes[event.indexBackArrow.first]->getPosition(),
+                this->nodes[event.indexBackArrow.second]->getPosition()
+                );
 
     int lastInChain = 0;
     if (this->nodes[lastInChain]->getStatusNode() != NodeInfo::StatusNode::InChain){
@@ -187,6 +194,8 @@ void LinkedList::resetEvents() {
         this->nodes[i]->reInitPos(i);
         this->nodes[i]->reInitPreVal();
     }
+    if (this->size > 1)
+        this->backArrow->setPosition(this->nodes.back()->getPosition(), this->nodes[0]->getPosition());
 }
 
 void LinkedList::createLinkedList(int _size) {
@@ -335,11 +344,13 @@ void LinkedList::addNode(int position, std::string value, const std::vector<Even
                 this->nodes.back()->getPosition(),
                 this->nodes[this->nodes.size() - 2]->getPosition()
         );
+    this->backArrow->setPosition(newPosition, this->nodes[0]->getPosition());
     for (int i = this->size - 1; i > position; --i) {
         this->nodes[i]->setValue(this->nodes[i - 1]->getValue());
         this->nodes[i]->reInitPreVal();
     }
     this->nodes[position]->setValue(std::move(value));
+//    std::cout << "add node to the current list " << position << " " << this->nodes[position]->getValue() << std::endl;
 
     this->chosenNode = position;
     this->currentEvent = 0;
@@ -383,4 +394,9 @@ int LinkedList::findValue(const std::string& value) {
         if (this->nodes[i]->getValue() == value)
             return i;
     return this->size;
+}
+
+sf::Vector2f LinkedList::getPosNode(int position) {
+    if (position < 0 || position >= this->size) return {};
+    return this->nodes[position]->getPosition();
 }

@@ -35,6 +35,7 @@ public:
 
     void setSpeed(float speed);
     int findValue(const std::string& value);
+    sf::Vector2f getPosNode(int position);
 
     [[nodiscard]] int getSize() const;
 
