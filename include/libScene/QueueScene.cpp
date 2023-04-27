@@ -56,7 +56,7 @@ void QueueScene::update() {
                 this->linkedList->addNode(
                         this->linkedList->getSize(),
                         this->menu->pushModeValue,
-                        this->pushModeEvents(0)
+                        this->pushModeEvents(this->linkedList->getSize())
                 );
 
                 std::cout << "Pushed " << this->menu->pushModeValue << std::endl;
@@ -129,13 +129,130 @@ std::vector<EventAnimation> QueueScene::pushModeEvents(int chosenNode) {
     if (chosenNode < 0 || chosenNode > this->linkedList->getSize())
         return {};
 
-    // init highlighter later
-    // ....
+    this->linkedList->initHighlighter(
+            constants::Highlighter::SLL::CODES_PATH[0].second,
+            constants::Highlighter::SLL::CODES_PATH[0].first
+    );
 
     std::vector<EventAnimation> events;
     EventAnimation event;
 
+    if (chosenNode)
+        event.titleNodes = {
+                {0, "head"},
+                {chosenNode, "temp"}
+        };
+    else {
+        event.titleNodes.emplace_back(chosenNode, "temp");
+        if (this->linkedList->getSize())
+            event.titleNodes.emplace_back(1, "head");
+    }
+    event.hiddenArrows.emplace_back(chosenNode, NodeInfo::ArrowType::RIGHT);
+    if (chosenNode && chosenNode == this->linkedList->getSize())
+        event.hiddenArrows.emplace_back(chosenNode - 1, NodeInfo::ArrowType::RIGHT);
+    event.colorNodes.push_back(chosenNode);
+    event.statusChosenNode = NodeInfo::StatusNode::OutChain;
+    event.lines = {0};
+
     events.emplace_back(event);
+
+    if (chosenNode == 0) {
+        if (this->linkedList->getSize()) {
+            event.reset();
+            event.titleNodes = {
+                    {1, "head"},
+                    {chosenNode, "temp"}
+            };
+            event.colorNodes = std::vector<int>{0};
+            event.colorArrows.emplace_back(0, NodeInfo::ArrowType::RIGHT);
+            event.statusChosenNode = NodeInfo::StatusNode::OutChain;
+            event.isPrintNormal = true;
+            event.lines = {1, 2};
+
+            events.emplace_back(event);
+        }
+
+        event.reset();
+        event.titleNodes.emplace_back(chosenNode, "head|temp");
+        event.lines = {3};
+        event.statusChosenNode = NodeInfo::StatusNode::InChain;
+        events.emplace_back(event);
+    } else {
+        event.reset();
+        event.titleNodes = {
+                {0, "head|current"},
+                {chosenNode, "temp"}
+        };
+        event.colorNodes.push_back(0);
+        event.hiddenArrows.emplace_back(chosenNode, NodeInfo::ArrowType::RIGHT);
+        if (chosenNode == this->linkedList->getSize())
+            event.hiddenArrows.emplace_back(chosenNode - 1, NodeInfo::ArrowType::RIGHT);
+        event.statusChosenNode = NodeInfo::StatusNode::OutChain;
+        event.lines = {5};
+
+        events.emplace_back(event);
+
+        for (int i = 0; i < chosenNode; ++i) {
+            event.reset();
+            event.titleNodes = {
+                    {0, "head"},
+                    {chosenNode, "temp"},
+                    {i, "current"}
+            };
+            event.colorNodes.push_back(i);
+            event.hiddenArrows.emplace_back(chosenNode, NodeInfo::ArrowType::RIGHT);
+            if (chosenNode == this->linkedList->getSize())
+                event.hiddenArrows.emplace_back(chosenNode - 1, NodeInfo::ArrowType::RIGHT);
+            event.statusChosenNode = NodeInfo::StatusNode::OutChain;
+            event.lines = {6};
+
+            events.emplace_back(event);
+
+            if (i == chosenNode - 1) break;
+
+            event.reset();
+            event.titleNodes = {
+                    {0, "head"},
+                    {chosenNode, "temp"},
+                    {i, "current"}
+            };
+            event.colorNodes.push_back(i);
+            event.colorArrows.emplace_back(i, NodeInfo::ArrowType::RIGHT);
+            event.hiddenArrows.emplace_back(chosenNode, NodeInfo::ArrowType::RIGHT);
+            if (chosenNode == this->linkedList->getSize())
+                event.hiddenArrows.emplace_back(chosenNode - 1, NodeInfo::ArrowType::RIGHT);
+            event.statusChosenNode = NodeInfo::StatusNode::OutChain;
+            event.lines = {7};
+
+            events.emplace_back(event);
+        }
+
+        if (chosenNode != this->linkedList->getSize()) {
+            event.reset();
+            event.titleNodes = {
+                    {0, "head"},
+                    {chosenNode, "temp"},
+                    {chosenNode - 1, "current"}
+            };
+            event.colorNodes.push_back(chosenNode);
+            event.colorArrows.emplace_back(chosenNode, NodeInfo::ArrowType::RIGHT);
+            event.statusChosenNode = NodeInfo::StatusNode::OutChain;
+            event.isPrintNormal = true;
+            event.lines = {8};
+
+            events.emplace_back(event);
+        }
+
+        event.reset();
+        event.titleNodes = {
+                {0, "head"},
+                {chosenNode, "temp"}
+        };
+        event.statusChosenNode = NodeInfo::StatusNode::InChain;
+        event.lines = {9};
+
+        events.emplace_back(event);
+    }
 
     return events;
 }
@@ -145,14 +262,136 @@ std::vector<EventAnimation> QueueScene::popModeEvents(int chosenNode) {
     if (chosenNode < 0 || chosenNode >= this->linkedList->getSize())
         return {};
 
-    // init highlighter later
-    // ....
+    this->linkedList->initHighlighter(
+            constants::Highlighter::SLL::CODES_PATH[1].second,
+            constants::Highlighter::SLL::CODES_PATH[1].first
+    );
 
     std::vector<EventAnimation> events;
     EventAnimation event;
 
-    event.statusChosenNode = NodeInfo::StatusNode::Visible;
-    events.emplace_back(event);
+    if (!chosenNode) {
+        event.titleNodes.emplace_back(chosenNode, "head|temp");
+        event.colorNodes.push_back(chosenNode);
+        event.statusChosenNode = NodeInfo::StatusNode::InChain;
+        event.lines = {0, 1};
+
+        events.emplace_back(event);
+
+        if (this->linkedList->getSize() > 1) {
+            event.reset();
+            event.titleNodes = {
+                    {chosenNode, "temp"},
+                    {1, "head"}
+            };
+            event.colorNodes.push_back(1);
+            event.colorArrows.emplace_back(chosenNode, NodeInfo::ArrowType::RIGHT);
+            event.isPrintNormal = true;
+            event.statusChosenNode = NodeInfo::StatusNode::OutChain;
+            event.lines = {2};
+
+            events.emplace_back(event);
+        }
+
+        event.reset();
+        event.titleNodes.emplace_back(1, "head");
+        event.statusChosenNode = NodeInfo::StatusNode::Visible;
+        event.lines = {3};
+
+        events.emplace_back(event);
+    } else {
+        event.reset();
+        event.titleNodes.emplace_back(0, "head|current");
+        event.colorNodes.push_back(0);
+        event.statusChosenNode = NodeInfo::StatusNode::InChain;
+        event.lines = {5};
+
+        events.emplace_back(event);
+
+        for (int i = 0; i < chosenNode; ++i) {
+            event.reset();
+            event.titleNodes = {
+                    {0, "head"},
+                    {i, "current"}
+            };
+            event.colorNodes.push_back(i);
+            event.statusChosenNode = NodeInfo::StatusNode::InChain;
+            event.lines = {6};
+
+            events.emplace_back(event);
+
+            if (i == chosenNode - 1) break;
+
+            event.reset();
+            event.titleNodes = {
+                    {0, "head"},
+                    {i, "current"}
+            };
+            event.colorNodes.push_back(i);
+            event.colorArrows.emplace_back(i, NodeInfo::ArrowType::RIGHT);
+            event.statusChosenNode = NodeInfo::StatusNode::InChain;
+            event.lines = {7};
+
+            events.emplace_back(event);
+        }
+
+        event.reset();
+        event.titleNodes = {
+                {0, "head"},
+                {chosenNode, "temp"},
+                {chosenNode - 1, "current"}
+        };
+        event.colorNodes.push_back(chosenNode);
+        event.colorArrows.emplace_back(chosenNode - 1, NodeInfo::ArrowType::RIGHT);
+        event.statusChosenNode = NodeInfo::StatusNode::InChain;
+        event.lines = {8};
+
+        events.emplace_back(event);
+
+        if (chosenNode != this->linkedList->getSize() - 1) {
+            event.reset();
+            event.titleNodes = {
+                    {0, "head"},
+                    {chosenNode, "temp"},
+                    {chosenNode - 1, "current"}
+            };
+            event.colorNodes.push_back(chosenNode);
+            event.colorArrows.emplace_back(chosenNode - 1, NodeInfo::ArrowType::RIGHT);
+            event.statusChosenNode = NodeInfo::StatusNode::OutChain;
+            event.isPrintNormal = true;
+            event.lines = {9};
+
+            events.emplace_back(event);
+
+            event.reset();
+            event.titleNodes.emplace_back(0, "head");
+            event.statusChosenNode = NodeInfo::StatusNode::Visible;
+            event.lines = {10};
+
+            events.emplace_back(event);
+        } else {
+            event.reset();
+            event.titleNodes = {
+                    {0, "head"},
+                    {chosenNode, "temp"},
+                    {chosenNode - 1, "current"}
+            };
+            event.colorNodes.push_back(chosenNode);
+            event.hiddenArrows.emplace_back(chosenNode - 1, NodeInfo::ArrowType::RIGHT);
+            event.statusChosenNode = NodeInfo::StatusNode::OutChain;
+            event.lines = {9};
+
+            events.emplace_back(event);
+
+            event.reset();
+            event.titleNodes.emplace_back(0, "head");
+            event.hiddenArrows.emplace_back(chosenNode - 1, NodeInfo::ArrowType::RIGHT);
+            event.statusChosenNode = NodeInfo::StatusNode::Visible;
+            event.lines = {10};
+
+            events.emplace_back(event);
+        }
+    }
 
     return events;
 }
