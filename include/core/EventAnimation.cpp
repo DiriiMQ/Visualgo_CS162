@@ -20,4 +20,7 @@ void EventAnimation::reset() {
     this->statusChosenNode = NodeInfo::StatusNode::InChain;
     this->isPrintPreVal = this->isPrintNormal = this->isShowBackArrow = false;
     this->indexBackArrow = {-1, -1};
+
+    this->eventSquares.clear();
+    this->eventSquaresTemp.clear();
 }

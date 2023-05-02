@@ -13,6 +13,8 @@ protected:
 
 public:
     explicit BaseDraw(sf::RenderWindow* window);
+
+
     virtual void render() = 0;
 };
 

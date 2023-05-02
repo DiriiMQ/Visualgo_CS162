@@ -1,33 +1,42 @@
 //
-// Created by dirii on 30/03/2023.
+// Created by dirii on 01/05/2023.
 //
 
-#include "MenuLinkedList.hpp"
+#include "MenuArray.hpp"
 
-void MenuLinkedList::init() {
+MenuArray::MenuArray(sf::RenderWindow *window, constants::MenuArray::Type _typeArray) {
+    this->window = window;
+    this->typeArray = _typeArray;
+    this->init();
+}
+
+void MenuArray::init() {
     this->initButtons();
     this->initCreateMode();
     this->initAddMode();
     this->initDeleteMode();
     this->initUpdateMode();
     this->initSearchMode();
+    this->initAllocateMode();
 
-    this->activeOptionMenu = constants::MenuLinkedList::Button::NONE;
+    this->activeOptionMenu = constants::MenuArray::Button::NONE;
 }
 
-void MenuLinkedList::initButtons() {
-    for (int i = 0; i < constants::MenuLinkedList::BUTTON_COUNT; i++) {
+void MenuArray::initButtons() {
+    for (int i = 0; i < constants::MenuArray::BUTTON_COUNT; i++) {
         sf::Vector2f position = sf::Vector2f(
                 constants::sideButtonSize.x + constants::distance2ModeButtons,
                 constants::submenuButtonPos.y + (constants::optionButtonSize.y + constants::distance2ModeButtons / 10) * static_cast<float>(i)
-                );
+        );
+        if (i == constants::MenuArray::BUTTON_COUNT - 1 && this->typeArray == constants::MenuArray::Type::STATIC)
+            position = sf::Vector2f(-100, -100);
         this->buttons[i] = new Button(
                 this->window,
                 position,
                 constants::optionButtonSize,
-                constants::MenuLinkedList::BUTTON_NAMES[i],
-                constants::MenuLinkedList::BUTTON_NAMES[i],
-                constants::MenuLinkedList::BUTTON_NAME_SIZE,
+                constants::MenuArray::BUTTON_NAMES[i],
+                constants::MenuArray::BUTTON_NAMES[i],
+                constants::MenuArray::BUTTON_NAME_SIZE,
                 sf::Color::Black,
                 constants::normalGray,
                 constants::hoverGray,
@@ -36,46 +45,49 @@ void MenuLinkedList::initButtons() {
     }
 }
 
-MenuLinkedList::MenuLinkedList(sf::RenderWindow *window) {
-    this->window = window;
-    this->init();
+void MenuArray::resetActiveOptionMenu() {
+    this->activeOptionMenu = constants::MenuArray::Button::NONE;
+    this->activeCreateMode = constants::MenuArray::CreateMode::Button::NONE;
 }
 
-void MenuLinkedList::pollEvents(sf::Event event, sf::Vector2f mousePosView) {
-    if (this->activeOptionMenu != constants::MenuLinkedList::Button::NONE)
+void MenuArray::pollEvents(sf::Event event, sf::Vector2f mousePosView) {
+    if (this->activeOptionMenu != constants::MenuArray::Button::NONE)
         this->buttons[this->activeOptionMenu]->setColor(constants::normalGray);
 
-    for (int i = 0; i < constants::MenuLinkedList::BUTTON_COUNT; i++) {
+    for (int i = 0; i < constants::MenuArray::BUTTON_COUNT; ++i) {
         if (this->buttons[i]->pollEvent(mousePosView)) {
             std::cout << "Button " << i << " is clicked" << std::endl;
-            this->activeOptionMenu = static_cast<constants::MenuLinkedList::Button>(i);
-            this->activeAddMode = constants::MenuLinkedList::AddMode::Textbox::NONE;
+            this->activeOptionMenu = static_cast<constants::MenuArray::Button>(i);
+            this->activeAddMode = constants::MenuArray::AddMode::Textbox::NONE;
         }
     }
 
     switch (this->activeOptionMenu) {
-        case constants::MenuLinkedList::Button::CREATE_BUTTON:
+        case constants::MenuArray::Button::CREATE_BUTTON:
             this->pollEventCreateMode(event, mousePosView);
             break;
-        case constants::MenuLinkedList::Button::ADD_BUTTON:
+        case constants::MenuArray::Button::ADD_BUTTON:
             this->pollEventAddMode(event, mousePosView);
             break;
-        case constants::MenuLinkedList::Button::DELETE_BUTTON:
+        case constants::MenuArray::Button::DELETE_BUTTON:
             this->pollEventDeleteMode(event, mousePosView);
             break;
-        case constants::MenuLinkedList::Button::UPDATE_BUTTON:
+        case constants::MenuArray::Button::UPDATE_BUTTON:
             this->pollEventUpdateMode(event, mousePosView);
             break;
-        case constants::MenuLinkedList::Button::SEARCH_BUTTON:
+        case constants::MenuArray::Button::SEARCH_BUTTON:
             this->pollEventSearchMode(event, mousePosView);
             break;
-        case constants::MenuLinkedList::Button::NONE:
+        case constants::MenuArray::Button::ALLOCATE_BUTTON:
+            this->pollEventAllocateMode(event, mousePosView);
+            break;
+        case constants::MenuArray::Button::NONE:
             break;
     }
 }
 
-void MenuLinkedList::update() {
-    if (this->activeOptionMenu != constants::MenuLinkedList::Button::NONE)
+void MenuArray::update() {
+    if (this->activeOptionMenu != constants::MenuArray::Button::NONE)
         this->buttons[this->activeOptionMenu]->setColor(constants::clickGreen);
 
     for (Button* button : this->buttons) {
@@ -83,65 +95,74 @@ void MenuLinkedList::update() {
     }
 
     switch (this->activeOptionMenu) {
-        case constants::MenuLinkedList::Button::CREATE_BUTTON:
+        case constants::MenuArray::Button::CREATE_BUTTON:
             this->updateCreateMode();
             break;
-        case constants::MenuLinkedList::Button::ADD_BUTTON:
+        case constants::MenuArray::Button::ADD_BUTTON:
             this->updateAddMode();
             break;
-        case constants::MenuLinkedList::Button::DELETE_BUTTON:
+        case constants::MenuArray::Button::DELETE_BUTTON:
             this->updateDeleteMode();
             break;
-        case constants::MenuLinkedList::Button::UPDATE_BUTTON:
+        case constants::MenuArray::Button::UPDATE_BUTTON:
             this->updateUpdateMode();
             break;
-        case constants::MenuLinkedList::Button::SEARCH_BUTTON:
+        case constants::MenuArray::Button::SEARCH_BUTTON:
             this->updateSearchMode();
             break;
-        case constants::MenuLinkedList::Button::NONE:
+        case constants::MenuArray::Button::ALLOCATE_BUTTON:
+            this->updateAllocateMode();
+            break;
+        case constants::MenuArray::Button::NONE:
             break;
     }
 }
 
-void MenuLinkedList::render() {
+void MenuArray::render() {
     for (Button* button : this->buttons) {
         button->render();
     }
 
     switch (this->activeOptionMenu) {
-        case constants::MenuLinkedList::Button::CREATE_BUTTON:
+        case constants::MenuArray::Button::CREATE_BUTTON:
             this->renderCreateMode();
             break;
-        case constants::MenuLinkedList::Button::ADD_BUTTON:
+        case constants::MenuArray::Button::ADD_BUTTON:
             this->renderAddMode();
             break;
-        case constants::MenuLinkedList::Button::DELETE_BUTTON:
+        case constants::MenuArray::Button::DELETE_BUTTON:
             this->renderDeleteMode();
             break;
-        case constants::MenuLinkedList::Button::UPDATE_BUTTON:
+        case constants::MenuArray::Button::UPDATE_BUTTON:
             this->renderUpdateMode();
             break;
-        case constants::MenuLinkedList::Button::SEARCH_BUTTON:
+        case constants::MenuArray::Button::SEARCH_BUTTON:
             this->renderSearchMode();
             break;
-        case constants::MenuLinkedList::Button::NONE:
+        case constants::MenuArray::Button::ALLOCATE_BUTTON:
+            this->renderAllocateMode();
+            break;
+        case constants::MenuArray::Button::NONE:
             break;
     }
 }
 
-Button *MenuLinkedList::getButton(int index) {
+Button *MenuArray::getButton(int index) {
     return this->buttons[index];
 }
 
-void MenuLinkedList::resetActiveOptionMenu() {
-    this->activeOptionMenu = constants::MenuLinkedList::Button::NONE;
-    this->activeCreateMode = constants::MenuLinkedList::CreateMode::Button::NONE;
+constants::MenuArray::Button MenuArray::getActiveOptionMenu() {
+    return this->activeOptionMenu;
 }
 
-void MenuLinkedList::initCreateMode() {
+constants::MenuArray::CreateMode::Button MenuArray::getActiveCreateMode() {
+    return this->activeCreateMode;
+}
+
+void MenuArray::initCreateMode() {
     // init stuff for create mode
-    this->activeCreateMode = constants::MenuLinkedList::CreateMode::Button::NONE;
-    for (int i = 0; i < constants::MenuLinkedList::CreateMode::BUTTON_COUNT; i++) {
+    this->activeCreateMode = constants::MenuArray::CreateMode::Button::NONE;
+    for (int i = 0; i < constants::MenuArray::CreateMode::BUTTON_COUNT; i++) {
         sf::Vector2f position = sf::Vector2f(
                 this->buttons[0]->getPosition().x + (constants::optionButtonSize.x + constants::distance2ModeButtons) * static_cast<float>(i + 1),
                 this->buttons[0]->getPosition().y
@@ -150,9 +171,9 @@ void MenuLinkedList::initCreateMode() {
                 this->window,
                 position,
                 constants::optionButtonSize,
-                constants::MenuLinkedList::CreateMode::BUTTON_NAMES[i],
-                constants::MenuLinkedList::CreateMode::BUTTON_NAMES[i],
-                constants::MenuLinkedList::CreateMode::NAME_SIZE,
+                constants::MenuArray::CreateMode::BUTTON_NAMES[i],
+                constants::MenuArray::CreateMode::BUTTON_NAMES[i],
+                constants::MenuArray::CreateMode::NAME_SIZE,
                 sf::Color::Black,
                 constants::normalGray,
                 constants::hoverGray,
@@ -166,32 +187,32 @@ void MenuLinkedList::initCreateMode() {
                             this->subCreateMode[0]->getPosition().y + constants::optionButtonSize.y + constants::distance2ModeButtons
                     ),
                     20,
-                    constants::MenuLinkedList::CreateMode::TEXTBOX_NAMES[i],
-                    constants::MenuLinkedList::CreateMode::TEXTBOX_LENGTH[i],
+                    constants::MenuArray::CreateMode::TEXTBOX_NAMES[i],
+                    constants::MenuArray::CreateMode::TEXTBOX_LENGTH[i],
             };
         this->createModeValue[i] = "None";
     }
     this->isOpenFileDialog = false;
 }
-void MenuLinkedList::pollEventCreateMode(sf::Event event, sf::Vector2f mousePosView) {
-    if (this->activeCreateMode != constants::MenuLinkedList::CreateMode::Button::NONE)
+void MenuArray::pollEventCreateMode(sf::Event event, sf::Vector2f mousePosView) {
+    if (this->activeCreateMode != constants::MenuArray::CreateMode::Button::NONE)
         this->subCreateMode[this->activeCreateMode]->setColor(constants::normalGray);
 
-    for (int i = 0; i < constants::MenuLinkedList::CreateMode::BUTTON_COUNT; i++) {
+    for (int i = 0; i < constants::MenuArray::CreateMode::BUTTON_COUNT; i++) {
         if (this->subCreateMode[i]->pollEvent(mousePosView)) {
-            this->activeCreateMode = static_cast<constants::MenuLinkedList::CreateMode::Button>(i);
-            if (i == constants::MenuLinkedList::CreateMode::Button::FILE_BUTTON)
+            this->activeCreateMode = static_cast<constants::MenuArray::CreateMode::Button>(i);
+            if (i == constants::MenuArray::CreateMode::Button::FILE_BUTTON)
                 this->isOpenFileDialog = true;
             std::cout << "Button " << i << " is clicked" << std::endl;
         }
     }
 
 //    this->testTextbox->pollEvent(event);
-    if (this->activeCreateMode < constants::MenuLinkedList::CreateMode::TEXTBOX_COUNT)
+    if (this->activeCreateMode < constants::MenuArray::CreateMode::TEXTBOX_COUNT)
         this->createTextbox[this->activeCreateMode]->pollEvent(event, mousePosView);
 }
-void MenuLinkedList::updateCreateMode() {
-    if (this->activeCreateMode != constants::MenuLinkedList::CreateMode::Button::NONE)
+void MenuArray::updateCreateMode() {
+    if (this->activeCreateMode != constants::MenuArray::CreateMode::Button::NONE)
         this->subCreateMode[this->activeCreateMode]->setColor(constants::clickGreen);
 
     for (Button* button : this->subCreateMode) {
@@ -199,7 +220,7 @@ void MenuLinkedList::updateCreateMode() {
     }
 
 //    this->testTextbox->update();
-    if (this->activeCreateMode < constants::MenuLinkedList::CreateMode::TEXTBOX_COUNT) {
+    if (this->activeCreateMode < constants::MenuArray::CreateMode::TEXTBOX_COUNT) {
         this->createTextbox[this->activeCreateMode]->update();
         std::string inputUser = this->createTextbox[this->activeCreateMode]->getTextString();
         if (inputUser != "None") {
@@ -207,7 +228,7 @@ void MenuLinkedList::updateCreateMode() {
             this->createTextbox[this->activeCreateMode]->resetInput();
         }
         this->createModeValue[this->activeCreateMode] = inputUser;
-    } else if (this->activeCreateMode == constants::MenuLinkedList::CreateMode::FILE_BUTTON) {
+    } else if (this->activeCreateMode == constants::MenuArray::CreateMode::FILE_BUTTON) {
         if (this->isOpenFileDialog) {
             auto f = pfd::open_file("Choose files to read", pfd::path::home(),
                                     {"Text Files (.txt .text)", "*.txt *.text",
@@ -229,28 +250,20 @@ void MenuLinkedList::updateCreateMode() {
         this->isOpenFileDialog = false;
     }
 }
-void MenuLinkedList::renderCreateMode() {
+void MenuArray::renderCreateMode() {
     for (Button* button : this->subCreateMode) {
         button->render();
     }
 
 //    this->testTextbox->render();
-    if (this->activeCreateMode < constants::MenuLinkedList::CreateMode::TEXTBOX_COUNT)
+    if (this->activeCreateMode < constants::MenuArray::CreateMode::TEXTBOX_COUNT)
         this->createTextbox[this->activeCreateMode]->render();
 }
 
-constants::MenuLinkedList::CreateMode::Button MenuLinkedList::getActiveCreateMode() {
-    return this->activeCreateMode;
-}
-
-constants::MenuLinkedList::Button MenuLinkedList::getActiveOptionMenu() {
-    return this->activeOptionMenu;
-}
-
-void MenuLinkedList::initAddMode() {
+void MenuArray::initAddMode() {
     //init stuff for add mode
-    this->activeAddMode = constants::MenuLinkedList::AddMode::Textbox::NONE;
-    for (int i = 0; i < constants::MenuLinkedList::AddMode::TEXTBOX_COUNT; i++) {
+    this->activeAddMode = constants::MenuArray::AddMode::Textbox::NONE;
+    for (int i = 0; i < constants::MenuArray::AddMode::TEXTBOX_COUNT; i++) {
         sf::Vector2f position = sf::Vector2f(
                 this->buttons[1]->getPosition().x + (constants::optionButtonSize.x + constants::distance2ModeButtons),
                 this->buttons[1]->getPosition().y
@@ -259,21 +272,21 @@ void MenuLinkedList::initAddMode() {
                 this->window,
                 position,
                 20,
-                constants::MenuLinkedList::AddMode::TEXTBOX_NAMES[i],
-                constants::MenuLinkedList::AddMode::TEXTBOX_LENGTH[i],
+                constants::MenuArray::AddMode::TEXTBOX_NAMES[i],
+                constants::MenuArray::AddMode::TEXTBOX_LENGTH[i],
         };
         this->addModeValue[i] = "None";
     }
 }
-void MenuLinkedList::pollEventAddMode(sf::Event event, sf::Vector2f mousePosView) {
-    if (this->activeAddMode == constants::MenuLinkedList::AddMode::NONE)
-        this->activeAddMode = constants::MenuLinkedList::AddMode::POSITION_TEXTBOX;
+void MenuArray::pollEventAddMode(sf::Event event, sf::Vector2f mousePosView) {
+    if (this->activeAddMode == constants::MenuArray::AddMode::NONE)
+        this->activeAddMode = constants::MenuArray::AddMode::POSITION_TEXTBOX;
 
     this->addTextbox[this->activeAddMode]->pollEvent(event, mousePosView);
 }
-void MenuLinkedList::updateAddMode() {
-    if (this->activeAddMode == constants::MenuLinkedList::AddMode::NONE)
-        this->activeAddMode = constants::MenuLinkedList::AddMode::POSITION_TEXTBOX;
+void MenuArray::updateAddMode() {
+    if (this->activeAddMode == constants::MenuArray::AddMode::NONE)
+        this->activeAddMode = constants::MenuArray::AddMode::POSITION_TEXTBOX;
 
     this->addTextbox[this->activeAddMode]->update();
 
@@ -287,14 +300,14 @@ void MenuLinkedList::updateAddMode() {
         this->addModeValue[this->activeAddMode] = inputUser;
         std::cout << inputUser << std::endl;
         this->addTextbox[this->activeAddMode]->resetInput();
-        this->activeAddMode = static_cast<constants::MenuLinkedList::AddMode::Textbox>(!this->activeAddMode);
+        this->activeAddMode = static_cast<constants::MenuArray::AddMode::Textbox>(!this->activeAddMode);
     }
 }
-void MenuLinkedList::renderAddMode() {
+void MenuArray::renderAddMode() {
     this->addTextbox[this->activeAddMode]->render();
 }
 
-void MenuLinkedList::initDeleteMode() {
+void MenuArray::initDeleteMode() {
     sf::Vector2f position = sf::Vector2f(
             this->buttons[2]->getPosition().x + (constants::optionButtonSize.x + constants::distance2ModeButtons),
             this->buttons[2]->getPosition().y
@@ -303,15 +316,15 @@ void MenuLinkedList::initDeleteMode() {
             this->window,
             position,
             20,
-            constants::MenuLinkedList::DeleteMode::TEXTBOX_NAME,
-            constants::MenuLinkedList::DeleteMode::TEXTBOX_LENGTH,
+            constants::MenuArray::DeleteMode::TEXTBOX_NAME,
+            constants::MenuArray::DeleteMode::TEXTBOX_LENGTH,
     };
     this->deleteModeValue = "None";
 }
-void MenuLinkedList::pollEventDeleteMode(sf::Event event, sf::Vector2f mousePosView) {
+void MenuArray::pollEventDeleteMode(sf::Event event, sf::Vector2f mousePosView) {
     this->deleteTextbox->pollEvent(event, mousePosView);
 }
-void MenuLinkedList::updateDeleteMode() {
+void MenuArray::updateDeleteMode() {
     this->deleteTextbox->update();
 
     std::string inputUser = this->deleteTextbox->getTextString();
@@ -326,14 +339,14 @@ void MenuLinkedList::updateDeleteMode() {
         this->deleteTextbox->resetInput();
     }
 }
-void MenuLinkedList::renderDeleteMode() {
+void MenuArray::renderDeleteMode() {
     this->deleteTextbox->render();
 }
 
-void MenuLinkedList::initUpdateMode() {
+void MenuArray::initUpdateMode() {
     // init stuff for update mode
-    this->activeUpdateMode = constants::MenuLinkedList::UpdateMode::Textbox::NONE;
-    for (int i = 0; i < constants::MenuLinkedList::UpdateMode::TEXTBOX_COUNT; i++) {
+    this->activeUpdateMode = constants::MenuArray::UpdateMode::Textbox::NONE;
+    for (int i = 0; i < constants::MenuArray::UpdateMode::TEXTBOX_COUNT; i++) {
         sf::Vector2f position = sf::Vector2f(
                 this->buttons[3]->getPosition().x + (constants::optionButtonSize.x + constants::distance2ModeButtons),
                 this->buttons[3]->getPosition().y
@@ -342,21 +355,21 @@ void MenuLinkedList::initUpdateMode() {
                 this->window,
                 position,
                 20,
-                constants::MenuLinkedList::UpdateMode::TEXTBOX_NAMES[i],
-                constants::MenuLinkedList::UpdateMode::TEXTBOX_LENGTH[i],
+                constants::MenuArray::UpdateMode::TEXTBOX_NAMES[i],
+                constants::MenuArray::UpdateMode::TEXTBOX_LENGTH[i],
         };
         this->updateModeValue[i] = "None";
     }
 }
-void MenuLinkedList::pollEventUpdateMode(sf::Event event, sf::Vector2f mousePosView) {
-    if (this->activeUpdateMode == constants::MenuLinkedList::UpdateMode::NONE)
-        this->activeUpdateMode = constants::MenuLinkedList::UpdateMode::POSITION_TEXTBOX;
+void MenuArray::pollEventUpdateMode(sf::Event event, sf::Vector2f mousePosView) {
+    if (this->activeUpdateMode == constants::MenuArray::UpdateMode::NONE)
+        this->activeUpdateMode = constants::MenuArray::UpdateMode::POSITION_TEXTBOX;
 
     this->updateTextbox[this->activeUpdateMode]->pollEvent(event, mousePosView);
 }
-void MenuLinkedList::updateUpdateMode() {
-    if (this->activeUpdateMode == constants::MenuLinkedList::UpdateMode::NONE)
-        this->activeUpdateMode = constants::MenuLinkedList::UpdateMode::POSITION_TEXTBOX;
+void MenuArray::updateUpdateMode() {
+    if (this->activeUpdateMode == constants::MenuArray::UpdateMode::NONE)
+        this->activeUpdateMode = constants::MenuArray::UpdateMode::POSITION_TEXTBOX;
 
     this->updateTextbox[this->activeUpdateMode]->update();
 
@@ -370,14 +383,14 @@ void MenuLinkedList::updateUpdateMode() {
         this->updateModeValue[this->activeUpdateMode] = inputUser;
         std::cout << inputUser << std::endl;
         this->updateTextbox[this->activeUpdateMode]->resetInput();
-        this->activeUpdateMode = static_cast<constants::MenuLinkedList::UpdateMode::Textbox>(!this->activeUpdateMode);
+        this->activeUpdateMode = static_cast<constants::MenuArray::UpdateMode::Textbox>(!this->activeUpdateMode);
     }
 }
-void MenuLinkedList::renderUpdateMode() {
+void MenuArray::renderUpdateMode() {
     this->updateTextbox[this->activeUpdateMode]->render();
 }
 
-void MenuLinkedList::initSearchMode() {
+void MenuArray::initSearchMode() {
     sf::Vector2f position = sf::Vector2f(
             this->buttons[4]->getPosition().x + (constants::optionButtonSize.x + constants::distance2ModeButtons),
             this->buttons[4]->getPosition().y
@@ -386,15 +399,15 @@ void MenuLinkedList::initSearchMode() {
             this->window,
             position,
             20,
-            constants::MenuLinkedList::SearchMode::TEXTBOX_NAME,
-            constants::MenuLinkedList::SearchMode::TEXTBOX_LENGTH,
+            constants::MenuArray::SearchMode::TEXTBOX_NAME,
+            constants::MenuArray::SearchMode::TEXTBOX_LENGTH,
     };
     this->searchModeValue = "None";
 }
-void MenuLinkedList::pollEventSearchMode(sf::Event event, sf::Vector2f mousePosView) {
+void MenuArray::pollEventSearchMode(sf::Event event, sf::Vector2f mousePosView) {
     this->searchTextbox->pollEvent(event, mousePosView);
 }
-void MenuLinkedList::updateSearchMode() {
+void MenuArray::updateSearchMode() {
     this->searchTextbox->update();
 
     std::string inputUser = this->searchTextbox->getTextString();
@@ -409,6 +422,42 @@ void MenuLinkedList::updateSearchMode() {
         this->searchTextbox->resetInput();
     }
 }
-void MenuLinkedList::renderSearchMode() {
+void MenuArray::renderSearchMode() {
     this->searchTextbox->render();
+}
+
+void MenuArray::initAllocateMode() {
+    sf::Vector2f position = sf::Vector2f(
+            this->buttons[5]->getPosition().x + (constants::optionButtonSize.x + constants::distance2ModeButtons),
+            this->buttons[5]->getPosition().y
+    );
+    this->allocateTextbox = new CustomTextbox{
+            this->window,
+            position,
+            20,
+            constants::MenuArray::AllocateMode::TEXTBOX_NAME,
+            constants::MenuArray::AllocateMode::TEXTBOX_LENGTH,
+    };
+    this->allocateModeValue = "None";
+}
+void MenuArray::pollEventAllocateMode(sf::Event event, sf::Vector2f mousePosView) {
+    this->allocateTextbox->pollEvent(event, mousePosView);
+}
+void MenuArray::updateAllocateMode() {
+    this->allocateTextbox->update();
+
+    std::string inputUser = this->allocateTextbox->getTextString();
+    // check if input is number
+    bool isValid = true;
+    for (char i : inputUser)
+        if (!std::isdigit(i))
+            isValid = false;
+    if (isValid && inputUser != "None") {
+        this->allocateModeValue = inputUser;
+        std::cout << inputUser << std::endl;
+        this->allocateTextbox->resetInput();
+    }
+}
+void MenuArray::renderAllocateMode() {
+    this->allocateTextbox->render();
 }

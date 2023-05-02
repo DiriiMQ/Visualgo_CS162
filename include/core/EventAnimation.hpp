@@ -6,9 +6,17 @@
 #define VISUALGO_CS162_EVENTANIMATION_HPP
 
 #include "draw/NodeInfo.hpp"
+#include "draw/SquareInfo.hpp"
+
+struct EventSquare{
+    Square::Status status = Square::Status::inactive;
+    bool isPrintPreVal = false;
+    std::string title{};
+};
 
 class EventAnimation{
 public:
+    // for linked list
     std::vector<std::pair<int, std::string>> titleNodes;
     std::vector<std::pair<int, NodeInfo::ArrowType>> colorArrows;
     std::vector<std::pair<int, NodeInfo::ArrowType>> hiddenArrows;
@@ -16,6 +24,10 @@ public:
     NodeInfo::StatusNode statusChosenNode;
     bool isPrintPreVal, isPrintNormal, isShowBackArrow;
     std::pair<int, int> indexBackArrow;
+
+    // for array
+    std::vector<EventSquare> eventSquares{}, eventSquaresTemp{};
+
     std::vector<int> lines;
 
     EventAnimation();

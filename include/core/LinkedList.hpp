@@ -5,21 +5,13 @@
 #ifndef VISUALGO_CS162_LINKEDLIST_HPP
 #define VISUALGO_CS162_LINKEDLIST_HPP
 
-#include <random>
+#include "Random.h"
 #include "draw/NodeInfo.hpp"
 #include "draw/BackArrow.hpp"
 #include "libScene/Highlighter.hpp"
 #include "libScene/ControlMenu.hpp"
 #include "EventAnimation.hpp"
 #include "core/Vector.h"
-
-namespace Random{
-    static std::mt19937 rng(std::random_device{}());
-    static int randomInt(int min, int max){
-        std::uniform_int_distribution<int> dist(min, max);
-        return dist(rng);
-    }
-}
 
 class LinkedList {
 public:

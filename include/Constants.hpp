@@ -42,6 +42,119 @@ namespace constants{
         };
     }
 
+    namespace MenuArray{
+        enum class Type{
+            DYNAMIC,
+            STATIC
+        };
+
+        constexpr int BUTTON_COUNT = 6;
+        enum Button{
+            CREATE_BUTTON,
+            ADD_BUTTON,
+            DELETE_BUTTON,
+            UPDATE_BUTTON,
+            SEARCH_BUTTON,
+            ALLOCATE_BUTTON,
+            NONE
+        };
+        constexpr char BUTTON_NAMES[BUTTON_COUNT][50] = {
+                "Create",
+                "Add",
+                "Delete",
+                "Update",
+                "Search",
+                "Allocate"
+        };
+        constexpr int BUTTON_NAME_SIZE = 15;
+
+        namespace CreateMode {
+            constexpr int BUTTON_COUNT = 3;
+            enum Button {
+                RANDOM_BUTTON,
+                DEFINED_LIST_BUTTON,
+                FILE_BUTTON,
+                NONE
+            };
+            constexpr char BUTTON_NAMES[BUTTON_COUNT][50] = {
+                    "Random",
+                    "Defined List",
+                    "File"
+            };
+            constexpr int NAME_SIZE = 15;
+
+            constexpr int TEXTBOX_COUNT = 2;
+            constexpr char TEXTBOX_NAMES[2][50] = {
+                    "Amount = ",
+                    "List = "
+            };
+
+            constexpr int TEXTBOX_LENGTH[2] = {
+                    2,
+                    30 // for input a defined list
+            };
+        }
+        namespace AddMode {
+            constexpr int TEXTBOX_COUNT = 2;
+            constexpr char TEXTBOX_NAMES[2][50] = {
+                    "Position = ",
+                    "Value = "
+            };
+            constexpr int TEXTBOX_LENGTH[2] = {
+                    2,
+                    2
+            };
+            enum Textbox{
+                POSITION_TEXTBOX,
+                VALUE_TEXTBOX,
+                NONE
+            };
+        };
+        namespace DeleteMode {
+            constexpr int TEXTBOX_COUNT = 1;
+            constexpr char TEXTBOX_NAME[50] = "Position = ";
+            constexpr int TEXTBOX_LENGTH = 2;
+            enum Textbox{
+                POSITION_TEXTBOX,
+                NONE
+            };
+        }
+        namespace UpdateMode {
+            constexpr int TEXTBOX_COUNT = 2;
+            constexpr char TEXTBOX_NAMES[2][50] = {
+                    "Position = ",
+                    "Value = "
+            };
+            constexpr int TEXTBOX_LENGTH[2] = {
+                    2,
+                    2
+            };
+            enum Textbox{
+                POSITION_TEXTBOX,
+                VALUE_TEXTBOX,
+                NONE
+            };
+        }
+        namespace SearchMode {
+            constexpr int TEXTBOX_COUNT = 1;
+            constexpr char TEXTBOX_NAME[50] = "Value = ";
+            constexpr int TEXTBOX_LENGTH = 2;
+            enum Textbox{
+                VALUE_TEXTBOX,
+                NONE
+            };
+        }
+        namespace AllocateMode {
+            constexpr int TEXTBOX_COUNT = 1;
+            constexpr char TEXTBOX_NAME[50] = "Size = ";
+            constexpr int TEXTBOX_LENGTH = 2;
+            enum Textbox{
+                VALUE_TEXTBOX,
+                NONE
+            };
+        }
+    };
+
     namespace MenuDataStructure{
         constexpr int BUTTON_COUNT = 4;
         enum Button{
@@ -203,6 +316,15 @@ namespace constants{
                     offsetY = 150;
     }
 
+    namespace Square{
+        static float length = 60,
+                    outlineThickness = 6;
+        static int fontSize = 20;
+        static sf::Vector2f originNode(100, 300);
+        static float offsetX = 72,
+                    offsetY = 150;
+    }
+
     namespace Arrow{
         static sf::Vector2i sizeArrow(752, 214),
                             sizeRectangle(192, 37);
@@ -303,8 +425,8 @@ namespace constants{
     static sf::Color titleGreen(64, 81, 59);
 
     // positions of buttons
-    static sf::Vector2f submenuButtonPos = sf::Vector2f(0, 730),
-                        demoCodeButtonPos = sf::Vector2f(1736, 730),
+    static sf::Vector2f submenuButtonPos = sf::Vector2f(0, 690),
+                        demoCodeButtonPos = sf::Vector2f(1736, 690),
                         modeButtonPos = sf::Vector2f(10, 10);
 
     // size of buttons
