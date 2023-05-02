@@ -140,7 +140,7 @@ void Array::resetEvents() {
     delete this->highlighter;
     this->highlighter = nullptr;
     this->currentEvent = 0;
-    this->events.clear();
+    this->events = std::vector<EventAnimation>();
     this->squaresTemp.clear();
 
     while (!this->squares.empty() && this->squares.back()->getStatus() == Square::Status::hidden)
