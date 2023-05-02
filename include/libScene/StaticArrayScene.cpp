@@ -200,6 +200,8 @@ std::vector<EventAnimation> StaticArrayScene::addModeEvents(int chosenNode) {
         events.emplace_back(event);
 
         event.eventSquares[i].isPrintPreVal = false;
+        if (i > chosenNode)
+            event.eventSquares[i - 1].status = Square::Status::chosen;
 
         events.emplace_back(event);
     }
@@ -218,11 +220,12 @@ std::vector<EventAnimation> StaticArrayScene::deleteModeEvents(int chosenNode) {
     int size = this->array->getSize(),
             squaresSize = this->array->getSquaresSize();
     std::vector<EventAnimation> events;
+//    events.reserve(100);
     EventAnimation event;
 
     for (int i = chosenNode; i < size - 1; ++i) {
         event = EventAnimation();
-        event.eventSquares.assign(size, EventSquare());
+        event.eventSquares.assign(squaresSize, EventSquare());
         for (auto &square : event.eventSquares) {
             square.status = Square::Status::active;
             square.isPrintPreVal = true;
@@ -245,7 +248,7 @@ std::vector<EventAnimation> StaticArrayScene::deleteModeEvents(int chosenNode) {
     }
 
     event = EventAnimation();
-    event.eventSquares.assign(size, EventSquare());
+    event.eventSquares.assign(squaresSize, EventSquare());
     for (int i = 0; i < size - 1; ++i) {
         event.eventSquares[i].status = Square::Status::active;
         if (i == size - 2)

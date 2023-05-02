@@ -7,11 +7,15 @@
 
 #include "draw/NodeInfo.hpp"
 #include "draw/SquareInfo.hpp"
+#include "core/Vector.h"
 
 struct EventSquare{
     Square::Status status = Square::Status::inactive;
     bool isPrintPreVal = false;
     std::string title{};
+
+    EventSquare() = default;
+    ~EventSquare() = default;
 };
 
 class EventAnimation{
@@ -31,6 +35,9 @@ public:
     std::vector<int> lines;
 
     EventAnimation();
+    ~EventAnimation();
+
+    EventAnimation& operator=(const EventAnimation& other);
 
     void reset();
 };

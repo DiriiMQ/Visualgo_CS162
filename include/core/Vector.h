@@ -24,6 +24,7 @@ public:
     void erase(T* position);
     void clear();
     void resize(int capacity);
+    void assign(int capacity, T data);
 //    void reserve();
 //    void shrink_to_fit();
 
@@ -40,6 +41,16 @@ public:
     T* begin();
     T* end();
 };
+
+template<class T>
+void Vector<T>::assign(int _capacity, T data) {
+    this->clear();
+    this->resize(_capacity);
+    for (int i = 0; i < capacity; ++i) {
+        this->arr[i] = data;
+    }
+
+}
 
 template<class T>
 void Vector<T>::erase(T *position) {
