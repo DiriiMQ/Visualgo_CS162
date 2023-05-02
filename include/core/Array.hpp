@@ -6,7 +6,7 @@
 #define VISUALGO_CS162_ARRAY_HPP
 
 #include "Random.h"
-#include "core/vector.h"
+#include "core/Vector.h"
 #include "draw/SquareInfo.hpp"
 #include "libScene/Highlighter.hpp"
 #include "libScene/ControlMenu.hpp"
