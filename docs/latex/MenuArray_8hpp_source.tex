@@ -1,0 +1,117 @@
+\hypertarget{MenuArray_8hpp_source}{}\doxysection{Menu\+Array.\+hpp}
+\label{MenuArray_8hpp_source}\index{include/libScene/MenuArray.hpp@{include/libScene/MenuArray.hpp}}
+\mbox{\hyperlink{MenuArray_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ dirii\ on\ 01/05/2023.}}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#ifndef\ VISUALGO\_CS162\_MENUARRAY\_HPP}}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#define\ VISUALGO\_CS162\_MENUARRAY\_HPP}}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Constants_8hpp}{Constants.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{button_8hpp}{stuff/button.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{CustomTextbox_8hpp}{stuff/CustomTextbox.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{FileDialog_8h}{core/FileDialog.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00014}\mbox{\hyperlink{classMenuArray}{00014}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMenuArray}{MenuArray}}\ \{}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00015}00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00016}00016\ \ \ \ \ sf::RenderWindow*\ window;}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00017}00017\ \ \ \ \ \mbox{\hyperlink{classButton}{Button}}*\ buttons[\mbox{\hyperlink{namespaceconstants_1_1MenuArray_aabc9dc5fb9defe1089afedc665b7db61}{constants::MenuArray::BUTTON\_COUNT}}];}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_a9a78ad7c059d2ca5962d8be0c602acab}{constants::MenuArray::Type}}\ typeArray;}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00020}00020\ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_a61dd107410ce3295fffb7071abcf5266}{constants::MenuArray::Button}}\ activeOptionMenu;}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00022}00022\ \ \ \ \ \textcolor{comment}{//\ stuff\ for\ create\ mode}}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{classButton}{Button}}*\ subCreateMode[\mbox{\hyperlink{namespaceconstants_1_1MenuArray_1_1CreateMode_aae67e544b528e949e4b24927eaa03061}{constants::MenuArray::CreateMode::BUTTON\_COUNT}}];}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00024}00024\ \ \ \ \ \mbox{\hyperlink{classCustomTextbox}{CustomTextbox}}*\ createTextbox[\mbox{\hyperlink{namespaceconstants_1_1MenuArray_1_1CreateMode_aae67e544b528e949e4b24927eaa03061}{constants::MenuArray::CreateMode::BUTTON\_COUNT}}];}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_1_1CreateMode_a0d8c7d8013f2920c995917895fb5cc7a}{constants::MenuArray::CreateMode::Button}}\ activeCreateMode;}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ isOpenFileDialog\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{void}\ initCreateMode();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordtype}{void}\ pollEventCreateMode(sf::Event\ event,\ sf::Vector2f\ mousePosView);}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordtype}{void}\ updateCreateMode();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordtype}{void}\ renderCreateMode();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00033}00033\ \ \ \ \ \textcolor{comment}{//\ stuff\ for\ add\ mode}}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00034}00034\ \ \ \ \ \mbox{\hyperlink{classCustomTextbox}{CustomTextbox}}*\ addTextbox[\mbox{\hyperlink{namespaceconstants_1_1MenuArray_1_1AddMode_ad3e3532616336f952720413256523552}{constants::MenuArray::AddMode::TEXTBOX\_COUNT}}];}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00035}00035\ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_1_1AddMode_a2482c07ebf31f4afb6d0a32f746a22d9}{constants::MenuArray::AddMode::Textbox}}\ activeAddMode;}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00037}00037\ \ \ \ \ \textcolor{keywordtype}{void}\ initAddMode();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00038}00038\ \ \ \ \ \textcolor{keywordtype}{void}\ pollEventAddMode(sf::Event\ event,\ sf::Vector2f\ mousePosView);}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00039}00039\ \ \ \ \ \textcolor{keywordtype}{void}\ updateAddMode();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordtype}{void}\ renderAddMode();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00042}00042\ \ \ \ \ \textcolor{comment}{//\ stuff\ for\ delete\ mode}}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00043}00043\ \ \ \ \ \mbox{\hyperlink{classCustomTextbox}{CustomTextbox}}*\ deleteTextbox;}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordtype}{void}\ initDeleteMode();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordtype}{void}\ pollEventDeleteMode(sf::Event\ event,\ sf::Vector2f\ mousePosView);}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00047}00047\ \ \ \ \ \textcolor{keywordtype}{void}\ updateDeleteMode();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00048}00048\ \ \ \ \ \textcolor{keywordtype}{void}\ renderDeleteMode();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00050}00050\ \ \ \ \ \textcolor{comment}{//\ stuff\ for\ update\ mode}}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00051}00051\ \ \ \ \ \mbox{\hyperlink{classCustomTextbox}{CustomTextbox}}*\ updateTextbox[\mbox{\hyperlink{namespaceconstants_1_1MenuArray_1_1UpdateMode_acde28dec261f512cc44506fec530bc27}{constants::MenuArray::UpdateMode::TEXTBOX\_COUNT}}];}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00052}00052\ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_1_1UpdateMode_a139778c77259e91477c081c2b23914bc}{constants::MenuArray::UpdateMode::Textbox}}\ activeUpdateMode;}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00054}00054\ \ \ \ \ \textcolor{keywordtype}{void}\ initUpdateMode();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00055}00055\ \ \ \ \ \textcolor{keywordtype}{void}\ pollEventUpdateMode(sf::Event\ event,\ sf::Vector2f\ mousePosView);}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00056}00056\ \ \ \ \ \textcolor{keywordtype}{void}\ updateUpdateMode();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00057}00057\ \ \ \ \ \textcolor{keywordtype}{void}\ renderUpdateMode();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00059}00059\ \ \ \ \ \textcolor{comment}{//\ stuff\ for\ search\ mode}}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00060}00060\ \ \ \ \ \mbox{\hyperlink{classCustomTextbox}{CustomTextbox}}*\ searchTextbox;}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00062}00062\ \ \ \ \ \textcolor{keywordtype}{void}\ initSearchMode();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00063}00063\ \ \ \ \ \textcolor{keywordtype}{void}\ pollEventSearchMode(sf::Event\ event,\ sf::Vector2f\ mousePosView);}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00064}00064\ \ \ \ \ \textcolor{keywordtype}{void}\ updateSearchMode();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00065}00065\ \ \ \ \ \textcolor{keywordtype}{void}\ renderSearchMode();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00067}00067\ \ \ \ \ \textcolor{comment}{//\ stuff\ for\ allocate\ mode}}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00068}00068\ \ \ \ \ \mbox{\hyperlink{classCustomTextbox}{CustomTextbox}}*\ allocateTextbox;}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00070}00070\ \ \ \ \ \textcolor{keywordtype}{void}\ initAllocateMode();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00071}00071\ \ \ \ \ \textcolor{keywordtype}{void}\ pollEventAllocateMode(sf::Event\ event,\ sf::Vector2f\ mousePosView);}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00072}00072\ \ \ \ \ \textcolor{keywordtype}{void}\ updateAllocateMode();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00073}00073\ \ \ \ \ \textcolor{keywordtype}{void}\ renderAllocateMode();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00075}00075\ \ \ \ \ \textcolor{keywordtype}{void}\ init();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00076}00076\ \ \ \ \ \textcolor{keywordtype}{void}\ initButtons();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00078}00078\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00079}00079\ \ \ \ \ \textcolor{comment}{//\ stuff\ public\ for\ create\ mode}}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00080}\mbox{\hyperlink{classMenuArray_a59f9f7db86933c7bbe1f826632a763e2}{00080}}\ \ \ \ \ std::string\ \mbox{\hyperlink{classMenuArray_a59f9f7db86933c7bbe1f826632a763e2}{createModeValue}}[\mbox{\hyperlink{namespaceconstants_1_1MenuArray_1_1CreateMode_aae67e544b528e949e4b24927eaa03061}{constants::MenuArray::CreateMode::BUTTON\_COUNT}}];}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00081}00081\ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_1_1CreateMode_a0d8c7d8013f2920c995917895fb5cc7a}{constants::MenuArray::CreateMode::Button}}\ \mbox{\hyperlink{classMenuArray_ad61bdce4bf4159aa9f8d45e4750b484e}{getActiveCreateMode}}();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00083}00083\ \ \ \ \ \textcolor{comment}{//\ stuff\ public\ for\ add\ mode}}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00084}\mbox{\hyperlink{classMenuArray_a426976f568441714676a26a0e10ca822}{00084}}\ \ \ \ \ std::string\ \mbox{\hyperlink{classMenuArray_a426976f568441714676a26a0e10ca822}{addModeValue}}[\mbox{\hyperlink{namespaceconstants_1_1MenuArray_1_1AddMode_ad3e3532616336f952720413256523552}{constants::MenuArray::AddMode::TEXTBOX\_COUNT}}];}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00086}00086\ \ \ \ \ \textcolor{comment}{//\ stuff\ public\ for\ delete\ mode}}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00087}\mbox{\hyperlink{classMenuArray_a0bd921f7ed6880c65fb4e9ccbb4ab9d9}{00087}}\ \ \ \ \ std::string\ \mbox{\hyperlink{classMenuArray_a0bd921f7ed6880c65fb4e9ccbb4ab9d9}{deleteModeValue}};}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00089}00089\ \ \ \ \ \textcolor{comment}{//\ stuff\ public\ for\ update\ mode}}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00090}\mbox{\hyperlink{classMenuArray_a45d6b4d74c1629e5577f20f8c5834084}{00090}}\ \ \ \ \ std::string\ \mbox{\hyperlink{classMenuArray_a45d6b4d74c1629e5577f20f8c5834084}{updateModeValue}}[\mbox{\hyperlink{namespaceconstants_1_1MenuArray_1_1UpdateMode_acde28dec261f512cc44506fec530bc27}{constants::MenuArray::UpdateMode::TEXTBOX\_COUNT}}];}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00092}00092\ \ \ \ \ \textcolor{comment}{//\ stuff\ public\ for\ search\ mode}}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00093}\mbox{\hyperlink{classMenuArray_a4fd3f92582bf6ec6fc502d7018c96778}{00093}}\ \ \ \ \ std::string\ \mbox{\hyperlink{classMenuArray_a4fd3f92582bf6ec6fc502d7018c96778}{searchModeValue}};}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00095}00095\ \ \ \ \ \textcolor{comment}{//\ stuff\ public\ for\ allocate\ mode}}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00096}\mbox{\hyperlink{classMenuArray_aee1c973a176d7f08148637b90c1b18fc}{00096}}\ \ \ \ \ std::string\ \mbox{\hyperlink{classMenuArray_aee1c973a176d7f08148637b90c1b18fc}{allocateModeValue}};}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00098}00098\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classMenuArray}{MenuArray}}(sf::RenderWindow*\ window,\ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_a9a78ad7c059d2ca5962d8be0c602acab}{constants::MenuArray::Type}}\ \_typeArray);}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00099}\mbox{\hyperlink{classMenuArray_a0b524ea53872e669b10dc03001c669c8}{00099}}\ \ \ \ \ \mbox{\hyperlink{classMenuArray_a0b524ea53872e669b10dc03001c669c8}{\string~MenuArray}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00101}00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMenuArray_a56b86d1994e569bf023b0caa49f27585}{resetActiveOptionMenu}}();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00103}00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMenuArray_a43c0186f8b2cc58d20b9a6b25407e37a}{pollEvents}}(sf::Event\ event,\ sf::Vector2f\ mousePosView);}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00104}00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMenuArray_a012da56e42d7d804eb5a41b797efe002}{update}}();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00105}00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMenuArray_a385fb96e1efd05928ba59fd5028720bb}{render}}();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00107}00107\ \ \ \ \ \mbox{\hyperlink{classButton}{Button}}*\ \mbox{\hyperlink{classMenuArray_a16d92131d2ee087e8f3ff7d42623f04c}{getButton}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00108}00108\ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_a61dd107410ce3295fffb7071abcf5266}{constants::MenuArray::Button}}\ \mbox{\hyperlink{classMenuArray_a2491c2d04c38f48ae8f1ac1f96351b9f}{getActiveOptionMenu}}();}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00109}00109\ \};}
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{MenuArray_8hpp_source_l00111}00111\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//VISUALGO\_CS162\_MENUARRAY\_HPP}}
+
+\end{DoxyCode}

@@ -1,0 +1,49 @@
+\hypertarget{ControlMenu_8hpp_source}{}\doxysection{Control\+Menu.\+hpp}
+\label{ControlMenu_8hpp_source}\index{include/libScene/ControlMenu.hpp@{include/libScene/ControlMenu.hpp}}
+\mbox{\hyperlink{ControlMenu_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ dirii\ on\ 14/04/2023.}}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#ifndef\ VISUALGO\_CS162\_CONTROLMENU\_HPP}}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#define\ VISUALGO\_CS162\_CONTROLMENU\_HPP}}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{button_8hpp}{stuff/button.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ToStringWithPrecision_8hpp}{stuff/ToStringWithPrecision.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Constants_8hpp}{Constants.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00013}\mbox{\hyperlink{classControlMenu}{00013}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classControlMenu}{ControlMenu}}\ \{}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00014}00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00015}00015\ \ \ \ \ sf::RenderWindow*\ window;}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00017}00017\ \ \ \ \ \mbox{\hyperlink{classButton}{Button}}*\ buttons[\mbox{\hyperlink{namespaceconstants_1_1ControlMenu_a7ed44739d28b31626e737a9db4401ce4}{constants::ControlMenu::BUTTON\_COUNT}}];}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00018}00018\ \ \ \ \ sf::Font\ font;}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00019}00019\ \ \ \ \ sf::Text\ textSpeed;}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00020}00020\ \ \ \ \ \textcolor{keywordtype}{float}\ speed;}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00022}00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00023}\mbox{\hyperlink{classControlMenu_acfce42940430535ccddd96d06eab59d8}{00023}}\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{classControlMenu_acfce42940430535ccddd96d06eab59d8}{StatusCode}}\ \{}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classControlMenu_acfce42940430535ccddd96d06eab59d8a315ba7a868d45a9cb131c8dca3166b51}{PREVIOUS}},}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classControlMenu_acfce42940430535ccddd96d06eab59d8a291554596c183e837f0a6bec3767c891}{PAUSE}},}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classControlMenu_acfce42940430535ccddd96d06eab59d8a6a216efc529825c60a4a4c0bc99ad77f}{PLAY}},}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classControlMenu_acfce42940430535ccddd96d06eab59d8a47559fb833ff58321570e5e877b467f6}{NEXT}},}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classControlMenu_acfce42940430535ccddd96d06eab59d8a6adf97f83acf6453d4a6a4b1070f3754}{None}}}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00029}\mbox{\hyperlink{classControlMenu_a4ffa56cc1f6073a44c35e9436daee64e}{00029}}\ \ \ \ \ \}\ \mbox{\hyperlink{classControlMenu_a4ffa56cc1f6073a44c35e9436daee64e}{status}};}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00031}00031\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classControlMenu}{ControlMenu}}(sf::RenderWindow*\ window);}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00032}\mbox{\hyperlink{classControlMenu_a97c855517d87a113f46f5c403ae625e5}{00032}}\ \ \ \ \ \mbox{\hyperlink{classControlMenu_a97c855517d87a113f46f5c403ae625e5}{\string~ControlMenu}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classControlMenu_a9eedcf8b9c4a81624caa4af8fcb35abc}{pollEvents}}(sf::Event\ event,\ sf::Vector2f\ mousePosView);}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classControlMenu_a1fcdb91b3d4e46cb654b0932cf559875}{update}}();}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00036}00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classControlMenu_a346df0390bcdb72dd7ceadaa146106a0}{render}}();}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00037}00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classControlMenu_aba74ca399ce895872523dba9ddfe93ee}{reset}}();}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{classControlMenu_acfce42940430535ccddd96d06eab59d8}{ControlMenu::StatusCode}}\ \mbox{\hyperlink{classControlMenu_ab1f57c8606e2fad4a761e4354615b633}{getStatus}}();}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00040}00040\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classControlMenu_a329b3e7726e76a9e59ee9c02a5013ae6}{getSpeed}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00041}00041\ \};}
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{ControlMenu_8hpp_source_l00043}00043\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//VISUALGO\_CS162\_CONTROLMENU\_HPP}}
+
+\end{DoxyCode}

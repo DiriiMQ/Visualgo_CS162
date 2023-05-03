@@ -1,0 +1,32 @@
+\hypertarget{ToStringWithPrecision_8hpp}{}\doxysection{include/stuff/\+To\+String\+With\+Precision.hpp File Reference}
+\label{ToStringWithPrecision_8hpp}\index{include/stuff/ToStringWithPrecision.hpp@{include/stuff/ToStringWithPrecision.hpp}}
+{\ttfamily \#include $<$sstream$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string \mbox{\hyperlink{ToStringWithPrecision_8hpp_a970878e8e6f9fd2d4f5cc6b596449429}{to\+\_\+string\+\_\+with\+\_\+precision}} (const T a\+\_\+value, const int n=2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ToStringWithPrecision_8hpp_a970878e8e6f9fd2d4f5cc6b596449429}\label{ToStringWithPrecision_8hpp_a970878e8e6f9fd2d4f5cc6b596449429}} 
+\index{ToStringWithPrecision.hpp@{ToStringWithPrecision.hpp}!to\_string\_with\_precision@{to\_string\_with\_precision}}
+\index{to\_string\_with\_precision@{to\_string\_with\_precision}!ToStringWithPrecision.hpp@{ToStringWithPrecision.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_string\_with\_precision()}{to\_string\_with\_precision()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::string to\+\_\+string\+\_\+with\+\_\+precision (\begin{DoxyParamCaption}\item[{const T}]{a\+\_\+value,  }\item[{const int}]{n = {\ttfamily 2} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ToStringWithPrecision_8hpp_source_l00011}{11}} of file \mbox{\hyperlink{ToStringWithPrecision_8hpp_source}{To\+String\+With\+Precision.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ std::ostringstream\ out;}
+\DoxyCodeLine{00014\ \ \ \ \ out.precision(n);}
+\DoxyCodeLine{00015\ \ \ \ \ out\ <<\ std::fixed\ <<\ a\_value;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordflow}{return}\ std::move(out).str();}
+\DoxyCodeLine{00017\ \}}
+
+\end{DoxyCode}

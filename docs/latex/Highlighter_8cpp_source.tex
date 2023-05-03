@@ -1,0 +1,61 @@
+\hypertarget{Highlighter_8cpp_source}{}\doxysection{Highlighter.\+cpp}
+\label{Highlighter_8cpp_source}\index{include/libScene/Highlighter.cpp@{include/libScene/Highlighter.cpp}}
+\mbox{\hyperlink{Highlighter_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ dirii\ on\ 15/04/2023.}}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Highlighter_8hpp}{Highlighter.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00007}\mbox{\hyperlink{classHighlighter_aceddfca5a589099a1fd70816bcb04bcf}{00007}}\ \mbox{\hyperlink{classHighlighter_aceddfca5a589099a1fd70816bcb04bcf}{Highlighter::Highlighter}}(sf::RenderWindow\ *window,\ \textcolor{keywordtype}{int}\ linesCount,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *codePath)\ \{}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00008}00008\ \ \ \ \ this-\/>window\ =\ window;}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00009}00009\ \ \ \ \ this-\/>linesCount\ =\ linesCount;}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00011}00011\ \ \ \ \ this-\/>codeTexture.loadFromFile(codePath);}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00012}00012\ \ \ \ \ this-\/>codeSprite.setTexture(this-\/>codeTexture);}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00013}00013\ \ \ \ \ this-\/>codeSprite.setScale(\mbox{\hyperlink{namespaceconstants_1_1Highlighter_a7dc8d4791b3c8dc5d243a627a0f0da81}{constants::Highlighter::codeScale}});}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00015}00015\ \ \ \ \ this-\/>codeSprite.setOrigin(}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>codeSprite.getLocalBounds().width,}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>codeSprite.getLocalBounds().height}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00020}00020\ \ \ \ \ this-\/>codeSprite.setPosition(constants::Highlighter::codePos);}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordtype}{float}\ heightTop\ =\ 43;}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00024}00024\ \ \ \ \ this-\/>rectSize\ =\ sf::Vector2f(}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>codeSprite.getGlobalBounds().width,}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ ((this-\/>codeSprite.getLocalBounds().height\ -\/\ heightTop\ *\ 2)\ /\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(this-\/>linesCount))\ *\ \mbox{\hyperlink{namespaceconstants_1_1Highlighter_a7dc8d4791b3c8dc5d243a627a0f0da81}{constants::Highlighter::codeScale}}.y}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this-\/>linesCount;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ sf::RectangleShape\ rect(this-\/>rectSize);}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ rect.setOrigin(rect.getLocalBounds().width,\ rect.getLocalBounds().height);}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ rect.setFillColor(\mbox{\hyperlink{namespaceconstants_a4942dcbf8c9b4fb4cd3e8f6b911bf359}{constants::transparentGreen}});}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ rect.setPosition(}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>codeSprite.getPosition().x,}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>codeSprite.getPosition().y\ -\/\ (heightTop\ *\ \mbox{\hyperlink{namespaceconstants_1_1Highlighter_a7dc8d4791b3c8dc5d243a627a0f0da81}{constants::Highlighter::codeScale}}.y)\ -\/\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(this-\/>linesCount\ -\/\ 1\ -\/\ i)\ *\ this-\/>rectSize.y}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ this-\/>lines.push\_back(rect);}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00039}00039\ \}}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00041}\mbox{\hyperlink{classHighlighter_a0402a172885dbef222349b341b08df5a}{00041}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHighlighter_a0402a172885dbef222349b341b08df5a}{Highlighter::toggle}}(std::vector<int>\ linesList)\ \{}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00042}00042\ \ \ \ \ this-\/>toggleLines\ =\ std::move(linesList);}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00043}00043\ \}}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00045}\mbox{\hyperlink{classHighlighter_a971658bdd8b345cd3e866b9c98042789}{00045}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHighlighter_a971658bdd8b345cd3e866b9c98042789}{Highlighter::render}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00046}00046\ \ \ \ \ this-\/>window-\/>draw(this-\/>codeSprite);}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&i\ :\ this-\/>toggleLines)\ \{}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ this-\/>window-\/>draw(this-\/>lines[i]);}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00051}00051\ \}}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00053}\mbox{\hyperlink{classHighlighter_ac0248622f4cdea18f3acdbc19c63b6a0}{00053}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHighlighter_ac0248622f4cdea18f3acdbc19c63b6a0}{Highlighter::resetToggle}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00054}00054\ \ \ \ \ this-\/>toggleLines.clear();}
+\DoxyCodeLine{\Hypertarget{Highlighter_8cpp_source_l00055}00055\ \}}
+
+\end{DoxyCode}

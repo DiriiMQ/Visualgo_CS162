@@ -1,0 +1,136 @@
+\hypertarget{BackArrow_8cpp_source}{}\doxysection{Back\+Arrow.\+cpp}
+\label{BackArrow_8cpp_source}\index{include/draw/BackArrow.cpp@{include/draw/BackArrow.cpp}}
+\mbox{\hyperlink{BackArrow_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ dirii\ on\ 26/04/2023.}}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{BackArrow_8hpp}{BackArrow.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00007}\mbox{\hyperlink{classBackArrow_a632539b59ced8b5e95a8ebafe252bdeb}{00007}}\ \mbox{\hyperlink{classBackArrow_a632539b59ced8b5e95a8ebafe252bdeb}{BackArrow::BackArrow}}(sf::RenderWindow\ *window,\ sf::Vector2f\ start,\ sf::Vector2f\ end)\ :\ \mbox{\hyperlink{classBaseDraw}{BaseDraw}}(window)\ \{}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00008}00008\ \ \ \ \ this-\/>isShow\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00010}00010\ \ \ \ \ this-\/>points[0]\ =\ end;}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00011}00011\ \ \ \ \ this-\/>points[1]\ =\ start;}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00012}00012\ \ \ \ \ this-\/>points[2]\ =\ sf::Vector2f(}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>points[0].x,}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>points[0].y\ -\/\ constants::NodeInfo::offsetX}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00015}00015\ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00016}00016\ \ \ \ \ this-\/>points[3]\ =\ sf::Vector2f(}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>points[1].x,}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>points[2].y}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00019}00019\ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00020}00020\ \ \ \ \ this-\/>arrow\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classArrow}{Arrow}}(\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}},\ this-\/>points[2],\ this-\/>points[0]);}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00022}00022\ \ \ \ \ this-\/>rectangleTexture[0].loadFromFile(\textcolor{stringliteral}{"{}../assets/rectangle/rectangle\_black.png"{}});}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00023}00023\ \ \ \ \ this-\/>rectangleTexture[1].loadFromFile(\textcolor{stringliteral}{"{}../assets/rectangle/rectangle\_orange.png"{}});}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00025}00025\ \ \ \ \ this-\/>rectangleTexture[0].setRepeated(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00026}00026\ \ \ \ \ this-\/>rectangleTexture[1].setRepeated(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00028}00028\ \ \ \ \ sf::Vector2i\ topLeftCorner\ =\ sf::Vector2i(}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(this-\/>rectangleTexture[0].getSize().x\ /\ 2.0\ -\/\ \mbox{\hyperlink{namespaceconstants_1_1Arrow_ae6845ce9be52326b9cfce0e3b757d9ab}{constants::Arrow::sizeRectangle}}.x\ /\ 2.0),}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(this-\/>rectangleTexture[0].getSize().y\ /\ 2.0\ -\/\ \mbox{\hyperlink{namespaceconstants_1_1Arrow_ae6845ce9be52326b9cfce0e3b757d9ab}{constants::Arrow::sizeRectangle}}.y\ /\ 2.0)}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00031}00031\ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&\ rectangleSprite\ :\ this-\/>rectangleSprites)\ \{}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ rectangleSprite.setTexture(this-\/>rectangleTexture[0]);}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ rectangleSprite.setTextureRect(sf::IntRect(}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ topLeftCorner.x,}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ topLeftCorner.y,}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1Arrow_ae6845ce9be52326b9cfce0e3b757d9ab}{constants::Arrow::sizeRectangle}}.x,}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1Arrow_ae6845ce9be52326b9cfce0e3b757d9ab}{constants::Arrow::sizeRectangle}}.y}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ ));}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00042}00042\ \ \ \ \ this-\/>\mbox{\hyperlink{classBackArrow_a1fb28e9f9fab955c143e55c1d3497543}{setPosition}}(start,\ end);}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00043}00043\ \}}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00045}\mbox{\hyperlink{classBackArrow_a53d3323ebcaa489d7cde849d1cc67281}{00045}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBackArrow_a53d3323ebcaa489d7cde849d1cc67281}{BackArrow::render}}()\ \{}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>isShow)\ \{}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}}-\/>draw(this-\/>rectangleSprites[0]);}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}}-\/>draw(this-\/>rectangleSprites[1]);}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ this-\/>arrow-\/>\mbox{\hyperlink{classArrow_a135e4c81a45366c0be1ca96cd9782521}{render}}();}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00051}00051\ \}}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00053}\mbox{\hyperlink{classBackArrow_a68b0206a133686f7c4f7b9f4dd12ede8}{00053}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBackArrow_a68b0206a133686f7c4f7b9f4dd12ede8}{BackArrow::show}}()\ \{}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00054}00054\ \ \ \ \ this-\/>isShow\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00057}\mbox{\hyperlink{classBackArrow_ac736c9633d7db426ee9c54b824e28ab8}{00057}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBackArrow_ac736c9633d7db426ee9c54b824e28ab8}{BackArrow::hide}}()\ \{}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00058}00058\ \ \ \ \ this-\/>isShow\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00059}00059\ \}}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00061}\mbox{\hyperlink{classBackArrow_ac682abd1f389c28bd5c74bb11bd5ace7}{00061}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBackArrow_ac682abd1f389c28bd5c74bb11bd5ace7}{BackArrow::toggleActiveColorNode}}()\ \{}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00062}00062\ \ \ \ \ this-\/>rectangleSprites[0].setTexture(this-\/>rectangleTexture[1]);}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00063}00063\ \ \ \ \ this-\/>rectangleSprites[1].setTexture(this-\/>rectangleTexture[1]);}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00064}00064\ \ \ \ \ this-\/>arrow-\/>\mbox{\hyperlink{classArrow_a413c30a53d6a0d76c95e57c11a20fd80}{toggleActiveColor}}();}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00065}00065\ \}}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00067}\mbox{\hyperlink{classBackArrow_aefdc307eddac13e1c292427c55bb8db3}{00067}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBackArrow_aefdc307eddac13e1c292427c55bb8db3}{BackArrow::resetColor}}()\ \{}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00068}00068\ \ \ \ \ this-\/>rectangleSprites[0].setTexture(this-\/>rectangleTexture[0]);}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00069}00069\ \ \ \ \ this-\/>rectangleSprites[1].setTexture(this-\/>rectangleTexture[0]);}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00070}00070\ \ \ \ \ this-\/>arrow-\/>\mbox{\hyperlink{classArrow_a0ddb9960d1c2003ece0302b5c7c688fa}{resetColor}}();}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00071}00071\ \}}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00073}\mbox{\hyperlink{classBackArrow_a1fb28e9f9fab955c143e55c1d3497543}{00073}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBackArrow_a1fb28e9f9fab955c143e55c1d3497543}{BackArrow::setPosition}}(sf::Vector2f\ start,\ sf::Vector2f\ end)\ \{}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00074}00074\ \ \ \ \ this-\/>points[0]\ =\ end;}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00075}00075\ \ \ \ \ this-\/>points[1]\ =\ start;}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00076}00076\ \ \ \ \ \textcolor{keywordflow}{if}\ (end\ ==\ start)\ \{}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBackArrow_ac736c9633d7db426ee9c54b824e28ab8}{hide}}();}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00079}00079\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00080}00080\ \ \ \ \ this-\/>points[2]\ =\ sf::Vector2f(}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>points[0].x,}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>points[0].y\ -\/\ constants::NodeInfo::offsetX}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00083}00083\ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00084}00084\ \ \ \ \ this-\/>points[3]\ =\ sf::Vector2f(}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>points[1].x,}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>points[2].y}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00087}00087\ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00088}00088\ \ \ \ \ this-\/>arrow-\/>\mbox{\hyperlink{classArrow_aba41e97028815a99c02773be2f8e1042}{setPositions}}(this-\/>points[2],\ this-\/>points[0],\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00089}00089\ \ \ \ \ this-\/>\mbox{\hyperlink{classBackArrow_a9029a47ee7e3998c430f6b79e17535e7}{autoRotate}}();}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00090}00090\ \ \ \ \ this-\/>\mbox{\hyperlink{classBackArrow_afdf0c196d8a236a97f887db2149c8b02}{autoScale}}();}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00091}00091\ \}}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00093}\mbox{\hyperlink{classBackArrow_afdf0c196d8a236a97f887db2149c8b02}{00093}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBackArrow_afdf0c196d8a236a97f887db2149c8b02}{BackArrow::autoScale}}()\ \{}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00094}00094\ \ \ \ \ \textcolor{keywordtype}{float}\ length\ =\ sqrtf(}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ powf(this-\/>points[3].x\ -\/\ this-\/>points[2].x,\ 2)\ +\ powf(this-\/>points[3].y\ -\/\ this-\/>points[2].y,\ 2)}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00097}00097\ \ \ \ \ this-\/>rectangleSprites[0].setScale(}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ length\ /\ this-\/>rectangleSprites[0].getLocalBounds().width,}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1Arrow_a9ab0f6aa341842193b807085ba78bcd9}{constants::Arrow::defaultScaleRectangle}}.y}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00100}00100\ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00101}00101\ \ \ \ \ length\ =\ sqrtf(}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ powf(this-\/>points[3].x\ -\/\ this-\/>points[1].x,\ 2)\ +\ powf(this-\/>points[3].y\ -\/\ this-\/>points[1].y,\ 2)}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00104}00104\ \ \ \ \ this-\/>rectangleSprites[1].setScale(}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ length\ /\ this-\/>rectangleSprites[1].getLocalBounds().width,}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1Arrow_a9ab0f6aa341842193b807085ba78bcd9}{constants::Arrow::defaultScaleRectangle}}.y}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00107}00107\ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00108}00108\ \ \ \ \ this-\/>rectangleSprites[0].setOrigin(}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>rectangleSprites[0].getLocalBounds().width\ /\ 2.0f,}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ 0}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00111}00111\ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00112}00112\ \ \ \ \ this-\/>rectangleSprites[1].setOrigin(}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>rectangleSprites[1].getLocalBounds().width,}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>rectangleSprites[1].getLocalBounds().height\ /\ 2.0f}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00115}00115\ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00116}00116\ \ \ \ \ this-\/>rectangleSprites[0].setPosition(}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ (this-\/>points[3].x\ +\ this-\/>points[2].x)\ /\ 2.0f,}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ (this-\/>points[3].y\ +\ this-\/>points[2].y)\ /\ 2.0f}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00120}00120\ \ \ \ \ this-\/>rectangleSprites[1].setPosition(this-\/>points[1]);}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00121}00121\ \}}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00123}\mbox{\hyperlink{classBackArrow_a9029a47ee7e3998c430f6b79e17535e7}{00123}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBackArrow_a9029a47ee7e3998c430f6b79e17535e7}{BackArrow::autoRotate}}()\ \{}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00124}00124\ \ \ \ \ sf::Vector2f\ vector2point\ =\ this-\/>points[3]\ -\/\ this-\/>points[2];}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00125}00125\ \ \ \ \ \textcolor{keywordtype}{float}\ angle\ =\ atan2f(vector2point.y,\ vector2point.x)\ *\ 180.0f\ /\ (float)M\_PI;}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00126}00126\ \ \ \ \ this-\/>rectangleSprites[0].setRotation(angle);}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00127}00127\ \ \ \ \ vector2point\ =\ this-\/>points[1]\ -\/\ this-\/>points[3];}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00128}00128\ \ \ \ \ angle\ =\ atan2f(vector2point.y,\ vector2point.x)\ *\ 180.0f\ /\ (float)M\_PI;}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00129}00129\ \ \ \ \ this-\/>rectangleSprites[1].setRotation(angle);}
+\DoxyCodeLine{\Hypertarget{BackArrow_8cpp_source_l00130}00130\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,292 @@
+\hypertarget{classSquare}{}\doxysection{Square Class Reference}
+\label{classSquare}\index{Square@{Square}}
+
+
+{\ttfamily \#include $<$Square.\+hpp$>$}
+
+Inheritance diagram for Square\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSquare}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefb}{Status}} \{ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{inactive}}
+, \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{active}}
+, \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbaca071943e5acd1c8bcfbe0d2ee36fec2}{chosen}}
+, \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba662f707d5491e9bce8238a6c0be92190}{hidden}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSquare_a2bd550969040191a79fb6061f06156ff}{Square}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}}, std\+::string value, sf\+::\+Vector2f position)
+\item 
+void \mbox{\hyperlink{classSquare_a83b36d9fd274753e900055767cc0b2b9}{render}} () override
+\item 
+void \mbox{\hyperlink{classSquare_afc0b978cc651eb3f226bd69ef772508c}{set\+Status}} (\mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefb}{Status}} \+\_\+status)
+\item 
+void \mbox{\hyperlink{classSquare_acda5910e7deb01637583d41b9ff8db39}{reset\+Color}} ()
+\item 
+\mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefb}{Status}} \mbox{\hyperlink{classSquare_a1ac0c16df63288f6bd561f2025b343ca}{get\+Status}} ()
+\item 
+void \mbox{\hyperlink{classSquare_a9dd74d8f6fecbbb6ed535514817bea19}{set\+Text}} (std\+::string \+\_\+value)
+\item 
+void \mbox{\hyperlink{classSquare_a3c48034ede491ea02812724b586c6477}{set\+Position}} (sf\+::\+Vector2f position)
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classSquare_aab2a8d1ab073845d43240d08d0ce4fb2}{get\+Position}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Font \mbox{\hyperlink{classSquare_a89ee948ccb828e8b4cecfbbfcb9da670}{font}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{Square_8hpp_source_l00011}{11}} of file \mbox{\hyperlink{Square_8hpp_source}{Square.\+hpp}}.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classSquare_a5a8089f9e473e3112b0ac0adb721eefb}\label{classSquare_a5a8089f9e473e3112b0ac0adb721eefb}} 
+\index{Square@{Square}!Status@{Status}}
+\index{Status@{Status}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{Status}{Status}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefb}{Square\+::\+Status}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{inactive@{inactive}!Square@{Square}}\index{Square@{Square}!inactive@{inactive}}}\mbox{\Hypertarget{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}\label{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}} 
+inactive&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{active@{active}!Square@{Square}}\index{Square@{Square}!active@{active}}}\mbox{\Hypertarget{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}\label{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}} 
+active&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{chosen@{chosen}!Square@{Square}}\index{Square@{Square}!chosen@{chosen}}}\mbox{\Hypertarget{classSquare_a5a8089f9e473e3112b0ac0adb721eefbaca071943e5acd1c8bcfbe0d2ee36fec2}\label{classSquare_a5a8089f9e473e3112b0ac0adb721eefbaca071943e5acd1c8bcfbe0d2ee36fec2}} 
+chosen&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{hidden@{hidden}!Square@{Square}}\index{Square@{Square}!hidden@{hidden}}}\mbox{\Hypertarget{classSquare_a5a8089f9e473e3112b0ac0adb721eefba662f707d5491e9bce8238a6c0be92190}\label{classSquare_a5a8089f9e473e3112b0ac0adb721eefba662f707d5491e9bce8238a6c0be92190}} 
+hidden&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{Square_8hpp_source_l00013}{13}} of file \mbox{\hyperlink{Square_8hpp_source}{Square.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{inactive}},}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{active}},}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbaca071943e5acd1c8bcfbe0d2ee36fec2}{chosen}},}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba662f707d5491e9bce8238a6c0be92190}{hidden}}}
+\DoxyCodeLine{00018\ \ \ \ \ \};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSquare_a2bd550969040191a79fb6061f06156ff}\label{classSquare_a2bd550969040191a79fb6061f06156ff}} 
+\index{Square@{Square}!Square@{Square}}
+\index{Square@{Square}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{Square()}{Square()}}
+{\footnotesize\ttfamily Square\+::\+Square (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window,  }\item[{std\+::string}]{value,  }\item[{sf\+::\+Vector2f}]{position }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Square_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{Square_8cpp_source}{Square.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classBaseDraw}{BaseDraw}}(\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}})\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ this-\/>value\ =\ std::move(value);}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ this-\/>square.setSize(sf::Vector2f(constants::Square::length,\ constants::Square::length));}
+\DoxyCodeLine{00012\ \ \ \ \ this-\/>square.setFillColor(sf::Color::White);}
+\DoxyCodeLine{00013\ \ \ \ \ this-\/>square.setOutlineThickness(constants::Square::outlineThickness);}
+\DoxyCodeLine{00014\ \ \ \ \ this-\/>square.setOutlineColor(sf::Color::Black);}
+\DoxyCodeLine{00015\ \ \ \ \ sf::FloatRect\ bounds\ =\ this-\/>square.getLocalBounds();}
+\DoxyCodeLine{00016\ \ \ \ \ this-\/>square.setOrigin(bounds.left\ +\ bounds.width\ /\ 2.0f,bounds.top\ +\ bounds.height\ /\ 2.0f);}
+\DoxyCodeLine{00017\ \ \ \ \ this-\/>square.setPosition(position);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ this-\/>\mbox{\hyperlink{classSquare_a89ee948ccb828e8b4cecfbbfcb9da670}{font}}.loadFromFile(\mbox{\hyperlink{namespaceconstants_a23f8c84b0e1ce702055ff67135fbf428}{constants::fontPath}});}
+\DoxyCodeLine{00020\ \ \ \ \ this-\/>label.setFont(this-\/>\mbox{\hyperlink{classSquare_a89ee948ccb828e8b4cecfbbfcb9da670}{font}});}
+\DoxyCodeLine{00021\ \ \ \ \ this-\/>label.setString(this-\/>value);}
+\DoxyCodeLine{00022\ \ \ \ \ this-\/>label.setCharacterSize(constants::Square::fontSize);}
+\DoxyCodeLine{00023\ \ \ \ \ this-\/>label.setFillColor(sf::Color::Black);}
+\DoxyCodeLine{00024\ \ \ \ \ bounds\ =\ this-\/>label.getLocalBounds();}
+\DoxyCodeLine{00025\ \ \ \ \ this-\/>label.setOrigin(bounds.left\ +\ bounds.width\ /\ 2.0f,\ bounds.top\ +\ bounds.height\ /\ 2.0f);}
+\DoxyCodeLine{00026\ \ \ \ \ this-\/>label.setPosition(position);}
+\DoxyCodeLine{00027\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSquare_aab2a8d1ab073845d43240d08d0ce4fb2}\label{classSquare_aab2a8d1ab073845d43240d08d0ce4fb2}} 
+\index{Square@{Square}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Square\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Square_8cpp_source_l00062}{62}} of file \mbox{\hyperlink{Square_8cpp_source}{Square.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>square.getPosition();}
+\DoxyCodeLine{00064\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSquare_a1ac0c16df63288f6bd561f2025b343ca}\label{classSquare_a1ac0c16df63288f6bd561f2025b343ca}} 
+\index{Square@{Square}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefb}{Square\+::\+Status}} Square\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Square_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{Square_8cpp_source}{Square.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>status;}
+\DoxyCodeLine{00072\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSquare_a83b36d9fd274753e900055767cc0b2b9}\label{classSquare_a83b36d9fd274753e900055767cc0b2b9}} 
+\index{Square@{Square}!render@{render}}
+\index{render@{render}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Square\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classBaseDraw_ab7eb16791faed1ce844d963d9e2acf38}{Base\+Draw}}.
+
+
+
+Definition at line \mbox{\hyperlink{Square_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{Square_8cpp_source}{Square.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{switch}\ (this-\/>status)\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Status::active}}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>square.setOutlineColor(constants::normalGreen);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{Status::inactive}}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>square.setOutlineColor(sf::Color::Black);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbaca071943e5acd1c8bcfbe0d2ee36fec2}{Status::chosen}}:}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>square.setOutlineColor(\mbox{\hyperlink{namespaceconstants_aa2c33af3a12516cd0a8b05f71159f60d}{constants::clickGreen}});}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}}-\/>draw(this-\/>square);}
+\DoxyCodeLine{00042\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}}-\/>draw(this-\/>label);}
+\DoxyCodeLine{00043\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSquare_acda5910e7deb01637583d41b9ff8db39}\label{classSquare_acda5910e7deb01637583d41b9ff8db39}} 
+\index{Square@{Square}!resetColor@{resetColor}}
+\index{resetColor@{resetColor}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{resetColor()}{resetColor()}}
+{\footnotesize\ttfamily void Square\+::reset\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Square_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{Square_8cpp_source}{Square.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ this-\/>status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{Status::inactive}};}
+\DoxyCodeLine{00047\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSquare_a3c48034ede491ea02812724b586c6477}\label{classSquare_a3c48034ede491ea02812724b586c6477}} 
+\index{Square@{Square}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Square\+::set\+Position (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Square_8cpp_source_l00057}{57}} of file \mbox{\hyperlink{Square_8cpp_source}{Square.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ this-\/>square.setPosition(position);}
+\DoxyCodeLine{00059\ \ \ \ \ this-\/>label.setPosition(position);}
+\DoxyCodeLine{00060\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSquare_afc0b978cc651eb3f226bd69ef772508c}\label{classSquare_afc0b978cc651eb3f226bd69ef772508c}} 
+\index{Square@{Square}!setStatus@{setStatus}}
+\index{setStatus@{setStatus}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{setStatus()}{setStatus()}}
+{\footnotesize\ttfamily void Square\+::set\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefb}{Square\+::\+Status}}}]{\+\_\+status }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Square_8cpp_source_l00066}{66}} of file \mbox{\hyperlink{Square_8cpp_source}{Square.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ this-\/>status\ =\ \_status;}
+\DoxyCodeLine{00068\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSquare_a9dd74d8f6fecbbb6ed535514817bea19}\label{classSquare_a9dd74d8f6fecbbb6ed535514817bea19}} 
+\index{Square@{Square}!setText@{setText}}
+\index{setText@{setText}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{setText()}{setText()}}
+{\footnotesize\ttfamily void Square\+::set\+Text (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Square_8cpp_source_l00049}{49}} of file \mbox{\hyperlink{Square_8cpp_source}{Square.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ this-\/>value\ =\ std::move(\_value);}
+\DoxyCodeLine{00051\ \ \ \ \ this-\/>label.setString(this-\/>value);}
+\DoxyCodeLine{00052\ \ \ \ \ sf::FloatRect\ bounds\ =\ this-\/>label.getLocalBounds();}
+\DoxyCodeLine{00053\ \ \ \ \ this-\/>label.setOrigin(bounds.left\ +\ bounds.width\ /\ 2.0f,\ bounds.top\ +\ bounds.height\ /\ 2.0f);}
+\DoxyCodeLine{00054\ \ \ \ \ this-\/>label.setPosition(this-\/>square.getPosition());}
+\DoxyCodeLine{00055\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classSquare_a89ee948ccb828e8b4cecfbbfcb9da670}\label{classSquare_a89ee948ccb828e8b4cecfbbfcb9da670}} 
+\index{Square@{Square}!font@{font}}
+\index{font@{font}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily sf\+::\+Font Square\+::font}
+
+
+
+Definition at line \mbox{\hyperlink{Square_8hpp_source_l00020}{20}} of file \mbox{\hyperlink{Square_8hpp_source}{Square.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/draw/\mbox{\hyperlink{Square_8hpp}{Square.\+hpp}}\item 
+include/draw/\mbox{\hyperlink{Square_8cpp}{Square.\+cpp}}\end{DoxyCompactItemize}

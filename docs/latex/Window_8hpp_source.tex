@@ -1,0 +1,50 @@
+\hypertarget{Window_8hpp_source}{}\doxysection{Window.\+hpp}
+\label{Window_8hpp_source}\index{include/Window.hpp@{include/Window.hpp}}
+\mbox{\hyperlink{Window_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ dirii\ on\ 23/03/2023.}}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#ifndef\ VISUALGO\_CS162\_WINDOW\_HPP}}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#define\ VISUALGO\_CS162\_WINDOW\_HPP}}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{MousePosition_8hpp}{MousePosition.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Constants_8hpp}{Constants.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{button_8hpp}{stuff/button.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{AllScenes_8hpp}{libScene/AllScenes.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00015}\mbox{\hyperlink{classWindow}{00015}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classWindow}{Window}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMousePosition}{MousePosition}}\{}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00016}00016\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00017}00017\ \ \ \ \ sf::RenderWindow*\ window\{\};}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00018}00018\ \ \ \ \ sf::VideoMode\ videoMode;}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00019}00019\ \ \ \ \ sf::Event\ \textcolor{keyword}{event}\{\};}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00021}00021\ \ \ \ \ \textcolor{comment}{//\ scenes}}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBaseScene}{BaseScene}}*\ scenes[\mbox{\hyperlink{namespaceconstants_1_1sceneVariables_a5e816797d00e731037893b66f74bdb5f}{constants::sceneVariables::SCENE\_COUNT}}];}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1sceneVariables_acaca02ed9c2f43eff4ef7dd61d693a8f}{constants::sceneVariables::Scene}}\ currentScene;}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00025}00025\ \ \ \ \ \textcolor{comment}{//\ buttons}}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{classButton}{Button}}*\ submenuButton,}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ *demoCodeButton;}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordtype}{void}\ initWindow();}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordtype}{void}\ initScenes();}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordtype}{void}\ init();}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00033}00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00034}00034\ \ \ \ \ \mbox{\hyperlink{classWindow_a74e6087da23d3c24e9fac0245e5ec92c}{Window}}();}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00035}\mbox{\hyperlink{classWindow_adc361d2d83c3531576b0d7bc1589cdfb}{00035}}\ \ \ \ \ \mbox{\hyperlink{classWindow_adc361d2d83c3531576b0d7bc1589cdfb}{\string~Window}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00037}00037\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classWindow_ae757b932000b466adead23388fc9f53c}{running}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00039}00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classWindow_a5abb541ee62c814dc7a7037140af7e8f}{pollEvent}}();}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classWindow_a59515fc5a56e86d5a46d771595daac55}{update}}();}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classWindow_a0a2093bd2ed34740c08a6a2fdfc059c9}{render}}();}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00042}00042\ \};}
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{Window_8hpp_source_l00044}00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//VISUALGO\_CS162\_WINDOW\_HPP}}
+
+\end{DoxyCode}

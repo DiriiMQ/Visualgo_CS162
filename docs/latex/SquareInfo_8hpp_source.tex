@@ -1,0 +1,43 @@
+\hypertarget{SquareInfo_8hpp_source}{}\doxysection{Square\+Info.\+hpp}
+\label{SquareInfo_8hpp_source}\index{include/draw/SquareInfo.hpp@{include/draw/SquareInfo.hpp}}
+\mbox{\hyperlink{SquareInfo_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ dirii\ on\ 28/04/2023.}}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#ifndef\ VISUALGO\_CS162\_SQUAREINFO\_HPP}}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#define\ VISUALGO\_CS162\_SQUAREINFO\_HPP}}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Square_8hpp}{Square.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00010}\mbox{\hyperlink{classSquareInfo}{00010}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSquareInfo}{SquareInfo}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBaseDraw}{BaseDraw}}\ \{}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00011}00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00012}00012\ \ \ \ \ \mbox{\hyperlink{classSquareInfo}{SquareInfo}}(sf::RenderWindow\ *\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}},\ std::string\ value,\ sf::Vector2f\ position);}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00013}\mbox{\hyperlink{classSquareInfo_a3ec6243254478cd39ecce254c8c703c7}{00013}}\ \ \ \ \ \mbox{\hyperlink{classSquareInfo_a3ec6243254478cd39ecce254c8c703c7}{\string~SquareInfo}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSquareInfo_a4222413141669e489027608c560e80a6}{update}}();}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSquareInfo_aa5c1473e90cd9a56e6042721aff824d6}{render}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSquareInfo_a97de14f69c4855cf95e72d32600cdf24}{setValue}}(std::string\ value);}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00018}00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSquareInfo_aa7fa88e26f2aae3ee5560cd7a087a00b}{setTitle}}(\textcolor{keyword}{const}\ std::string\&\ \_title);}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSquareInfo_ad74960d2a6eb88be4c70af807fb93f73}{setStatus}}(\mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefb}{Square::Status}}\ \_status);}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00020}00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSquareInfo_ac86b9a46ae82fed9e57a4b62811ad237}{setPrintPreVal}}(\textcolor{keywordtype}{bool}\ \_isPrintPreVal);}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00022}00022\ \ \ \ \ std::string\ \mbox{\hyperlink{classSquareInfo_a76b219b941048304ff872c8e70f7cf80}{getValue}}();}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefb}{Square::Status}}\ \mbox{\hyperlink{classSquareInfo_a51e563ef074e7ec80671e97bc20bdb6d}{getStatus}}();}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSquareInfo_a2548a23f7870843aa08586adb4d71cc9}{resetTitle}}();}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSquareInfo_ad6d6ea15e360c95a9da974041ed84858}{reset}}();}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00028}00028\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00029}00029\ \ \ \ \ sf::Vector2f\ position;}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00030}00030\ \ \ \ \ \mbox{\hyperlink{classSquare}{Square}}*\ square;}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00031}00031\ \ \ \ \ std::string\ values[2];}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00032}00032\ \ \ \ \ sf::Text\ title;}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ isPrintPreVal;}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00035}00035\ \};}
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{SquareInfo_8hpp_source_l00037}00037\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//VISUALGO\_CS162\_SQUAREINFO\_HPP}}
+
+\end{DoxyCode}

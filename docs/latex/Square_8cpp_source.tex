@@ -1,0 +1,78 @@
+\hypertarget{Square_8cpp_source}{}\doxysection{Square.\+cpp}
+\label{Square_8cpp_source}\index{include/draw/Square.cpp@{include/draw/Square.cpp}}
+\mbox{\hyperlink{Square_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ dirii\ on\ 28/04/2023.}}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Square_8hpp}{Square.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00007}\mbox{\hyperlink{classSquare_a2bd550969040191a79fb6061f06156ff}{00007}}\ \mbox{\hyperlink{classSquare_a2bd550969040191a79fb6061f06156ff}{Square::Square}}(sf::RenderWindow\ *window,\ std::string\ value,\ sf::Vector2f\ position)}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00008}00008\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classBaseDraw}{BaseDraw}}(window)\ \{}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00009}00009\ \ \ \ \ this-\/>value\ =\ std::move(value);}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00011}00011\ \ \ \ \ this-\/>square.setSize(sf::Vector2f(constants::Square::length,\ constants::Square::length));}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00012}00012\ \ \ \ \ this-\/>square.setFillColor(sf::Color::White);}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00013}00013\ \ \ \ \ this-\/>square.setOutlineThickness(constants::Square::outlineThickness);}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00014}00014\ \ \ \ \ this-\/>square.setOutlineColor(sf::Color::Black);}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00015}00015\ \ \ \ \ sf::FloatRect\ bounds\ =\ this-\/>square.getLocalBounds();}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00016}00016\ \ \ \ \ this-\/>square.setOrigin(bounds.left\ +\ bounds.width\ /\ 2.0f,bounds.top\ +\ bounds.height\ /\ 2.0f);}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00017}00017\ \ \ \ \ this-\/>square.setPosition(position);}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00019}00019\ \ \ \ \ this-\/>\mbox{\hyperlink{classSquare_a89ee948ccb828e8b4cecfbbfcb9da670}{font}}.loadFromFile(\mbox{\hyperlink{namespaceconstants_a23f8c84b0e1ce702055ff67135fbf428}{constants::fontPath}});}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00020}00020\ \ \ \ \ this-\/>label.setFont(this-\/>\mbox{\hyperlink{classSquare_a89ee948ccb828e8b4cecfbbfcb9da670}{font}});}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00021}00021\ \ \ \ \ this-\/>label.setString(this-\/>value);}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00022}00022\ \ \ \ \ this-\/>label.setCharacterSize(constants::Square::fontSize);}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00023}00023\ \ \ \ \ this-\/>label.setFillColor(sf::Color::Black);}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00024}00024\ \ \ \ \ bounds\ =\ this-\/>label.getLocalBounds();}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00025}00025\ \ \ \ \ this-\/>label.setOrigin(bounds.left\ +\ bounds.width\ /\ 2.0f,\ bounds.top\ +\ bounds.height\ /\ 2.0f);}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00026}00026\ \ \ \ \ this-\/>label.setPosition(position);}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00029}\mbox{\hyperlink{classSquare_a83b36d9fd274753e900055767cc0b2b9}{00029}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSquare_a83b36d9fd274753e900055767cc0b2b9}{Square::render}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{switch}\ (this-\/>status)\ \{}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Status::active}}:}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>square.setOutlineColor(constants::normalGreen);}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{Status::inactive}}:}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>square.setOutlineColor(sf::Color::Black);}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbaca071943e5acd1c8bcfbe0d2ee36fec2}{Status::chosen}}:}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>square.setOutlineColor(\mbox{\hyperlink{namespaceconstants_aa2c33af3a12516cd0a8b05f71159f60d}{constants::clickGreen}});}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00041}00041\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}}-\/>draw(this-\/>square);}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00042}00042\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}}-\/>draw(this-\/>label);}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00043}00043\ \}}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00045}\mbox{\hyperlink{classSquare_acda5910e7deb01637583d41b9ff8db39}{00045}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSquare_acda5910e7deb01637583d41b9ff8db39}{Square::resetColor}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00046}00046\ \ \ \ \ this-\/>status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{Status::inactive}};}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00047}00047\ \}}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00049}\mbox{\hyperlink{classSquare_a9dd74d8f6fecbbb6ed535514817bea19}{00049}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSquare_a9dd74d8f6fecbbb6ed535514817bea19}{Square::setText}}(std::string\ \_value)\ \{}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00050}00050\ \ \ \ \ this-\/>value\ =\ std::move(\_value);}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00051}00051\ \ \ \ \ this-\/>label.setString(this-\/>value);}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00052}00052\ \ \ \ \ sf::FloatRect\ bounds\ =\ this-\/>label.getLocalBounds();}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00053}00053\ \ \ \ \ this-\/>label.setOrigin(bounds.left\ +\ bounds.width\ /\ 2.0f,\ bounds.top\ +\ bounds.height\ /\ 2.0f);}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00054}00054\ \ \ \ \ this-\/>label.setPosition(this-\/>square.getPosition());}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00057}\mbox{\hyperlink{classSquare_a3c48034ede491ea02812724b586c6477}{00057}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSquare_a3c48034ede491ea02812724b586c6477}{Square::setPosition}}(sf::Vector2f\ position)\ \{}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00058}00058\ \ \ \ \ this-\/>square.setPosition(position);}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00059}00059\ \ \ \ \ this-\/>label.setPosition(position);}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00060}00060\ \}}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00062}\mbox{\hyperlink{classSquare_aab2a8d1ab073845d43240d08d0ce4fb2}{00062}}\ sf::Vector2f\ \mbox{\hyperlink{classSquare_aab2a8d1ab073845d43240d08d0ce4fb2}{Square::getPosition}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00063}00063\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>square.getPosition();}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00064}00064\ \}}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00066}\mbox{\hyperlink{classSquare_afc0b978cc651eb3f226bd69ef772508c}{00066}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSquare_afc0b978cc651eb3f226bd69ef772508c}{Square::setStatus}}(\mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefb}{Square::Status}}\ \_status)\ \{}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00067}00067\ \ \ \ \ this-\/>status\ =\ \_status;}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00068}00068\ \}}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00070}\mbox{\hyperlink{classSquare_a1ac0c16df63288f6bd561f2025b343ca}{00070}}\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefb}{Square::Status}}\ \mbox{\hyperlink{classSquare_a1ac0c16df63288f6bd561f2025b343ca}{Square::getStatus}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00071}00071\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>status;}
+\DoxyCodeLine{\Hypertarget{Square_8cpp_source_l00072}00072\ \}}
+
+\end{DoxyCode}

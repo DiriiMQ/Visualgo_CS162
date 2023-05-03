@@ -1,0 +1,310 @@
+\hypertarget{Array_8cpp_source}{}\doxysection{Array.\+cpp}
+\label{Array_8cpp_source}\index{include/core/Array.cpp@{include/core/Array.cpp}}
+\mbox{\hyperlink{Array_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ dirii\ on\ 28/04/2023.}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Array_8hpp}{Array.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00009}\mbox{\hyperlink{classArray_acdda1845682680c1d647525be6c6a398}{00009}}\ \mbox{\hyperlink{classArray_acdda1845682680c1d647525be6c6a398}{Array::Array}}(sf::RenderWindow\ *window,\ \mbox{\hyperlink{classArray_a081d69309362edb5088bd92e72457713}{TypeArray}}\ typeArray)\ :\ \mbox{\hyperlink{classBaseDraw}{BaseDraw}}(window)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00010}00010\ \ \ \ \ this-\/>\mbox{\hyperlink{classArray_a3cc85704e096c37fbb3643dbfd588243}{init}}(typeArray);}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00011}00011\ \ \ \ \ this-\/>\mbox{\hyperlink{classArray_af3e9bb41814faaafb3c9738727945b3e}{createArray}}(0);}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00012}00012\ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00014}\mbox{\hyperlink{classArray_a06b886be23955257fe5afb2eda158094}{00014}}\ \mbox{\hyperlink{classArray_acdda1845682680c1d647525be6c6a398}{Array::Array}}(sf::RenderWindow\ *window,\ \mbox{\hyperlink{classArray_a081d69309362edb5088bd92e72457713}{Array::TypeArray}}\ typeArray,\ \textcolor{keywordtype}{int}\ size)\ :\ \mbox{\hyperlink{classBaseDraw}{BaseDraw}}(window)\ \ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00015}00015\ \ \ \ \ this-\/>\mbox{\hyperlink{classArray_a3cc85704e096c37fbb3643dbfd588243}{init}}(typeArray);}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00016}00016\ \ \ \ \ this-\/>\mbox{\hyperlink{classArray_af3e9bb41814faaafb3c9738727945b3e}{createArray}}(size);}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00017}00017\ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00019}\mbox{\hyperlink{classArray_a8beafe65d6709287dc7dfd931b1e70ae}{00019}}\ \mbox{\hyperlink{classArray_acdda1845682680c1d647525be6c6a398}{Array::Array}}(sf::RenderWindow\ *window,\ \mbox{\hyperlink{classArray_a081d69309362edb5088bd92e72457713}{Array::TypeArray}}\ typeArray,\ std::vector<std::string>\ values)\ :\ \mbox{\hyperlink{classBaseDraw}{BaseDraw}}(window)\ \ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00020}00020\ \ \ \ \ this-\/>\mbox{\hyperlink{classArray_a3cc85704e096c37fbb3643dbfd588243}{init}}(typeArray);}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00021}00021\ \ \ \ \ this-\/>\mbox{\hyperlink{classArray_af3e9bb41814faaafb3c9738727945b3e}{createArray}}(std::move(values));}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00022}00022\ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00024}\mbox{\hyperlink{classArray_a3cc85704e096c37fbb3643dbfd588243}{00024}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArray_a3cc85704e096c37fbb3643dbfd588243}{Array::init}}(\mbox{\hyperlink{classArray_a081d69309362edb5088bd92e72457713}{Array::TypeArray}}\ typeArray)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00025}00025\ \ \ \ \ this-\/>typeArray\ =\ typeArray;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00026}00026\ \ \ \ \ this-\/>highlighter\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00027}00027\ \ \ \ \ this-\/>delayTime\ =\ constants::LinkedList::DELAY\_TIME;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00028}00028\ \ \ \ \ this-\/>size\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00031}\mbox{\hyperlink{classArray_a3f3a0d69e6f1a592715d39fb393a980d}{00031}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArray_a3f3a0d69e6f1a592715d39fb393a980d}{Array::render}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square\ :\ this-\/>squares)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ square-\/>render();}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square:\ this-\/>squaresTemp)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ square-\/>render();}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00037}00037\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00038}00038\ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00040}\mbox{\hyperlink{classArray_a2b56d7d580c8afd16c60ac37c8ddc273}{00040}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArray_a2b56d7d580c8afd16c60ac37c8ddc273}{Array::renderHighlighter}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>highlighter)}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ this-\/>highlighter-\/>\mbox{\hyperlink{classHighlighter_a971658bdd8b345cd3e866b9c98042789}{render}}();}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00043}00043\ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00045}\mbox{\hyperlink{classArray_a48660d225d7783cbf7b9eeb3ad988da6}{00045}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArray_a48660d225d7783cbf7b9eeb3ad988da6}{Array::update}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\textcolor{keywordtype}{int})this-\/>events.size()\ \&\&\ (this-\/>isDelay\ or\ this-\/>clock.getElapsedTime().asSeconds()\ >\ this-\/>delayTime\ /\ this-\/>speed))}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classArray_a74d369c341d969cd35cc45ad2eea988c}{updateAnimation}}();}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00048}00048\ \ \ \ \ this-\/>isDelay\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00049}00049\ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00051}\mbox{\hyperlink{classArray_a9a82f3b72cffa977e6ccf208cb2c279b}{00051}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArray_a9a82f3b72cffa977e6ccf208cb2c279b}{Array::setSpeed}}(\textcolor{keywordtype}{float}\ \_speed)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00052}00052\ \ \ \ \ this-\/>speed\ =\ \_speed;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00053}00053\ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00055}\mbox{\hyperlink{classArray_af38c67dacbb820df863adcc6131adbd9}{00055}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classArray_af38c67dacbb820df863adcc6131adbd9}{Array::findValue}}(\textcolor{keyword}{const}\ std::string\ \&value)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this-\/>size;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>squares[i]-\/>getValue()\ ==\ value)}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ i;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00060}00060\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>size;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00061}00061\ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00063}\mbox{\hyperlink{classArray_af29bf627de157570d00c700773884e20}{00063}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classArray_af29bf627de157570d00c700773884e20}{Array::getSize}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00064}00064\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>size;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00065}00065\ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00067}\mbox{\hyperlink{classArray_aecb58e71b5738a9640da6111afc1b6f1}{00067}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArray_aecb58e71b5738a9640da6111afc1b6f1}{Array::processControlMenu}}(\mbox{\hyperlink{classControlMenu_acfce42940430535ccddd96d06eab59d8}{ControlMenu::StatusCode}}\ status)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00068}00068\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>clock.getElapsedTime().asSeconds()\ <\ this-\/>delayTime\ /\ this-\/>speed)}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00070}00070\ \ \ \ \ \textcolor{keywordflow}{switch}\ (status)\{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{classControlMenu_acfce42940430535ccddd96d06eab59d8a315ba7a868d45a9cb131c8dca3166b51}{ControlMenu::StatusCode::PREVIOUS}}:}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>currentEvent\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/-\/this-\/>currentEvent;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{classControlMenu_acfce42940430535ccddd96d06eab59d8a291554596c183e837f0a6bec3767c891}{ControlMenu::StatusCode::PAUSE}}:}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00076}00076\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ "{}PAUSE"{}\ <<\ std::endl;}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{classControlMenu_acfce42940430535ccddd96d06eab59d8a6a216efc529825c60a4a4c0bc99ad77f}{ControlMenu::StatusCode::PLAY}}:}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>currentEvent\ +\ 1\ <\ this-\/>events.size())\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>isDelay\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>clock.restart();}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{classControlMenu_acfce42940430535ccddd96d06eab59d8a47559fb833ff58321570e5e877b467f6}{ControlMenu::StatusCode::NEXT}}:}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>currentEvent\ +\ 1\ <\ this-\/>events.size())}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++this-\/>currentEvent;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00089}00089\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00090}00090\ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00092}\mbox{\hyperlink{classArray_aaf161a0d1cbd05d234d8a2527f5e7185}{00092}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArray_aaf161a0d1cbd05d234d8a2527f5e7185}{Array::initHighlighter}}(\textcolor{keywordtype}{int}\ linesCount,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *codePath)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00093}00093\ \ \ \ \ \textcolor{keyword}{delete}\ this-\/>highlighter;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00094}00094\ \ \ \ \ this-\/>highlighter\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classHighlighter}{Highlighter}}(}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}},}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ linesCount,}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ codePath}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00098}00098\ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00099}00099\ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00101}\mbox{\hyperlink{classArray_acaf25aea2531c806681030ec3369e744}{00101}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArray_acaf25aea2531c806681030ec3369e744}{Array::toggleLines}}(std::vector<int>\ lines)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00102}00102\ \ \ \ \ this-\/>highlighter-\/>\mbox{\hyperlink{classHighlighter_a0402a172885dbef222349b341b08df5a}{toggle}}(std::move(lines));}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00103}00103\ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00105}\mbox{\hyperlink{classArray_a74d369c341d969cd35cc45ad2eea988c}{00105}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArray_a74d369c341d969cd35cc45ad2eea988c}{Array::updateAnimation}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00106}00106\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>squares.\mbox{\hyperlink{classVector_ad688a8a0dfbd07ea63d838058a436f79}{empty}}())}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00109}00109\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square\ :\ this-\/>squares)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ square-\/>reset();}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00111}00111\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00112}00112\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square\ :\ this-\/>squaresTemp)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ square-\/>reset();}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00114}00114\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00116}00116\ \ \ \ \ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}\ \&\textcolor{keyword}{event}\ =\ this-\/>events[this-\/>currentEvent];}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00117}00117\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \textcolor{keyword}{event}.eventSquares.size();\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ this-\/>squares[i]-\/>setStatus(event.eventSquares[i].status);}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00119}00119\ \ \ \ \ \ \ \ \ this-\/>squares[i]-\/>setPrintPreVal(event.eventSquares[i].isPrintPreVal);}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00120}00120\ \ \ \ \ \ \ \ \ this-\/>squares[i]-\/>setTitle(event.eventSquares[i].title);}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00121}00121\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00122}00122\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \textcolor{keyword}{event}.eventSquaresTemp.size();\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00123}00123\ \ \ \ \ \ \ \ \ this-\/>squaresTemp[i]-\/>setStatus(event.eventSquaresTemp[i].status);}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00124}00124\ \ \ \ \ \ \ \ \ this-\/>squaresTemp[i]-\/>setPrintPreVal(event.eventSquaresTemp[i].isPrintPreVal);}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ this-\/>squaresTemp[i]-\/>setTitle(event.eventSquaresTemp[i].title);}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00126}00126\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00128}00128\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>highlighter)}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00129}00129\ \ \ \ \ \ \ \ \ this-\/>highlighter-\/>\mbox{\hyperlink{classHighlighter_a0402a172885dbef222349b341b08df5a}{toggle}}(event.lines);}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00131}00131\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square\ :\ this-\/>squares)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00132}00132\ \ \ \ \ \ \ \ \ square-\/>update();}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00133}00133\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00134}00134\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square\ :\ this-\/>squaresTemp)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00135}00135\ \ \ \ \ \ \ \ \ square-\/>update();}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00136}00136\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00137}00137\ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00139}\mbox{\hyperlink{classArray_a58bdbe3ada4bc219b09370bb63c7d6e8}{00139}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArray_a58bdbe3ada4bc219b09370bb63c7d6e8}{Array::resetEvents}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00140}00140\ \ \ \ \ \textcolor{keyword}{delete}\ this-\/>highlighter;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00141}00141\ \ \ \ \ this-\/>highlighter\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00142}00142\ \ \ \ \ this-\/>currentEvent\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00143}00143\ \ \ \ \ this-\/>events.clear();}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00144}00144\ \ \ \ \ this-\/>squaresTemp.\mbox{\hyperlink{classVector_a32ad98b135472b0ebc5d6cb3ae5d0085}{clear}}();}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00146}00146\ \ \ \ \ \textcolor{keywordflow}{while}\ (!this-\/>squares.\mbox{\hyperlink{classVector_ad688a8a0dfbd07ea63d838058a436f79}{empty}}()\ \&\&\ this-\/>squares.back()-\/>getStatus()\ ==\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba662f707d5491e9bce8238a6c0be92190}{Square::Status::hidden}})}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00147}00147\ \ \ \ \ \ \ \ \ this-\/>squares.\mbox{\hyperlink{classVector_adcba035109febbe55cba2a25f8483ba6}{pop\_back}}();}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00149}00149\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this-\/>size;\ ++i)}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00150}00150\ \ \ \ \ \ \ \ \ this-\/>squares[i]-\/>setStatus(\mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}});}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00151}00151\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ this-\/>size;\ i\ <\ this-\/>squares.\mbox{\hyperlink{classVector_a196e9eedc9a88a48f64e69e39405fa72}{size}}();\ ++i)}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00152}00152\ \ \ \ \ \ \ \ \ this-\/>squares[i]-\/>setStatus(\mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{Square::Status::inactive}});}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00153}00153\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>size)}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00154}00154\ \ \ \ \ \ \ \ \ this-\/>squares[this-\/>size\ -\/\ 1]-\/>setTitle(\textcolor{stringliteral}{"{}n"{}});}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00155}00155\ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00157}\mbox{\hyperlink{classArray_af3e9bb41814faaafb3c9738727945b3e}{00157}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArray_af3e9bb41814faaafb3c9738727945b3e}{Array::createArray}}(\textcolor{keywordtype}{int}\ \_size)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00158}00158\ \ \ \ \ this-\/>\mbox{\hyperlink{classArray_a58bdbe3ada4bc219b09370bb63c7d6e8}{resetEvents}}();}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00159}00159\ \ \ \ \ this-\/>size\ =\ \_size;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00160}00160\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square\ :\ this-\/>squares)}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00161}00161\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ square;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00162}00162\ \ \ \ \ this-\/>squares.resize(this-\/>size);}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00163}00163\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this-\/>size;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00164}00164\ \ \ \ \ \ \ \ \ this-\/>squares[i]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classSquareInfo}{SquareInfo}}(}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}},}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::to\_string(Random::randomInt(0,\ 99)),}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Vector2f(}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::Square::originNode.x\ +\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(i)\ *\ constants::Square::offsetX,}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::Square::originNode.y}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ )}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00171}00171\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00172}00172\ \ \ \ \ \ \ \ \ this-\/>squares[i]-\/>setStatus(\mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}});}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00173}00173\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00174}00174\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>size)}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00175}00175\ \ \ \ \ \ \ \ \ this-\/>squares[this-\/>size\ -\/\ 1]-\/>setTitle(\textcolor{stringliteral}{"{}n"{}});}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00176}00176\ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00178}\mbox{\hyperlink{classArray_a56ac8b24c12e3032e824c5ad4abeb2f9}{00178}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArray_af3e9bb41814faaafb3c9738727945b3e}{Array::createArray}}(\textcolor{keyword}{const}\ std::vector<std::string>\&\ values)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00179}00179\ \ \ \ \ this-\/>\mbox{\hyperlink{classArray_a58bdbe3ada4bc219b09370bb63c7d6e8}{resetEvents}}();}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00180}00180\ \ \ \ \ this-\/>size\ =\ (int)values.size();}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00181}00181\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square\ :\ this-\/>squares)}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00182}00182\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ square;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00183}00183\ \ \ \ \ this-\/>squares.resize(this-\/>size);}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00184}00184\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this-\/>size;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00185}00185\ \ \ \ \ \ \ \ \ this-\/>squares[i]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classSquareInfo}{SquareInfo}}(}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}},}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ values[i],}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Vector2f(}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::Square::originNode.x\ +\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(i)\ *\ constants::Square::offsetX,}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::Square::originNode.y}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ )}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00192}00192\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00193}00193\ \ \ \ \ \ \ \ \ this-\/>squares[i]-\/>setStatus(\mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}});}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00194}00194\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00195}00195\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>size)}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00196}00196\ \ \ \ \ \ \ \ \ this-\/>squares[this-\/>size\ -\/\ 1]-\/>setTitle(\textcolor{stringliteral}{"{}n"{}});}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00197}00197\ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00198}00198\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00199}\mbox{\hyperlink{classArray_a42ea29579620b256e2a05f4c78b0ec40}{00199}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classArray_a42ea29579620b256e2a05f4c78b0ec40}{Array::getSquaresSize}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00200}00200\ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{int})this-\/>squares.\mbox{\hyperlink{classVector_a196e9eedc9a88a48f64e69e39405fa72}{size}}();}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00201}00201\ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00202}00202\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00203}\mbox{\hyperlink{classArray_a60a295de4f66eb9cd588975626ac8128}{00203}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArray_a60a295de4f66eb9cd588975626ac8128}{Array::allocateSquare}}(\textcolor{keywordtype}{int}\ \_size,\ \textcolor{keyword}{const}\ std::vector<EventAnimation>\ \&listEvents)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00204}00204\ \ \ \ \ this-\/>squaresTemp.\mbox{\hyperlink{classVector_a3bdceba9f5460098028b4c97f9289041}{resize}}(\_size);}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00205}00205\ \textcolor{comment}{//\ \ \ \ this-\/>squares.resize();}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00206}00206\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00207}00207\ \ \ \ \ \textcolor{keywordflow}{while}\ (this-\/>squares.\mbox{\hyperlink{classVector_a196e9eedc9a88a48f64e69e39405fa72}{size}}()\ <\ \_size)}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00208}00208\ \ \ \ \ \ \ \ \ this-\/>squares.\mbox{\hyperlink{classVector_adde2ebf01e18a6eadb35ed2c12d4d636}{push\_back}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classSquareInfo}{SquareInfo}}(}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}},}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Vector2f(}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::Square::originNode.x\ +\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(this-\/>squares.\mbox{\hyperlink{classVector_a196e9eedc9a88a48f64e69e39405fa72}{size}}())\ *\ constants::Square::offsetX,}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::Square::originNode.y}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ )}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00215}00215\ \ \ \ \ \ \ \ \ ));}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00216}00216\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00217}00217\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \_size;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00218}00218\ \ \ \ \ \ \ \ \ this-\/>squaresTemp[i]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classSquareInfo}{SquareInfo}}(}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}},}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Vector2f(}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::Square::originNode.x\ +\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(i)\ *\ constants::Square::offsetX,}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::Square::originNode.y\ +\ constants::Square::offsetY}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ )}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00225}00225\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00226}00226\ \ \ \ \ \ \ \ \ this-\/>squaresTemp[i]-\/>setValue(this-\/>squares[i]-\/>getValue());}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00227}00227\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00228}00228\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00229}00229\ \ \ \ \ this-\/>size\ =\ std::min(this-\/>size,\ \_size);}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00230}00230\ \ \ \ \ this-\/>currentEvent\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00231}00231\ \ \ \ \ this-\/>events\ =\ listEvents;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00232}00232\ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00233}00233\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00234}\mbox{\hyperlink{classArray_a213fc0dd6b4cad929539e3a0f46f7a20}{00234}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArray_a213fc0dd6b4cad929539e3a0f46f7a20}{Array::addSquare}}(\textcolor{keywordtype}{int}\ position,\ std::string\ value,\ \textcolor{keyword}{const}\ std::vector<EventAnimation>\ \&listEvents)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00235}00235\ \ \ \ \ \textcolor{keywordflow}{if}\ (position\ <\ 0\ ||\ position\ >\ this-\/>size)}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00236}00236\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00237}00237\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00238}00238\ \ \ \ \ ++this-\/>size;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00239}00239\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>typeArray\ ==\ \mbox{\hyperlink{classArray_a081d69309362edb5088bd92e72457713a0fcc90da4811c877ba9f9c12f7d60bc9}{TypeArray::DYNAMIC}}\ \&\&\ this-\/>size\ >\ this-\/>\mbox{\hyperlink{classArray_a42ea29579620b256e2a05f4c78b0ec40}{getSquaresSize}}())\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00240}00240\ \ \ \ \ \ \ \ \ this-\/>squares.\mbox{\hyperlink{classVector_adde2ebf01e18a6eadb35ed2c12d4d636}{push\_back}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classSquareInfo}{SquareInfo}}(}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}},}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00243}00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Vector2f(}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00244}00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::Square::originNode.x\ +\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(this-\/>\mbox{\hyperlink{classArray_a42ea29579620b256e2a05f4c78b0ec40}{getSquaresSize}}())\ *\ constants::Square::offsetX,}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00245}00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::Square::originNode.y}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00246}00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ )}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00247}00247\ \ \ \ \ \ \ \ \ ));}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00248}00248\ \ \ \ \ \ \ \ \ this-\/>squaresTemp.\mbox{\hyperlink{classVector_a3bdceba9f5460098028b4c97f9289041}{resize}}(this-\/>size);}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00249}00249\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this-\/>size;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00250}00250\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>squaresTemp[i]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classSquareInfo}{SquareInfo}}(}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}},}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00252}00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00253}00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Vector2f(}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00254}00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::Square::originNode.x\ +\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(i)\ *\ constants::Square::offsetX,}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00255}00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::Square::originNode.y\ +\ constants::Square::offsetY}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00256}00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ )}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00257}00257\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00258}00258\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>squaresTemp[i]-\/>setValue(this-\/>squares[i]-\/>getValue());}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00259}00259\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00260}00260\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00261}00261\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00262}00262\ \ \ \ \ \textcolor{keywordflow}{if}\ (size\ >\ this-\/>\mbox{\hyperlink{classArray_a42ea29579620b256e2a05f4c78b0ec40}{getSquaresSize}}())}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00263}00263\ \ \ \ \ \ \ \ \ -\/-\/this-\/>size;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00264}00264\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00265}00265\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ this-\/>size\ -\/\ 1;\ i\ >\ position;\ -\/-\/i)}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00266}00266\ \ \ \ \ \ \ \ \ this-\/>squares[i]-\/>setValue(this-\/>squares[i\ -\/\ 1]-\/>getValue());}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00267}00267\ \ \ \ \ this-\/>squares[position]-\/>setValue(std::move(value));}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00268}00268\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ position;\ ++i)}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00269}00269\ \ \ \ \ \ \ \ \ this-\/>squares[i]-\/>setValue(this-\/>squares[i]-\/>getValue());}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00270}00270\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00271}00271\ \ \ \ \ this-\/>currentEvent\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00272}00272\ \ \ \ \ this-\/>events\ =\ listEvents;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00273}00273\ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00274}00274\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00275}\mbox{\hyperlink{classArray_af281eaede82367ce6d96f653987a0d9d}{00275}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArray_af281eaede82367ce6d96f653987a0d9d}{Array::deleteSquare}}(\textcolor{keywordtype}{int}\ position,\ \textcolor{keyword}{const}\ std::vector<EventAnimation>\ \&listEvents)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00276}00276\ \ \ \ \ \textcolor{keywordflow}{if}\ (position\ <\ 0\ ||\ position\ >=\ this-\/>size)}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00277}00277\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00278}00278\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00279}00279\ \ \ \ \ -\/-\/this-\/>size;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00280}00280\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00281}00281\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ position;\ i\ <\ this-\/>size;\ ++i)}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00282}00282\ \ \ \ \ \ \ \ \ this-\/>squares[i]-\/>setValue(this-\/>squares[i\ +\ 1]-\/>getValue());}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00283}00283\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ position;\ ++i)}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00284}00284\ \ \ \ \ \ \ \ \ this-\/>squares[i]-\/>setValue(this-\/>squares[i]-\/>getValue());}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00285}00285\ \ \ \ \ this-\/>squares[this-\/>size]-\/>setValue(this-\/>squares[this-\/>size]-\/>getValue());}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00286}00286\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00287}00287\ \ \ \ \ this-\/>currentEvent\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00288}00288\ \ \ \ \ this-\/>events\ =\ listEvents;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00289}00289\ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00290}00290\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00291}\mbox{\hyperlink{classArray_a1e01a39255e4a4c2e8bc5eacd73f5d09}{00291}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArray_a1e01a39255e4a4c2e8bc5eacd73f5d09}{Array::updateSquare}}(\textcolor{keywordtype}{int}\ position,\ std::string\ value,\ \textcolor{keyword}{const}\ std::vector<EventAnimation>\ \&listEvents)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00292}00292\ \ \ \ \ \textcolor{keywordflow}{if}\ (position\ <\ 0\ ||\ position\ >=\ this-\/>size)}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00293}00293\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00294}00294\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00295}00295\ \ \ \ \ this-\/>squares[position]-\/>setValue(std::move(value));}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00296}00296\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00297}00297\ \ \ \ \ this-\/>currentEvent\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00298}00298\ \ \ \ \ this-\/>events\ =\ listEvents;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00299}00299\ \}}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00300}00300\ }
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00301}\mbox{\hyperlink{classArray_acce4352a141aacea237885502c683f8e}{00301}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArray_acce4352a141aacea237885502c683f8e}{Array::searchSquare}}(\textcolor{keyword}{const}\ std::vector<EventAnimation>\ \&listEvents)\ \{}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00302}00302\ \ \ \ \ this-\/>currentEvent\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00303}00303\ \ \ \ \ this-\/>events\ =\ listEvents;}
+\DoxyCodeLine{\Hypertarget{Array_8cpp_source_l00304}00304\ \}}
+
+\end{DoxyCode}

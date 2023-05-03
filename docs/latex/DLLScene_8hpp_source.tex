@@ -1,0 +1,40 @@
+\hypertarget{DLLScene_8hpp_source}{}\doxysection{DLLScene.\+hpp}
+\label{DLLScene_8hpp_source}\index{include/libScene/DLLScene.hpp@{include/libScene/DLLScene.hpp}}
+\mbox{\hyperlink{DLLScene_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ dirii\ on\ 27/03/2023.}}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#ifndef\ VISUALGO\_CS162\_DLLSCENE\_HPP}}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#define\ VISUALGO\_CS162\_DLLSCENE\_HPP}}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{BaseScene_8hpp}{BaseScene.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{MenuLinkedList_8hpp}{MenuLinkedList.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{LinkedList_8hpp}{core/LinkedList.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00012}\mbox{\hyperlink{classDLLScene}{00012}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classDLLScene}{DLLScene}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBaseScene}{BaseScene}}\ \{}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00013}00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00014}00014\ \ \ \ \ \mbox{\hyperlink{classMenuLinkedList}{MenuLinkedList}}*\ menu;}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00015}00015\ \ \ \ \ \mbox{\hyperlink{classLinkedList}{LinkedList}}*\ linkedList;}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordtype}{void}\ init();}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00019}00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classDLLScene}{DLLScene}}(sf::RenderWindow*\ \mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}});}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDLLScene_a1938ea5e6844cadea25bd84a18c23674}{reset}}();}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDLLScene_a357dccc756c11748c396afb5e60bd02e}{pollEvent}}(sf::Event\ event,\ sf::Vector2f\ mousePosView)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDLLScene_a98d56fa0ba81345c09534a8f06441212}{update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDLLScene_afc83aa02f5fbed06aed6b1125b6c6be6}{render}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00028}00028\ \ \ \ \ std::vector<EventAnimation>\ \mbox{\hyperlink{classDLLScene_a79db5b96eeacb0cbff158fde6cad35c4}{addModeEvents}}(\textcolor{keywordtype}{int}\ chosenNode);}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00029}00029\ \ \ \ \ std::vector<EventAnimation>\ \mbox{\hyperlink{classDLLScene_ab90e482bff879e27c562a9f2c2bf0456}{deleteModeEvents}}(\textcolor{keywordtype}{int}\ chosenNode);}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00030}00030\ \ \ \ \ std::vector<EventAnimation>\ \mbox{\hyperlink{classDLLScene_ac1bd5b0c22e4ff3a5579c75151cc593b}{updateModeEvents}}(\textcolor{keywordtype}{int}\ chosenNode);}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00031}00031\ \ \ \ \ std::vector<EventAnimation>\ \mbox{\hyperlink{classDLLScene_a15e99f4ac3be8af782ece43cb65afdb9}{searchModeEvents}}(\textcolor{keywordtype}{int}\ chosenNode);}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00032}00032\ \};}
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{DLLScene_8hpp_source_l00034}00034\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//VISUALGO\_CS162\_DLLSCENE\_HPP}}
+
+\end{DoxyCode}

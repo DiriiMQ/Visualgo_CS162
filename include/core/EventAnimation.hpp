@@ -7,7 +7,6 @@
 
 #include "draw/NodeInfo.hpp"
 #include "draw/SquareInfo.hpp"
-#include "core/Vector.h"
 
 struct EventSquare{
     Square::Status status = Square::Status::inactive;

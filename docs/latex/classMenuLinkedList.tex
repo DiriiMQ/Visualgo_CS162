@@ -1,0 +1,1138 @@
+\hypertarget{classMenuLinkedList}{}\doxysection{Menu\+Linked\+List Class Reference}
+\label{classMenuLinkedList}\index{MenuLinkedList@{MenuLinkedList}}
+
+
+{\ttfamily \#include $<$Menu\+Linked\+List.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_a9afc3c570f50d27a91a4b8cff7b3030a}{constants\+::\+Menu\+Linked\+List\+::\+Create\+Mode\+::\+Button}} \mbox{\hyperlink{classMenuLinkedList_ab91ea6912f99443559321a96fcafeb0c}{get\+Active\+Create\+Mode}} ()
+\item 
+\mbox{\hyperlink{classMenuLinkedList_abfad01ae4324bdfd8ec1fdbcd1065dae}{Menu\+Linked\+List}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classMenuLinkedList_a9e0766010ef15a6e3ebb2821d4b079d6}{window}})
+\item 
+\mbox{\hyperlink{classMenuLinkedList_aad865c2f2f0e97c61f0bd672f44d1c7c}{$\sim$\+Menu\+Linked\+List}} ()=default
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_a635d5505a414c101236ee205ec03d0d2}{reset\+Active\+Option\+Menu}} ()
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_a22f4543480dcd86c689aa7ac13f7f579}{poll\+Events}} (sf\+::\+Event event, sf\+::\+Vector2f mouse\+Pos\+View)
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_a906bcfb168c739a12a5f16cccbfddcdc}{update}} ()
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_a230d8da87104265bf9f3becd647cfeae}{render}} ()
+\item 
+\mbox{\hyperlink{classButton}{Button}} $\ast$ \mbox{\hyperlink{classMenuLinkedList_a01a3f1b04909c3af7562942dbe5e8e82}{get\+Button}} (int index)
+\item 
+\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36}{constants\+::\+Menu\+Linked\+List\+::\+Button}} \mbox{\hyperlink{classMenuLinkedList_a9c6b4934fece08fb47f2bcf836324385}{get\+Active\+Option\+Menu}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classMenuLinkedList_a84230fd7b2283fe363b4e12e0f2c31ef}{create\+Mode\+Value}} \mbox{[}\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_adf8f0dc5eb65062f3677f54663dedb35}{constants\+::\+Menu\+Linked\+List\+::\+Create\+Mode\+::\+BUTTON\+\_\+\+COUNT}}\mbox{]}
+\item 
+std\+::string \mbox{\hyperlink{classMenuLinkedList_a84294b9f7c0ccbf6641cb68e64f0b3ab}{add\+Mode\+Value}} \mbox{[}\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1AddMode_a7808eab2f7478cce180334489cf5377a}{constants\+::\+Menu\+Linked\+List\+::\+Add\+Mode\+::\+TEXTBOX\+\_\+\+COUNT}}\mbox{]}
+\item 
+std\+::string \mbox{\hyperlink{classMenuLinkedList_a78865c1258176106e1788d55194674de}{delete\+Mode\+Value}}
+\item 
+std\+::string \mbox{\hyperlink{classMenuLinkedList_a70cf5488e3da65b735111c62d659d397}{update\+Mode\+Value}} \mbox{[}\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1UpdateMode_a139363885cd29bc480ccf573df090428}{constants\+::\+Menu\+Linked\+List\+::\+Update\+Mode\+::\+TEXTBOX\+\_\+\+COUNT}}\mbox{]}
+\item 
+std\+::string \mbox{\hyperlink{classMenuLinkedList_a31f8ba66adaa9df84f956c6379bdff45}{search\+Mode\+Value}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_ae3ece328b399b34eca1dd5822917b1cf}{init\+Create\+Mode}} ()
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_a6781082d0f687387bebc50a2604f19ad}{poll\+Event\+Create\+Mode}} (sf\+::\+Event event, sf\+::\+Vector2f mouse\+Pos\+View)
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_a0ece0f5e85a6ec2d94f7b73f78299da3}{update\+Create\+Mode}} ()
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_ae76b801c75850788f2ce7ab2f8d4cdb8}{render\+Create\+Mode}} ()
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_a6924933fff8b8cb29b19c586109d9743}{init\+Add\+Mode}} ()
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_ab12b5068a1233d54f21c760c2e012660}{poll\+Event\+Add\+Mode}} (sf\+::\+Event event, sf\+::\+Vector2f mouse\+Pos\+View)
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_a33d0d6393ae6c58e672e01a732b6112a}{update\+Add\+Mode}} ()
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_ac8dc67e1996d70aa940f74fd6b4c3375}{render\+Add\+Mode}} ()
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_a333587d542da24e0f11e5800a9bc0c24}{init\+Delete\+Mode}} ()
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_a851ae1c23e35faac467781fab5800164}{poll\+Event\+Delete\+Mode}} (sf\+::\+Event event, sf\+::\+Vector2f mouse\+Pos\+View)
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_a8d5bf6af03701264b27a4ee0d23c93e6}{update\+Delete\+Mode}} ()
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_ada40475f7d0fe58be534bd46354585d7}{render\+Delete\+Mode}} ()
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_a350e1e08bbe96dd2c4dfc0e0f77f7d69}{init\+Update\+Mode}} ()
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_a823661b0124f25838f8280fa32a14213}{poll\+Event\+Update\+Mode}} (sf\+::\+Event event, sf\+::\+Vector2f mouse\+Pos\+View)
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_a6bf27ad6fa78002a5958d9c4a350848d}{update\+Update\+Mode}} ()
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_af3236748a2b5bb5ed7bca4762e20856d}{render\+Update\+Mode}} ()
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_a38309cb6940b7bc01554efda74a972a9}{init\+Search\+Mode}} ()
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_af968d372a927f7fde50b138b44904d56}{poll\+Event\+Search\+Mode}} (sf\+::\+Event event, sf\+::\+Vector2f mouse\+Pos\+View)
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_a16afeaa0fc2e7730c73630183d54a774}{update\+Search\+Mode}} ()
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_a718b76beb9f68da061c094a4b129c0b1}{render\+Search\+Mode}} ()
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_ae4a1af316c50b6eaa07dde36d67783c0}{init}} ()
+\item 
+void \mbox{\hyperlink{classMenuLinkedList_adbc8e131b03617dc7cd9ced78a54051e}{init\+Buttons}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Render\+Window $\ast$ \mbox{\hyperlink{classMenuLinkedList_a9e0766010ef15a6e3ebb2821d4b079d6}{window}}
+\item 
+\mbox{\hyperlink{classButton}{Button}} $\ast$ \mbox{\hyperlink{classMenuLinkedList_a7d3bea699379d2f3f5508c6f1460d9ff}{buttons}} \mbox{[}\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_aaa7c6c69ae54ea94a12394d4de66ccf6}{constants\+::\+Menu\+Linked\+List\+::\+BUTTON\+\_\+\+COUNT}}\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36}{constants\+::\+Menu\+Linked\+List\+::\+Button}} \mbox{\hyperlink{classMenuLinkedList_ad37ff408dc33c3d16b547add8c078b0a}{active\+Option\+Menu}}
+\item 
+\mbox{\hyperlink{classButton}{Button}} $\ast$ \mbox{\hyperlink{classMenuLinkedList_ad9dd1c6f41d26dd7739a143edb524aad}{sub\+Create\+Mode}} \mbox{[}\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_adf8f0dc5eb65062f3677f54663dedb35}{constants\+::\+Menu\+Linked\+List\+::\+Create\+Mode\+::\+BUTTON\+\_\+\+COUNT}}\mbox{]}
+\item 
+\mbox{\hyperlink{classCustomTextbox}{Custom\+Textbox}} $\ast$ \mbox{\hyperlink{classMenuLinkedList_a216737192f2ab88bf316c70322bd293e}{create\+Textbox}} \mbox{[}\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_adf8f0dc5eb65062f3677f54663dedb35}{constants\+::\+Menu\+Linked\+List\+::\+Create\+Mode\+::\+BUTTON\+\_\+\+COUNT}}\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_a9afc3c570f50d27a91a4b8cff7b3030a}{constants\+::\+Menu\+Linked\+List\+::\+Create\+Mode\+::\+Button}} \mbox{\hyperlink{classMenuLinkedList_a8bbc9dd64545d9df890c678f5b20d9aa}{active\+Create\+Mode}}
+\item 
+bool \mbox{\hyperlink{classMenuLinkedList_a9e194c17c64186e63e18078d307caa04}{is\+Open\+File\+Dialog}} = false
+\item 
+\mbox{\hyperlink{classCustomTextbox}{Custom\+Textbox}} $\ast$ \mbox{\hyperlink{classMenuLinkedList_a5b208e7c75d58d948c114954951146d0}{add\+Textbox}} \mbox{[}\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1AddMode_a7808eab2f7478cce180334489cf5377a}{constants\+::\+Menu\+Linked\+List\+::\+Add\+Mode\+::\+TEXTBOX\+\_\+\+COUNT}}\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1AddMode_a711481dc0316047eddfc1ec976a04e2d}{constants\+::\+Menu\+Linked\+List\+::\+Add\+Mode\+::\+Textbox}} \mbox{\hyperlink{classMenuLinkedList_aa69479f3b871f7525e4074f4985a12ad}{active\+Add\+Mode}}
+\item 
+\mbox{\hyperlink{classCustomTextbox}{Custom\+Textbox}} $\ast$ \mbox{\hyperlink{classMenuLinkedList_a4a2d848fd95c9c6ae35a42c9bee2102a}{delete\+Textbox}}
+\item 
+\mbox{\hyperlink{classCustomTextbox}{Custom\+Textbox}} $\ast$ \mbox{\hyperlink{classMenuLinkedList_a5d437667b8e4bed5e71bdc0fd30fb4d8}{update\+Textbox}} \mbox{[}\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1UpdateMode_a139363885cd29bc480ccf573df090428}{constants\+::\+Menu\+Linked\+List\+::\+Update\+Mode\+::\+TEXTBOX\+\_\+\+COUNT}}\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1UpdateMode_aa72e2609b8c3896d6cfdff77fdeff075}{constants\+::\+Menu\+Linked\+List\+::\+Update\+Mode\+::\+Textbox}} \mbox{\hyperlink{classMenuLinkedList_afa1dc66b249691a370255d125249f39d}{active\+Update\+Mode}}
+\item 
+\mbox{\hyperlink{classCustomTextbox}{Custom\+Textbox}} $\ast$ \mbox{\hyperlink{classMenuLinkedList_ae9ea91e53421148aa4c79ff86a3b8a18}{search\+Textbox}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8hpp_source_l00016}{16}} of file \mbox{\hyperlink{MenuLinkedList_8hpp_source}{Menu\+Linked\+List.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMenuLinkedList_abfad01ae4324bdfd8ec1fdbcd1065dae}\label{classMenuLinkedList_abfad01ae4324bdfd8ec1fdbcd1065dae}} 
+\index{MenuLinkedList@{MenuLinkedList}!MenuLinkedList@{MenuLinkedList}}
+\index{MenuLinkedList@{MenuLinkedList}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{MenuLinkedList()}{MenuLinkedList()}}
+{\footnotesize\ttfamily Menu\+Linked\+List\+::\+Menu\+Linked\+List (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a9e0766010ef15a6e3ebb2821d4b079d6}{window}}\ =\ \mbox{\hyperlink{classMenuLinkedList_a9e0766010ef15a6e3ebb2821d4b079d6}{window}};}
+\DoxyCodeLine{00041\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_ae4a1af316c50b6eaa07dde36d67783c0}{init}}();}
+\DoxyCodeLine{00042\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_aad865c2f2f0e97c61f0bd672f44d1c7c}\label{classMenuLinkedList_aad865c2f2f0e97c61f0bd672f44d1c7c}} 
+\index{MenuLinkedList@{MenuLinkedList}!````~MenuLinkedList@{$\sim$MenuLinkedList}}
+\index{````~MenuLinkedList@{$\sim$MenuLinkedList}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{$\sim$MenuLinkedList()}{~MenuLinkedList()}}
+{\footnotesize\ttfamily Menu\+Linked\+List\+::$\sim$\+Menu\+Linked\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMenuLinkedList_ab91ea6912f99443559321a96fcafeb0c}\label{classMenuLinkedList_ab91ea6912f99443559321a96fcafeb0c}} 
+\index{MenuLinkedList@{MenuLinkedList}!getActiveCreateMode@{getActiveCreateMode}}
+\index{getActiveCreateMode@{getActiveCreateMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{getActiveCreateMode()}{getActiveCreateMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_a9afc3c570f50d27a91a4b8cff7b3030a}{constants\+::\+Menu\+Linked\+List\+::\+Create\+Mode\+::\+Button}} Menu\+Linked\+List\+::get\+Active\+Create\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00242}{242}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classMenuLinkedList_a8bbc9dd64545d9df890c678f5b20d9aa}{activeCreateMode}};}
+\DoxyCodeLine{00244\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_a9c6b4934fece08fb47f2bcf836324385}\label{classMenuLinkedList_a9c6b4934fece08fb47f2bcf836324385}} 
+\index{MenuLinkedList@{MenuLinkedList}!getActiveOptionMenu@{getActiveOptionMenu}}
+\index{getActiveOptionMenu@{getActiveOptionMenu}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{getActiveOptionMenu()}{getActiveOptionMenu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36}{constants\+::\+Menu\+Linked\+List\+::\+Button}} Menu\+Linked\+List\+::get\+Active\+Option\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00246}{246}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classMenuLinkedList_ad37ff408dc33c3d16b547add8c078b0a}{activeOptionMenu}};}
+\DoxyCodeLine{00248\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_a01a3f1b04909c3af7562942dbe5e8e82}\label{classMenuLinkedList_a01a3f1b04909c3af7562942dbe5e8e82}} 
+\index{MenuLinkedList@{MenuLinkedList}!getButton@{getButton}}
+\index{getButton@{getButton}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{getButton()}{getButton()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classButton}{Button}} $\ast$ Menu\+Linked\+List\+::get\+Button (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00132}{132}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classMenuLinkedList_a7d3bea699379d2f3f5508c6f1460d9ff}{buttons}}[index];}
+\DoxyCodeLine{00134\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_ae4a1af316c50b6eaa07dde36d67783c0}\label{classMenuLinkedList_ae4a1af316c50b6eaa07dde36d67783c0}} 
+\index{MenuLinkedList@{MenuLinkedList}!init@{init}}
+\index{init@{init}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00008\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_adbc8e131b03617dc7cd9ced78a54051e}{initButtons}}();}
+\DoxyCodeLine{00009\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_ae3ece328b399b34eca1dd5822917b1cf}{initCreateMode}}();}
+\DoxyCodeLine{00010\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a6924933fff8b8cb29b19c586109d9743}{initAddMode}}();}
+\DoxyCodeLine{00011\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a333587d542da24e0f11e5800a9bc0c24}{initDeleteMode}}();}
+\DoxyCodeLine{00012\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a350e1e08bbe96dd2c4dfc0e0f77f7d69}{initUpdateMode}}();}
+\DoxyCodeLine{00013\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a38309cb6940b7bc01554efda74a972a9}{initSearchMode}}();}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_ad37ff408dc33c3d16b547add8c078b0a}{activeOptionMenu}}\ =\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36ab67ad4f9425f602db92515440201218b}{constants::MenuLinkedList::Button::NONE}};}
+\DoxyCodeLine{00016\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_a6924933fff8b8cb29b19c586109d9743}\label{classMenuLinkedList_a6924933fff8b8cb29b19c586109d9743}} 
+\index{MenuLinkedList@{MenuLinkedList}!initAddMode@{initAddMode}}
+\index{initAddMode@{initAddMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{initAddMode()}{initAddMode()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::init\+Add\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00250}{250}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00251\ \ \ \ \ \textcolor{comment}{//init\ stuff\ for\ add\ mode}}
+\DoxyCodeLine{00252\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_aa69479f3b871f7525e4074f4985a12ad}{activeAddMode}}\ =\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1AddMode_a711481dc0316047eddfc1ec976a04e2da28502edac912a4757b1d1620cbdb002b}{constants::MenuLinkedList::AddMode::Textbox::NONE}};}
+\DoxyCodeLine{00253\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1AddMode_a7808eab2f7478cce180334489cf5377a}{constants::MenuLinkedList::AddMode::TEXTBOX\_COUNT}};\ i++)\ \{}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ sf::Vector2f\ position\ =\ sf::Vector2f(}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a7d3bea699379d2f3f5508c6f1460d9ff}{buttons}}[1]-\/>getPosition().x\ +\ (constants::optionButtonSize.x\ +\ constants::distance2ModeButtons),}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a7d3bea699379d2f3f5508c6f1460d9ff}{buttons}}[1]-\/>getPosition().y}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a5b208e7c75d58d948c114954951146d0}{addTextbox}}[i]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classCustomTextbox}{CustomTextbox}}\{}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a9e0766010ef15a6e3ebb2821d4b079d6}{window}},}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ position,}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 20,}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1AddMode_adca1fd14f7a13744e17110204b61fb08}{constants::MenuLinkedList::AddMode::TEXTBOX\_NAMES}}[i],}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1AddMode_a1f254bb1efb7fd9e79f224c34c6f22cc}{constants::MenuLinkedList::AddMode::TEXTBOX\_LENGTH}}[i],}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a84294b9f7c0ccbf6641cb68e64f0b3ab}{addModeValue}}[i]\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00266\ \ \ \ \ \}}
+\DoxyCodeLine{00267\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_adbc8e131b03617dc7cd9ced78a54051e}\label{classMenuLinkedList_adbc8e131b03617dc7cd9ced78a54051e}} 
+\index{MenuLinkedList@{MenuLinkedList}!initButtons@{initButtons}}
+\index{initButtons@{initButtons}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{initButtons()}{initButtons()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::init\+Buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_aaa7c6c69ae54ea94a12394d4de66ccf6}{constants::MenuLinkedList::BUTTON\_COUNT}};\ i++)\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ sf::Vector2f\ position\ =\ sf::Vector2f(}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::sideButtonSize.x\ +\ constants::distance2ModeButtons,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::submenuButtonPos.y\ +\ (constants::optionButtonSize.y\ +\ constants::distance2ModeButtons\ /\ 10)\ *\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(i)}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a7d3bea699379d2f3f5508c6f1460d9ff}{buttons}}[i]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classButton}{Button}}(}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a9e0766010ef15a6e3ebb2821d4b079d6}{window}},}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ position,}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::optionButtonSize,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a8928973040395e663748502444101f3b}{constants::MenuLinkedList::BUTTON\_NAMES}}[i],}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a8928973040395e663748502444101f3b}{constants::MenuLinkedList::BUTTON\_NAMES}}[i],}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a6ee2ec1e84076b5ff5f8aa81c7c19c86}{constants::MenuLinkedList::BUTTON\_NAME\_SIZE}},}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Color::Black,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::normalGray,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_a78ac9ffc7fb0604d34066a637946e88a}{constants::hoverGray}},}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_a65408fa6932d8c031131d5efa7e40776}{constants::clickGray}}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_ae3ece328b399b34eca1dd5822917b1cf}\label{classMenuLinkedList_ae3ece328b399b34eca1dd5822917b1cf}} 
+\index{MenuLinkedList@{MenuLinkedList}!initCreateMode@{initCreateMode}}
+\index{initCreateMode@{initCreateMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{initCreateMode()}{initCreateMode()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::init\+Create\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00141}{141}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{comment}{//\ init\ stuff\ for\ create\ mode}}
+\DoxyCodeLine{00143\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a8bbc9dd64545d9df890c678f5b20d9aa}{activeCreateMode}}\ =\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_a9afc3c570f50d27a91a4b8cff7b3030aad3941778b8c694754b75a1ee7128deb6}{constants::MenuLinkedList::CreateMode::Button::NONE}};}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_adf8f0dc5eb65062f3677f54663dedb35}{constants::MenuLinkedList::CreateMode::BUTTON\_COUNT}};\ i++)\ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ sf::Vector2f\ position\ =\ sf::Vector2f(}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a7d3bea699379d2f3f5508c6f1460d9ff}{buttons}}[0]-\/>getPosition().x\ +\ (constants::optionButtonSize.x\ +\ constants::distance2ModeButtons)\ *\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(i\ +\ 1),}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a7d3bea699379d2f3f5508c6f1460d9ff}{buttons}}[0]-\/>getPosition().y}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_ad9dd1c6f41d26dd7739a143edb524aad}{subCreateMode}}[i]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classButton}{Button}}(}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a9e0766010ef15a6e3ebb2821d4b079d6}{window}},}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ position,}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::optionButtonSize,}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_a27a128229cb866727b48f980c218377c}{constants::MenuLinkedList::CreateMode::BUTTON\_NAMES}}[i],}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_a27a128229cb866727b48f980c218377c}{constants::MenuLinkedList::CreateMode::BUTTON\_NAMES}}[i],}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_ac6cf68b8c948eb576b91bf09fe973e25}{constants::MenuLinkedList::CreateMode::NAME\_SIZE}},}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Color::Black,}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::normalGray,}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_a78ac9ffc7fb0604d34066a637946e88a}{constants::hoverGray}},}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_a65408fa6932d8c031131d5efa7e40776}{constants::clickGray}}}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ <\ 2)}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a216737192f2ab88bf316c70322bd293e}{createTextbox}}[i]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classCustomTextbox}{CustomTextbox}}\{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a9e0766010ef15a6e3ebb2821d4b079d6}{window}},}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Vector2f(}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_ad9dd1c6f41d26dd7739a143edb524aad}{subCreateMode}}[0]-\/>getPosition().x,}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_ad9dd1c6f41d26dd7739a143edb524aad}{subCreateMode}}[0]-\/>getPosition().y\ +\ constants::optionButtonSize.y\ +\ constants::distance2ModeButtons}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ),}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 20,}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_a0da3c6deb40beaa393e033a5ec9393fb}{constants::MenuLinkedList::CreateMode::TEXTBOX\_NAMES}}[i],}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_a55770f742845b0b7e68b24012165dbba}{constants::MenuLinkedList::CreateMode::TEXTBOX\_LENGTH}}[i],}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a84230fd7b2283fe363b4e12e0f2c31ef}{createModeValue}}[i]\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00173\ \ \ \ \ \}}
+\DoxyCodeLine{00174\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a9e194c17c64186e63e18078d307caa04}{isOpenFileDialog}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00175\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_a333587d542da24e0f11e5800a9bc0c24}\label{classMenuLinkedList_a333587d542da24e0f11e5800a9bc0c24}} 
+\index{MenuLinkedList@{MenuLinkedList}!initDeleteMode@{initDeleteMode}}
+\index{initDeleteMode@{initDeleteMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{initDeleteMode()}{initDeleteMode()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::init\+Delete\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00297}{297}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00298\ \ \ \ \ sf::Vector2f\ position\ =\ sf::Vector2f(}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a7d3bea699379d2f3f5508c6f1460d9ff}{buttons}}[2]-\/>getPosition().x\ +\ (constants::optionButtonSize.x\ +\ constants::distance2ModeButtons),}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a7d3bea699379d2f3f5508c6f1460d9ff}{buttons}}[2]-\/>getPosition().y}
+\DoxyCodeLine{00301\ \ \ \ \ );}
+\DoxyCodeLine{00302\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a4a2d848fd95c9c6ae35a42c9bee2102a}{deleteTextbox}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classCustomTextbox}{CustomTextbox}}\{}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a9e0766010ef15a6e3ebb2821d4b079d6}{window}},}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ position,}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ 20,}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1DeleteMode_a6a08751e2363fc2befabeeec3ddff3f8}{constants::MenuLinkedList::DeleteMode::TEXTBOX\_NAME}},}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1DeleteMode_a7bf9a81ef96d72549b275d7a14688df5}{constants::MenuLinkedList::DeleteMode::TEXTBOX\_LENGTH}},}
+\DoxyCodeLine{00308\ \ \ \ \ \};}
+\DoxyCodeLine{00309\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a78865c1258176106e1788d55194674de}{deleteModeValue}}\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00310\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_a38309cb6940b7bc01554efda74a972a9}\label{classMenuLinkedList_a38309cb6940b7bc01554efda74a972a9}} 
+\index{MenuLinkedList@{MenuLinkedList}!initSearchMode@{initSearchMode}}
+\index{initSearchMode@{initSearchMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{initSearchMode()}{initSearchMode()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::init\+Search\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00380}{380}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00381\ \ \ \ \ sf::Vector2f\ position\ =\ sf::Vector2f(}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a7d3bea699379d2f3f5508c6f1460d9ff}{buttons}}[4]-\/>getPosition().x\ +\ (constants::optionButtonSize.x\ +\ constants::distance2ModeButtons),}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a7d3bea699379d2f3f5508c6f1460d9ff}{buttons}}[4]-\/>getPosition().y}
+\DoxyCodeLine{00384\ \ \ \ \ );}
+\DoxyCodeLine{00385\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_ae9ea91e53421148aa4c79ff86a3b8a18}{searchTextbox}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classCustomTextbox}{CustomTextbox}}\{}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a9e0766010ef15a6e3ebb2821d4b079d6}{window}},}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ position,}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \ \ \ 20,}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1SearchMode_acc0ec3561aa195261943d0b115d6cf62}{constants::MenuLinkedList::SearchMode::TEXTBOX\_NAME}},}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1SearchMode_af5793caeb38f0d14c98524f20eace078}{constants::MenuLinkedList::SearchMode::TEXTBOX\_LENGTH}},}
+\DoxyCodeLine{00391\ \ \ \ \ \};}
+\DoxyCodeLine{00392\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a31f8ba66adaa9df84f956c6379bdff45}{searchModeValue}}\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00393\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_a350e1e08bbe96dd2c4dfc0e0f77f7d69}\label{classMenuLinkedList_a350e1e08bbe96dd2c4dfc0e0f77f7d69}} 
+\index{MenuLinkedList@{MenuLinkedList}!initUpdateMode@{initUpdateMode}}
+\index{initUpdateMode@{initUpdateMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{initUpdateMode()}{initUpdateMode()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::init\+Update\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00333}{333}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00334\ \ \ \ \ \textcolor{comment}{//\ init\ stuff\ for\ update\ mode}}
+\DoxyCodeLine{00335\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_afa1dc66b249691a370255d125249f39d}{activeUpdateMode}}\ =\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1UpdateMode_aa72e2609b8c3896d6cfdff77fdeff075a86ea43a56cbc798017af03f0967200b4}{constants::MenuLinkedList::UpdateMode::Textbox::NONE}};}
+\DoxyCodeLine{00336\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1UpdateMode_a139363885cd29bc480ccf573df090428}{constants::MenuLinkedList::UpdateMode::TEXTBOX\_COUNT}};\ i++)\ \{}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ sf::Vector2f\ position\ =\ sf::Vector2f(}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a7d3bea699379d2f3f5508c6f1460d9ff}{buttons}}[3]-\/>getPosition().x\ +\ (constants::optionButtonSize.x\ +\ constants::distance2ModeButtons),}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a7d3bea699379d2f3f5508c6f1460d9ff}{buttons}}[3]-\/>getPosition().y}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a5d437667b8e4bed5e71bdc0fd30fb4d8}{updateTextbox}}[i]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classCustomTextbox}{CustomTextbox}}\{}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a9e0766010ef15a6e3ebb2821d4b079d6}{window}},}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ position,}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 20,}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1UpdateMode_add9686c0e59f630f88b47125bc628a3d}{constants::MenuLinkedList::UpdateMode::TEXTBOX\_NAMES}}[i],}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1UpdateMode_a2f8c88bcc6f9d931c74ffdf4adab59a3}{constants::MenuLinkedList::UpdateMode::TEXTBOX\_LENGTH}}[i],}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a70cf5488e3da65b735111c62d659d397}{updateModeValue}}[i]\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00349\ \ \ \ \ \}}
+\DoxyCodeLine{00350\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_ab12b5068a1233d54f21c760c2e012660}\label{classMenuLinkedList_ab12b5068a1233d54f21c760c2e012660}} 
+\index{MenuLinkedList@{MenuLinkedList}!pollEventAddMode@{pollEventAddMode}}
+\index{pollEventAddMode@{pollEventAddMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{pollEventAddMode()}{pollEventAddMode()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::poll\+Event\+Add\+Mode (\begin{DoxyParamCaption}\item[{sf\+::\+Event}]{event,  }\item[{sf\+::\+Vector2f}]{mouse\+Pos\+View }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00268}{268}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00269\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classMenuLinkedList_aa69479f3b871f7525e4074f4985a12ad}{activeAddMode}}\ ==\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1AddMode_a711481dc0316047eddfc1ec976a04e2da28502edac912a4757b1d1620cbdb002b}{constants::MenuLinkedList::AddMode::NONE}})}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_aa69479f3b871f7525e4074f4985a12ad}{activeAddMode}}\ =\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1AddMode_a711481dc0316047eddfc1ec976a04e2dab794d85ab8b154a10784968a129fdbe2}{constants::MenuLinkedList::AddMode::POSITION\_TEXTBOX}};}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00272\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a5b208e7c75d58d948c114954951146d0}{addTextbox}}[this-\/>\mbox{\hyperlink{classMenuLinkedList_aa69479f3b871f7525e4074f4985a12ad}{activeAddMode}}]-\/>\mbox{\hyperlink{classCustomTextbox_aec18b36767a71c5a9fb7eae48ef4d9b5}{pollEvent}}(event,\ mousePosView);}
+\DoxyCodeLine{00273\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_a6781082d0f687387bebc50a2604f19ad}\label{classMenuLinkedList_a6781082d0f687387bebc50a2604f19ad}} 
+\index{MenuLinkedList@{MenuLinkedList}!pollEventCreateMode@{pollEventCreateMode}}
+\index{pollEventCreateMode@{pollEventCreateMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{pollEventCreateMode()}{pollEventCreateMode()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::poll\+Event\+Create\+Mode (\begin{DoxyParamCaption}\item[{sf\+::\+Event}]{event,  }\item[{sf\+::\+Vector2f}]{mouse\+Pos\+View }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00176}{176}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classMenuLinkedList_a8bbc9dd64545d9df890c678f5b20d9aa}{activeCreateMode}}\ !=\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_a9afc3c570f50d27a91a4b8cff7b3030aad3941778b8c694754b75a1ee7128deb6}{constants::MenuLinkedList::CreateMode::Button::NONE}})}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_ad9dd1c6f41d26dd7739a143edb524aad}{subCreateMode}}[this-\/>\mbox{\hyperlink{classMenuLinkedList_a8bbc9dd64545d9df890c678f5b20d9aa}{activeCreateMode}}]-\/>\mbox{\hyperlink{classButton_a03ef92527b48359feff925347c478dab}{setColor}}(constants::normalGray);}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_adf8f0dc5eb65062f3677f54663dedb35}{constants::MenuLinkedList::CreateMode::BUTTON\_COUNT}};\ i++)\ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classMenuLinkedList_ad9dd1c6f41d26dd7739a143edb524aad}{subCreateMode}}[i]-\/>pollEvent(mousePosView))\ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a8bbc9dd64545d9df890c678f5b20d9aa}{activeCreateMode}}\ =\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_a9afc3c570f50d27a91a4b8cff7b3030a}{constants::MenuLinkedList::CreateMode::Button}}\textcolor{keyword}{>}(i);}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_a9afc3c570f50d27a91a4b8cff7b3030aa95dcb5e6e64029fc24a5bda4f3c3849e}{constants::MenuLinkedList::CreateMode::Button::FILE\_BUTTON}})}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a9e194c17c64186e63e18078d307caa04}{isOpenFileDialog}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Button\ "{}}\ <<\ i\ <<\ \textcolor{stringliteral}{"{}\ is\ clicked"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00187\ \ \ \ \ \}}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \textcolor{comment}{//\ \ \ \ this-\/>testTextbox-\/>pollEvent(event);}}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classMenuLinkedList_a8bbc9dd64545d9df890c678f5b20d9aa}{activeCreateMode}}\ <\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_a9b628da6a385b8b0fffdb0ecc9cc4c7b}{constants::MenuLinkedList::CreateMode::TEXTBOX\_COUNT}})}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a216737192f2ab88bf316c70322bd293e}{createTextbox}}[this-\/>\mbox{\hyperlink{classMenuLinkedList_a8bbc9dd64545d9df890c678f5b20d9aa}{activeCreateMode}}]-\/>\mbox{\hyperlink{classCustomTextbox_aec18b36767a71c5a9fb7eae48ef4d9b5}{pollEvent}}(event,\ mousePosView);}
+\DoxyCodeLine{00192\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_a851ae1c23e35faac467781fab5800164}\label{classMenuLinkedList_a851ae1c23e35faac467781fab5800164}} 
+\index{MenuLinkedList@{MenuLinkedList}!pollEventDeleteMode@{pollEventDeleteMode}}
+\index{pollEventDeleteMode@{pollEventDeleteMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{pollEventDeleteMode()}{pollEventDeleteMode()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::poll\+Event\+Delete\+Mode (\begin{DoxyParamCaption}\item[{sf\+::\+Event}]{event,  }\item[{sf\+::\+Vector2f}]{mouse\+Pos\+View }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00311}{311}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00312\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a4a2d848fd95c9c6ae35a42c9bee2102a}{deleteTextbox}}-\/>\mbox{\hyperlink{classCustomTextbox_aec18b36767a71c5a9fb7eae48ef4d9b5}{pollEvent}}(event,\ mousePosView);}
+\DoxyCodeLine{00313\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_a22f4543480dcd86c689aa7ac13f7f579}\label{classMenuLinkedList_a22f4543480dcd86c689aa7ac13f7f579}} 
+\index{MenuLinkedList@{MenuLinkedList}!pollEvents@{pollEvents}}
+\index{pollEvents@{pollEvents}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{pollEvents()}{pollEvents()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::poll\+Events (\begin{DoxyParamCaption}\item[{sf\+::\+Event}]{event,  }\item[{sf\+::\+Vector2f}]{mouse\+Pos\+View }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00044}{44}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classMenuLinkedList_ad37ff408dc33c3d16b547add8c078b0a}{activeOptionMenu}}\ !=\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36ab67ad4f9425f602db92515440201218b}{constants::MenuLinkedList::Button::NONE}})}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a7d3bea699379d2f3f5508c6f1460d9ff}{buttons}}[this-\/>\mbox{\hyperlink{classMenuLinkedList_ad37ff408dc33c3d16b547add8c078b0a}{activeOptionMenu}}]-\/>\mbox{\hyperlink{classButton_a03ef92527b48359feff925347c478dab}{setColor}}(constants::normalGray);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_aaa7c6c69ae54ea94a12394d4de66ccf6}{constants::MenuLinkedList::BUTTON\_COUNT}};\ i++)\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classMenuLinkedList_a7d3bea699379d2f3f5508c6f1460d9ff}{buttons}}[i]-\/>pollEvent(mousePosView))\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Button\ "{}}\ <<\ i\ <<\ \textcolor{stringliteral}{"{}\ is\ clicked"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_ad37ff408dc33c3d16b547add8c078b0a}{activeOptionMenu}}\ =\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36}{constants::MenuLinkedList::Button}}\textcolor{keyword}{>}(i);}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_aa69479f3b871f7525e4074f4985a12ad}{activeAddMode}}\ =\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1AddMode_a711481dc0316047eddfc1ec976a04e2da28502edac912a4757b1d1620cbdb002b}{constants::MenuLinkedList::AddMode::Textbox::NONE}};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{switch}\ (this-\/>\mbox{\hyperlink{classMenuLinkedList_ad37ff408dc33c3d16b547add8c078b0a}{activeOptionMenu}})\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36acd85afaf91840a1b11bfc3f6e733c1f9}{constants::MenuLinkedList::Button::CREATE\_BUTTON}}:}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a6781082d0f687387bebc50a2604f19ad}{pollEventCreateMode}}(event,\ mousePosView);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36a0de6d59bfbc6881eff52940e8cf7b5ef}{constants::MenuLinkedList::Button::ADD\_BUTTON}}:}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_ab12b5068a1233d54f21c760c2e012660}{pollEventAddMode}}(event,\ mousePosView);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36a6cea2843935abb07fb801531cdeee8e2}{constants::MenuLinkedList::Button::DELETE\_BUTTON}}:}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a851ae1c23e35faac467781fab5800164}{pollEventDeleteMode}}(event,\ mousePosView);}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36a82d85b16a15ac280fc99b92579f67251}{constants::MenuLinkedList::Button::UPDATE\_BUTTON}}:}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a823661b0124f25838f8280fa32a14213}{pollEventUpdateMode}}(event,\ mousePosView);}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36a3f91f98213655f5bf68f96e67776b6eb}{constants::MenuLinkedList::Button::SEARCH\_BUTTON}}:}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_af968d372a927f7fde50b138b44904d56}{pollEventSearchMode}}(event,\ mousePosView);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36ab67ad4f9425f602db92515440201218b}{constants::MenuLinkedList::Button::NONE}}:}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_af968d372a927f7fde50b138b44904d56}\label{classMenuLinkedList_af968d372a927f7fde50b138b44904d56}} 
+\index{MenuLinkedList@{MenuLinkedList}!pollEventSearchMode@{pollEventSearchMode}}
+\index{pollEventSearchMode@{pollEventSearchMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{pollEventSearchMode()}{pollEventSearchMode()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::poll\+Event\+Search\+Mode (\begin{DoxyParamCaption}\item[{sf\+::\+Event}]{event,  }\item[{sf\+::\+Vector2f}]{mouse\+Pos\+View }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00394}{394}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00395\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_ae9ea91e53421148aa4c79ff86a3b8a18}{searchTextbox}}-\/>\mbox{\hyperlink{classCustomTextbox_aec18b36767a71c5a9fb7eae48ef4d9b5}{pollEvent}}(event,\ mousePosView);}
+\DoxyCodeLine{00396\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_a823661b0124f25838f8280fa32a14213}\label{classMenuLinkedList_a823661b0124f25838f8280fa32a14213}} 
+\index{MenuLinkedList@{MenuLinkedList}!pollEventUpdateMode@{pollEventUpdateMode}}
+\index{pollEventUpdateMode@{pollEventUpdateMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{pollEventUpdateMode()}{pollEventUpdateMode()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::poll\+Event\+Update\+Mode (\begin{DoxyParamCaption}\item[{sf\+::\+Event}]{event,  }\item[{sf\+::\+Vector2f}]{mouse\+Pos\+View }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00351}{351}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00352\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classMenuLinkedList_afa1dc66b249691a370255d125249f39d}{activeUpdateMode}}\ ==\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1UpdateMode_aa72e2609b8c3896d6cfdff77fdeff075a86ea43a56cbc798017af03f0967200b4}{constants::MenuLinkedList::UpdateMode::NONE}})}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_afa1dc66b249691a370255d125249f39d}{activeUpdateMode}}\ =\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1UpdateMode_aa72e2609b8c3896d6cfdff77fdeff075a41176e4f774540b11ebee691c834e82e}{constants::MenuLinkedList::UpdateMode::POSITION\_TEXTBOX}};}
+\DoxyCodeLine{00354\ }
+\DoxyCodeLine{00355\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a5d437667b8e4bed5e71bdc0fd30fb4d8}{updateTextbox}}[this-\/>\mbox{\hyperlink{classMenuLinkedList_afa1dc66b249691a370255d125249f39d}{activeUpdateMode}}]-\/>\mbox{\hyperlink{classCustomTextbox_aec18b36767a71c5a9fb7eae48ef4d9b5}{pollEvent}}(event,\ mousePosView);}
+\DoxyCodeLine{00356\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_a230d8da87104265bf9f3becd647cfeae}\label{classMenuLinkedList_a230d8da87104265bf9f3becd647cfeae}} 
+\index{MenuLinkedList@{MenuLinkedList}!render@{render}}
+\index{render@{render}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00106}{106}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{classButton}{Button}}*\ button\ :\ this-\/>\mbox{\hyperlink{classMenuLinkedList_a7d3bea699379d2f3f5508c6f1460d9ff}{buttons}})\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679}{button}}-\/>render();}
+\DoxyCodeLine{00109\ \ \ \ \ \}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordflow}{switch}\ (this-\/>\mbox{\hyperlink{classMenuLinkedList_ad37ff408dc33c3d16b547add8c078b0a}{activeOptionMenu}})\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36acd85afaf91840a1b11bfc3f6e733c1f9}{constants::MenuLinkedList::Button::CREATE\_BUTTON}}:}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_ae76b801c75850788f2ce7ab2f8d4cdb8}{renderCreateMode}}();}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36a0de6d59bfbc6881eff52940e8cf7b5ef}{constants::MenuLinkedList::Button::ADD\_BUTTON}}:}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_ac8dc67e1996d70aa940f74fd6b4c3375}{renderAddMode}}();}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36a6cea2843935abb07fb801531cdeee8e2}{constants::MenuLinkedList::Button::DELETE\_BUTTON}}:}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_ada40475f7d0fe58be534bd46354585d7}{renderDeleteMode}}();}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36a82d85b16a15ac280fc99b92579f67251}{constants::MenuLinkedList::Button::UPDATE\_BUTTON}}:}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_af3236748a2b5bb5ed7bca4762e20856d}{renderUpdateMode}}();}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36a3f91f98213655f5bf68f96e67776b6eb}{constants::MenuLinkedList::Button::SEARCH\_BUTTON}}:}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a718b76beb9f68da061c094a4b129c0b1}{renderSearchMode}}();}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36ab67ad4f9425f602db92515440201218b}{constants::MenuLinkedList::Button::NONE}}:}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00129\ \ \ \ \ \}}
+\DoxyCodeLine{00130\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_ac8dc67e1996d70aa940f74fd6b4c3375}\label{classMenuLinkedList_ac8dc67e1996d70aa940f74fd6b4c3375}} 
+\index{MenuLinkedList@{MenuLinkedList}!renderAddMode@{renderAddMode}}
+\index{renderAddMode@{renderAddMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{renderAddMode()}{renderAddMode()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::render\+Add\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00293}{293}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00294\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a5b208e7c75d58d948c114954951146d0}{addTextbox}}[this-\/>\mbox{\hyperlink{classMenuLinkedList_aa69479f3b871f7525e4074f4985a12ad}{activeAddMode}}]-\/>\mbox{\hyperlink{classCustomTextbox_a8c2246eca63d3095ca1f3dcf4e946eb0}{render}}();}
+\DoxyCodeLine{00295\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_ae76b801c75850788f2ce7ab2f8d4cdb8}\label{classMenuLinkedList_ae76b801c75850788f2ce7ab2f8d4cdb8}} 
+\index{MenuLinkedList@{MenuLinkedList}!renderCreateMode@{renderCreateMode}}
+\index{renderCreateMode@{renderCreateMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{renderCreateMode()}{renderCreateMode()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::render\+Create\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00232}{232}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00233\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{classButton}{Button}}*\ button\ :\ this-\/>\mbox{\hyperlink{classMenuLinkedList_ad9dd1c6f41d26dd7739a143edb524aad}{subCreateMode}})\ \{}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679}{button}}-\/>render();}
+\DoxyCodeLine{00235\ \ \ \ \ \}}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00237\ \textcolor{comment}{//\ \ \ \ this-\/>testTextbox-\/>render();}}
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classMenuLinkedList_a8bbc9dd64545d9df890c678f5b20d9aa}{activeCreateMode}}\ <\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_a9b628da6a385b8b0fffdb0ecc9cc4c7b}{constants::MenuLinkedList::CreateMode::TEXTBOX\_COUNT}})}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a216737192f2ab88bf316c70322bd293e}{createTextbox}}[this-\/>\mbox{\hyperlink{classMenuLinkedList_a8bbc9dd64545d9df890c678f5b20d9aa}{activeCreateMode}}]-\/>\mbox{\hyperlink{classCustomTextbox_a8c2246eca63d3095ca1f3dcf4e946eb0}{render}}();}
+\DoxyCodeLine{00240\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_ada40475f7d0fe58be534bd46354585d7}\label{classMenuLinkedList_ada40475f7d0fe58be534bd46354585d7}} 
+\index{MenuLinkedList@{MenuLinkedList}!renderDeleteMode@{renderDeleteMode}}
+\index{renderDeleteMode@{renderDeleteMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{renderDeleteMode()}{renderDeleteMode()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::render\+Delete\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00329}{329}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00330\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a4a2d848fd95c9c6ae35a42c9bee2102a}{deleteTextbox}}-\/>\mbox{\hyperlink{classCustomTextbox_a8c2246eca63d3095ca1f3dcf4e946eb0}{render}}();}
+\DoxyCodeLine{00331\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_a718b76beb9f68da061c094a4b129c0b1}\label{classMenuLinkedList_a718b76beb9f68da061c094a4b129c0b1}} 
+\index{MenuLinkedList@{MenuLinkedList}!renderSearchMode@{renderSearchMode}}
+\index{renderSearchMode@{renderSearchMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{renderSearchMode()}{renderSearchMode()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::render\+Search\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00412}{412}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00413\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_ae9ea91e53421148aa4c79ff86a3b8a18}{searchTextbox}}-\/>\mbox{\hyperlink{classCustomTextbox_a8c2246eca63d3095ca1f3dcf4e946eb0}{render}}();}
+\DoxyCodeLine{00414\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_af3236748a2b5bb5ed7bca4762e20856d}\label{classMenuLinkedList_af3236748a2b5bb5ed7bca4762e20856d}} 
+\index{MenuLinkedList@{MenuLinkedList}!renderUpdateMode@{renderUpdateMode}}
+\index{renderUpdateMode@{renderUpdateMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{renderUpdateMode()}{renderUpdateMode()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::render\+Update\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00376}{376}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00377\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a5d437667b8e4bed5e71bdc0fd30fb4d8}{updateTextbox}}[this-\/>\mbox{\hyperlink{classMenuLinkedList_afa1dc66b249691a370255d125249f39d}{activeUpdateMode}}]-\/>\mbox{\hyperlink{classCustomTextbox_a8c2246eca63d3095ca1f3dcf4e946eb0}{render}}();}
+\DoxyCodeLine{00378\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_a635d5505a414c101236ee205ec03d0d2}\label{classMenuLinkedList_a635d5505a414c101236ee205ec03d0d2}} 
+\index{MenuLinkedList@{MenuLinkedList}!resetActiveOptionMenu@{resetActiveOptionMenu}}
+\index{resetActiveOptionMenu@{resetActiveOptionMenu}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{resetActiveOptionMenu()}{resetActiveOptionMenu()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::reset\+Active\+Option\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00136}{136}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00137\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_ad37ff408dc33c3d16b547add8c078b0a}{activeOptionMenu}}\ =\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36ab67ad4f9425f602db92515440201218b}{constants::MenuLinkedList::Button::NONE}};}
+\DoxyCodeLine{00138\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a8bbc9dd64545d9df890c678f5b20d9aa}{activeCreateMode}}\ =\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_a9afc3c570f50d27a91a4b8cff7b3030aad3941778b8c694754b75a1ee7128deb6}{constants::MenuLinkedList::CreateMode::Button::NONE}};}
+\DoxyCodeLine{00139\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_a906bcfb168c739a12a5f16cccbfddcdc}\label{classMenuLinkedList_a906bcfb168c739a12a5f16cccbfddcdc}} 
+\index{MenuLinkedList@{MenuLinkedList}!update@{update}}
+\index{update@{update}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00077}{77}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classMenuLinkedList_ad37ff408dc33c3d16b547add8c078b0a}{activeOptionMenu}}\ !=\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36ab67ad4f9425f602db92515440201218b}{constants::MenuLinkedList::Button::NONE}})}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a7d3bea699379d2f3f5508c6f1460d9ff}{buttons}}[this-\/>\mbox{\hyperlink{classMenuLinkedList_ad37ff408dc33c3d16b547add8c078b0a}{activeOptionMenu}}]-\/>\mbox{\hyperlink{classButton_a03ef92527b48359feff925347c478dab}{setColor}}(\mbox{\hyperlink{namespaceconstants_aa2c33af3a12516cd0a8b05f71159f60d}{constants::clickGreen}});}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{classButton}{Button}}*\ button\ :\ this-\/>\mbox{\hyperlink{classMenuLinkedList_a7d3bea699379d2f3f5508c6f1460d9ff}{buttons}})\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679}{button}}-\/>update();}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordflow}{switch}\ (this-\/>\mbox{\hyperlink{classMenuLinkedList_ad37ff408dc33c3d16b547add8c078b0a}{activeOptionMenu}})\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36acd85afaf91840a1b11bfc3f6e733c1f9}{constants::MenuLinkedList::Button::CREATE\_BUTTON}}:}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a0ece0f5e85a6ec2d94f7b73f78299da3}{updateCreateMode}}();}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36a0de6d59bfbc6881eff52940e8cf7b5ef}{constants::MenuLinkedList::Button::ADD\_BUTTON}}:}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a33d0d6393ae6c58e672e01a732b6112a}{updateAddMode}}();}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36a6cea2843935abb07fb801531cdeee8e2}{constants::MenuLinkedList::Button::DELETE\_BUTTON}}:}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a8d5bf6af03701264b27a4ee0d23c93e6}{updateDeleteMode}}();}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36a82d85b16a15ac280fc99b92579f67251}{constants::MenuLinkedList::Button::UPDATE\_BUTTON}}:}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a6bf27ad6fa78002a5958d9c4a350848d}{updateUpdateMode}}();}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36a3f91f98213655f5bf68f96e67776b6eb}{constants::MenuLinkedList::Button::SEARCH\_BUTTON}}:}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a16afeaa0fc2e7730c73630183d54a774}{updateSearchMode}}();}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36ab67ad4f9425f602db92515440201218b}{constants::MenuLinkedList::Button::NONE}}:}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_a33d0d6393ae6c58e672e01a732b6112a}\label{classMenuLinkedList_a33d0d6393ae6c58e672e01a732b6112a}} 
+\index{MenuLinkedList@{MenuLinkedList}!updateAddMode@{updateAddMode}}
+\index{updateAddMode@{updateAddMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{updateAddMode()}{updateAddMode()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::update\+Add\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00274}{274}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classMenuLinkedList_aa69479f3b871f7525e4074f4985a12ad}{activeAddMode}}\ ==\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1AddMode_a711481dc0316047eddfc1ec976a04e2da28502edac912a4757b1d1620cbdb002b}{constants::MenuLinkedList::AddMode::NONE}})}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_aa69479f3b871f7525e4074f4985a12ad}{activeAddMode}}\ =\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1AddMode_a711481dc0316047eddfc1ec976a04e2dab794d85ab8b154a10784968a129fdbe2}{constants::MenuLinkedList::AddMode::POSITION\_TEXTBOX}};}
+\DoxyCodeLine{00277\ }
+\DoxyCodeLine{00278\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a5b208e7c75d58d948c114954951146d0}{addTextbox}}[this-\/>\mbox{\hyperlink{classMenuLinkedList_aa69479f3b871f7525e4074f4985a12ad}{activeAddMode}}]-\/>\mbox{\hyperlink{classCustomTextbox_ac8901adc866e8d58c09d77476a51f58d}{update}}();}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00280\ \ \ \ \ std::string\ inputUser\ =\ this-\/>\mbox{\hyperlink{classMenuLinkedList_a5b208e7c75d58d948c114954951146d0}{addTextbox}}[this-\/>\mbox{\hyperlink{classMenuLinkedList_aa69479f3b871f7525e4074f4985a12ad}{activeAddMode}}]-\/>\mbox{\hyperlink{classCustomTextbox_a5b725849f4f8c7d795e4c4a1ed809ba2}{getTextString}}();}
+\DoxyCodeLine{00281\ \ \ \ \ \textcolor{comment}{//\ check\ if\ input\ is\ number}}
+\DoxyCodeLine{00282\ \ \ \ \ \textcolor{keywordtype}{bool}\ isValid\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00283\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ i\ :\ inputUser)}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!std::isdigit(i))}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ isValid\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00286\ \ \ \ \ \textcolor{keywordflow}{if}\ (isValid\ \&\&\ inputUser\ !=\ \textcolor{stringliteral}{"{}None"{}})\ \{}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a84294b9f7c0ccbf6641cb68e64f0b3ab}{addModeValue}}[this-\/>\mbox{\hyperlink{classMenuLinkedList_aa69479f3b871f7525e4074f4985a12ad}{activeAddMode}}]\ =\ inputUser;}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ std::cout\ <<\ inputUser\ <<\ std::endl;}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a5b208e7c75d58d948c114954951146d0}{addTextbox}}[this-\/>\mbox{\hyperlink{classMenuLinkedList_aa69479f3b871f7525e4074f4985a12ad}{activeAddMode}}]-\/>\mbox{\hyperlink{classCustomTextbox_a724a824af4f1a54252b940048ab79c65}{resetInput}}();}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_aa69479f3b871f7525e4074f4985a12ad}{activeAddMode}}\ =\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1AddMode_a711481dc0316047eddfc1ec976a04e2d}{constants::MenuLinkedList::AddMode::Textbox}}\textcolor{keyword}{>}(!this-\/>\mbox{\hyperlink{classMenuLinkedList_aa69479f3b871f7525e4074f4985a12ad}{activeAddMode}});}
+\DoxyCodeLine{00291\ \ \ \ \ \}}
+\DoxyCodeLine{00292\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_a0ece0f5e85a6ec2d94f7b73f78299da3}\label{classMenuLinkedList_a0ece0f5e85a6ec2d94f7b73f78299da3}} 
+\index{MenuLinkedList@{MenuLinkedList}!updateCreateMode@{updateCreateMode}}
+\index{updateCreateMode@{updateCreateMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{updateCreateMode()}{updateCreateMode()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::update\+Create\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00193}{193}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classMenuLinkedList_a8bbc9dd64545d9df890c678f5b20d9aa}{activeCreateMode}}\ !=\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_a9afc3c570f50d27a91a4b8cff7b3030aad3941778b8c694754b75a1ee7128deb6}{constants::MenuLinkedList::CreateMode::Button::NONE}})}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_ad9dd1c6f41d26dd7739a143edb524aad}{subCreateMode}}[this-\/>\mbox{\hyperlink{classMenuLinkedList_a8bbc9dd64545d9df890c678f5b20d9aa}{activeCreateMode}}]-\/>\mbox{\hyperlink{classButton_a03ef92527b48359feff925347c478dab}{setColor}}(\mbox{\hyperlink{namespaceconstants_aa2c33af3a12516cd0a8b05f71159f60d}{constants::clickGreen}});}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{classButton}{Button}}*\ button\ :\ this-\/>\mbox{\hyperlink{classMenuLinkedList_ad9dd1c6f41d26dd7739a143edb524aad}{subCreateMode}})\ \{}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679}{button}}-\/>update();}
+\DoxyCodeLine{00199\ \ \ \ \ \}}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \textcolor{comment}{//\ \ \ \ this-\/>testTextbox-\/>update();}}
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classMenuLinkedList_a8bbc9dd64545d9df890c678f5b20d9aa}{activeCreateMode}}\ <\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_a9b628da6a385b8b0fffdb0ecc9cc4c7b}{constants::MenuLinkedList::CreateMode::TEXTBOX\_COUNT}})\ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a216737192f2ab88bf316c70322bd293e}{createTextbox}}[this-\/>\mbox{\hyperlink{classMenuLinkedList_a8bbc9dd64545d9df890c678f5b20d9aa}{activeCreateMode}}]-\/>\mbox{\hyperlink{classCustomTextbox_ac8901adc866e8d58c09d77476a51f58d}{update}}();}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ std::string\ inputUser\ =\ this-\/>\mbox{\hyperlink{classMenuLinkedList_a216737192f2ab88bf316c70322bd293e}{createTextbox}}[this-\/>\mbox{\hyperlink{classMenuLinkedList_a8bbc9dd64545d9df890c678f5b20d9aa}{activeCreateMode}}]-\/>\mbox{\hyperlink{classCustomTextbox_a5b725849f4f8c7d795e4c4a1ed809ba2}{getTextString}}();}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (inputUser\ !=\ \textcolor{stringliteral}{"{}None"{}})\ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ inputUser\ <<\ std::endl;}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a216737192f2ab88bf316c70322bd293e}{createTextbox}}[this-\/>\mbox{\hyperlink{classMenuLinkedList_a8bbc9dd64545d9df890c678f5b20d9aa}{activeCreateMode}}]-\/>\mbox{\hyperlink{classCustomTextbox_a724a824af4f1a54252b940048ab79c65}{resetInput}}();}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a84230fd7b2283fe363b4e12e0f2c31ef}{createModeValue}}[this-\/>\mbox{\hyperlink{classMenuLinkedList_a8bbc9dd64545d9df890c678f5b20d9aa}{activeCreateMode}}]\ =\ inputUser;}
+\DoxyCodeLine{00210\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classMenuLinkedList_a8bbc9dd64545d9df890c678f5b20d9aa}{activeCreateMode}}\ ==\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_a9afc3c570f50d27a91a4b8cff7b3030aa95dcb5e6e64029fc24a5bda4f3c3849e}{constants::MenuLinkedList::CreateMode::FILE\_BUTTON}})\ \{}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classMenuLinkedList_a9e194c17c64186e63e18078d307caa04}{isOpenFileDialog}})\ \{}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ f\ =\ \mbox{\hyperlink{classpfd_1_1open__file}{pfd::open\_file}}(\textcolor{stringliteral}{"{}Choose\ files\ to\ read"{}},\ \mbox{\hyperlink{classpfd_1_1path_a1205ad5165c748f91ffe939687e095a2}{pfd::path::home}}(),}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Text\ Files\ (.txt\ .text)"{}},\ \textcolor{stringliteral}{"{}*.txt\ *.text"{}},}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}All\ Files"{}},\ \textcolor{stringliteral}{"{}*"{}}\});}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ wait\ for\ the\ user\ to\ select\ a\ file\ unless\ the\ window\ will\ be\ not\ responsive}}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!f.ready(100))\ \{}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Event\ \textcolor{keyword}{event}\{\};}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a9e0766010ef15a6e3ebb2821d4b079d6}{window}}-\/>pollEvent(event);}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!f.result().empty())\ \{}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::ifstream\ file(f.result()[0]);}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ line;}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ file\ >>\ line;}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a84230fd7b2283fe363b4e12e0f2c31ef}{createModeValue}}[this-\/>\mbox{\hyperlink{classMenuLinkedList_a8bbc9dd64545d9df890c678f5b20d9aa}{activeCreateMode}}]\ =\ line;}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a9e194c17c64186e63e18078d307caa04}{isOpenFileDialog}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00230\ \ \ \ \ \}}
+\DoxyCodeLine{00231\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_a8d5bf6af03701264b27a4ee0d23c93e6}\label{classMenuLinkedList_a8d5bf6af03701264b27a4ee0d23c93e6}} 
+\index{MenuLinkedList@{MenuLinkedList}!updateDeleteMode@{updateDeleteMode}}
+\index{updateDeleteMode@{updateDeleteMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{updateDeleteMode()}{updateDeleteMode()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::update\+Delete\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00314}{314}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00315\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a4a2d848fd95c9c6ae35a42c9bee2102a}{deleteTextbox}}-\/>\mbox{\hyperlink{classCustomTextbox_ac8901adc866e8d58c09d77476a51f58d}{update}}();}
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00317\ \ \ \ \ std::string\ inputUser\ =\ this-\/>\mbox{\hyperlink{classMenuLinkedList_a4a2d848fd95c9c6ae35a42c9bee2102a}{deleteTextbox}}-\/>\mbox{\hyperlink{classCustomTextbox_a5b725849f4f8c7d795e4c4a1ed809ba2}{getTextString}}();}
+\DoxyCodeLine{00318\ \ \ \ \ \textcolor{comment}{//\ check\ if\ input\ is\ number}}
+\DoxyCodeLine{00319\ \ \ \ \ \textcolor{keywordtype}{bool}\ isValid\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00320\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ i\ :\ inputUser)}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!std::isdigit(i))}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ isValid\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00323\ \ \ \ \ \textcolor{keywordflow}{if}\ (isValid\ \&\&\ inputUser\ !=\ \textcolor{stringliteral}{"{}None"{}})\ \{}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a78865c1258176106e1788d55194674de}{deleteModeValue}}\ =\ inputUser;}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ std::cout\ <<\ inputUser\ <<\ std::endl;}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a4a2d848fd95c9c6ae35a42c9bee2102a}{deleteTextbox}}-\/>\mbox{\hyperlink{classCustomTextbox_a724a824af4f1a54252b940048ab79c65}{resetInput}}();}
+\DoxyCodeLine{00327\ \ \ \ \ \}}
+\DoxyCodeLine{00328\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_a16afeaa0fc2e7730c73630183d54a774}\label{classMenuLinkedList_a16afeaa0fc2e7730c73630183d54a774}} 
+\index{MenuLinkedList@{MenuLinkedList}!updateSearchMode@{updateSearchMode}}
+\index{updateSearchMode@{updateSearchMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{updateSearchMode()}{updateSearchMode()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::update\+Search\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00397}{397}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00398\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_ae9ea91e53421148aa4c79ff86a3b8a18}{searchTextbox}}-\/>\mbox{\hyperlink{classCustomTextbox_ac8901adc866e8d58c09d77476a51f58d}{update}}();}
+\DoxyCodeLine{00399\ }
+\DoxyCodeLine{00400\ \ \ \ \ std::string\ inputUser\ =\ this-\/>\mbox{\hyperlink{classMenuLinkedList_ae9ea91e53421148aa4c79ff86a3b8a18}{searchTextbox}}-\/>\mbox{\hyperlink{classCustomTextbox_a5b725849f4f8c7d795e4c4a1ed809ba2}{getTextString}}();}
+\DoxyCodeLine{00401\ \ \ \ \ \textcolor{comment}{//\ check\ if\ input\ is\ number}}
+\DoxyCodeLine{00402\ \ \ \ \ \textcolor{keywordtype}{bool}\ isValid\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00403\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ i\ :\ inputUser)}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!std::isdigit(i))}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \ \ \ \ isValid\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00406\ \ \ \ \ \textcolor{keywordflow}{if}\ (isValid\ \&\&\ inputUser\ !=\ \textcolor{stringliteral}{"{}None"{}})\ \{}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a31f8ba66adaa9df84f956c6379bdff45}{searchModeValue}}\ =\ inputUser;}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ std::cout\ <<\ inputUser\ <<\ std::endl;}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_ae9ea91e53421148aa4c79ff86a3b8a18}{searchTextbox}}-\/>\mbox{\hyperlink{classCustomTextbox_a724a824af4f1a54252b940048ab79c65}{resetInput}}();}
+\DoxyCodeLine{00410\ \ \ \ \ \}}
+\DoxyCodeLine{00411\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMenuLinkedList_a6bf27ad6fa78002a5958d9c4a350848d}\label{classMenuLinkedList_a6bf27ad6fa78002a5958d9c4a350848d}} 
+\index{MenuLinkedList@{MenuLinkedList}!updateUpdateMode@{updateUpdateMode}}
+\index{updateUpdateMode@{updateUpdateMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{updateUpdateMode()}{updateUpdateMode()}}
+{\footnotesize\ttfamily void Menu\+Linked\+List\+::update\+Update\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8cpp_source_l00357}{357}} of file \mbox{\hyperlink{MenuLinkedList_8cpp_source}{Menu\+Linked\+List.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00358\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classMenuLinkedList_afa1dc66b249691a370255d125249f39d}{activeUpdateMode}}\ ==\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1UpdateMode_aa72e2609b8c3896d6cfdff77fdeff075a86ea43a56cbc798017af03f0967200b4}{constants::MenuLinkedList::UpdateMode::NONE}})}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_afa1dc66b249691a370255d125249f39d}{activeUpdateMode}}\ =\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1UpdateMode_aa72e2609b8c3896d6cfdff77fdeff075a41176e4f774540b11ebee691c834e82e}{constants::MenuLinkedList::UpdateMode::POSITION\_TEXTBOX}};}
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00361\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a5d437667b8e4bed5e71bdc0fd30fb4d8}{updateTextbox}}[this-\/>\mbox{\hyperlink{classMenuLinkedList_afa1dc66b249691a370255d125249f39d}{activeUpdateMode}}]-\/>\mbox{\hyperlink{classCustomTextbox_ac8901adc866e8d58c09d77476a51f58d}{update}}();}
+\DoxyCodeLine{00362\ }
+\DoxyCodeLine{00363\ \ \ \ \ std::string\ inputUser\ =\ this-\/>\mbox{\hyperlink{classMenuLinkedList_a5d437667b8e4bed5e71bdc0fd30fb4d8}{updateTextbox}}[this-\/>\mbox{\hyperlink{classMenuLinkedList_afa1dc66b249691a370255d125249f39d}{activeUpdateMode}}]-\/>\mbox{\hyperlink{classCustomTextbox_a5b725849f4f8c7d795e4c4a1ed809ba2}{getTextString}}();}
+\DoxyCodeLine{00364\ \ \ \ \ \textcolor{comment}{//\ check\ if\ input\ is\ number}}
+\DoxyCodeLine{00365\ \ \ \ \ \textcolor{keywordtype}{bool}\ isValid\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00366\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ i\ :\ inputUser)}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!std::isdigit(i))}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \ \ \ \ isValid\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00369\ \ \ \ \ \textcolor{keywordflow}{if}\ (isValid\ \&\&\ inputUser\ !=\ \textcolor{stringliteral}{"{}None"{}})\ \{}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a70cf5488e3da65b735111c62d659d397}{updateModeValue}}[this-\/>\mbox{\hyperlink{classMenuLinkedList_afa1dc66b249691a370255d125249f39d}{activeUpdateMode}}]\ =\ inputUser;}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ std::cout\ <<\ inputUser\ <<\ std::endl;}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_a5d437667b8e4bed5e71bdc0fd30fb4d8}{updateTextbox}}[this-\/>\mbox{\hyperlink{classMenuLinkedList_afa1dc66b249691a370255d125249f39d}{activeUpdateMode}}]-\/>\mbox{\hyperlink{classCustomTextbox_a724a824af4f1a54252b940048ab79c65}{resetInput}}();}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuLinkedList_afa1dc66b249691a370255d125249f39d}{activeUpdateMode}}\ =\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1UpdateMode_aa72e2609b8c3896d6cfdff77fdeff075}{constants::MenuLinkedList::UpdateMode::Textbox}}\textcolor{keyword}{>}(!this-\/>\mbox{\hyperlink{classMenuLinkedList_afa1dc66b249691a370255d125249f39d}{activeUpdateMode}});}
+\DoxyCodeLine{00374\ \ \ \ \ \}}
+\DoxyCodeLine{00375\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classMenuLinkedList_aa69479f3b871f7525e4074f4985a12ad}\label{classMenuLinkedList_aa69479f3b871f7525e4074f4985a12ad}} 
+\index{MenuLinkedList@{MenuLinkedList}!activeAddMode@{activeAddMode}}
+\index{activeAddMode@{activeAddMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{activeAddMode}{activeAddMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1AddMode_a711481dc0316047eddfc1ec976a04e2d}{constants\+::\+Menu\+Linked\+List\+::\+Add\+Mode\+::\+Textbox}} Menu\+Linked\+List\+::active\+Add\+Mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8hpp_source_l00036}{36}} of file \mbox{\hyperlink{MenuLinkedList_8hpp_source}{Menu\+Linked\+List.\+hpp}}.
+
+\mbox{\Hypertarget{classMenuLinkedList_a8bbc9dd64545d9df890c678f5b20d9aa}\label{classMenuLinkedList_a8bbc9dd64545d9df890c678f5b20d9aa}} 
+\index{MenuLinkedList@{MenuLinkedList}!activeCreateMode@{activeCreateMode}}
+\index{activeCreateMode@{activeCreateMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{activeCreateMode}{activeCreateMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_a9afc3c570f50d27a91a4b8cff7b3030a}{constants\+::\+Menu\+Linked\+List\+::\+Create\+Mode\+::\+Button}} Menu\+Linked\+List\+::active\+Create\+Mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8hpp_source_l00026}{26}} of file \mbox{\hyperlink{MenuLinkedList_8hpp_source}{Menu\+Linked\+List.\+hpp}}.
+
+\mbox{\Hypertarget{classMenuLinkedList_ad37ff408dc33c3d16b547add8c078b0a}\label{classMenuLinkedList_ad37ff408dc33c3d16b547add8c078b0a}} 
+\index{MenuLinkedList@{MenuLinkedList}!activeOptionMenu@{activeOptionMenu}}
+\index{activeOptionMenu@{activeOptionMenu}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{activeOptionMenu}{activeOptionMenu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36}{constants\+::\+Menu\+Linked\+List\+::\+Button}} Menu\+Linked\+List\+::active\+Option\+Menu\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8hpp_source_l00021}{21}} of file \mbox{\hyperlink{MenuLinkedList_8hpp_source}{Menu\+Linked\+List.\+hpp}}.
+
+\mbox{\Hypertarget{classMenuLinkedList_afa1dc66b249691a370255d125249f39d}\label{classMenuLinkedList_afa1dc66b249691a370255d125249f39d}} 
+\index{MenuLinkedList@{MenuLinkedList}!activeUpdateMode@{activeUpdateMode}}
+\index{activeUpdateMode@{activeUpdateMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{activeUpdateMode}{activeUpdateMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1UpdateMode_aa72e2609b8c3896d6cfdff77fdeff075}{constants\+::\+Menu\+Linked\+List\+::\+Update\+Mode\+::\+Textbox}} Menu\+Linked\+List\+::active\+Update\+Mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8hpp_source_l00053}{53}} of file \mbox{\hyperlink{MenuLinkedList_8hpp_source}{Menu\+Linked\+List.\+hpp}}.
+
+\mbox{\Hypertarget{classMenuLinkedList_a84294b9f7c0ccbf6641cb68e64f0b3ab}\label{classMenuLinkedList_a84294b9f7c0ccbf6641cb68e64f0b3ab}} 
+\index{MenuLinkedList@{MenuLinkedList}!addModeValue@{addModeValue}}
+\index{addModeValue@{addModeValue}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{addModeValue}{addModeValue}}
+{\footnotesize\ttfamily std\+::string Menu\+Linked\+List\+::add\+Mode\+Value\mbox{[}\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1AddMode_a7808eab2f7478cce180334489cf5377a}{constants\+::\+Menu\+Linked\+List\+::\+Add\+Mode\+::\+TEXTBOX\+\_\+\+COUNT}}\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8hpp_source_l00077}{77}} of file \mbox{\hyperlink{MenuLinkedList_8hpp_source}{Menu\+Linked\+List.\+hpp}}.
+
+\mbox{\Hypertarget{classMenuLinkedList_a5b208e7c75d58d948c114954951146d0}\label{classMenuLinkedList_a5b208e7c75d58d948c114954951146d0}} 
+\index{MenuLinkedList@{MenuLinkedList}!addTextbox@{addTextbox}}
+\index{addTextbox@{addTextbox}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{addTextbox}{addTextbox}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCustomTextbox}{Custom\+Textbox}}$\ast$ Menu\+Linked\+List\+::add\+Textbox\mbox{[}\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1AddMode_a7808eab2f7478cce180334489cf5377a}{constants\+::\+Menu\+Linked\+List\+::\+Add\+Mode\+::\+TEXTBOX\+\_\+\+COUNT}}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8hpp_source_l00035}{35}} of file \mbox{\hyperlink{MenuLinkedList_8hpp_source}{Menu\+Linked\+List.\+hpp}}.
+
+\mbox{\Hypertarget{classMenuLinkedList_a7d3bea699379d2f3f5508c6f1460d9ff}\label{classMenuLinkedList_a7d3bea699379d2f3f5508c6f1460d9ff}} 
+\index{MenuLinkedList@{MenuLinkedList}!buttons@{buttons}}
+\index{buttons@{buttons}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{buttons}{buttons}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classButton}{Button}}$\ast$ Menu\+Linked\+List\+::buttons\mbox{[}\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_aaa7c6c69ae54ea94a12394d4de66ccf6}{constants\+::\+Menu\+Linked\+List\+::\+BUTTON\+\_\+\+COUNT}}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8hpp_source_l00019}{19}} of file \mbox{\hyperlink{MenuLinkedList_8hpp_source}{Menu\+Linked\+List.\+hpp}}.
+
+\mbox{\Hypertarget{classMenuLinkedList_a84230fd7b2283fe363b4e12e0f2c31ef}\label{classMenuLinkedList_a84230fd7b2283fe363b4e12e0f2c31ef}} 
+\index{MenuLinkedList@{MenuLinkedList}!createModeValue@{createModeValue}}
+\index{createModeValue@{createModeValue}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{createModeValue}{createModeValue}}
+{\footnotesize\ttfamily std\+::string Menu\+Linked\+List\+::create\+Mode\+Value\mbox{[}\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_adf8f0dc5eb65062f3677f54663dedb35}{constants\+::\+Menu\+Linked\+List\+::\+Create\+Mode\+::\+BUTTON\+\_\+\+COUNT}}\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8hpp_source_l00073}{73}} of file \mbox{\hyperlink{MenuLinkedList_8hpp_source}{Menu\+Linked\+List.\+hpp}}.
+
+\mbox{\Hypertarget{classMenuLinkedList_a216737192f2ab88bf316c70322bd293e}\label{classMenuLinkedList_a216737192f2ab88bf316c70322bd293e}} 
+\index{MenuLinkedList@{MenuLinkedList}!createTextbox@{createTextbox}}
+\index{createTextbox@{createTextbox}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{createTextbox}{createTextbox}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCustomTextbox}{Custom\+Textbox}}$\ast$ Menu\+Linked\+List\+::create\+Textbox\mbox{[}\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_adf8f0dc5eb65062f3677f54663dedb35}{constants\+::\+Menu\+Linked\+List\+::\+Create\+Mode\+::\+BUTTON\+\_\+\+COUNT}}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8hpp_source_l00025}{25}} of file \mbox{\hyperlink{MenuLinkedList_8hpp_source}{Menu\+Linked\+List.\+hpp}}.
+
+\mbox{\Hypertarget{classMenuLinkedList_a78865c1258176106e1788d55194674de}\label{classMenuLinkedList_a78865c1258176106e1788d55194674de}} 
+\index{MenuLinkedList@{MenuLinkedList}!deleteModeValue@{deleteModeValue}}
+\index{deleteModeValue@{deleteModeValue}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{deleteModeValue}{deleteModeValue}}
+{\footnotesize\ttfamily std\+::string Menu\+Linked\+List\+::delete\+Mode\+Value}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8hpp_source_l00080}{80}} of file \mbox{\hyperlink{MenuLinkedList_8hpp_source}{Menu\+Linked\+List.\+hpp}}.
+
+\mbox{\Hypertarget{classMenuLinkedList_a4a2d848fd95c9c6ae35a42c9bee2102a}\label{classMenuLinkedList_a4a2d848fd95c9c6ae35a42c9bee2102a}} 
+\index{MenuLinkedList@{MenuLinkedList}!deleteTextbox@{deleteTextbox}}
+\index{deleteTextbox@{deleteTextbox}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{deleteTextbox}{deleteTextbox}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCustomTextbox}{Custom\+Textbox}}$\ast$ Menu\+Linked\+List\+::delete\+Textbox\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8hpp_source_l00044}{44}} of file \mbox{\hyperlink{MenuLinkedList_8hpp_source}{Menu\+Linked\+List.\+hpp}}.
+
+\mbox{\Hypertarget{classMenuLinkedList_a9e194c17c64186e63e18078d307caa04}\label{classMenuLinkedList_a9e194c17c64186e63e18078d307caa04}} 
+\index{MenuLinkedList@{MenuLinkedList}!isOpenFileDialog@{isOpenFileDialog}}
+\index{isOpenFileDialog@{isOpenFileDialog}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{isOpenFileDialog}{isOpenFileDialog}}
+{\footnotesize\ttfamily bool Menu\+Linked\+List\+::is\+Open\+File\+Dialog = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8hpp_source_l00027}{27}} of file \mbox{\hyperlink{MenuLinkedList_8hpp_source}{Menu\+Linked\+List.\+hpp}}.
+
+\mbox{\Hypertarget{classMenuLinkedList_a31f8ba66adaa9df84f956c6379bdff45}\label{classMenuLinkedList_a31f8ba66adaa9df84f956c6379bdff45}} 
+\index{MenuLinkedList@{MenuLinkedList}!searchModeValue@{searchModeValue}}
+\index{searchModeValue@{searchModeValue}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{searchModeValue}{searchModeValue}}
+{\footnotesize\ttfamily std\+::string Menu\+Linked\+List\+::search\+Mode\+Value}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8hpp_source_l00086}{86}} of file \mbox{\hyperlink{MenuLinkedList_8hpp_source}{Menu\+Linked\+List.\+hpp}}.
+
+\mbox{\Hypertarget{classMenuLinkedList_ae9ea91e53421148aa4c79ff86a3b8a18}\label{classMenuLinkedList_ae9ea91e53421148aa4c79ff86a3b8a18}} 
+\index{MenuLinkedList@{MenuLinkedList}!searchTextbox@{searchTextbox}}
+\index{searchTextbox@{searchTextbox}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{searchTextbox}{searchTextbox}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCustomTextbox}{Custom\+Textbox}}$\ast$ Menu\+Linked\+List\+::search\+Textbox\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8hpp_source_l00061}{61}} of file \mbox{\hyperlink{MenuLinkedList_8hpp_source}{Menu\+Linked\+List.\+hpp}}.
+
+\mbox{\Hypertarget{classMenuLinkedList_ad9dd1c6f41d26dd7739a143edb524aad}\label{classMenuLinkedList_ad9dd1c6f41d26dd7739a143edb524aad}} 
+\index{MenuLinkedList@{MenuLinkedList}!subCreateMode@{subCreateMode}}
+\index{subCreateMode@{subCreateMode}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{subCreateMode}{subCreateMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classButton}{Button}}$\ast$ Menu\+Linked\+List\+::sub\+Create\+Mode\mbox{[}\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_adf8f0dc5eb65062f3677f54663dedb35}{constants\+::\+Menu\+Linked\+List\+::\+Create\+Mode\+::\+BUTTON\+\_\+\+COUNT}}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8hpp_source_l00024}{24}} of file \mbox{\hyperlink{MenuLinkedList_8hpp_source}{Menu\+Linked\+List.\+hpp}}.
+
+\mbox{\Hypertarget{classMenuLinkedList_a70cf5488e3da65b735111c62d659d397}\label{classMenuLinkedList_a70cf5488e3da65b735111c62d659d397}} 
+\index{MenuLinkedList@{MenuLinkedList}!updateModeValue@{updateModeValue}}
+\index{updateModeValue@{updateModeValue}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{updateModeValue}{updateModeValue}}
+{\footnotesize\ttfamily std\+::string Menu\+Linked\+List\+::update\+Mode\+Value\mbox{[}\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1UpdateMode_a139363885cd29bc480ccf573df090428}{constants\+::\+Menu\+Linked\+List\+::\+Update\+Mode\+::\+TEXTBOX\+\_\+\+COUNT}}\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8hpp_source_l00083}{83}} of file \mbox{\hyperlink{MenuLinkedList_8hpp_source}{Menu\+Linked\+List.\+hpp}}.
+
+\mbox{\Hypertarget{classMenuLinkedList_a5d437667b8e4bed5e71bdc0fd30fb4d8}\label{classMenuLinkedList_a5d437667b8e4bed5e71bdc0fd30fb4d8}} 
+\index{MenuLinkedList@{MenuLinkedList}!updateTextbox@{updateTextbox}}
+\index{updateTextbox@{updateTextbox}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{updateTextbox}{updateTextbox}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCustomTextbox}{Custom\+Textbox}}$\ast$ Menu\+Linked\+List\+::update\+Textbox\mbox{[}\mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1UpdateMode_a139363885cd29bc480ccf573df090428}{constants\+::\+Menu\+Linked\+List\+::\+Update\+Mode\+::\+TEXTBOX\+\_\+\+COUNT}}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8hpp_source_l00052}{52}} of file \mbox{\hyperlink{MenuLinkedList_8hpp_source}{Menu\+Linked\+List.\+hpp}}.
+
+\mbox{\Hypertarget{classMenuLinkedList_a9e0766010ef15a6e3ebb2821d4b079d6}\label{classMenuLinkedList_a9e0766010ef15a6e3ebb2821d4b079d6}} 
+\index{MenuLinkedList@{MenuLinkedList}!window@{window}}
+\index{window@{window}!MenuLinkedList@{MenuLinkedList}}
+\doxysubsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily sf\+::\+Render\+Window$\ast$ Menu\+Linked\+List\+::window\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MenuLinkedList_8hpp_source_l00018}{18}} of file \mbox{\hyperlink{MenuLinkedList_8hpp_source}{Menu\+Linked\+List.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/lib\+Scene/\mbox{\hyperlink{MenuLinkedList_8hpp}{Menu\+Linked\+List.\+hpp}}\item 
+include/lib\+Scene/\mbox{\hyperlink{MenuLinkedList_8cpp}{Menu\+Linked\+List.\+cpp}}\end{DoxyCompactItemize}

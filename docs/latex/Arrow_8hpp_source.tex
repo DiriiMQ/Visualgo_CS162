@@ -1,0 +1,42 @@
+\hypertarget{Arrow_8hpp_source}{}\doxysection{Arrow.\+hpp}
+\label{Arrow_8hpp_source}\index{include/draw/Arrow.hpp@{include/draw/Arrow.hpp}}
+\mbox{\hyperlink{Arrow_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ dirii\ on\ 08/04/2023.}}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#ifndef\ VISUALGO\_CS162\_ARROW\_HPP}}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#define\ VISUALGO\_CS162\_ARROW\_HPP}}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{BaseDraw_8hpp}{BaseDraw.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Constants_8hpp}{Constants.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00013}\mbox{\hyperlink{classArrow}{00013}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classArrow}{Arrow}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBaseDraw}{BaseDraw}}\{}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00014}00014\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00015}\mbox{\hyperlink{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}{00015}}\ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}{points}}[2];}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00016}\mbox{\hyperlink{classArrow_a914adb83a6dca3a1d8dd543afd14979e}{00016}}\ \ \ \ \ sf::Texture\ \mbox{\hyperlink{classArrow_a914adb83a6dca3a1d8dd543afd14979e}{arrowTexture}}[2];}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00017}\mbox{\hyperlink{classArrow_a204b3062cf9e3b0407f2a7aef9784cab}{00017}}\ \ \ \ \ sf::Sprite\ \mbox{\hyperlink{classArrow_a204b3062cf9e3b0407f2a7aef9784cab}{arrowSprite}};}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00018}\mbox{\hyperlink{classArrow_a2ad8ad4762763dcb477e4c0590573cd5}{00018}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classArrow_a2ad8ad4762763dcb477e4c0590573cd5}{length}};}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00019}\mbox{\hyperlink{classArrow_acc58b59f199f3dd6a2a22ab2136bf372}{00019}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classArrow_acc58b59f199f3dd6a2a22ab2136bf372}{hasSetMid}};}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00021}00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{classArrow}{Arrow}}(sf::RenderWindow*\ \mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}},\ sf::Vector2f\ start,\ sf::Vector2f\ end);}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00023}00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArrow_a135e4c81a45366c0be1ca96cd9782521}{render}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArrow_a413c30a53d6a0d76c95e57c11a20fd80}{toggleActiveColor}}();}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArrow_a0ddb9960d1c2003ece0302b5c7c688fa}{resetColor}}();}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArrow_a9ba380273ededbcac9bce32197b5b24e}{setStart}}(sf::Vector2f\ start,\ \textcolor{keywordtype}{bool}\ needSetMid);}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArrow_aba41e97028815a99c02773be2f8e1042}{setPositions}}(sf::Vector2f\ start,\ sf::Vector2f\ end,\ \textcolor{keywordtype}{bool}\ needSetMid);}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArrow_a1e939548fc9aaa4c358db43eb22f5c8e}{setMid}}();}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArrow_a8c4cf7822a949ef5fae1c95303a80cd6}{autoRotate}}();}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArrow_a5c6371db9cc5fcfc18a55adc6a79bd3d}{autoScale}}();}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00032}00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArrow_a9a1f22e4b50ff5113fa59ffb2025acb4}{hide}}();}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00033}00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArrow_aec17bb3f7477350299e8e4717bef72d7}{show}}();}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00034}00034\ \};}
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{Arrow_8hpp_source_l00036}00036\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//VISUALGO\_CS162\_ARROW\_HPP}}
+
+\end{DoxyCode}

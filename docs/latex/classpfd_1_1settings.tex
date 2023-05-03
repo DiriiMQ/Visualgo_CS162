@@ -1,0 +1,365 @@
+\hypertarget{classpfd_1_1settings}{}\doxysection{pfd\+::settings Class Reference}
+\label{classpfd_1_1settings}\index{pfd::settings@{pfd::settings}}
+
+
+{\ttfamily \#include $<$File\+Dialog.\+h$>$}
+
+Inheritance diagram for pfd\+::settings\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.733333cm]{classpfd_1_1settings}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classpfd_1_1settings_a54fb5598e7501ac38d17e3629190b2fe}{available}} ()
+\item 
+static void \mbox{\hyperlink{classpfd_1_1settings_a0ed32e8ed039106028474eb9f0a0a7bc}{verbose}} (bool value)
+\item 
+static void \mbox{\hyperlink{classpfd_1_1settings_a60023ab0ac98008d2c52a568e9ee540f}{rescan}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}{flag}} \{ \newline
+\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada11dd6b78f267a47638211f4c7e23d434}{is\+\_\+scanned}} = 0
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadad9da28952c27749f53c23675db49d560}{is\+\_\+verbose}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaee57842698a0690e4b89730b469edc31}{has\+\_\+zenity}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1267dfaf66b51761e04b042bb2c4dd7a}{has\+\_\+matedialog}}
+, \newline
+\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1a652e3d6a785053942b6cffc2c4669d}{has\+\_\+qarma}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1f1a19f0bf1fe1a63ed3e73e40466b4b}{has\+\_\+kdialog}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaea0bbb642237ecdaa68a14a0d7212448}{is\+\_\+vista}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada73b7af539db867cb9edf24a3cb7b8a36}{max\+\_\+flag}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpfd_1_1settings_a7190e52d512b1321acb78731a8cddf42}{settings}} (bool resync=false)
+\item 
+bool \mbox{\hyperlink{classpfd_1_1settings_af1c2f6e88ffafd59a2f7609631a9eade}{check\+\_\+program}} (std\+::string const \&program)
+\item 
+bool \mbox{\hyperlink{classpfd_1_1settings_a4e22d6fb43d387ddc980bf6e2a6aad24}{is\+\_\+osascript}} () const
+\item 
+bool \mbox{\hyperlink{classpfd_1_1settings_a08e4a5b150186d77158a974cc8c2d4a2}{is\+\_\+zenity}} () const
+\item 
+bool \mbox{\hyperlink{classpfd_1_1settings_aa79fb10eee785f1acd8d1ff34e226c89}{is\+\_\+kdialog}} () const
+\item 
+bool const \& \mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}} (\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}{flag}} in\+\_\+flag) const
+\item 
+bool \& \mbox{\hyperlink{classpfd_1_1settings_a9b611d06856910f0d8c358dd0eadfcee}{flags}} (\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}{flag}} in\+\_\+flag)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00121}{121}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}\label{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}} 
+\index{pfd::settings@{pfd::settings}!flag@{flag}}
+\index{flag@{flag}!pfd::settings@{pfd::settings}}
+\doxysubsubsection{\texorpdfstring{flag}{flag}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}{pfd\+::settings\+::flag}}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [protected]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_scanned@{is\_scanned}!pfd::settings@{pfd::settings}}\index{pfd::settings@{pfd::settings}!is\_scanned@{is\_scanned}}}\mbox{\Hypertarget{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada11dd6b78f267a47638211f4c7e23d434}\label{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada11dd6b78f267a47638211f4c7e23d434}} 
+is\+\_\+scanned&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_verbose@{is\_verbose}!pfd::settings@{pfd::settings}}\index{pfd::settings@{pfd::settings}!is\_verbose@{is\_verbose}}}\mbox{\Hypertarget{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadad9da28952c27749f53c23675db49d560}\label{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadad9da28952c27749f53c23675db49d560}} 
+is\+\_\+verbose&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{has\_zenity@{has\_zenity}!pfd::settings@{pfd::settings}}\index{pfd::settings@{pfd::settings}!has\_zenity@{has\_zenity}}}\mbox{\Hypertarget{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaee57842698a0690e4b89730b469edc31}\label{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaee57842698a0690e4b89730b469edc31}} 
+has\+\_\+zenity&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{has\_matedialog@{has\_matedialog}!pfd::settings@{pfd::settings}}\index{pfd::settings@{pfd::settings}!has\_matedialog@{has\_matedialog}}}\mbox{\Hypertarget{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1267dfaf66b51761e04b042bb2c4dd7a}\label{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1267dfaf66b51761e04b042bb2c4dd7a}} 
+has\+\_\+matedialog&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{has\_qarma@{has\_qarma}!pfd::settings@{pfd::settings}}\index{pfd::settings@{pfd::settings}!has\_qarma@{has\_qarma}}}\mbox{\Hypertarget{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1a652e3d6a785053942b6cffc2c4669d}\label{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1a652e3d6a785053942b6cffc2c4669d}} 
+has\+\_\+qarma&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{has\_kdialog@{has\_kdialog}!pfd::settings@{pfd::settings}}\index{pfd::settings@{pfd::settings}!has\_kdialog@{has\_kdialog}}}\mbox{\Hypertarget{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1f1a19f0bf1fe1a63ed3e73e40466b4b}\label{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1f1a19f0bf1fe1a63ed3e73e40466b4b}} 
+has\+\_\+kdialog&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{is\_vista@{is\_vista}!pfd::settings@{pfd::settings}}\index{pfd::settings@{pfd::settings}!is\_vista@{is\_vista}}}\mbox{\Hypertarget{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaea0bbb642237ecdaa68a14a0d7212448}\label{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaea0bbb642237ecdaa68a14a0d7212448}} 
+is\+\_\+vista&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{max\_flag@{max\_flag}!pfd::settings@{pfd::settings}}\index{pfd::settings@{pfd::settings}!max\_flag@{max\_flag}}}\mbox{\Hypertarget{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada73b7af539db867cb9edf24a3cb7b8a36}\label{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada73b7af539db867cb9edf24a3cb7b8a36}} 
+max\+\_\+flag&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00138}{138}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada11dd6b78f267a47638211f4c7e23d434}{is\_scanned}}\ =\ 0,}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadad9da28952c27749f53c23675db49d560}{is\_verbose}},}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaee57842698a0690e4b89730b469edc31}{has\_zenity}},}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1267dfaf66b51761e04b042bb2c4dd7a}{has\_matedialog}},}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1a652e3d6a785053942b6cffc2c4669d}{has\_qarma}},}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1f1a19f0bf1fe1a63ed3e73e40466b4b}{has\_kdialog}},}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaea0bbb642237ecdaa68a14a0d7212448}{is\_vista}},}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada73b7af539db867cb9edf24a3cb7b8a36}{max\_flag}},}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpfd_1_1settings_a7190e52d512b1321acb78731a8cddf42}\label{classpfd_1_1settings_a7190e52d512b1321acb78731a8cddf42}} 
+\index{pfd::settings@{pfd::settings}!settings@{settings}}
+\index{settings@{settings}!pfd::settings@{pfd::settings}}
+\doxysubsubsection{\texorpdfstring{settings()}{settings()}}
+{\footnotesize\ttfamily pfd\+::settings\+::settings (\begin{DoxyParamCaption}\item[{bool}]{resync = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00524}{524}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00525\ \ \ \ \ \{}
+\DoxyCodeLine{00526\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada11dd6b78f267a47638211f4c7e23d434}{flag::is\_scanned}})\ \&=\ !resync;}
+\DoxyCodeLine{00527\ }
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada11dd6b78f267a47638211f4c7e23d434}{flag::is\_scanned}}))}
+\DoxyCodeLine{00529\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00530\ }
+\DoxyCodeLine{00531\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ pfd\_verbose\ =\ internal::getenv(\textcolor{stringliteral}{"{}PFD\_VERBOSE"{}});}
+\DoxyCodeLine{00532\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ match\_no\ =\ std::regex(\textcolor{stringliteral}{"{}(|0|no|false)"{}},\ std::regex\_constants::icase);}
+\DoxyCodeLine{00533\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!std::regex\_match(pfd\_verbose,\ match\_no))}
+\DoxyCodeLine{00534\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadad9da28952c27749f53c23675db49d560}{flag::is\_verbose}})\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00535\ }
+\DoxyCodeLine{00536\ \textcolor{preprocessor}{\#if\ \_WIN32}}
+\DoxyCodeLine{00537\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaea0bbb642237ecdaa68a14a0d7212448}{flag::is\_vista}})\ =\ internal::is\_vista();}
+\DoxyCodeLine{00538\ \textcolor{preprocessor}{\#elif\ !\_\_APPLE\_\_}}
+\DoxyCodeLine{00539\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaee57842698a0690e4b89730b469edc31}{flag::has\_zenity}})\ =\ \mbox{\hyperlink{classpfd_1_1settings_af1c2f6e88ffafd59a2f7609631a9eade}{check\_program}}(\textcolor{stringliteral}{"{}zenity"{}});}
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1267dfaf66b51761e04b042bb2c4dd7a}{flag::has\_matedialog}})\ =\ \mbox{\hyperlink{classpfd_1_1settings_af1c2f6e88ffafd59a2f7609631a9eade}{check\_program}}(\textcolor{stringliteral}{"{}matedialog"{}});}
+\DoxyCodeLine{00541\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1a652e3d6a785053942b6cffc2c4669d}{flag::has\_qarma}})\ =\ \mbox{\hyperlink{classpfd_1_1settings_af1c2f6e88ffafd59a2f7609631a9eade}{check\_program}}(\textcolor{stringliteral}{"{}qarma"{}});}
+\DoxyCodeLine{00542\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1f1a19f0bf1fe1a63ed3e73e40466b4b}{flag::has\_kdialog}})\ =\ \mbox{\hyperlink{classpfd_1_1settings_af1c2f6e88ffafd59a2f7609631a9eade}{check\_program}}(\textcolor{stringliteral}{"{}kdialog"{}});}
+\DoxyCodeLine{00543\ }
+\DoxyCodeLine{00544\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ multiple\ helpers\ are\ available,\ try\ to\ default\ to\ the\ best\ one}}
+\DoxyCodeLine{00545\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaee57842698a0690e4b89730b469edc31}{flag::has\_zenity}})\ \&\&\ \mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1f1a19f0bf1fe1a63ed3e73e40466b4b}{flag::has\_kdialog}}))}
+\DoxyCodeLine{00546\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00547\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ desktop\_name\ =\ internal::getenv(\textcolor{stringliteral}{"{}XDG\_SESSION\_DESKTOP"{}});}
+\DoxyCodeLine{00548\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (desktop\_name\ ==\ std::string(\textcolor{stringliteral}{"{}gnome"{}}))}
+\DoxyCodeLine{00549\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1f1a19f0bf1fe1a63ed3e73e40466b4b}{flag::has\_kdialog}})\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00550\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (desktop\_name\ ==\ std::string(\textcolor{stringliteral}{"{}KDE"{}}))}
+\DoxyCodeLine{00551\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaee57842698a0690e4b89730b469edc31}{flag::has\_zenity}})\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00552\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00553\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00554\ }
+\DoxyCodeLine{00555\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada11dd6b78f267a47638211f4c7e23d434}{flag::is\_scanned}})\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00556\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpfd_1_1settings_a54fb5598e7501ac38d17e3629190b2fe}\label{classpfd_1_1settings_a54fb5598e7501ac38d17e3629190b2fe}} 
+\index{pfd::settings@{pfd::settings}!available@{available}}
+\index{available@{available}!pfd::settings@{pfd::settings}}
+\doxysubsubsection{\texorpdfstring{available()}{available()}}
+{\footnotesize\ttfamily bool pfd\+::settings\+::available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00558}{558}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00559\ \ \ \ \ \{}
+\DoxyCodeLine{00560\ \textcolor{preprocessor}{\#if\ \_WIN32}}
+\DoxyCodeLine{00561\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00562\ \textcolor{preprocessor}{\#elif\ \_\_APPLE\_\_}}
+\DoxyCodeLine{00563\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00564\ \textcolor{preprocessor}{\#elif\ \_\_EMSCRIPTEN\_\_}}
+\DoxyCodeLine{00565\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ FIXME:\ Return\ true\ after\ implementation\ is\ complete.}}
+\DoxyCodeLine{00566\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00567\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00568\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a7190e52d512b1321acb78731a8cddf42}{settings}}\ tmp;}
+\DoxyCodeLine{00569\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ tmp.flags(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaee57842698a0690e4b89730b469edc31}{flag::has\_zenity}})\ ||}
+\DoxyCodeLine{00570\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tmp.flags(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1267dfaf66b51761e04b042bb2c4dd7a}{flag::has\_matedialog}})\ ||}
+\DoxyCodeLine{00571\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tmp.flags(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1a652e3d6a785053942b6cffc2c4669d}{flag::has\_qarma}})\ ||}
+\DoxyCodeLine{00572\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tmp.flags(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1f1a19f0bf1fe1a63ed3e73e40466b4b}{flag::has\_kdialog}});}
+\DoxyCodeLine{00573\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00574\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpfd_1_1settings_af1c2f6e88ffafd59a2f7609631a9eade}\label{classpfd_1_1settings_af1c2f6e88ffafd59a2f7609631a9eade}} 
+\index{pfd::settings@{pfd::settings}!check\_program@{check\_program}}
+\index{check\_program@{check\_program}!pfd::settings@{pfd::settings}}
+\doxysubsubsection{\texorpdfstring{check\_program()}{check\_program()}}
+{\footnotesize\ttfamily bool pfd\+::settings\+::check\+\_\+program (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{program }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00587}{587}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00588\ \ \ \ \ \{}
+\DoxyCodeLine{00589\ \textcolor{preprocessor}{\#if\ \_WIN32}}
+\DoxyCodeLine{00590\ \ \ \ \ \ \ \ \ (void)program;}
+\DoxyCodeLine{00591\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00592\ \textcolor{preprocessor}{\#elif\ \_\_EMSCRIPTEN\_\_}}
+\DoxyCodeLine{00593\ \ \ \ \ \ \ \ \ (void)program;}
+\DoxyCodeLine{00594\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00595\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00596\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ exit\_code\ =\ -\/1;}
+\DoxyCodeLine{00597\ \ \ \ \ \ \ \ \ internal::executor\ async;}
+\DoxyCodeLine{00598\ \ \ \ \ \ \ \ \ async.start\_process(\{\textcolor{stringliteral}{"{}/bin/sh"{}},\ \textcolor{stringliteral}{"{}-\/c"{}},\ \textcolor{stringliteral}{"{}which\ "{}}\ +\ program\});}
+\DoxyCodeLine{00599\ \ \ \ \ \ \ \ \ async.result(\&exit\_code);}
+\DoxyCodeLine{00600\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ exit\_code\ ==\ 0;}
+\DoxyCodeLine{00601\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00602\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpfd_1_1settings_a9b611d06856910f0d8c358dd0eadfcee}\label{classpfd_1_1settings_a9b611d06856910f0d8c358dd0eadfcee}} 
+\index{pfd::settings@{pfd::settings}!flags@{flags}}
+\index{flags@{flags}!pfd::settings@{pfd::settings}}
+\doxysubsubsection{\texorpdfstring{flags()}{flags()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool \& pfd\+::settings\+::flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}{flag}}}]{in\+\_\+flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00631}{631}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00632\ \ \ \ \ \{}
+\DoxyCodeLine{00633\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{const\_cast<}\textcolor{keywordtype}{bool}\ \&\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classpfd_1_1settings_a7190e52d512b1321acb78731a8cddf42}{settings}}\ \textcolor{keyword}{const\ }*\textcolor{keyword}{>}(\textcolor{keyword}{this})-\/>\mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}(in\_flag));}
+\DoxyCodeLine{00634\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}\label{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}} 
+\index{pfd::settings@{pfd::settings}!flags@{flags}}
+\index{flags@{flags}!pfd::settings@{pfd::settings}}
+\doxysubsubsection{\texorpdfstring{flags()}{flags()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool const  \& pfd\+::settings\+::flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}{flag}}}]{in\+\_\+flag }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00625}{625}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00626\ \ \ \ \ \{}
+\DoxyCodeLine{00627\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}[size\_t(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada73b7af539db867cb9edf24a3cb7b8a36}{flag::max\_flag}})];}
+\DoxyCodeLine{00628\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}[size\_t(in\_flag)];}
+\DoxyCodeLine{00629\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpfd_1_1settings_aa79fb10eee785f1acd8d1ff34e226c89}\label{classpfd_1_1settings_aa79fb10eee785f1acd8d1ff34e226c89}} 
+\index{pfd::settings@{pfd::settings}!is\_kdialog@{is\_kdialog}}
+\index{is\_kdialog@{is\_kdialog}!pfd::settings@{pfd::settings}}
+\doxysubsubsection{\texorpdfstring{is\_kdialog()}{is\_kdialog()}}
+{\footnotesize\ttfamily bool pfd\+::settings\+::is\+\_\+kdialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00620}{620}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00621\ \ \ \ \ \{}
+\DoxyCodeLine{00622\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1f1a19f0bf1fe1a63ed3e73e40466b4b}{flag::has\_kdialog}});}
+\DoxyCodeLine{00623\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpfd_1_1settings_a4e22d6fb43d387ddc980bf6e2a6aad24}\label{classpfd_1_1settings_a4e22d6fb43d387ddc980bf6e2a6aad24}} 
+\index{pfd::settings@{pfd::settings}!is\_osascript@{is\_osascript}}
+\index{is\_osascript@{is\_osascript}!pfd::settings@{pfd::settings}}
+\doxysubsubsection{\texorpdfstring{is\_osascript()}{is\_osascript()}}
+{\footnotesize\ttfamily bool pfd\+::settings\+::is\+\_\+osascript (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00604}{604}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00605\ \ \ \ \ \{}
+\DoxyCodeLine{00606\ \textcolor{preprocessor}{\#if\ \_\_APPLE\_\_}}
+\DoxyCodeLine{00607\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00608\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00609\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00610\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00611\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpfd_1_1settings_a08e4a5b150186d77158a974cc8c2d4a2}\label{classpfd_1_1settings_a08e4a5b150186d77158a974cc8c2d4a2}} 
+\index{pfd::settings@{pfd::settings}!is\_zenity@{is\_zenity}}
+\index{is\_zenity@{is\_zenity}!pfd::settings@{pfd::settings}}
+\doxysubsubsection{\texorpdfstring{is\_zenity()}{is\_zenity()}}
+{\footnotesize\ttfamily bool pfd\+::settings\+::is\+\_\+zenity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00613}{613}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00614\ \ \ \ \ \{}
+\DoxyCodeLine{00615\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaee57842698a0690e4b89730b469edc31}{flag::has\_zenity}})\ ||}
+\DoxyCodeLine{00616\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1267dfaf66b51761e04b042bb2c4dd7a}{flag::has\_matedialog}})\ ||}
+\DoxyCodeLine{00617\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1a652e3d6a785053942b6cffc2c4669d}{flag::has\_qarma}});}
+\DoxyCodeLine{00618\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpfd_1_1settings_a60023ab0ac98008d2c52a568e9ee540f}\label{classpfd_1_1settings_a60023ab0ac98008d2c52a568e9ee540f}} 
+\index{pfd::settings@{pfd::settings}!rescan@{rescan}}
+\index{rescan@{rescan}!pfd::settings@{pfd::settings}}
+\doxysubsubsection{\texorpdfstring{rescan()}{rescan()}}
+{\footnotesize\ttfamily void pfd\+::settings\+::rescan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00581}{581}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00582\ \ \ \ \ \{}
+\DoxyCodeLine{00583\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a7190e52d512b1321acb78731a8cddf42}{settings}}(\textcolor{comment}{/*\ resync\ =\ */}\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00584\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpfd_1_1settings_a0ed32e8ed039106028474eb9f0a0a7bc}\label{classpfd_1_1settings_a0ed32e8ed039106028474eb9f0a0a7bc}} 
+\index{pfd::settings@{pfd::settings}!verbose@{verbose}}
+\index{verbose@{verbose}!pfd::settings@{pfd::settings}}
+\doxysubsubsection{\texorpdfstring{verbose()}{verbose()}}
+{\footnotesize\ttfamily void pfd\+::settings\+::verbose (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00576}{576}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00577\ \ \ \ \ \{}
+\DoxyCodeLine{00578\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a7190e52d512b1321acb78731a8cddf42}{settings}}().flags(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadad9da28952c27749f53c23675db49d560}{flag::is\_verbose}})\ =\ value;}
+\DoxyCodeLine{00579\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{FileDialog_8h}{File\+Dialog.\+h}}\end{DoxyCompactItemize}

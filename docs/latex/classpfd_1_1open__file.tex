@@ -1,0 +1,182 @@
+\hypertarget{classpfd_1_1open__file}{}\doxysection{pfd\+::open\+\_\+file Class Reference}
+\label{classpfd_1_1open__file}\index{pfd::open\_file@{pfd::open\_file}}
+
+
+{\ttfamily \#include $<$File\+Dialog.\+h$>$}
+
+Inheritance diagram for pfd\+::open\+\_\+file\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classpfd_1_1open__file}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpfd_1_1open__file_a6bb56d3681f50dee4294ddaf69e6ec82}{open\+\_\+file}} (std\+::string const \&title, std\+::string const \&default\+\_\+path=\char`\"{}\char`\"{}, std\+::vector$<$ std\+::string $>$ const \&filters=\{ \char`\"{}All Files\char`\"{}, \char`\"{}$\ast$\char`\"{} \}, \mbox{\hyperlink{namespacepfd_a1a482ccd57bb939dcbf7d9caacd3f997}{opt}} options=\mbox{\hyperlink{namespacepfd_a1a482ccd57bb939dcbf7d9caacd3f997a334c4a4c42fdb79d7ebc3e73b517e6f8}{opt\+::none}})
+\item 
+\mbox{\hyperlink{classpfd_1_1open__file_a47ceb23b5ed1e875318fd3d4ab6aff71}{open\+\_\+file}} (std\+::string const \&title, std\+::string const \&default\+\_\+path, std\+::vector$<$ std\+::string $>$ const \&filters, bool allow\+\_\+multiselect)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classpfd_1_1open__file_ad0f01c7de1fbb94343053c671ced8b0b}{result}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classpfd_1_1internal_1_1dialog}{pfd\+::internal\+::dialog}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a77f20e6063f83e601ce23ed4899907c6}{ready}} (int timeout=default\+\_\+wait\+\_\+timeout) const
+\item 
+bool \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a226b1502acd1d2cb86e34dd3df36772a}{kill}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Types inherited from \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog}{pfd\+::internal\+::file\+\_\+dialog}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fc}{type}} \{ \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca4fd9423739ee4c950107a4eef324c559}{open}}
+, \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca3b913d5d81b101f1f2b5cc544ef81f90}{save}}
+, \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca568b2ec66ef45be030a47ddc19bc7bba}{folder}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Types inherited from \mbox{\hyperlink{classpfd_1_1settings}{pfd\+::settings}}}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}{flag}} \{ \newline
+\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada11dd6b78f267a47638211f4c7e23d434}{is\+\_\+scanned}} = 0
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadad9da28952c27749f53c23675db49d560}{is\+\_\+verbose}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaee57842698a0690e4b89730b469edc31}{has\+\_\+zenity}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1267dfaf66b51761e04b042bb2c4dd7a}{has\+\_\+matedialog}}
+, \newline
+\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1a652e3d6a785053942b6cffc2c4669d}{has\+\_\+qarma}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1f1a19f0bf1fe1a63ed3e73e40466b4b}{has\+\_\+kdialog}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaea0bbb642237ecdaa68a14a0d7212448}{is\+\_\+vista}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada73b7af539db867cb9edf24a3cb7b8a36}{max\+\_\+flag}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog}{pfd\+::internal\+::file\+\_\+dialog}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a16f53945e61d23aa9b7fc373701dd13f}{file\+\_\+dialog}} (\mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fc}{type}} in\+\_\+type, std\+::string const \&title, std\+::string const \&default\+\_\+path=\char`\"{}\char`\"{}, std\+::vector$<$ std\+::string $>$ const \&filters=\{\}, \mbox{\hyperlink{namespacepfd_a1a482ccd57bb939dcbf7d9caacd3f997}{opt}} options=\mbox{\hyperlink{namespacepfd_a1a482ccd57bb939dcbf7d9caacd3f997a334c4a4c42fdb79d7ebc3e73b517e6f8}{opt\+::none}})
+\item 
+std\+::string \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_ac916440e9dcefba5cbd4f0e5bb8acbff}{string\+\_\+result}} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_ae28b6dd37ab4e47885ce7ca25652212b}{vector\+\_\+result}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classpfd_1_1internal_1_1dialog}{pfd\+::internal\+::dialog}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a05f9a4fcba8f8a9411d7dfaf18ee11ad}{dialog}} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_aadaf6cb30620c85f4b97993e3c819188}{desktop\+\_\+helper}} () const
+\item 
+std\+::string \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_aae2255eceb0b3b18b55d1618fd7e1635}{powershell\+\_\+quote}} (std\+::string const \&str) const
+\item 
+std\+::string \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_adc0ec6f5c8137cbdb0ea6669b5263a73}{osascript\+\_\+quote}} (std\+::string const \&str) const
+\item 
+std\+::string \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a1a4f28c3c2bbd1629f2f882314fff63e}{shell\+\_\+quote}} (std\+::string const \&str) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classpfd_1_1settings}{pfd\+::settings}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpfd_1_1settings_a7190e52d512b1321acb78731a8cddf42}{settings}} (bool resync=false)
+\item 
+bool \mbox{\hyperlink{classpfd_1_1settings_af1c2f6e88ffafd59a2f7609631a9eade}{check\+\_\+program}} (std\+::string const \&program)
+\item 
+bool \mbox{\hyperlink{classpfd_1_1settings_a4e22d6fb43d387ddc980bf6e2a6aad24}{is\+\_\+osascript}} () const
+\item 
+bool \mbox{\hyperlink{classpfd_1_1settings_a08e4a5b150186d77158a974cc8c2d4a2}{is\+\_\+zenity}} () const
+\item 
+bool \mbox{\hyperlink{classpfd_1_1settings_aa79fb10eee785f1acd8d1ff34e226c89}{is\+\_\+kdialog}} () const
+\item 
+bool const \& \mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}} (\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}{flag}} in\+\_\+flag) const
+\item 
+bool \& \mbox{\hyperlink{classpfd_1_1settings_a9b611d06856910f0d8c358dd0eadfcee}{flags}} (\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}{flag}} in\+\_\+flag)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions inherited from \mbox{\hyperlink{classpfd_1_1internal_1_1dialog}{pfd\+::internal\+::dialog}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_ac906c01d0365c13c9066cea857fd258a}{buttons\+\_\+to\+\_\+name}} (\mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8}{choice}} \+\_\+choice)
+\item 
+static std\+::string \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_ae94362bed052ab6050e38852712cb97a}{get\+\_\+icon\+\_\+name}} (\mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85}{icon}} \+\_\+icon)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions inherited from \mbox{\hyperlink{classpfd_1_1settings}{pfd\+::settings}}}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classpfd_1_1settings_a54fb5598e7501ac38d17e3629190b2fe}{available}} ()
+\item 
+static void \mbox{\hyperlink{classpfd_1_1settings_a0ed32e8ed039106028474eb9f0a0a7bc}{verbose}} (bool value)
+\item 
+static void \mbox{\hyperlink{classpfd_1_1settings_a60023ab0ac98008d2c52a568e9ee540f}{rescan}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{classpfd_1_1internal_1_1dialog}{pfd\+::internal\+::dialog}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpfd_1_1internal_1_1executor}{executor}} $>$ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a91f4b2666fb920a7859df9cdc079502d}{m\+\_\+async}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00367}{367}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpfd_1_1open__file_a6bb56d3681f50dee4294ddaf69e6ec82}\label{classpfd_1_1open__file_a6bb56d3681f50dee4294ddaf69e6ec82}} 
+\index{pfd::open\_file@{pfd::open\_file}!open\_file@{open\_file}}
+\index{open\_file@{open\_file}!pfd::open\_file@{pfd::open\_file}}
+\doxysubsubsection{\texorpdfstring{open\_file()}{open\_file()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily pfd\+::open\+\_\+file\+::open\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{title,  }\item[{std\+::string const \&}]{default\+\_\+path = {\ttfamily \char`\"{}\char`\"{}},  }\item[{std\+::vector$<$ std\+::string $>$ const \&}]{filters = {\ttfamily \{~\char`\"{}All~Files\char`\"{},~\char`\"{}$\ast$\char`\"{}~\}},  }\item[{\mbox{\hyperlink{namespacepfd_a1a482ccd57bb939dcbf7d9caacd3f997}{opt}}}]{options = {\ttfamily \mbox{\hyperlink{namespacepfd_a1a482ccd57bb939dcbf7d9caacd3f997a334c4a4c42fdb79d7ebc3e73b517e6f8}{opt\+::none}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l01825}{1825}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01829\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a16f53945e61d23aa9b7fc373701dd13f}{file\_dialog}}(\mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca4fd9423739ee4c950107a4eef324c559}{type::open}},\ title,\ default\_path,\ filters,\ options)}
+\DoxyCodeLine{01830\ \ \ \ \ \{}
+\DoxyCodeLine{01831\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpfd_1_1open__file_a47ceb23b5ed1e875318fd3d4ab6aff71}\label{classpfd_1_1open__file_a47ceb23b5ed1e875318fd3d4ab6aff71}} 
+\index{pfd::open\_file@{pfd::open\_file}!open\_file@{open\_file}}
+\index{open\_file@{open\_file}!pfd::open\_file@{pfd::open\_file}}
+\doxysubsubsection{\texorpdfstring{open\_file()}{open\_file()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily pfd\+::open\+\_\+file\+::open\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{title,  }\item[{std\+::string const \&}]{default\+\_\+path,  }\item[{std\+::vector$<$ std\+::string $>$ const \&}]{filters,  }\item[{bool}]{allow\+\_\+multiselect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l01833}{1833}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01837\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classpfd_1_1open__file_a6bb56d3681f50dee4294ddaf69e6ec82}{open\_file}}(title,\ default\_path,\ filters,}
+\DoxyCodeLine{01838\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (allow\_multiselect\ ?\ \mbox{\hyperlink{namespacepfd_a1a482ccd57bb939dcbf7d9caacd3f997ab66abfe0e0c2ef7c545895c12a0a8837}{opt::multiselect}}\ :\ \mbox{\hyperlink{namespacepfd_a1a482ccd57bb939dcbf7d9caacd3f997a334c4a4c42fdb79d7ebc3e73b517e6f8}{opt::none}}))}
+\DoxyCodeLine{01839\ \ \ \ \ \{}
+\DoxyCodeLine{01840\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpfd_1_1open__file_ad0f01c7de1fbb94343053c671ced8b0b}\label{classpfd_1_1open__file_ad0f01c7de1fbb94343053c671ced8b0b}} 
+\index{pfd::open\_file@{pfd::open\_file}!result@{result}}
+\index{result@{result}!pfd::open\_file@{pfd::open\_file}}
+\doxysubsubsection{\texorpdfstring{result()}{result()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ pfd\+::open\+\_\+file\+::result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l01842}{1842}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01843\ \ \ \ \ \{}
+\DoxyCodeLine{01844\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_ae28b6dd37ab4e47885ce7ca25652212b}{vector\_result}}();}
+\DoxyCodeLine{01845\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{FileDialog_8h}{File\+Dialog.\+h}}\end{DoxyCompactItemize}

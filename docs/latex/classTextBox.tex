@@ -1,0 +1,222 @@
+\hypertarget{classTextBox}{}\doxysection{Text\+Box Class Reference}
+\label{classTextBox}\index{TextBox@{TextBox}}
+
+
+{\ttfamily \#include $<$Textbox.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTextBox_a64c43f684f46258bd2cf36f6c61197c9}{Text\+Box}} (sf\+::\+Render\+Window $\ast$window, sf\+::\+Vector2f position, int size, sf\+::\+Color text\+Color, sf\+::\+Color box\+Color, int max\+Length)
+\item 
+void \mbox{\hyperlink{classTextBox_a9f2c6d36865f6a6c1b546a9fcff29924}{poll\+Event}} (sf\+::\+Event event)
+\item 
+void \mbox{\hyperlink{classTextBox_afa0bba711f542abe6c4d304fe2773cd9}{update}} ()
+\item 
+void \mbox{\hyperlink{classTextBox_a786758eb5ae6caa0ed299bf45d5715a5}{render}} ()
+\item 
+std\+::string \mbox{\hyperlink{classTextBox_a0b7094d6739337a7c7c2dc1abe6d2a92}{get\+Text\+String}} () const
+\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{classTextBox_aad20d6bfe62fdfb0e39689c26420a2a2}{get\+Box}} () const
+\item 
+void \mbox{\hyperlink{classTextBox_a8d88d610f8eea49a8c70d18902136185}{reset\+Input}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{Textbox_8hpp_source_l00013}{13}} of file \mbox{\hyperlink{Textbox_8hpp_source}{Textbox.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTextBox_a64c43f684f46258bd2cf36f6c61197c9}\label{classTextBox_a64c43f684f46258bd2cf36f6c61197c9}} 
+\index{TextBox@{TextBox}!TextBox@{TextBox}}
+\index{TextBox@{TextBox}!TextBox@{TextBox}}
+\doxysubsubsection{\texorpdfstring{TextBox()}{TextBox()}}
+{\footnotesize\ttfamily Text\+Box\+::\+Text\+Box (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window,  }\item[{sf\+::\+Vector2f}]{position,  }\item[{int}]{size,  }\item[{sf\+::\+Color}]{text\+Color,  }\item[{sf\+::\+Color}]{box\+Color,  }\item[{int}]{max\+Length }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Textbox_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{Textbox_8cpp_source}{Textbox.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ this-\/>window\ =\ window;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ this-\/>cursor\ =\ \textcolor{stringliteral}{"{}|"{}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ this-\/>box.setPosition(position);}
+\DoxyCodeLine{00014\ \ \ \ \ this-\/>box.setSize(sf::Vector2f(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}((maxLength\ +\ 1)\ *\ 12),\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(size\ *\ 1.5)));}
+\DoxyCodeLine{00015\ \ \ \ \ this-\/>box.setFillColor(boxColor);}
+\DoxyCodeLine{00016\ \ \ \ \ this-\/>box.setOutlineColor(sf::Color::Black);}
+\DoxyCodeLine{00017\ \ \ \ \ this-\/>box.setOutlineThickness(1);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ this-\/>font.loadFromFile(\mbox{\hyperlink{namespaceconstants_a23f8c84b0e1ce702055ff67135fbf428}{constants::fontPath}});}
+\DoxyCodeLine{00020\ \ \ \ \ this-\/>text.setFont(this-\/>font);}
+\DoxyCodeLine{00021\ \ \ \ \ this-\/>text.setCharacterSize(size);}
+\DoxyCodeLine{00022\ \ \ \ \ this-\/>text.setFillColor(textColor);}
+\DoxyCodeLine{00023\ \ \ \ \ this-\/>text.setPosition(position);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ this-\/>maxLength\ =\ maxLength;}
+\DoxyCodeLine{00026\ \ \ \ \ this-\/>textColor\ =\ textColor;}
+\DoxyCodeLine{00027\ \ \ \ \ this-\/>boxColor\ =\ boxColor;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ this-\/>cursorVisible\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00030\ \ \ \ \ this-\/>flickerClock.restart();}
+\DoxyCodeLine{00031\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTextBox_aad20d6bfe62fdfb0e39689c26420a2a2}\label{classTextBox_aad20d6bfe62fdfb0e39689c26420a2a2}} 
+\index{TextBox@{TextBox}!getBox@{getBox}}
+\index{getBox@{getBox}!TextBox@{TextBox}}
+\doxysubsubsection{\texorpdfstring{getBox()}{getBox()}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape Text\+Box\+::get\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{Textbox_8cpp_source_l00088}{88}} of file \mbox{\hyperlink{Textbox_8cpp_source}{Textbox.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>box;}
+\DoxyCodeLine{00090\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTextBox_a0b7094d6739337a7c7c2dc1abe6d2a92}\label{classTextBox_a0b7094d6739337a7c7c2dc1abe6d2a92}} 
+\index{TextBox@{TextBox}!getTextString@{getTextString}}
+\index{getTextString@{getTextString}!TextBox@{TextBox}}
+\doxysubsubsection{\texorpdfstring{getTextString()}{getTextString()}}
+{\footnotesize\ttfamily std\+::string Text\+Box\+::get\+Text\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{Textbox_8cpp_source_l00084}{84}} of file \mbox{\hyperlink{Textbox_8cpp_source}{Textbox.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>inputString;}
+\DoxyCodeLine{00086\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTextBox_a9f2c6d36865f6a6c1b546a9fcff29924}\label{classTextBox_a9f2c6d36865f6a6c1b546a9fcff29924}} 
+\index{TextBox@{TextBox}!pollEvent@{pollEvent}}
+\index{pollEvent@{pollEvent}!TextBox@{TextBox}}
+\doxysubsubsection{\texorpdfstring{pollEvent()}{pollEvent()}}
+{\footnotesize\ttfamily void Text\+Box\+::poll\+Event (\begin{DoxyParamCaption}\item[{sf\+::\+Event}]{event }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Textbox_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{Textbox_8cpp_source}{Textbox.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordflow}{if}\ (event.type\ ==\ sf::Event::TextEntered)}
+\DoxyCodeLine{00035\ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (event.text.unicode\ ==\ \textcolor{charliteral}{'\(\backslash\)b'})}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!this-\/>inputString.empty())}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>inputString.pop\_back();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (((48\ <=\ event.text.unicode\ \&\&\ event.text.unicode\ <=\ 57)\ ||\ event.text.unicode\ ==\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(\textcolor{charliteral}{','}))\ \&\&\ this-\/>inputString.size()\ <\ this-\/>maxLength)}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>inputString\ +=\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{char}\textcolor{keyword}{>}(\textcolor{keyword}{event}.text.unicode);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ this-\/>text.setString(this-\/>inputString);}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{comment}{//\ \ \ \ if\ (event.type\ ==\ sf::Event::Resized)}}
+\DoxyCodeLine{00052\ \textcolor{comment}{//\ \ \ \ \{}}
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ \ \ \ \ \ \ \ box.setPosition(}}
+\DoxyCodeLine{00054\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ static\_cast<float>(this-\/>window-\/>getSize().x)\ /\ 2\ -\/\ box.getSize().x\ /\ 2,}}
+\DoxyCodeLine{00055\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ static\_cast<float>(this-\/>window-\/>getSize().y)\ /\ 2\ -\/\ box.getSize().y\ /\ 2}}
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}}
+\DoxyCodeLine{00057\ \textcolor{comment}{//\ \ \ \ \ \ \ \ text.setPosition(box.getPosition().x\ +\ 10,\ box.getPosition().y);}}
+\DoxyCodeLine{00058\ \textcolor{comment}{//\ \ \ \ \ \ \ \ cursor.setPosition(text.getGlobalBounds().width\ +\ text.getPosition().x,\ cursor.getPosition().y);}}
+\DoxyCodeLine{00059\ \textcolor{comment}{//\ \ \ \ \}}}
+\DoxyCodeLine{00060\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTextBox_a786758eb5ae6caa0ed299bf45d5715a5}\label{classTextBox_a786758eb5ae6caa0ed299bf45d5715a5}} 
+\index{TextBox@{TextBox}!render@{render}}
+\index{render@{render}!TextBox@{TextBox}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Text\+Box\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Textbox_8cpp_source_l00079}{79}} of file \mbox{\hyperlink{Textbox_8cpp_source}{Textbox.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ this-\/>window-\/>draw(this-\/>box);}
+\DoxyCodeLine{00081\ \ \ \ \ this-\/>window-\/>draw(this-\/>text);}
+\DoxyCodeLine{00082\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTextBox_a8d88d610f8eea49a8c70d18902136185}\label{classTextBox_a8d88d610f8eea49a8c70d18902136185}} 
+\index{TextBox@{TextBox}!resetInput@{resetInput}}
+\index{resetInput@{resetInput}!TextBox@{TextBox}}
+\doxysubsubsection{\texorpdfstring{resetInput()}{resetInput()}}
+{\footnotesize\ttfamily void Text\+Box\+::reset\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Textbox_8cpp_source_l00092}{92}} of file \mbox{\hyperlink{Textbox_8cpp_source}{Textbox.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00093\ \ \ \ \ this-\/>inputString\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00094\ \ \ \ \ this-\/>text.setString(this-\/>inputString);}
+\DoxyCodeLine{00095\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTextBox_afa0bba711f542abe6c4d304fe2773cd9}\label{classTextBox_afa0bba711f542abe6c4d304fe2773cd9}} 
+\index{TextBox@{TextBox}!update@{update}}
+\index{update@{update}!TextBox@{TextBox}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Text\+Box\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Textbox_8cpp_source_l00062}{62}} of file \mbox{\hyperlink{Textbox_8cpp_source}{Textbox.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>flickerClock.getElapsedTime().asSeconds()\ >=\ 0.5)}
+\DoxyCodeLine{00064\ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ this-\/>cursorVisible\ =\ !this-\/>cursorVisible;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ this-\/>flickerClock.restart();}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>cursorVisible)}
+\DoxyCodeLine{00070\ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ this-\/>text.setString(this-\/>inputString\ +\ this-\/>cursor);}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00074\ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ this-\/>text.setString(this-\/>inputString);}
+\DoxyCodeLine{00076\ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/stuff/\mbox{\hyperlink{Textbox_8hpp}{Textbox.\+hpp}}\item 
+include/stuff/\mbox{\hyperlink{Textbox_8cpp}{Textbox.\+cpp}}\end{DoxyCompactItemize}

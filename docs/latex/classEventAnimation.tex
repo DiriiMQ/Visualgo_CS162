@@ -1,0 +1,272 @@
+\hypertarget{classEventAnimation}{}\doxysection{Event\+Animation Class Reference}
+\label{classEventAnimation}\index{EventAnimation@{EventAnimation}}
+
+
+{\ttfamily \#include $<$Event\+Animation.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEventAnimation_a765d2bb093bb9c3f518c4b5bb18f5236}{Event\+Animation}} ()
+\item 
+\mbox{\hyperlink{classEventAnimation_a794269319e23a03bbcb3a619aecce77b}{$\sim$\+Event\+Animation}} ()
+\item 
+\mbox{\hyperlink{classEventAnimation}{Event\+Animation}} \& \mbox{\hyperlink{classEventAnimation_aa1231a08eee81a0b86465dc0dc87597f}{operator=}} (const \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} \&other)
+\item 
+void \mbox{\hyperlink{classEventAnimation_a5f33dad93259b5a14cbd9dbc2ad5ae15}{reset}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::pair$<$ int, std\+::string $>$ $>$ \mbox{\hyperlink{classEventAnimation_aad586f4d7c44abae712925e20061c43f}{title\+Nodes}}
+\item 
+std\+::vector$<$ std\+::pair$<$ int, \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}{Node\+Info\+::\+Arrow\+Type}} $>$ $>$ \mbox{\hyperlink{classEventAnimation_a428d1668fa7be042c5cec5026461e5ef}{color\+Arrows}}
+\item 
+std\+::vector$<$ std\+::pair$<$ int, \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}{Node\+Info\+::\+Arrow\+Type}} $>$ $>$ \mbox{\hyperlink{classEventAnimation_abd802a4b6b767be3f35ac0358a7fc985}{hidden\+Arrows}}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classEventAnimation_a0f96f7c329496d4567d64b49f39ec029}{color\+Nodes}}
+\item 
+\mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6}{Node\+Info\+::\+Status\+Node}} \mbox{\hyperlink{classEventAnimation_a141c20daede57695739ee175fbafa51c}{status\+Chosen\+Node}}
+\item 
+bool \mbox{\hyperlink{classEventAnimation_a2bf58281a5685da4d98fdcddd59d8f22}{is\+Print\+Pre\+Val}}
+\item 
+bool \mbox{\hyperlink{classEventAnimation_abe59abb804fdc7b1c70dd4c41d045390}{is\+Print\+Normal}}
+\item 
+bool \mbox{\hyperlink{classEventAnimation_a48b724181c5790fa230b648d124bacff}{is\+Show\+Back\+Arrow}}
+\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classEventAnimation_ad5877676e49fd0d27f4599767b96b517}{index\+Back\+Arrow}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structEventSquare}{Event\+Square}} $>$ \mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{event\+Squares}} \{\}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structEventSquare}{Event\+Square}} $>$ \mbox{\hyperlink{classEventAnimation_adeb76c2aa1c630148e72c45e9f2228e8}{event\+Squares\+Temp}} \{\}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classEventAnimation_a4112812c9d97a0846125e80ec60b34d1}{lines}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{EventAnimation_8hpp_source_l00020}{20}} of file \mbox{\hyperlink{EventAnimation_8hpp_source}{Event\+Animation.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEventAnimation_a765d2bb093bb9c3f518c4b5bb18f5236}\label{classEventAnimation_a765d2bb093bb9c3f518c4b5bb18f5236}} 
+\index{EventAnimation@{EventAnimation}!EventAnimation@{EventAnimation}}
+\index{EventAnimation@{EventAnimation}!EventAnimation@{EventAnimation}}
+\doxysubsubsection{\texorpdfstring{EventAnimation()}{EventAnimation()}}
+{\footnotesize\ttfamily Event\+Animation\+::\+Event\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{EventAnimation_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{EventAnimation_8cpp_source}{Event\+Animation.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00008\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_a141c20daede57695739ee175fbafa51c}{statusChosenNode}}\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6a4ddc1f10c5822c174470affbb45f9901}{NodeInfo::StatusNode::InChain}};}
+\DoxyCodeLine{00009\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_a2bf58281a5685da4d98fdcddd59d8f22}{isPrintPreVal}}\ =\ this-\/>\mbox{\hyperlink{classEventAnimation_abe59abb804fdc7b1c70dd4c41d045390}{isPrintNormal}}\ =\ this-\/>\mbox{\hyperlink{classEventAnimation_a48b724181c5790fa230b648d124bacff}{isShowBackArrow}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00010\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_ad5877676e49fd0d27f4599767b96b517}{indexBackArrow}}\ =\ \{-\/1,\ -\/1\};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_aad586f4d7c44abae712925e20061c43f}{titleNodes}}\ =\ \{\};}
+\DoxyCodeLine{00013\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_a428d1668fa7be042c5cec5026461e5ef}{colorArrows}}\ =\ \{\};}
+\DoxyCodeLine{00014\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_abd802a4b6b767be3f35ac0358a7fc985}{hiddenArrows}}\ =\ \{\};}
+\DoxyCodeLine{00015\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_a0f96f7c329496d4567d64b49f39ec029}{colorNodes}}\ =\ \{\};}
+\DoxyCodeLine{00016\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_a4112812c9d97a0846125e80ec60b34d1}{lines}}\ =\ \{\};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}\ =\ \{\};}
+\DoxyCodeLine{00019\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_adeb76c2aa1c630148e72c45e9f2228e8}{eventSquaresTemp}}\ =\ \{\};}
+\DoxyCodeLine{00020\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEventAnimation_a794269319e23a03bbcb3a619aecce77b}\label{classEventAnimation_a794269319e23a03bbcb3a619aecce77b}} 
+\index{EventAnimation@{EventAnimation}!````~EventAnimation@{$\sim$EventAnimation}}
+\index{````~EventAnimation@{$\sim$EventAnimation}!EventAnimation@{EventAnimation}}
+\doxysubsubsection{\texorpdfstring{$\sim$EventAnimation()}{~EventAnimation()}}
+{\footnotesize\ttfamily Event\+Animation\+::$\sim$\+Event\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{EventAnimation_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{EventAnimation_8cpp_source}{Event\+Animation.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_aad586f4d7c44abae712925e20061c43f}{titleNodes}}\ =\ \{\};}
+\DoxyCodeLine{00039\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_a428d1668fa7be042c5cec5026461e5ef}{colorArrows}}\ =\ \{\};}
+\DoxyCodeLine{00040\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_abd802a4b6b767be3f35ac0358a7fc985}{hiddenArrows}}\ =\ \{\};}
+\DoxyCodeLine{00041\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_a0f96f7c329496d4567d64b49f39ec029}{colorNodes}}\ =\ \{\};}
+\DoxyCodeLine{00042\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_a4112812c9d97a0846125e80ec60b34d1}{lines}}\ =\ \{\};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}\ =\ \{\};}
+\DoxyCodeLine{00045\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_adeb76c2aa1c630148e72c45e9f2228e8}{eventSquaresTemp}}\ =\ \{\};}
+\DoxyCodeLine{00046\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEventAnimation_aa1231a08eee81a0b86465dc0dc87597f}\label{classEventAnimation_aa1231a08eee81a0b86465dc0dc87597f}} 
+\index{EventAnimation@{EventAnimation}!operator=@{operator=}}
+\index{operator=@{operator=}!EventAnimation@{EventAnimation}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} \& Event\+Animation\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classEventAnimation_a5f33dad93259b5a14cbd9dbc2ad5ae15}\label{classEventAnimation_a5f33dad93259b5a14cbd9dbc2ad5ae15}} 
+\index{EventAnimation@{EventAnimation}!reset@{reset}}
+\index{reset@{reset}!EventAnimation@{EventAnimation}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Event\+Animation\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{EventAnimation_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{EventAnimation_8cpp_source}{Event\+Animation.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_aad586f4d7c44abae712925e20061c43f}{titleNodes}}.clear();}
+\DoxyCodeLine{00024\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_a428d1668fa7be042c5cec5026461e5ef}{colorArrows}}.clear();}
+\DoxyCodeLine{00025\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_abd802a4b6b767be3f35ac0358a7fc985}{hiddenArrows}}.clear();}
+\DoxyCodeLine{00026\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_a0f96f7c329496d4567d64b49f39ec029}{colorNodes}}.clear();}
+\DoxyCodeLine{00027\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_a4112812c9d97a0846125e80ec60b34d1}{lines}}.clear();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_a141c20daede57695739ee175fbafa51c}{statusChosenNode}}\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6a4ddc1f10c5822c174470affbb45f9901}{NodeInfo::StatusNode::InChain}};}
+\DoxyCodeLine{00030\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_a2bf58281a5685da4d98fdcddd59d8f22}{isPrintPreVal}}\ =\ this-\/>\mbox{\hyperlink{classEventAnimation_abe59abb804fdc7b1c70dd4c41d045390}{isPrintNormal}}\ =\ this-\/>\mbox{\hyperlink{classEventAnimation_a48b724181c5790fa230b648d124bacff}{isShowBackArrow}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00031\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_ad5877676e49fd0d27f4599767b96b517}{indexBackArrow}}\ =\ \{-\/1,\ -\/1\};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}.clear();}
+\DoxyCodeLine{00034\ \ \ \ \ this-\/>\mbox{\hyperlink{classEventAnimation_adeb76c2aa1c630148e72c45e9f2228e8}{eventSquaresTemp}}.clear();}
+\DoxyCodeLine{00035\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classEventAnimation_a428d1668fa7be042c5cec5026461e5ef}\label{classEventAnimation_a428d1668fa7be042c5cec5026461e5ef}} 
+\index{EventAnimation@{EventAnimation}!colorArrows@{colorArrows}}
+\index{colorArrows@{colorArrows}!EventAnimation@{EventAnimation}}
+\doxysubsubsection{\texorpdfstring{colorArrows}{colorArrows}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::pair$<$int, \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}{Node\+Info\+::\+Arrow\+Type}}$>$ $>$ Event\+Animation\+::color\+Arrows}
+
+
+
+Definition at line \mbox{\hyperlink{EventAnimation_8hpp_source_l00024}{24}} of file \mbox{\hyperlink{EventAnimation_8hpp_source}{Event\+Animation.\+hpp}}.
+
+\mbox{\Hypertarget{classEventAnimation_a0f96f7c329496d4567d64b49f39ec029}\label{classEventAnimation_a0f96f7c329496d4567d64b49f39ec029}} 
+\index{EventAnimation@{EventAnimation}!colorNodes@{colorNodes}}
+\index{colorNodes@{colorNodes}!EventAnimation@{EventAnimation}}
+\doxysubsubsection{\texorpdfstring{colorNodes}{colorNodes}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ Event\+Animation\+::color\+Nodes}
+
+
+
+Definition at line \mbox{\hyperlink{EventAnimation_8hpp_source_l00026}{26}} of file \mbox{\hyperlink{EventAnimation_8hpp_source}{Event\+Animation.\+hpp}}.
+
+\mbox{\Hypertarget{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}\label{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}} 
+\index{EventAnimation@{EventAnimation}!eventSquares@{eventSquares}}
+\index{eventSquares@{eventSquares}!EventAnimation@{EventAnimation}}
+\doxysubsubsection{\texorpdfstring{eventSquares}{eventSquares}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structEventSquare}{Event\+Square}}$>$ Event\+Animation\+::event\+Squares \{\}}
+
+
+
+Definition at line \mbox{\hyperlink{EventAnimation_8hpp_source_l00032}{32}} of file \mbox{\hyperlink{EventAnimation_8hpp_source}{Event\+Animation.\+hpp}}.
+
+\mbox{\Hypertarget{classEventAnimation_adeb76c2aa1c630148e72c45e9f2228e8}\label{classEventAnimation_adeb76c2aa1c630148e72c45e9f2228e8}} 
+\index{EventAnimation@{EventAnimation}!eventSquaresTemp@{eventSquaresTemp}}
+\index{eventSquaresTemp@{eventSquaresTemp}!EventAnimation@{EventAnimation}}
+\doxysubsubsection{\texorpdfstring{eventSquaresTemp}{eventSquaresTemp}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structEventSquare}{Event\+Square}}$>$ Event\+Animation\+::event\+Squares\+Temp \{\}}
+
+
+
+Definition at line \mbox{\hyperlink{EventAnimation_8hpp_source_l00032}{32}} of file \mbox{\hyperlink{EventAnimation_8hpp_source}{Event\+Animation.\+hpp}}.
+
+\mbox{\Hypertarget{classEventAnimation_abd802a4b6b767be3f35ac0358a7fc985}\label{classEventAnimation_abd802a4b6b767be3f35ac0358a7fc985}} 
+\index{EventAnimation@{EventAnimation}!hiddenArrows@{hiddenArrows}}
+\index{hiddenArrows@{hiddenArrows}!EventAnimation@{EventAnimation}}
+\doxysubsubsection{\texorpdfstring{hiddenArrows}{hiddenArrows}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::pair$<$int, \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}{Node\+Info\+::\+Arrow\+Type}}$>$ $>$ Event\+Animation\+::hidden\+Arrows}
+
+
+
+Definition at line \mbox{\hyperlink{EventAnimation_8hpp_source_l00025}{25}} of file \mbox{\hyperlink{EventAnimation_8hpp_source}{Event\+Animation.\+hpp}}.
+
+\mbox{\Hypertarget{classEventAnimation_ad5877676e49fd0d27f4599767b96b517}\label{classEventAnimation_ad5877676e49fd0d27f4599767b96b517}} 
+\index{EventAnimation@{EventAnimation}!indexBackArrow@{indexBackArrow}}
+\index{indexBackArrow@{indexBackArrow}!EventAnimation@{EventAnimation}}
+\doxysubsubsection{\texorpdfstring{indexBackArrow}{indexBackArrow}}
+{\footnotesize\ttfamily std\+::pair$<$int, int$>$ Event\+Animation\+::index\+Back\+Arrow}
+
+
+
+Definition at line \mbox{\hyperlink{EventAnimation_8hpp_source_l00029}{29}} of file \mbox{\hyperlink{EventAnimation_8hpp_source}{Event\+Animation.\+hpp}}.
+
+\mbox{\Hypertarget{classEventAnimation_abe59abb804fdc7b1c70dd4c41d045390}\label{classEventAnimation_abe59abb804fdc7b1c70dd4c41d045390}} 
+\index{EventAnimation@{EventAnimation}!isPrintNormal@{isPrintNormal}}
+\index{isPrintNormal@{isPrintNormal}!EventAnimation@{EventAnimation}}
+\doxysubsubsection{\texorpdfstring{isPrintNormal}{isPrintNormal}}
+{\footnotesize\ttfamily bool Event\+Animation\+::is\+Print\+Normal}
+
+
+
+Definition at line \mbox{\hyperlink{EventAnimation_8hpp_source_l00028}{28}} of file \mbox{\hyperlink{EventAnimation_8hpp_source}{Event\+Animation.\+hpp}}.
+
+\mbox{\Hypertarget{classEventAnimation_a2bf58281a5685da4d98fdcddd59d8f22}\label{classEventAnimation_a2bf58281a5685da4d98fdcddd59d8f22}} 
+\index{EventAnimation@{EventAnimation}!isPrintPreVal@{isPrintPreVal}}
+\index{isPrintPreVal@{isPrintPreVal}!EventAnimation@{EventAnimation}}
+\doxysubsubsection{\texorpdfstring{isPrintPreVal}{isPrintPreVal}}
+{\footnotesize\ttfamily bool Event\+Animation\+::is\+Print\+Pre\+Val}
+
+
+
+Definition at line \mbox{\hyperlink{EventAnimation_8hpp_source_l00028}{28}} of file \mbox{\hyperlink{EventAnimation_8hpp_source}{Event\+Animation.\+hpp}}.
+
+\mbox{\Hypertarget{classEventAnimation_a48b724181c5790fa230b648d124bacff}\label{classEventAnimation_a48b724181c5790fa230b648d124bacff}} 
+\index{EventAnimation@{EventAnimation}!isShowBackArrow@{isShowBackArrow}}
+\index{isShowBackArrow@{isShowBackArrow}!EventAnimation@{EventAnimation}}
+\doxysubsubsection{\texorpdfstring{isShowBackArrow}{isShowBackArrow}}
+{\footnotesize\ttfamily bool Event\+Animation\+::is\+Show\+Back\+Arrow}
+
+
+
+Definition at line \mbox{\hyperlink{EventAnimation_8hpp_source_l00028}{28}} of file \mbox{\hyperlink{EventAnimation_8hpp_source}{Event\+Animation.\+hpp}}.
+
+\mbox{\Hypertarget{classEventAnimation_a4112812c9d97a0846125e80ec60b34d1}\label{classEventAnimation_a4112812c9d97a0846125e80ec60b34d1}} 
+\index{EventAnimation@{EventAnimation}!lines@{lines}}
+\index{lines@{lines}!EventAnimation@{EventAnimation}}
+\doxysubsubsection{\texorpdfstring{lines}{lines}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ Event\+Animation\+::lines}
+
+
+
+Definition at line \mbox{\hyperlink{EventAnimation_8hpp_source_l00034}{34}} of file \mbox{\hyperlink{EventAnimation_8hpp_source}{Event\+Animation.\+hpp}}.
+
+\mbox{\Hypertarget{classEventAnimation_a141c20daede57695739ee175fbafa51c}\label{classEventAnimation_a141c20daede57695739ee175fbafa51c}} 
+\index{EventAnimation@{EventAnimation}!statusChosenNode@{statusChosenNode}}
+\index{statusChosenNode@{statusChosenNode}!EventAnimation@{EventAnimation}}
+\doxysubsubsection{\texorpdfstring{statusChosenNode}{statusChosenNode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6}{Node\+Info\+::\+Status\+Node}} Event\+Animation\+::status\+Chosen\+Node}
+
+
+
+Definition at line \mbox{\hyperlink{EventAnimation_8hpp_source_l00027}{27}} of file \mbox{\hyperlink{EventAnimation_8hpp_source}{Event\+Animation.\+hpp}}.
+
+\mbox{\Hypertarget{classEventAnimation_aad586f4d7c44abae712925e20061c43f}\label{classEventAnimation_aad586f4d7c44abae712925e20061c43f}} 
+\index{EventAnimation@{EventAnimation}!titleNodes@{titleNodes}}
+\index{titleNodes@{titleNodes}!EventAnimation@{EventAnimation}}
+\doxysubsubsection{\texorpdfstring{titleNodes}{titleNodes}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::pair$<$int, std\+::string$>$ $>$ Event\+Animation\+::title\+Nodes}
+
+
+
+Definition at line \mbox{\hyperlink{EventAnimation_8hpp_source_l00023}{23}} of file \mbox{\hyperlink{EventAnimation_8hpp_source}{Event\+Animation.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{EventAnimation_8hpp}{Event\+Animation.\+hpp}}\item 
+include/core/\mbox{\hyperlink{EventAnimation_8cpp}{Event\+Animation.\+cpp}}\end{DoxyCompactItemize}

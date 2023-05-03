@@ -1,0 +1,226 @@
+\hypertarget{classSingleNode}{}\doxysection{Single\+Node Class Reference}
+\label{classSingleNode}\index{SingleNode@{SingleNode}}
+
+
+{\ttfamily \#include $<$Single\+Node.\+hpp$>$}
+
+Inheritance diagram for Single\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSingleNode}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSingleNode_aa950269b54ffe3732fa9dff8d65fb1b0}{Single\+Node}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}}, std\+::string value, sf\+::\+Vector2f position)
+\item 
+void \mbox{\hyperlink{classSingleNode_a2e9f4313eb93b679543f33febdb5f04a}{render}} () override
+\item 
+void \mbox{\hyperlink{classSingleNode_a7dfed02b10b7b1e1702c5d1617cecf7c}{toggle\+Active\+Color}} ()
+\item 
+void \mbox{\hyperlink{classSingleNode_a8b8b3567fcbd74a9f0186346fa36afa7}{reset\+Color}} ()
+\item 
+void \mbox{\hyperlink{classSingleNode_ac08341e78ba3f707a8600a904b417d82}{set\+Text}} (std\+::string \+\_\+value)
+\item 
+void \mbox{\hyperlink{classSingleNode_a4b1a5d0ac7eefba2570543fde83d1dbf}{set\+Position}} (sf\+::\+Vector2f position)
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classSingleNode_a633ab92468fb3fff2b100004ac1c0398}{get\+Position}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBaseDraw}{Base\+Draw}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBaseDraw_ac359be43debbd846b809639a39aff0f2}{Base\+Draw}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}})
+\item 
+virtual void \mbox{\hyperlink{classBaseDraw_ab7eb16791faed1ce844d963d9e2acf38}{render}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Font \mbox{\hyperlink{classSingleNode_a3b454c14d99e1df944116f1553589a7f}{font}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBaseDraw}{Base\+Draw}}}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Render\+Window $\ast$ \mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{SingleNode_8hpp_source_l00012}{12}} of file \mbox{\hyperlink{SingleNode_8hpp_source}{Single\+Node.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSingleNode_aa950269b54ffe3732fa9dff8d65fb1b0}\label{classSingleNode_aa950269b54ffe3732fa9dff8d65fb1b0}} 
+\index{SingleNode@{SingleNode}!SingleNode@{SingleNode}}
+\index{SingleNode@{SingleNode}!SingleNode@{SingleNode}}
+\doxysubsubsection{\texorpdfstring{SingleNode()}{SingleNode()}}
+{\footnotesize\ttfamily Single\+Node\+::\+Single\+Node (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window,  }\item[{std\+::string}]{value,  }\item[{sf\+::\+Vector2f}]{position }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{SingleNode_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{SingleNode_8cpp_source}{Single\+Node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classBaseDraw}{BaseDraw}}(\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}})\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ this-\/>value\ =\ std::move(value);}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ this-\/>circle.setRadius(constants::NodeInfo::radius);}
+\DoxyCodeLine{00011\ \ \ \ \ this-\/>circle.setFillColor(sf::Color::White);}
+\DoxyCodeLine{00012\ \ \ \ \ this-\/>circle.setOutlineThickness(constants::NodeInfo::outlineThickness);}
+\DoxyCodeLine{00013\ \ \ \ \ this-\/>circle.setOutlineColor(sf::Color::Black);}
+\DoxyCodeLine{00014\ \ \ \ \ this-\/>circle.setPointCount(constants::NodeInfo::pointCount);}
+\DoxyCodeLine{00015\ \ \ \ \ sf::FloatRect\ bounds\ =\ this-\/>circle.getLocalBounds();}
+\DoxyCodeLine{00016\ \ \ \ \ this-\/>circle.setOrigin(bounds.left\ +\ bounds.width\ /\ 2.0f,bounds.top\ +\ bounds.height\ /\ 2.0f);}
+\DoxyCodeLine{00017\ \ \ \ \ this-\/>circle.setPosition(position);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ this-\/>\mbox{\hyperlink{classSingleNode_a3b454c14d99e1df944116f1553589a7f}{font}}.loadFromFile(\mbox{\hyperlink{namespaceconstants_a23f8c84b0e1ce702055ff67135fbf428}{constants::fontPath}});}
+\DoxyCodeLine{00020\ \ \ \ \ this-\/>label.setFont(this-\/>\mbox{\hyperlink{classSingleNode_a3b454c14d99e1df944116f1553589a7f}{font}});}
+\DoxyCodeLine{00021\ \ \ \ \ this-\/>label.setString(this-\/>value);}
+\DoxyCodeLine{00022\ \ \ \ \ this-\/>label.setCharacterSize(constants::NodeInfo::fontSize);}
+\DoxyCodeLine{00023\ \ \ \ \ this-\/>label.setFillColor(sf::Color::Black);}
+\DoxyCodeLine{00024\ \ \ \ \ bounds\ =\ this-\/>label.getLocalBounds();}
+\DoxyCodeLine{00025\ \ \ \ \ this-\/>label.setOrigin(bounds.left\ +\ bounds.width\ /\ 2.0f,\ bounds.top\ +\ bounds.height\ /\ 2.0f);}
+\DoxyCodeLine{00026\ \ \ \ \ this-\/>label.setPosition(position);}
+\DoxyCodeLine{00027\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSingleNode_a633ab92468fb3fff2b100004ac1c0398}\label{classSingleNode_a633ab92468fb3fff2b100004ac1c0398}} 
+\index{SingleNode@{SingleNode}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!SingleNode@{SingleNode}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Single\+Node\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{SingleNode_8cpp_source_l00047}{47}} of file \mbox{\hyperlink{SingleNode_8cpp_source}{Single\+Node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>circle.getPosition();}
+\DoxyCodeLine{00049\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSingleNode_a2e9f4313eb93b679543f33febdb5f04a}\label{classSingleNode_a2e9f4313eb93b679543f33febdb5f04a}} 
+\index{SingleNode@{SingleNode}!render@{render}}
+\index{render@{render}!SingleNode@{SingleNode}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Single\+Node\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classBaseDraw_ab7eb16791faed1ce844d963d9e2acf38}{Base\+Draw}}.
+
+
+
+Definition at line \mbox{\hyperlink{SingleNode_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{SingleNode_8cpp_source}{Single\+Node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}}-\/>draw(this-\/>circle);}
+\DoxyCodeLine{00031\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}}-\/>draw(this-\/>label);}
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSingleNode_a8b8b3567fcbd74a9f0186346fa36afa7}\label{classSingleNode_a8b8b3567fcbd74a9f0186346fa36afa7}} 
+\index{SingleNode@{SingleNode}!resetColor@{resetColor}}
+\index{resetColor@{resetColor}!SingleNode@{SingleNode}}
+\doxysubsubsection{\texorpdfstring{resetColor()}{resetColor()}}
+{\footnotesize\ttfamily void Single\+Node\+::reset\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{SingleNode_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{SingleNode_8cpp_source}{Single\+Node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ this-\/>circle.setOutlineColor(sf::Color::Black);}
+\DoxyCodeLine{00040\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSingleNode_a4b1a5d0ac7eefba2570543fde83d1dbf}\label{classSingleNode_a4b1a5d0ac7eefba2570543fde83d1dbf}} 
+\index{SingleNode@{SingleNode}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!SingleNode@{SingleNode}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Single\+Node\+::set\+Position (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{SingleNode_8cpp_source_l00042}{42}} of file \mbox{\hyperlink{SingleNode_8cpp_source}{Single\+Node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ this-\/>circle.setPosition(position);}
+\DoxyCodeLine{00044\ \ \ \ \ this-\/>label.setPosition(position);}
+\DoxyCodeLine{00045\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSingleNode_ac08341e78ba3f707a8600a904b417d82}\label{classSingleNode_ac08341e78ba3f707a8600a904b417d82}} 
+\index{SingleNode@{SingleNode}!setText@{setText}}
+\index{setText@{setText}!SingleNode@{SingleNode}}
+\doxysubsubsection{\texorpdfstring{setText()}{setText()}}
+{\footnotesize\ttfamily void Single\+Node\+::set\+Text (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{SingleNode_8cpp_source_l00051}{51}} of file \mbox{\hyperlink{SingleNode_8cpp_source}{Single\+Node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ this-\/>value\ =\ std::move(\_value);}
+\DoxyCodeLine{00053\ \ \ \ \ this-\/>label.setString(this-\/>value);}
+\DoxyCodeLine{00054\ \ \ \ \ sf::FloatRect\ bounds\ =\ this-\/>label.getLocalBounds();}
+\DoxyCodeLine{00055\ \ \ \ \ this-\/>label.setOrigin(bounds.left\ +\ bounds.width\ /\ 2.0f,\ bounds.top\ +\ bounds.height\ /\ 2.0f);}
+\DoxyCodeLine{00056\ \ \ \ \ this-\/>label.setPosition(this-\/>circle.getPosition());}
+\DoxyCodeLine{00057\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSingleNode_a7dfed02b10b7b1e1702c5d1617cecf7c}\label{classSingleNode_a7dfed02b10b7b1e1702c5d1617cecf7c}} 
+\index{SingleNode@{SingleNode}!toggleActiveColor@{toggleActiveColor}}
+\index{toggleActiveColor@{toggleActiveColor}!SingleNode@{SingleNode}}
+\doxysubsubsection{\texorpdfstring{toggleActiveColor()}{toggleActiveColor()}}
+{\footnotesize\ttfamily void Single\+Node\+::toggle\+Active\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{SingleNode_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{SingleNode_8cpp_source}{Single\+Node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ this-\/>circle.setOutlineColor(constants::normalGreen);}
+\DoxyCodeLine{00036\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classSingleNode_a3b454c14d99e1df944116f1553589a7f}\label{classSingleNode_a3b454c14d99e1df944116f1553589a7f}} 
+\index{SingleNode@{SingleNode}!font@{font}}
+\index{font@{font}!SingleNode@{SingleNode}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily sf\+::\+Font Single\+Node\+::font}
+
+
+
+Definition at line \mbox{\hyperlink{SingleNode_8hpp_source_l00019}{19}} of file \mbox{\hyperlink{SingleNode_8hpp_source}{Single\+Node.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/draw/\mbox{\hyperlink{SingleNode_8hpp}{Single\+Node.\+hpp}}\item 
+include/draw/\mbox{\hyperlink{SingleNode_8cpp}{Single\+Node.\+cpp}}\end{DoxyCompactItemize}

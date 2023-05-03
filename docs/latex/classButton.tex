@@ -1,0 +1,107 @@
+\hypertarget{classButton}{}\doxysection{Button Class Reference}
+\label{classButton}\index{Button@{Button}}
+
+
+{\ttfamily \#include $<$button.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classButton_a3b36df1ae23c58aedb9e15a713159459}{Button}} ()
+\item 
+\mbox{\hyperlink{classButton_a0f8ae4930090b2dd2d9f9cb8441b3108}{Button}} (sf\+::\+Render\+Window $\ast$window, sf\+::\+Vector2f position, sf\+::\+Vector2f size, std\+::string text\+String, std\+::string changed\+Text\+String, int text\+Size, sf\+::\+Color text\+Color, sf\+::\+Color color, sf\+::\+Color hover\+Color, sf\+::\+Color click\+Color)
+\item 
+bool \mbox{\hyperlink{classButton_adb6ba11ef7c454ac0aabf2120ac85d7a}{poll\+Event}} (sf\+::\+Vector2f mouse\+Pos\+View)
+\item 
+void \mbox{\hyperlink{classButton_ad8e030c1c8846d43f3126047d4a3667f}{update}} ()
+\item 
+void \mbox{\hyperlink{classButton_add4daea65a908027aa5a1593305b9656}{render}} ()
+\item 
+void \mbox{\hyperlink{classButton_a03ef92527b48359feff925347c478dab}{set\+Color}} (sf\+::\+Color \+\_\+color)
+\item 
+std\+::string \mbox{\hyperlink{classButton_ae667eb964e0180276e0c74141e2bce9b}{get\+Text\+String}} () const
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classButton_a6e52fb176337b00c0241b6f1f0c34261}{get\+Position}} () const
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classButton_afe24a9370efdf3079500be1f2b76e12a}{get\+Size}} () const
+\item 
+bool \mbox{\hyperlink{classButton_a28c4d8fb3d54afd6d0637b6c4c079b09}{check\+Clicked}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{button_8hpp_source_l00012}{12}} of file \mbox{\hyperlink{button_8hpp_source}{button.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classButton_a3b36df1ae23c58aedb9e15a713159459}\label{classButton_a3b36df1ae23c58aedb9e15a713159459}} 
+\index{Button@{Button}!Button@{Button}}
+\index{Button@{Button}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{Button()}{Button()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Button\+::\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classButton_a0f8ae4930090b2dd2d9f9cb8441b3108}\label{classButton_a0f8ae4930090b2dd2d9f9cb8441b3108}} 
+\index{Button@{Button}!Button@{Button}}
+\index{Button@{Button}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{Button()}{Button()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Button\+::\+Button (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window,  }\item[{sf\+::\+Vector2f}]{position,  }\item[{sf\+::\+Vector2f}]{size,  }\item[{std\+::string}]{text\+String,  }\item[{std\+::string}]{changed\+Text\+String,  }\item[{int}]{text\+Size,  }\item[{sf\+::\+Color}]{text\+Color,  }\item[{sf\+::\+Color}]{color,  }\item[{sf\+::\+Color}]{hover\+Color,  }\item[{sf\+::\+Color}]{click\+Color }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classButton_a28c4d8fb3d54afd6d0637b6c4c079b09}\label{classButton_a28c4d8fb3d54afd6d0637b6c4c079b09}} 
+\index{Button@{Button}!checkClicked@{checkClicked}}
+\index{checkClicked@{checkClicked}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{checkClicked()}{checkClicked()}}
+{\footnotesize\ttfamily bool Button\+::check\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classButton_a6e52fb176337b00c0241b6f1f0c34261}\label{classButton_a6e52fb176337b00c0241b6f1f0c34261}} 
+\index{Button@{Button}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Button\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classButton_afe24a9370efdf3079500be1f2b76e12a}\label{classButton_afe24a9370efdf3079500be1f2b76e12a}} 
+\index{Button@{Button}!getSize@{getSize}}
+\index{getSize@{getSize}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Button\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classButton_ae667eb964e0180276e0c74141e2bce9b}\label{classButton_ae667eb964e0180276e0c74141e2bce9b}} 
+\index{Button@{Button}!getTextString@{getTextString}}
+\index{getTextString@{getTextString}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{getTextString()}{getTextString()}}
+{\footnotesize\ttfamily std\+::string Button\+::get\+Text\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classButton_adb6ba11ef7c454ac0aabf2120ac85d7a}\label{classButton_adb6ba11ef7c454ac0aabf2120ac85d7a}} 
+\index{Button@{Button}!pollEvent@{pollEvent}}
+\index{pollEvent@{pollEvent}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{pollEvent()}{pollEvent()}}
+{\footnotesize\ttfamily bool Button\+::poll\+Event (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{mouse\+Pos\+View }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classButton_add4daea65a908027aa5a1593305b9656}\label{classButton_add4daea65a908027aa5a1593305b9656}} 
+\index{Button@{Button}!render@{render}}
+\index{render@{render}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Button\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classButton_a03ef92527b48359feff925347c478dab}\label{classButton_a03ef92527b48359feff925347c478dab}} 
+\index{Button@{Button}!setColor@{setColor}}
+\index{setColor@{setColor}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily void Button\+::set\+Color (\begin{DoxyParamCaption}\item[{sf\+::\+Color}]{\+\_\+color }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classButton_ad8e030c1c8846d43f3126047d4a3667f}\label{classButton_ad8e030c1c8846d43f3126047d4a3667f}} 
+\index{Button@{Button}!update@{update}}
+\index{update@{update}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Button\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/stuff/\mbox{\hyperlink{button_8hpp}{button.\+hpp}}\end{DoxyCompactItemize}

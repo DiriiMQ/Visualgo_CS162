@@ -1,0 +1,411 @@
+\hypertarget{classArrow}{}\doxysection{Arrow Class Reference}
+\label{classArrow}\index{Arrow@{Arrow}}
+
+
+{\ttfamily \#include $<$Arrow.\+hpp$>$}
+
+Inheritance diagram for Arrow\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classArrow}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classArrow_ab5c3255768a4fdd2bd68e90077126d57}{Arrow}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}}, sf\+::\+Vector2f start, sf\+::\+Vector2f end)
+\item 
+void \mbox{\hyperlink{classArrow_a135e4c81a45366c0be1ca96cd9782521}{render}} () override
+\item 
+void \mbox{\hyperlink{classArrow_a413c30a53d6a0d76c95e57c11a20fd80}{toggle\+Active\+Color}} ()
+\item 
+void \mbox{\hyperlink{classArrow_a0ddb9960d1c2003ece0302b5c7c688fa}{reset\+Color}} ()
+\item 
+void \mbox{\hyperlink{classArrow_a9ba380273ededbcac9bce32197b5b24e}{set\+Start}} (sf\+::\+Vector2f start, bool need\+Set\+Mid)
+\item 
+void \mbox{\hyperlink{classArrow_aba41e97028815a99c02773be2f8e1042}{set\+Positions}} (sf\+::\+Vector2f start, sf\+::\+Vector2f end, bool need\+Set\+Mid)
+\item 
+void \mbox{\hyperlink{classArrow_a1e939548fc9aaa4c358db43eb22f5c8e}{set\+Mid}} ()
+\item 
+void \mbox{\hyperlink{classArrow_a8c4cf7822a949ef5fae1c95303a80cd6}{auto\+Rotate}} ()
+\item 
+void \mbox{\hyperlink{classArrow_a5c6371db9cc5fcfc18a55adc6a79bd3d}{auto\+Scale}} ()
+\item 
+void \mbox{\hyperlink{classArrow_a9a1f22e4b50ff5113fa59ffb2025acb4}{hide}} ()
+\item 
+void \mbox{\hyperlink{classArrow_aec17bb3f7477350299e8e4717bef72d7}{show}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBaseDraw}{Base\+Draw}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBaseDraw_ac359be43debbd846b809639a39aff0f2}{Base\+Draw}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}})
+\item 
+virtual void \mbox{\hyperlink{classBaseDraw_ab7eb16791faed1ce844d963d9e2acf38}{render}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}{points}} \mbox{[}2\mbox{]}
+\item 
+sf\+::\+Texture \mbox{\hyperlink{classArrow_a914adb83a6dca3a1d8dd543afd14979e}{arrow\+Texture}} \mbox{[}2\mbox{]}
+\item 
+sf\+::\+Sprite \mbox{\hyperlink{classArrow_a204b3062cf9e3b0407f2a7aef9784cab}{arrow\+Sprite}}
+\item 
+float \mbox{\hyperlink{classArrow_a2ad8ad4762763dcb477e4c0590573cd5}{length}}
+\item 
+bool \mbox{\hyperlink{classArrow_acc58b59f199f3dd6a2a22ab2136bf372}{has\+Set\+Mid}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBaseDraw}{Base\+Draw}}}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Render\+Window $\ast$ \mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{Arrow_8hpp_source_l00013}{13}} of file \mbox{\hyperlink{Arrow_8hpp_source}{Arrow.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classArrow_ab5c3255768a4fdd2bd68e90077126d57}\label{classArrow_ab5c3255768a4fdd2bd68e90077126d57}} 
+\index{Arrow@{Arrow}!Arrow@{Arrow}}
+\index{Arrow@{Arrow}!Arrow@{Arrow}}
+\doxysubsubsection{\texorpdfstring{Arrow()}{Arrow()}}
+{\footnotesize\ttfamily Arrow\+::\+Arrow (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window,  }\item[{sf\+::\+Vector2f}]{start,  }\item[{sf\+::\+Vector2f}]{end }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Arrow_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{Arrow_8cpp_source}{Arrow.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classBaseDraw}{BaseDraw}}(\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}})\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}{points}}[0]\ =\ start;}
+\DoxyCodeLine{00009\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}{points}}[1]\ =\ end;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a914adb83a6dca3a1d8dd543afd14979e}{arrowTexture}}[0].loadFromFile(\textcolor{stringliteral}{"{}../assets/arrow/arrow\_black.png"{}});}
+\DoxyCodeLine{00012\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a914adb83a6dca3a1d8dd543afd14979e}{arrowTexture}}[1].loadFromFile(\textcolor{stringliteral}{"{}../assets/arrow/arrow\_orange.png"{}});}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a914adb83a6dca3a1d8dd543afd14979e}{arrowTexture}}[0].setSmooth(\textcolor{keyword}{true});}
+\DoxyCodeLine{00015\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a914adb83a6dca3a1d8dd543afd14979e}{arrowTexture}}[1].setSmooth(\textcolor{keyword}{true});}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a204b3062cf9e3b0407f2a7aef9784cab}{arrowSprite}}.setTexture(this-\/>\mbox{\hyperlink{classArrow_a914adb83a6dca3a1d8dd543afd14979e}{arrowTexture}}[0]);}
+\DoxyCodeLine{00018\ \ \ \ \ sf::Vector2i\ topLeftCorner(}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(this-\/>\mbox{\hyperlink{classArrow_a914adb83a6dca3a1d8dd543afd14979e}{arrowTexture}}[0].getSize().x\ /\ 2.0\ -\/\ constants::Arrow::sizeArrow.x\ /\ 2.0),}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(this-\/>\mbox{\hyperlink{classArrow_a914adb83a6dca3a1d8dd543afd14979e}{arrowTexture}}[0].getSize().y\ /\ 2.0\ -\/\ constants::Arrow::sizeArrow.y\ /\ 2.0)}
+\DoxyCodeLine{00021\ \ \ \ \ );}
+\DoxyCodeLine{00022\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a204b3062cf9e3b0407f2a7aef9784cab}{arrowSprite}}.setTextureRect(sf::IntRect(}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ topLeftCorner.x,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ topLeftCorner.y,}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ constants::Arrow::sizeArrow.x,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ constants::Arrow::sizeArrow.y}
+\DoxyCodeLine{00027\ \ \ \ \ ));}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a5c6371db9cc5fcfc18a55adc6a79bd3d}{autoScale}}();}
+\DoxyCodeLine{00030\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a8c4cf7822a949ef5fae1c95303a80cd6}{autoRotate}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ \ \ \ this-\/>rectangleTexture[0].loadFromFile("{}../assets/rectangle/rectangle\_black.png"{});}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ \ \ \ this-\/>rectangleTexture[1].loadFromFile("{}../assets/rectangle/rectangle\_orange.png"{});}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ \ \ \ topLeftCorner\ =\ sf::Vector2i(}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ static\_cast<int>(this-\/>rectangleTexture[0].getSize().x\ /\ 2.0\ -\/\ constants::Arrow::sizeRectangle.x\ /\ 2.0),}}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ static\_cast<int>(this-\/>rectangleTexture[0].getSize().y\ /\ 2.0\ -\/\ constants::Arrow::sizeRectangle.y\ /\ 2.0)}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//\ \ \ \ );}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//\ \ \ \ this-\/>rectangleSprite.setTexture(this-\/>rectangleTexture[0]);}}
+\DoxyCodeLine{00039\ \textcolor{comment}{//\ \ \ \ this-\/>rectangleSprite.setTextureRect(sf::IntRect(}}
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ topLeftCorner.x,}}
+\DoxyCodeLine{00041\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ topLeftCorner.y,}}
+\DoxyCodeLine{00042\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ constants::Arrow::sizeRectangle.x,}}
+\DoxyCodeLine{00043\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ constants::Arrow::sizeRectangle.y}}
+\DoxyCodeLine{00044\ \textcolor{comment}{//\ \ \ \ ));}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//\ \ \ \ this-\/>rectangleSprite.setScale(}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ constants::Arrow::defaultScaleRectangle.x,}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ constants::Arrow::defaultScaleRectangle.y}}
+\DoxyCodeLine{00048\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ );}}
+\DoxyCodeLine{00049\ \textcolor{comment}{//\ \ \ \ this-\/>rectangleSprite.setOrigin(}}
+\DoxyCodeLine{00050\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ 0,}}
+\DoxyCodeLine{00051\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ this-\/>rectangleSprite.getLocalBounds().height\ /\ 2.0f}}
+\DoxyCodeLine{00052\ \textcolor{comment}{//\ \ \ \ );}}
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ \ \ \ this-\/>rectangleSprite.setPosition(sf::Vector2f(50,\ 200));}}
+\DoxyCodeLine{00054\ \textcolor{comment}{//\ \ \ \ this-\/>rectangleSprite.setRotation(angle);}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_acc58b59f199f3dd6a2a22ab2136bf372}{hasSetMid}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00057\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classArrow_a8c4cf7822a949ef5fae1c95303a80cd6}\label{classArrow_a8c4cf7822a949ef5fae1c95303a80cd6}} 
+\index{Arrow@{Arrow}!autoRotate@{autoRotate}}
+\index{autoRotate@{autoRotate}!Arrow@{Arrow}}
+\doxysubsubsection{\texorpdfstring{autoRotate()}{autoRotate()}}
+{\footnotesize\ttfamily void Arrow\+::auto\+Rotate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Arrow_8cpp_source_l00088}{88}} of file \mbox{\hyperlink{Arrow_8cpp_source}{Arrow.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ sf::Vector2f\ vector2point\ =\ this-\/>\mbox{\hyperlink{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}{points}}[1]\ -\/\ this-\/>\mbox{\hyperlink{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}{points}}[0];}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{auto}\ angle\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(atan2(vector2point.y,\ vector2point.x)\ *\ 180\ /\ M\_PI);}
+\DoxyCodeLine{00091\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a204b3062cf9e3b0407f2a7aef9784cab}{arrowSprite}}.setRotation(angle);}
+\DoxyCodeLine{00092\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classArrow_a5c6371db9cc5fcfc18a55adc6a79bd3d}\label{classArrow_a5c6371db9cc5fcfc18a55adc6a79bd3d}} 
+\index{Arrow@{Arrow}!autoScale@{autoScale}}
+\index{autoScale@{autoScale}!Arrow@{Arrow}}
+\doxysubsubsection{\texorpdfstring{autoScale()}{autoScale()}}
+{\footnotesize\ttfamily void Arrow\+::auto\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Arrow_8cpp_source_l00094}{94}} of file \mbox{\hyperlink{Arrow_8cpp_source}{Arrow.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a2ad8ad4762763dcb477e4c0590573cd5}{length}}\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ sqrt(}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pow(this-\/>\mbox{\hyperlink{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}{points}}[1].x\ -\/\ this-\/>\mbox{\hyperlink{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}{points}}[0].x,\ 2)\ +\ pow(this-\/>\mbox{\hyperlink{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}{points}}[1].y\ -\/\ this-\/>\mbox{\hyperlink{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}{points}}[0].y,\ 2)}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ )\ -\/\ constants::NodeInfo::radius\ -\/\ 2.f}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00100\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a204b3062cf9e3b0407f2a7aef9784cab}{arrowSprite}}.setScale(}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a2ad8ad4762763dcb477e4c0590573cd5}{length}}\ /\ this-\/>\mbox{\hyperlink{classArrow_a204b3062cf9e3b0407f2a7aef9784cab}{arrowSprite}}.getLocalBounds().width,}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ constants::Arrow::defaultScaleArrow.y}
+\DoxyCodeLine{00103\ \ \ \ \ );}
+\DoxyCodeLine{00104\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a204b3062cf9e3b0407f2a7aef9784cab}{arrowSprite}}.setOrigin(}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ 0,}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a204b3062cf9e3b0407f2a7aef9784cab}{arrowSprite}}.getLocalBounds().height\ /\ 2.0f}
+\DoxyCodeLine{00107\ \ \ \ \ );}
+\DoxyCodeLine{00108\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a204b3062cf9e3b0407f2a7aef9784cab}{arrowSprite}}.setPosition(this-\/>\mbox{\hyperlink{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}{points}}[0]);}
+\DoxyCodeLine{00109\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classArrow_a9a1f22e4b50ff5113fa59ffb2025acb4}\label{classArrow_a9a1f22e4b50ff5113fa59ffb2025acb4}} 
+\index{Arrow@{Arrow}!hide@{hide}}
+\index{hide@{hide}!Arrow@{Arrow}}
+\doxysubsubsection{\texorpdfstring{hide()}{hide()}}
+{\footnotesize\ttfamily void Arrow\+::hide (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Arrow_8cpp_source_l00125}{125}} of file \mbox{\hyperlink{Arrow_8cpp_source}{Arrow.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00126\ \ \ \ \ sf::Color\ tmp\ =\ this-\/>\mbox{\hyperlink{classArrow_a204b3062cf9e3b0407f2a7aef9784cab}{arrowSprite}}.getColor();}
+\DoxyCodeLine{00127\ \ \ \ \ tmp.a\ =\ 0;}
+\DoxyCodeLine{00128\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a204b3062cf9e3b0407f2a7aef9784cab}{arrowSprite}}.setColor(tmp);}
+\DoxyCodeLine{00129\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classArrow_a135e4c81a45366c0be1ca96cd9782521}\label{classArrow_a135e4c81a45366c0be1ca96cd9782521}} 
+\index{Arrow@{Arrow}!render@{render}}
+\index{render@{render}!Arrow@{Arrow}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Arrow\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classBaseDraw_ab7eb16791faed1ce844d963d9e2acf38}{Base\+Draw}}.
+
+
+
+Definition at line \mbox{\hyperlink{Arrow_8cpp_source_l00059}{59}} of file \mbox{\hyperlink{Arrow_8cpp_source}{Arrow.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}}-\/>draw(this-\/>\mbox{\hyperlink{classArrow_a204b3062cf9e3b0407f2a7aef9784cab}{arrowSprite}});}
+\DoxyCodeLine{00061\ \textcolor{comment}{//\ \ \ \ this-\/>window-\/>draw(this-\/>rectangleSprite);}}
+\DoxyCodeLine{00062\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classArrow_a0ddb9960d1c2003ece0302b5c7c688fa}\label{classArrow_a0ddb9960d1c2003ece0302b5c7c688fa}} 
+\index{Arrow@{Arrow}!resetColor@{resetColor}}
+\index{resetColor@{resetColor}!Arrow@{Arrow}}
+\doxysubsubsection{\texorpdfstring{resetColor()}{resetColor()}}
+{\footnotesize\ttfamily void Arrow\+::reset\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Arrow_8cpp_source_l00069}{69}} of file \mbox{\hyperlink{Arrow_8cpp_source}{Arrow.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a204b3062cf9e3b0407f2a7aef9784cab}{arrowSprite}}.setTexture(this-\/>\mbox{\hyperlink{classArrow_a914adb83a6dca3a1d8dd543afd14979e}{arrowTexture}}[0]);}
+\DoxyCodeLine{00071\ \textcolor{comment}{//\ \ \ \ this-\/>rectangleSprite.setTexture(this-\/>rectangleTexture[0]);}}
+\DoxyCodeLine{00072\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classArrow_a1e939548fc9aaa4c358db43eb22f5c8e}\label{classArrow_a1e939548fc9aaa4c358db43eb22f5c8e}} 
+\index{Arrow@{Arrow}!setMid@{setMid}}
+\index{setMid@{setMid}!Arrow@{Arrow}}
+\doxysubsubsection{\texorpdfstring{setMid()}{setMid()}}
+{\footnotesize\ttfamily void Arrow\+::set\+Mid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Arrow_8cpp_source_l00111}{111}} of file \mbox{\hyperlink{Arrow_8cpp_source}{Arrow.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classArrow_acc58b59f199f3dd6a2a22ab2136bf372}{hasSetMid}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00113\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_acc58b59f199f3dd6a2a22ab2136bf372}{hasSetMid}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00114\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}{points}}[0]\ =\ sf::Vector2f(}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ (this-\/>\mbox{\hyperlink{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}{points}}[0].x\ +\ this-\/>\mbox{\hyperlink{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}{points}}[1].x)\ /\ 2.0f,}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ (this-\/>\mbox{\hyperlink{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}{points}}[0].y\ +\ this-\/>\mbox{\hyperlink{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}{points}}[1].y)\ /\ 2.0f}
+\DoxyCodeLine{00117\ \ \ \ \ );}
+\DoxyCodeLine{00118\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a9ba380273ededbcac9bce32197b5b24e}{setStart}}(this-\/>\mbox{\hyperlink{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}{points}}[0],\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00119\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classArrow_aba41e97028815a99c02773be2f8e1042}\label{classArrow_aba41e97028815a99c02773be2f8e1042}} 
+\index{Arrow@{Arrow}!setPositions@{setPositions}}
+\index{setPositions@{setPositions}!Arrow@{Arrow}}
+\doxysubsubsection{\texorpdfstring{setPositions()}{setPositions()}}
+{\footnotesize\ttfamily void Arrow\+::set\+Positions (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{start,  }\item[{sf\+::\+Vector2f}]{end,  }\item[{bool}]{need\+Set\+Mid }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Arrow_8cpp_source_l00074}{74}} of file \mbox{\hyperlink{Arrow_8cpp_source}{Arrow.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}{points}}[0]\ =\ start;}
+\DoxyCodeLine{00076\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}{points}}[1]\ =\ end;}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{if}\ (needSetMid)\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_acc58b59f199f3dd6a2a22ab2136bf372}{hasSetMid}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a1e939548fc9aaa4c358db43eb22f5c8e}{setMid}}();}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a204b3062cf9e3b0407f2a7aef9784cab}{arrowSprite}}.setPosition(this-\/>\mbox{\hyperlink{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}{points}}[0]);}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a5c6371db9cc5fcfc18a55adc6a79bd3d}{autoScale}}();}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a8c4cf7822a949ef5fae1c95303a80cd6}{autoRotate}}();}
+\DoxyCodeLine{00085\ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classArrow_a9ba380273ededbcac9bce32197b5b24e}\label{classArrow_a9ba380273ededbcac9bce32197b5b24e}} 
+\index{Arrow@{Arrow}!setStart@{setStart}}
+\index{setStart@{setStart}!Arrow@{Arrow}}
+\doxysubsubsection{\texorpdfstring{setStart()}{setStart()}}
+{\footnotesize\ttfamily void Arrow\+::set\+Start (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{start,  }\item[{bool}]{need\+Set\+Mid }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Arrow_8cpp_source_l00121}{121}} of file \mbox{\hyperlink{Arrow_8cpp_source}{Arrow.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00122\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_aba41e97028815a99c02773be2f8e1042}{setPositions}}(start,\ this-\/>\mbox{\hyperlink{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}{points}}[1],\ needSetMid);}
+\DoxyCodeLine{00123\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classArrow_aec17bb3f7477350299e8e4717bef72d7}\label{classArrow_aec17bb3f7477350299e8e4717bef72d7}} 
+\index{Arrow@{Arrow}!show@{show}}
+\index{show@{show}!Arrow@{Arrow}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void Arrow\+::show (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Arrow_8cpp_source_l00131}{131}} of file \mbox{\hyperlink{Arrow_8cpp_source}{Arrow.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00132\ \ \ \ \ sf::Color\ tmp\ =\ this-\/>\mbox{\hyperlink{classArrow_a204b3062cf9e3b0407f2a7aef9784cab}{arrowSprite}}.getColor();}
+\DoxyCodeLine{00133\ \ \ \ \ tmp.a\ =\ 255;}
+\DoxyCodeLine{00134\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a204b3062cf9e3b0407f2a7aef9784cab}{arrowSprite}}.setColor(tmp);}
+\DoxyCodeLine{00135\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classArrow_a413c30a53d6a0d76c95e57c11a20fd80}\label{classArrow_a413c30a53d6a0d76c95e57c11a20fd80}} 
+\index{Arrow@{Arrow}!toggleActiveColor@{toggleActiveColor}}
+\index{toggleActiveColor@{toggleActiveColor}!Arrow@{Arrow}}
+\doxysubsubsection{\texorpdfstring{toggleActiveColor()}{toggleActiveColor()}}
+{\footnotesize\ttfamily void Arrow\+::toggle\+Active\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Arrow_8cpp_source_l00064}{64}} of file \mbox{\hyperlink{Arrow_8cpp_source}{Arrow.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ this-\/>\mbox{\hyperlink{classArrow_a204b3062cf9e3b0407f2a7aef9784cab}{arrowSprite}}.setTexture(this-\/>\mbox{\hyperlink{classArrow_a914adb83a6dca3a1d8dd543afd14979e}{arrowTexture}}[1]);}
+\DoxyCodeLine{00066\ \textcolor{comment}{//\ \ \ \ this-\/>rectangleSprite.setTexture(this-\/>rectangleTexture[1]);}}
+\DoxyCodeLine{00067\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classArrow_a204b3062cf9e3b0407f2a7aef9784cab}\label{classArrow_a204b3062cf9e3b0407f2a7aef9784cab}} 
+\index{Arrow@{Arrow}!arrowSprite@{arrowSprite}}
+\index{arrowSprite@{arrowSprite}!Arrow@{Arrow}}
+\doxysubsubsection{\texorpdfstring{arrowSprite}{arrowSprite}}
+{\footnotesize\ttfamily sf\+::\+Sprite Arrow\+::arrow\+Sprite\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{Arrow_8hpp_source_l00017}{17}} of file \mbox{\hyperlink{Arrow_8hpp_source}{Arrow.\+hpp}}.
+
+\mbox{\Hypertarget{classArrow_a914adb83a6dca3a1d8dd543afd14979e}\label{classArrow_a914adb83a6dca3a1d8dd543afd14979e}} 
+\index{Arrow@{Arrow}!arrowTexture@{arrowTexture}}
+\index{arrowTexture@{arrowTexture}!Arrow@{Arrow}}
+\doxysubsubsection{\texorpdfstring{arrowTexture}{arrowTexture}}
+{\footnotesize\ttfamily sf\+::\+Texture Arrow\+::arrow\+Texture\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{Arrow_8hpp_source_l00016}{16}} of file \mbox{\hyperlink{Arrow_8hpp_source}{Arrow.\+hpp}}.
+
+\mbox{\Hypertarget{classArrow_acc58b59f199f3dd6a2a22ab2136bf372}\label{classArrow_acc58b59f199f3dd6a2a22ab2136bf372}} 
+\index{Arrow@{Arrow}!hasSetMid@{hasSetMid}}
+\index{hasSetMid@{hasSetMid}!Arrow@{Arrow}}
+\doxysubsubsection{\texorpdfstring{hasSetMid}{hasSetMid}}
+{\footnotesize\ttfamily bool Arrow\+::has\+Set\+Mid\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{Arrow_8hpp_source_l00019}{19}} of file \mbox{\hyperlink{Arrow_8hpp_source}{Arrow.\+hpp}}.
+
+\mbox{\Hypertarget{classArrow_a2ad8ad4762763dcb477e4c0590573cd5}\label{classArrow_a2ad8ad4762763dcb477e4c0590573cd5}} 
+\index{Arrow@{Arrow}!length@{length}}
+\index{length@{length}!Arrow@{Arrow}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily float Arrow\+::length\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{Arrow_8hpp_source_l00018}{18}} of file \mbox{\hyperlink{Arrow_8hpp_source}{Arrow.\+hpp}}.
+
+\mbox{\Hypertarget{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}\label{classArrow_ad5d8998bcd09c64dff1e575f99b1f2c6}} 
+\index{Arrow@{Arrow}!points@{points}}
+\index{points@{points}!Arrow@{Arrow}}
+\doxysubsubsection{\texorpdfstring{points}{points}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Arrow\+::points\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{Arrow_8hpp_source_l00015}{15}} of file \mbox{\hyperlink{Arrow_8hpp_source}{Arrow.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/draw/\mbox{\hyperlink{Arrow_8hpp}{Arrow.\+hpp}}\item 
+include/draw/\mbox{\hyperlink{Arrow_8cpp}{Arrow.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,109 @@
+\hypertarget{classpfd_1_1path}{}\doxysection{pfd\+::path Class Reference}
+\label{classpfd_1_1path}\index{pfd::path@{pfd::path}}
+
+
+{\ttfamily \#include $<$File\+Dialog.\+h$>$}
+
+Inheritance diagram for pfd\+::path\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpfd_1_1path}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classpfd_1_1path_a1205ad5165c748f91ffe939687e095a2}{home}} ()
+\item 
+static std\+::string \mbox{\hyperlink{classpfd_1_1path_a73bb289af48853c52fb1569c2d00a40c}{separator}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00325}{325}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpfd_1_1path_a1205ad5165c748f91ffe939687e095a2}\label{classpfd_1_1path_a1205ad5165c748f91ffe939687e095a2}} 
+\index{pfd::path@{pfd::path}!home@{home}}
+\index{home@{home}!pfd::path@{pfd::path}}
+\doxysubsubsection{\texorpdfstring{home()}{home()}}
+{\footnotesize\ttfamily std\+::string pfd\+::path\+::home (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00637}{637}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00638\ \ \ \ \ \{}
+\DoxyCodeLine{00639\ \textcolor{preprocessor}{\#if\ \_WIN32}}
+\DoxyCodeLine{00640\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ First\ try\ the\ USERPROFILE\ environment\ variable}}
+\DoxyCodeLine{00641\ \ \ \ \ \textcolor{keyword}{auto}\ user\_profile\ =\ internal::getenv(\textcolor{stringliteral}{"{}USERPROFILE"{}});}
+\DoxyCodeLine{00642\ \ \ \ \ \textcolor{keywordflow}{if}\ (user\_profile.size()\ >\ 0)}
+\DoxyCodeLine{00643\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ user\_profile;}
+\DoxyCodeLine{00644\ \ \ \ \ \textcolor{comment}{//\ Otherwise,\ try\ GetUserProfileDirectory()}}
+\DoxyCodeLine{00645\ \ \ \ \ HANDLE\ token\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00646\ \ \ \ \ DWORD\ len\ =\ MAX\_PATH;}
+\DoxyCodeLine{00647\ \ \ \ \ \textcolor{keywordtype}{char}\ buf[MAX\_PATH]\ =\ \{\ \textcolor{charliteral}{'\(\backslash\)0'}\ \};}
+\DoxyCodeLine{00648\ \ \ \ \ \textcolor{keywordflow}{if}\ (OpenProcessToken(GetCurrentProcess(),\ TOKEN\_QUERY,\ \&token))}
+\DoxyCodeLine{00649\ \ \ \ \ \{}
+\DoxyCodeLine{00650\ \ \ \ \ \ \ \ \ dll\ userenv(\textcolor{stringliteral}{"{}userenv.dll"{}});}
+\DoxyCodeLine{00651\ \ \ \ \ \ \ \ \ dll::proc<BOOL\ WINAPI\ (HANDLE,\ LPSTR,\ LPDWORD)>\ get\_user\_profile\_directory(userenv,\ \textcolor{stringliteral}{"{}GetUserProfileDirectoryA"{}});}
+\DoxyCodeLine{00652\ \ \ \ \ \ \ \ \ get\_user\_profile\_directory(token,\ buf,\ \&len);}
+\DoxyCodeLine{00653\ \ \ \ \ \ \ \ \ CloseHandle(token);}
+\DoxyCodeLine{00654\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (*buf)}
+\DoxyCodeLine{00655\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ buf;}
+\DoxyCodeLine{00656\ \ \ \ \ \}}
+\DoxyCodeLine{00657\ \textcolor{preprocessor}{\#elif\ \_\_EMSCRIPTEN\_\_}}
+\DoxyCodeLine{00658\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}/"{}};}
+\DoxyCodeLine{00659\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00660\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ First\ try\ the\ HOME\ environment\ variable}}
+\DoxyCodeLine{00661\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classpfd_1_1path_a1205ad5165c748f91ffe939687e095a2}{home}}\ =\ internal::getenv(\textcolor{stringliteral}{"{}HOME"{}});}
+\DoxyCodeLine{00662\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classpfd_1_1path_a1205ad5165c748f91ffe939687e095a2}{home}}.size()\ >\ 0)}
+\DoxyCodeLine{00663\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classpfd_1_1path_a1205ad5165c748f91ffe939687e095a2}{home}};}
+\DoxyCodeLine{00664\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Otherwise,\ try\ getpwuid\_r()}}
+\DoxyCodeLine{00665\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ len\ =\ 4096;}
+\DoxyCodeLine{00666\ \textcolor{preprocessor}{\#if\ defined(\_SC\_GETPW\_R\_SIZE\_MAX)}}
+\DoxyCodeLine{00667\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ size\_max\ =\ sysconf(\_SC\_GETPW\_R\_SIZE\_MAX);}
+\DoxyCodeLine{00668\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (size\_max\ !=\ -\/1)}
+\DoxyCodeLine{00669\ \ \ \ \ \ \ \ \ \ \ \ \ len\ =\ size\_t(size\_max);}
+\DoxyCodeLine{00670\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00671\ \ \ \ \ \ \ \ \ std::vector<char>\ buf(len);}
+\DoxyCodeLine{00672\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }passwd\ pwd,\ *result;}
+\DoxyCodeLine{00673\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (getpwuid\_r(getuid(),\ \&pwd,\ buf.data(),\ buf.size(),\ \&result)\ ==\ 0)}
+\DoxyCodeLine{00674\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result-\/>pw\_dir;}
+\DoxyCodeLine{00675\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00676\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}/"{}};}
+\DoxyCodeLine{00677\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpfd_1_1path_a73bb289af48853c52fb1569c2d00a40c}\label{classpfd_1_1path_a73bb289af48853c52fb1569c2d00a40c}} 
+\index{pfd::path@{pfd::path}!separator@{separator}}
+\index{separator@{separator}!pfd::path@{pfd::path}}
+\doxysubsubsection{\texorpdfstring{separator()}{separator()}}
+{\footnotesize\ttfamily std\+::string pfd\+::path\+::separator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00679}{679}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00680\ \ \ \ \ \{}
+\DoxyCodeLine{00681\ \textcolor{preprocessor}{\#if\ \_WIN32}}
+\DoxyCodeLine{00682\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)"{}};}
+\DoxyCodeLine{00683\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00684\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}/"{}};}
+\DoxyCodeLine{00685\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00686\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{FileDialog_8h}{File\+Dialog.\+h}}\end{DoxyCompactItemize}

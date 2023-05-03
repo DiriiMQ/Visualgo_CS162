@@ -1,0 +1,223 @@
+\hypertarget{classpfd_1_1notify}{}\doxysection{pfd\+::notify Class Reference}
+\label{classpfd_1_1notify}\index{pfd::notify@{pfd::notify}}
+
+
+{\ttfamily \#include $<$File\+Dialog.\+h$>$}
+
+Inheritance diagram for pfd\+::notify\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classpfd_1_1notify}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpfd_1_1notify_a64f87055f567ed5720a357b6844eccb7}{notify}} (std\+::string const \&title, std\+::string const \&\mbox{\hyperlink{classpfd_1_1message}{message}}, \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85}{icon}} \+\_\+icon=\mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85acaf9b6b99962bf5c2264824231d7a40c}{icon\+::info}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classpfd_1_1internal_1_1dialog}{pfd\+::internal\+::dialog}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a77f20e6063f83e601ce23ed4899907c6}{ready}} (int timeout=default\+\_\+wait\+\_\+timeout) const
+\item 
+bool \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a226b1502acd1d2cb86e34dd3df36772a}{kill}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Types inherited from \mbox{\hyperlink{classpfd_1_1settings}{pfd\+::settings}}}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}{flag}} \{ \newline
+\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada11dd6b78f267a47638211f4c7e23d434}{is\+\_\+scanned}} = 0
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadad9da28952c27749f53c23675db49d560}{is\+\_\+verbose}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaee57842698a0690e4b89730b469edc31}{has\+\_\+zenity}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1267dfaf66b51761e04b042bb2c4dd7a}{has\+\_\+matedialog}}
+, \newline
+\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1a652e3d6a785053942b6cffc2c4669d}{has\+\_\+qarma}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1f1a19f0bf1fe1a63ed3e73e40466b4b}{has\+\_\+kdialog}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaea0bbb642237ecdaa68a14a0d7212448}{is\+\_\+vista}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada73b7af539db867cb9edf24a3cb7b8a36}{max\+\_\+flag}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classpfd_1_1internal_1_1dialog}{pfd\+::internal\+::dialog}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a05f9a4fcba8f8a9411d7dfaf18ee11ad}{dialog}} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_aadaf6cb30620c85f4b97993e3c819188}{desktop\+\_\+helper}} () const
+\item 
+std\+::string \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_aae2255eceb0b3b18b55d1618fd7e1635}{powershell\+\_\+quote}} (std\+::string const \&str) const
+\item 
+std\+::string \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_adc0ec6f5c8137cbdb0ea6669b5263a73}{osascript\+\_\+quote}} (std\+::string const \&str) const
+\item 
+std\+::string \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a1a4f28c3c2bbd1629f2f882314fff63e}{shell\+\_\+quote}} (std\+::string const \&str) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classpfd_1_1settings}{pfd\+::settings}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpfd_1_1settings_a7190e52d512b1321acb78731a8cddf42}{settings}} (bool resync=false)
+\item 
+bool \mbox{\hyperlink{classpfd_1_1settings_af1c2f6e88ffafd59a2f7609631a9eade}{check\+\_\+program}} (std\+::string const \&program)
+\item 
+bool \mbox{\hyperlink{classpfd_1_1settings_a4e22d6fb43d387ddc980bf6e2a6aad24}{is\+\_\+osascript}} () const
+\item 
+bool \mbox{\hyperlink{classpfd_1_1settings_a08e4a5b150186d77158a974cc8c2d4a2}{is\+\_\+zenity}} () const
+\item 
+bool \mbox{\hyperlink{classpfd_1_1settings_aa79fb10eee785f1acd8d1ff34e226c89}{is\+\_\+kdialog}} () const
+\item 
+bool const \& \mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}} (\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}{flag}} in\+\_\+flag) const
+\item 
+bool \& \mbox{\hyperlink{classpfd_1_1settings_a9b611d06856910f0d8c358dd0eadfcee}{flags}} (\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}{flag}} in\+\_\+flag)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions inherited from \mbox{\hyperlink{classpfd_1_1internal_1_1dialog}{pfd\+::internal\+::dialog}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_ac906c01d0365c13c9066cea857fd258a}{buttons\+\_\+to\+\_\+name}} (\mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8}{choice}} \+\_\+choice)
+\item 
+static std\+::string \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_ae94362bed052ab6050e38852712cb97a}{get\+\_\+icon\+\_\+name}} (\mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85}{icon}} \+\_\+icon)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions inherited from \mbox{\hyperlink{classpfd_1_1settings}{pfd\+::settings}}}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classpfd_1_1settings_a54fb5598e7501ac38d17e3629190b2fe}{available}} ()
+\item 
+static void \mbox{\hyperlink{classpfd_1_1settings_a0ed32e8ed039106028474eb9f0a0a7bc}{verbose}} (bool value)
+\item 
+static void \mbox{\hyperlink{classpfd_1_1settings_a60023ab0ac98008d2c52a568e9ee540f}{rescan}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{classpfd_1_1internal_1_1dialog}{pfd\+::internal\+::dialog}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpfd_1_1internal_1_1executor}{executor}} $>$ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a91f4b2666fb920a7859df9cdc079502d}{m\+\_\+async}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00336}{336}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpfd_1_1notify_a64f87055f567ed5720a357b6844eccb7}\label{classpfd_1_1notify_a64f87055f567ed5720a357b6844eccb7}} 
+\index{pfd::notify@{pfd::notify}!notify@{notify}}
+\index{notify@{notify}!pfd::notify@{pfd::notify}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily pfd\+::notify\+::notify (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{title,  }\item[{std\+::string const \&}]{message,  }\item[{\mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85}{icon}}}]{\+\_\+icon = {\ttfamily \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85acaf9b6b99962bf5c2264824231d7a40c}{icon\+::info}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l01487}{1487}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01490\ \ \ \ \ \{}
+\DoxyCodeLine{01491\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_icon\ ==\ \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85a5494af1f14a8c19939968c3e9e2d4f79}{icon::question}})\ \textcolor{comment}{//\ Not\ supported\ by\ notifications}}
+\DoxyCodeLine{01492\ \ \ \ \ \ \ \ \ \ \ \ \ \_icon\ =\ \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85acaf9b6b99962bf5c2264824231d7a40c}{icon::info}};}
+\DoxyCodeLine{01493\ }
+\DoxyCodeLine{01494\ \textcolor{preprocessor}{\#if\ \_WIN32}}
+\DoxyCodeLine{01495\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ a\ static\ shared\ pointer\ for\ notify\_icon\ so\ that\ we\ can\ delete}}
+\DoxyCodeLine{01496\ \ \ \ \ \textcolor{comment}{//\ it\ whenever\ we\ need\ to\ display\ a\ new\ one,\ and\ we\ can\ also\ wait}}
+\DoxyCodeLine{01497\ \ \ \ \ \textcolor{comment}{//\ until\ the\ program\ has\ finished\ running.}}
+\DoxyCodeLine{01498\ \ \ \ \ \textcolor{keyword}{struct\ }notify\_icon\_data\ :\ \textcolor{keyword}{public}\ NOTIFYICONDATAW}
+\DoxyCodeLine{01499\ \ \ \ \ \{}
+\DoxyCodeLine{01500\ \ \ \ \ \ \ \ \ \string~notify\_icon\_data()\ \{\ Shell\_NotifyIconW(NIM\_DELETE,\ \textcolor{keyword}{this});\ \}}
+\DoxyCodeLine{01501\ \ \ \ \ \};}
+\DoxyCodeLine{01502\ }
+\DoxyCodeLine{01503\ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<notify\_icon\_data>\ nid;}
+\DoxyCodeLine{01504\ }
+\DoxyCodeLine{01505\ \ \ \ \ \textcolor{comment}{//\ Release\ the\ previous\ notification\ icon,\ if\ any,\ and\ allocate\ a\ new}}
+\DoxyCodeLine{01506\ \ \ \ \ \textcolor{comment}{//\ one.\ Note\ that\ std::make\_shared()\ does\ value\ initialization,\ so\ there}}
+\DoxyCodeLine{01507\ \ \ \ \ \textcolor{comment}{//\ is\ no\ need\ to\ memset\ the\ structure.}}
+\DoxyCodeLine{01508\ \ \ \ \ nid\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{01509\ \ \ \ \ nid\ =\ std::make\_shared<notify\_icon\_data>();}
+\DoxyCodeLine{01510\ }
+\DoxyCodeLine{01511\ \ \ \ \ \textcolor{comment}{//\ For\ XP\ support}}
+\DoxyCodeLine{01512\ \ \ \ \ nid-\/>cbSize\ =\ NOTIFYICONDATAW\_V2\_SIZE;}
+\DoxyCodeLine{01513\ \ \ \ \ nid-\/>hWnd\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{01514\ \ \ \ \ nid-\/>uID\ =\ 0;}
+\DoxyCodeLine{01515\ }
+\DoxyCodeLine{01516\ \ \ \ \ \textcolor{comment}{//\ Flag\ Description:}}
+\DoxyCodeLine{01517\ \ \ \ \ \textcolor{comment}{//\ -\/\ NIF\_ICON\ \ \ \ The\ hIcon\ member\ is\ valid.}}
+\DoxyCodeLine{01518\ \ \ \ \ \textcolor{comment}{//\ -\/\ NIF\_MESSAGE\ The\ uCallbackMessage\ member\ is\ valid.}}
+\DoxyCodeLine{01519\ \ \ \ \ \textcolor{comment}{//\ -\/\ NIF\_TIP\ \ \ \ \ The\ szTip\ member\ is\ valid.}}
+\DoxyCodeLine{01520\ \ \ \ \ \textcolor{comment}{//\ -\/\ NIF\_STATE\ \ \ The\ dwState\ and\ dwStateMask\ members\ are\ valid.}}
+\DoxyCodeLine{01521\ \ \ \ \ \textcolor{comment}{//\ -\/\ NIF\_INFO\ \ \ \ Use\ a\ balloon\ ToolTip\ instead\ of\ a\ standard\ ToolTip.\ The\ szInfo,\ uTimeout,\ szInfoTitle,\ and\ dwInfoFlags\ members\ are\ valid.}}
+\DoxyCodeLine{01522\ \ \ \ \ \textcolor{comment}{//\ -\/\ NIF\_GUID\ \ \ \ Reserved.}}
+\DoxyCodeLine{01523\ \ \ \ \ nid-\/>uFlags\ =\ NIF\_MESSAGE\ |\ NIF\_ICON\ |\ NIF\_INFO;}
+\DoxyCodeLine{01524\ }
+\DoxyCodeLine{01525\ \ \ \ \ \textcolor{comment}{//\ Flag\ Description}}
+\DoxyCodeLine{01526\ \ \ \ \ \textcolor{comment}{//\ -\/\ NIIF\_ERROR\ \ \ \ \ An\ error\ icon.}}
+\DoxyCodeLine{01527\ \ \ \ \ \textcolor{comment}{//\ -\/\ NIIF\_INFO\ \ \ \ \ \ An\ information\ icon.}}
+\DoxyCodeLine{01528\ \ \ \ \ \textcolor{comment}{//\ -\/\ NIIF\_NONE\ \ \ \ \ \ No\ icon.}}
+\DoxyCodeLine{01529\ \ \ \ \ \textcolor{comment}{//\ -\/\ NIIF\_WARNING\ \ \ A\ warning\ icon.}}
+\DoxyCodeLine{01530\ \ \ \ \ \textcolor{comment}{//\ -\/\ NIIF\_ICON\_MASK\ Version\ 6.0.\ Reserved.}}
+\DoxyCodeLine{01531\ \ \ \ \ \textcolor{comment}{//\ -\/\ NIIF\_NOSOUND\ \ \ Version\ 6.0.\ Do\ not\ play\ the\ associated\ sound.\ Applies\ only\ to\ balloon\ ToolTips}}
+\DoxyCodeLine{01532\ \ \ \ \ \textcolor{keywordflow}{switch}\ (\_icon)}
+\DoxyCodeLine{01533\ \ \ \ \ \{}
+\DoxyCodeLine{01534\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85a7b83d3f08fa392b79e3f553b585971cd}{icon::warning}}:\ nid-\/>dwInfoFlags\ =\ NIIF\_WARNING;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01535\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85acb5e100e5a9a3e7f6d1fd97512215282}{icon::error}}:\ nid-\/>dwInfoFlags\ =\ NIIF\_ERROR;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01536\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ case\ icon::info:\ */}\ \textcolor{keywordflow}{default}:\ nid-\/>dwInfoFlags\ =\ NIIF\_INFO;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01537\ \ \ \ \ \}}
+\DoxyCodeLine{01538\ }
+\DoxyCodeLine{01539\ \ \ \ \ ENUMRESNAMEPROC\ icon\_enum\_callback\ =\ [](HMODULE,\ LPCTSTR,\ LPTSTR\ lpName,\ LONG\_PTR\ lParam)\ -\/>\ BOOL}
+\DoxyCodeLine{01540\ \ \ \ \ \{}
+\DoxyCodeLine{01541\ \ \ \ \ \ \ \ \ ((NOTIFYICONDATAW\ *)lParam)-\/>hIcon\ =\ ::LoadIcon(GetModuleHandle(\textcolor{keyword}{nullptr}),\ lpName);}
+\DoxyCodeLine{01542\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{01543\ \ \ \ \ \};}
+\DoxyCodeLine{01544\ }
+\DoxyCodeLine{01545\ \ \ \ \ nid-\/>hIcon\ =\ ::LoadIcon(\textcolor{keyword}{nullptr},\ IDI\_APPLICATION);}
+\DoxyCodeLine{01546\ \ \ \ \ ::EnumResourceNames(\textcolor{keyword}{nullptr},\ RT\_GROUP\_ICON,\ icon\_enum\_callback,\ (LONG\_PTR)nid.get());}
+\DoxyCodeLine{01547\ }
+\DoxyCodeLine{01548\ \ \ \ \ nid-\/>uTimeout\ =\ 5000;}
+\DoxyCodeLine{01549\ }
+\DoxyCodeLine{01550\ \ \ \ \ StringCchCopyW(nid-\/>szInfoTitle,\ ARRAYSIZE(nid-\/>szInfoTitle),\ internal::str2wstr(title).c\_str());}
+\DoxyCodeLine{01551\ \ \ \ \ StringCchCopyW(nid-\/>szInfo,\ ARRAYSIZE(nid-\/>szInfo),\ internal::str2wstr(message).c\_str());}
+\DoxyCodeLine{01552\ }
+\DoxyCodeLine{01553\ \ \ \ \ \textcolor{comment}{//\ Display\ the\ new\ icon}}
+\DoxyCodeLine{01554\ \ \ \ \ Shell\_NotifyIconW(NIM\_ADD,\ nid.get());}
+\DoxyCodeLine{01555\ \textcolor{preprocessor}{\#elif\ \_\_EMSCRIPTEN\_\_}}
+\DoxyCodeLine{01556\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ FIXME:\ do\ something}}
+\DoxyCodeLine{01557\ \ \ \ \ (void)title;}
+\DoxyCodeLine{01558\ \ \ \ \ (void)message;}
+\DoxyCodeLine{01559\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{01560\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ command\ =\ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_aadaf6cb30620c85f4b97993e3c819188}{desktop\_helper}}();}
+\DoxyCodeLine{01561\ }
+\DoxyCodeLine{01562\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classpfd_1_1settings_a4e22d6fb43d387ddc980bf6e2a6aad24}{is\_osascript}}())}
+\DoxyCodeLine{01563\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01564\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\textcolor{stringliteral}{"{}-\/e"{}});}
+\DoxyCodeLine{01565\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\textcolor{stringliteral}{"{}display\ notification\ "{}}\ +\ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_adc0ec6f5c8137cbdb0ea6669b5263a73}{osascript\_quote}}(message)\ +}
+\DoxyCodeLine{01566\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ with\ title\ "{}}\ +\ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_adc0ec6f5c8137cbdb0ea6669b5263a73}{osascript\_quote}}(title));}
+\DoxyCodeLine{01567\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01568\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classpfd_1_1settings_a08e4a5b150186d77158a974cc8c2d4a2}{is\_zenity}}())}
+\DoxyCodeLine{01569\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01570\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/notification"{}});}
+\DoxyCodeLine{01571\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/window-\/icon"{}});}
+\DoxyCodeLine{01572\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\mbox{\hyperlink{classpfd_1_1internal_1_1dialog_ae94362bed052ab6050e38852712cb97a}{get\_icon\_name}}(\_icon));}
+\DoxyCodeLine{01573\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/text"{}});}
+\DoxyCodeLine{01574\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(title\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ +\ message);}
+\DoxyCodeLine{01575\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01576\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classpfd_1_1settings_aa79fb10eee785f1acd8d1ff34e226c89}{is\_kdialog}}())}
+\DoxyCodeLine{01577\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01578\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/icon"{}});}
+\DoxyCodeLine{01579\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\mbox{\hyperlink{classpfd_1_1internal_1_1dialog_ae94362bed052ab6050e38852712cb97a}{get\_icon\_name}}(\_icon));}
+\DoxyCodeLine{01580\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/title"{}});}
+\DoxyCodeLine{01581\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(title);}
+\DoxyCodeLine{01582\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/passivepopup"{}});}
+\DoxyCodeLine{01583\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(message);}
+\DoxyCodeLine{01584\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\textcolor{stringliteral}{"{}5"{}});}
+\DoxyCodeLine{01585\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01586\ }
+\DoxyCodeLine{01587\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadad9da28952c27749f53c23675db49d560}{flag::is\_verbose}}))}
+\DoxyCodeLine{01588\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}pfd:\ "{}}\ <<\ command\ <<\ std::endl;}
+\DoxyCodeLine{01589\ }
+\DoxyCodeLine{01590\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a91f4b2666fb920a7859df9cdc079502d}{m\_async}}-\/>start\_process(command);}
+\DoxyCodeLine{01591\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01592\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{FileDialog_8h}{File\+Dialog.\+h}}\end{DoxyCompactItemize}

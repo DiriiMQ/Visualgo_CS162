@@ -1,0 +1,712 @@
+\hypertarget{classDynamicArrayScene}{}\doxysection{Dynamic\+Array\+Scene Class Reference}
+\label{classDynamicArrayScene}\index{DynamicArrayScene@{DynamicArrayScene}}
+
+
+{\ttfamily \#include $<$Dynamic\+Array\+Scene.\+hpp$>$}
+
+Inheritance diagram for Dynamic\+Array\+Scene\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classDynamicArrayScene}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDynamicArrayScene_ae4b2b9c02d6ba0981734d82ec2b18408}{Dynamic\+Array\+Scene}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}})
+\item 
+void \mbox{\hyperlink{classDynamicArrayScene_acd1f584db0dc7db5e8688cabea1e0f13}{reset}} ()
+\item 
+void \mbox{\hyperlink{classDynamicArrayScene_a525f23f7944992a4fdadb468a204b48e}{poll\+Event}} (sf\+::\+Event event, sf\+::\+Vector2f mouse\+Pos\+View) override
+\item 
+void \mbox{\hyperlink{classDynamicArrayScene_ac873d4f98b22c6558a7974f59e0e026d}{update}} () override
+\item 
+void \mbox{\hyperlink{classDynamicArrayScene_a184fd5181889e36d8e5caba3b7aad526}{render}} () override
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ \mbox{\hyperlink{classDynamicArrayScene_ae43d1b742aac074801e0953ca9aae030}{add\+Mode\+Events}} (int chosen\+Node)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ \mbox{\hyperlink{classDynamicArrayScene_a5fc2178f2279a888f646d21803c325d8}{delete\+Mode\+Events}} (int chosen\+Node)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ \mbox{\hyperlink{classDynamicArrayScene_aba882c6f48419007ad82823ef30ce77a}{update\+Mode\+Events}} (int chosen\+Node)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ \mbox{\hyperlink{classDynamicArrayScene_a5bdd2ac39ee51d811aea08ce508cc8b7}{search\+Mode\+Events}} (int chosen\+Node)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ \mbox{\hyperlink{classDynamicArrayScene_a0a9aae3b4d92e807ad8400e0b49428d5}{allocate\+Mode\+Events}} (int new\+Size)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBaseScene}{Base\+Scene}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBaseScene_abe1e5ed8391db6798c313888ae8ad4e9}{Base\+Scene}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}})
+\item 
+void \mbox{\hyperlink{classBaseScene_adc937756bd780e478e6c338251816b91}{create\+Mode\+Button}} (sf\+::\+Vector2f position, std\+::string text\+String)
+\item 
+virtual void \mbox{\hyperlink{classBaseScene_a16dd70d07399fc63d7a3e29fbac516cf}{poll\+Event}} (sf\+::\+Event event, sf\+::\+Vector2f mouse\+Pos\+View)=0
+\item 
+virtual void \mbox{\hyperlink{classBaseScene_a269667611675475435d876e0f8f26a79}{update}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classBaseScene_a18694189ddd54cb279e1814869dbe854}{render}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Public Attributes inherited from \mbox{\hyperlink{classBaseScene}{Base\+Scene}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classButton}{Button}} $\ast$ \mbox{\hyperlink{classBaseScene_acbfb2074648ed5f471ef8e46a60af885}{mode\+Button}} \{\}
+\item 
+bool \mbox{\hyperlink{classBaseScene_ad250cff3475ec4b590afe5ac70597746}{is\+Menu\+Open}} \{\}
+\item 
+bool \mbox{\hyperlink{classBaseScene_ae6e22961b8642440a160df8723363afa}{is\+Demo\+Code\+Open}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classBaseScene}{Base\+Scene}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBaseScene_a408cafc155677ae764855ce9d16110b5}{set\+Window}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBaseScene}{Base\+Scene}}}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Render\+Window $\ast$ \mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}} \{\}
+\item 
+\mbox{\hyperlink{classControlMenu}{Control\+Menu}} $\ast$ \mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{control\+Menu}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{DynamicArrayScene_8hpp_source_l00012}{12}} of file \mbox{\hyperlink{DynamicArrayScene_8hpp_source}{Dynamic\+Array\+Scene.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDynamicArrayScene_ae4b2b9c02d6ba0981734d82ec2b18408}\label{classDynamicArrayScene_ae4b2b9c02d6ba0981734d82ec2b18408}} 
+\index{DynamicArrayScene@{DynamicArrayScene}!DynamicArrayScene@{DynamicArrayScene}}
+\index{DynamicArrayScene@{DynamicArrayScene}!DynamicArrayScene@{DynamicArrayScene}}
+\doxysubsubsection{\texorpdfstring{DynamicArrayScene()}{DynamicArrayScene()}}
+{\footnotesize\ttfamily Dynamic\+Array\+Scene\+::\+Dynamic\+Array\+Scene (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Definition at line \mbox{\hyperlink{DynamicArrayScene_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{DynamicArrayScene_8cpp_source}{Dynamic\+Array\+Scene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classBaseScene}{BaseScene}}(\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}})\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ this-\/>init();}
+\DoxyCodeLine{00009\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDynamicArrayScene_ae43d1b742aac074801e0953ca9aae030}\label{classDynamicArrayScene_ae43d1b742aac074801e0953ca9aae030}} 
+\index{DynamicArrayScene@{DynamicArrayScene}!addModeEvents@{addModeEvents}}
+\index{addModeEvents@{addModeEvents}!DynamicArrayScene@{DynamicArrayScene}}
+\doxysubsubsection{\texorpdfstring{addModeEvents()}{addModeEvents()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ Dynamic\+Array\+Scene\+::add\+Mode\+Events (\begin{DoxyParamCaption}\item[{int}]{chosen\+Node }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{DynamicArrayScene_8cpp_source_l00156}{156}} of file \mbox{\hyperlink{DynamicArrayScene_8cpp_source}{Dynamic\+Array\+Scene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00157\ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_a58bdbe3ada4bc219b09370bb63c7d6e8}{resetEvents}}();}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenNode\ <\ 0\ ||\ chosenNode\ >\ this-\/>array-\/>\mbox{\hyperlink{classArray_af29bf627de157570d00c700773884e20}{getSize}}())}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\};}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{comment}{//\ init\ highlighter}}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{comment}{//\ ...}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{int}\ size\ =\ this-\/>array-\/>\mbox{\hyperlink{classArray_af29bf627de157570d00c700773884e20}{getSize}}()\ +\ 1,}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ squaresSize\ =\ this-\/>array-\/>\mbox{\hyperlink{classArray_a42ea29579620b256e2a05f4c78b0ec40}{getSquaresSize}}();}
+\DoxyCodeLine{00166\ \ \ \ \ std::vector<EventAnimation>\ events;}
+\DoxyCodeLine{00167\ \ \ \ \ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}\ event;}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordflow}{if}\ (size\ >\ squaresSize)\ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ ++squaresSize;}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquaresTemp.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square\ :\ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}})\ \{}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ square.status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}};}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ square.isPrintPreVal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares.back().status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba662f707d5491e9bce8238a6c0be92190}{Square::Status::hidden}};}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (size\ >\ 1)}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[size\ -\/\ 2].title\ =\ \textcolor{stringliteral}{"{}n"{}};}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square\ :\ event.\mbox{\hyperlink{classEventAnimation_adeb76c2aa1c630148e72c45e9f2228e8}{eventSquaresTemp}})\ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ square.status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{Square::Status::inactive}};}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ square.isPrintPreVal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ size\ -\/\ 1;\ ++i)\ \{}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}\ =\ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}();}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquaresTemp.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square\ :\ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}})\ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ square.status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}};}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ square.isPrintPreVal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares.back().status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba662f707d5491e9bce8238a6c0be92190}{Square::Status::hidden}};}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (size\ >\ 1)}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[size\ -\/\ 2].title\ =\ \textcolor{stringliteral}{"{}n"{}};}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square\ :\ event.\mbox{\hyperlink{classEventAnimation_adeb76c2aa1c630148e72c45e9f2228e8}{eventSquaresTemp}})\ \{}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ square.status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{Square::Status::inactive}};}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ square.isPrintPreVal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ i;\ ++j)\ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquaresTemp[j].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}};}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquaresTemp[j].isPrintPreVal\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquaresTemp[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbaca071943e5acd1c8bcfbe0d2ee36fec2}{Square::Status::chosen}};}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquaresTemp[i].title\ =\ \textcolor{stringliteral}{"{}m"{}};}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquaresTemp[i].isPrintPreVal\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbaca071943e5acd1c8bcfbe0d2ee36fec2}{Square::Status::chosen}};}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00216\ \ \ \ \ \}}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keyword}{event}\ =\ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}();}
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keyword}{event}.eventSquares.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keyword}{event}.eventSquaresTemp.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square\ :\ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}})\ \{}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ square.status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}};}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ square.isPrintPreVal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00224\ \ \ \ \ \}}
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ size\ -\/\ 1;\ i\ <\ squaresSize;\ ++i)}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{Square::Status::inactive}};}
+\DoxyCodeLine{00227\ \ \ \ \ if\ (size\ >\ 1)}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[size\ -\/\ 2].title\ =\ \textcolor{stringliteral}{"{}n"{}};}
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square\ :\ event.\mbox{\hyperlink{classEventAnimation_adeb76c2aa1c630148e72c45e9f2228e8}{eventSquaresTemp}})\ \{}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ square.status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba662f707d5491e9bce8238a6c0be92190}{Square::Status::hidden}};}
+\DoxyCodeLine{00231\ \ \ \ \ \}}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keyword}{event}\ =\ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}();}
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keyword}{event}.eventSquares.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00237\ \ \ \ \ \textcolor{keyword}{event}.eventSquaresTemp.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square\ :\ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}})\ \{}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ square.status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}};}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ square.isPrintPreVal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00241\ \ \ \ \ \}}
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ size;\ i\ <\ squaresSize;\ ++i)}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{Square::Status::inactive}};}
+\DoxyCodeLine{00244\ \ \ \ \ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}[size\ -\/\ 1].title\ =\ \textcolor{stringliteral}{"{}n"{}};}
+\DoxyCodeLine{00245\ \ \ \ \ for\ (\textcolor{keyword}{auto}\ \&square\ :\ event.\mbox{\hyperlink{classEventAnimation_adeb76c2aa1c630148e72c45e9f2228e8}{eventSquaresTemp}})}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ square.status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba662f707d5491e9bce8238a6c0be92190}{Square::Status::hidden}};}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00248\ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ size\ -\/\ 1;\ i\ >=\ chosenNode;\ -\/-\/i)\ \{}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}\ =\ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}();}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquaresTemp.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square:\ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}})\ \{}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ square.status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}};}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ square.isPrintPreVal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ size;\ j\ <\ squaresSize;\ ++j)}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}[j].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{Square::Status::inactive}};}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}[size\ -\/\ 1].title\ =\ \textcolor{stringliteral}{"{}n"{}};}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ for\ (\textcolor{keywordtype}{int}\ j\ =\ size\ -\/\ 1;\ j\ >\ i;\ -\/-\/j)}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}[j].isPrintPreVal\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbaca071943e5acd1c8bcfbe0d2ee36fec2}{Square::Status::chosen}};}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ for\ (\textcolor{keyword}{auto}\ \&square\ :\ event.\mbox{\hyperlink{classEventAnimation_adeb76c2aa1c630148e72c45e9f2228e8}{eventSquaresTemp}})}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ square.status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba662f707d5491e9bce8238a6c0be92190}{Square::Status::hidden}};}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00268\ }
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i].isPrintPreVal\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ >\ chosenNode)}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i\ -\/\ 1].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbaca071943e5acd1c8bcfbe0d2ee36fec2}{Square::Status::chosen}};}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00274\ \ \ \ \ \}}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ \ \ \ \ \textcolor{keywordflow}{return}\ events;}
+\DoxyCodeLine{00277\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classDynamicArrayScene_a0a9aae3b4d92e807ad8400e0b49428d5}\label{classDynamicArrayScene_a0a9aae3b4d92e807ad8400e0b49428d5}} 
+\index{DynamicArrayScene@{DynamicArrayScene}!allocateModeEvents@{allocateModeEvents}}
+\index{allocateModeEvents@{allocateModeEvents}!DynamicArrayScene@{DynamicArrayScene}}
+\doxysubsubsection{\texorpdfstring{allocateModeEvents()}{allocateModeEvents()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ Dynamic\+Array\+Scene\+::allocate\+Mode\+Events (\begin{DoxyParamCaption}\item[{int}]{new\+Size }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{DynamicArrayScene_8cpp_source_l00402}{402}} of file \mbox{\hyperlink{DynamicArrayScene_8cpp_source}{Dynamic\+Array\+Scene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00403\ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_a58bdbe3ada4bc219b09370bb63c7d6e8}{resetEvents}}();}
+\DoxyCodeLine{00404\ }
+\DoxyCodeLine{00405\ \ \ \ \ \textcolor{comment}{//\ init\ highlighter}}
+\DoxyCodeLine{00406\ \ \ \ \ \textcolor{comment}{//\ ...}}
+\DoxyCodeLine{00407\ }
+\DoxyCodeLine{00408\ \ \ \ \ \textcolor{keywordtype}{int}\ size\ =\ this-\/>array-\/>\mbox{\hyperlink{classArray_af29bf627de157570d00c700773884e20}{getSize}}(),}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ oldSize\ =\ this-\/>array-\/>\mbox{\hyperlink{classArray_a42ea29579620b256e2a05f4c78b0ec40}{getSquaresSize}}(),}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ squaresSize\ =\ std::max(oldSize,\ newSize);}
+\DoxyCodeLine{00411\ }
+\DoxyCodeLine{00412\ \ \ \ \ std::vector<EventAnimation>\ events;}
+\DoxyCodeLine{00413\ \ \ \ \ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}\ event;}
+\DoxyCodeLine{00414\ }
+\DoxyCodeLine{00415\ \ \ \ \ \textcolor{keyword}{event}.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00416\ \ \ \ \ \textcolor{keyword}{event}.eventSquaresTemp.assign(newSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00417\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ size;\ ++i)\ \{}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}};}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ size\ -\/\ 1)}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i].title\ =\ \textcolor{stringliteral}{"{}n"{}};}
+\DoxyCodeLine{00421\ \ \ \ \ \}}
+\DoxyCodeLine{00422\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ size;\ i\ <\ oldSize;\ ++i)\ \{}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{Square::Status::inactive}};}
+\DoxyCodeLine{00424\ \ \ \ \ \}}
+\DoxyCodeLine{00425\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ oldSize;\ i\ <\ newSize;\ ++i)\ \{}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba662f707d5491e9bce8238a6c0be92190}{Square::Status::hidden}};}
+\DoxyCodeLine{00427\ \ \ \ \ \}}
+\DoxyCodeLine{00428\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square\ :\ event.\mbox{\hyperlink{classEventAnimation_adeb76c2aa1c630148e72c45e9f2228e8}{eventSquaresTemp}})\ \{}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ square.status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{Square::Status::inactive}};}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ square.isPrintPreVal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00431\ \ \ \ \ \}}
+\DoxyCodeLine{00432\ }
+\DoxyCodeLine{00433\ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00434\ }
+\DoxyCodeLine{00435\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ std::min(size,\ newSize);\ ++i)\ \{}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}\ =\ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}();}
+\DoxyCodeLine{00437\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquaresTemp.assign(newSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ size;\ ++j)\ \{}
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[j].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}};}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (j\ ==\ size\ -\/\ 1)}
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[j].title\ =\ \textcolor{stringliteral}{"{}n"{}};}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ size;\ j\ <\ oldSize;\ ++j)\ \{}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[j].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{Square::Status::inactive}};}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ oldSize;\ j\ <\ newSize;\ ++j)\ \{}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[j].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba662f707d5491e9bce8238a6c0be92190}{Square::Status::hidden}};}
+\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square\ :\ event.\mbox{\hyperlink{classEventAnimation_adeb76c2aa1c630148e72c45e9f2228e8}{eventSquaresTemp}})\ \{}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \ \ \ \ square.status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{Square::Status::inactive}};}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \ \ \ \ square.isPrintPreVal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ i;\ ++j)\ \{}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquaresTemp[j].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}};}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquaresTemp[j].isPrintPreVal\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00457\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquaresTemp[i].title\ =\ \textcolor{stringliteral}{"{}m"{}};}
+\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquaresTemp[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbaca071943e5acd1c8bcfbe0d2ee36fec2}{Square::Status::chosen}};}
+\DoxyCodeLine{00460\ }
+\DoxyCodeLine{00461\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00462\ }
+\DoxyCodeLine{00463\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquaresTemp[i].isPrintPreVal\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00464\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbaca071943e5acd1c8bcfbe0d2ee36fec2}{Square::Status::chosen}};}
+\DoxyCodeLine{00465\ }
+\DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00467\ \ \ \ \ \}}
+\DoxyCodeLine{00468\ }
+\DoxyCodeLine{00469\ \ \ \ \ \textcolor{keyword}{event}\ =\ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}();}
+\DoxyCodeLine{00470\ \ \ \ \ \textcolor{keyword}{event}.eventSquares.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00471\ \ \ \ \ \textcolor{keyword}{event}.eventSquaresTemp.assign(newSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00472\ }
+\DoxyCodeLine{00473\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ std::min(size,\ newSize);\ ++i)\ \{}
+\DoxyCodeLine{00474\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}};}
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ std::min(size,\ newSize)\ -\/\ 1)}
+\DoxyCodeLine{00476\ \ \ \ \ \ \ \ \ \ \ \ \ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}[i].title\ =\ \textcolor{stringliteral}{"{}n"{}};}
+\DoxyCodeLine{00477\ \ \ \ \ \}}
+\DoxyCodeLine{00478\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ size;\ i\ <\ newSize;\ ++i)\ \{}
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{Square::Status::inactive}};}
+\DoxyCodeLine{00480\ \ \ \ \ \}}
+\DoxyCodeLine{00481\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ newSize;\ i\ <\ oldSize;\ ++i)\ \{}
+\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba662f707d5491e9bce8238a6c0be92190}{Square::Status::hidden}};}
+\DoxyCodeLine{00483\ \ \ \ \ \}}
+\DoxyCodeLine{00484\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square\ :\ event.\mbox{\hyperlink{classEventAnimation_adeb76c2aa1c630148e72c45e9f2228e8}{eventSquaresTemp}})\ \{}
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ square.status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba662f707d5491e9bce8238a6c0be92190}{Square::Status::hidden}};}
+\DoxyCodeLine{00486\ \ \ \ \ \}}
+\DoxyCodeLine{00487\ }
+\DoxyCodeLine{00488\ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00489\ }
+\DoxyCodeLine{00490\ \ \ \ \ \textcolor{keywordflow}{return}\ events;}
+\DoxyCodeLine{00491\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classDynamicArrayScene_a5fc2178f2279a888f646d21803c325d8}\label{classDynamicArrayScene_a5fc2178f2279a888f646d21803c325d8}} 
+\index{DynamicArrayScene@{DynamicArrayScene}!deleteModeEvents@{deleteModeEvents}}
+\index{deleteModeEvents@{deleteModeEvents}!DynamicArrayScene@{DynamicArrayScene}}
+\doxysubsubsection{\texorpdfstring{deleteModeEvents()}{deleteModeEvents()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ Dynamic\+Array\+Scene\+::delete\+Mode\+Events (\begin{DoxyParamCaption}\item[{int}]{chosen\+Node }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{DynamicArrayScene_8cpp_source_l00279}{279}} of file \mbox{\hyperlink{DynamicArrayScene_8cpp_source}{Dynamic\+Array\+Scene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00280\ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_a58bdbe3ada4bc219b09370bb63c7d6e8}{resetEvents}}();}
+\DoxyCodeLine{00281\ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenNode\ <\ 0\ ||\ chosenNode\ >=\ this-\/>array-\/>\mbox{\hyperlink{classArray_af29bf627de157570d00c700773884e20}{getSize}}())}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\};}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00284\ \ \ \ \ \textcolor{comment}{//\ init\ highlighter}}
+\DoxyCodeLine{00285\ \ \ \ \ \textcolor{comment}{//\ ...}}
+\DoxyCodeLine{00286\ }
+\DoxyCodeLine{00287\ \ \ \ \ \textcolor{keywordtype}{int}\ size\ =\ this-\/>array-\/>\mbox{\hyperlink{classArray_af29bf627de157570d00c700773884e20}{getSize}}(),}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ squaresSize\ =\ this-\/>array-\/>\mbox{\hyperlink{classArray_a42ea29579620b256e2a05f4c78b0ec40}{getSquaresSize}}();}
+\DoxyCodeLine{00289\ \ \ \ \ std::vector<EventAnimation>\ events;}
+\DoxyCodeLine{00290\ \ \ \ \ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}\ event;}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00292\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ chosenNode;\ i\ <\ size\ -\/\ 1;\ ++i)\ \{}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}\ =\ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}();}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square\ :\ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}})\ \{}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ square.status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}};}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \ \ \ \ square.isPrintPreVal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ size;\ j\ <\ squaresSize;\ ++j)}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}[j].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{Square::Status::inactive}};}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ for\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ i;\ ++j)}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}[j].isPrintPreVal\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbaca071943e5acd1c8bcfbe0d2ee36fec2}{Square::Status::chosen}};}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ for\ (\textcolor{keyword}{auto}\ \&square\ :\ event.\mbox{\hyperlink{classEventAnimation_adeb76c2aa1c630148e72c45e9f2228e8}{eventSquaresTemp}})}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ square.status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba662f707d5491e9bce8238a6c0be92190}{Square::Status::hidden}};}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[size\ -\/\ 1].title\ =\ \textcolor{stringliteral}{"{}n"{}};}
+\DoxyCodeLine{00307\ }
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00309\ }
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i].isPrintPreVal\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i\ +\ 1].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbaca071943e5acd1c8bcfbe0d2ee36fec2}{Square::Status::chosen}};}
+\DoxyCodeLine{00312\ }
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00314\ \ \ \ \ \}}
+\DoxyCodeLine{00315\ }
+\DoxyCodeLine{00316\ \ \ \ \ \textcolor{keyword}{event}\ =\ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}();}
+\DoxyCodeLine{00317\ \ \ \ \ \textcolor{keyword}{event}.eventSquares.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00318\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ size\ -\/\ 1;\ ++i)\ \{}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}};}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ size\ -\/\ 2)}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i].title\ =\ \textcolor{stringliteral}{"{}n"{}};}
+\DoxyCodeLine{00322\ \ \ \ \ \}}
+\DoxyCodeLine{00323\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ size\ -\/\ 1;\ i\ <\ squaresSize;\ ++i)}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{Square::Status::inactive}};}
+\DoxyCodeLine{00325\ }
+\DoxyCodeLine{00326\ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00327\ }
+\DoxyCodeLine{00328\ \ \ \ \ \textcolor{keywordflow}{return}\ events;}
+\DoxyCodeLine{00329\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classDynamicArrayScene_a525f23f7944992a4fdadb468a204b48e}\label{classDynamicArrayScene_a525f23f7944992a4fdadb468a204b48e}} 
+\index{DynamicArrayScene@{DynamicArrayScene}!pollEvent@{pollEvent}}
+\index{pollEvent@{pollEvent}!DynamicArrayScene@{DynamicArrayScene}}
+\doxysubsubsection{\texorpdfstring{pollEvent()}{pollEvent()}}
+{\footnotesize\ttfamily void Dynamic\+Array\+Scene\+::poll\+Event (\begin{DoxyParamCaption}\item[{sf\+::\+Event}]{event,  }\item[{sf\+::\+Vector2f}]{mouse\+Pos\+View }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classBaseScene_a16dd70d07399fc63d7a3e29fbac516cf}{Base\+Scene}}.
+
+
+
+Definition at line \mbox{\hyperlink{DynamicArrayScene_8cpp_source_l00140}{140}} of file \mbox{\hyperlink{DynamicArrayScene_8cpp_source}{Dynamic\+Array\+Scene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classBaseScene_ad250cff3475ec4b590afe5ac70597746}{isMenuOpen}})}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a43c0186f8b2cc58d20b9a6b25407e37a}{pollEvents}}(event,\ mousePosView);}
+\DoxyCodeLine{00143\ \ \ \ \ }
+\DoxyCodeLine{00144\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_a9eedcf8b9c4a81624caa4af8fcb35abc}{pollEvents}}(event,\ mousePosView);}
+\DoxyCodeLine{00145\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classDynamicArrayScene_a184fd5181889e36d8e5caba3b7aad526}\label{classDynamicArrayScene_a184fd5181889e36d8e5caba3b7aad526}} 
+\index{DynamicArrayScene@{DynamicArrayScene}!render@{render}}
+\index{render@{render}!DynamicArrayScene@{DynamicArrayScene}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Dynamic\+Array\+Scene\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classBaseScene_a18694189ddd54cb279e1814869dbe854}{Base\+Scene}}.
+
+
+
+Definition at line \mbox{\hyperlink{DynamicArrayScene_8cpp_source_l00129}{129}} of file \mbox{\hyperlink{DynamicArrayScene_8cpp_source}{Dynamic\+Array\+Scene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classBaseScene_ad250cff3475ec4b590afe5ac70597746}{isMenuOpen}})}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a385fb96e1efd05928ba59fd5028720bb}{render}}();}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classBaseScene_ae6e22961b8642440a160df8723363afa}{isDemoCodeOpen}})}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_a2b56d7d580c8afd16c60ac37c8ddc273}{renderHighlighter}}();}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_a346df0390bcdb72dd7ceadaa146106a0}{render}}();}
+\DoxyCodeLine{00137\ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_a3f3a0d69e6f1a592715d39fb393a980d}{render}}();}
+\DoxyCodeLine{00138\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classDynamicArrayScene_acd1f584db0dc7db5e8688cabea1e0f13}\label{classDynamicArrayScene_acd1f584db0dc7db5e8688cabea1e0f13}} 
+\index{DynamicArrayScene@{DynamicArrayScene}!reset@{reset}}
+\index{reset@{reset}!DynamicArrayScene@{DynamicArrayScene}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Dynamic\+Array\+Scene\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{DynamicArrayScene_8cpp_source_l00152}{152}} of file \mbox{\hyperlink{DynamicArrayScene_8cpp_source}{Dynamic\+Array\+Scene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00153\ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a56b86d1994e569bf023b0caa49f27585}{resetActiveOptionMenu}}();}
+\DoxyCodeLine{00154\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classDynamicArrayScene_a5bdd2ac39ee51d811aea08ce508cc8b7}\label{classDynamicArrayScene_a5bdd2ac39ee51d811aea08ce508cc8b7}} 
+\index{DynamicArrayScene@{DynamicArrayScene}!searchModeEvents@{searchModeEvents}}
+\index{searchModeEvents@{searchModeEvents}!DynamicArrayScene@{DynamicArrayScene}}
+\doxysubsubsection{\texorpdfstring{searchModeEvents()}{searchModeEvents()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ Dynamic\+Array\+Scene\+::search\+Mode\+Events (\begin{DoxyParamCaption}\item[{int}]{chosen\+Node }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{DynamicArrayScene_8cpp_source_l00361}{361}} of file \mbox{\hyperlink{DynamicArrayScene_8cpp_source}{Dynamic\+Array\+Scene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00362\ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_a58bdbe3ada4bc219b09370bb63c7d6e8}{resetEvents}}();}
+\DoxyCodeLine{00363\ }
+\DoxyCodeLine{00364\ \ \ \ \ \textcolor{comment}{//\ init\ highlighter}}
+\DoxyCodeLine{00365\ \ \ \ \ \textcolor{comment}{//\ ...}}
+\DoxyCodeLine{00366\ }
+\DoxyCodeLine{00367\ \ \ \ \ \textcolor{keywordtype}{int}\ size\ =\ this-\/>array-\/>\mbox{\hyperlink{classArray_af29bf627de157570d00c700773884e20}{getSize}}(),}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ squaresSize\ =\ this-\/>array-\/>\mbox{\hyperlink{classArray_a42ea29579620b256e2a05f4c78b0ec40}{getSquaresSize}}();}
+\DoxyCodeLine{00369\ \ \ \ \ std::vector<EventAnimation>\ events;}
+\DoxyCodeLine{00370\ \ \ \ \ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}\ event;}
+\DoxyCodeLine{00371\ }
+\DoxyCodeLine{00372\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ chosenNode;\ ++i)\ \{}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ size)\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00374\ }
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}\ =\ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}();}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ size;\ ++j)\ \{}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[j].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}};}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (j\ ==\ size\ -\/\ 1)}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[size\ -\/\ 1].title\ =\ \textcolor{stringliteral}{"{}n"{}};}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbaca071943e5acd1c8bcfbe0d2ee36fec2}{Square::Status::chosen}};}
+\DoxyCodeLine{00383\ }
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00385\ \ \ \ \ \}}
+\DoxyCodeLine{00386\ }
+\DoxyCodeLine{00387\ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenNode\ ==\ size)\ \{}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}\ =\ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}();}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ size;\ ++j)\ \{}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[j].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}};}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (j\ ==\ size\ -\/\ 1)}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[size\ -\/\ 1].title\ =\ \textcolor{stringliteral}{"{}n"{}};}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00395\ }
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00397\ \ \ \ \ \}}
+\DoxyCodeLine{00398\ }
+\DoxyCodeLine{00399\ \ \ \ \ \textcolor{keywordflow}{return}\ events;}
+\DoxyCodeLine{00400\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classDynamicArrayScene_ac873d4f98b22c6558a7974f59e0e026d}\label{classDynamicArrayScene_ac873d4f98b22c6558a7974f59e0e026d}} 
+\index{DynamicArrayScene@{DynamicArrayScene}!update@{update}}
+\index{update@{update}!DynamicArrayScene@{DynamicArrayScene}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Dynamic\+Array\+Scene\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classBaseScene_a269667611675475435d876e0f8f26a79}{Base\+Scene}}.
+
+
+
+Definition at line \mbox{\hyperlink{DynamicArrayScene_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{DynamicArrayScene_8cpp_source}{Dynamic\+Array\+Scene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classBaseScene_ad250cff3475ec4b590afe5ac70597746}{isMenuOpen}})\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a012da56e42d7d804eb5a41b797efe002}{update}}();}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_a61dd107410ce3295fffb7071abcf5266}{constants::MenuArray::Button}}\ status\ =\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a2491c2d04c38f48ae8f1ac1f96351b9f}{getActiveOptionMenu}}();}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_1_1CreateMode_a0d8c7d8013f2920c995917895fb5cc7a}{constants::MenuArray::CreateMode::Button}}\ createMode;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (status)\{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_a61dd107410ce3295fffb7071abcf5266a8776853762bbffcae8104dd042792cf8}{constants::MenuArray::Button::CREATE\_BUTTON}}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ createMode\ =\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_ad61bdce4bf4159aa9f8d45e4750b484e}{getActiveCreateMode}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (createMode\ ==\ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_1_1CreateMode_a0d8c7d8013f2920c995917895fb5cc7aae88677ce24d2ef57958052069e8127d9}{constants::MenuArray::CreateMode::Button::RANDOM\_BUTTON}})\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a59f9f7db86933c7bbe1f826632a763e2}{createModeValue}}[0]\ ==\ \textcolor{stringliteral}{"{}None"{}})}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a59f9f7db86933c7bbe1f826632a763e2}{createModeValue}}[0].empty())}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a59f9f7db86933c7bbe1f826632a763e2}{createModeValue}}[0]\ =\ \textcolor{stringliteral}{"{}0"{}};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ size\ =\ std::stoi(this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a59f9f7db86933c7bbe1f826632a763e2}{createModeValue}}[0]);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_af3e9bb41814faaafb3c9738727945b3e}{createArray}}(size);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (createMode\ ==\ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_1_1CreateMode_a0d8c7d8013f2920c995917895fb5cc7aab7e446540198cc2ac8048bf21bc098f0}{constants::MenuArray::CreateMode::Button::DEFINED\_LIST\_BUTTON}})\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a59f9f7db86933c7bbe1f826632a763e2}{createModeValue}}[1]\ ==\ \textcolor{stringliteral}{"{}None"{}})}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::string>\ values;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ value\ =\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a59f9f7db86933c7bbe1f826632a763e2}{createModeValue}}[1];}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss(value);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ token;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(ss,\ token,\ \textcolor{charliteral}{','}))\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ values.push\_back(token);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_af3e9bb41814faaafb3c9738727945b3e}{createArray}}(values);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (createMode\ ==\ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_1_1CreateMode_a0d8c7d8013f2920c995917895fb5cc7aa5b7c587cd33ef161b176d0dd77f0d9f5}{constants::MenuArray::CreateMode::Button::FILE\_BUTTON}})\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a59f9f7db86933c7bbe1f826632a763e2}{createModeValue}}[2]\ ==\ \textcolor{stringliteral}{"{}None"{}})}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::string>\ values;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ value\ =\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a59f9f7db86933c7bbe1f826632a763e2}{createModeValue}}[2];}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss(value);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ token;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(ss,\ token,\ \textcolor{charliteral}{','}))}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ values.push\_back(token);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_af3e9bb41814faaafb3c9738727945b3e}{createArray}}(values);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a59f9f7db86933c7bbe1f826632a763e2}{createModeValue}}[2]\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_aba74ca399ce895872523dba9ddfe93ee}{reset}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_a61dd107410ce3295fffb7071abcf5266a196b71869a2200f5fdd04f89543ce723}{constants::MenuArray::Button::ADD\_BUTTON}}:}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a426976f568441714676a26a0e10ca822}{addModeValue}}[0]\ ==\ \textcolor{stringliteral}{"{}None"{}}\ ||\ this-\/>menu-\/>addModeValue[1]\ ==\ \textcolor{stringliteral}{"{}None"{}}\ ||\ this-\/>menu-\/>addModeValue[0].empty())}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_a213fc0dd6b4cad929539e3a0f46f7a20}{addSquare}}(}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::stoi(this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a426976f568441714676a26a0e10ca822}{addModeValue}}[0]),}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>addModeValue[1],}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>addModeEvents(std::stoi(this-\/>menu-\/>addModeValue[0]))}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Add:\ "{}}\ <<\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a426976f568441714676a26a0e10ca822}{addModeValue}}[0]\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a426976f568441714676a26a0e10ca822}{addModeValue}}[1]\ <<\ std::endl;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a426976f568441714676a26a0e10ca822}{addModeValue}}[0]\ =\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a426976f568441714676a26a0e10ca822}{addModeValue}}[1]\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_aba74ca399ce895872523dba9ddfe93ee}{reset}}();}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_a61dd107410ce3295fffb7071abcf5266abb34ee3ad1a7adbb1ceeb18f6a5c0601}{constants::MenuArray::Button::DELETE\_BUTTON}}:}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a0bd921f7ed6880c65fb4e9ccbb4ab9d9}{deleteModeValue}}\ ==\ \textcolor{stringliteral}{"{}None"{}}\ ||\ this-\/>menu-\/>deleteModeValue.empty())}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_af281eaede82367ce6d96f653987a0d9d}{deleteSquare}}(}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::stoi(this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a0bd921f7ed6880c65fb4e9ccbb4ab9d9}{deleteModeValue}}),}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>deleteModeEvents(std::stoi(this-\/>menu-\/>deleteModeValue))}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Delete:\ "{}}\ <<\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a0bd921f7ed6880c65fb4e9ccbb4ab9d9}{deleteModeValue}}\ <<\ std::endl;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a0bd921f7ed6880c65fb4e9ccbb4ab9d9}{deleteModeValue}}\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_aba74ca399ce895872523dba9ddfe93ee}{reset}}();}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_a61dd107410ce3295fffb7071abcf5266ae82b8080a43035aa60a5d210f8d9ad49}{constants::MenuArray::Button::UPDATE\_BUTTON}}:}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a45d6b4d74c1629e5577f20f8c5834084}{updateModeValue}}[0]\ ==\ \textcolor{stringliteral}{"{}None"{}}\ ||\ this-\/>menu-\/>updateModeValue[1]\ ==\ \textcolor{stringliteral}{"{}None"{}}\ ||\ this-\/>menu-\/>updateModeValue[0].empty())}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_a1e01a39255e4a4c2e8bc5eacd73f5d09}{updateSquare}}(}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::stoi(this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a45d6b4d74c1629e5577f20f8c5834084}{updateModeValue}}[0]),}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>updateModeValue[1],}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>updateModeEvents(std::stoi(this-\/>menu-\/>updateModeValue[0]))}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Update:\ "{}}\ <<\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a45d6b4d74c1629e5577f20f8c5834084}{updateModeValue}}[0]\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a45d6b4d74c1629e5577f20f8c5834084}{updateModeValue}}[1]\ <<\ std::endl;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a45d6b4d74c1629e5577f20f8c5834084}{updateModeValue}}[0]\ =\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a45d6b4d74c1629e5577f20f8c5834084}{updateModeValue}}[1]\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_aba74ca399ce895872523dba9ddfe93ee}{reset}}();}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_a61dd107410ce3295fffb7071abcf5266a2d70d3d4f72e5258d8d000ee5e9c98b7}{constants::MenuArray::Button::SEARCH\_BUTTON}}:}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a4fd3f92582bf6ec6fc502d7018c96778}{searchModeValue}}\ ==\ \textcolor{stringliteral}{"{}None"{}}\ ||\ this-\/>menu-\/>searchModeValue.empty())}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_acce4352a141aacea237885502c683f8e}{searchSquare}}(}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classDynamicArrayScene_a5bdd2ac39ee51d811aea08ce508cc8b7}{searchModeEvents}}(this-\/>array-\/>\mbox{\hyperlink{classArray_af38c67dacbb820df863adcc6131adbd9}{findValue}}(this-\/>menu-\/>searchModeValue))}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Search:\ "{}}\ <<\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a4fd3f92582bf6ec6fc502d7018c96778}{searchModeValue}}\ <<\ std::endl;}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a4fd3f92582bf6ec6fc502d7018c96778}{searchModeValue}}\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_aba74ca399ce895872523dba9ddfe93ee}{reset}}();}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_a61dd107410ce3295fffb7071abcf5266aa846b918a4edc51afbe523fcb2775a17}{constants::MenuArray::Button::ALLOCATE\_BUTTON}}:}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_aee1c973a176d7f08148637b90c1b18fc}{allocateModeValue}}\ ==\ \textcolor{stringliteral}{"{}None"{}}\ ||\ this-\/>menu-\/>allocateModeValue.empty())}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_a60a295de4f66eb9cd588975626ac8128}{allocateSquare}}(}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::stoi(this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_aee1c973a176d7f08148637b90c1b18fc}{allocateModeValue}}),}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>allocateModeEvents(std::stoi(this-\/>menu-\/>allocateModeValue))}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Allocate:\ "{}}\ <<\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_aee1c973a176d7f08148637b90c1b18fc}{allocateModeValue}}\ <<\ std::endl;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_aee1c973a176d7f08148637b90c1b18fc}{allocateModeValue}}\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_aba74ca399ce895872523dba9ddfe93ee}{reset}}();}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_a1fcdb91b3d4e46cb654b0932cf559875}{update}}();}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_aecb58e71b5738a9640da6111afc1b6f1}{processControlMenu}}(this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_ab1f57c8606e2fad4a761e4354615b633}{getStatus}}());}
+\DoxyCodeLine{00124\ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_a9a82f3b72cffa977e6ccf208cb2c279b}{setSpeed}}(this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_a329b3e7726e76a9e59ee9c02a5013ae6}{getSpeed}}());}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_a48660d225d7783cbf7b9eeb3ad988da6}{update}}();}
+\DoxyCodeLine{00127\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classDynamicArrayScene_aba882c6f48419007ad82823ef30ce77a}\label{classDynamicArrayScene_aba882c6f48419007ad82823ef30ce77a}} 
+\index{DynamicArrayScene@{DynamicArrayScene}!updateModeEvents@{updateModeEvents}}
+\index{updateModeEvents@{updateModeEvents}!DynamicArrayScene@{DynamicArrayScene}}
+\doxysubsubsection{\texorpdfstring{updateModeEvents()}{updateModeEvents()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ Dynamic\+Array\+Scene\+::update\+Mode\+Events (\begin{DoxyParamCaption}\item[{int}]{chosen\+Node }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{DynamicArrayScene_8cpp_source_l00331}{331}} of file \mbox{\hyperlink{DynamicArrayScene_8cpp_source}{Dynamic\+Array\+Scene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00332\ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_a58bdbe3ada4bc219b09370bb63c7d6e8}{resetEvents}}();}
+\DoxyCodeLine{00333\ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenNode\ <\ 0\ ||\ chosenNode\ >=\ this-\/>array-\/>\mbox{\hyperlink{classArray_af29bf627de157570d00c700773884e20}{getSize}}())}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\};}
+\DoxyCodeLine{00335\ }
+\DoxyCodeLine{00336\ \ \ \ \ \textcolor{comment}{//\ init\ highlighter}}
+\DoxyCodeLine{00337\ \ \ \ \ \textcolor{comment}{//\ ...}}
+\DoxyCodeLine{00338\ }
+\DoxyCodeLine{00339\ \ \ \ \ std::vector<EventAnimation>\ events;}
+\DoxyCodeLine{00340\ \ \ \ \ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}\ event;}
+\DoxyCodeLine{00341\ }
+\DoxyCodeLine{00342\ \ \ \ \ \textcolor{keyword}{event}\ =\ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}();}
+\DoxyCodeLine{00343\ \ \ \ \ \textcolor{keyword}{event}.eventSquares.assign(this-\/>array-\/>\mbox{\hyperlink{classArray_a42ea29579620b256e2a05f4c78b0ec40}{getSquaresSize}}(),\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00344\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this-\/>array-\/>\mbox{\hyperlink{classArray_af29bf627de157570d00c700773884e20}{getSize}}();\ ++i)\ \{}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}};}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ this-\/>array-\/>\mbox{\hyperlink{classArray_af29bf627de157570d00c700773884e20}{getSize}}()\ -\/\ 1)}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[this-\/>array-\/>\mbox{\hyperlink{classArray_af29bf627de157570d00c700773884e20}{getSize}}()\ -\/\ 1].title\ =\ \textcolor{stringliteral}{"{}n"{}};}
+\DoxyCodeLine{00348\ \ \ \ \ \}}
+\DoxyCodeLine{00349\ \ \ \ \ \textcolor{keyword}{event}.eventSquares[chosenNode].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbaca071943e5acd1c8bcfbe0d2ee36fec2}{Square::Status::chosen}};}
+\DoxyCodeLine{00350\ \ \ \ \ \textcolor{keyword}{event}.eventSquares[chosenNode].isPrintPreVal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00351\ }
+\DoxyCodeLine{00352\ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00353\ }
+\DoxyCodeLine{00354\ \ \ \ \ \textcolor{keyword}{event}.eventSquares[chosenNode].isPrintPreVal\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00355\ }
+\DoxyCodeLine{00356\ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00357\ }
+\DoxyCodeLine{00358\ \ \ \ \ \textcolor{keywordflow}{return}\ events;}
+\DoxyCodeLine{00359\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/lib\+Scene/\mbox{\hyperlink{DynamicArrayScene_8hpp}{Dynamic\+Array\+Scene.\+hpp}}\item 
+include/lib\+Scene/\mbox{\hyperlink{DynamicArrayScene_8cpp}{Dynamic\+Array\+Scene.\+cpp}}\end{DoxyCompactItemize}

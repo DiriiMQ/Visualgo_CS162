@@ -1,0 +1,780 @@
+\hypertarget{classCLLScene}{}\doxysection{CLLScene Class Reference}
+\label{classCLLScene}\index{CLLScene@{CLLScene}}
+
+
+{\ttfamily \#include $<$CLLScene.\+hpp$>$}
+
+Inheritance diagram for CLLScene\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCLLScene}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCLLScene_ac87737e5fef7cb041842b3afd7b45bb5}{CLLScene}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}})
+\item 
+void \mbox{\hyperlink{classCLLScene_a1da7009acbeb9dec3b92804cc17e0ff8}{reset}} ()
+\item 
+void \mbox{\hyperlink{classCLLScene_a62eb9d2e23ff17e683bf0a3a0f664db0}{poll\+Event}} (sf\+::\+Event event, sf\+::\+Vector2f mouse\+Pos\+View) override
+\item 
+void \mbox{\hyperlink{classCLLScene_a3028783d2e3bbfb63d982dea6878d37f}{update}} () override
+\item 
+void \mbox{\hyperlink{classCLLScene_aa7e19b20384750b1fd560c3295c49757}{render}} () override
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ \mbox{\hyperlink{classCLLScene_a4d11df79c376e7224ea430c00c1111d2}{add\+Mode\+Events}} (int chosen\+Node)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ \mbox{\hyperlink{classCLLScene_a5d0e0a8d8d4c024e38125b31b666a39e}{delete\+Mode\+Events}} (int chosen\+Node)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ \mbox{\hyperlink{classCLLScene_a9cd42ab98adba10cde75059011fbece4}{update\+Mode\+Events}} (int chosen\+Node)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ \mbox{\hyperlink{classCLLScene_af11fa39d75ae643ad1713b7d0ac49c0c}{search\+Mode\+Events}} (int chosen\+Node)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBaseScene}{Base\+Scene}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBaseScene_abe1e5ed8391db6798c313888ae8ad4e9}{Base\+Scene}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}})
+\item 
+void \mbox{\hyperlink{classBaseScene_adc937756bd780e478e6c338251816b91}{create\+Mode\+Button}} (sf\+::\+Vector2f position, std\+::string text\+String)
+\item 
+virtual void \mbox{\hyperlink{classBaseScene_a16dd70d07399fc63d7a3e29fbac516cf}{poll\+Event}} (sf\+::\+Event event, sf\+::\+Vector2f mouse\+Pos\+View)=0
+\item 
+virtual void \mbox{\hyperlink{classBaseScene_a269667611675475435d876e0f8f26a79}{update}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classBaseScene_a18694189ddd54cb279e1814869dbe854}{render}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Public Attributes inherited from \mbox{\hyperlink{classBaseScene}{Base\+Scene}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classButton}{Button}} $\ast$ \mbox{\hyperlink{classBaseScene_acbfb2074648ed5f471ef8e46a60af885}{mode\+Button}} \{\}
+\item 
+bool \mbox{\hyperlink{classBaseScene_ad250cff3475ec4b590afe5ac70597746}{is\+Menu\+Open}} \{\}
+\item 
+bool \mbox{\hyperlink{classBaseScene_ae6e22961b8642440a160df8723363afa}{is\+Demo\+Code\+Open}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classBaseScene}{Base\+Scene}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBaseScene_a408cafc155677ae764855ce9d16110b5}{set\+Window}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBaseScene}{Base\+Scene}}}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Render\+Window $\ast$ \mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}} \{\}
+\item 
+\mbox{\hyperlink{classControlMenu}{Control\+Menu}} $\ast$ \mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{control\+Menu}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{CLLScene_8hpp_source_l00012}{12}} of file \mbox{\hyperlink{CLLScene_8hpp_source}{CLLScene.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCLLScene_ac87737e5fef7cb041842b3afd7b45bb5}\label{classCLLScene_ac87737e5fef7cb041842b3afd7b45bb5}} 
+\index{CLLScene@{CLLScene}!CLLScene@{CLLScene}}
+\index{CLLScene@{CLLScene}!CLLScene@{CLLScene}}
+\doxysubsubsection{\texorpdfstring{CLLScene()}{CLLScene()}}
+{\footnotesize\ttfamily CLLScene\+::\+CLLScene (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Definition at line \mbox{\hyperlink{CLLScene_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{CLLScene_8cpp_source}{CLLScene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classBaseScene}{BaseScene}}(\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}})\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ this-\/>init();}
+\DoxyCodeLine{00009\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCLLScene_a4d11df79c376e7224ea430c00c1111d2}\label{classCLLScene_a4d11df79c376e7224ea430c00c1111d2}} 
+\index{CLLScene@{CLLScene}!addModeEvents@{addModeEvents}}
+\index{addModeEvents@{addModeEvents}!CLLScene@{CLLScene}}
+\doxysubsubsection{\texorpdfstring{addModeEvents()}{addModeEvents()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ CLLScene\+::add\+Mode\+Events (\begin{DoxyParamCaption}\item[{int}]{chosen\+Node }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{CLLScene_8cpp_source_l00143}{143}} of file \mbox{\hyperlink{CLLScene_8cpp_source}{CLLScene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00144\ \ \ \ \ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_a6a3b96420cf70025e0e9c1e2a53a888d}{resetEvents}}();}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenNode\ <\ 0\ ||\ chosenNode\ >\ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}())}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_adb6f396959a25d375458e4a33ad2cfc8}{initHighlighter}}(}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1Highlighter_1_1SLL_a5cef3dcd4035ad2b3c60e76a624d3ede}{constants::Highlighter::SLL::CODES\_PATH}}[0].second,}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1Highlighter_1_1SLL_a5cef3dcd4035ad2b3c60e76a624d3ede}{constants::Highlighter::SLL::CODES\_PATH}}[0].first}
+\DoxyCodeLine{00151\ \ \ \ \ );}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ std::vector<EventAnimation>\ events;}
+\DoxyCodeLine{00154\ \ \ \ \ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}\ event;}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenNode)\ \{}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.\mbox{\hyperlink{classEventAnimation_aad586f4d7c44abae712925e20061c43f}{titleNodes}}\ =\ \{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,\ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}head"{}}\},}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{chosenNode,\ \textcolor{stringliteral}{"{}temp"{}}\}}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow.second\ =\ 0;}
+\DoxyCodeLine{00162\ \ \ \ \ \}}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes.emplace\_back(chosenNode,\ \textcolor{stringliteral}{"{}temp"{}});}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}())\ \{}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes.emplace\_back(1,\ \textcolor{stringliteral}{"{}head"{}});}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow.second\ =\ 1;}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00169\ \ \ \ \ \}}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keyword}{event}.hiddenArrows.emplace\_back(chosenNode,\ \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{NodeInfo::ArrowType::RIGHT}});}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenNode\ \&\&\ chosenNode\ ==\ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}())}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.hiddenArrows.emplace\_back(chosenNode\ -\/\ 1,\ \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{NodeInfo::ArrowType::RIGHT}});}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keyword}{event}.colorNodes.push\_back(chosenNode);}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keyword}{event}.statusChosenNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6ac7b573146267d98cb26fbe9b34e5a259}{NodeInfo::StatusNode::OutChain}};}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow.first\ =\ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}();}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{0\};}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenNode\ ==\ 0)\ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}())\ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes\ =\ \{}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{1,\ \textcolor{stringliteral}{"{}head"{}}\},}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{chosenNode,\ \textcolor{stringliteral}{"{}temp"{}}\}}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorNodes\ =\ std::vector<int>\{0\};}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorArrows.emplace\_back(0,\ \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{NodeInfo::ArrowType::RIGHT}});}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.statusChosenNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6ac7b573146267d98cb26fbe9b34e5a259}{NodeInfo::StatusNode::OutChain}};}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.isPrintNormal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}(),\ 1\};}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{1,\ 2\};}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes.emplace\_back(chosenNode,\ \textcolor{stringliteral}{"{}head|temp"{}});}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{3\};}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.statusChosenNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6a4ddc1f10c5822c174470affbb45f9901}{NodeInfo::StatusNode::InChain}};}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}(),\ 0\};}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00203\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes\ =\ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,\ \textcolor{stringliteral}{"{}head|current"{}}\},}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{chosenNode,\ \textcolor{stringliteral}{"{}temp"{}}\}}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorNodes.push\_back(0);}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.hiddenArrows.emplace\_back(chosenNode,\ \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{NodeInfo::ArrowType::RIGHT}});}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenNode\ ==\ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}())}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.hiddenArrows.emplace\_back(chosenNode\ -\/\ 1,\ \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{NodeInfo::ArrowType::RIGHT}});}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.statusChosenNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6ac7b573146267d98cb26fbe9b34e5a259}{NodeInfo::StatusNode::OutChain}};}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}(),\ 0\};}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{5\};}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ chosenNode;\ ++i)\ \{}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes\ =\ \{}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,\ \textcolor{stringliteral}{"{}head"{}}\},}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{chosenNode,\ \textcolor{stringliteral}{"{}temp"{}}\},}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{i,\ \textcolor{stringliteral}{"{}current"{}}\}}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorNodes.push\_back(i);}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.hiddenArrows.emplace\_back(chosenNode,\ \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{NodeInfo::ArrowType::RIGHT}});}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenNode\ ==\ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}())}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.hiddenArrows.emplace\_back(chosenNode\ -\/\ 1,\ \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{NodeInfo::ArrowType::RIGHT}});}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.statusChosenNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6ac7b573146267d98cb26fbe9b34e5a259}{NodeInfo::StatusNode::OutChain}};}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}(),\ 0\};}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{6\};}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ chosenNode\ -\/\ 1)\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes\ =\ \{}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,\ \textcolor{stringliteral}{"{}head"{}}\},}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{chosenNode,\ \textcolor{stringliteral}{"{}temp"{}}\},}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{i,\ \textcolor{stringliteral}{"{}current"{}}\}}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorNodes.push\_back(i);}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorArrows.emplace\_back(i,\ \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{NodeInfo::ArrowType::RIGHT}});}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.hiddenArrows.emplace\_back(chosenNode,\ \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{NodeInfo::ArrowType::RIGHT}});}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenNode\ ==\ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}())}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.hiddenArrows.emplace\_back(chosenNode\ -\/\ 1,\ \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{NodeInfo::ArrowType::RIGHT}});}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.statusChosenNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6ac7b573146267d98cb26fbe9b34e5a259}{NodeInfo::StatusNode::OutChain}};}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}(),\ 0\};}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{7\};}
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenNode\ !=\ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}())\ \{}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes\ =\ \{}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,\ \textcolor{stringliteral}{"{}head"{}}\},}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{chosenNode,\ \textcolor{stringliteral}{"{}temp"{}}\},}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{chosenNode\ -\/\ 1,\ \textcolor{stringliteral}{"{}current"{}}\}}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorNodes.push\_back(chosenNode);}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorArrows.emplace\_back(chosenNode,\ \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{NodeInfo::ArrowType::RIGHT}});}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.statusChosenNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6ac7b573146267d98cb26fbe9b34e5a259}{NodeInfo::StatusNode::OutChain}};}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.isPrintNormal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}(),\ 0\};}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{8\};}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes\ =\ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,\ \textcolor{stringliteral}{"{}head"{}}\},}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{chosenNode,\ \textcolor{stringliteral}{"{}temp"{}}\}}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.statusChosenNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6a4ddc1f10c5822c174470affbb45f9901}{NodeInfo::StatusNode::InChain}};}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}(),\ 0\};}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{9\};}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00283\ \ \ \ \ \}}
+\DoxyCodeLine{00284\ }
+\DoxyCodeLine{00285\ \ \ \ \ \textcolor{keywordflow}{return}\ events;}
+\DoxyCodeLine{00286\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCLLScene_a5d0e0a8d8d4c024e38125b31b666a39e}\label{classCLLScene_a5d0e0a8d8d4c024e38125b31b666a39e}} 
+\index{CLLScene@{CLLScene}!deleteModeEvents@{deleteModeEvents}}
+\index{deleteModeEvents@{deleteModeEvents}!CLLScene@{CLLScene}}
+\doxysubsubsection{\texorpdfstring{deleteModeEvents()}{deleteModeEvents()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ CLLScene\+::delete\+Mode\+Events (\begin{DoxyParamCaption}\item[{int}]{chosen\+Node }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{CLLScene_8cpp_source_l00288}{288}} of file \mbox{\hyperlink{CLLScene_8cpp_source}{CLLScene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00289\ \ \ \ \ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_a6a3b96420cf70025e0e9c1e2a53a888d}{resetEvents}}();}
+\DoxyCodeLine{00290\ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenNode\ <\ 0\ ||\ chosenNode\ >=\ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}())}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\};}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00293\ \ \ \ \ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_adb6f396959a25d375458e4a33ad2cfc8}{initHighlighter}}(}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1Highlighter_1_1SLL_a5cef3dcd4035ad2b3c60e76a624d3ede}{constants::Highlighter::SLL::CODES\_PATH}}[1].second,}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1Highlighter_1_1SLL_a5cef3dcd4035ad2b3c60e76a624d3ede}{constants::Highlighter::SLL::CODES\_PATH}}[1].first}
+\DoxyCodeLine{00296\ \ \ \ \ );}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00298\ \ \ \ \ std::vector<EventAnimation>\ events;}
+\DoxyCodeLine{00299\ \ \ \ \ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}\ event;}
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00301\ \ \ \ \ \textcolor{keywordflow}{if}\ (!chosenNode)\ \{}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.\mbox{\hyperlink{classEventAnimation_aad586f4d7c44abae712925e20061c43f}{titleNodes}}.emplace\_back(chosenNode,\ \textcolor{stringliteral}{"{}head|temp"{}});}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorNodes.push\_back(chosenNode);}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.statusChosenNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6a4ddc1f10c5822c174470affbb45f9901}{NodeInfo::StatusNode::InChain}};}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}()\ -\/\ 1,\ 0\};}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{0,\ 1\};}
+\DoxyCodeLine{00307\ }
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00309\ }
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}()\ >\ 1)\ \{}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes\ =\ \{}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{chosenNode,\ \textcolor{stringliteral}{"{}temp"{}}\},}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{1,\ \textcolor{stringliteral}{"{}head"{}}\}}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorNodes.push\_back(1);}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorArrows.emplace\_back(chosenNode,\ \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{NodeInfo::ArrowType::RIGHT}});}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.isPrintNormal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.statusChosenNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6ac7b573146267d98cb26fbe9b34e5a259}{NodeInfo::StatusNode::OutChain}};}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}()\ -\/\ 1,\ 1\};}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{2\};}
+\DoxyCodeLine{00322\ }
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00325\ }
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes.emplace\_back(1,\ \textcolor{stringliteral}{"{}head"{}});}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.statusChosenNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6aec24d78ce33048dc73a2b6b1a0690192}{NodeInfo::StatusNode::Visible}};}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}()\ -\/\ 1,\ 1\};}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{3\};}
+\DoxyCodeLine{00331\ }
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00333\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes.emplace\_back(0,\ \textcolor{stringliteral}{"{}head|current"{}});}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorNodes.push\_back(0);}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.statusChosenNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6a4ddc1f10c5822c174470affbb45f9901}{NodeInfo::StatusNode::InChain}};}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}()\ -\/\ 1,\ 0\};}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{5\};}
+\DoxyCodeLine{00340\ }
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00342\ }
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ chosenNode;\ ++i)\ \{}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes\ =\ \{}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,\ \textcolor{stringliteral}{"{}head"{}}\},}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{i,\ \textcolor{stringliteral}{"{}current"{}}\}}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorNodes.push\_back(i);}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.statusChosenNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6a4ddc1f10c5822c174470affbb45f9901}{NodeInfo::StatusNode::InChain}};}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}()\ -\/\ 1,\ 0\};}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{6\};}
+\DoxyCodeLine{00353\ }
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00355\ }
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ chosenNode\ -\/\ 1)\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00357\ }
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes\ =\ \{}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,\ \textcolor{stringliteral}{"{}head"{}}\},}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{i,\ \textcolor{stringliteral}{"{}current"{}}\}}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorNodes.push\_back(i);}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorArrows.emplace\_back(i,\ \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{NodeInfo::ArrowType::RIGHT}});}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.statusChosenNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6a4ddc1f10c5822c174470affbb45f9901}{NodeInfo::StatusNode::InChain}};}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}()\ -\/\ 1,\ 0\};}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{7\};}
+\DoxyCodeLine{00368\ }
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00371\ }
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes\ =\ \{}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,\ \textcolor{stringliteral}{"{}head"{}}\},}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{chosenNode,\ \textcolor{stringliteral}{"{}temp"{}}\},}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{chosenNode\ -\/\ 1,\ \textcolor{stringliteral}{"{}current"{}}\}}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorNodes.push\_back(chosenNode);}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorArrows.emplace\_back(chosenNode\ -\/\ 1,\ \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{NodeInfo::ArrowType::RIGHT}});}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.statusChosenNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6a4ddc1f10c5822c174470affbb45f9901}{NodeInfo::StatusNode::InChain}};}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}()\ -\/\ 1,\ 0\};}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{8\};}
+\DoxyCodeLine{00383\ }
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenNode\ !=\ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}()\ -\/\ 1)\ \{}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes\ =\ \{}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,\ \textcolor{stringliteral}{"{}head"{}}\},}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{chosenNode,\ \textcolor{stringliteral}{"{}temp"{}}\},}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{chosenNode\ -\/\ 1,\ \textcolor{stringliteral}{"{}current"{}}\}}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorNodes.push\_back(chosenNode);}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorArrows.emplace\_back(chosenNode\ -\/\ 1,\ \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{NodeInfo::ArrowType::RIGHT}});}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.statusChosenNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6ac7b573146267d98cb26fbe9b34e5a259}{NodeInfo::StatusNode::OutChain}};}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}()\ -\/\ 1,\ 0\};}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.isPrintNormal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{9\};}
+\DoxyCodeLine{00399\ }
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00401\ }
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes.emplace\_back(0,\ \textcolor{stringliteral}{"{}head"{}});}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.statusChosenNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6aec24d78ce33048dc73a2b6b1a0690192}{NodeInfo::StatusNode::Visible}};}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}()\ -\/\ 1,\ 0\};}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{10\};}
+\DoxyCodeLine{00407\ }
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes\ =\ \{}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,\ \textcolor{stringliteral}{"{}head"{}}\},}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{chosenNode,\ \textcolor{stringliteral}{"{}temp"{}}\},}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{chosenNode\ -\/\ 1,\ \textcolor{stringliteral}{"{}current"{}}\}}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorNodes.push\_back(chosenNode);}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.hiddenArrows.emplace\_back(chosenNode\ -\/\ 1,\ \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{NodeInfo::ArrowType::RIGHT}});}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.statusChosenNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6ac7b573146267d98cb26fbe9b34e5a259}{NodeInfo::StatusNode::OutChain}};}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{chosenNode\ -\/\ 1,\ 0\};}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{9\};}
+\DoxyCodeLine{00421\ }
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00423\ }
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes.emplace\_back(0,\ \textcolor{stringliteral}{"{}head"{}});}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.hiddenArrows.emplace\_back(chosenNode\ -\/\ 1,\ \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{NodeInfo::ArrowType::RIGHT}});}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.statusChosenNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6aec24d78ce33048dc73a2b6b1a0690192}{NodeInfo::StatusNode::Visible}};}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{chosenNode\ -\/\ 1,\ 0\};}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{10\};}
+\DoxyCodeLine{00430\ }
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00433\ \ \ \ \ \}}
+\DoxyCodeLine{00434\ }
+\DoxyCodeLine{00435\ \ \ \ \ \textcolor{keywordflow}{return}\ events;}
+\DoxyCodeLine{00436\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCLLScene_a62eb9d2e23ff17e683bf0a3a0f664db0}\label{classCLLScene_a62eb9d2e23ff17e683bf0a3a0f664db0}} 
+\index{CLLScene@{CLLScene}!pollEvent@{pollEvent}}
+\index{pollEvent@{pollEvent}!CLLScene@{CLLScene}}
+\doxysubsubsection{\texorpdfstring{pollEvent()}{pollEvent()}}
+{\footnotesize\ttfamily void CLLScene\+::poll\+Event (\begin{DoxyParamCaption}\item[{sf\+::\+Event}]{event,  }\item[{sf\+::\+Vector2f}]{mouse\+Pos\+View }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classBaseScene_a16dd70d07399fc63d7a3e29fbac516cf}{Base\+Scene}}.
+
+
+
+Definition at line \mbox{\hyperlink{CLLScene_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{CLLScene_8cpp_source}{CLLScene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classBaseScene_ad250cff3475ec4b590afe5ac70597746}{isMenuOpen}})}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a22f4543480dcd86c689aa7ac13f7f579}{pollEvents}}(event,\ mousePosView);}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_a9eedcf8b9c4a81624caa4af8fcb35abc}{pollEvents}}(event,\ mousePosView);}
+\DoxyCodeLine{00016\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCLLScene_aa7e19b20384750b1fd560c3295c49757}\label{classCLLScene_aa7e19b20384750b1fd560c3295c49757}} 
+\index{CLLScene@{CLLScene}!render@{render}}
+\index{render@{render}!CLLScene@{CLLScene}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void CLLScene\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classBaseScene_a18694189ddd54cb279e1814869dbe854}{Base\+Scene}}.
+
+
+
+Definition at line \mbox{\hyperlink{CLLScene_8cpp_source_l00123}{123}} of file \mbox{\hyperlink{CLLScene_8cpp_source}{CLLScene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classBaseScene_ad250cff3475ec4b590afe5ac70597746}{isMenuOpen}})}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a230d8da87104265bf9f3becd647cfeae}{render}}();}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classBaseScene_ae6e22961b8642440a160df8723363afa}{isDemoCodeOpen}})}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aa4e5c3adc6a10b14d7324a54981a79a9}{renderHighlighter}}();}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_a346df0390bcdb72dd7ceadaa146106a0}{render}}();}
+\DoxyCodeLine{00131\ \ \ \ \ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_af5ca73f2891cc23032e1019a75154c9b}{render}}();}
+\DoxyCodeLine{00132\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCLLScene_a1da7009acbeb9dec3b92804cc17e0ff8}\label{classCLLScene_a1da7009acbeb9dec3b92804cc17e0ff8}} 
+\index{CLLScene@{CLLScene}!reset@{reset}}
+\index{reset@{reset}!CLLScene@{CLLScene}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void CLLScene\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{CLLScene_8cpp_source_l00139}{139}} of file \mbox{\hyperlink{CLLScene_8cpp_source}{CLLScene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00140\ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a635d5505a414c101236ee205ec03d0d2}{resetActiveOptionMenu}}();}
+\DoxyCodeLine{00141\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCLLScene_af11fa39d75ae643ad1713b7d0ac49c0c}\label{classCLLScene_af11fa39d75ae643ad1713b7d0ac49c0c}} 
+\index{CLLScene@{CLLScene}!searchModeEvents@{searchModeEvents}}
+\index{searchModeEvents@{searchModeEvents}!CLLScene@{CLLScene}}
+\doxysubsubsection{\texorpdfstring{searchModeEvents()}{searchModeEvents()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ CLLScene\+::search\+Mode\+Events (\begin{DoxyParamCaption}\item[{int}]{chosen\+Node }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{CLLScene_8cpp_source_l00506}{506}} of file \mbox{\hyperlink{CLLScene_8cpp_source}{CLLScene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00506\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00507\ \ \ \ \ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_a6a3b96420cf70025e0e9c1e2a53a888d}{resetEvents}}();}
+\DoxyCodeLine{00508\ \ \ \ \ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_adb6f396959a25d375458e4a33ad2cfc8}{initHighlighter}}(}
+\DoxyCodeLine{00509\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1Highlighter_1_1SLL_a5cef3dcd4035ad2b3c60e76a624d3ede}{constants::Highlighter::SLL::CODES\_PATH}}[3].second,}
+\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1Highlighter_1_1SLL_a5cef3dcd4035ad2b3c60e76a624d3ede}{constants::Highlighter::SLL::CODES\_PATH}}[3].first}
+\DoxyCodeLine{00511\ \ \ \ \ );}
+\DoxyCodeLine{00512\ }
+\DoxyCodeLine{00513\ \ \ \ \ std::vector<EventAnimation>\ events;}
+\DoxyCodeLine{00514\ \ \ \ \ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}\ event;}
+\DoxyCodeLine{00515\ }
+\DoxyCodeLine{00516\ \ \ \ \ \textcolor{keyword}{event}.\mbox{\hyperlink{classEventAnimation_aad586f4d7c44abae712925e20061c43f}{titleNodes}}.emplace\_back(0,\ \textcolor{stringliteral}{"{}head|current"{}});}
+\DoxyCodeLine{00517\ \ \ \ \ \textcolor{keyword}{event}.colorNodes.push\_back(0);}
+\DoxyCodeLine{00518\ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}()\ -\/\ 1,\ 0\};}
+\DoxyCodeLine{00519\ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{0\};}
+\DoxyCodeLine{00520\ }
+\DoxyCodeLine{00521\ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00522\ }
+\DoxyCodeLine{00523\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ chosenNode;\ ++i)\ \{}
+\DoxyCodeLine{00524\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ chosenNode\ \&\&\ chosenNode\ ==\ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}())}
+\DoxyCodeLine{00525\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00526\ }
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes\ =\ \{}
+\DoxyCodeLine{00529\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,\ \textcolor{stringliteral}{"{}head"{}}\},}
+\DoxyCodeLine{00530\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{i,\ \textcolor{stringliteral}{"{}current"{}}\}}
+\DoxyCodeLine{00531\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00532\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorNodes.push\_back(i);}
+\DoxyCodeLine{00533\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}()\ -\/\ 1,\ 0\};}
+\DoxyCodeLine{00534\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{1\};}
+\DoxyCodeLine{00535\ }
+\DoxyCodeLine{00536\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00537\ }
+\DoxyCodeLine{00538\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ chosenNode)\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00539\ }
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00541\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes\ =\ \{}
+\DoxyCodeLine{00542\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,\ \textcolor{stringliteral}{"{}head"{}}\},}
+\DoxyCodeLine{00543\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{i,\ \textcolor{stringliteral}{"{}current"{}}\}}
+\DoxyCodeLine{00544\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00545\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorNodes.push\_back(i);}
+\DoxyCodeLine{00546\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorArrows.emplace\_back(i,\ \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{NodeInfo::ArrowType::RIGHT}});}
+\DoxyCodeLine{00547\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}()\ -\/\ 1,\ 0\};}
+\DoxyCodeLine{00548\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{4\};}
+\DoxyCodeLine{00549\ }
+\DoxyCodeLine{00550\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00551\ \ \ \ \ \}}
+\DoxyCodeLine{00552\ }
+\DoxyCodeLine{00553\ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenNode\ ==\ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}())\ \{}
+\DoxyCodeLine{00554\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00555\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes.emplace\_back(0,\ \textcolor{stringliteral}{"{}head"{}});}
+\DoxyCodeLine{00556\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}()\ -\/\ 1,\ 0\};}
+\DoxyCodeLine{00557\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{5\};}
+\DoxyCodeLine{00558\ }
+\DoxyCodeLine{00559\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00560\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00561\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00562\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes\ =\ \{}
+\DoxyCodeLine{00563\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,\ \textcolor{stringliteral}{"{}head"{}}\},}
+\DoxyCodeLine{00564\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{chosenNode,\ \textcolor{stringliteral}{"{}current"{}}\}}
+\DoxyCodeLine{00565\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00566\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorNodes.push\_back(chosenNode);}
+\DoxyCodeLine{00567\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}()\ -\/\ 1,\ 0\};}
+\DoxyCodeLine{00568\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{2,\ 3\};}
+\DoxyCodeLine{00569\ }
+\DoxyCodeLine{00570\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00571\ \ \ \ \ \}}
+\DoxyCodeLine{00572\ }
+\DoxyCodeLine{00573\ \ \ \ \ \textcolor{keywordflow}{return}\ events;}
+\DoxyCodeLine{00574\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCLLScene_a3028783d2e3bbfb63d982dea6878d37f}\label{classCLLScene_a3028783d2e3bbfb63d982dea6878d37f}} 
+\index{CLLScene@{CLLScene}!update@{update}}
+\index{update@{update}!CLLScene@{CLLScene}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void CLLScene\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classBaseScene_a269667611675475435d876e0f8f26a79}{Base\+Scene}}.
+
+
+
+Definition at line \mbox{\hyperlink{CLLScene_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{CLLScene_8cpp_source}{CLLScene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classBaseScene_ad250cff3475ec4b590afe5ac70597746}{isMenuOpen}})\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a906bcfb168c739a12a5f16cccbfddcdc}{update}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36}{constants::MenuLinkedList::Button}}\ status\ =\ this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a9c6b4934fece08fb47f2bcf836324385}{getActiveOptionMenu}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_a9afc3c570f50d27a91a4b8cff7b3030a}{constants::MenuLinkedList::CreateMode::Button}}\ createMode;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (status)\{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36acd85afaf91840a1b11bfc3f6e733c1f9}{constants::MenuLinkedList::Button::CREATE\_BUTTON}}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ createMode\ =\ this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_ab91ea6912f99443559321a96fcafeb0c}{getActiveCreateMode}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (createMode\ ==\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_a9afc3c570f50d27a91a4b8cff7b3030aaf3c475521692864d32349d751e7efb9f}{constants::MenuLinkedList::CreateMode::Button::RANDOM\_BUTTON}})\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a84230fd7b2283fe363b4e12e0f2c31ef}{createModeValue}}[0]\ ==\ \textcolor{stringliteral}{"{}None"{}})}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a84230fd7b2283fe363b4e12e0f2c31ef}{createModeValue}}[0].empty())}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a84230fd7b2283fe363b4e12e0f2c31ef}{createModeValue}}[0]\ =\ \textcolor{stringliteral}{"{}0"{}};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ size\ =\ std::stoi(this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a84230fd7b2283fe363b4e12e0f2c31ef}{createModeValue}}[0]);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_a6d6b5cb5276b084d48eb5569d8331fa3}{createLinkedList}}(size);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (createMode\ ==\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_a9afc3c570f50d27a91a4b8cff7b3030aa68a37dee268e4dc37c4c51a2f177b8e5}{constants::MenuLinkedList::CreateMode::Button::DEFINED\_LIST\_BUTTON}})\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a84230fd7b2283fe363b4e12e0f2c31ef}{createModeValue}}[1]\ ==\ \textcolor{stringliteral}{"{}None"{}})}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::string>\ values;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ value\ =\ this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a84230fd7b2283fe363b4e12e0f2c31ef}{createModeValue}}[1];}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss(value);}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ token;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(ss,\ token,\ \textcolor{charliteral}{','}))\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ values.push\_back(token);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_a6d6b5cb5276b084d48eb5569d8331fa3}{createLinkedList}}(values);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (createMode\ ==\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_1_1CreateMode_a9afc3c570f50d27a91a4b8cff7b3030aa95dcb5e6e64029fc24a5bda4f3c3849e}{constants::MenuLinkedList::CreateMode::Button::FILE\_BUTTON}})\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a84230fd7b2283fe363b4e12e0f2c31ef}{createModeValue}}[2]\ ==\ \textcolor{stringliteral}{"{}None"{}})}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::string>\ values;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ value\ =\ this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a84230fd7b2283fe363b4e12e0f2c31ef}{createModeValue}}[2];}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss(value);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ token;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(ss,\ token,\ \textcolor{charliteral}{','}))}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ values.push\_back(token);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_a6d6b5cb5276b084d48eb5569d8331fa3}{createLinkedList}}(values);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a84230fd7b2283fe363b4e12e0f2c31ef}{createModeValue}}[2]\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_aba74ca399ce895872523dba9ddfe93ee}{reset}}();}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36a0de6d59bfbc6881eff52940e8cf7b5ef}{constants::MenuLinkedList::Button::ADD\_BUTTON}}:}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a84294b9f7c0ccbf6641cb68e64f0b3ab}{addModeValue}}[0]\ ==\ \textcolor{stringliteral}{"{}None"{}}\ ||\ this-\/>menu-\/>addModeValue[1]\ ==\ \textcolor{stringliteral}{"{}None"{}}\ ||\ this-\/>menu-\/>addModeValue[0].empty())}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_a9b9d0cc9b9878b6c468abd70c6fba738}{addNode}}(}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::stoi(this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a84294b9f7c0ccbf6641cb68e64f0b3ab}{addModeValue}}[0]),}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>addModeValue[1],}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>addModeEvents(std::stoi(this-\/>menu-\/>addModeValue[0]))}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Add:\ "{}}\ <<\ this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a84294b9f7c0ccbf6641cb68e64f0b3ab}{addModeValue}}[0]\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a84294b9f7c0ccbf6641cb68e64f0b3ab}{addModeValue}}[1]\ <<\ std::endl;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a84294b9f7c0ccbf6641cb68e64f0b3ab}{addModeValue}}[0]\ =\ this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a84294b9f7c0ccbf6641cb68e64f0b3ab}{addModeValue}}[1]\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_aba74ca399ce895872523dba9ddfe93ee}{reset}}();}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36a6cea2843935abb07fb801531cdeee8e2}{constants::MenuLinkedList::Button::DELETE\_BUTTON}}:}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a78865c1258176106e1788d55194674de}{deleteModeValue}}\ ==\ \textcolor{stringliteral}{"{}None"{}}\ ||\ this-\/>menu-\/>deleteModeValue.empty())}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_a0b2740dc301280dd423feec18fff14f6}{deleteNode}}(}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::stoi(this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a78865c1258176106e1788d55194674de}{deleteModeValue}}),}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>deleteModeEvents(std::stoi(this-\/>menu-\/>deleteModeValue))}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Delete:\ "{}}\ <<\ this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a78865c1258176106e1788d55194674de}{deleteModeValue}}\ <<\ std::endl;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a78865c1258176106e1788d55194674de}{deleteModeValue}}\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_aba74ca399ce895872523dba9ddfe93ee}{reset}}();}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36a82d85b16a15ac280fc99b92579f67251}{constants::MenuLinkedList::Button::UPDATE\_BUTTON}}:}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a70cf5488e3da65b735111c62d659d397}{updateModeValue}}[0]\ ==\ \textcolor{stringliteral}{"{}None"{}}\ ||\ this-\/>menu-\/>updateModeValue[1]\ ==\ \textcolor{stringliteral}{"{}None"{}}\ ||\ this-\/>menu-\/>updateModeValue[0].empty())}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_ad74afa543ca3f3768e2df343e2193f3d}{updateNode}}(}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::stoi(this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a70cf5488e3da65b735111c62d659d397}{updateModeValue}}[0]),}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>updateModeValue[1],}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>updateModeEvents(std::stoi(this-\/>menu-\/>updateModeValue[0]))}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Update:\ "{}}\ <<\ this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a70cf5488e3da65b735111c62d659d397}{updateModeValue}}[0]\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a70cf5488e3da65b735111c62d659d397}{updateModeValue}}[1]\ <<\ std::endl;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a70cf5488e3da65b735111c62d659d397}{updateModeValue}}[0]\ =\ this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a70cf5488e3da65b735111c62d659d397}{updateModeValue}}[1]\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_aba74ca399ce895872523dba9ddfe93ee}{reset}}();}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuLinkedList_a9395258ac4fff428cff40b479bc32a36a3f91f98213655f5bf68f96e67776b6eb}{constants::MenuLinkedList::Button::SEARCH\_BUTTON}}:}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a31f8ba66adaa9df84f956c6379bdff45}{searchModeValue}}\ ==\ \textcolor{stringliteral}{"{}None"{}}\ ||\ this-\/>menu-\/>searchModeValue.empty())}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_a94eb39283ef5cc94663e5c42f275f341}{searchNode}}(}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classCLLScene_af11fa39d75ae643ad1713b7d0ac49c0c}{searchModeEvents}}(this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aa5356b493b8186a9d98d8bd330f270e9}{findValue}}(this-\/>menu-\/>searchModeValue))}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Search:\ "{}}\ <<\ this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a31f8ba66adaa9df84f956c6379bdff45}{searchModeValue}}\ <<\ std::endl;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuLinkedList_a31f8ba66adaa9df84f956c6379bdff45}{searchModeValue}}\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_aba74ca399ce895872523dba9ddfe93ee}{reset}}();}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \ \ \ \ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_a1fcdb91b3d4e46cb654b0932cf559875}{update}}();}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_ac2c7da33588ca3b5334f604bb5e701cc}{processControlMenu}}(this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_ab1f57c8606e2fad4a761e4354615b633}{getStatus}}());}
+\DoxyCodeLine{00118\ \ \ \ \ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_a5d181a4ec03a8524680b83a64dddc105}{setSpeed}}(this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_a329b3e7726e76a9e59ee9c02a5013ae6}{getSpeed}}());}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_a5708d2547a548d1f758c7c5ce7a93362}{update}}();}
+\DoxyCodeLine{00121\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCLLScene_a9cd42ab98adba10cde75059011fbece4}\label{classCLLScene_a9cd42ab98adba10cde75059011fbece4}} 
+\index{CLLScene@{CLLScene}!updateModeEvents@{updateModeEvents}}
+\index{updateModeEvents@{updateModeEvents}!CLLScene@{CLLScene}}
+\doxysubsubsection{\texorpdfstring{updateModeEvents()}{updateModeEvents()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ CLLScene\+::update\+Mode\+Events (\begin{DoxyParamCaption}\item[{int}]{chosen\+Node }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{CLLScene_8cpp_source_l00438}{438}} of file \mbox{\hyperlink{CLLScene_8cpp_source}{CLLScene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00439\ \ \ \ \ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_a6a3b96420cf70025e0e9c1e2a53a888d}{resetEvents}}();}
+\DoxyCodeLine{00440\ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenNode\ <\ 0\ ||\ chosenNode\ >=\ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}())}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\};}
+\DoxyCodeLine{00442\ }
+\DoxyCodeLine{00443\ \ \ \ \ this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_adb6f396959a25d375458e4a33ad2cfc8}{initHighlighter}}(}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1Highlighter_1_1SLL_a5cef3dcd4035ad2b3c60e76a624d3ede}{constants::Highlighter::SLL::CODES\_PATH}}[2].second,}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1Highlighter_1_1SLL_a5cef3dcd4035ad2b3c60e76a624d3ede}{constants::Highlighter::SLL::CODES\_PATH}}[2].first}
+\DoxyCodeLine{00446\ \ \ \ \ );}
+\DoxyCodeLine{00447\ }
+\DoxyCodeLine{00448\ \ \ \ \ std::vector<EventAnimation>\ events;}
+\DoxyCodeLine{00449\ \ \ \ \ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}\ event;}
+\DoxyCodeLine{00450\ }
+\DoxyCodeLine{00451\ \ \ \ \ \textcolor{keyword}{event}.\mbox{\hyperlink{classEventAnimation_aad586f4d7c44abae712925e20061c43f}{titleNodes}}.emplace\_back(0,\ \textcolor{stringliteral}{"{}head|current"{}});}
+\DoxyCodeLine{00452\ \ \ \ \ \textcolor{keyword}{event}.colorNodes.push\_back(0);}
+\DoxyCodeLine{00453\ \ \ \ \ \textcolor{keyword}{event}.isPrintPreVal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00454\ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}()\ -\/\ 1,\ 0\};}
+\DoxyCodeLine{00455\ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{0\};}
+\DoxyCodeLine{00456\ }
+\DoxyCodeLine{00457\ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00458\ }
+\DoxyCodeLine{00459\ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenNode)\ \{}
+\DoxyCodeLine{00460\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ chosenNode;\ ++i)\ \{}
+\DoxyCodeLine{00461\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes\ =\ \{}
+\DoxyCodeLine{00463\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,\ \textcolor{stringliteral}{"{}head"{}}\},}
+\DoxyCodeLine{00464\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{i,\ \textcolor{stringliteral}{"{}current"{}}\}}
+\DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorNodes.push\_back(i);}
+\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.isPrintPreVal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}()\ -\/\ 1,\ 0\};}
+\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{1\};}
+\DoxyCodeLine{00470\ }
+\DoxyCodeLine{00471\ \ \ \ \ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00472\ }
+\DoxyCodeLine{00473\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ chosenNode)\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00474\ }
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00476\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes\ =\ \{}
+\DoxyCodeLine{00477\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,\ \textcolor{stringliteral}{"{}head"{}}\},}
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{i,\ \textcolor{stringliteral}{"{}current"{}}\}}
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorNodes.push\_back(i);}
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.colorArrows.emplace\_back(i,\ \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{NodeInfo::ArrowType::RIGHT}});}
+\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.isPrintPreVal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}()\ -\/\ 1,\ 0\};}
+\DoxyCodeLine{00484\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{2\};}
+\DoxyCodeLine{00485\ }
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00487\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00488\ \ \ \ \ \}}
+\DoxyCodeLine{00489\ }
+\DoxyCodeLine{00490\ \ \ \ \ \textcolor{keyword}{event}.reset();}
+\DoxyCodeLine{00491\ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenNode\ ==\ 0)}
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes.emplace\_back(0,\ \textcolor{stringliteral}{"{}head|current"{}});}
+\DoxyCodeLine{00493\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00494\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.titleNodes\ =\ \{}
+\DoxyCodeLine{00495\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,\ \textcolor{stringliteral}{"{}head"{}}\},}
+\DoxyCodeLine{00496\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{chosenNode,\ \textcolor{stringliteral}{"{}current"{}}\}}
+\DoxyCodeLine{00497\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00498\ \ \ \ \ \textcolor{keyword}{event}.indexBackArrow\ =\ \{this-\/>linkedList-\/>\mbox{\hyperlink{classLinkedList_aad589ec457ed662a394d89f6a7393f32}{getSize}}()\ -\/\ 1,\ 0\};}
+\DoxyCodeLine{00499\ \ \ \ \ \textcolor{keyword}{event}.lines\ =\ \{3\};}
+\DoxyCodeLine{00500\ }
+\DoxyCodeLine{00501\ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00502\ }
+\DoxyCodeLine{00503\ \ \ \ \ \textcolor{keywordflow}{return}\ events;}
+\DoxyCodeLine{00504\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/lib\+Scene/\mbox{\hyperlink{CLLScene_8hpp}{CLLScene.\+hpp}}\item 
+include/lib\+Scene/\mbox{\hyperlink{CLLScene_8cpp}{CLLScene.\+cpp}}\end{DoxyCompactItemize}

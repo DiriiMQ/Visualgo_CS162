@@ -1,0 +1,280 @@
+\hypertarget{classpfd_1_1internal_1_1executor}{}\doxysection{pfd\+::internal\+::executor Class Reference}
+\label{classpfd_1_1internal_1_1executor}\index{pfd::internal::executor@{pfd::internal::executor}}
+
+
+{\ttfamily \#include $<$File\+Dialog.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classpfd_1_1internal_1_1executor_a07116b98b28332c42946e956f7edd2ae}{result}} (int $\ast$exit\+\_\+code=nullptr)
+\item 
+bool \mbox{\hyperlink{classpfd_1_1internal_1_1executor_ab7766273bae572779a404c5543268406}{kill}} ()
+\item 
+void \mbox{\hyperlink{classpfd_1_1internal_1_1executor_adcb1fcd88381030ada3d8f6d07dd8d6e}{start\+\_\+process}} (std\+::vector$<$ std\+::string $>$ const \&command)
+\item 
+\mbox{\hyperlink{classpfd_1_1internal_1_1executor_a2d46b9964c60985ea8406c4092393be3}{$\sim$executor}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classpfd_1_1internal_1_1executor_a7eb363f3dc9d6dc21f1a8b6ce6a33679}{ready}} (int timeout=default\+\_\+wait\+\_\+timeout)
+\item 
+void \mbox{\hyperlink{classpfd_1_1internal_1_1executor_a2e65a18556b3de93dafd6fabe3786277}{stop}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpfd_1_1internal_1_1executor_aa8dc7e75bd1ac2cf825fa04ed657c0aa}{dialog}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00166}{166}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpfd_1_1internal_1_1executor_a2d46b9964c60985ea8406c4092393be3}\label{classpfd_1_1internal_1_1executor_a2d46b9964c60985ea8406c4092393be3}} 
+\index{pfd::internal::executor@{pfd::internal::executor}!````~executor@{$\sim$executor}}
+\index{````~executor@{$\sim$executor}!pfd::internal::executor@{pfd::internal::executor}}
+\doxysubsubsection{\texorpdfstring{$\sim$executor()}{~executor()}}
+{\footnotesize\ttfamily pfd\+::internal\+::executor\+::$\sim$executor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00809}{809}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00810\ \ \ \ \ \{}
+\DoxyCodeLine{00811\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1internal_1_1executor_a2e65a18556b3de93dafd6fabe3786277}{stop}}();}
+\DoxyCodeLine{00812\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpfd_1_1internal_1_1executor_ab7766273bae572779a404c5543268406}\label{classpfd_1_1internal_1_1executor_ab7766273bae572779a404c5543268406}} 
+\index{pfd::internal::executor@{pfd::internal::executor}!kill@{kill}}
+\index{kill@{kill}!pfd::internal::executor@{pfd::internal::executor}}
+\doxysubsubsection{\texorpdfstring{kill()}{kill()}}
+{\footnotesize\ttfamily bool pfd\+::internal\+::executor\+::kill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00698}{698}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00699\ \ \ \ \ \{}
+\DoxyCodeLine{00700\ \textcolor{preprocessor}{\#if\ \_WIN32}}
+\DoxyCodeLine{00701\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_future.valid())}
+\DoxyCodeLine{00702\ \ \ \ \ \{}
+\DoxyCodeLine{00703\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Close\ all\ windows\ that\ weren’t\ open\ when\ we\ started\ the\ future}}
+\DoxyCodeLine{00704\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ previous\_windows\ =\ m\_windows;}
+\DoxyCodeLine{00705\ \ \ \ \ \ \ \ \ EnumWindows(\&enum\_windows\_callback,\ (LPARAM)\textcolor{keyword}{this});}
+\DoxyCodeLine{00706\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ hwnd\ :\ m\_windows)}
+\DoxyCodeLine{00707\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (previous\_windows.find(hwnd)\ ==\ previous\_windows.end())}
+\DoxyCodeLine{00708\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00709\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SendMessage(hwnd,\ WM\_CLOSE,\ 0,\ 0);}
+\DoxyCodeLine{00710\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Also\ send\ IDNO\ in\ case\ of\ a\ Yes/No\ or\ Abort/Retry/Ignore\ messagebox}}
+\DoxyCodeLine{00711\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SendMessage(hwnd,\ WM\_COMMAND,\ IDNO,\ 0);}
+\DoxyCodeLine{00712\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00713\ \ \ \ \ \}}
+\DoxyCodeLine{00714\ \textcolor{preprocessor}{\#elif\ \_\_EMSCRIPTEN\_\_\ ||\ \_\_NX\_\_}}
+\DoxyCodeLine{00715\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ FIXME:\ do\ something}}
+\DoxyCodeLine{00716\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ cannot\ kill}}
+\DoxyCodeLine{00717\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00718\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1internal_1_1executor_ab7766273bae572779a404c5543268406}{::kill}}(m\_pid,\ SIGKILL);}
+\DoxyCodeLine{00719\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00720\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1internal_1_1executor_a2e65a18556b3de93dafd6fabe3786277}{stop}}();}
+\DoxyCodeLine{00721\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00722\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpfd_1_1internal_1_1executor_a7eb363f3dc9d6dc21f1a8b6ce6a33679}\label{classpfd_1_1internal_1_1executor_a7eb363f3dc9d6dc21f1a8b6ce6a33679}} 
+\index{pfd::internal::executor@{pfd::internal::executor}!ready@{ready}}
+\index{ready@{ready}!pfd::internal::executor@{pfd::internal::executor}}
+\doxysubsubsection{\texorpdfstring{ready()}{ready()}}
+{\footnotesize\ttfamily bool pfd\+::internal\+::executor\+::ready (\begin{DoxyParamCaption}\item[{int}]{timeout = {\ttfamily default\+\_\+wait\+\_\+timeout} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00814}{814}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00815\ \ \ \ \ \{}
+\DoxyCodeLine{00816\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!m\_running)}
+\DoxyCodeLine{00817\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00818\ }
+\DoxyCodeLine{00819\ \textcolor{preprocessor}{\#if\ \_WIN32}}
+\DoxyCodeLine{00820\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_future.valid())}
+\DoxyCodeLine{00821\ \ \ \ \ \{}
+\DoxyCodeLine{00822\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ status\ =\ m\_future.wait\_for(std::chrono::milliseconds(timeout));}
+\DoxyCodeLine{00823\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (status\ !=\ std::future\_status::ready)}
+\DoxyCodeLine{00824\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00825\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ On\ Windows,\ we\ need\ to\ run\ the\ message\ pump.\ If\ the\ async}}
+\DoxyCodeLine{00826\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ thread\ uses\ a\ Windows\ API\ dialog,\ it\ may\ be\ attached\ to\ the}}
+\DoxyCodeLine{00827\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ main\ thread\ and\ waiting\ for\ messages\ that\ only\ we\ can\ dispatch.}}
+\DoxyCodeLine{00828\ \ \ \ \ \ \ \ \ \ \ \ \ MSG\ msg;}
+\DoxyCodeLine{00829\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (PeekMessage(\&msg,\ \textcolor{keyword}{nullptr},\ 0,\ 0,\ PM\_REMOVE))}
+\DoxyCodeLine{00830\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00831\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TranslateMessage(\&msg);}
+\DoxyCodeLine{00832\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DispatchMessage(\&msg);}
+\DoxyCodeLine{00833\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00834\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00835\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00836\ }
+\DoxyCodeLine{00837\ \ \ \ \ \ \ \ \ m\_stdout\ =\ m\_future.get();}
+\DoxyCodeLine{00838\ \ \ \ \ \}}
+\DoxyCodeLine{00839\ \textcolor{preprocessor}{\#elif\ \_\_EMSCRIPTEN\_\_\ ||\ \_\_NX\_\_}}
+\DoxyCodeLine{00840\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ FIXME:\ do\ something}}
+\DoxyCodeLine{00841\ \ \ \ \ (void)timeout;}
+\DoxyCodeLine{00842\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00843\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ buf[BUFSIZ];}
+\DoxyCodeLine{00844\ \ \ \ \ \ \ \ \ ssize\_t\ received\ =\ read(m\_fd,\ buf,\ BUFSIZ);\ \textcolor{comment}{//\ Flawfinder:\ ignore}}
+\DoxyCodeLine{00845\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (received\ >\ 0)}
+\DoxyCodeLine{00846\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00847\ \ \ \ \ \ \ \ \ \ \ \ \ m\_stdout\ +=\ std::string(buf,\ received);}
+\DoxyCodeLine{00848\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00849\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00850\ }
+\DoxyCodeLine{00851\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Reap\ child\ process\ if\ it\ is\ dead.\ It\ is\ possible\ that\ the\ system\ has\ already\ reaped\ it}}
+\DoxyCodeLine{00852\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ (this\ happens\ when\ the\ calling\ application\ handles\ or\ ignores\ SIG\_CHLD)\ and\ results\ in}}
+\DoxyCodeLine{00853\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ waitpid()\ failing\ with\ ECHILD.\ Otherwise\ we\ assume\ the\ child\ is\ running\ and\ we\ sleep\ for}}
+\DoxyCodeLine{00854\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ a\ little\ while.}}
+\DoxyCodeLine{00855\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ status;}
+\DoxyCodeLine{00856\ \ \ \ \ \ \ \ \ pid\_t\ child\ =\ waitpid(m\_pid,\ \&status,\ WNOHANG);}
+\DoxyCodeLine{00857\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (child\ !=\ m\_pid\ \&\&\ (child\ >=\ 0\ ||\ errno\ !=\ ECHILD))}
+\DoxyCodeLine{00858\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00859\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ FIXME:\ this\ happens\ almost\ always\ at\ first\ iteration}}
+\DoxyCodeLine{00860\ \ \ \ \ \ \ \ \ \ \ \ \ std::this\_thread::sleep\_for(std::chrono::milliseconds(timeout));}
+\DoxyCodeLine{00861\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00862\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00863\ }
+\DoxyCodeLine{00864\ \ \ \ \ \ \ \ \ close(m\_fd);}
+\DoxyCodeLine{00865\ \ \ \ \ \ \ \ \ m\_exit\_code\ =\ WEXITSTATUS(status);}
+\DoxyCodeLine{00866\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00867\ }
+\DoxyCodeLine{00868\ \ \ \ \ \ \ \ \ m\_running\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00869\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00870\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpfd_1_1internal_1_1executor_a07116b98b28332c42946e956f7edd2ae}\label{classpfd_1_1internal_1_1executor_a07116b98b28332c42946e956f7edd2ae}} 
+\index{pfd::internal::executor@{pfd::internal::executor}!result@{result}}
+\index{result@{result}!pfd::internal::executor@{pfd::internal::executor}}
+\doxysubsubsection{\texorpdfstring{result()}{result()}}
+{\footnotesize\ttfamily std\+::string pfd\+::internal\+::executor\+::result (\begin{DoxyParamCaption}\item[{int $\ast$}]{exit\+\_\+code = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00690}{690}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00691\ \ \ \ \ \{}
+\DoxyCodeLine{00692\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1internal_1_1executor_a2e65a18556b3de93dafd6fabe3786277}{stop}}();}
+\DoxyCodeLine{00693\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (exit\_code)}
+\DoxyCodeLine{00694\ \ \ \ \ \ \ \ \ \ \ \ \ *exit\_code\ =\ m\_exit\_code;}
+\DoxyCodeLine{00695\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_stdout;}
+\DoxyCodeLine{00696\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpfd_1_1internal_1_1executor_adcb1fcd88381030ada3d8f6d07dd8d6e}\label{classpfd_1_1internal_1_1executor_adcb1fcd88381030ada3d8f6d07dd8d6e}} 
+\index{pfd::internal::executor@{pfd::internal::executor}!start\_process@{start\_process}}
+\index{start\_process@{start\_process}!pfd::internal::executor@{pfd::internal::executor}}
+\doxysubsubsection{\texorpdfstring{start\_process()}{start\_process()}}
+{\footnotesize\ttfamily void pfd\+::internal\+::executor\+::start\+\_\+process (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$ const \&}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00764}{764}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00765\ \ \ \ \ \{}
+\DoxyCodeLine{00766\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1internal_1_1executor_a2e65a18556b3de93dafd6fabe3786277}{stop}}();}
+\DoxyCodeLine{00767\ \ \ \ \ \ \ \ \ m\_stdout.clear();}
+\DoxyCodeLine{00768\ \ \ \ \ \ \ \ \ m\_exit\_code\ =\ -\/1;}
+\DoxyCodeLine{00769\ }
+\DoxyCodeLine{00770\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ in[2],\ out[2];}
+\DoxyCodeLine{00771\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pipe(in)\ !=\ 0\ ||\ pipe(out)\ !=\ 0)}
+\DoxyCodeLine{00772\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00773\ }
+\DoxyCodeLine{00774\ \ \ \ \ \ \ \ \ m\_pid\ =\ fork();}
+\DoxyCodeLine{00775\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_pid\ <\ 0)}
+\DoxyCodeLine{00776\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00777\ }
+\DoxyCodeLine{00778\ \ \ \ \ \ \ \ \ close(in[m\_pid\ ?\ 0\ :\ 1]);}
+\DoxyCodeLine{00779\ \ \ \ \ \ \ \ \ close(out[m\_pid\ ?\ 1\ :\ 0]);}
+\DoxyCodeLine{00780\ }
+\DoxyCodeLine{00781\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_pid\ ==\ 0)}
+\DoxyCodeLine{00782\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00783\ \ \ \ \ \ \ \ \ \ \ \ \ dup2(in[0],\ STDIN\_FILENO);}
+\DoxyCodeLine{00784\ \ \ \ \ \ \ \ \ \ \ \ \ dup2(out[1],\ STDOUT\_FILENO);}
+\DoxyCodeLine{00785\ }
+\DoxyCodeLine{00786\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ignore\ stderr\ so\ that\ it\ doesn’t\ pollute\ the\ console\ (e.g.\ GTK+\ errors\ from\ zenity)}}
+\DoxyCodeLine{00787\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ fd\ =\ open(\textcolor{stringliteral}{"{}/dev/null"{}},\ O\_WRONLY);}
+\DoxyCodeLine{00788\ \ \ \ \ \ \ \ \ \ \ \ \ dup2(fd,\ STDERR\_FILENO);}
+\DoxyCodeLine{00789\ \ \ \ \ \ \ \ \ \ \ \ \ close(fd);}
+\DoxyCodeLine{00790\ }
+\DoxyCodeLine{00791\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<char\ *>\ args;}
+\DoxyCodeLine{00792\ \ \ \ \ \ \ \ \ \ \ \ \ std::transform(command.cbegin(),\ command.cend(),\ std::back\_inserter(args),}
+\DoxyCodeLine{00793\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [](std::string\ \textcolor{keyword}{const}\ \&s)\ \{\ return\ const\_cast<char\ *>(s.c\_str());\ \});}
+\DoxyCodeLine{00794\ \ \ \ \ \ \ \ \ \ \ \ \ args.push\_back(\textcolor{keyword}{nullptr});\ \textcolor{comment}{//\ null-\/terminate\ argv[]}}
+\DoxyCodeLine{00795\ }
+\DoxyCodeLine{00796\ \ \ \ \ \ \ \ \ \ \ \ \ execvp(args[0],\ args.data());}
+\DoxyCodeLine{00797\ \ \ \ \ \ \ \ \ \ \ \ \ exit(1);}
+\DoxyCodeLine{00798\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00799\ }
+\DoxyCodeLine{00800\ \ \ \ \ \ \ \ \ close(in[1]);}
+\DoxyCodeLine{00801\ \ \ \ \ \ \ \ \ m\_fd\ =\ out[0];}
+\DoxyCodeLine{00802\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ flags\ =\ fcntl(m\_fd,\ F\_GETFL);}
+\DoxyCodeLine{00803\ \ \ \ \ \ \ \ \ fcntl(m\_fd,\ F\_SETFL,\ flags\ |\ O\_NONBLOCK);}
+\DoxyCodeLine{00804\ }
+\DoxyCodeLine{00805\ \ \ \ \ \ \ \ \ m\_running\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00806\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpfd_1_1internal_1_1executor_a2e65a18556b3de93dafd6fabe3786277}\label{classpfd_1_1internal_1_1executor_a2e65a18556b3de93dafd6fabe3786277}} 
+\index{pfd::internal::executor@{pfd::internal::executor}!stop@{stop}}
+\index{stop@{stop}!pfd::internal::executor@{pfd::internal::executor}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void pfd\+::internal\+::executor\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00872}{872}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00873\ \ \ \ \ \{}
+\DoxyCodeLine{00874\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Loop\ until\ the\ user\ closes\ the\ dialog}}
+\DoxyCodeLine{00875\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!\mbox{\hyperlink{classpfd_1_1internal_1_1executor_a7eb363f3dc9d6dc21f1a8b6ce6a33679}{ready}}())}
+\DoxyCodeLine{00876\ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{00877\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classpfd_1_1internal_1_1executor_aa8dc7e75bd1ac2cf825fa04ed657c0aa}\label{classpfd_1_1internal_1_1executor_aa8dc7e75bd1ac2cf825fa04ed657c0aa}} 
+\index{pfd::internal::executor@{pfd::internal::executor}!dialog@{dialog}}
+\index{dialog@{dialog}!pfd::internal::executor@{pfd::internal::executor}}
+\doxysubsubsection{\texorpdfstring{dialog}{dialog}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classpfd_1_1internal_1_1dialog}{dialog}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00168}{168}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{FileDialog_8h}{File\+Dialog.\+h}}\end{DoxyCompactItemize}

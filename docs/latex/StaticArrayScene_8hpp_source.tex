@@ -1,0 +1,40 @@
+\hypertarget{StaticArrayScene_8hpp_source}{}\doxysection{Static\+Array\+Scene.\+hpp}
+\label{StaticArrayScene_8hpp_source}\index{include/libScene/StaticArrayScene.hpp@{include/libScene/StaticArrayScene.hpp}}
+\mbox{\hyperlink{StaticArrayScene_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ dirii\ on\ 27/03/2023.}}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#ifndef\ VISUALGO\_CS162\_STATICARRAYSCENE\_HPP}}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#define\ VISUALGO\_CS162\_STATICARRAYSCENE\_HPP}}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{BaseScene_8hpp}{BaseScene.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{MenuArray_8hpp}{MenuArray.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Array_8hpp}{core/Array.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00012}\mbox{\hyperlink{classStaticArrayScene}{00012}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classStaticArrayScene}{StaticArrayScene}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBaseScene}{BaseScene}}\{}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00013}00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00014}00014\ \ \ \ \ \mbox{\hyperlink{classMenuArray}{MenuArray}}*\ menu;}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00015}00015\ \ \ \ \ \mbox{\hyperlink{classArray}{Array}}*\ array;}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordtype}{void}\ init();}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00019}00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classStaticArrayScene}{StaticArrayScene}}(sf::RenderWindow*\ \mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}});}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStaticArrayScene_af11a29d2439171ddca199e0a3d698c4f}{reset}}();}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStaticArrayScene_a2793f1182dd1d6dd4ea5506246074ede}{pollEvent}}(sf::Event\ event,\ sf::Vector2f\ mousePosView)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStaticArrayScene_ac4fb24587fff4201fdcf01e28ee7a238}{update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStaticArrayScene_ae272d942cd61306c044a7be56b55b422}{render}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00028}00028\ \ \ \ \ std::vector<EventAnimation>\ \mbox{\hyperlink{classStaticArrayScene_a3214c997e00c989139ea876c67766274}{addModeEvents}}(\textcolor{keywordtype}{int}\ chosenNode);}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00029}00029\ \ \ \ \ std::vector<EventAnimation>\ \mbox{\hyperlink{classStaticArrayScene_a70187f0699e67a23bf3f15e8b7d68137}{deleteModeEvents}}(\textcolor{keywordtype}{int}\ chosenNode);}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00030}00030\ \ \ \ \ std::vector<EventAnimation>\ \mbox{\hyperlink{classStaticArrayScene_a8b1dd8ee49a9f761102f008a0036ea48}{updateModeEvents}}(\textcolor{keywordtype}{int}\ chosenNode);}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00031}00031\ \ \ \ \ std::vector<EventAnimation>\ \mbox{\hyperlink{classStaticArrayScene_a989be0bcbb64f9e74f02f0593c7458ca}{searchModeEvents}}(\textcolor{keywordtype}{int}\ chosenNode);}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00032}00032\ \};}
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{StaticArrayScene_8hpp_source_l00034}00034\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//VISUALGO\_CS162\_STATICARRAYSCENE\_HPP}}
+
+\end{DoxyCode}

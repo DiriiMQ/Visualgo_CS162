@@ -1,0 +1,101 @@
+\hypertarget{Textbox_8cpp_source}{}\doxysection{Textbox.\+cpp}
+\label{Textbox_8cpp_source}\index{include/stuff/Textbox.cpp@{include/stuff/Textbox.cpp}}
+\mbox{\hyperlink{Textbox_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ dirii\ on\ 01/04/2023.}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Textbox_8hpp}{Textbox.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00007}\mbox{\hyperlink{classTextBox_a64c43f684f46258bd2cf36f6c61197c9}{00007}}\ \mbox{\hyperlink{classTextBox_a64c43f684f46258bd2cf36f6c61197c9}{TextBox::TextBox}}(sf::RenderWindow*\ window,\ sf::Vector2f\ position,\ \textcolor{keywordtype}{int}\ size,\ sf::Color\ textColor,}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00008}00008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Color\ boxColor,\ \textcolor{keywordtype}{int}\ maxLength)\ \{}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00009}00009\ \ \ \ \ this-\/>window\ =\ window;}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00011}00011\ \ \ \ \ this-\/>cursor\ =\ \textcolor{stringliteral}{"{}|"{}};}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00013}00013\ \ \ \ \ this-\/>box.setPosition(position);}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00014}00014\ \ \ \ \ this-\/>box.setSize(sf::Vector2f(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}((maxLength\ +\ 1)\ *\ 12),\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(size\ *\ 1.5)));}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00015}00015\ \ \ \ \ this-\/>box.setFillColor(boxColor);}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00016}00016\ \ \ \ \ this-\/>box.setOutlineColor(sf::Color::Black);}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00017}00017\ \ \ \ \ this-\/>box.setOutlineThickness(1);}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00019}00019\ \ \ \ \ this-\/>font.loadFromFile(\mbox{\hyperlink{namespaceconstants_a23f8c84b0e1ce702055ff67135fbf428}{constants::fontPath}});}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00020}00020\ \ \ \ \ this-\/>text.setFont(this-\/>font);}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00021}00021\ \ \ \ \ this-\/>text.setCharacterSize(size);}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00022}00022\ \ \ \ \ this-\/>text.setFillColor(textColor);}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00023}00023\ \ \ \ \ this-\/>text.setPosition(position);}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00025}00025\ \ \ \ \ this-\/>maxLength\ =\ maxLength;}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00026}00026\ \ \ \ \ this-\/>textColor\ =\ textColor;}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00027}00027\ \ \ \ \ this-\/>boxColor\ =\ boxColor;}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00029}00029\ \ \ \ \ this-\/>cursorVisible\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00030}00030\ \ \ \ \ this-\/>flickerClock.restart();}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00031}00031\ \}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00033}\mbox{\hyperlink{classTextBox_a9f2c6d36865f6a6c1b546a9fcff29924}{00033}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTextBox_a9f2c6d36865f6a6c1b546a9fcff29924}{TextBox::pollEvent}}(sf::Event\ event)\ \{}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{if}\ (event.type\ ==\ sf::Event::TextEntered)}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00035}00035\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (event.text.unicode\ ==\ \textcolor{charliteral}{'\(\backslash\)b'})}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!this-\/>inputString.empty())}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>inputString.pop\_back();}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (((48\ <=\ event.text.unicode\ \&\&\ event.text.unicode\ <=\ 57)\ ||\ event.text.unicode\ ==\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(\textcolor{charliteral}{','}))\ \&\&\ this-\/>inputString.size()\ <\ this-\/>maxLength)}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>inputString\ +=\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{char}\textcolor{keyword}{>}(\textcolor{keyword}{event}.text.unicode);}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ this-\/>text.setString(this-\/>inputString);}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00051}00051\ \textcolor{comment}{//\ \ \ \ if\ (event.type\ ==\ sf::Event::Resized)}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00052}00052\ \textcolor{comment}{//\ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00053}00053\ \textcolor{comment}{//\ \ \ \ \ \ \ \ box.setPosition(}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00054}00054\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ static\_cast<float>(this-\/>window-\/>getSize().x)\ /\ 2\ -\/\ box.getSize().x\ /\ 2,}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00055}00055\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ static\_cast<float>(this-\/>window-\/>getSize().y)\ /\ 2\ -\/\ box.getSize().y\ /\ 2}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00056}00056\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00057}00057\ \textcolor{comment}{//\ \ \ \ \ \ \ \ text.setPosition(box.getPosition().x\ +\ 10,\ box.getPosition().y);}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00058}00058\ \textcolor{comment}{//\ \ \ \ \ \ \ \ cursor.setPosition(text.getGlobalBounds().width\ +\ text.getPosition().x,\ cursor.getPosition().y);}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00059}00059\ \textcolor{comment}{//\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00060}00060\ \}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00062}\mbox{\hyperlink{classTextBox_afa0bba711f542abe6c4d304fe2773cd9}{00062}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTextBox_afa0bba711f542abe6c4d304fe2773cd9}{TextBox::update}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00063}00063\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>flickerClock.getElapsedTime().asSeconds()\ >=\ 0.5)}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00064}00064\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ this-\/>cursorVisible\ =\ !this-\/>cursorVisible;}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ this-\/>flickerClock.restart();}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00067}00067\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00069}00069\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>cursorVisible)}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00070}00070\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ this-\/>text.setString(this-\/>inputString\ +\ this-\/>cursor);}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00072}00072\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00073}00073\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00074}00074\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ this-\/>text.setString(this-\/>inputString);}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00077}00077\ \}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00079}\mbox{\hyperlink{classTextBox_a786758eb5ae6caa0ed299bf45d5715a5}{00079}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTextBox_a786758eb5ae6caa0ed299bf45d5715a5}{TextBox::render}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00080}00080\ \ \ \ \ this-\/>window-\/>draw(this-\/>box);}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00081}00081\ \ \ \ \ this-\/>window-\/>draw(this-\/>text);}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00082}00082\ \}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00084}\mbox{\hyperlink{classTextBox_a0b7094d6739337a7c7c2dc1abe6d2a92}{00084}}\ std::string\ \mbox{\hyperlink{classTextBox_a0b7094d6739337a7c7c2dc1abe6d2a92}{TextBox::getTextString}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00085}00085\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>inputString;}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00086}00086\ \}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00088}\mbox{\hyperlink{classTextBox_aad20d6bfe62fdfb0e39689c26420a2a2}{00088}}\ sf::RectangleShape\ \mbox{\hyperlink{classTextBox_aad20d6bfe62fdfb0e39689c26420a2a2}{TextBox::getBox}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00089}00089\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>box;}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00090}00090\ \}}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00092}\mbox{\hyperlink{classTextBox_a8d88d610f8eea49a8c70d18902136185}{00092}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTextBox_a8d88d610f8eea49a8c70d18902136185}{TextBox::resetInput}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00093}00093\ \ \ \ \ this-\/>inputString\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00094}00094\ \ \ \ \ this-\/>text.setString(this-\/>inputString);}
+\DoxyCodeLine{\Hypertarget{Textbox_8cpp_source_l00095}00095\ \}}
+
+\end{DoxyCode}

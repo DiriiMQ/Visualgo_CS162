@@ -1,0 +1,157 @@
+\hypertarget{classMainMenu}{}\doxysection{Main\+Menu Class Reference}
+\label{classMainMenu}\index{MainMenu@{MainMenu}}
+
+
+{\ttfamily \#include $<$Main\+Menu.\+hpp$>$}
+
+Inheritance diagram for Main\+Menu\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMainMenu}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMainMenu_a20c2d10fcb576f3624553d1e8de50534}{Main\+Menu}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}})
+\item 
+void \mbox{\hyperlink{classMainMenu_a9de27e35991292cf218d144dc6fbddc9}{poll\+Event}} (sf\+::\+Event event, sf\+::\+Vector2f mouse\+Pos\+View) override
+\item 
+void \mbox{\hyperlink{classMainMenu_a28b9d6e8a8d92a81bc101084983b4080}{update}} () override
+\item 
+void \mbox{\hyperlink{classMainMenu_a1ee3711eb4cc53af6e9ee1a7516eaf58}{render}} () override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBaseScene}{Base\+Scene}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBaseScene_abe1e5ed8391db6798c313888ae8ad4e9}{Base\+Scene}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}})
+\item 
+void \mbox{\hyperlink{classBaseScene_adc937756bd780e478e6c338251816b91}{create\+Mode\+Button}} (sf\+::\+Vector2f position, std\+::string text\+String)
+\item 
+virtual void \mbox{\hyperlink{classBaseScene_a16dd70d07399fc63d7a3e29fbac516cf}{poll\+Event}} (sf\+::\+Event event, sf\+::\+Vector2f mouse\+Pos\+View)=0
+\item 
+virtual void \mbox{\hyperlink{classBaseScene_a269667611675475435d876e0f8f26a79}{update}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classBaseScene_a18694189ddd54cb279e1814869dbe854}{render}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Public Attributes inherited from \mbox{\hyperlink{classBaseScene}{Base\+Scene}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classButton}{Button}} $\ast$ \mbox{\hyperlink{classBaseScene_acbfb2074648ed5f471ef8e46a60af885}{mode\+Button}} \{\}
+\item 
+bool \mbox{\hyperlink{classBaseScene_ad250cff3475ec4b590afe5ac70597746}{is\+Menu\+Open}} \{\}
+\item 
+bool \mbox{\hyperlink{classBaseScene_ae6e22961b8642440a160df8723363afa}{is\+Demo\+Code\+Open}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classBaseScene}{Base\+Scene}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBaseScene_a408cafc155677ae764855ce9d16110b5}{set\+Window}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBaseScene}{Base\+Scene}}}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Render\+Window $\ast$ \mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}} \{\}
+\item 
+\mbox{\hyperlink{classControlMenu}{Control\+Menu}} $\ast$ \mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{control\+Menu}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{MainMenu_8hpp_source_l00010}{10}} of file \mbox{\hyperlink{MainMenu_8hpp_source}{Main\+Menu.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMainMenu_a20c2d10fcb576f3624553d1e8de50534}\label{classMainMenu_a20c2d10fcb576f3624553d1e8de50534}} 
+\index{MainMenu@{MainMenu}!MainMenu@{MainMenu}}
+\index{MainMenu@{MainMenu}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{MainMenu()}{MainMenu()}}
+{\footnotesize\ttfamily Main\+Menu\+::\+Main\+Menu (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Definition at line \mbox{\hyperlink{MainMenu_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{MainMenu_8cpp_source}{Main\+Menu.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classBaseScene}{BaseScene}}(\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}})\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_acbfb2074648ed5f471ef8e46a60af885}{modeButton}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classButton}{Button}};}
+\DoxyCodeLine{00009\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMainMenu_a9de27e35991292cf218d144dc6fbddc9}\label{classMainMenu_a9de27e35991292cf218d144dc6fbddc9}} 
+\index{MainMenu@{MainMenu}!pollEvent@{pollEvent}}
+\index{pollEvent@{pollEvent}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{pollEvent()}{pollEvent()}}
+{\footnotesize\ttfamily void Main\+Menu\+::poll\+Event (\begin{DoxyParamCaption}\item[{sf\+::\+Event}]{event,  }\item[{sf\+::\+Vector2f}]{mouse\+Pos\+View }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classBaseScene_a16dd70d07399fc63d7a3e29fbac516cf}{Base\+Scene}}.
+
+
+
+Definition at line \mbox{\hyperlink{MainMenu_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{MainMenu_8cpp_source}{Main\+Menu.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMainMenu_a1ee3711eb4cc53af6e9ee1a7516eaf58}\label{classMainMenu_a1ee3711eb4cc53af6e9ee1a7516eaf58}} 
+\index{MainMenu@{MainMenu}!render@{render}}
+\index{render@{render}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Main\+Menu\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classBaseScene_a18694189ddd54cb279e1814869dbe854}{Base\+Scene}}.
+
+
+
+Definition at line \mbox{\hyperlink{MainMenu_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{MainMenu_8cpp_source}{Main\+Menu.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMainMenu_a28b9d6e8a8d92a81bc101084983b4080}\label{classMainMenu_a28b9d6e8a8d92a81bc101084983b4080}} 
+\index{MainMenu@{MainMenu}!update@{update}}
+\index{update@{update}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Main\+Menu\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classBaseScene_a269667611675475435d876e0f8f26a79}{Base\+Scene}}.
+
+
+
+Definition at line \mbox{\hyperlink{MainMenu_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{MainMenu_8cpp_source}{Main\+Menu.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/lib\+Scene/\mbox{\hyperlink{MainMenu_8hpp}{Main\+Menu.\+hpp}}\item 
+include/lib\+Scene/\mbox{\hyperlink{MainMenu_8cpp}{Main\+Menu.\+cpp}}\end{DoxyCompactItemize}

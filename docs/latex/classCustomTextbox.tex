@@ -1,0 +1,200 @@
+\hypertarget{classCustomTextbox}{}\doxysection{Custom\+Textbox Class Reference}
+\label{classCustomTextbox}\index{CustomTextbox@{CustomTextbox}}
+
+
+{\ttfamily \#include $<$Custom\+Textbox.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCustomTextbox_a862a9f8bd0c132e7cd081f674b903c96}{Custom\+Textbox}} (sf\+::\+Render\+Window $\ast$window, sf\+::\+Vector2f position, int size, std\+::string title\+String, int max\+Length)
+\item 
+\mbox{\hyperlink{classCustomTextbox_a634572a273f5573ba3ec3bf739afb38f}{$\sim$\+Custom\+Textbox}} ()=default
+\item 
+void \mbox{\hyperlink{classCustomTextbox_aec18b36767a71c5a9fb7eae48ef4d9b5}{poll\+Event}} (sf\+::\+Event event, sf\+::\+Vector2f mouse\+Pos\+View)
+\item 
+void \mbox{\hyperlink{classCustomTextbox_ac8901adc866e8d58c09d77476a51f58d}{update}} ()
+\item 
+void \mbox{\hyperlink{classCustomTextbox_a8c2246eca63d3095ca1f3dcf4e946eb0}{render}} ()
+\item 
+std\+::string \mbox{\hyperlink{classCustomTextbox_a5b725849f4f8c7d795e4c4a1ed809ba2}{get\+Text\+String}} ()
+\item 
+void \mbox{\hyperlink{classCustomTextbox_a724a824af4f1a54252b940048ab79c65}{reset\+Input}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{CustomTextbox_8hpp_source_l00011}{11}} of file \mbox{\hyperlink{CustomTextbox_8hpp_source}{Custom\+Textbox.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCustomTextbox_a862a9f8bd0c132e7cd081f674b903c96}\label{classCustomTextbox_a862a9f8bd0c132e7cd081f674b903c96}} 
+\index{CustomTextbox@{CustomTextbox}!CustomTextbox@{CustomTextbox}}
+\index{CustomTextbox@{CustomTextbox}!CustomTextbox@{CustomTextbox}}
+\doxysubsubsection{\texorpdfstring{CustomTextbox()}{CustomTextbox()}}
+{\footnotesize\ttfamily Custom\+Textbox\+::\+Custom\+Textbox (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window,  }\item[{sf\+::\+Vector2f}]{position,  }\item[{int}]{size,  }\item[{std\+::string}]{title\+String,  }\item[{int}]{max\+Length }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{CustomTextbox_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{CustomTextbox_8cpp_source}{Custom\+Textbox.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ this-\/>window\ =\ window;}
+\DoxyCodeLine{00010\ \ \ \ \ this-\/>titleString\ =\ std::move(\_titleString);}
+\DoxyCodeLine{00011\ \ \ \ \ this-\/>position\ =\ position;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ font.loadFromFile(\mbox{\hyperlink{namespaceconstants_a23f8c84b0e1ce702055ff67135fbf428}{constants::fontPath}});}
+\DoxyCodeLine{00014\ \ \ \ \ this-\/>title.setFont(font);}
+\DoxyCodeLine{00015\ \ \ \ \ this-\/>title.setCharacterSize(size);}
+\DoxyCodeLine{00016\ \ \ \ \ this-\/>title.setFillColor(sf::Color::Black);}
+\DoxyCodeLine{00017\ \ \ \ \ this-\/>title.setString(this-\/>titleString);}
+\DoxyCodeLine{00018\ \ \ \ \ this-\/>title.setPosition(this-\/>position);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{float}\ width\ =\ this-\/>title.findCharacterPos(this-\/>titleString.size()\ -\/\ 1).x\ -\/\ this-\/>title.findCharacterPos(0).x;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ \ \ std::cout\ <<\ width\ <<\ '\ '\ <<\ this-\/>title.getString().getSize()\ <<\ std::endl;}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ this-\/>maxLength\ =\ maxLength;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ this-\/>textbox\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classTextBox}{TextBox}}(}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ this-\/>window,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ sf::Vector2f(this-\/>position.x\ +\ width\ +\ 10,\ this-\/>position.y),}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ 20,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ sf::Color::Black,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ sf::Color::White,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ this-\/>maxLength}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ this-\/>goButton\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classButton}{Button}}(}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ this-\/>window,}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ sf::Vector2f(this-\/>textbox-\/>\mbox{\hyperlink{classTextBox_aad20d6bfe62fdfb0e39689c26420a2a2}{getBox}}().getPosition().x\ +\ this-\/>textbox-\/>getBox().getSize().x\ +\ 10,\ this-\/>position.y),}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ constants::goButtonSize,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Go"{}},}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Go"{}},}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ 20,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ sf::Color::Black,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ constants::normalGray,}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_a78ac9ffc7fb0604d34066a637946e88a}{constants::hoverGray}},}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_a65408fa6932d8c031131d5efa7e40776}{constants::clickGray}}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ this-\/>isGoButtonClicked\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00049\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCustomTextbox_a634572a273f5573ba3ec3bf739afb38f}\label{classCustomTextbox_a634572a273f5573ba3ec3bf739afb38f}} 
+\index{CustomTextbox@{CustomTextbox}!````~CustomTextbox@{$\sim$CustomTextbox}}
+\index{````~CustomTextbox@{$\sim$CustomTextbox}!CustomTextbox@{CustomTextbox}}
+\doxysubsubsection{\texorpdfstring{$\sim$CustomTextbox()}{~CustomTextbox()}}
+{\footnotesize\ttfamily Custom\+Textbox\+::$\sim$\+Custom\+Textbox (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCustomTextbox_a5b725849f4f8c7d795e4c4a1ed809ba2}\label{classCustomTextbox_a5b725849f4f8c7d795e4c4a1ed809ba2}} 
+\index{CustomTextbox@{CustomTextbox}!getTextString@{getTextString}}
+\index{getTextString@{getTextString}!CustomTextbox@{CustomTextbox}}
+\doxysubsubsection{\texorpdfstring{getTextString()}{getTextString()}}
+{\footnotesize\ttfamily std\+::string Custom\+Textbox\+::get\+Text\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{CustomTextbox_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{CustomTextbox_8cpp_source}{Custom\+Textbox.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>isGoButtonClicked)\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ this-\/>isGoButtonClicked\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>textbox-\/>\mbox{\hyperlink{classTextBox_a0b7094d6739337a7c7c2dc1abe6d2a92}{getTextString}}();}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00076\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCustomTextbox_aec18b36767a71c5a9fb7eae48ef4d9b5}\label{classCustomTextbox_aec18b36767a71c5a9fb7eae48ef4d9b5}} 
+\index{CustomTextbox@{CustomTextbox}!pollEvent@{pollEvent}}
+\index{pollEvent@{pollEvent}!CustomTextbox@{CustomTextbox}}
+\doxysubsubsection{\texorpdfstring{pollEvent()}{pollEvent()}}
+{\footnotesize\ttfamily void Custom\+Textbox\+::poll\+Event (\begin{DoxyParamCaption}\item[{sf\+::\+Event}]{event,  }\item[{sf\+::\+Vector2f}]{mouse\+Pos\+View }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{CustomTextbox_8cpp_source_l00051}{51}} of file \mbox{\hyperlink{CustomTextbox_8cpp_source}{Custom\+Textbox.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ this-\/>textbox-\/>\mbox{\hyperlink{classTextBox_a9f2c6d36865f6a6c1b546a9fcff29924}{pollEvent}}(event);}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>goButton-\/>\mbox{\hyperlink{classButton_adb6ba11ef7c454ac0aabf2120ac85d7a}{pollEvent}}(mousePosView))\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ this-\/>isGoButtonClicked\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00055\ \textcolor{comment}{//\ \ \ \ \ \ \ \ std::cout\ <<\ "{}Go\ button\ clicked!\(\backslash\)n"{};}}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCustomTextbox_a8c2246eca63d3095ca1f3dcf4e946eb0}\label{classCustomTextbox_a8c2246eca63d3095ca1f3dcf4e946eb0}} 
+\index{CustomTextbox@{CustomTextbox}!render@{render}}
+\index{render@{render}!CustomTextbox@{CustomTextbox}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Custom\+Textbox\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{CustomTextbox_8cpp_source_l00064}{64}} of file \mbox{\hyperlink{CustomTextbox_8cpp_source}{Custom\+Textbox.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ this-\/>window-\/>draw(this-\/>title);}
+\DoxyCodeLine{00066\ \ \ \ \ this-\/>textbox-\/>\mbox{\hyperlink{classTextBox_a786758eb5ae6caa0ed299bf45d5715a5}{render}}();}
+\DoxyCodeLine{00067\ \ \ \ \ this-\/>goButton-\/>\mbox{\hyperlink{classButton_add4daea65a908027aa5a1593305b9656}{render}}();}
+\DoxyCodeLine{00068\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCustomTextbox_a724a824af4f1a54252b940048ab79c65}\label{classCustomTextbox_a724a824af4f1a54252b940048ab79c65}} 
+\index{CustomTextbox@{CustomTextbox}!resetInput@{resetInput}}
+\index{resetInput@{resetInput}!CustomTextbox@{CustomTextbox}}
+\doxysubsubsection{\texorpdfstring{resetInput()}{resetInput()}}
+{\footnotesize\ttfamily void Custom\+Textbox\+::reset\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{CustomTextbox_8cpp_source_l00078}{78}} of file \mbox{\hyperlink{CustomTextbox_8cpp_source}{Custom\+Textbox.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ this-\/>textbox-\/>\mbox{\hyperlink{classTextBox_a8d88d610f8eea49a8c70d18902136185}{resetInput}}();}
+\DoxyCodeLine{00080\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCustomTextbox_ac8901adc866e8d58c09d77476a51f58d}\label{classCustomTextbox_ac8901adc866e8d58c09d77476a51f58d}} 
+\index{CustomTextbox@{CustomTextbox}!update@{update}}
+\index{update@{update}!CustomTextbox@{CustomTextbox}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Custom\+Textbox\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{CustomTextbox_8cpp_source_l00059}{59}} of file \mbox{\hyperlink{CustomTextbox_8cpp_source}{Custom\+Textbox.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ this-\/>textbox-\/>\mbox{\hyperlink{classTextBox_afa0bba711f542abe6c4d304fe2773cd9}{update}}();}
+\DoxyCodeLine{00061\ \ \ \ \ this-\/>goButton-\/>\mbox{\hyperlink{classButton_ad8e030c1c8846d43f3126047d4a3667f}{update}}();}
+\DoxyCodeLine{00062\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/stuff/\mbox{\hyperlink{CustomTextbox_8hpp}{Custom\+Textbox.\+hpp}}\item 
+include/stuff/\mbox{\hyperlink{CustomTextbox_8cpp}{Custom\+Textbox.\+cpp}}\end{DoxyCompactItemize}

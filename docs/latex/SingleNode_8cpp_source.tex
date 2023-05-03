@@ -1,0 +1,63 @@
+\hypertarget{SingleNode_8cpp_source}{}\doxysection{Single\+Node.\+cpp}
+\label{SingleNode_8cpp_source}\index{include/draw/SingleNode.cpp@{include/draw/SingleNode.cpp}}
+\mbox{\hyperlink{SingleNode_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ dirii\ on\ 10/04/2023.}}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{SingleNode_8hpp}{SingleNode.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00007}\mbox{\hyperlink{classSingleNode_aa950269b54ffe3732fa9dff8d65fb1b0}{00007}}\ \mbox{\hyperlink{classSingleNode_aa950269b54ffe3732fa9dff8d65fb1b0}{SingleNode::SingleNode}}(sf::RenderWindow\ *window,\ std::string\ value,\ sf::Vector2f\ position)\ :\ \mbox{\hyperlink{classBaseDraw}{BaseDraw}}(window)\ \{}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00008}00008\ \ \ \ \ this-\/>value\ =\ std::move(value);}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00010}00010\ \ \ \ \ this-\/>circle.setRadius(constants::NodeInfo::radius);}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00011}00011\ \ \ \ \ this-\/>circle.setFillColor(sf::Color::White);}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00012}00012\ \ \ \ \ this-\/>circle.setOutlineThickness(constants::NodeInfo::outlineThickness);}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00013}00013\ \ \ \ \ this-\/>circle.setOutlineColor(sf::Color::Black);}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00014}00014\ \ \ \ \ this-\/>circle.setPointCount(constants::NodeInfo::pointCount);}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00015}00015\ \ \ \ \ sf::FloatRect\ bounds\ =\ this-\/>circle.getLocalBounds();}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00016}00016\ \ \ \ \ this-\/>circle.setOrigin(bounds.left\ +\ bounds.width\ /\ 2.0f,bounds.top\ +\ bounds.height\ /\ 2.0f);}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00017}00017\ \ \ \ \ this-\/>circle.setPosition(position);}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00019}00019\ \ \ \ \ this-\/>\mbox{\hyperlink{classSingleNode_a3b454c14d99e1df944116f1553589a7f}{font}}.loadFromFile(\mbox{\hyperlink{namespaceconstants_a23f8c84b0e1ce702055ff67135fbf428}{constants::fontPath}});}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00020}00020\ \ \ \ \ this-\/>label.setFont(this-\/>\mbox{\hyperlink{classSingleNode_a3b454c14d99e1df944116f1553589a7f}{font}});}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00021}00021\ \ \ \ \ this-\/>label.setString(this-\/>value);}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00022}00022\ \ \ \ \ this-\/>label.setCharacterSize(constants::NodeInfo::fontSize);}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00023}00023\ \ \ \ \ this-\/>label.setFillColor(sf::Color::Black);}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00024}00024\ \ \ \ \ bounds\ =\ this-\/>label.getLocalBounds();}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00025}00025\ \ \ \ \ this-\/>label.setOrigin(bounds.left\ +\ bounds.width\ /\ 2.0f,\ bounds.top\ +\ bounds.height\ /\ 2.0f);}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00026}00026\ \ \ \ \ this-\/>label.setPosition(position);}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00029}\mbox{\hyperlink{classSingleNode_a2e9f4313eb93b679543f33febdb5f04a}{00029}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSingleNode_a2e9f4313eb93b679543f33febdb5f04a}{SingleNode::render}}()\ \{}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00030}00030\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}}-\/>draw(this-\/>circle);}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00031}00031\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}}-\/>draw(this-\/>label);}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00032}00032\ \}}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00034}\mbox{\hyperlink{classSingleNode_a7dfed02b10b7b1e1702c5d1617cecf7c}{00034}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSingleNode_a7dfed02b10b7b1e1702c5d1617cecf7c}{SingleNode::toggleActiveColor}}()\ \{}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00035}00035\ \ \ \ \ this-\/>circle.setOutlineColor(constants::normalGreen);}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00036}00036\ \}}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00038}\mbox{\hyperlink{classSingleNode_a8b8b3567fcbd74a9f0186346fa36afa7}{00038}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSingleNode_a8b8b3567fcbd74a9f0186346fa36afa7}{SingleNode::resetColor}}()\ \{}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00039}00039\ \ \ \ \ this-\/>circle.setOutlineColor(sf::Color::Black);}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00040}00040\ \}}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00042}\mbox{\hyperlink{classSingleNode_a4b1a5d0ac7eefba2570543fde83d1dbf}{00042}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSingleNode_a4b1a5d0ac7eefba2570543fde83d1dbf}{SingleNode::setPosition}}(sf::Vector2f\ position)\ \{}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00043}00043\ \ \ \ \ this-\/>circle.setPosition(position);}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00044}00044\ \ \ \ \ this-\/>label.setPosition(position);}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00045}00045\ \}}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00047}\mbox{\hyperlink{classSingleNode_a633ab92468fb3fff2b100004ac1c0398}{00047}}\ sf::Vector2f\ \mbox{\hyperlink{classSingleNode_a633ab92468fb3fff2b100004ac1c0398}{SingleNode::getPosition}}()\ \{}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>circle.getPosition();}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00049}00049\ \}}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00051}\mbox{\hyperlink{classSingleNode_ac08341e78ba3f707a8600a904b417d82}{00051}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSingleNode_ac08341e78ba3f707a8600a904b417d82}{SingleNode::setText}}(std::string\ \_value)\ \{}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00052}00052\ \ \ \ \ this-\/>value\ =\ std::move(\_value);}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00053}00053\ \ \ \ \ this-\/>label.setString(this-\/>value);}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00054}00054\ \ \ \ \ sf::FloatRect\ bounds\ =\ this-\/>label.getLocalBounds();}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00055}00055\ \ \ \ \ this-\/>label.setOrigin(bounds.left\ +\ bounds.width\ /\ 2.0f,\ bounds.top\ +\ bounds.height\ /\ 2.0f);}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00056}00056\ \ \ \ \ this-\/>label.setPosition(this-\/>circle.getPosition());}
+\DoxyCodeLine{\Hypertarget{SingleNode_8cpp_source_l00057}00057\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,41 @@
+\hypertarget{BackArrow_8hpp_source}{}\doxysection{Back\+Arrow.\+hpp}
+\label{BackArrow_8hpp_source}\index{include/draw/BackArrow.hpp@{include/draw/BackArrow.hpp}}
+\mbox{\hyperlink{BackArrow_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ dirii\ on\ 26/04/2023.}}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#ifndef\ VISUALGO\_CS162\_BACKARROW\_HPP}}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#define\ VISUALGO\_CS162\_BACKARROW\_HPP}}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Arrow_8hpp}{Arrow.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Constants_8hpp}{Constants.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00011}\mbox{\hyperlink{classBackArrow}{00011}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBackArrow}{BackArrow}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBaseDraw}{BaseDraw}}\ \{}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00012}00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00013}00013\ \ \ \ \ sf::Vector2f\ points[4];}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00014}00014\ \ \ \ \ sf::Texture\ rectangleTexture[2];}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00015}00015\ \ \ \ \ sf::Sprite\ rectangleSprites[2];}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00016}00016\ \ \ \ \ \mbox{\hyperlink{classArrow}{Arrow}}*\ arrow;}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ isShow;}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00019}00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00020}00020\ \ \ \ \ \mbox{\hyperlink{classBackArrow}{BackArrow}}(sf::RenderWindow*\ \mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}},\ sf::Vector2f\ start,\ sf::Vector2f\ end);}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBackArrow_a53d3323ebcaa489d7cde849d1cc67281}{render}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00023}00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBackArrow_afdf0c196d8a236a97f887db2149c8b02}{autoScale}}();}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBackArrow_a9029a47ee7e3998c430f6b79e17535e7}{autoRotate}}();}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBackArrow_ac682abd1f389c28bd5c74bb11bd5ace7}{toggleActiveColorNode}}();}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBackArrow_aefdc307eddac13e1c292427c55bb8db3}{resetColor}}();}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBackArrow_a1fb28e9f9fab955c143e55c1d3497543}{setPosition}}(sf::Vector2f\ start,\ sf::Vector2f\ end);}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBackArrow_a68b0206a133686f7c4f7b9f4dd12ede8}{show}}();}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00032}00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBackArrow_ac736c9633d7db426ee9c54b824e28ab8}{hide}}();}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00033}00033\ \};}
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{BackArrow_8hpp_source_l00035}00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//VISUALGO\_CS162\_BACKARROW\_HPP}}
+
+\end{DoxyCode}

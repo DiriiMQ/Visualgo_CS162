@@ -1,0 +1,95 @@
+\hypertarget{RoundedRectangleShape_8cpp_source}{}\doxysection{Rounded\+Rectangle\+Shape.\+cpp}
+\label{RoundedRectangleShape_8cpp_source}\index{include/stuff/RoundedRectangleShape.cpp@{include/stuff/RoundedRectangleShape.cpp}}
+\mbox{\hyperlink{RoundedRectangleShape_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00002}00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00003}00003\ \textcolor{comment}{//\ This\ software\ is\ provided\ 'as-\/is',\ without\ any\ express\ or\ implied\ warranty.}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00004}00004\ \textcolor{comment}{//\ In\ no\ event\ will\ the\ authors\ be\ held\ liable\ for\ any\ damages\ arising\ from\ the\ use\ of\ this\ software.}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00005}00005\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00006}00006\ \textcolor{comment}{//\ Permission\ is\ granted\ to\ anyone\ to\ use\ this\ software\ for\ any\ purpose,}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00007}00007\ \textcolor{comment}{//\ including\ commercial\ applications,\ and\ to\ alter\ it\ and\ redistribute\ it\ freely,}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00008}00008\ \textcolor{comment}{//\ subject\ to\ the\ following\ restrictions:}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00009}00009\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00010}00010\ \textcolor{comment}{//\ 1.\ The\ origin\ of\ this\ software\ must\ not\ be\ misrepresented;}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00011}00011\ \textcolor{comment}{//\ you\ must\ not\ claim\ that\ you\ wrote\ the\ original\ software.}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00012}00012\ \textcolor{comment}{//\ If\ you\ use\ this\ software\ in\ a\ product,\ an\ acknowledgment}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00013}00013\ \textcolor{comment}{//\ in\ the\ product\ documentation\ would\ be\ appreciated\ but\ is\ not\ required.}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00014}00014\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00015}00015\ \textcolor{comment}{//\ 2.\ Altered\ source\ versions\ must\ be\ plainly\ marked\ as\ such,}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00016}00016\ \textcolor{comment}{//\ and\ must\ not\ be\ misrepresented\ as\ being\ the\ original\ software.}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00017}00017\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00018}00018\ \textcolor{comment}{//\ 3.\ This\ notice\ may\ not\ be\ removed\ or\ altered\ from\ any\ source\ distribution.}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00019}00019\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00021}00021\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00023}00023\ \textcolor{comment}{//\ Headers}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00025}00025\ \textcolor{comment}{}\textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{RoundedRectangleShape_8hpp}{RoundedRectangleShape.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00026}00026\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00028}\mbox{\hyperlink{namespacesf}{00028}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesf}{sf}}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00029}00029\ \{}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00031}\mbox{\hyperlink{classsf_1_1RoundedRectangleShape_aa49850069d9921338a5727073ecf2475}{00031}}\ \ \ \ \ \mbox{\hyperlink{classsf_1_1RoundedRectangleShape_aa49850069d9921338a5727073ecf2475}{RoundedRectangleShape::RoundedRectangleShape}}(\textcolor{keyword}{const}\ Vector2f\&\ size,\ \textcolor{keywordtype}{float}\ radius,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ cornerPointCount)}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00032}00032\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ mySize\ =\ size;}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ myRadius\ =\ radius;}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ myCornerPointCount\ =\ cornerPointCount;}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ update();}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00037}00037\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00040}\mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a6c768c97f3b1412f8b310c3c64b7cc91}{00040}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a6c768c97f3b1412f8b310c3c64b7cc91}{RoundedRectangleShape::setSize}}(\textcolor{keyword}{const}\ Vector2f\&\ size)}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00041}00041\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ mySize\ =\ size;}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ update();}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00044}00044\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00047}\mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a437e3e5a964b0716ae5aa55b77693993}{00047}}\ \ \ \ \ \textcolor{keyword}{const}\ Vector2f\&\ \mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a437e3e5a964b0716ae5aa55b77693993}{RoundedRectangleShape::getSize}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00048}00048\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mySize;}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00053}\mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a0ab2eff482d3a0a2444d8fa5178c4af4}{00053}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a0ab2eff482d3a0a2444d8fa5178c4af4}{RoundedRectangleShape::setCornersRadius}}(\textcolor{keywordtype}{float}\ radius)}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00054}00054\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ myRadius\ =\ radius;}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ update();}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00060}\mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a38cac95f455d3b131508623d6ff4e1eb}{00060}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a38cac95f455d3b131508623d6ff4e1eb}{RoundedRectangleShape::getCornersRadius}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00061}00061\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ myRadius;}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00063}00063\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00066}\mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a2c390618b1f93fcd406018c0ed2eaa2f}{00066}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a2c390618b1f93fcd406018c0ed2eaa2f}{RoundedRectangleShape::setCornerPointCount}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ count)}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00067}00067\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ myCornerPointCount\ =\ count;}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ update();}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00070}00070\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00073}\mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a96501a3349af7c0431dfa16bcb3dc546}{00073}}\ \ \ \ \ std::size\_t\ \mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a96501a3349af7c0431dfa16bcb3dc546}{RoundedRectangleShape::getPointCount}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00074}00074\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ myCornerPointCount*4;}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00079}\mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a886ad233fd59331e3b792afeb787d764}{00079}}\ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a886ad233fd59331e3b792afeb787d764}{RoundedRectangleShape::getPoint}}(std::size\_t\ index)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00080}00080\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(index\ >=\ myCornerPointCount*4)}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sf::Vector2f(0,0);}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ deltaAngle\ =\ 90.0f/(myCornerPointCount-\/1);}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ sf::Vector2f\ center;}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ centerIndex\ =\ index/myCornerPointCount;}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ pi\ =\ 3.141592654f;}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}(centerIndex)}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 0:\ center.x\ =\ mySize.x\ -\/\ myRadius;\ center.y\ =\ myRadius;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:\ center.x\ =\ myRadius;\ center.y\ =\ myRadius;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:\ center.x\ =\ myRadius;\ center.y\ =\ mySize.y\ -\/\ myRadius;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:\ center.x\ =\ mySize.x\ -\/\ myRadius;\ center.y\ =\ mySize.y\ -\/\ myRadius;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sf::Vector2f(myRadius*cos(deltaAngle*(index-\/centerIndex)*pi/180)+center.x,}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/myRadius*sin(deltaAngle*(index-\/centerIndex)*pi/180)+center.y);}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00099}00099\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RoundedRectangleShape_8cpp_source_l00100}00100\ \}\ \textcolor{comment}{//\ namespace\ sf}}
+
+\end{DoxyCode}

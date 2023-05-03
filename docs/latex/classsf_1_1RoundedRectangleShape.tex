@@ -1,0 +1,324 @@
+\hypertarget{classsf_1_1RoundedRectangleShape}{}\doxysection{sf\+::Rounded\+Rectangle\+Shape Class Reference}
+\label{classsf_1_1RoundedRectangleShape}\index{sf::RoundedRectangleShape@{sf::RoundedRectangleShape}}
+
+
+Specialized shape representing a rectangle with rounded corners.  
+
+
+
+
+{\ttfamily \#include $<$Rounded\+Rectangle\+Shape.\+hpp$>$}
+
+Inheritance diagram for sf\+::Rounded\+Rectangle\+Shape\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsf_1_1RoundedRectangleShape}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1RoundedRectangleShape_aa49850069d9921338a5727073ecf2475}{Rounded\+Rectangle\+Shape}} (const Vector2f \&size=Vector2f(0, 0), float radius=0, unsigned int corner\+Point\+Count=0)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a6c768c97f3b1412f8b310c3c64b7cc91}{set\+Size}} (const Vector2f \&size)
+\begin{DoxyCompactList}\small\item\em Set the size of the rounded rectangle. \end{DoxyCompactList}\item 
+const Vector2f \& \mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a437e3e5a964b0716ae5aa55b77693993}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Get the size of the rounded rectangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a0ab2eff482d3a0a2444d8fa5178c4af4}{set\+Corners\+Radius}} (float radius)
+\begin{DoxyCompactList}\small\item\em Set the radius of the rounded corners. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a38cac95f455d3b131508623d6ff4e1eb}{get\+Corners\+Radius}} () const
+\begin{DoxyCompactList}\small\item\em Get the radius of the rounded corners. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a2c390618b1f93fcd406018c0ed2eaa2f}{set\+Corner\+Point\+Count}} (unsigned int count)
+\begin{DoxyCompactList}\small\item\em Set the number of points of each corner. \end{DoxyCompactList}\item 
+virtual std\+::size\+\_\+t \mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a96501a3349af7c0431dfa16bcb3dc546}{get\+Point\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of points defining the rounded rectangle. \end{DoxyCompactList}\item 
+virtual sf\+::\+Vector2f \mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a886ad233fd59331e3b792afeb787d764}{get\+Point}} (std\+::size\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Get a point of the rounded rectangle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Specialized shape representing a rectangle with rounded corners. 
+
+This class inherits all the functions of sf\+::\+Transformable (position, rotation, scale, bounds, ...) as well as the functions of sf\+::\+Shape (outline, color, texture, ...).
+
+Usage example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classsf_1_1RoundedRectangleShape}{sf::RoundedRectangleShape}}\ roundedRectangle;}
+\DoxyCodeLine{rectangle.\mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a6c768c97f3b1412f8b310c3c64b7cc91}{setSize}}(sf::Vector2f(100,\ 50));}
+\DoxyCodeLine{rectangle.setCornersRadius(5);}
+\DoxyCodeLine{rectangle.setOutlineThickness(5);}
+\DoxyCodeLine{rectangle.setPosition(10,\ 20);}
+\DoxyCodeLine{...}
+\DoxyCodeLine{window.draw(rectangle);}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+sf\+::\+Shape, sf\+::\+Circle\+Shape, sf\+::\+Convex\+Shape 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{RoundedRectangleShape_8hpp_source_l00036}{36}} of file \mbox{\hyperlink{RoundedRectangleShape_8hpp_source}{Rounded\+Rectangle\+Shape.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsf_1_1RoundedRectangleShape_aa49850069d9921338a5727073ecf2475}\label{classsf_1_1RoundedRectangleShape_aa49850069d9921338a5727073ecf2475}} 
+\index{sf::RoundedRectangleShape@{sf::RoundedRectangleShape}!RoundedRectangleShape@{RoundedRectangleShape}}
+\index{RoundedRectangleShape@{RoundedRectangleShape}!sf::RoundedRectangleShape@{sf::RoundedRectangleShape}}
+\doxysubsubsection{\texorpdfstring{RoundedRectangleShape()}{RoundedRectangleShape()}}
+{\footnotesize\ttfamily sf\+::\+Rounded\+Rectangle\+Shape\+::\+Rounded\+Rectangle\+Shape (\begin{DoxyParamCaption}\item[{const Vector2f \&}]{size = {\ttfamily Vector2f(0,~0)},  }\item[{float}]{radius = {\ttfamily 0},  }\item[{unsigned int}]{corner\+Point\+Count = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Size of the rectangle \\
+\hline
+{\em radius} & Radius for each rounded corner \\
+\hline
+{\em corner\+Point\+Count} & Number of points of each corner \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{RoundedRectangleShape_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{RoundedRectangleShape_8cpp_source}{Rounded\+Rectangle\+Shape.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ mySize\ =\ size;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ myRadius\ =\ radius;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ myCornerPointCount\ =\ cornerPointCount;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ update();}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsf_1_1RoundedRectangleShape_a38cac95f455d3b131508623d6ff4e1eb}\label{classsf_1_1RoundedRectangleShape_a38cac95f455d3b131508623d6ff4e1eb}} 
+\index{sf::RoundedRectangleShape@{sf::RoundedRectangleShape}!getCornersRadius@{getCornersRadius}}
+\index{getCornersRadius@{getCornersRadius}!sf::RoundedRectangleShape@{sf::RoundedRectangleShape}}
+\doxysubsubsection{\texorpdfstring{getCornersRadius()}{getCornersRadius()}}
+{\footnotesize\ttfamily float sf\+::\+Rounded\+Rectangle\+Shape\+::get\+Corners\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the radius of the rounded corners. 
+
+\begin{DoxyReturn}{Returns}
+Radius of the rounded corners
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a0ab2eff482d3a0a2444d8fa5178c4af4}{set\+Corners\+Radius}} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{RoundedRectangleShape_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{RoundedRectangleShape_8cpp_source}{Rounded\+Rectangle\+Shape.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ myRadius;}
+\DoxyCodeLine{00063\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsf_1_1RoundedRectangleShape_a886ad233fd59331e3b792afeb787d764}\label{classsf_1_1RoundedRectangleShape_a886ad233fd59331e3b792afeb787d764}} 
+\index{sf::RoundedRectangleShape@{sf::RoundedRectangleShape}!getPoint@{getPoint}}
+\index{getPoint@{getPoint}!sf::RoundedRectangleShape@{sf::RoundedRectangleShape}}
+\doxysubsubsection{\texorpdfstring{getPoint()}{getPoint()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f sf\+::\+Rounded\+Rectangle\+Shape\+::get\+Point (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get a point of the rounded rectangle. 
+
+The result is undefined if {\itshape index} is out of the valid range.
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the point to get, in range \mbox{[}0 .. Get\+Point\+Count() -\/ 1\mbox{]}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index-\/th point of the shape 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{RoundedRectangleShape_8cpp_source_l00079}{79}} of file \mbox{\hyperlink{RoundedRectangleShape_8cpp_source}{Rounded\+Rectangle\+Shape.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(index\ >=\ myCornerPointCount*4)}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sf::Vector2f(0,0);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ deltaAngle\ =\ 90.0f/(myCornerPointCount-\/1);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ sf::Vector2f\ center;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ centerIndex\ =\ index/myCornerPointCount;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ pi\ =\ 3.141592654f;}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}(centerIndex)}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 0:\ center.x\ =\ mySize.x\ -\/\ myRadius;\ center.y\ =\ myRadius;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:\ center.x\ =\ myRadius;\ center.y\ =\ myRadius;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:\ center.x\ =\ myRadius;\ center.y\ =\ mySize.y\ -\/\ myRadius;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:\ center.x\ =\ mySize.x\ -\/\ myRadius;\ center.y\ =\ mySize.y\ -\/\ myRadius;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sf::Vector2f(myRadius*cos(deltaAngle*(index-\/centerIndex)*pi/180)+center.x,}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/myRadius*sin(deltaAngle*(index-\/centerIndex)*pi/180)+center.y);}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsf_1_1RoundedRectangleShape_a96501a3349af7c0431dfa16bcb3dc546}\label{classsf_1_1RoundedRectangleShape_a96501a3349af7c0431dfa16bcb3dc546}} 
+\index{sf::RoundedRectangleShape@{sf::RoundedRectangleShape}!getPointCount@{getPointCount}}
+\index{getPointCount@{getPointCount}!sf::RoundedRectangleShape@{sf::RoundedRectangleShape}}
+\doxysubsubsection{\texorpdfstring{getPointCount()}{getPointCount()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t sf\+::\+Rounded\+Rectangle\+Shape\+::get\+Point\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the number of points defining the rounded rectangle. 
+
+\begin{DoxyReturn}{Returns}
+Number of points of the rounded rectangle 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{RoundedRectangleShape_8cpp_source_l00073}{73}} of file \mbox{\hyperlink{RoundedRectangleShape_8cpp_source}{Rounded\+Rectangle\+Shape.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074\ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ myCornerPointCount*4;}
+\DoxyCodeLine{00076\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsf_1_1RoundedRectangleShape_a437e3e5a964b0716ae5aa55b77693993}\label{classsf_1_1RoundedRectangleShape_a437e3e5a964b0716ae5aa55b77693993}} 
+\index{sf::RoundedRectangleShape@{sf::RoundedRectangleShape}!getSize@{getSize}}
+\index{getSize@{getSize}!sf::RoundedRectangleShape@{sf::RoundedRectangleShape}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily const Vector2f \& sf\+::\+Rounded\+Rectangle\+Shape\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the size of the rounded rectangle. 
+
+\begin{DoxyReturn}{Returns}
+Size of the rounded rectangle
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a6c768c97f3b1412f8b310c3c64b7cc91}{set\+Size}} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{RoundedRectangleShape_8cpp_source_l00047}{47}} of file \mbox{\hyperlink{RoundedRectangleShape_8cpp_source}{Rounded\+Rectangle\+Shape.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048\ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mySize;}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsf_1_1RoundedRectangleShape_a2c390618b1f93fcd406018c0ed2eaa2f}\label{classsf_1_1RoundedRectangleShape_a2c390618b1f93fcd406018c0ed2eaa2f}} 
+\index{sf::RoundedRectangleShape@{sf::RoundedRectangleShape}!setCornerPointCount@{setCornerPointCount}}
+\index{setCornerPointCount@{setCornerPointCount}!sf::RoundedRectangleShape@{sf::RoundedRectangleShape}}
+\doxysubsubsection{\texorpdfstring{setCornerPointCount()}{setCornerPointCount()}}
+{\footnotesize\ttfamily void sf\+::\+Rounded\+Rectangle\+Shape\+::set\+Corner\+Point\+Count (\begin{DoxyParamCaption}\item[{unsigned int}]{count }\end{DoxyParamCaption})}
+
+
+
+Set the number of points of each corner. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & New number of points of the rounded rectangle\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a96501a3349af7c0431dfa16bcb3dc546}{get\+Point\+Count}} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{RoundedRectangleShape_8cpp_source_l00066}{66}} of file \mbox{\hyperlink{RoundedRectangleShape_8cpp_source}{Rounded\+Rectangle\+Shape.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067\ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ myCornerPointCount\ =\ count;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ update();}
+\DoxyCodeLine{00070\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsf_1_1RoundedRectangleShape_a0ab2eff482d3a0a2444d8fa5178c4af4}\label{classsf_1_1RoundedRectangleShape_a0ab2eff482d3a0a2444d8fa5178c4af4}} 
+\index{sf::RoundedRectangleShape@{sf::RoundedRectangleShape}!setCornersRadius@{setCornersRadius}}
+\index{setCornersRadius@{setCornersRadius}!sf::RoundedRectangleShape@{sf::RoundedRectangleShape}}
+\doxysubsubsection{\texorpdfstring{setCornersRadius()}{setCornersRadius()}}
+{\footnotesize\ttfamily void sf\+::\+Rounded\+Rectangle\+Shape\+::set\+Corners\+Radius (\begin{DoxyParamCaption}\item[{float}]{radius }\end{DoxyParamCaption})}
+
+
+
+Set the radius of the rounded corners. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & Radius of the rounded corners\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a38cac95f455d3b131508623d6ff4e1eb}{get\+Corners\+Radius}} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{RoundedRectangleShape_8cpp_source_l00053}{53}} of file \mbox{\hyperlink{RoundedRectangleShape_8cpp_source}{Rounded\+Rectangle\+Shape.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054\ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ myRadius\ =\ radius;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ update();}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsf_1_1RoundedRectangleShape_a6c768c97f3b1412f8b310c3c64b7cc91}\label{classsf_1_1RoundedRectangleShape_a6c768c97f3b1412f8b310c3c64b7cc91}} 
+\index{sf::RoundedRectangleShape@{sf::RoundedRectangleShape}!setSize@{setSize}}
+\index{setSize@{setSize}!sf::RoundedRectangleShape@{sf::RoundedRectangleShape}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily void sf\+::\+Rounded\+Rectangle\+Shape\+::set\+Size (\begin{DoxyParamCaption}\item[{const Vector2f \&}]{size }\end{DoxyParamCaption})}
+
+
+
+Set the size of the rounded rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & New size of the rounded rectangle\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a437e3e5a964b0716ae5aa55b77693993}{get\+Size}} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{RoundedRectangleShape_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{RoundedRectangleShape_8cpp_source}{Rounded\+Rectangle\+Shape.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ mySize\ =\ size;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ update();}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/stuff/\mbox{\hyperlink{RoundedRectangleShape_8hpp}{Rounded\+Rectangle\+Shape.\+hpp}}\item 
+include/stuff/\mbox{\hyperlink{RoundedRectangleShape_8cpp}{Rounded\+Rectangle\+Shape.\+cpp}}\end{DoxyCompactItemize}

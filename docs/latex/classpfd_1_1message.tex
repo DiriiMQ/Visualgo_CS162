@@ -1,0 +1,359 @@
+\hypertarget{classpfd_1_1message}{}\doxysection{pfd\+::message Class Reference}
+\label{classpfd_1_1message}\index{pfd::message@{pfd::message}}
+
+
+{\ttfamily \#include $<$File\+Dialog.\+h$>$}
+
+Inheritance diagram for pfd\+::message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classpfd_1_1message}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpfd_1_1message_a38e0ce9a58c006011708a4968be17833}{message}} (std\+::string const \&title, std\+::string const \&text, \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8}{choice}} \+\_\+choice=\mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a809da5df9c86c6426c8d8db2934d3f51}{choice\+::ok\+\_\+cancel}}, \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85}{icon}} \+\_\+icon=\mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85acaf9b6b99962bf5c2264824231d7a40c}{icon\+::info}})
+\item 
+\mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679}{button}} \mbox{\hyperlink{classpfd_1_1message_aeee673bf19f45328a7eb8ec2c1e01fc9}{result}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classpfd_1_1internal_1_1dialog}{pfd\+::internal\+::dialog}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a77f20e6063f83e601ce23ed4899907c6}{ready}} (int timeout=default\+\_\+wait\+\_\+timeout) const
+\item 
+bool \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a226b1502acd1d2cb86e34dd3df36772a}{kill}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Types inherited from \mbox{\hyperlink{classpfd_1_1settings}{pfd\+::settings}}}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}{flag}} \{ \newline
+\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada11dd6b78f267a47638211f4c7e23d434}{is\+\_\+scanned}} = 0
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadad9da28952c27749f53c23675db49d560}{is\+\_\+verbose}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaee57842698a0690e4b89730b469edc31}{has\+\_\+zenity}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1267dfaf66b51761e04b042bb2c4dd7a}{has\+\_\+matedialog}}
+, \newline
+\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1a652e3d6a785053942b6cffc2c4669d}{has\+\_\+qarma}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1f1a19f0bf1fe1a63ed3e73e40466b4b}{has\+\_\+kdialog}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaea0bbb642237ecdaa68a14a0d7212448}{is\+\_\+vista}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada73b7af539db867cb9edf24a3cb7b8a36}{max\+\_\+flag}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classpfd_1_1internal_1_1dialog}{pfd\+::internal\+::dialog}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a05f9a4fcba8f8a9411d7dfaf18ee11ad}{dialog}} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_aadaf6cb30620c85f4b97993e3c819188}{desktop\+\_\+helper}} () const
+\item 
+std\+::string \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_aae2255eceb0b3b18b55d1618fd7e1635}{powershell\+\_\+quote}} (std\+::string const \&str) const
+\item 
+std\+::string \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_adc0ec6f5c8137cbdb0ea6669b5263a73}{osascript\+\_\+quote}} (std\+::string const \&str) const
+\item 
+std\+::string \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a1a4f28c3c2bbd1629f2f882314fff63e}{shell\+\_\+quote}} (std\+::string const \&str) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classpfd_1_1settings}{pfd\+::settings}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpfd_1_1settings_a7190e52d512b1321acb78731a8cddf42}{settings}} (bool resync=false)
+\item 
+bool \mbox{\hyperlink{classpfd_1_1settings_af1c2f6e88ffafd59a2f7609631a9eade}{check\+\_\+program}} (std\+::string const \&program)
+\item 
+bool \mbox{\hyperlink{classpfd_1_1settings_a4e22d6fb43d387ddc980bf6e2a6aad24}{is\+\_\+osascript}} () const
+\item 
+bool \mbox{\hyperlink{classpfd_1_1settings_a08e4a5b150186d77158a974cc8c2d4a2}{is\+\_\+zenity}} () const
+\item 
+bool \mbox{\hyperlink{classpfd_1_1settings_aa79fb10eee785f1acd8d1ff34e226c89}{is\+\_\+kdialog}} () const
+\item 
+bool const \& \mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}} (\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}{flag}} in\+\_\+flag) const
+\item 
+bool \& \mbox{\hyperlink{classpfd_1_1settings_a9b611d06856910f0d8c358dd0eadfcee}{flags}} (\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}{flag}} in\+\_\+flag)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions inherited from \mbox{\hyperlink{classpfd_1_1internal_1_1dialog}{pfd\+::internal\+::dialog}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_ac906c01d0365c13c9066cea857fd258a}{buttons\+\_\+to\+\_\+name}} (\mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8}{choice}} \+\_\+choice)
+\item 
+static std\+::string \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_ae94362bed052ab6050e38852712cb97a}{get\+\_\+icon\+\_\+name}} (\mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85}{icon}} \+\_\+icon)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions inherited from \mbox{\hyperlink{classpfd_1_1settings}{pfd\+::settings}}}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classpfd_1_1settings_a54fb5598e7501ac38d17e3629190b2fe}{available}} ()
+\item 
+static void \mbox{\hyperlink{classpfd_1_1settings_a0ed32e8ed039106028474eb9f0a0a7bc}{verbose}} (bool value)
+\item 
+static void \mbox{\hyperlink{classpfd_1_1settings_a60023ab0ac98008d2c52a568e9ee540f}{rescan}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{classpfd_1_1internal_1_1dialog}{pfd\+::internal\+::dialog}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpfd_1_1internal_1_1executor}{executor}} $>$ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a91f4b2666fb920a7859df9cdc079502d}{m\+\_\+async}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00348}{348}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpfd_1_1message_a38e0ce9a58c006011708a4968be17833}\label{classpfd_1_1message_a38e0ce9a58c006011708a4968be17833}} 
+\index{pfd::message@{pfd::message}!message@{message}}
+\index{message@{message}!pfd::message@{pfd::message}}
+\doxysubsubsection{\texorpdfstring{message()}{message()}}
+{\footnotesize\ttfamily pfd\+::message\+::message (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{title,  }\item[{std\+::string const \&}]{text,  }\item[{\mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8}{choice}}}]{\+\_\+choice = {\ttfamily \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a809da5df9c86c6426c8d8db2934d3f51}{choice\+::ok\+\_\+cancel}}},  }\item[{\mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85}{icon}}}]{\+\_\+icon = {\ttfamily \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85acaf9b6b99962bf5c2264824231d7a40c}{icon\+::info}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l01596}{1596}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01600\ \ \ \ \ \{}
+\DoxyCodeLine{01601\ \textcolor{preprocessor}{\#if\ \_WIN32}}
+\DoxyCodeLine{01602\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ MB\_SYSTEMMODAL\ rather\ than\ MB\_TOPMOST\ to\ ensure\ the\ message\ window\ is\ brought}}
+\DoxyCodeLine{01603\ \ \ \ \ \textcolor{comment}{//\ to\ front.\ See\ https://github.com/samhocevar/portable-\/file-\/dialogs/issues/52}}
+\DoxyCodeLine{01604\ \ \ \ \ UINT\ style\ =\ MB\_SYSTEMMODAL;}
+\DoxyCodeLine{01605\ \ \ \ \ \textcolor{keywordflow}{switch}\ (\_icon)}
+\DoxyCodeLine{01606\ \ \ \ \ \{}
+\DoxyCodeLine{01607\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85a7b83d3f08fa392b79e3f553b585971cd}{icon::warning}}:\ style\ |=\ MB\_ICONWARNING;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01608\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85acb5e100e5a9a3e7f6d1fd97512215282}{icon::error}}:\ style\ |=\ MB\_ICONERROR;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01609\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85a5494af1f14a8c19939968c3e9e2d4f79}{icon::question}}:\ style\ |=\ MB\_ICONQUESTION;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01610\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ case\ icon::info:\ */}\ \textcolor{keywordflow}{default}:\ style\ |=\ MB\_ICONINFORMATION;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01611\ \ \ \ \ \}}
+\DoxyCodeLine{01612\ }
+\DoxyCodeLine{01613\ \ \ \ \ \textcolor{keywordflow}{switch}\ (\_choice)}
+\DoxyCodeLine{01614\ \ \ \ \ \{}
+\DoxyCodeLine{01615\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a809da5df9c86c6426c8d8db2934d3f51}{choice::ok\_cancel}}:\ style\ |=\ MB\_OKCANCEL;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01616\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a20f0596c21ad67a7fda598ffc7d038d1}{choice::yes\_no}}:\ style\ |=\ MB\_YESNO;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01617\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a5c5cb337bb234e240912dc139048038c}{choice::yes\_no\_cancel}}:\ style\ |=\ MB\_YESNOCANCEL;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01618\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a7928e609b1665227bcb71b20d431fd6a}{choice::retry\_cancel}}:\ style\ |=\ MB\_RETRYCANCEL;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01619\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a9df771aa8f010c4b928e42a8979d5609}{choice::abort\_retry\_ignore}}:\ style\ |=\ MB\_ABORTRETRYIGNORE;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01620\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ case\ choice::ok:\ */}\ \textcolor{keywordflow}{default}:\ style\ |=\ MB\_OK;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01621\ \ \ \ \ \}}
+\DoxyCodeLine{01622\ }
+\DoxyCodeLine{01623\ \ \ \ \ m\_mappings[IDCANCEL]\ =\ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679a10aec35353f9c4096a71c38654c3d402}{button::cancel}};}
+\DoxyCodeLine{01624\ \ \ \ \ m\_mappings[IDOK]\ =\ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679a444bcb3a3fcf8389296c49467f27e1d6}{button::ok}};}
+\DoxyCodeLine{01625\ \ \ \ \ m\_mappings[IDYES]\ =\ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679aa6105c0a611b41b08f1209506350279e}{button::yes}};}
+\DoxyCodeLine{01626\ \ \ \ \ m\_mappings[IDNO]\ =\ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679a7fa3b767c460b54a2be4d49030b349c7}{button::no}};}
+\DoxyCodeLine{01627\ \ \ \ \ m\_mappings[IDABORT]\ =\ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679a5bb94a1c12413a2e5d14deabab29f2aa}{button::abort}};}
+\DoxyCodeLine{01628\ \ \ \ \ m\_mappings[IDRETRY]\ =\ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679a165e6d21e0a2cc9ebb32ca05f90e0fa7}{button::retry}};}
+\DoxyCodeLine{01629\ \ \ \ \ m\_mappings[IDIGNORE]\ =\ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679a567bc1d268f135496de3d5b946b691f3}{button::ignore}};}
+\DoxyCodeLine{01630\ }
+\DoxyCodeLine{01631\ \ \ \ \ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a91f4b2666fb920a7859df9cdc079502d}{m\_async}}-\/>start\_func([text,\ title,\ style](\textcolor{keywordtype}{int}*\ exit\_code)\ -\/>\ std::string}
+\DoxyCodeLine{01632\ \ \ \ \ \{}
+\DoxyCodeLine{01633\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ wtext\ =\ internal::str2wstr(text);}
+\DoxyCodeLine{01634\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ wtitle\ =\ internal::str2wstr(title);}
+\DoxyCodeLine{01635\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Apply\ new\ visual\ style\ (required\ for\ all\ Windows\ versions)}}
+\DoxyCodeLine{01636\ \ \ \ \ \ \ \ \ new\_style\_context\ ctx;}
+\DoxyCodeLine{01637\ \ \ \ \ \ \ \ \ *exit\_code\ =\ MessageBoxW(GetActiveWindow(),\ wtext.c\_str(),\ wtitle.c\_str(),\ style);}
+\DoxyCodeLine{01638\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{01639\ \ \ \ \ \});}
+\DoxyCodeLine{01640\ }
+\DoxyCodeLine{01641\ \textcolor{preprocessor}{\#elif\ \_\_EMSCRIPTEN\_\_}}
+\DoxyCodeLine{01642\ \ \ \ \ \ \ \ \ std::string\ full\_message;}
+\DoxyCodeLine{01643\ \ \ \ \ \textcolor{keywordflow}{switch}\ (\_icon)}
+\DoxyCodeLine{01644\ \ \ \ \ \{}
+\DoxyCodeLine{01645\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85a7b83d3f08fa392b79e3f553b585971cd}{icon::warning}}:\ full\_message\ =\ \textcolor{stringliteral}{"{}⚠️"{}};\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01646\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85acb5e100e5a9a3e7f6d1fd97512215282}{icon::error}}:\ full\_message\ =\ \textcolor{stringliteral}{"{}⛔"{}};\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01647\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85a5494af1f14a8c19939968c3e9e2d4f79}{icon::question}}:\ full\_message\ =\ \textcolor{stringliteral}{"{}❓"{}};\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01648\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ case\ icon::info:\ */}\ \textcolor{keywordflow}{default}:\ full\_message\ =\ \textcolor{stringliteral}{"{}ℹ"{}};\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01649\ \ \ \ \ \}}
+\DoxyCodeLine{01650\ }
+\DoxyCodeLine{01651\ \ \ \ \ full\_message\ +=\ \textcolor{charliteral}{'\ '}\ +\ title\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}}\ +\ text;}
+\DoxyCodeLine{01652\ }
+\DoxyCodeLine{01653\ \ \ \ \ \textcolor{comment}{//\ This\ does\ not\ really\ start\ an\ async\ task;\ it\ just\ passes\ the}}
+\DoxyCodeLine{01654\ \ \ \ \ \textcolor{comment}{//\ EM\_ASM\_INT\ return\ value\ to\ a\ fake\ start()\ function.}}
+\DoxyCodeLine{01655\ \ \ \ \ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a91f4b2666fb920a7859df9cdc079502d}{m\_async}}-\/>start(EM\_ASM\_INT(}
+\DoxyCodeLine{01656\ \ \ \ \ \{}
+\DoxyCodeLine{01657\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$1)}
+\DoxyCodeLine{01658\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ window.confirm(UTF8ToString(\$0))\ ?\ 0\ :\ -\/1;}
+\DoxyCodeLine{01659\ \ \ \ \ \ \ \ \ alert(UTF8ToString(\$0));}
+\DoxyCodeLine{01660\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{01661\ \ \ \ \ \},\ full\_message.c\_str(),\ \_choice\ ==\ \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a809da5df9c86c6426c8d8db2934d3f51}{choice::ok\_cancel}}));}
+\DoxyCodeLine{01662\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{01663\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ command\ =\ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_aadaf6cb30620c85f4b97993e3c819188}{desktop\_helper}}();}
+\DoxyCodeLine{01664\ }
+\DoxyCodeLine{01665\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classpfd_1_1settings_a4e22d6fb43d387ddc980bf6e2a6aad24}{is\_osascript}}())}
+\DoxyCodeLine{01666\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01667\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ script\ =\ \textcolor{stringliteral}{"{}display\ dialog\ "{}}\ +\ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_adc0ec6f5c8137cbdb0ea6669b5263a73}{osascript\_quote}}(text)\ +}
+\DoxyCodeLine{01668\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ with\ title\ "{}}\ +\ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_adc0ec6f5c8137cbdb0ea6669b5263a73}{osascript\_quote}}(title);}
+\DoxyCodeLine{01669\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ if\_cancel\ =\ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679a10aec35353f9c4096a71c38654c3d402}{button::cancel}};}
+\DoxyCodeLine{01670\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\_choice)}
+\DoxyCodeLine{01671\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01672\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a809da5df9c86c6426c8d8db2934d3f51}{choice::ok\_cancel}}:}
+\DoxyCodeLine{01673\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ script\ +=\ \textcolor{stringliteral}{"{}buttons\ \{\(\backslash\)"{}OK\(\backslash\)"{},\ \(\backslash\)"{}Cancel\(\backslash\)"{}\}"{}}}
+\DoxyCodeLine{01674\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ default\ button\ \(\backslash\)"{}OK\(\backslash\)"{}"{}}}
+\DoxyCodeLine{01675\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ cancel\ button\ \(\backslash\)"{}Cancel\(\backslash\)"{}"{}};}
+\DoxyCodeLine{01676\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01677\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a20f0596c21ad67a7fda598ffc7d038d1}{choice::yes\_no}}:}
+\DoxyCodeLine{01678\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ script\ +=\ \textcolor{stringliteral}{"{}buttons\ \{\(\backslash\)"{}Yes\(\backslash\)"{},\ \(\backslash\)"{}No\(\backslash\)"{}\}"{}}}
+\DoxyCodeLine{01679\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ default\ button\ \(\backslash\)"{}Yes\(\backslash\)"{}"{}}}
+\DoxyCodeLine{01680\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ cancel\ button\ \(\backslash\)"{}No\(\backslash\)"{}"{}};}
+\DoxyCodeLine{01681\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if\_cancel\ =\ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679a7fa3b767c460b54a2be4d49030b349c7}{button::no}};}
+\DoxyCodeLine{01682\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01683\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a5c5cb337bb234e240912dc139048038c}{choice::yes\_no\_cancel}}:}
+\DoxyCodeLine{01684\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ script\ +=\ \textcolor{stringliteral}{"{}buttons\ \{\(\backslash\)"{}Yes\(\backslash\)"{},\ \(\backslash\)"{}No\(\backslash\)"{},\ \(\backslash\)"{}Cancel\(\backslash\)"{}\}"{}}}
+\DoxyCodeLine{01685\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ default\ button\ \(\backslash\)"{}Yes\(\backslash\)"{}"{}}}
+\DoxyCodeLine{01686\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ cancel\ button\ \(\backslash\)"{}Cancel\(\backslash\)"{}"{}};}
+\DoxyCodeLine{01687\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01688\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a7928e609b1665227bcb71b20d431fd6a}{choice::retry\_cancel}}:}
+\DoxyCodeLine{01689\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ script\ +=\ \textcolor{stringliteral}{"{}buttons\ \{\(\backslash\)"{}Retry\(\backslash\)"{},\ \(\backslash\)"{}Cancel\(\backslash\)"{}\}"{}}}
+\DoxyCodeLine{01690\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ default\ button\ \(\backslash\)"{}Retry\(\backslash\)"{}"{}}}
+\DoxyCodeLine{01691\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ cancel\ button\ \(\backslash\)"{}Cancel\(\backslash\)"{}"{}};}
+\DoxyCodeLine{01692\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01693\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a9df771aa8f010c4b928e42a8979d5609}{choice::abort\_retry\_ignore}}:}
+\DoxyCodeLine{01694\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ script\ +=\ \textcolor{stringliteral}{"{}buttons\ \{\(\backslash\)"{}Abort\(\backslash\)"{},\ \(\backslash\)"{}Retry\(\backslash\)"{},\ \(\backslash\)"{}Ignore\(\backslash\)"{}\}"{}}}
+\DoxyCodeLine{01695\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ default\ button\ \(\backslash\)"{}Abort\(\backslash\)"{}"{}}}
+\DoxyCodeLine{01696\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ cancel\ button\ \(\backslash\)"{}Retry\(\backslash\)"{}"{}};}
+\DoxyCodeLine{01697\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if\_cancel\ =\ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679a165e6d21e0a2cc9ebb32ca05f90e0fa7}{button::retry}};}
+\DoxyCodeLine{01698\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01699\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a444bcb3a3fcf8389296c49467f27e1d6}{choice::ok}}:\ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{01700\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ script\ +=\ \textcolor{stringliteral}{"{}buttons\ \{\(\backslash\)"{}OK\(\backslash\)"{}\}"{}}}
+\DoxyCodeLine{01701\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ default\ button\ \(\backslash\)"{}OK\(\backslash\)"{}"{}}}
+\DoxyCodeLine{01702\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ cancel\ button\ \(\backslash\)"{}OK\(\backslash\)"{}"{}};}
+\DoxyCodeLine{01703\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if\_cancel\ =\ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679a444bcb3a3fcf8389296c49467f27e1d6}{button::ok}};}
+\DoxyCodeLine{01704\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01705\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01706\ \ \ \ \ \ \ \ \ \ \ \ \ m\_mappings[1]\ =\ if\_cancel;}
+\DoxyCodeLine{01707\ \ \ \ \ \ \ \ \ \ \ \ \ m\_mappings[256]\ =\ if\_cancel;\ \textcolor{comment}{//\ XXX:\ I\ think\ this\ was\ never\ correct}}
+\DoxyCodeLine{01708\ \ \ \ \ \ \ \ \ \ \ \ \ script\ +=\ \textcolor{stringliteral}{"{}\ with\ icon\ "{}};}
+\DoxyCodeLine{01709\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\_icon)}
+\DoxyCodeLine{01710\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01711\ \textcolor{preprocessor}{\#define\ PFD\_OSX\_ICON(n)\ "{}alias\ ((path\ to\ library\ folder\ from\ system\ domain)\ as\ text\ "{}}\ \(\backslash\)}
+\DoxyCodeLine{01712\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}\&\ \(\backslash\)"{}CoreServices:CoreTypes.bundle:Contents:Resources:"{}\ n\ "{}.icns\(\backslash\)"{})"{}}
+\DoxyCodeLine{01713\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85acaf9b6b99962bf5c2264824231d7a40c}{icon::info}}:\ \textcolor{keywordflow}{default}:\ script\ +=\ \mbox{\hyperlink{FileDialog_8h_a0851d0adb9dc3b40d5c9961d6325ca33}{PFD\_OSX\_ICON}}(\textcolor{stringliteral}{"{}ToolBarInfo"{}});\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01714\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85a7b83d3f08fa392b79e3f553b585971cd}{icon::warning}}:\ script\ +=\ \textcolor{stringliteral}{"{}caution"{}};\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01715\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85acb5e100e5a9a3e7f6d1fd97512215282}{icon::error}}:\ script\ +=\ \textcolor{stringliteral}{"{}stop"{}};\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01716\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85a5494af1f14a8c19939968c3e9e2d4f79}{icon::question}}:\ script\ +=\ \mbox{\hyperlink{FileDialog_8h_a0851d0adb9dc3b40d5c9961d6325ca33}{PFD\_OSX\_ICON}}(\textcolor{stringliteral}{"{}GenericQuestionMarkIcon"{}});\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01717\ \textcolor{preprocessor}{\#undef\ PFD\_OSX\_ICON}}
+\DoxyCodeLine{01718\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01719\ }
+\DoxyCodeLine{01720\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\textcolor{stringliteral}{"{}-\/e"{}});}
+\DoxyCodeLine{01721\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(script);}
+\DoxyCodeLine{01722\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01723\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classpfd_1_1settings_a08e4a5b150186d77158a974cc8c2d4a2}{is\_zenity}}())}
+\DoxyCodeLine{01724\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01725\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\_choice)}
+\DoxyCodeLine{01726\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01727\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a809da5df9c86c6426c8d8db2934d3f51}{choice::ok\_cancel}}:}
+\DoxyCodeLine{01728\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ command.insert(command.end(),\ \{\ \textcolor{stringliteral}{"{}-\/-\/question"{}},\ \textcolor{stringliteral}{"{}-\/-\/cancel-\/label=Cancel"{}},\ \textcolor{stringliteral}{"{}-\/-\/ok-\/label=OK"{}}\ \});\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01729\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a20f0596c21ad67a7fda598ffc7d038d1}{choice::yes\_no}}:}
+\DoxyCodeLine{01730\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Do\ not\ use\ standard\ -\/-\/question\ because\ it\ causes\ “No”\ to\ return\ -\/1,}}
+\DoxyCodeLine{01731\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ which\ is\ inconsistent\ with\ the\ “Yes/No/Cancel”\ mode\ below.}}
+\DoxyCodeLine{01732\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ command.insert(command.end(),\ \{\ \textcolor{stringliteral}{"{}-\/-\/question"{}},\ \textcolor{stringliteral}{"{}-\/-\/switch"{}},\ \textcolor{stringliteral}{"{}-\/-\/extra-\/button=No"{}},\ \textcolor{stringliteral}{"{}-\/-\/extra-\/button=Yes"{}}\ \});\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01733\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a5c5cb337bb234e240912dc139048038c}{choice::yes\_no\_cancel}}:}
+\DoxyCodeLine{01734\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ command.insert(command.end(),\ \{\ \textcolor{stringliteral}{"{}-\/-\/question"{}},\ \textcolor{stringliteral}{"{}-\/-\/switch"{}},\ \textcolor{stringliteral}{"{}-\/-\/extra-\/button=Cancel"{}},\ \textcolor{stringliteral}{"{}-\/-\/extra-\/button=No"{}},\ \textcolor{stringliteral}{"{}-\/-\/extra-\/button=Yes"{}}\ \});\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01735\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a7928e609b1665227bcb71b20d431fd6a}{choice::retry\_cancel}}:}
+\DoxyCodeLine{01736\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ command.insert(command.end(),\ \{\ \textcolor{stringliteral}{"{}-\/-\/question"{}},\ \textcolor{stringliteral}{"{}-\/-\/switch"{}},\ \textcolor{stringliteral}{"{}-\/-\/extra-\/button=Cancel"{}},\ \textcolor{stringliteral}{"{}-\/-\/extra-\/button=Retry"{}}\ \});\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01737\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a9df771aa8f010c4b928e42a8979d5609}{choice::abort\_retry\_ignore}}:}
+\DoxyCodeLine{01738\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ command.insert(command.end(),\ \{\ \textcolor{stringliteral}{"{}-\/-\/question"{}},\ \textcolor{stringliteral}{"{}-\/-\/switch"{}},\ \textcolor{stringliteral}{"{}-\/-\/extra-\/button=Ignore"{}},\ \textcolor{stringliteral}{"{}-\/-\/extra-\/button=Abort"{}},\ \textcolor{stringliteral}{"{}-\/-\/extra-\/button=Retry"{}}\ \});\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01739\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a444bcb3a3fcf8389296c49467f27e1d6}{choice::ok}}:}
+\DoxyCodeLine{01740\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{01741\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\_icon)}
+\DoxyCodeLine{01742\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01743\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85acb5e100e5a9a3e7f6d1fd97512215282}{icon::error}}:\ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/error"{}});\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01744\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85a7b83d3f08fa392b79e3f553b585971cd}{icon::warning}}:\ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/warning"{}});\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01745\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/info"{}});\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01746\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01747\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01748\ }
+\DoxyCodeLine{01749\ \ \ \ \ \ \ \ \ \ \ \ \ command.insert(command.end(),\ \{\ \textcolor{stringliteral}{"{}-\/-\/title"{}},\ title,}
+\DoxyCodeLine{01750\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}-\/-\/width=300"{}},\ \textcolor{stringliteral}{"{}-\/-\/height=0"{}},\ \textcolor{comment}{//\ sensible\ defaults}}
+\DoxyCodeLine{01751\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}-\/-\/no-\/markup"{}},\ \textcolor{comment}{//\ do\ not\ interpret\ text\ as\ Pango\ markup}}
+\DoxyCodeLine{01752\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}-\/-\/text"{}},\ text,}
+\DoxyCodeLine{01753\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}-\/-\/icon-\/name=dialog-\/"{}}\ +\ get\_icon\_name(\_icon)\ \});}
+\DoxyCodeLine{01754\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01755\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classpfd_1_1settings_aa79fb10eee785f1acd8d1ff34e226c89}{is\_kdialog}}())}
+\DoxyCodeLine{01756\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01757\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_choice\ ==\ \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a444bcb3a3fcf8389296c49467f27e1d6}{choice::ok}})}
+\DoxyCodeLine{01758\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01759\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\_icon)}
+\DoxyCodeLine{01760\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01761\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85acb5e100e5a9a3e7f6d1fd97512215282}{icon::error}}:\ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/error"{}});\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01762\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85a7b83d3f08fa392b79e3f553b585971cd}{icon::warning}}:\ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/sorry"{}});\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01763\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/msgbox"{}});\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01764\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01765\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01766\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{01767\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01768\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}{flag}}\ =\ \textcolor{stringliteral}{"{}-\/-\/"{}};}
+\DoxyCodeLine{01769\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_icon\ ==\ \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85a7b83d3f08fa392b79e3f553b585971cd}{icon::warning}}\ ||\ \_icon\ ==\ \mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85acb5e100e5a9a3e7f6d1fd97512215282}{icon::error}})}
+\DoxyCodeLine{01770\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}{flag}}\ +=\ \textcolor{stringliteral}{"{}warning"{}};}
+\DoxyCodeLine{01771\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}{flag}}\ +=\ \textcolor{stringliteral}{"{}yesno"{}};}
+\DoxyCodeLine{01772\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_choice\ ==\ \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a5c5cb337bb234e240912dc139048038c}{choice::yes\_no\_cancel}})}
+\DoxyCodeLine{01773\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}{flag}}\ +=\ \textcolor{stringliteral}{"{}cancel"{}};}
+\DoxyCodeLine{01774\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}{flag}});}
+\DoxyCodeLine{01775\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_choice\ ==\ \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a20f0596c21ad67a7fda598ffc7d038d1}{choice::yes\_no}}\ ||\ \_choice\ ==\ \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a5c5cb337bb234e240912dc139048038c}{choice::yes\_no\_cancel}})}
+\DoxyCodeLine{01776\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01777\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_mappings[0]\ =\ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679aa6105c0a611b41b08f1209506350279e}{button::yes}};}
+\DoxyCodeLine{01778\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_mappings[256]\ =\ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679a7fa3b767c460b54a2be4d49030b349c7}{button::no}};}
+\DoxyCodeLine{01779\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01780\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01781\ }
+\DoxyCodeLine{01782\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(text);}
+\DoxyCodeLine{01783\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/title"{}});}
+\DoxyCodeLine{01784\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(title);}
+\DoxyCodeLine{01785\ }
+\DoxyCodeLine{01786\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Must\ be\ after\ the\ above\ part}}
+\DoxyCodeLine{01787\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_choice\ ==\ \mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8a809da5df9c86c6426c8d8db2934d3f51}{choice::ok\_cancel}})}
+\DoxyCodeLine{01788\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ command.insert(command.end(),\ \{\ \textcolor{stringliteral}{"{}-\/-\/yes-\/label"{}},\ \textcolor{stringliteral}{"{}OK"{}},\ \textcolor{stringliteral}{"{}-\/-\/no-\/label"{}},\ \textcolor{stringliteral}{"{}Cancel"{}}\ \});}
+\DoxyCodeLine{01789\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01790\ }
+\DoxyCodeLine{01791\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadad9da28952c27749f53c23675db49d560}{flag::is\_verbose}}))}
+\DoxyCodeLine{01792\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}pfd:\ "{}}\ <<\ command\ <<\ std::endl;}
+\DoxyCodeLine{01793\ }
+\DoxyCodeLine{01794\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a91f4b2666fb920a7859df9cdc079502d}{m\_async}}-\/>start\_process(command);}
+\DoxyCodeLine{01795\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01796\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpfd_1_1message_aeee673bf19f45328a7eb8ec2c1e01fc9}\label{classpfd_1_1message_aeee673bf19f45328a7eb8ec2c1e01fc9}} 
+\index{pfd::message@{pfd::message}!result@{result}}
+\index{result@{result}!pfd::message@{pfd::message}}
+\doxysubsubsection{\texorpdfstring{result()}{result()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679}{button}} pfd\+::message\+::result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l01798}{1798}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01799\ \ \ \ \ \{}
+\DoxyCodeLine{01800\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ exit\_code;}
+\DoxyCodeLine{01801\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ ret\ =\ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a91f4b2666fb920a7859df9cdc079502d}{m\_async}}-\/>result(\&exit\_code);}
+\DoxyCodeLine{01802\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ osascript\ will\ say\ "{}button\ returned:Cancel\(\backslash\)n"{}}}
+\DoxyCodeLine{01803\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ and\ others\ will\ just\ say\ "{}Cancel\(\backslash\)n"{}}}
+\DoxyCodeLine{01804\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (internal::ends\_with(ret,\ \textcolor{stringliteral}{"{}Cancel\(\backslash\)n"{}}))}
+\DoxyCodeLine{01805\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679a10aec35353f9c4096a71c38654c3d402}{button::cancel}};}
+\DoxyCodeLine{01806\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (internal::ends\_with(ret,\ \textcolor{stringliteral}{"{}OK\(\backslash\)n"{}}))}
+\DoxyCodeLine{01807\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679a444bcb3a3fcf8389296c49467f27e1d6}{button::ok}};}
+\DoxyCodeLine{01808\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (internal::ends\_with(ret,\ \textcolor{stringliteral}{"{}Yes\(\backslash\)n"{}}))}
+\DoxyCodeLine{01809\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679aa6105c0a611b41b08f1209506350279e}{button::yes}};}
+\DoxyCodeLine{01810\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (internal::ends\_with(ret,\ \textcolor{stringliteral}{"{}No\(\backslash\)n"{}}))}
+\DoxyCodeLine{01811\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679a7fa3b767c460b54a2be4d49030b349c7}{button::no}};}
+\DoxyCodeLine{01812\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (internal::ends\_with(ret,\ \textcolor{stringliteral}{"{}Abort\(\backslash\)n"{}}))}
+\DoxyCodeLine{01813\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679a5bb94a1c12413a2e5d14deabab29f2aa}{button::abort}};}
+\DoxyCodeLine{01814\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (internal::ends\_with(ret,\ \textcolor{stringliteral}{"{}Retry\(\backslash\)n"{}}))}
+\DoxyCodeLine{01815\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679a165e6d21e0a2cc9ebb32ca05f90e0fa7}{button::retry}};}
+\DoxyCodeLine{01816\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (internal::ends\_with(ret,\ \textcolor{stringliteral}{"{}Ignore\(\backslash\)n"{}}))}
+\DoxyCodeLine{01817\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679a567bc1d268f135496de3d5b946b691f3}{button::ignore}};}
+\DoxyCodeLine{01818\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_mappings.count(exit\_code)\ !=\ 0)}
+\DoxyCodeLine{01819\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_mappings[exit\_code];}
+\DoxyCodeLine{01820\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ exit\_code\ ==\ 0\ ?\ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679a444bcb3a3fcf8389296c49467f27e1d6}{button::ok}}\ :\ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679a10aec35353f9c4096a71c38654c3d402}{button::cancel}};}
+\DoxyCodeLine{01821\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{FileDialog_8h}{File\+Dialog.\+h}}\end{DoxyCompactItemize}

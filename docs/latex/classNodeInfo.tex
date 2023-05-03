@@ -1,0 +1,831 @@
+\hypertarget{classNodeInfo}{}\doxysection{Node\+Info Class Reference}
+\label{classNodeInfo}\index{NodeInfo@{NodeInfo}}
+
+
+{\ttfamily \#include $<$Node\+Info.\+hpp$>$}
+
+Inheritance diagram for Node\+Info\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classNodeInfo}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}{Arrow\+Type}} \{ \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a684d325a7303f52e64011467ff5c5758}{LEFT}}
+, \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{RIGHT}}
+ \}
+\item 
+enum class \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6}{Status\+Node}} \{ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6a4ddc1f10c5822c174470affbb45f9901}{In\+Chain}}
+, \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6ac7b573146267d98cb26fbe9b34e5a259}{Out\+Chain}}
+, \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6aec24d78ce33048dc73a2b6b1a0690192}{Visible}}
+ \}
+\item 
+enum class \mbox{\hyperlink{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47}{Type\+Node}} \{ \mbox{\hyperlink{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a960b44c579bc2f6818d2daaf9e4c16f0}{Normal}}
+, \mbox{\hyperlink{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a76fbf0ccd7fcd64879c2ff2119dc15a4}{Outside}}
+, \mbox{\hyperlink{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a975826920e100645fa7b60f265742446}{Effective}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNodeInfo_a7d8a452f0a746e7918520128389fef11}{Node\+Info}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}}, std\+::string value, sf\+::\+Vector2f position, bool \+\_\+is\+DLL)
+\item 
+\mbox{\hyperlink{classNodeInfo_a1543255862f1a3dbc456d1113c0c8f49}{$\sim$\+Node\+Info}} ()
+\item 
+void \mbox{\hyperlink{classNodeInfo_a7fc27598478b08e0e04d37d811ded053}{update\+Node}} ()
+\item 
+void \mbox{\hyperlink{classNodeInfo_aa31b9a0e95dc64b358754cd9b3b20ffd}{update\+Arrows}} (\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}{Arrow\+Type}} type, sf\+::\+Vector2f end)
+\item 
+void \mbox{\hyperlink{classNodeInfo_a224d93d662b639aaca14d6bdd0f3a595}{render}} () override
+\item 
+void \mbox{\hyperlink{classNodeInfo_a06e4e3ae54de0335b910e02faf72f87b}{init\+Arrow}} (\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}{Arrow\+Type}} type, sf\+::\+Vector2f start, sf\+::\+Vector2f end)
+\item 
+void \mbox{\hyperlink{classNodeInfo_a4515763457c25d7a28ce1c8b03ba74ca}{destroy\+Arrow}} (\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}{Arrow\+Type}} type)
+\item 
+void \mbox{\hyperlink{classNodeInfo_aac5ecb209fb4d724371f3093c061d2a8}{re\+Init\+Pos}} (int index)
+\item 
+void \mbox{\hyperlink{classNodeInfo_a6847d4db530714771b782efb392b5d6e}{re\+Init\+Pre\+Val}} ()
+\item 
+void \mbox{\hyperlink{classNodeInfo_a0e16c9b06081fce020f6f5e9fde09630}{set\+Effective\+Position}} (sf\+::\+Vector2f start)
+\item 
+void \mbox{\hyperlink{classNodeInfo_aa8459067d30ab00fe41bda245d97c7ca}{set\+Arrows}} (\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}{Arrow\+Type}} type, sf\+::\+Vector2f start, sf\+::\+Vector2f end)
+\item 
+void \mbox{\hyperlink{classNodeInfo_a5051a306dbc37fdb9b981373c6a7640b}{set\+Value}} (std\+::string value)
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classNodeInfo_a29dba81da9a6788f88a1cd47444ad863}{get\+Position}} ()
+\item 
+std\+::string \mbox{\hyperlink{classNodeInfo_adb011e325ad70ee9f44d5c3b9ab79362}{get\+Value}} ()
+\item 
+void \mbox{\hyperlink{classNodeInfo_a10e10466dc3ee938881f7110e87a0bad}{toggle\+Active\+Color\+Node}} ()
+\item 
+void \mbox{\hyperlink{classNodeInfo_ab2fce7c2aefff92dc3f707a5f9f3f8fe}{toggle\+Active\+Color\+Arrow}} (\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}{Arrow\+Type}} type)
+\item 
+void \mbox{\hyperlink{classNodeInfo_a68fa385f3edf17646b48f96b09298dfa}{set\+Print\+Pre\+Val}} ()
+\item 
+void \mbox{\hyperlink{classNodeInfo_aeb5dd55b9962722f1101daa0033ed4b5}{set\+Print\+Normal}} ()
+\item 
+void \mbox{\hyperlink{classNodeInfo_ae6f8e9bcd01f477039ebc5fcf2a02fa3}{set\+Node\+In\+Chain}} ()
+\item 
+void \mbox{\hyperlink{classNodeInfo_ad205c39cc66e2751e7ca8f0051d69bd3}{set\+Node\+Outside}} ()
+\item 
+void \mbox{\hyperlink{classNodeInfo_a3bc5cbe8e94e639ead939a91332ac1dd}{set\+Node\+Visible}} ()
+\item 
+void \mbox{\hyperlink{classNodeInfo_aa9c7e148e61486537b46ebf5a650d82c}{set\+Title}} (const std\+::string \&title)
+\item 
+void \mbox{\hyperlink{classNodeInfo_aba799d4874a5f5ad7e8a60dc24c4ebe6}{hide}} (\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}{Arrow\+Type}} type)
+\item 
+void \mbox{\hyperlink{classNodeInfo_ad9d75188c253a4e8d5637d51ad20cfe2}{show}} (\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}{Arrow\+Type}} type)
+\item 
+\mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6}{Status\+Node}} \mbox{\hyperlink{classNodeInfo_aefb2f63efa743a5f11f807e83efa205c}{get\+Status\+Node}} ()
+\item 
+void \mbox{\hyperlink{classNodeInfo_a804a1059109cfe4525e3b67d21590519}{reset\+Color\+Node}} ()
+\item 
+void \mbox{\hyperlink{classNodeInfo_ab78e5a58d1a181bc518cea1630efa3c4}{reset\+Color\+Arrow}} (\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}{Arrow\+Type}} type)
+\item 
+void \mbox{\hyperlink{classNodeInfo_a831a6770cd205b29996fb3926d053e37}{reset\+Title}} ()
+\item 
+void \mbox{\hyperlink{classNodeInfo_ae5dede8dd2a49f0c0fa5d43b4cef7d78}{reset}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBaseDraw}{Base\+Draw}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBaseDraw_ac359be43debbd846b809639a39aff0f2}{Base\+Draw}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}})
+\item 
+virtual void \mbox{\hyperlink{classBaseDraw_ab7eb16791faed1ce844d963d9e2acf38}{render}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBaseDraw}{Base\+Draw}}}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Render\+Window $\ast$ \mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8hpp_source_l00012}{12}} of file \mbox{\hyperlink{NodeInfo_8hpp_source}{Node\+Info.\+hpp}}.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}\label{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}} 
+\index{NodeInfo@{NodeInfo}!ArrowType@{ArrowType}}
+\index{ArrowType@{ArrowType}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{ArrowType}{ArrowType}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}{Node\+Info\+::\+Arrow\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT@{LEFT}!NodeInfo@{NodeInfo}}\index{NodeInfo@{NodeInfo}!LEFT@{LEFT}}}\mbox{\Hypertarget{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a684d325a7303f52e64011467ff5c5758}\label{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a684d325a7303f52e64011467ff5c5758}} 
+LEFT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT@{RIGHT}!NodeInfo@{NodeInfo}}\index{NodeInfo@{NodeInfo}!RIGHT@{RIGHT}}}\mbox{\Hypertarget{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}\label{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}} 
+RIGHT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8hpp_source_l00014}{14}} of file \mbox{\hyperlink{NodeInfo_8hpp_source}{Node\+Info.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a684d325a7303f52e64011467ff5c5758}{LEFT}},}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{RIGHT}}}
+\DoxyCodeLine{00017\ \ \ \ \ \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6}\label{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6}} 
+\index{NodeInfo@{NodeInfo}!StatusNode@{StatusNode}}
+\index{StatusNode@{StatusNode}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{StatusNode}{StatusNode}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6}{Node\+Info\+::\+Status\+Node}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InChain@{InChain}!NodeInfo@{NodeInfo}}\index{NodeInfo@{NodeInfo}!InChain@{InChain}}}\mbox{\Hypertarget{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6a4ddc1f10c5822c174470affbb45f9901}\label{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6a4ddc1f10c5822c174470affbb45f9901}} 
+In\+Chain&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OutChain@{OutChain}!NodeInfo@{NodeInfo}}\index{NodeInfo@{NodeInfo}!OutChain@{OutChain}}}\mbox{\Hypertarget{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6ac7b573146267d98cb26fbe9b34e5a259}\label{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6ac7b573146267d98cb26fbe9b34e5a259}} 
+Out\+Chain&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Visible@{Visible}!NodeInfo@{NodeInfo}}\index{NodeInfo@{NodeInfo}!Visible@{Visible}}}\mbox{\Hypertarget{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6aec24d78ce33048dc73a2b6b1a0690192}\label{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6aec24d78ce33048dc73a2b6b1a0690192}} 
+Visible&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8hpp_source_l00019}{19}} of file \mbox{\hyperlink{NodeInfo_8hpp_source}{Node\+Info.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6a4ddc1f10c5822c174470affbb45f9901}{InChain}},}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6ac7b573146267d98cb26fbe9b34e5a259}{OutChain}},}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6aec24d78ce33048dc73a2b6b1a0690192}{Visible}}}
+\DoxyCodeLine{00023\ \ \ \ \ \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47}\label{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47}} 
+\index{NodeInfo@{NodeInfo}!TypeNode@{TypeNode}}
+\index{TypeNode@{TypeNode}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{TypeNode}{TypeNode}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47}{Node\+Info\+::\+Type\+Node}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Normal@{Normal}!NodeInfo@{NodeInfo}}\index{NodeInfo@{NodeInfo}!Normal@{Normal}}}\mbox{\Hypertarget{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a960b44c579bc2f6818d2daaf9e4c16f0}\label{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a960b44c579bc2f6818d2daaf9e4c16f0}} 
+Normal&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Outside@{Outside}!NodeInfo@{NodeInfo}}\index{NodeInfo@{NodeInfo}!Outside@{Outside}}}\mbox{\Hypertarget{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a76fbf0ccd7fcd64879c2ff2119dc15a4}\label{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a76fbf0ccd7fcd64879c2ff2119dc15a4}} 
+Outside&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Effective@{Effective}!NodeInfo@{NodeInfo}}\index{NodeInfo@{NodeInfo}!Effective@{Effective}}}\mbox{\Hypertarget{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a975826920e100645fa7b60f265742446}\label{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a975826920e100645fa7b60f265742446}} 
+Effective&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8hpp_source_l00025}{25}} of file \mbox{\hyperlink{NodeInfo_8hpp_source}{Node\+Info.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a960b44c579bc2f6818d2daaf9e4c16f0}{Normal}},}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a76fbf0ccd7fcd64879c2ff2119dc15a4}{Outside}},}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a975826920e100645fa7b60f265742446}{Effective}}}
+\DoxyCodeLine{00029\ \ \ \ \ \};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNodeInfo_a7d8a452f0a746e7918520128389fef11}\label{classNodeInfo_a7d8a452f0a746e7918520128389fef11}} 
+\index{NodeInfo@{NodeInfo}!NodeInfo@{NodeInfo}}
+\index{NodeInfo@{NodeInfo}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{NodeInfo()}{NodeInfo()}}
+{\footnotesize\ttfamily Node\+Info\+::\+Node\+Info (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window,  }\item[{std\+::string}]{value,  }\item[{sf\+::\+Vector2f}]{position,  }\item[{bool}]{\+\_\+is\+DLL }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classBaseDraw}{BaseDraw}}(\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}})\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ this-\/>values[0]\ =\ value;}
+\DoxyCodeLine{00009\ \ \ \ \ this-\/>values[1]\ =\ value;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ this-\/>positions[(int)\mbox{\hyperlink{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a960b44c579bc2f6818d2daaf9e4c16f0}{TypeNode::Normal}}]\ =\ position;}
+\DoxyCodeLine{00012\ \ \ \ \ this-\/>positions[(int)\mbox{\hyperlink{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a975826920e100645fa7b60f265742446}{TypeNode::Effective}}]\ =\ position;}
+\DoxyCodeLine{00013\ \ \ \ \ this-\/>positions[(int)\mbox{\hyperlink{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a76fbf0ccd7fcd64879c2ff2119dc15a4}{TypeNode::Outside}}]\ =\ sf::Vector2f(}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ position.x,}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ position.y\ +\ constants::NodeInfo::offsetY}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ this-\/>isDLL\ =\ \_isDLL;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ this-\/>statusNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6a4ddc1f10c5822c174470affbb45f9901}{StatusNode::InChain}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ this-\/>node\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classSingleNode}{SingleNode}}(\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}},\ std::move(value),\ this-\/>positions[(\textcolor{keywordtype}{int})\mbox{\hyperlink{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a960b44c579bc2f6818d2daaf9e4c16f0}{TypeNode::Normal}}]);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&arrow\ :\ this-\/>arrows)}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ arrow[(int)\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a684d325a7303f52e64011467ff5c5758}{ArrowType::LEFT}}]\ =\ arrow[(\textcolor{keywordtype}{int})\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{ArrowType::RIGHT}}]\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ this-\/>isPrintPreVal\ =\ this-\/>isPrintNormal\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ this-\/>title.setFont(this-\/>node-\/>\mbox{\hyperlink{classSingleNode_a3b454c14d99e1df944116f1553589a7f}{font}});}
+\DoxyCodeLine{00030\ \ \ \ \ this-\/>title.setCharacterSize(constants::TitleNode::fontSize);}
+\DoxyCodeLine{00031\ \ \ \ \ this-\/>title.setFillColor(constants::titleGreen);}
+\DoxyCodeLine{00032\ \ \ \ \ this-\/>title.setString(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00033\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_a1543255862f1a3dbc456d1113c0c8f49}\label{classNodeInfo_a1543255862f1a3dbc456d1113c0c8f49}} 
+\index{NodeInfo@{NodeInfo}!````~NodeInfo@{$\sim$NodeInfo}}
+\index{````~NodeInfo@{$\sim$NodeInfo}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{$\sim$NodeInfo()}{~NodeInfo()}}
+{\footnotesize\ttfamily Node\+Info\+::$\sim$\+Node\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00193}{193}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keyword}{delete}\ this-\/>node;}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&\ arrow\ :\ this-\/>arrows)\ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&\ j\ :\ arrow)\ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ j;}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00199\ \ \ \ \ \}}
+\DoxyCodeLine{00200\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNodeInfo_a4515763457c25d7a28ce1c8b03ba74ca}\label{classNodeInfo_a4515763457c25d7a28ce1c8b03ba74ca}} 
+\index{NodeInfo@{NodeInfo}!destroyArrow@{destroyArrow}}
+\index{destroyArrow@{destroyArrow}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{destroyArrow()}{destroyArrow()}}
+{\footnotesize\ttfamily void Node\+Info\+::destroy\+Arrow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}{Node\+Info\+::\+Arrow\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00231}{231}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>arrows[0][(\textcolor{keywordtype}{int})type])}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ this-\/>arrows[0][(int)type];}
+\DoxyCodeLine{00234\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>arrows[1][(\textcolor{keywordtype}{int})type])}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ this-\/>arrows[1][(\textcolor{keywordtype}{int})type];}
+\DoxyCodeLine{00236\ \ \ \ \ this-\/>arrows[0][(int)type]\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00237\ \ \ \ \ this-\/>arrows[1][(int)type]\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00238\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_a29dba81da9a6788f88a1cd47444ad863}\label{classNodeInfo_a29dba81da9a6788f88a1cd47444ad863}} 
+\index{NodeInfo@{NodeInfo}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Node\+Info\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00094}{94}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ this-\/>\mbox{\hyperlink{classNodeInfo_a7fc27598478b08e0e04d37d811ded053}{updateNode}}();\ \textcolor{comment}{//\ ?}}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>node-\/>\mbox{\hyperlink{classSingleNode_a633ab92468fb3fff2b100004ac1c0398}{getPosition}}();}
+\DoxyCodeLine{00097\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_aefb2f63efa743a5f11f807e83efa205c}\label{classNodeInfo_aefb2f63efa743a5f11f807e83efa205c}} 
+\index{NodeInfo@{NodeInfo}!getStatusNode@{getStatusNode}}
+\index{getStatusNode@{getStatusNode}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{getStatusNode()}{getStatusNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6}{Node\+Info\+::\+Status\+Node}} Node\+Info\+::get\+Status\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00164}{164}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>statusNode;}
+\DoxyCodeLine{00166\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_adb011e325ad70ee9f44d5c3b9ab79362}\label{classNodeInfo_adb011e325ad70ee9f44d5c3b9ab79362}} 
+\index{NodeInfo@{NodeInfo}!getValue@{getValue}}
+\index{getValue@{getValue}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily std\+::string Node\+Info\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00206}{206}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>values[0];}
+\DoxyCodeLine{00208\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_aba799d4874a5f5ad7e8a60dc24c4ebe6}\label{classNodeInfo_aba799d4874a5f5ad7e8a60dc24c4ebe6}} 
+\index{NodeInfo@{NodeInfo}!hide@{hide}}
+\index{hide@{hide}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{hide()}{hide()}}
+{\footnotesize\ttfamily void Node\+Info\+::hide (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}{Node\+Info\+::\+Arrow\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00179}{179}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>arrows[0][(\textcolor{keywordtype}{int})type])}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ this-\/>arrows[0][(int)type]-\/>\mbox{\hyperlink{classNodeInfo_aba799d4874a5f5ad7e8a60dc24c4ebe6}{hide}}();}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>arrows[1][(\textcolor{keywordtype}{int})type])}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ this-\/>arrows[1][(int)type]-\/>\mbox{\hyperlink{classNodeInfo_aba799d4874a5f5ad7e8a60dc24c4ebe6}{hide}}();}
+\DoxyCodeLine{00184\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_a06e4e3ae54de0335b910e02faf72f87b}\label{classNodeInfo_a06e4e3ae54de0335b910e02faf72f87b}} 
+\index{NodeInfo@{NodeInfo}!initArrow@{initArrow}}
+\index{initArrow@{initArrow}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{initArrow()}{initArrow()}}
+{\footnotesize\ttfamily void Node\+Info\+::init\+Arrow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}{Node\+Info\+::\+Arrow\+Type}}}]{type,  }\item[{sf\+::\+Vector2f}]{start,  }\item[{sf\+::\+Vector2f}]{end }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00054}{54}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ this-\/>arrows[1][(int)type]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classArrow}{Arrow}}(this-\/>\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}},\ start,\ end);}
+\DoxyCodeLine{00056\ \ \ \ \ this-\/>arrows[1][(int)type]-\/>setMid();}
+\DoxyCodeLine{00057\ \ \ \ \ this-\/>arrows[0][(int)type]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classArrow}{Arrow}}(this-\/>\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}},\ start,\ end);}
+\DoxyCodeLine{00058\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_aac5ecb209fb4d724371f3093c061d2a8}\label{classNodeInfo_aac5ecb209fb4d724371f3093c061d2a8}} 
+\index{NodeInfo@{NodeInfo}!reInitPos@{reInitPos}}
+\index{reInitPos@{reInitPos}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{reInitPos()}{reInitPos()}}
+{\footnotesize\ttfamily void Node\+Info\+::re\+Init\+Pos (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00099}{99}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ this-\/>positions[(int)\mbox{\hyperlink{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a960b44c579bc2f6818d2daaf9e4c16f0}{TypeNode::Normal}}]\ =\ sf::Vector2f(}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ constants::NodeInfo::originNode.x\ +\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(index)\ *\ constants::NodeInfo::offsetX,}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ constants::NodeInfo::originNode.y}
+\DoxyCodeLine{00103\ \ \ \ \ );}
+\DoxyCodeLine{00104\ \ \ \ \ this-\/>positions[(int)\mbox{\hyperlink{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a76fbf0ccd7fcd64879c2ff2119dc15a4}{TypeNode::Outside}}]\ =\ sf::Vector2f(}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>positions[(\textcolor{keywordtype}{int})\mbox{\hyperlink{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a975826920e100645fa7b60f265742446}{TypeNode::Effective}}].x,}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>positions[(int)\mbox{\hyperlink{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a975826920e100645fa7b60f265742446}{TypeNode::Effective}}].y\ +\ constants::NodeInfo::offsetY}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00108\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_a6847d4db530714771b782efb392b5d6e}\label{classNodeInfo_a6847d4db530714771b782efb392b5d6e}} 
+\index{NodeInfo@{NodeInfo}!reInitPreVal@{reInitPreVal}}
+\index{reInitPreVal@{reInitPreVal}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{reInitPreVal()}{reInitPreVal()}}
+{\footnotesize\ttfamily void Node\+Info\+::re\+Init\+Pre\+Val (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00160}{160}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00161\ \ \ \ \ this-\/>values[1]\ =\ this-\/>values[0];}
+\DoxyCodeLine{00162\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_a224d93d662b639aaca14d6bdd0f3a595}\label{classNodeInfo_a224d93d662b639aaca14d6bdd0f3a595}} 
+\index{NodeInfo@{NodeInfo}!render@{render}}
+\index{render@{render}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Node\+Info\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classBaseDraw_ab7eb16791faed1ce844d963d9e2acf38}{Base\+Draw}}.
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>statusNode\ ==\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6aec24d78ce33048dc73a2b6b1a0690192}{StatusNode::Visible}})}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>isDLL\ \&\&\ this-\/>statusNode\ ==\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6a4ddc1f10c5822c174470affbb45f9901}{StatusNode::InChain}})\{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>arrows[1][(\textcolor{keywordtype}{int})\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a684d325a7303f52e64011467ff5c5758}{ArrowType::LEFT}}])}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>arrows[1][(int)\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a684d325a7303f52e64011467ff5c5758}{ArrowType::LEFT}}]-\/>\mbox{\hyperlink{classNodeInfo_a224d93d662b639aaca14d6bdd0f3a595}{render}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>arrows[1][(\textcolor{keywordtype}{int})\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{ArrowType::RIGHT}}])}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>arrows[1][(int)\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{ArrowType::RIGHT}}]-\/>\mbox{\hyperlink{classNodeInfo_a224d93d662b639aaca14d6bdd0f3a595}{render}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>arrows[0][(\textcolor{keywordtype}{int})\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a684d325a7303f52e64011467ff5c5758}{ArrowType::LEFT}}])}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>arrows[0][(int)\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a684d325a7303f52e64011467ff5c5758}{ArrowType::LEFT}}]-\/>\mbox{\hyperlink{classNodeInfo_a224d93d662b639aaca14d6bdd0f3a595}{render}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>arrows[0][(\textcolor{keywordtype}{int})\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{ArrowType::RIGHT}}])}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>arrows[0][(int)\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{ArrowType::RIGHT}}]-\/>\mbox{\hyperlink{classNodeInfo_a224d93d662b639aaca14d6bdd0f3a595}{render}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ this-\/>node-\/>\mbox{\hyperlink{classSingleNode_a2e9f4313eb93b679543f33febdb5f04a}{render}}();}
+\DoxyCodeLine{00051\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseDraw_a5b01a94959fe2030700dbae3d61fcb7d}{window}}-\/>draw(this-\/>title);}
+\DoxyCodeLine{00052\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_ae5dede8dd2a49f0c0fa5d43b4cef7d78}\label{classNodeInfo_ae5dede8dd2a49f0c0fa5d43b4cef7d78}} 
+\index{NodeInfo@{NodeInfo}!reset@{reset}}
+\index{reset@{reset}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Node\+Info\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00082}{82}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ this-\/>\mbox{\hyperlink{classNodeInfo_a804a1059109cfe4525e3b67d21590519}{resetColorNode}}();}
+\DoxyCodeLine{00084\ \ \ \ \ this-\/>\mbox{\hyperlink{classNodeInfo_ab78e5a58d1a181bc518cea1630efa3c4}{resetColorArrow}}(\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a684d325a7303f52e64011467ff5c5758}{ArrowType::LEFT}});}
+\DoxyCodeLine{00085\ \ \ \ \ this-\/>\mbox{\hyperlink{classNodeInfo_ab78e5a58d1a181bc518cea1630efa3c4}{resetColorArrow}}(\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{ArrowType::RIGHT}});}
+\DoxyCodeLine{00086\ \ \ \ \ this-\/>\mbox{\hyperlink{classNodeInfo_a831a6770cd205b29996fb3926d053e37}{resetTitle}}();}
+\DoxyCodeLine{00087\ \ \ \ \ this-\/>isPrintNormal\ =\ this-\/>isPrintPreVal\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00088\ \ \ \ \ this-\/>statusNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6a4ddc1f10c5822c174470affbb45f9901}{StatusNode::InChain}};}
+\DoxyCodeLine{00089\ \ \ \ \ this-\/>\mbox{\hyperlink{classNodeInfo_ad9d75188c253a4e8d5637d51ad20cfe2}{show}}(\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a684d325a7303f52e64011467ff5c5758}{ArrowType::LEFT}});}
+\DoxyCodeLine{00090\ \ \ \ \ this-\/>\mbox{\hyperlink{classNodeInfo_ad9d75188c253a4e8d5637d51ad20cfe2}{show}}(\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1a21507b40c80068eda19865706fdc2403}{ArrowType::RIGHT}});}
+\DoxyCodeLine{00091\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_ab78e5a58d1a181bc518cea1630efa3c4}\label{classNodeInfo_ab78e5a58d1a181bc518cea1630efa3c4}} 
+\index{NodeInfo@{NodeInfo}!resetColorArrow@{resetColorArrow}}
+\index{resetColorArrow@{resetColorArrow}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{resetColorArrow()}{resetColorArrow()}}
+{\footnotesize\ttfamily void Node\+Info\+::reset\+Color\+Arrow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}{Node\+Info\+::\+Arrow\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00075}{75}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>arrows[0][(\textcolor{keywordtype}{int})type])}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ this-\/>arrows[0][(int)type]-\/>resetColor();}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>arrows[1][(\textcolor{keywordtype}{int})type])}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ this-\/>arrows[1][(int)type]-\/>resetColor();}
+\DoxyCodeLine{00080\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_a804a1059109cfe4525e3b67d21590519}\label{classNodeInfo_a804a1059109cfe4525e3b67d21590519}} 
+\index{NodeInfo@{NodeInfo}!resetColorNode@{resetColorNode}}
+\index{resetColorNode@{resetColorNode}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{resetColorNode()}{resetColorNode()}}
+{\footnotesize\ttfamily void Node\+Info\+::reset\+Color\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00071}{71}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ this-\/>node-\/>\mbox{\hyperlink{classSingleNode_a8b8b3567fcbd74a9f0186346fa36afa7}{resetColor}}();}
+\DoxyCodeLine{00073\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_a831a6770cd205b29996fb3926d053e37}\label{classNodeInfo_a831a6770cd205b29996fb3926d053e37}} 
+\index{NodeInfo@{NodeInfo}!resetTitle@{resetTitle}}
+\index{resetTitle@{resetTitle}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{resetTitle()}{resetTitle()}}
+{\footnotesize\ttfamily void Node\+Info\+::reset\+Title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00227}{227}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00228\ \ \ \ \ this-\/>title.setString(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00229\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_aa8459067d30ab00fe41bda245d97c7ca}\label{classNodeInfo_aa8459067d30ab00fe41bda245d97c7ca}} 
+\index{NodeInfo@{NodeInfo}!setArrows@{setArrows}}
+\index{setArrows@{setArrows}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{setArrows()}{setArrows()}}
+{\footnotesize\ttfamily void Node\+Info\+::set\+Arrows (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}{Node\+Info\+::\+Arrow\+Type}}}]{type,  }\item[{sf\+::\+Vector2f}]{start,  }\item[{sf\+::\+Vector2f}]{end }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00172}{172}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>arrows[0][(\textcolor{keywordtype}{int})type])}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ this-\/>arrows[0][(int)type]-\/>setPositions(start,\ end,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>arrows[1][(\textcolor{keywordtype}{int})type])}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ this-\/>arrows[1][(int)type]-\/>setPositions(start,\ end,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00177\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_a0e16c9b06081fce020f6f5e9fde09630}\label{classNodeInfo_a0e16c9b06081fce020f6f5e9fde09630}} 
+\index{NodeInfo@{NodeInfo}!setEffectivePosition@{setEffectivePosition}}
+\index{setEffectivePosition@{setEffectivePosition}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{setEffectivePosition()}{setEffectivePosition()}}
+{\footnotesize\ttfamily void Node\+Info\+::set\+Effective\+Position (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{start }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00168}{168}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00169\ \ \ \ \ this-\/>positions[(int)\mbox{\hyperlink{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a975826920e100645fa7b60f265742446}{TypeNode::Effective}}]\ =\ start;}
+\DoxyCodeLine{00170\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_ae6f8e9bcd01f477039ebc5fcf2a02fa3}\label{classNodeInfo_ae6f8e9bcd01f477039ebc5fcf2a02fa3}} 
+\index{NodeInfo@{NodeInfo}!setNodeInChain@{setNodeInChain}}
+\index{setNodeInChain@{setNodeInChain}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{setNodeInChain()}{setNodeInChain()}}
+{\footnotesize\ttfamily void Node\+Info\+::set\+Node\+In\+Chain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00122}{122}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00123\ \ \ \ \ this-\/>statusNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6a4ddc1f10c5822c174470affbb45f9901}{StatusNode::InChain}};}
+\DoxyCodeLine{00124\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_ad205c39cc66e2751e7ca8f0051d69bd3}\label{classNodeInfo_ad205c39cc66e2751e7ca8f0051d69bd3}} 
+\index{NodeInfo@{NodeInfo}!setNodeOutside@{setNodeOutside}}
+\index{setNodeOutside@{setNodeOutside}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{setNodeOutside()}{setNodeOutside()}}
+{\footnotesize\ttfamily void Node\+Info\+::set\+Node\+Outside (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00118}{118}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ this-\/>statusNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6ac7b573146267d98cb26fbe9b34e5a259}{StatusNode::OutChain}};}
+\DoxyCodeLine{00120\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_a3bc5cbe8e94e639ead939a91332ac1dd}\label{classNodeInfo_a3bc5cbe8e94e639ead939a91332ac1dd}} 
+\index{NodeInfo@{NodeInfo}!setNodeVisible@{setNodeVisible}}
+\index{setNodeVisible@{setNodeVisible}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{setNodeVisible()}{setNodeVisible()}}
+{\footnotesize\ttfamily void Node\+Info\+::set\+Node\+Visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00126}{126}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00127\ \ \ \ \ this-\/>statusNode\ =\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6aec24d78ce33048dc73a2b6b1a0690192}{StatusNode::Visible}};}
+\DoxyCodeLine{00128\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_aeb5dd55b9962722f1101daa0033ed4b5}\label{classNodeInfo_aeb5dd55b9962722f1101daa0033ed4b5}} 
+\index{NodeInfo@{NodeInfo}!setPrintNormal@{setPrintNormal}}
+\index{setPrintNormal@{setPrintNormal}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{setPrintNormal()}{setPrintNormal()}}
+{\footnotesize\ttfamily void Node\+Info\+::set\+Print\+Normal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00114}{114}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ this-\/>isPrintNormal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00116\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_a68fa385f3edf17646b48f96b09298dfa}\label{classNodeInfo_a68fa385f3edf17646b48f96b09298dfa}} 
+\index{NodeInfo@{NodeInfo}!setPrintPreVal@{setPrintPreVal}}
+\index{setPrintPreVal@{setPrintPreVal}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{setPrintPreVal()}{setPrintPreVal()}}
+{\footnotesize\ttfamily void Node\+Info\+::set\+Print\+Pre\+Val (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00110}{110}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00111\ \ \ \ \ this-\/>isPrintPreVal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00112\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_aa9c7e148e61486537b46ebf5a650d82c}\label{classNodeInfo_aa9c7e148e61486537b46ebf5a650d82c}} 
+\index{NodeInfo@{NodeInfo}!setTitle@{setTitle}}
+\index{setTitle@{setTitle}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{setTitle()}{setTitle()}}
+{\footnotesize\ttfamily void Node\+Info\+::set\+Title (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00210}{210}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00211\ \ \ \ \ std::string\ preTitle\ =\ this-\/>title.getString();}
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordflow}{if}\ (!preTitle.empty())}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ preTitle\ +=\ \textcolor{stringliteral}{"{}|"{}};}
+\DoxyCodeLine{00214\ \ \ \ \ preTitle\ +=\ \_title;}
+\DoxyCodeLine{00215\ \ \ \ \ this-\/>title.setString(preTitle);}
+\DoxyCodeLine{00216\ \ \ \ \ sf::Vector2f\ pos\ =\ this-\/>node-\/>\mbox{\hyperlink{classSingleNode_a633ab92468fb3fff2b100004ac1c0398}{getPosition}}();}
+\DoxyCodeLine{00217\ \ \ \ \ this-\/>title.setOrigin(}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>title.getGlobalBounds().width\ /\ 2,}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>title.getGlobalBounds().height\ /\ 2}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00221\ \ \ \ \ this-\/>title.setPosition(}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ pos.x,}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ pos.y\ +\ constants::TitleNode::offsetY}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00225\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_a5051a306dbc37fdb9b981373c6a7640b}\label{classNodeInfo_a5051a306dbc37fdb9b981373c6a7640b}} 
+\index{NodeInfo@{NodeInfo}!setValue@{setValue}}
+\index{setValue@{setValue}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily void Node\+Info\+::set\+Value (\begin{DoxyParamCaption}\item[{std\+::string}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00202}{202}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00203\ \ \ \ \ this-\/>values[0]\ =\ std::move(value);}
+\DoxyCodeLine{00204\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_ad9d75188c253a4e8d5637d51ad20cfe2}\label{classNodeInfo_ad9d75188c253a4e8d5637d51ad20cfe2}} 
+\index{NodeInfo@{NodeInfo}!show@{show}}
+\index{show@{show}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void Node\+Info\+::show (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}{Node\+Info\+::\+Arrow\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00186}{186}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>arrows[0][(\textcolor{keywordtype}{int})type])}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ this-\/>arrows[0][(int)type]-\/>\mbox{\hyperlink{classNodeInfo_ad9d75188c253a4e8d5637d51ad20cfe2}{show}}();}
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>arrows[1][(\textcolor{keywordtype}{int})type])}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ this-\/>arrows[1][(int)type]-\/>\mbox{\hyperlink{classNodeInfo_ad9d75188c253a4e8d5637d51ad20cfe2}{show}}();}
+\DoxyCodeLine{00191\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_ab2fce7c2aefff92dc3f707a5f9f3f8fe}\label{classNodeInfo_ab2fce7c2aefff92dc3f707a5f9f3f8fe}} 
+\index{NodeInfo@{NodeInfo}!toggleActiveColorArrow@{toggleActiveColorArrow}}
+\index{toggleActiveColorArrow@{toggleActiveColorArrow}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{toggleActiveColorArrow()}{toggleActiveColorArrow()}}
+{\footnotesize\ttfamily void Node\+Info\+::toggle\+Active\+Color\+Arrow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}{Node\+Info\+::\+Arrow\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00064}{64}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>arrows[0][(\textcolor{keywordtype}{int})type])}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ this-\/>arrows[0][(int)type]-\/>toggleActiveColor();}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>arrows[1][(\textcolor{keywordtype}{int})type])}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ this-\/>arrows[1][(int)type]-\/>toggleActiveColor();}
+\DoxyCodeLine{00069\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_a10e10466dc3ee938881f7110e87a0bad}\label{classNodeInfo_a10e10466dc3ee938881f7110e87a0bad}} 
+\index{NodeInfo@{NodeInfo}!toggleActiveColorNode@{toggleActiveColorNode}}
+\index{toggleActiveColorNode@{toggleActiveColorNode}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{toggleActiveColorNode()}{toggleActiveColorNode()}}
+{\footnotesize\ttfamily void Node\+Info\+::toggle\+Active\+Color\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ this-\/>node-\/>\mbox{\hyperlink{classSingleNode_a7dfed02b10b7b1e1702c5d1617cecf7c}{toggleActiveColor}}();}
+\DoxyCodeLine{00062\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_aa31b9a0e95dc64b358754cd9b3b20ffd}\label{classNodeInfo_aa31b9a0e95dc64b358754cd9b3b20ffd}} 
+\index{NodeInfo@{NodeInfo}!updateArrows@{updateArrows}}
+\index{updateArrows@{updateArrows}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{updateArrows()}{updateArrows()}}
+{\footnotesize\ttfamily void Node\+Info\+::update\+Arrows (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNodeInfo_ad114cb46665db9d1a68690bb470b90e1}{Arrow\+Type}}}]{type,  }\item[{sf\+::\+Vector2f}]{end }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00152}{152}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>arrows[0][(\textcolor{keywordtype}{int})type])}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ this-\/>arrows[0][(int)type]-\/>setPositions(this-\/>node-\/>\mbox{\hyperlink{classSingleNode_a633ab92468fb3fff2b100004ac1c0398}{getPosition}}(),\ end,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>arrows[1][(\textcolor{keywordtype}{int})type])}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ this-\/>arrows[1][(\textcolor{keywordtype}{int})type]-\/>\mbox{\hyperlink{classArrow_aba41e97028815a99c02773be2f8e1042}{setPositions}}(this-\/>node-\/>\mbox{\hyperlink{classSingleNode_a633ab92468fb3fff2b100004ac1c0398}{getPosition}}(),\ end,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00158\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNodeInfo_a7fc27598478b08e0e04d37d811ded053}\label{classNodeInfo_a7fc27598478b08e0e04d37d811ded053}} 
+\index{NodeInfo@{NodeInfo}!updateNode@{updateNode}}
+\index{updateNode@{updateNode}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{updateNode()}{updateNode()}}
+{\footnotesize\ttfamily void Node\+Info\+::update\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{NodeInfo_8cpp_source_l00131}{131}} of file \mbox{\hyperlink{NodeInfo_8cpp_source}{Node\+Info.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>statusNode\ ==\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6aec24d78ce33048dc73a2b6b1a0690192}{StatusNode::Visible}})}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>statusNode\ ==\ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6a4ddc1f10c5822c174470affbb45f9901}{StatusNode::InChain}})\ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>isPrintNormal)\ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>node-\/>\mbox{\hyperlink{classSingleNode_a4b1a5d0ac7eefba2570543fde83d1dbf}{setPosition}}(this-\/>positions[(\textcolor{keywordtype}{int})\mbox{\hyperlink{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a960b44c579bc2f6818d2daaf9e4c16f0}{TypeNode::Normal}}]);}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>node-\/>\mbox{\hyperlink{classSingleNode_a4b1a5d0ac7eefba2570543fde83d1dbf}{setPosition}}(this-\/>positions[(\textcolor{keywordtype}{int})\mbox{\hyperlink{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a975826920e100645fa7b60f265742446}{TypeNode::Effective}}]);}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00141\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ this-\/>node-\/>\mbox{\hyperlink{classSingleNode_a4b1a5d0ac7eefba2570543fde83d1dbf}{setPosition}}(this-\/>positions[(\textcolor{keywordtype}{int})\mbox{\hyperlink{classNodeInfo_a51b1c4d9d4d3a104cc0b3e2dae6e9e47a76fbf0ccd7fcd64879c2ff2119dc15a4}{TypeNode::Outside}}]);}
+\DoxyCodeLine{00143\ \ \ \ \ \}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>isPrintPreVal)\ \{}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ this-\/>node-\/>\mbox{\hyperlink{classSingleNode_ac08341e78ba3f707a8600a904b417d82}{setText}}(this-\/>values[1]);}
+\DoxyCodeLine{00147\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ this-\/>node-\/>\mbox{\hyperlink{classSingleNode_ac08341e78ba3f707a8600a904b417d82}{setText}}(this-\/>values[0]);}
+\DoxyCodeLine{00149\ \ \ \ \ \}}
+\DoxyCodeLine{00150\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/draw/\mbox{\hyperlink{NodeInfo_8hpp}{Node\+Info.\+hpp}}\item 
+include/draw/\mbox{\hyperlink{NodeInfo_8cpp}{Node\+Info.\+cpp}}\end{DoxyCompactItemize}

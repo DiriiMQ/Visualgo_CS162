@@ -1,0 +1,525 @@
+\hypertarget{classpfd_1_1internal_1_1file__dialog}{}\doxysection{pfd\+::internal\+::file\+\_\+dialog Class Reference}
+\label{classpfd_1_1internal_1_1file__dialog}\index{pfd::internal::file\_dialog@{pfd::internal::file\_dialog}}
+
+
+{\ttfamily \#include $<$File\+Dialog.\+h$>$}
+
+Inheritance diagram for pfd\+::internal\+::file\+\_\+dialog\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classpfd_1_1internal_1_1file__dialog}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fc}{type}} \{ \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca4fd9423739ee4c950107a4eef324c559}{open}}
+, \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca3b913d5d81b101f1f2b5cc544ef81f90}{save}}
+, \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca568b2ec66ef45be030a47ddc19bc7bba}{folder}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Types inherited from \mbox{\hyperlink{classpfd_1_1settings}{pfd\+::settings}}}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}{flag}} \{ \newline
+\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada11dd6b78f267a47638211f4c7e23d434}{is\+\_\+scanned}} = 0
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadad9da28952c27749f53c23675db49d560}{is\+\_\+verbose}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaee57842698a0690e4b89730b469edc31}{has\+\_\+zenity}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1267dfaf66b51761e04b042bb2c4dd7a}{has\+\_\+matedialog}}
+, \newline
+\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1a652e3d6a785053942b6cffc2c4669d}{has\+\_\+qarma}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada1f1a19f0bf1fe1a63ed3e73e40466b4b}{has\+\_\+kdialog}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaea0bbb642237ecdaa68a14a0d7212448}{is\+\_\+vista}}
+, \mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aada73b7af539db867cb9edf24a3cb7b8a36}{max\+\_\+flag}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a16f53945e61d23aa9b7fc373701dd13f}{file\+\_\+dialog}} (\mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fc}{type}} in\+\_\+type, std\+::string const \&title, std\+::string const \&default\+\_\+path=\char`\"{}\char`\"{}, std\+::vector$<$ std\+::string $>$ const \&filters=\{\}, \mbox{\hyperlink{namespacepfd_a1a482ccd57bb939dcbf7d9caacd3f997}{opt}} options=\mbox{\hyperlink{namespacepfd_a1a482ccd57bb939dcbf7d9caacd3f997a334c4a4c42fdb79d7ebc3e73b517e6f8}{opt\+::none}})
+\item 
+std\+::string \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_ac916440e9dcefba5cbd4f0e5bb8acbff}{string\+\_\+result}} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_ae28b6dd37ab4e47885ce7ca25652212b}{vector\+\_\+result}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classpfd_1_1internal_1_1dialog}{pfd\+::internal\+::dialog}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a05f9a4fcba8f8a9411d7dfaf18ee11ad}{dialog}} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_aadaf6cb30620c85f4b97993e3c819188}{desktop\+\_\+helper}} () const
+\item 
+std\+::string \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_aae2255eceb0b3b18b55d1618fd7e1635}{powershell\+\_\+quote}} (std\+::string const \&str) const
+\item 
+std\+::string \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_adc0ec6f5c8137cbdb0ea6669b5263a73}{osascript\+\_\+quote}} (std\+::string const \&str) const
+\item 
+std\+::string \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a1a4f28c3c2bbd1629f2f882314fff63e}{shell\+\_\+quote}} (std\+::string const \&str) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classpfd_1_1settings}{pfd\+::settings}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpfd_1_1settings_a7190e52d512b1321acb78731a8cddf42}{settings}} (bool resync=false)
+\item 
+bool \mbox{\hyperlink{classpfd_1_1settings_af1c2f6e88ffafd59a2f7609631a9eade}{check\+\_\+program}} (std\+::string const \&program)
+\item 
+bool \mbox{\hyperlink{classpfd_1_1settings_a4e22d6fb43d387ddc980bf6e2a6aad24}{is\+\_\+osascript}} () const
+\item 
+bool \mbox{\hyperlink{classpfd_1_1settings_a08e4a5b150186d77158a974cc8c2d4a2}{is\+\_\+zenity}} () const
+\item 
+bool \mbox{\hyperlink{classpfd_1_1settings_aa79fb10eee785f1acd8d1ff34e226c89}{is\+\_\+kdialog}} () const
+\item 
+bool const \& \mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}} (\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}{flag}} in\+\_\+flag) const
+\item 
+bool \& \mbox{\hyperlink{classpfd_1_1settings_a9b611d06856910f0d8c358dd0eadfcee}{flags}} (\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aad}{flag}} in\+\_\+flag)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classpfd_1_1internal_1_1dialog}{pfd\+::internal\+::dialog}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a77f20e6063f83e601ce23ed4899907c6}{ready}} (int timeout=default\+\_\+wait\+\_\+timeout) const
+\item 
+bool \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a226b1502acd1d2cb86e34dd3df36772a}{kill}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions inherited from \mbox{\hyperlink{classpfd_1_1internal_1_1dialog}{pfd\+::internal\+::dialog}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_ac906c01d0365c13c9066cea857fd258a}{buttons\+\_\+to\+\_\+name}} (\mbox{\hyperlink{namespacepfd_a70b4c2a87aca3443a4de387bedae49e8}{choice}} \+\_\+choice)
+\item 
+static std\+::string \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_ae94362bed052ab6050e38852712cb97a}{get\+\_\+icon\+\_\+name}} (\mbox{\hyperlink{namespacepfd_a96ff6709abe317ae8eff98d92bc8db85}{icon}} \+\_\+icon)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions inherited from \mbox{\hyperlink{classpfd_1_1settings}{pfd\+::settings}}}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classpfd_1_1settings_a54fb5598e7501ac38d17e3629190b2fe}{available}} ()
+\item 
+static void \mbox{\hyperlink{classpfd_1_1settings_a0ed32e8ed039106028474eb9f0a0a7bc}{verbose}} (bool value)
+\item 
+static void \mbox{\hyperlink{classpfd_1_1settings_a60023ab0ac98008d2c52a568e9ee540f}{rescan}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{classpfd_1_1internal_1_1dialog}{pfd\+::internal\+::dialog}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpfd_1_1internal_1_1executor}{executor}} $>$ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a91f4b2666fb920a7859df9cdc079502d}{m\+\_\+async}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00286}{286}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fc}\label{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fc}} 
+\index{pfd::internal::file\_dialog@{pfd::internal::file\_dialog}!type@{type}}
+\index{type@{type}!pfd::internal::file\_dialog@{pfd::internal::file\_dialog}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fc}{pfd\+::internal\+::file\+\_\+dialog\+::type}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{open@{open}!pfd::internal::file\_dialog@{pfd::internal::file\_dialog}}\index{pfd::internal::file\_dialog@{pfd::internal::file\_dialog}!open@{open}}}\mbox{\Hypertarget{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca4fd9423739ee4c950107a4eef324c559}\label{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca4fd9423739ee4c950107a4eef324c559}} 
+open&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{save@{save}!pfd::internal::file\_dialog@{pfd::internal::file\_dialog}}\index{pfd::internal::file\_dialog@{pfd::internal::file\_dialog}!save@{save}}}\mbox{\Hypertarget{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca3b913d5d81b101f1f2b5cc544ef81f90}\label{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca3b913d5d81b101f1f2b5cc544ef81f90}} 
+save&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{folder@{folder}!pfd::internal::file\_dialog@{pfd::internal::file\_dialog}}\index{pfd::internal::file\_dialog@{pfd::internal::file\_dialog}!folder@{folder}}}\mbox{\Hypertarget{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca568b2ec66ef45be030a47ddc19bc7bba}\label{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca568b2ec66ef45be030a47ddc19bc7bba}} 
+folder&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l00289}{289}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca4fd9423739ee4c950107a4eef324c559}{open}},}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca3b913d5d81b101f1f2b5cc544ef81f90}{save}},}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca568b2ec66ef45be030a47ddc19bc7bba}{folder}},}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpfd_1_1internal_1_1file__dialog_a16f53945e61d23aa9b7fc373701dd13f}\label{classpfd_1_1internal_1_1file__dialog_a16f53945e61d23aa9b7fc373701dd13f}} 
+\index{pfd::internal::file\_dialog@{pfd::internal::file\_dialog}!file\_dialog@{file\_dialog}}
+\index{file\_dialog@{file\_dialog}!pfd::internal::file\_dialog@{pfd::internal::file\_dialog}}
+\doxysubsubsection{\texorpdfstring{file\_dialog()}{file\_dialog()}}
+{\footnotesize\ttfamily pfd\+::internal\+::file\+\_\+dialog\+::file\+\_\+dialog (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fc}{type}}}]{in\+\_\+type,  }\item[{std\+::string const \&}]{title,  }\item[{std\+::string const \&}]{default\+\_\+path = {\ttfamily \char`\"{}\char`\"{}},  }\item[{std\+::vector$<$ std\+::string $>$ const \&}]{filters = {\ttfamily \{\}},  }\item[{\mbox{\hyperlink{namespacepfd_a1a482ccd57bb939dcbf7d9caacd3f997}{opt}}}]{options = {\ttfamily \mbox{\hyperlink{namespacepfd_a1a482ccd57bb939dcbf7d9caacd3f997a334c4a4c42fdb79d7ebc3e73b517e6f8}{opt\+::none}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l01058}{1058}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01063\ \ \ \ \ \{}
+\DoxyCodeLine{01064\ \textcolor{preprocessor}{\#if\ \_WIN32}}
+\DoxyCodeLine{01065\ \ \ \ \ \ \ \ \ std::string\ filter\_list;}
+\DoxyCodeLine{01066\ \ \ \ \ std::regex\ whitespace(\textcolor{stringliteral}{"{}\ \ *"{}});}
+\DoxyCodeLine{01067\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ +\ 1\ <\ filters.size();\ i\ +=\ 2)}
+\DoxyCodeLine{01068\ \ \ \ \ \{}
+\DoxyCodeLine{01069\ \ \ \ \ \ \ \ \ filter\_list\ +=\ filters[i]\ +\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{01070\ \ \ \ \ \ \ \ \ filter\_list\ +=\ std::regex\_replace(filters[i\ +\ 1],\ whitespace,\ \textcolor{stringliteral}{"{};"{}})\ +\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{01071\ \ \ \ \ \}}
+\DoxyCodeLine{01072\ \ \ \ \ filter\_list\ +=\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{01073\ }
+\DoxyCodeLine{01074\ \ \ \ \ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a91f4b2666fb920a7859df9cdc079502d}{m\_async}}-\/>start\_func([\textcolor{keyword}{this},\ in\_type,\ title,\ default\_path,\ filter\_list,}
+\DoxyCodeLine{01075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ options](\textcolor{keywordtype}{int}\ *exit\_code)\ -\/>\ std::string}
+\DoxyCodeLine{01076\ \ \ \ \ \{}
+\DoxyCodeLine{01077\ \ \ \ \ \ \ \ \ (void)exit\_code;}
+\DoxyCodeLine{01078\ \ \ \ \ \ \ \ \ m\_wtitle\ =\ internal::str2wstr(title);}
+\DoxyCodeLine{01079\ \ \ \ \ \ \ \ \ m\_wdefault\_path\ =\ internal::str2wstr(default\_path);}
+\DoxyCodeLine{01080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ wfilter\_list\ =\ internal::str2wstr(filter\_list);}
+\DoxyCodeLine{01081\ }
+\DoxyCodeLine{01082\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initialise\ COM.\ This\ is\ required\ for\ the\ new\ folder\ selection\ window,}}
+\DoxyCodeLine{01083\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ (see\ https://github.com/samhocevar/portable-\/file-\/dialogs/pull/21)}}
+\DoxyCodeLine{01084\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ and\ to\ avoid\ random\ crashes\ with\ GetOpenFileNameW()\ (see}}
+\DoxyCodeLine{01085\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ https://github.com/samhocevar/portable-\/file-\/dialogs/issues/51)}}
+\DoxyCodeLine{01086\ \ \ \ \ \ \ \ \ ole32\_dll\ ole32;}
+\DoxyCodeLine{01087\ }
+\DoxyCodeLine{01088\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Folder\ selection\ uses\ a\ different\ method}}
+\DoxyCodeLine{01089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (in\_type\ ==\ \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca568b2ec66ef45be030a47ddc19bc7bba}{type::folder}})}
+\DoxyCodeLine{01090\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01091\ \textcolor{preprocessor}{\#if\ PFD\_HAS\_IFILEDIALOG}}
+\DoxyCodeLine{01092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaea0bbb642237ecdaa68a14a0d7212448}{flag::is\_vista}}))}
+\DoxyCodeLine{01093\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ On\ Vista\ and\ higher\ we\ should\ be\ able\ to\ use\ IFileDialog\ for\ folder\ selection}}
+\DoxyCodeLine{01095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ IFileDialog\ *ifd;}
+\DoxyCodeLine{01096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ HRESULT\ hr\ =\ dll::proc<HRESULT\ WINAPI\ (REFCLSID,\ LPUNKNOWN,\ DWORD,\ REFIID,\ LPVOID\ *)>(ole32,\ \textcolor{stringliteral}{"{}CoCreateInstance"{}})}
+\DoxyCodeLine{01097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (CLSID\_FileOpenDialog,\ \textcolor{keyword}{nullptr},\ CLSCTX\_INPROC\_SERVER,\ IID\_PPV\_ARGS(\&ifd));}
+\DoxyCodeLine{01098\ }
+\DoxyCodeLine{01099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ In\ case\ CoCreateInstance\ fails\ (which\ it\ should\ not),\ try\ legacy\ approach}}
+\DoxyCodeLine{01100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (SUCCEEDED(hr))}
+\DoxyCodeLine{01101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ select\_folder\_vista(ifd,\ options\ \&\ \mbox{\hyperlink{namespacepfd_a1a482ccd57bb939dcbf7d9caacd3f997a51106d57377a72da5f9a0415f4f6142b}{opt::force\_path}});}
+\DoxyCodeLine{01102\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01103\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01104\ }
+\DoxyCodeLine{01105\ \ \ \ \ \ \ \ \ \ \ \ \ BROWSEINFOW\ bi;}
+\DoxyCodeLine{01106\ \ \ \ \ \ \ \ \ \ \ \ \ memset(\&bi,\ 0,\ \textcolor{keyword}{sizeof}(bi));}
+\DoxyCodeLine{01107\ }
+\DoxyCodeLine{01108\ \ \ \ \ \ \ \ \ \ \ \ \ bi.lpfn\ =\ \&bffcallback;}
+\DoxyCodeLine{01109\ \ \ \ \ \ \ \ \ \ \ \ \ bi.lParam\ =\ (LPARAM)\textcolor{keyword}{this};}
+\DoxyCodeLine{01110\ }
+\DoxyCodeLine{01111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadaea0bbb642237ecdaa68a14a0d7212448}{flag::is\_vista}}))}
+\DoxyCodeLine{01112\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ole32.is\_initialized())}
+\DoxyCodeLine{01114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bi.ulFlags\ |=\ BIF\_NEWDIALOGSTYLE;}
+\DoxyCodeLine{01115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bi.ulFlags\ |=\ BIF\_EDITBOX;}
+\DoxyCodeLine{01116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bi.ulFlags\ |=\ BIF\_STATUSTEXT;}
+\DoxyCodeLine{01117\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01118\ }
+\DoxyCodeLine{01119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ *list\ =\ SHBrowseForFolderW(\&bi);}
+\DoxyCodeLine{01120\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ ret;}
+\DoxyCodeLine{01121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (list)}
+\DoxyCodeLine{01122\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ buffer\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{wchar\_t}[MAX\_PATH];}
+\DoxyCodeLine{01124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SHGetPathFromIDListW(list,\ buffer);}
+\DoxyCodeLine{01125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dll::proc<void\ WINAPI\ (LPVOID)>(ole32,\ \textcolor{stringliteral}{"{}CoTaskMemFree"{}})(list);}
+\DoxyCodeLine{01126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ret\ =\ internal::wstr2str(buffer);}
+\DoxyCodeLine{01127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ buffer;}
+\DoxyCodeLine{01128\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{01130\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01131\ }
+\DoxyCodeLine{01132\ \ \ \ \ \ \ \ \ OPENFILENAMEW\ ofn;}
+\DoxyCodeLine{01133\ \ \ \ \ \ \ \ \ memset(\&ofn,\ 0,\ \textcolor{keyword}{sizeof}(ofn));}
+\DoxyCodeLine{01134\ \ \ \ \ \ \ \ \ ofn.lStructSize\ =\ \textcolor{keyword}{sizeof}(OPENFILENAMEW);}
+\DoxyCodeLine{01135\ \ \ \ \ \ \ \ \ ofn.hwndOwner\ =\ GetActiveWindow();}
+\DoxyCodeLine{01136\ }
+\DoxyCodeLine{01137\ \ \ \ \ \ \ \ \ ofn.lpstrFilter\ =\ wfilter\_list.c\_str();}
+\DoxyCodeLine{01138\ }
+\DoxyCodeLine{01139\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ woutput\ =\ std::wstring(MAX\_PATH\ *\ 256,\ L\textcolor{charliteral}{'\(\backslash\)0'});}
+\DoxyCodeLine{01140\ \ \ \ \ \ \ \ \ ofn.lpstrFile\ =\ (LPWSTR)woutput.data();}
+\DoxyCodeLine{01141\ \ \ \ \ \ \ \ \ ofn.nMaxFile\ =\ (DWORD)woutput.size();}
+\DoxyCodeLine{01142\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!m\_wdefault\_path.empty())}
+\DoxyCodeLine{01143\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ a\ directory\ was\ provided,\ use\ it\ as\ the\ initial\ directory.\ If}}
+\DoxyCodeLine{01145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ a\ valid\ path\ was\ provided,\ use\ it\ as\ the\ initial\ file.\ Otherwise,}}
+\DoxyCodeLine{01146\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ let\ the\ Windows\ API\ decide.}}
+\DoxyCodeLine{01147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ path\_attr\ =\ GetFileAttributesW(m\_wdefault\_path.c\_str());}
+\DoxyCodeLine{01148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (path\_attr\ !=\ INVALID\_FILE\_ATTRIBUTES\ \&\&\ (path\_attr\ \&\ FILE\_ATTRIBUTE\_DIRECTORY))}
+\DoxyCodeLine{01149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ofn.lpstrInitialDir\ =\ m\_wdefault\_path.c\_str();}
+\DoxyCodeLine{01150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (m\_wdefault\_path.size()\ <=\ woutput.size())}
+\DoxyCodeLine{01151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//second\ argument\ is\ size\ of\ buffer,\ not\ length\ of\ string}}
+\DoxyCodeLine{01152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ StringCchCopyW(ofn.lpstrFile,\ MAX\_PATH*256+1,\ m\_wdefault\_path.c\_str());}
+\DoxyCodeLine{01153\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{01154\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ofn.lpstrFileTitle\ =\ (LPWSTR)m\_wdefault\_path.data();}
+\DoxyCodeLine{01156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ofn.nMaxFileTitle\ =\ (DWORD)m\_wdefault\_path.size();}
+\DoxyCodeLine{01157\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01158\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01159\ \ \ \ \ \ \ \ \ ofn.lpstrTitle\ =\ m\_wtitle.c\_str();}
+\DoxyCodeLine{01160\ \ \ \ \ \ \ \ \ ofn.Flags\ =\ OFN\_NOCHANGEDIR\ |\ OFN\_EXPLORER;}
+\DoxyCodeLine{01161\ }
+\DoxyCodeLine{01162\ \ \ \ \ \ \ \ \ dll\ comdlg32(\textcolor{stringliteral}{"{}comdlg32.dll"{}});}
+\DoxyCodeLine{01163\ }
+\DoxyCodeLine{01164\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Apply\ new\ visual\ style\ (required\ for\ windows\ XP)}}
+\DoxyCodeLine{01165\ \ \ \ \ \ \ \ \ new\_style\_context\ ctx;}
+\DoxyCodeLine{01166\ }
+\DoxyCodeLine{01167\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (in\_type\ ==\ \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca3b913d5d81b101f1f2b5cc544ef81f90}{type::save}})}
+\DoxyCodeLine{01168\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!(options\ \&\ \mbox{\hyperlink{namespacepfd_a1a482ccd57bb939dcbf7d9caacd3f997a8fc52a8161c68fcaeebdfdb500a36d4b}{opt::force\_overwrite}}))}
+\DoxyCodeLine{01170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ofn.Flags\ |=\ OFN\_OVERWRITEPROMPT;}
+\DoxyCodeLine{01171\ }
+\DoxyCodeLine{01172\ \ \ \ \ \ \ \ \ \ \ \ \ dll::proc<BOOL\ WINAPI\ (LPOPENFILENAMEW)>\ get\_save\_file\_name(comdlg32,\ \textcolor{stringliteral}{"{}GetSaveFileNameW"{}});}
+\DoxyCodeLine{01173\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (get\_save\_file\_name(\&ofn)\ ==\ 0)}
+\DoxyCodeLine{01174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{01175\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ internal::wstr2str(woutput.c\_str());}
+\DoxyCodeLine{01176\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01177\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{01178\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01179\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (options\ \&\ \mbox{\hyperlink{namespacepfd_a1a482ccd57bb939dcbf7d9caacd3f997ab66abfe0e0c2ef7c545895c12a0a8837}{opt::multiselect}})}
+\DoxyCodeLine{01180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ofn.Flags\ |=\ OFN\_ALLOWMULTISELECT;}
+\DoxyCodeLine{01181\ \ \ \ \ \ \ \ \ \ \ \ \ ofn.Flags\ |=\ OFN\_PATHMUSTEXIST;}
+\DoxyCodeLine{01182\ }
+\DoxyCodeLine{01183\ \ \ \ \ \ \ \ \ \ \ \ \ dll::proc<BOOL\ WINAPI\ (LPOPENFILENAMEW)>\ get\_open\_file\_name(comdlg32,\ \textcolor{stringliteral}{"{}GetOpenFileNameW"{}});}
+\DoxyCodeLine{01184\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (get\_open\_file\_name(\&ofn)\ ==\ 0)}
+\DoxyCodeLine{01185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{01186\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01187\ }
+\DoxyCodeLine{01188\ \ \ \ \ \ \ \ \ std::string\ prefix;}
+\DoxyCodeLine{01189\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{wchar\_t}\ \textcolor{keyword}{const}\ *p\ =\ woutput.c\_str();\ *p;\ )}
+\DoxyCodeLine{01190\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01191\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ filename\ =\ internal::wstr2str(p);}
+\DoxyCodeLine{01192\ \ \ \ \ \ \ \ \ \ \ \ \ p\ +=\ wcslen(p);}
+\DoxyCodeLine{01193\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ In\ multiselect\ mode,\ we\ advance\ p\ one\ wchar\ further\ and}}
+\DoxyCodeLine{01194\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ check\ for\ another\ filename.\ If\ there\ is\ one\ and\ the}}
+\DoxyCodeLine{01195\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ prefix\ is\ empty,\ it\ means\ we\ just\ read\ the\ prefix.}}
+\DoxyCodeLine{01196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((options\ \&\ \mbox{\hyperlink{namespacepfd_a1a482ccd57bb939dcbf7d9caacd3f997ab66abfe0e0c2ef7c545895c12a0a8837}{opt::multiselect}})\ \&\&\ *++p\ \&\&\ prefix.empty())}
+\DoxyCodeLine{01197\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ prefix\ =\ filename\ +\ \textcolor{stringliteral}{"{}/"{}};}
+\DoxyCodeLine{01199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{01200\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01201\ }
+\DoxyCodeLine{01202\ \ \ \ \ \ \ \ \ \ \ \ \ m\_vector\_result.push\_back(prefix\ +\ filename);}
+\DoxyCodeLine{01203\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01204\ }
+\DoxyCodeLine{01205\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{01206\ \ \ \ \ \});}
+\DoxyCodeLine{01207\ \textcolor{preprocessor}{\#elif\ \_\_EMSCRIPTEN\_\_}}
+\DoxyCodeLine{01208\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ FIXME:\ do\ something}}
+\DoxyCodeLine{01209\ \ \ \ \ (void)in\_type;}
+\DoxyCodeLine{01210\ \ \ \ \ (void)title;}
+\DoxyCodeLine{01211\ \ \ \ \ (void)default\_path;}
+\DoxyCodeLine{01212\ \ \ \ \ (void)filters;}
+\DoxyCodeLine{01213\ \ \ \ \ (void)options;}
+\DoxyCodeLine{01214\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{01215\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ command\ =\ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_aadaf6cb30620c85f4b97993e3c819188}{desktop\_helper}}();}
+\DoxyCodeLine{01216\ }
+\DoxyCodeLine{01217\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classpfd_1_1settings_a4e22d6fb43d387ddc980bf6e2a6aad24}{is\_osascript}}())}
+\DoxyCodeLine{01218\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01219\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ script\ =\ \textcolor{stringliteral}{"{}set\ ret\ to\ choose"{}};}
+\DoxyCodeLine{01220\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (in\_type)}
+\DoxyCodeLine{01221\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca3b913d5d81b101f1f2b5cc544ef81f90}{type::save}}:}
+\DoxyCodeLine{01223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ script\ +=\ \textcolor{stringliteral}{"{}\ file\ name"{}};}
+\DoxyCodeLine{01224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca4fd9423739ee4c950107a4eef324c559}{type::open}}:\ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{01226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ script\ +=\ \textcolor{stringliteral}{"{}\ file"{}};}
+\DoxyCodeLine{01227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (options\ \&\ \mbox{\hyperlink{namespacepfd_a1a482ccd57bb939dcbf7d9caacd3f997ab66abfe0e0c2ef7c545895c12a0a8837}{opt::multiselect}})}
+\DoxyCodeLine{01228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ script\ +=\ \textcolor{stringliteral}{"{}\ with\ multiple\ selections\ allowed"{}};}
+\DoxyCodeLine{01229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca568b2ec66ef45be030a47ddc19bc7bba}{type::folder}}:}
+\DoxyCodeLine{01231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ script\ +=\ \textcolor{stringliteral}{"{}\ folder"{}};}
+\DoxyCodeLine{01232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01233\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01234\ }
+\DoxyCodeLine{01235\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (default\_path.size())}
+\DoxyCodeLine{01236\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (in\_type\ ==\ \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca568b2ec66ef45be030a47ddc19bc7bba}{type::folder}}\ ||\ is\_directory(default\_path))}
+\DoxyCodeLine{01238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ script\ +=\ \textcolor{stringliteral}{"{}\ default\ location\ "{}};}
+\DoxyCodeLine{01239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{01240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ script\ +=\ \textcolor{stringliteral}{"{}\ default\ name\ "{}};}
+\DoxyCodeLine{01241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ script\ +=\ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_adc0ec6f5c8137cbdb0ea6669b5263a73}{osascript\_quote}}(default\_path);}
+\DoxyCodeLine{01242\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01243\ }
+\DoxyCodeLine{01244\ \ \ \ \ \ \ \ \ \ \ \ \ script\ +=\ \textcolor{stringliteral}{"{}\ with\ prompt\ "{}}\ +\ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_adc0ec6f5c8137cbdb0ea6669b5263a73}{osascript\_quote}}(title);}
+\DoxyCodeLine{01245\ }
+\DoxyCodeLine{01246\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (in\_type\ ==\ \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca4fd9423739ee4c950107a4eef324c559}{type::open}})}
+\DoxyCodeLine{01247\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Concatenate\ all\ user-\/provided\ filter\ patterns}}
+\DoxyCodeLine{01249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ patterns;}
+\DoxyCodeLine{01250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ filters.size()\ /\ 2;\ ++i)}
+\DoxyCodeLine{01251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ patterns\ +=\ \textcolor{stringliteral}{"{}\ "{}}\ +\ filters[2\ *\ i\ +\ 1];}
+\DoxyCodeLine{01252\ }
+\DoxyCodeLine{01253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Split\ the\ pattern\ list\ to\ check\ whether\ "{}*"{}\ is\ in\ there;\ if\ it}}
+\DoxyCodeLine{01254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ is,\ we\ have\ to\ disable\ filters\ because\ there\ is\ no\ mechanism\ in}}
+\DoxyCodeLine{01255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ OS\ X\ for\ the\ user\ to\ override\ the\ filter.}}
+\DoxyCodeLine{01256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::regex\ sep(\textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)s+"{}});}
+\DoxyCodeLine{01257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ filter\_list;}
+\DoxyCodeLine{01258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ has\_filter\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{01259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::sregex\_token\_iterator\ iter(patterns.begin(),\ patterns.end(),\ sep,\ -\/1);}
+\DoxyCodeLine{01260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::sregex\_token\_iterator\ end;}
+\DoxyCodeLine{01261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\ ;\ iter\ !=\ end;\ ++iter)}
+\DoxyCodeLine{01262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ pat\ =\ iter-\/>str();}
+\DoxyCodeLine{01264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pat\ ==\ \textcolor{stringliteral}{"{}*"{}}\ ||\ pat\ ==\ \textcolor{stringliteral}{"{}*.*"{}})}
+\DoxyCodeLine{01265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ has\_filter\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{01266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (internal::starts\_with(pat,\ \textcolor{stringliteral}{"{}*."{}}))}
+\DoxyCodeLine{01267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ filter\_list\ +=\ \textcolor{stringliteral}{"{},"{}}\ +\ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_adc0ec6f5c8137cbdb0ea6669b5263a73}{osascript\_quote}}(pat.substr(2,\ pat.size()\ -\/\ 2));}
+\DoxyCodeLine{01268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01269\ }
+\DoxyCodeLine{01270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (has\_filter\ \&\&\ filter\_list.size()\ >\ 0)}
+\DoxyCodeLine{01271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ There\ is\ a\ weird\ AppleScript\ bug\ where\ file\ extensions\ of\ length\ !=\ 3\ are}}
+\DoxyCodeLine{01273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ignored,\ e.g.\ type\{"{}txt"{}\}\ works,\ but\ type\{"{}json"{}\}\ does\ not.\ Fortunately\ if}}
+\DoxyCodeLine{01274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ whole\ list\ starts\ with\ a\ 3-\/character\ extension,\ everything\ works\ again.}}
+\DoxyCodeLine{01275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ We\ use\ "{}///"{}\ for\ such\ an\ extension\ because\ we\ are\ sure\ it\ cannot\ appear\ in}}
+\DoxyCodeLine{01276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ an\ actual\ filename.}}
+\DoxyCodeLine{01277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ script\ +=\ \textcolor{stringliteral}{"{}\ of\ type\ \{\(\backslash\)"{}///\(\backslash\)"{}"{}}\ +\ filter\_list\ +\ \textcolor{stringliteral}{"{}\}"{}};}
+\DoxyCodeLine{01278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01279\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01280\ }
+\DoxyCodeLine{01281\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (in\_type\ ==\ \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca4fd9423739ee4c950107a4eef324c559}{type::open}}\ \&\&\ (options\ \&\ \mbox{\hyperlink{namespacepfd_a1a482ccd57bb939dcbf7d9caacd3f997ab66abfe0e0c2ef7c545895c12a0a8837}{opt::multiselect}}))}
+\DoxyCodeLine{01282\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ script\ +=\ \textcolor{stringliteral}{"{}\(\backslash\)nset\ s\ to\ \(\backslash\)"{}\(\backslash\)"{}"{}};}
+\DoxyCodeLine{01284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ script\ +=\ \textcolor{stringliteral}{"{}\(\backslash\)nrepeat\ with\ i\ in\ ret"{}};}
+\DoxyCodeLine{01285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ script\ +=\ \textcolor{stringliteral}{"{}\(\backslash\)n\ \ set\ s\ to\ s\ \&\ (POSIX\ path\ of\ i)\ \&\ \(\backslash\)"{}\(\backslash\)\(\backslash\)n\(\backslash\)"{}"{}};}
+\DoxyCodeLine{01286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ script\ +=\ \textcolor{stringliteral}{"{}\(\backslash\)nend\ repeat"{}};}
+\DoxyCodeLine{01287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ script\ +=\ \textcolor{stringliteral}{"{}\(\backslash\)ncopy\ s\ to\ stdout"{}};}
+\DoxyCodeLine{01288\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01289\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{01290\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ script\ +=\ \textcolor{stringliteral}{"{}\(\backslash\)nPOSIX\ path\ of\ ret"{}};}
+\DoxyCodeLine{01292\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01293\ }
+\DoxyCodeLine{01294\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\textcolor{stringliteral}{"{}-\/e"{}});}
+\DoxyCodeLine{01295\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(script);}
+\DoxyCodeLine{01296\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01297\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classpfd_1_1settings_a08e4a5b150186d77158a974cc8c2d4a2}{is\_zenity}}())}
+\DoxyCodeLine{01298\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01299\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/file-\/selection"{}});}
+\DoxyCodeLine{01300\ }
+\DoxyCodeLine{01301\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ the\ default\ path\ is\ a\ directory,\ make\ sure\ it\ ends\ with\ "{}/"{}\ otherwise\ zenity\ will}}
+\DoxyCodeLine{01302\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ open\ the\ file\ dialog\ in\ the\ parent\ directory.}}
+\DoxyCodeLine{01303\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ filename\_arg\ =\ \textcolor{stringliteral}{"{}-\/-\/filename="{}}\ +\ default\_path;}
+\DoxyCodeLine{01304\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (in\_type\ !=\ \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca568b2ec66ef45be030a47ddc19bc7bba}{type::folder}}\ \&\&\ !ends\_with(default\_path,\ \textcolor{stringliteral}{"{}/"{}})\ \&\&\ internal::is\_directory(default\_path))}
+\DoxyCodeLine{01305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ filename\_arg\ +=\ \textcolor{stringliteral}{"{}/"{}};}
+\DoxyCodeLine{01306\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(filename\_arg);}
+\DoxyCodeLine{01307\ }
+\DoxyCodeLine{01308\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/title"{}});}
+\DoxyCodeLine{01309\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(title);}
+\DoxyCodeLine{01310\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/separator=\(\backslash\)n"{}});}
+\DoxyCodeLine{01311\ }
+\DoxyCodeLine{01312\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ filters.size()\ /\ 2;\ ++i)}
+\DoxyCodeLine{01313\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/file-\/filter"{}});}
+\DoxyCodeLine{01315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(filters[2\ *\ i]\ +\ \textcolor{stringliteral}{"{}|"{}}\ +\ filters[2\ *\ i\ +\ 1]);}
+\DoxyCodeLine{01316\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01317\ }
+\DoxyCodeLine{01318\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (in\_type\ ==\ \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca3b913d5d81b101f1f2b5cc544ef81f90}{type::save}})}
+\DoxyCodeLine{01319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/save"{}});}
+\DoxyCodeLine{01320\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (in\_type\ ==\ \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca568b2ec66ef45be030a47ddc19bc7bba}{type::folder}})}
+\DoxyCodeLine{01321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/directory"{}});}
+\DoxyCodeLine{01322\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!(options\ \&\ \mbox{\hyperlink{namespacepfd_a1a482ccd57bb939dcbf7d9caacd3f997a8fc52a8161c68fcaeebdfdb500a36d4b}{opt::force\_overwrite}}))}
+\DoxyCodeLine{01323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/confirm-\/overwrite"{}});}
+\DoxyCodeLine{01324\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (options\ \&\ \mbox{\hyperlink{namespacepfd_a1a482ccd57bb939dcbf7d9caacd3f997ab66abfe0e0c2ef7c545895c12a0a8837}{opt::multiselect}})}
+\DoxyCodeLine{01325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/multiple"{}});}
+\DoxyCodeLine{01326\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01327\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classpfd_1_1settings_aa79fb10eee785f1acd8d1ff34e226c89}{is\_kdialog}}())}
+\DoxyCodeLine{01328\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01329\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (in\_type)}
+\DoxyCodeLine{01330\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca3b913d5d81b101f1f2b5cc544ef81f90}{type::save}}:\ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/getsavefilename"{}});\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01332\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca4fd9423739ee4c950107a4eef324c559}{type::open}}:\ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/getopenfilename"{}});\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{classpfd_1_1internal_1_1file__dialog_a758847a3fab54bb12a67abbf9ea683fca568b2ec66ef45be030a47ddc19bc7bba}{type::folder}}:\ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/getexistingdirectory"{}});\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01334\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01335\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (options\ \&\ \mbox{\hyperlink{namespacepfd_a1a482ccd57bb939dcbf7d9caacd3f997ab66abfe0e0c2ef7c545895c12a0a8837}{opt::multiselect}})}
+\DoxyCodeLine{01336\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/multiple"{}});}
+\DoxyCodeLine{01338\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/separate-\/output"{}});}
+\DoxyCodeLine{01339\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01340\ }
+\DoxyCodeLine{01341\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(default\_path);}
+\DoxyCodeLine{01342\ }
+\DoxyCodeLine{01343\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ filter;}
+\DoxyCodeLine{01344\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ filters.size()\ /\ 2;\ ++i)}
+\DoxyCodeLine{01345\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ filter\ +=\ (i\ ==\ 0\ ?\ \textcolor{stringliteral}{"{}"{}}\ :\ \textcolor{stringliteral}{"{}\ |\ "{}})\ +\ filters[2\ *\ i]\ +\ \textcolor{stringliteral}{"{}("{}}\ +\ filters[2\ *\ i\ +\ 1]\ +\ \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{01346\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(filter);}
+\DoxyCodeLine{01347\ }
+\DoxyCodeLine{01348\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(\textcolor{stringliteral}{"{}-\/-\/title"{}});}
+\DoxyCodeLine{01349\ \ \ \ \ \ \ \ \ \ \ \ \ command.push\_back(title);}
+\DoxyCodeLine{01350\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01351\ }
+\DoxyCodeLine{01352\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classpfd_1_1settings_a1445f3cf0311b15182d401f244b012d8}{flags}}(\mbox{\hyperlink{classpfd_1_1settings_a61077e0fd48da6de7bb0f5dd9d9d1aadad9da28952c27749f53c23675db49d560}{flag::is\_verbose}}))}
+\DoxyCodeLine{01353\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}pfd:\ "{}}\ <<\ command\ <<\ std::endl;}
+\DoxyCodeLine{01354\ }
+\DoxyCodeLine{01355\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a91f4b2666fb920a7859df9cdc079502d}{m\_async}}-\/>start\_process(command);}
+\DoxyCodeLine{01356\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01357\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpfd_1_1internal_1_1file__dialog_ac916440e9dcefba5cbd4f0e5bb8acbff}\label{classpfd_1_1internal_1_1file__dialog_ac916440e9dcefba5cbd4f0e5bb8acbff}} 
+\index{pfd::internal::file\_dialog@{pfd::internal::file\_dialog}!string\_result@{string\_result}}
+\index{string\_result@{string\_result}!pfd::internal::file\_dialog@{pfd::internal::file\_dialog}}
+\doxysubsubsection{\texorpdfstring{string\_result()}{string\_result()}}
+{\footnotesize\ttfamily std\+::string pfd\+::internal\+::file\+\_\+dialog\+::string\+\_\+result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l01359}{1359}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01360\ \ \ \ \ \{}
+\DoxyCodeLine{01361\ \textcolor{preprocessor}{\#if\ \_WIN32}}
+\DoxyCodeLine{01362\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a91f4b2666fb920a7859df9cdc079502d}{m\_async}}-\/>result();}
+\DoxyCodeLine{01363\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{01364\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ ret\ =\ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a91f4b2666fb920a7859df9cdc079502d}{m\_async}}-\/>result();}
+\DoxyCodeLine{01365\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Strip\ potential\ trailing\ newline\ (zenity).\ Also\ strip\ trailing\ slash}}
+\DoxyCodeLine{01366\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ added\ by\ osascript\ for\ consistency\ with\ other\ backends.}}
+\DoxyCodeLine{01367\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!ret.empty()\ \&\&\ (ret.back()\ ==\ \textcolor{charliteral}{'\(\backslash\)n'}\ ||\ ret.back()\ ==\ \textcolor{charliteral}{'/'}))}
+\DoxyCodeLine{01368\ \ \ \ \ \ \ \ \ \ \ \ \ ret.pop\_back();}
+\DoxyCodeLine{01369\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{01370\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01371\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpfd_1_1internal_1_1file__dialog_ae28b6dd37ab4e47885ce7ca25652212b}\label{classpfd_1_1internal_1_1file__dialog_ae28b6dd37ab4e47885ce7ca25652212b}} 
+\index{pfd::internal::file\_dialog@{pfd::internal::file\_dialog}!vector\_result@{vector\_result}}
+\index{vector\_result@{vector\_result}!pfd::internal::file\_dialog@{pfd::internal::file\_dialog}}
+\doxysubsubsection{\texorpdfstring{vector\_result()}{vector\_result()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ pfd\+::internal\+::file\+\_\+dialog\+::vector\+\_\+result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{FileDialog_8h_source_l01373}{1373}} of file \mbox{\hyperlink{FileDialog_8h_source}{File\+Dialog.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01374\ \ \ \ \ \{}
+\DoxyCodeLine{01375\ \textcolor{preprocessor}{\#if\ \_WIN32}}
+\DoxyCodeLine{01376\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a91f4b2666fb920a7859df9cdc079502d}{m\_async}}-\/>result();}
+\DoxyCodeLine{01377\ \ \ \ \ \textcolor{keywordflow}{return}\ m\_vector\_result;}
+\DoxyCodeLine{01378\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{01379\ \ \ \ \ \ \ \ \ std::vector<std::string>\ ret;}
+\DoxyCodeLine{01380\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ result\ =\ \mbox{\hyperlink{classpfd_1_1internal_1_1dialog_a91f4b2666fb920a7859df9cdc079502d}{m\_async}}-\/>result();}
+\DoxyCodeLine{01381\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (;;)}
+\DoxyCodeLine{01382\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01383\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Split\ result\ along\ newline\ characters}}
+\DoxyCodeLine{01384\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ i\ =\ result.find(\textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{01385\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ 0\ ||\ i\ ==\ std::string::npos)}
+\DoxyCodeLine{01386\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01387\ \ \ \ \ \ \ \ \ \ \ \ \ ret.push\_back(result.substr(0,\ i));}
+\DoxyCodeLine{01388\ \ \ \ \ \ \ \ \ \ \ \ \ result\ =\ result.substr(i\ +\ 1,\ result.size());}
+\DoxyCodeLine{01389\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01390\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{01391\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01392\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{FileDialog_8h}{File\+Dialog.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,50 @@
+\hypertarget{EventAnimation_8hpp_source}{}\doxysection{Event\+Animation.\+hpp}
+\label{EventAnimation_8hpp_source}\index{include/core/EventAnimation.hpp@{include/core/EventAnimation.hpp}}
+\mbox{\hyperlink{EventAnimation_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ dirii\ on\ 16/04/2023.}}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#ifndef\ VISUALGO\_CS162\_EVENTANIMATION\_HPP}}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#define\ VISUALGO\_CS162\_EVENTANIMATION\_HPP}}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{NodeInfo_8hpp}{draw/NodeInfo.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{SquareInfo_8hpp}{draw/SquareInfo.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00011}\mbox{\hyperlink{structEventSquare}{00011}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structEventSquare}{EventSquare}}\{}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00012}\mbox{\hyperlink{structEventSquare_a9af8c61dc435cf3e6d23184262574b32}{00012}}\ \ \ \ \ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefb}{Square::Status}}\ \mbox{\hyperlink{structEventSquare_a9af8c61dc435cf3e6d23184262574b32}{status}}\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{Square::Status::inactive}};}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00013}\mbox{\hyperlink{structEventSquare_a51bca7274eff03b8c1c41e37cf30c045}{00013}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structEventSquare_a51bca7274eff03b8c1c41e37cf30c045}{isPrintPreVal}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00014}\mbox{\hyperlink{structEventSquare_a1b350cd60c0ac63fbb8430144308a978}{00014}}\ \ \ \ \ std::string\ \mbox{\hyperlink{structEventSquare_a1b350cd60c0ac63fbb8430144308a978}{title}}\{\};}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00016}\mbox{\hyperlink{structEventSquare_ad79ec262a0caa72f437473cfd9e0489a}{00016}}\ \ \ \ \ \mbox{\hyperlink{structEventSquare_ad79ec262a0caa72f437473cfd9e0489a}{EventSquare}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00017}\mbox{\hyperlink{structEventSquare_a4dfa63a5b16ba9a45d2b8141c997f152}{00017}}\ \ \ \ \ \mbox{\hyperlink{structEventSquare_a4dfa63a5b16ba9a45d2b8141c997f152}{\string~EventSquare}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00018}00018\ \};}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00020}\mbox{\hyperlink{classEventAnimation}{00020}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEventAnimation}{EventAnimation}}\{}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00021}00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00022}00022\ \ \ \ \ \textcolor{comment}{//\ for\ linked\ list}}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00023}\mbox{\hyperlink{classEventAnimation_aad586f4d7c44abae712925e20061c43f}{00023}}\ \ \ \ \ std::vector<std::pair<int,\ std::string>>\ \mbox{\hyperlink{classEventAnimation_aad586f4d7c44abae712925e20061c43f}{titleNodes}};}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00024}\mbox{\hyperlink{classEventAnimation_a428d1668fa7be042c5cec5026461e5ef}{00024}}\ \ \ \ \ std::vector<std::pair<int,\ NodeInfo::ArrowType>>\ \mbox{\hyperlink{classEventAnimation_a428d1668fa7be042c5cec5026461e5ef}{colorArrows}};}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00025}\mbox{\hyperlink{classEventAnimation_abd802a4b6b767be3f35ac0358a7fc985}{00025}}\ \ \ \ \ std::vector<std::pair<int,\ NodeInfo::ArrowType>>\ \mbox{\hyperlink{classEventAnimation_abd802a4b6b767be3f35ac0358a7fc985}{hiddenArrows}};}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00026}\mbox{\hyperlink{classEventAnimation_a0f96f7c329496d4567d64b49f39ec029}{00026}}\ \ \ \ \ std::vector<int>\ \mbox{\hyperlink{classEventAnimation_a0f96f7c329496d4567d64b49f39ec029}{colorNodes}};}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00027}\mbox{\hyperlink{classEventAnimation_a141c20daede57695739ee175fbafa51c}{00027}}\ \ \ \ \ \mbox{\hyperlink{classNodeInfo_abf088f0f8ae75214730e4a91496eecb6}{NodeInfo::StatusNode}}\ \mbox{\hyperlink{classEventAnimation_a141c20daede57695739ee175fbafa51c}{statusChosenNode}};}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00028}\mbox{\hyperlink{classEventAnimation_abe59abb804fdc7b1c70dd4c41d045390}{00028}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classEventAnimation_a2bf58281a5685da4d98fdcddd59d8f22}{isPrintPreVal}},\ \mbox{\hyperlink{classEventAnimation_abe59abb804fdc7b1c70dd4c41d045390}{isPrintNormal}},\ \mbox{\hyperlink{classEventAnimation_a48b724181c5790fa230b648d124bacff}{isShowBackArrow}};}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00029}\mbox{\hyperlink{classEventAnimation_ad5877676e49fd0d27f4599767b96b517}{00029}}\ \ \ \ \ std::pair<int,\ int>\ \mbox{\hyperlink{classEventAnimation_ad5877676e49fd0d27f4599767b96b517}{indexBackArrow}};}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00031}00031\ \ \ \ \ \textcolor{comment}{//\ for\ array}}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00032}\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{00032}}\ \ \ \ \ std::vector<EventSquare>\ \mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}\{\},\ \mbox{\hyperlink{classEventAnimation_adeb76c2aa1c630148e72c45e9f2228e8}{eventSquaresTemp}}\{\};}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00034}\mbox{\hyperlink{classEventAnimation_a4112812c9d97a0846125e80ec60b34d1}{00034}}\ \ \ \ \ std::vector<int>\ \mbox{\hyperlink{classEventAnimation_a4112812c9d97a0846125e80ec60b34d1}{lines}};}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00036}00036\ \ \ \ \ \mbox{\hyperlink{classEventAnimation_a765d2bb093bb9c3f518c4b5bb18f5236}{EventAnimation}}();}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{classEventAnimation_a794269319e23a03bbcb3a619aecce77b}{\string~EventAnimation}}();}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00039}\mbox{\hyperlink{classEventAnimation_aa1231a08eee81a0b86465dc0dc87597f}{00039}}\ \ \ \ \ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}\&\ \mbox{\hyperlink{classEventAnimation_aa1231a08eee81a0b86465dc0dc87597f}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}\&\ other);}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEventAnimation_a5f33dad93259b5a14cbd9dbc2ad5ae15}{reset}}();}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00042}00042\ \};}
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{EventAnimation_8hpp_source_l00044}00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//VISUALGO\_CS162\_EVENTANIMATION\_HPP}}
+
+\end{DoxyCode}

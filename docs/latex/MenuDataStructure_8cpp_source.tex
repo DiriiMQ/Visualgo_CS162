@@ -1,0 +1,252 @@
+\hypertarget{MenuDataStructure_8cpp_source}{}\doxysection{Menu\+Data\+Structure.\+cpp}
+\label{MenuDataStructure_8cpp_source}\index{include/libScene/MenuDataStructure.cpp@{include/libScene/MenuDataStructure.cpp}}
+\mbox{\hyperlink{MenuDataStructure_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ dirii\ on\ 26/04/2023.}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{MenuDataStructure_8hpp}{MenuDataStructure.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00007}\mbox{\hyperlink{classMenuDataStructure_ad3bc8c90e80e78f6c506c195e3564048}{00007}}\ \mbox{\hyperlink{classMenuDataStructure_ad3bc8c90e80e78f6c506c195e3564048}{MenuDataStructure::MenuDataStructure}}(sf::RenderWindow\ *window)\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00008}00008\ \ \ \ \ this-\/>window\ =\ window;}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00009}00009\ \ \ \ \ this-\/>init();}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00010}00010\ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00012}00012\ \textcolor{keywordtype}{void}\ MenuDataStructure::init()\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00013}00013\ \ \ \ \ this-\/>initButtons();}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00014}00014\ \ \ \ \ this-\/>initCreateMode();}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00015}00015\ \ \ \ \ this-\/>initPushMode();}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00017}00017\ \ \ \ \ this-\/>activeOptionMenu\ =\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_aa8f05ab2dbe9d9cd3d31852c4f04e665a81a7315b0b5826a96c7f40bc98c63647}{constants::MenuDataStructure::Button::NONE}};}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00018}00018\ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00020}00020\ \textcolor{keywordtype}{void}\ MenuDataStructure::initButtons()\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_a4b5a79e397ff6378540b35457767151d}{constants::MenuDataStructure::BUTTON\_COUNT}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ sf::Vector2f\ position\ =\ sf::Vector2f(}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::sideButtonSize.x\ +\ constants::distance2ModeButtons,}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::submenuButtonPos.y\ +\ (constants::optionButtonSize.y\ +\ constants::distance2ModeButtons\ /\ 10)\ *\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(i)}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ this-\/>buttons[i]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classButton}{Button}}(}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>window,}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ position,}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::optionButtonSize,}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_ada0df641cfe127ee678f4e0f7439621b}{constants::MenuDataStructure::BUTTON\_NAMES}}[i],}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_ada0df641cfe127ee678f4e0f7439621b}{constants::MenuDataStructure::BUTTON\_NAMES}}[i],}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_ab887cd848f1bd7ff5028afeb4771b941}{constants::MenuDataStructure::BUTTON\_NAME\_SIZE}},}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Color::Black,}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::normalGray,}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_a78ac9ffc7fb0604d34066a637946e88a}{constants::hoverGray}},}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_a65408fa6932d8c031131d5efa7e40776}{constants::clickGray}}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00039}00039\ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00041}\mbox{\hyperlink{classMenuDataStructure_a781e3d35ff840449950ae009d9066a20}{00041}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMenuDataStructure_a781e3d35ff840449950ae009d9066a20}{MenuDataStructure::pollEvents}}(sf::Event\ event,\ sf::Vector2f\ mousePosView)\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>activeOptionMenu\ !=\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_aa8f05ab2dbe9d9cd3d31852c4f04e665a81a7315b0b5826a96c7f40bc98c63647}{constants::MenuDataStructure::Button::NONE}})}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ this-\/>buttons[this-\/>activeOptionMenu]-\/>\mbox{\hyperlink{classButton_a03ef92527b48359feff925347c478dab}{setColor}}(constants::normalGray);}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_a4b5a79e397ff6378540b35457767151d}{constants::MenuDataStructure::BUTTON\_COUNT}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>buttons[i]-\/>pollEvent(mousePosView))\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Button\ "{}}\ <<\ i\ <<\ \textcolor{stringliteral}{"{}\ is\ clicked"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>activeOptionMenu\ =\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_aa8f05ab2dbe9d9cd3d31852c4f04e665}{constants::MenuDataStructure::Button}}\textcolor{keyword}{>}(i);}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>activeOptionMenu\ ==\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_aa8f05ab2dbe9d9cd3d31852c4f04e665ad57f5f8645ee397c19a213c5ad3ae76e}{constants::MenuDataStructure::Button::CREATE\_BUTTON}})\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ this-\/>pollEventCreateMode(event,\ mousePosView);}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00054}00054\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (this-\/>activeOptionMenu\ ==\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_aa8f05ab2dbe9d9cd3d31852c4f04e665ae0dd824338334e43c90ed0bb74fa8e94}{constants::MenuDataStructure::Button::PUSH\_BUTTON}})\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ this-\/>pollEventPushMode(event,\ mousePosView);}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00057}00057\ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00059}\mbox{\hyperlink{classMenuDataStructure_acdee7cf242328cbdee37100144106856}{00059}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMenuDataStructure_acdee7cf242328cbdee37100144106856}{MenuDataStructure::update}}()\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00060}00060\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>activeOptionMenu\ <\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_aa8f05ab2dbe9d9cd3d31852c4f04e665a92ac4c6a032436598f36c5f03be7dea2}{constants::MenuDataStructure::Button::POP\_BUTTON}})}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ this-\/>buttons[this-\/>activeOptionMenu]-\/>\mbox{\hyperlink{classButton_a03ef92527b48359feff925347c478dab}{setColor}}(\mbox{\hyperlink{namespaceconstants_aa2c33af3a12516cd0a8b05f71159f60d}{constants::clickGreen}});}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00063}00063\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{classButton}{Button}}*\ button\ :\ this-\/>buttons)\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ button-\/>update();}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00065}00065\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00066}00066\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00067}00067\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>activeOptionMenu\ ==\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_aa8f05ab2dbe9d9cd3d31852c4f04e665ad57f5f8645ee397c19a213c5ad3ae76e}{constants::MenuDataStructure::Button::CREATE\_BUTTON}})\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ this-\/>updateCreateMode();}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00069}00069\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (this-\/>activeOptionMenu\ ==\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_aa8f05ab2dbe9d9cd3d31852c4f04e665ae0dd824338334e43c90ed0bb74fa8e94}{constants::MenuDataStructure::Button::PUSH\_BUTTON}})\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ this-\/>updatePushMode();}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00071}00071\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00072}00072\ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00074}\mbox{\hyperlink{classMenuDataStructure_a3e99a6f13dec52f65ecf4cf893d475fb}{00074}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMenuDataStructure_a3e99a6f13dec52f65ecf4cf893d475fb}{MenuDataStructure::render}}()\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00075}00075\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{classButton}{Button}}*\ button\ :\ this-\/>buttons)\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ button-\/>render();}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00077}00077\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00078}00078\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00079}00079\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>activeOptionMenu\ ==\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_aa8f05ab2dbe9d9cd3d31852c4f04e665ad57f5f8645ee397c19a213c5ad3ae76e}{constants::MenuDataStructure::Button::CREATE\_BUTTON}})\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ this-\/>renderCreateMode();}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00081}00081\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (this-\/>activeOptionMenu\ ==\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_aa8f05ab2dbe9d9cd3d31852c4f04e665ae0dd824338334e43c90ed0bb74fa8e94}{constants::MenuDataStructure::Button::PUSH\_BUTTON}})\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ this-\/>renderPushMode();}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00083}00083\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00084}00084\ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00086}\mbox{\hyperlink{classMenuDataStructure_aa4959e8581011e25a89c267eebd9fef6}{00086}}\ \mbox{\hyperlink{classButton}{Button}}\ *\mbox{\hyperlink{classMenuDataStructure_aa4959e8581011e25a89c267eebd9fef6}{MenuDataStructure::getButton}}(\textcolor{keywordtype}{int}\ index)\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00087}00087\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>buttons[index];}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00088}00088\ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00090}\mbox{\hyperlink{classMenuDataStructure_a4a29df14a3815829ed6140a27fe52048}{00090}}\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_aa8f05ab2dbe9d9cd3d31852c4f04e665}{constants::MenuDataStructure::Button}}\ \mbox{\hyperlink{classMenuDataStructure_a4a29df14a3815829ed6140a27fe52048}{MenuDataStructure::getActiveOptionMenu}}()\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00091}00091\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>activeOptionMenu;}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00092}00092\ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00094}\mbox{\hyperlink{classMenuDataStructure_a1d6d17f9f87c8df6fca719eb893eed8c}{00094}}\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_1_1CreateMode_a5d66241e5ffd8317959de27fbb51ea4e}{constants::MenuDataStructure::CreateMode::Button}}\ \mbox{\hyperlink{classMenuDataStructure_a1d6d17f9f87c8df6fca719eb893eed8c}{MenuDataStructure::getActiveCreateMode}}()\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00095}00095\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>activeCreateMode;}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00096}00096\ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00098}00098\ \textcolor{keywordtype}{void}\ MenuDataStructure::initCreateMode()\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00099}00099\ \textcolor{comment}{//\ init\ stuff\ for\ create\ mode}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00100}00100\ \ \ \ \ this-\/>activeCreateMode\ =\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_1_1CreateMode_a5d66241e5ffd8317959de27fbb51ea4ea5535129b9c37373e4ab88f32a5de6bd7}{constants::MenuDataStructure::CreateMode::Button::NONE}};}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00101}00101\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_1_1CreateMode_ac401642be9f7d982d981f65b241ca241}{constants::MenuDataStructure::CreateMode::BUTTON\_COUNT}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ sf::Vector2f\ position\ =\ sf::Vector2f(}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>buttons[0]-\/>getPosition().x\ +\ (constants::optionButtonSize.x\ +\ constants::distance2ModeButtons)\ *\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(i\ +\ 1),}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>buttons[0]-\/>getPosition().y}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ this-\/>subCreateMode[i]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classButton}{Button}}(}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>window,}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ position,}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::optionButtonSize,}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_1_1CreateMode_aef848b9e9a8e88a94353130b7ab2c182}{constants::MenuDataStructure::CreateMode::BUTTON\_NAMES}}[i],}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_1_1CreateMode_aef848b9e9a8e88a94353130b7ab2c182}{constants::MenuDataStructure::CreateMode::BUTTON\_NAMES}}[i],}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_1_1CreateMode_a6e4d1c2579982a1932a949d1df2519f1}{constants::MenuDataStructure::CreateMode::NAME\_SIZE}},}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Color::Black,}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ constants::normalGray,}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_a78ac9ffc7fb0604d34066a637946e88a}{constants::hoverGray}},}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_a65408fa6932d8c031131d5efa7e40776}{constants::clickGray}}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ <\ 2)}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>createTextbox[i]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classCustomTextbox}{CustomTextbox}}\{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>window,}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Vector2f(}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>subCreateMode[0]-\/>getPosition().x,}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>subCreateMode[0]-\/>getPosition().y\ +\ constants::optionButtonSize.y\ +\ constants::distance2ModeButtons}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ),}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 20,}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_1_1CreateMode_ae6f677b606c7274d5246661eb0a1cb69}{constants::MenuDataStructure::CreateMode::TEXTBOX\_NAMES}}[i],}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_1_1CreateMode_a34a32b07ceb15725e6e95be839e441b3}{constants::MenuDataStructure::CreateMode::TEXTBOX\_LENGTH}}[i],}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00129}00129\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuDataStructure_ad338838dc7421fd89b4f1d8278c7b312}{createModeValue}}[i]\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00130}00130\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00131}00131\ \ \ \ \ this-\/>isOpenFileDialog\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00132}00132\ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00134}00134\ \textcolor{keywordtype}{void}\ MenuDataStructure::pollEventCreateMode(sf::Event\ event,\ sf::Vector2f\ mousePosView)\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00135}00135\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>activeCreateMode\ !=\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_1_1CreateMode_a5d66241e5ffd8317959de27fbb51ea4ea5535129b9c37373e4ab88f32a5de6bd7}{constants::MenuDataStructure::CreateMode::Button::NONE}})}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00136}00136\ \ \ \ \ \ \ \ \ this-\/>subCreateMode[this-\/>activeCreateMode]-\/>\mbox{\hyperlink{classButton_a03ef92527b48359feff925347c478dab}{setColor}}(constants::normalGray);}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00137}00137\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00138}00138\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_1_1CreateMode_ac401642be9f7d982d981f65b241ca241}{constants::MenuDataStructure::CreateMode::BUTTON\_COUNT}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00139}00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>subCreateMode[i]-\/>pollEvent(mousePosView))\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>activeCreateMode\ =\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_1_1CreateMode_a5d66241e5ffd8317959de27fbb51ea4e}{constants::MenuDataStructure::CreateMode::Button}}\textcolor{keyword}{>}(i);}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_1_1CreateMode_a5d66241e5ffd8317959de27fbb51ea4eac92272e9ff9974fbca9c0a5c2b6f2e65}{constants::MenuDataStructure::CreateMode::Button::FILE\_BUTTON}})}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>isOpenFileDialog\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Button\ "{}}\ <<\ i\ <<\ \textcolor{stringliteral}{"{}\ is\ clicked"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00144}00144\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00145}00145\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00147}00147\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>activeCreateMode\ <\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_1_1CreateMode_a5e852ed686d261422b8acb834e8c0a74}{constants::MenuDataStructure::CreateMode::TEXTBOX\_COUNT}})}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00148}00148\ \ \ \ \ \ \ \ \ this-\/>createTextbox[this-\/>activeCreateMode]-\/>\mbox{\hyperlink{classCustomTextbox_aec18b36767a71c5a9fb7eae48ef4d9b5}{pollEvent}}(event,\ mousePosView);}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00149}00149\ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00151}00151\ \textcolor{keywordtype}{void}\ MenuDataStructure::updateCreateMode()\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00152}00152\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>activeCreateMode\ !=\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_1_1CreateMode_a5d66241e5ffd8317959de27fbb51ea4ea5535129b9c37373e4ab88f32a5de6bd7}{constants::MenuDataStructure::CreateMode::Button::NONE}})}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00153}00153\ \ \ \ \ \ \ \ \ this-\/>subCreateMode[this-\/>activeCreateMode]-\/>\mbox{\hyperlink{classButton_a03ef92527b48359feff925347c478dab}{setColor}}(\mbox{\hyperlink{namespaceconstants_aa2c33af3a12516cd0a8b05f71159f60d}{constants::clickGreen}});}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00155}00155\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{classButton}{Button}}*\ button\ :\ this-\/>subCreateMode)\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00156}00156\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679}{button}}-\/>update();}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00157}00157\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00158}00158\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00159}00159\ \textcolor{comment}{//\ \ \ \ this-\/>testTextbox-\/>update();}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00160}00160\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>activeCreateMode\ <\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_1_1CreateMode_a5e852ed686d261422b8acb834e8c0a74}{constants::MenuDataStructure::CreateMode::TEXTBOX\_COUNT}})\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00161}00161\ \ \ \ \ \ \ \ \ this-\/>createTextbox[this-\/>activeCreateMode]-\/>\mbox{\hyperlink{classCustomTextbox_ac8901adc866e8d58c09d77476a51f58d}{update}}();}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00162}00162\ \ \ \ \ \ \ \ \ std::string\ inputUser\ =\ this-\/>createTextbox[this-\/>activeCreateMode]-\/>\mbox{\hyperlink{classCustomTextbox_a5b725849f4f8c7d795e4c4a1ed809ba2}{getTextString}}();}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00163}00163\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (inputUser\ !=\ \textcolor{stringliteral}{"{}None"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ inputUser\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>createTextbox[this-\/>activeCreateMode]-\/>\mbox{\hyperlink{classCustomTextbox_a724a824af4f1a54252b940048ab79c65}{resetInput}}();}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00166}00166\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00167}00167\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuDataStructure_ad338838dc7421fd89b4f1d8278c7b312}{createModeValue}}[this-\/>activeCreateMode]\ =\ inputUser;}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00168}00168\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (this-\/>activeCreateMode\ ==\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_1_1CreateMode_a5d66241e5ffd8317959de27fbb51ea4eac92272e9ff9974fbca9c0a5c2b6f2e65}{constants::MenuDataStructure::CreateMode::FILE\_BUTTON}})\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00169}00169\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>isOpenFileDialog)\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ f\ =\ \mbox{\hyperlink{classpfd_1_1open__file}{pfd::open\_file}}(\textcolor{stringliteral}{"{}Choose\ files\ to\ read"{}},\ \mbox{\hyperlink{classpfd_1_1path_a1205ad5165c748f91ffe939687e095a2}{pfd::path::home}}(),}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Text\ Files\ (.txt\ .text)"{}},\ \textcolor{stringliteral}{"{}*.txt\ *.text"{}},}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}All\ Files"{}},\ \textcolor{stringliteral}{"{}*"{}}\});}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ wait\ for\ the\ user\ to\ select\ a\ file\ unless\ the\ window\ will\ be\ not\ responsive}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!f.ready(100))\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Event\ \textcolor{keyword}{event}\{\};}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>window-\/>pollEvent(event);}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00179}00179\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!f.result().empty())\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::ifstream\ file(f.result()[0]);}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ line;}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ file\ >>\ line;}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuDataStructure_ad338838dc7421fd89b4f1d8278c7b312}{createModeValue}}[this-\/>activeCreateMode]\ =\ line;}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00186}00186\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00187}00187\ \ \ \ \ \ \ \ \ this-\/>isOpenFileDialog\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00188}00188\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00189}00189\ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00191}00191\ \textcolor{keywordtype}{void}\ MenuDataStructure::renderCreateMode()\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00192}00192\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{classButton}{Button}}*\ button\ :\ this-\/>subCreateMode)\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00193}00193\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacepfd_aad4fba5e0884b6d814006a7e92ade679}{button}}-\/>render();}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00194}00194\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00195}00195\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00196}00196\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>activeCreateMode\ <\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_1_1CreateMode_a5e852ed686d261422b8acb834e8c0a74}{constants::MenuDataStructure::CreateMode::TEXTBOX\_COUNT}})}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00197}00197\ \ \ \ \ \ \ \ \ this-\/>createTextbox[this-\/>activeCreateMode]-\/>\mbox{\hyperlink{classCustomTextbox_a8c2246eca63d3095ca1f3dcf4e946eb0}{render}}();}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00198}00198\ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00199}00199\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00200}00200\ \textcolor{keywordtype}{void}\ MenuDataStructure::initPushMode()\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00201}00201\ \ \ \ \ sf::Vector2f\ position\ =\ sf::Vector2f(}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>buttons[1]-\/>getPosition().x\ +\ (constants::optionButtonSize.x\ +\ constants::distance2ModeButtons),}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>buttons[1]-\/>getPosition().y}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00204}00204\ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00205}00205\ \ \ \ \ this-\/>pushTextbox\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classCustomTextbox}{CustomTextbox}}\{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>window,}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ position,}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ 20,}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_1_1PushMode_a7731d74e90220aa444b3c7f310c82268}{constants::MenuDataStructure::PushMode::TEXTBOX\_NAME}},}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_1_1PushMode_a9a073fbf88a2b18e356a7d0095dbdee0}{constants::MenuDataStructure::PushMode::TEXTBOX\_LENGTH}},}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00211}00211\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00212}00212\ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuDataStructure_a8d82f726715cf8cff6f9d0c0fa407649}{pushModeValue}}\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00213}00213\ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00214}00214\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00215}00215\ \textcolor{keywordtype}{void}\ MenuDataStructure::pollEventPushMode(sf::Event\ event,\ sf::Vector2f\ mousePosView)\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00216}00216\ \ \ \ \ this-\/>pushTextbox-\/>\mbox{\hyperlink{classCustomTextbox_aec18b36767a71c5a9fb7eae48ef4d9b5}{pollEvent}}(event,\ mousePosView);}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00217}00217\ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00218}00218\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00219}00219\ \textcolor{keywordtype}{void}\ MenuDataStructure::updatePushMode()\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00220}00220\ \ \ \ \ this-\/>pushTextbox-\/>\mbox{\hyperlink{classCustomTextbox_ac8901adc866e8d58c09d77476a51f58d}{update}}();}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00221}00221\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00222}00222\ \ \ \ \ std::string\ inputUser\ =\ this-\/>pushTextbox-\/>\mbox{\hyperlink{classCustomTextbox_a5b725849f4f8c7d795e4c4a1ed809ba2}{getTextString}}();}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00223}00223\ \ \ \ \ \textcolor{comment}{//\ check\ if\ input\ is\ number}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00224}00224\ \ \ \ \ \textcolor{keywordtype}{bool}\ isValid\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00225}00225\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ i\ :\ inputUser)}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00226}00226\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!std::isdigit(i))}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ isValid\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00228}00228\ \ \ \ \ \textcolor{keywordflow}{if}\ (isValid\ \&\&\ inputUser\ !=\ \textcolor{stringliteral}{"{}None"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00229}00229\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMenuDataStructure_a8d82f726715cf8cff6f9d0c0fa407649}{pushModeValue}}\ =\ inputUser;}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00230}00230\ \ \ \ \ \ \ \ \ std::cout\ <<\ inputUser\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00231}00231\ \ \ \ \ \ \ \ \ this-\/>pushTextbox-\/>\mbox{\hyperlink{classCustomTextbox_a724a824af4f1a54252b940048ab79c65}{resetInput}}();}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00232}00232\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00233}00233\ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00234}00234\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00235}00235\ \textcolor{keywordtype}{void}\ MenuDataStructure::renderPushMode()\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00236}00236\ \ \ \ \ this-\/>pushTextbox-\/>\mbox{\hyperlink{classCustomTextbox_a8c2246eca63d3095ca1f3dcf4e946eb0}{render}}();}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00237}00237\ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00238}00238\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00239}\mbox{\hyperlink{classMenuDataStructure_afdd4fe9aa69e11798ab8ee30a372720d}{00239}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMenuDataStructure_afdd4fe9aa69e11798ab8ee30a372720d}{MenuDataStructure::resetActiveOptionMenu}}()\ \{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00240}00240\ \ \ \ \ this-\/>activeOptionMenu\ =\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_aa8f05ab2dbe9d9cd3d31852c4f04e665a81a7315b0b5826a96c7f40bc98c63647}{constants::MenuDataStructure::Button::NONE}};}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00241}00241\ \ \ \ \ this-\/>activeCreateMode\ =\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_1_1CreateMode_a5d66241e5ffd8317959de27fbb51ea4ea5535129b9c37373e4ab88f32a5de6bd7}{constants::MenuDataStructure::CreateMode::Button::NONE}};}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00242}00242\ \}}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00243}00243\ }
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00244}\mbox{\hyperlink{classMenuDataStructure_a68097c6478bf135df2d2272c326f2f10}{00244}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMenuDataStructure_a68097c6478bf135df2d2272c326f2f10}{MenuDataStructure::resetActiveOptionMenuOnly}}()\{}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00245}00245\ \ \ \ \ this-\/>activeOptionMenu\ =\ \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_aa8f05ab2dbe9d9cd3d31852c4f04e665a81a7315b0b5826a96c7f40bc98c63647}{constants::MenuDataStructure::Button::NONE}};}
+\DoxyCodeLine{\Hypertarget{MenuDataStructure_8cpp_source_l00246}00246\ \}}
+
+\end{DoxyCode}

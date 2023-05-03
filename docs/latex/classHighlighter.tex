@@ -1,0 +1,138 @@
+\hypertarget{classHighlighter}{}\doxysection{Highlighter Class Reference}
+\label{classHighlighter}\index{Highlighter@{Highlighter}}
+
+
+{\ttfamily \#include $<$Highlighter.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHighlighter_aceddfca5a589099a1fd70816bcb04bcf}{Highlighter}} (sf\+::\+Render\+Window $\ast$window, int lines\+Count, const char $\ast$code\+Path)
+\item 
+void \mbox{\hyperlink{classHighlighter_a0402a172885dbef222349b341b08df5a}{toggle}} (std\+::vector$<$ int $>$ lines)
+\item 
+void \mbox{\hyperlink{classHighlighter_ac0248622f4cdea18f3acdbc19c63b6a0}{reset\+Toggle}} ()
+\item 
+void \mbox{\hyperlink{classHighlighter_a971658bdd8b345cd3e866b9c98042789}{render}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{Highlighter_8hpp_source_l00011}{11}} of file \mbox{\hyperlink{Highlighter_8hpp_source}{Highlighter.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHighlighter_aceddfca5a589099a1fd70816bcb04bcf}\label{classHighlighter_aceddfca5a589099a1fd70816bcb04bcf}} 
+\index{Highlighter@{Highlighter}!Highlighter@{Highlighter}}
+\index{Highlighter@{Highlighter}!Highlighter@{Highlighter}}
+\doxysubsubsection{\texorpdfstring{Highlighter()}{Highlighter()}}
+{\footnotesize\ttfamily Highlighter\+::\+Highlighter (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window,  }\item[{int}]{lines\+Count,  }\item[{const char $\ast$}]{code\+Path }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Highlighter_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{Highlighter_8cpp_source}{Highlighter.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00008\ \ \ \ \ this-\/>window\ =\ window;}
+\DoxyCodeLine{00009\ \ \ \ \ this-\/>linesCount\ =\ linesCount;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ this-\/>codeTexture.loadFromFile(codePath);}
+\DoxyCodeLine{00012\ \ \ \ \ this-\/>codeSprite.setTexture(this-\/>codeTexture);}
+\DoxyCodeLine{00013\ \ \ \ \ this-\/>codeSprite.setScale(\mbox{\hyperlink{namespaceconstants_1_1Highlighter_a7dc8d4791b3c8dc5d243a627a0f0da81}{constants::Highlighter::codeScale}});}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ this-\/>codeSprite.setOrigin(}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>codeSprite.getLocalBounds().width,}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>codeSprite.getLocalBounds().height}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ this-\/>codeSprite.setPosition(constants::Highlighter::codePos);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{float}\ heightTop\ =\ 43;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ this-\/>rectSize\ =\ sf::Vector2f(}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>codeSprite.getGlobalBounds().width,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ ((this-\/>codeSprite.getLocalBounds().height\ -\/\ heightTop\ *\ 2)\ /\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(this-\/>linesCount))\ *\ \mbox{\hyperlink{namespaceconstants_1_1Highlighter_a7dc8d4791b3c8dc5d243a627a0f0da81}{constants::Highlighter::codeScale}}.y}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this-\/>linesCount;\ ++i)\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ sf::RectangleShape\ rect(this-\/>rectSize);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ rect.setOrigin(rect.getLocalBounds().width,\ rect.getLocalBounds().height);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ rect.setFillColor(\mbox{\hyperlink{namespaceconstants_a4942dcbf8c9b4fb4cd3e8f6b911bf359}{constants::transparentGreen}});}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ rect.setPosition(}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>codeSprite.getPosition().x,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>codeSprite.getPosition().y\ -\/\ (heightTop\ *\ \mbox{\hyperlink{namespaceconstants_1_1Highlighter_a7dc8d4791b3c8dc5d243a627a0f0da81}{constants::Highlighter::codeScale}}.y)\ -\/\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(this-\/>linesCount\ -\/\ 1\ -\/\ i)\ *\ this-\/>rectSize.y}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ this-\/>lines.push\_back(rect);}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHighlighter_a971658bdd8b345cd3e866b9c98042789}\label{classHighlighter_a971658bdd8b345cd3e866b9c98042789}} 
+\index{Highlighter@{Highlighter}!render@{render}}
+\index{render@{render}!Highlighter@{Highlighter}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Highlighter\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Highlighter_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{Highlighter_8cpp_source}{Highlighter.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ this-\/>window-\/>draw(this-\/>codeSprite);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&i\ :\ this-\/>toggleLines)\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ this-\/>window-\/>draw(this-\/>lines[i]);}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHighlighter_ac0248622f4cdea18f3acdbc19c63b6a0}\label{classHighlighter_ac0248622f4cdea18f3acdbc19c63b6a0}} 
+\index{Highlighter@{Highlighter}!resetToggle@{resetToggle}}
+\index{resetToggle@{resetToggle}!Highlighter@{Highlighter}}
+\doxysubsubsection{\texorpdfstring{resetToggle()}{resetToggle()}}
+{\footnotesize\ttfamily void Highlighter\+::reset\+Toggle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Highlighter_8cpp_source_l00053}{53}} of file \mbox{\hyperlink{Highlighter_8cpp_source}{Highlighter.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ this-\/>toggleLines.clear();}
+\DoxyCodeLine{00055\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classHighlighter_a0402a172885dbef222349b341b08df5a}\label{classHighlighter_a0402a172885dbef222349b341b08df5a}} 
+\index{Highlighter@{Highlighter}!toggle@{toggle}}
+\index{toggle@{toggle}!Highlighter@{Highlighter}}
+\doxysubsubsection{\texorpdfstring{toggle()}{toggle()}}
+{\footnotesize\ttfamily void Highlighter\+::toggle (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{lines }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Highlighter_8cpp_source_l00041}{41}} of file \mbox{\hyperlink{Highlighter_8cpp_source}{Highlighter.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ this-\/>toggleLines\ =\ std::move(linesList);}
+\DoxyCodeLine{00043\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/lib\+Scene/\mbox{\hyperlink{Highlighter_8hpp}{Highlighter.\+hpp}}\item 
+include/lib\+Scene/\mbox{\hyperlink{Highlighter_8cpp}{Highlighter.\+cpp}}\end{DoxyCompactItemize}

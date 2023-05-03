@@ -1,0 +1,540 @@
+\hypertarget{classStaticArrayScene}{}\doxysection{Static\+Array\+Scene Class Reference}
+\label{classStaticArrayScene}\index{StaticArrayScene@{StaticArrayScene}}
+
+
+{\ttfamily \#include $<$Static\+Array\+Scene.\+hpp$>$}
+
+Inheritance diagram for Static\+Array\+Scene\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classStaticArrayScene}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStaticArrayScene_a554fdec7ed44f350a42242c1a14546e0}{Static\+Array\+Scene}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}})
+\item 
+void \mbox{\hyperlink{classStaticArrayScene_af11a29d2439171ddca199e0a3d698c4f}{reset}} ()
+\item 
+void \mbox{\hyperlink{classStaticArrayScene_a2793f1182dd1d6dd4ea5506246074ede}{poll\+Event}} (sf\+::\+Event event, sf\+::\+Vector2f mouse\+Pos\+View) override
+\item 
+void \mbox{\hyperlink{classStaticArrayScene_ac4fb24587fff4201fdcf01e28ee7a238}{update}} () override
+\item 
+void \mbox{\hyperlink{classStaticArrayScene_ae272d942cd61306c044a7be56b55b422}{render}} () override
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ \mbox{\hyperlink{classStaticArrayScene_a3214c997e00c989139ea876c67766274}{add\+Mode\+Events}} (int chosen\+Node)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ \mbox{\hyperlink{classStaticArrayScene_a70187f0699e67a23bf3f15e8b7d68137}{delete\+Mode\+Events}} (int chosen\+Node)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ \mbox{\hyperlink{classStaticArrayScene_a8b1dd8ee49a9f761102f008a0036ea48}{update\+Mode\+Events}} (int chosen\+Node)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ \mbox{\hyperlink{classStaticArrayScene_a989be0bcbb64f9e74f02f0593c7458ca}{search\+Mode\+Events}} (int chosen\+Node)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBaseScene}{Base\+Scene}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBaseScene_abe1e5ed8391db6798c313888ae8ad4e9}{Base\+Scene}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}})
+\item 
+void \mbox{\hyperlink{classBaseScene_adc937756bd780e478e6c338251816b91}{create\+Mode\+Button}} (sf\+::\+Vector2f position, std\+::string text\+String)
+\item 
+virtual void \mbox{\hyperlink{classBaseScene_a16dd70d07399fc63d7a3e29fbac516cf}{poll\+Event}} (sf\+::\+Event event, sf\+::\+Vector2f mouse\+Pos\+View)=0
+\item 
+virtual void \mbox{\hyperlink{classBaseScene_a269667611675475435d876e0f8f26a79}{update}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classBaseScene_a18694189ddd54cb279e1814869dbe854}{render}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Public Attributes inherited from \mbox{\hyperlink{classBaseScene}{Base\+Scene}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classButton}{Button}} $\ast$ \mbox{\hyperlink{classBaseScene_acbfb2074648ed5f471ef8e46a60af885}{mode\+Button}} \{\}
+\item 
+bool \mbox{\hyperlink{classBaseScene_ad250cff3475ec4b590afe5ac70597746}{is\+Menu\+Open}} \{\}
+\item 
+bool \mbox{\hyperlink{classBaseScene_ae6e22961b8642440a160df8723363afa}{is\+Demo\+Code\+Open}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classBaseScene}{Base\+Scene}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBaseScene_a408cafc155677ae764855ce9d16110b5}{set\+Window}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBaseScene}{Base\+Scene}}}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Render\+Window $\ast$ \mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}} \{\}
+\item 
+\mbox{\hyperlink{classControlMenu}{Control\+Menu}} $\ast$ \mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{control\+Menu}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{StaticArrayScene_8hpp_source_l00012}{12}} of file \mbox{\hyperlink{StaticArrayScene_8hpp_source}{Static\+Array\+Scene.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classStaticArrayScene_a554fdec7ed44f350a42242c1a14546e0}\label{classStaticArrayScene_a554fdec7ed44f350a42242c1a14546e0}} 
+\index{StaticArrayScene@{StaticArrayScene}!StaticArrayScene@{StaticArrayScene}}
+\index{StaticArrayScene@{StaticArrayScene}!StaticArrayScene@{StaticArrayScene}}
+\doxysubsubsection{\texorpdfstring{StaticArrayScene()}{StaticArrayScene()}}
+{\footnotesize\ttfamily Static\+Array\+Scene\+::\+Static\+Array\+Scene (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Definition at line \mbox{\hyperlink{StaticArrayScene_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{StaticArrayScene_8cpp_source}{Static\+Array\+Scene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classBaseScene}{BaseScene}}(\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}})\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ this-\/>init();}
+\DoxyCodeLine{00009\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classStaticArrayScene_a3214c997e00c989139ea876c67766274}\label{classStaticArrayScene_a3214c997e00c989139ea876c67766274}} 
+\index{StaticArrayScene@{StaticArrayScene}!addModeEvents@{addModeEvents}}
+\index{addModeEvents@{addModeEvents}!StaticArrayScene@{StaticArrayScene}}
+\doxysubsubsection{\texorpdfstring{addModeEvents()}{addModeEvents()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ Static\+Array\+Scene\+::add\+Mode\+Events (\begin{DoxyParamCaption}\item[{int}]{chosen\+Node }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{StaticArrayScene_8cpp_source_l00143}{143}} of file \mbox{\hyperlink{StaticArrayScene_8cpp_source}{Static\+Array\+Scene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00144\ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_a58bdbe3ada4bc219b09370bb63c7d6e8}{resetEvents}}();}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenNode\ <\ 0\ ||\ chosenNode\ >\ this-\/>array-\/>\mbox{\hyperlink{classArray_af29bf627de157570d00c700773884e20}{getSize}}())}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{comment}{//\ init\ highlighter}}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{comment}{//\ ...}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{int}\ size\ =\ this-\/>array-\/>\mbox{\hyperlink{classArray_af29bf627de157570d00c700773884e20}{getSize}}()\ +\ 1,}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ squaresSize\ =\ this-\/>array-\/>\mbox{\hyperlink{classArray_a42ea29579620b256e2a05f4c78b0ec40}{getSquaresSize}}();}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordflow}{if}\ (size\ >\ squaresSize)\ -\/-\/size;}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordflow}{if}\ (!squaresSize)\ \textcolor{keywordflow}{return}\ \{\};}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ std::vector<EventAnimation>\ events;}
+\DoxyCodeLine{00157\ \ \ \ \ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}\ event;}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordflow}{if}\ (size\ <\ squaresSize)\ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}\ =\ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}();}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square:\ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}})\ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ square.status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}};}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ square.isPrintPreVal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ size\ -\/\ 1;\ i\ <\ squaresSize;\ ++i)}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{Square::Status::inactive}};}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ if\ (size\ >\ 1)}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[size\ -\/\ 2].title\ =\ \textcolor{stringliteral}{"{}n"{}};}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}\ =\ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}();}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square\ :\ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}})\ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ square.status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}};}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ square.isPrintPreVal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ size;\ i\ <\ squaresSize;\ ++i)}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{Square::Status::inactive}};}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}[size\ -\/\ 1].title\ =\ \textcolor{stringliteral}{"{}n"{}};}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00184\ \ \ \ \ \}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ size\ -\/\ 1;\ i\ >=\ chosenNode;\ -\/-\/i)\ \{}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}\ =\ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}();}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square:\ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}})\ \{}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ square.status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}};}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ square.isPrintPreVal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ size;\ j\ <\ squaresSize;\ ++j)}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}[j].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{Square::Status::inactive}};}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}[size\ -\/\ 1].title\ =\ \textcolor{stringliteral}{"{}n"{}};}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ for\ (\textcolor{keywordtype}{int}\ j\ =\ size\ -\/\ 1;\ j\ >\ i;\ -\/-\/j)}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}[j].isPrintPreVal\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbaca071943e5acd1c8bcfbe0d2ee36fec2}{Square::Status::chosen}};}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i].isPrintPreVal\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ >\ chosenNode)}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i\ -\/\ 1].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbaca071943e5acd1c8bcfbe0d2ee36fec2}{Square::Status::chosen}};}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00207\ \ \ \ \ \}}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordflow}{return}\ events;}
+\DoxyCodeLine{00210\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classStaticArrayScene_a70187f0699e67a23bf3f15e8b7d68137}\label{classStaticArrayScene_a70187f0699e67a23bf3f15e8b7d68137}} 
+\index{StaticArrayScene@{StaticArrayScene}!deleteModeEvents@{deleteModeEvents}}
+\index{deleteModeEvents@{deleteModeEvents}!StaticArrayScene@{StaticArrayScene}}
+\doxysubsubsection{\texorpdfstring{deleteModeEvents()}{deleteModeEvents()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ Static\+Array\+Scene\+::delete\+Mode\+Events (\begin{DoxyParamCaption}\item[{int}]{chosen\+Node }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{StaticArrayScene_8cpp_source_l00212}{212}} of file \mbox{\hyperlink{StaticArrayScene_8cpp_source}{Static\+Array\+Scene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00213\ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_a58bdbe3ada4bc219b09370bb63c7d6e8}{resetEvents}}();}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenNode\ <\ 0\ ||\ chosenNode\ >=\ this-\/>array-\/>\mbox{\hyperlink{classArray_af29bf627de157570d00c700773884e20}{getSize}}())}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\};}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{comment}{//\ init\ highlighter}}
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{comment}{//\ ...}}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordtype}{int}\ size\ =\ this-\/>array-\/>\mbox{\hyperlink{classArray_af29bf627de157570d00c700773884e20}{getSize}}(),}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ squaresSize\ =\ this-\/>array-\/>\mbox{\hyperlink{classArray_a42ea29579620b256e2a05f4c78b0ec40}{getSquaresSize}}();}
+\DoxyCodeLine{00222\ \ \ \ \ std::vector<EventAnimation>\ events;}
+\DoxyCodeLine{00223\ \textcolor{comment}{//\ \ \ \ events.reserve(100);}}
+\DoxyCodeLine{00224\ \ \ \ \ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}\ event;}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ chosenNode;\ i\ <\ size\ -\/\ 1;\ ++i)\ \{}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}\ =\ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}();}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&square\ :\ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}})\ \{}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ square.status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}};}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ square.isPrintPreVal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ size;\ j\ <\ squaresSize;\ ++j)}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}[j].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{Square::Status::inactive}};}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ for\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ i;\ ++j)}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}[j].isPrintPreVal\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbaca071943e5acd1c8bcfbe0d2ee36fec2}{Square::Status::chosen}};}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ for\ (\textcolor{keyword}{auto}\ \&square\ :\ event.\mbox{\hyperlink{classEventAnimation_adeb76c2aa1c630148e72c45e9f2228e8}{eventSquaresTemp}})}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ square.status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba662f707d5491e9bce8238a6c0be92190}{Square::Status::hidden}};}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[size\ -\/\ 1].title\ =\ \textcolor{stringliteral}{"{}n"{}};}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i].isPrintPreVal\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i\ +\ 1].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbaca071943e5acd1c8bcfbe0d2ee36fec2}{Square::Status::chosen}};}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00248\ \ \ \ \ \}}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keyword}{event}\ =\ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}();}
+\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keyword}{event}.eventSquares.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00252\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ size\ -\/\ 1;\ ++i)\ \{}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}};}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ size\ -\/\ 2)}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i].title\ =\ \textcolor{stringliteral}{"{}n"{}};}
+\DoxyCodeLine{00256\ \ \ \ \ \}}
+\DoxyCodeLine{00257\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ size\ -\/\ 1;\ i\ <\ squaresSize;\ ++i)}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ event.\mbox{\hyperlink{classEventAnimation_a283b3b1ca8e7cd1dcc0979950b9d0ed7}{eventSquares}}[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefba19d3894f53ce79c3f836f26cf8a3be3b}{Square::Status::inactive}};}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00260\ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00262\ \ \ \ \ \textcolor{keywordflow}{return}\ events;}
+\DoxyCodeLine{00263\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classStaticArrayScene_a2793f1182dd1d6dd4ea5506246074ede}\label{classStaticArrayScene_a2793f1182dd1d6dd4ea5506246074ede}} 
+\index{StaticArrayScene@{StaticArrayScene}!pollEvent@{pollEvent}}
+\index{pollEvent@{pollEvent}!StaticArrayScene@{StaticArrayScene}}
+\doxysubsubsection{\texorpdfstring{pollEvent()}{pollEvent()}}
+{\footnotesize\ttfamily void Static\+Array\+Scene\+::poll\+Event (\begin{DoxyParamCaption}\item[{sf\+::\+Event}]{event,  }\item[{sf\+::\+Vector2f}]{mouse\+Pos\+View }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classBaseScene_a16dd70d07399fc63d7a3e29fbac516cf}{Base\+Scene}}.
+
+
+
+Definition at line \mbox{\hyperlink{StaticArrayScene_8cpp_source_l00127}{127}} of file \mbox{\hyperlink{StaticArrayScene_8cpp_source}{Static\+Array\+Scene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classBaseScene_ad250cff3475ec4b590afe5ac70597746}{isMenuOpen}})}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a43c0186f8b2cc58d20b9a6b25407e37a}{pollEvents}}(event,\ mousePosView);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_a9eedcf8b9c4a81624caa4af8fcb35abc}{pollEvents}}(event,\ mousePosView);}
+\DoxyCodeLine{00132\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classStaticArrayScene_ae272d942cd61306c044a7be56b55b422}\label{classStaticArrayScene_ae272d942cd61306c044a7be56b55b422}} 
+\index{StaticArrayScene@{StaticArrayScene}!render@{render}}
+\index{render@{render}!StaticArrayScene@{StaticArrayScene}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Static\+Array\+Scene\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classBaseScene_a18694189ddd54cb279e1814869dbe854}{Base\+Scene}}.
+
+
+
+Definition at line \mbox{\hyperlink{StaticArrayScene_8cpp_source_l00116}{116}} of file \mbox{\hyperlink{StaticArrayScene_8cpp_source}{Static\+Array\+Scene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classBaseScene_ad250cff3475ec4b590afe5ac70597746}{isMenuOpen}})}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a385fb96e1efd05928ba59fd5028720bb}{render}}();}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classBaseScene_ae6e22961b8642440a160df8723363afa}{isDemoCodeOpen}})}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_a2b56d7d580c8afd16c60ac37c8ddc273}{renderHighlighter}}();}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_a346df0390bcdb72dd7ceadaa146106a0}{render}}();}
+\DoxyCodeLine{00124\ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_a3f3a0d69e6f1a592715d39fb393a980d}{render}}();}
+\DoxyCodeLine{00125\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classStaticArrayScene_af11a29d2439171ddca199e0a3d698c4f}\label{classStaticArrayScene_af11a29d2439171ddca199e0a3d698c4f}} 
+\index{StaticArrayScene@{StaticArrayScene}!reset@{reset}}
+\index{reset@{reset}!StaticArrayScene@{StaticArrayScene}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Static\+Array\+Scene\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{StaticArrayScene_8cpp_source_l00139}{139}} of file \mbox{\hyperlink{StaticArrayScene_8cpp_source}{Static\+Array\+Scene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00140\ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a56b86d1994e569bf023b0caa49f27585}{resetActiveOptionMenu}}();}
+\DoxyCodeLine{00141\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classStaticArrayScene_a989be0bcbb64f9e74f02f0593c7458ca}\label{classStaticArrayScene_a989be0bcbb64f9e74f02f0593c7458ca}} 
+\index{StaticArrayScene@{StaticArrayScene}!searchModeEvents@{searchModeEvents}}
+\index{searchModeEvents@{searchModeEvents}!StaticArrayScene@{StaticArrayScene}}
+\doxysubsubsection{\texorpdfstring{searchModeEvents()}{searchModeEvents()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ Static\+Array\+Scene\+::search\+Mode\+Events (\begin{DoxyParamCaption}\item[{int}]{chosen\+Node }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{StaticArrayScene_8cpp_source_l00295}{295}} of file \mbox{\hyperlink{StaticArrayScene_8cpp_source}{Static\+Array\+Scene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00296\ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_a58bdbe3ada4bc219b09370bb63c7d6e8}{resetEvents}}();}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00298\ \ \ \ \ \textcolor{comment}{//\ init\ highlighter}}
+\DoxyCodeLine{00299\ \ \ \ \ \textcolor{comment}{//\ ...}}
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00301\ \ \ \ \ \textcolor{keywordtype}{int}\ size\ =\ this-\/>array-\/>\mbox{\hyperlink{classArray_af29bf627de157570d00c700773884e20}{getSize}}(),}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ squaresSize\ =\ this-\/>array-\/>\mbox{\hyperlink{classArray_a42ea29579620b256e2a05f4c78b0ec40}{getSquaresSize}}();}
+\DoxyCodeLine{00303\ \ \ \ \ std::vector<EventAnimation>\ events;}
+\DoxyCodeLine{00304\ \ \ \ \ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}\ event;}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00306\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ chosenNode;\ ++i)\ \{}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ size)\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}\ =\ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}();}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ size;\ ++j)\ \{}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[j].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}};}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (j\ ==\ size\ -\/\ 1)}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[size\ -\/\ 1].title\ =\ \textcolor{stringliteral}{"{}n"{}};}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbaca071943e5acd1c8bcfbe0d2ee36fec2}{Square::Status::chosen}};}
+\DoxyCodeLine{00317\ }
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00319\ \ \ \ \ \}}
+\DoxyCodeLine{00320\ }
+\DoxyCodeLine{00321\ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenNode\ ==\ size)\ \{}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}\ =\ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}();}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares.assign(squaresSize,\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ size;\ ++j)\ \{}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[j].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}};}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (j\ ==\ size\ -\/\ 1)}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[size\ -\/\ 1].title\ =\ \textcolor{stringliteral}{"{}n"{}};}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00329\ }
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00331\ \ \ \ \ \}}
+\DoxyCodeLine{00332\ }
+\DoxyCodeLine{00333\ \ \ \ \ \textcolor{keywordflow}{return}\ events;}
+\DoxyCodeLine{00334\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classStaticArrayScene_ac4fb24587fff4201fdcf01e28ee7a238}\label{classStaticArrayScene_ac4fb24587fff4201fdcf01e28ee7a238}} 
+\index{StaticArrayScene@{StaticArrayScene}!update@{update}}
+\index{update@{update}!StaticArrayScene@{StaticArrayScene}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Static\+Array\+Scene\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classBaseScene_a269667611675475435d876e0f8f26a79}{Base\+Scene}}.
+
+
+
+Definition at line \mbox{\hyperlink{StaticArrayScene_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{StaticArrayScene_8cpp_source}{Static\+Array\+Scene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classBaseScene_ad250cff3475ec4b590afe5ac70597746}{isMenuOpen}})\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a012da56e42d7d804eb5a41b797efe002}{update}}();}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_a61dd107410ce3295fffb7071abcf5266}{constants::MenuArray::Button}}\ status\ =\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a2491c2d04c38f48ae8f1ac1f96351b9f}{getActiveOptionMenu}}();}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_1_1CreateMode_a0d8c7d8013f2920c995917895fb5cc7a}{constants::MenuArray::CreateMode::Button}}\ createMode;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (status)\{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_a61dd107410ce3295fffb7071abcf5266a8776853762bbffcae8104dd042792cf8}{constants::MenuArray::Button::CREATE\_BUTTON}}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ createMode\ =\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_ad61bdce4bf4159aa9f8d45e4750b484e}{getActiveCreateMode}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (createMode\ ==\ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_1_1CreateMode_a0d8c7d8013f2920c995917895fb5cc7aae88677ce24d2ef57958052069e8127d9}{constants::MenuArray::CreateMode::Button::RANDOM\_BUTTON}})\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a59f9f7db86933c7bbe1f826632a763e2}{createModeValue}}[0]\ ==\ \textcolor{stringliteral}{"{}None"{}})}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a59f9f7db86933c7bbe1f826632a763e2}{createModeValue}}[0].empty())}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a59f9f7db86933c7bbe1f826632a763e2}{createModeValue}}[0]\ =\ \textcolor{stringliteral}{"{}0"{}};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ size\ =\ std::stoi(this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a59f9f7db86933c7bbe1f826632a763e2}{createModeValue}}[0]);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_af3e9bb41814faaafb3c9738727945b3e}{createArray}}(size);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (createMode\ ==\ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_1_1CreateMode_a0d8c7d8013f2920c995917895fb5cc7aab7e446540198cc2ac8048bf21bc098f0}{constants::MenuArray::CreateMode::Button::DEFINED\_LIST\_BUTTON}})\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a59f9f7db86933c7bbe1f826632a763e2}{createModeValue}}[1]\ ==\ \textcolor{stringliteral}{"{}None"{}})}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::string>\ values;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ value\ =\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a59f9f7db86933c7bbe1f826632a763e2}{createModeValue}}[1];}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss(value);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ token;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(ss,\ token,\ \textcolor{charliteral}{','}))\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ values.push\_back(token);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_af3e9bb41814faaafb3c9738727945b3e}{createArray}}(values);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (createMode\ ==\ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_1_1CreateMode_a0d8c7d8013f2920c995917895fb5cc7aa5b7c587cd33ef161b176d0dd77f0d9f5}{constants::MenuArray::CreateMode::Button::FILE\_BUTTON}})\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a59f9f7db86933c7bbe1f826632a763e2}{createModeValue}}[2]\ ==\ \textcolor{stringliteral}{"{}None"{}})}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::string>\ values;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ value\ =\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a59f9f7db86933c7bbe1f826632a763e2}{createModeValue}}[2];}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss(value);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ token;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(ss,\ token,\ \textcolor{charliteral}{','}))}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ values.push\_back(token);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_af3e9bb41814faaafb3c9738727945b3e}{createArray}}(values);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a59f9f7db86933c7bbe1f826632a763e2}{createModeValue}}[2]\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_aba74ca399ce895872523dba9ddfe93ee}{reset}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_a61dd107410ce3295fffb7071abcf5266a196b71869a2200f5fdd04f89543ce723}{constants::MenuArray::Button::ADD\_BUTTON}}:}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a426976f568441714676a26a0e10ca822}{addModeValue}}[0]\ ==\ \textcolor{stringliteral}{"{}None"{}}\ ||\ this-\/>menu-\/>addModeValue[1]\ ==\ \textcolor{stringliteral}{"{}None"{}}\ ||\ this-\/>menu-\/>addModeValue[0].empty())}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_a213fc0dd6b4cad929539e3a0f46f7a20}{addSquare}}(}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::stoi(this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a426976f568441714676a26a0e10ca822}{addModeValue}}[0]),}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>addModeValue[1],}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>addModeEvents(std::stoi(this-\/>menu-\/>addModeValue[0]))}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Add:\ "{}}\ <<\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a426976f568441714676a26a0e10ca822}{addModeValue}}[0]\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a426976f568441714676a26a0e10ca822}{addModeValue}}[1]\ <<\ std::endl;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a426976f568441714676a26a0e10ca822}{addModeValue}}[0]\ =\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a426976f568441714676a26a0e10ca822}{addModeValue}}[1]\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_aba74ca399ce895872523dba9ddfe93ee}{reset}}();}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_a61dd107410ce3295fffb7071abcf5266abb34ee3ad1a7adbb1ceeb18f6a5c0601}{constants::MenuArray::Button::DELETE\_BUTTON}}:}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a0bd921f7ed6880c65fb4e9ccbb4ab9d9}{deleteModeValue}}\ ==\ \textcolor{stringliteral}{"{}None"{}}\ ||\ this-\/>menu-\/>deleteModeValue.empty())}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_af281eaede82367ce6d96f653987a0d9d}{deleteSquare}}(}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::stoi(this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a0bd921f7ed6880c65fb4e9ccbb4ab9d9}{deleteModeValue}}),}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>deleteModeEvents(std::stoi(this-\/>menu-\/>deleteModeValue))}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Delete:\ "{}}\ <<\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a0bd921f7ed6880c65fb4e9ccbb4ab9d9}{deleteModeValue}}\ <<\ std::endl;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a0bd921f7ed6880c65fb4e9ccbb4ab9d9}{deleteModeValue}}\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_aba74ca399ce895872523dba9ddfe93ee}{reset}}();}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_a61dd107410ce3295fffb7071abcf5266ae82b8080a43035aa60a5d210f8d9ad49}{constants::MenuArray::Button::UPDATE\_BUTTON}}:}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a45d6b4d74c1629e5577f20f8c5834084}{updateModeValue}}[0]\ ==\ \textcolor{stringliteral}{"{}None"{}}\ ||\ this-\/>menu-\/>updateModeValue[1]\ ==\ \textcolor{stringliteral}{"{}None"{}}\ ||\ this-\/>menu-\/>updateModeValue[0].empty())}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_a1e01a39255e4a4c2e8bc5eacd73f5d09}{updateSquare}}(}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::stoi(this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a45d6b4d74c1629e5577f20f8c5834084}{updateModeValue}}[0]),}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>updateModeValue[1],}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>updateModeEvents(std::stoi(this-\/>menu-\/>updateModeValue[0]))}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Update:\ "{}}\ <<\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a45d6b4d74c1629e5577f20f8c5834084}{updateModeValue}}[0]\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a45d6b4d74c1629e5577f20f8c5834084}{updateModeValue}}[1]\ <<\ std::endl;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a45d6b4d74c1629e5577f20f8c5834084}{updateModeValue}}[0]\ =\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a45d6b4d74c1629e5577f20f8c5834084}{updateModeValue}}[1]\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_aba74ca399ce895872523dba9ddfe93ee}{reset}}();}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceconstants_1_1MenuArray_a61dd107410ce3295fffb7071abcf5266a2d70d3d4f72e5258d8d000ee5e9c98b7}{constants::MenuArray::Button::SEARCH\_BUTTON}}:}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a4fd3f92582bf6ec6fc502d7018c96778}{searchModeValue}}\ ==\ \textcolor{stringliteral}{"{}None"{}}\ ||\ this-\/>menu-\/>searchModeValue.empty())}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_acce4352a141aacea237885502c683f8e}{searchSquare}}(}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classStaticArrayScene_a989be0bcbb64f9e74f02f0593c7458ca}{searchModeEvents}}(this-\/>array-\/>\mbox{\hyperlink{classArray_af38c67dacbb820df863adcc6131adbd9}{findValue}}(this-\/>menu-\/>searchModeValue))}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Search:\ "{}}\ <<\ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a4fd3f92582bf6ec6fc502d7018c96778}{searchModeValue}}\ <<\ std::endl;}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>menu-\/>\mbox{\hyperlink{classMenuArray_a4fd3f92582bf6ec6fc502d7018c96778}{searchModeValue}}\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_aba74ca399ce895872523dba9ddfe93ee}{reset}}();}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_a1fcdb91b3d4e46cb654b0932cf559875}{update}}();}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_aecb58e71b5738a9640da6111afc1b6f1}{processControlMenu}}(this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_ab1f57c8606e2fad4a761e4354615b633}{getStatus}}());}
+\DoxyCodeLine{00111\ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_a9a82f3b72cffa977e6ccf208cb2c279b}{setSpeed}}(this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}-\/>\mbox{\hyperlink{classControlMenu_a329b3e7726e76a9e59ee9c02a5013ae6}{getSpeed}}());}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_a48660d225d7783cbf7b9eeb3ad988da6}{update}}();}
+\DoxyCodeLine{00114\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classStaticArrayScene_a8b1dd8ee49a9f761102f008a0036ea48}\label{classStaticArrayScene_a8b1dd8ee49a9f761102f008a0036ea48}} 
+\index{StaticArrayScene@{StaticArrayScene}!updateModeEvents@{updateModeEvents}}
+\index{updateModeEvents@{updateModeEvents}!StaticArrayScene@{StaticArrayScene}}
+\doxysubsubsection{\texorpdfstring{updateModeEvents()}{updateModeEvents()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ Static\+Array\+Scene\+::update\+Mode\+Events (\begin{DoxyParamCaption}\item[{int}]{chosen\+Node }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{StaticArrayScene_8cpp_source_l00265}{265}} of file \mbox{\hyperlink{StaticArrayScene_8cpp_source}{Static\+Array\+Scene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00266\ \ \ \ \ this-\/>array-\/>\mbox{\hyperlink{classArray_a58bdbe3ada4bc219b09370bb63c7d6e8}{resetEvents}}();}
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenNode\ <\ 0\ ||\ chosenNode\ >=\ this-\/>array-\/>\mbox{\hyperlink{classArray_af29bf627de157570d00c700773884e20}{getSize}}())}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\};}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ \ \ \ \ \textcolor{comment}{//\ init\ highlighter}}
+\DoxyCodeLine{00271\ \ \ \ \ \textcolor{comment}{//\ ...}}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00273\ \ \ \ \ std::vector<EventAnimation>\ events;}
+\DoxyCodeLine{00274\ \ \ \ \ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}\ event;}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ \ \ \ \ \textcolor{keyword}{event}\ =\ \mbox{\hyperlink{classEventAnimation}{EventAnimation}}();}
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{keyword}{event}.eventSquares.assign(this-\/>array-\/>\mbox{\hyperlink{classArray_a42ea29579620b256e2a05f4c78b0ec40}{getSquaresSize}}(),\ \mbox{\hyperlink{structEventSquare}{EventSquare}}());}
+\DoxyCodeLine{00278\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this-\/>array-\/>\mbox{\hyperlink{classArray_af29bf627de157570d00c700773884e20}{getSize}}();\ ++i)\ \{}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[i].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbac76a5e84e4bdee527e274ea30c680d79}{Square::Status::active}};}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ this-\/>array-\/>\mbox{\hyperlink{classArray_af29bf627de157570d00c700773884e20}{getSize}}()\ -\/\ 1)}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}.eventSquares[this-\/>array-\/>\mbox{\hyperlink{classArray_af29bf627de157570d00c700773884e20}{getSize}}()\ -\/\ 1].title\ =\ \textcolor{stringliteral}{"{}n"{}};}
+\DoxyCodeLine{00282\ \ \ \ \ \}}
+\DoxyCodeLine{00283\ \ \ \ \ \textcolor{keyword}{event}.eventSquares[chosenNode].status\ =\ \mbox{\hyperlink{classSquare_a5a8089f9e473e3112b0ac0adb721eefbaca071943e5acd1c8bcfbe0d2ee36fec2}{Square::Status::chosen}};}
+\DoxyCodeLine{00284\ \ \ \ \ \textcolor{keyword}{event}.eventSquares[chosenNode].isPrintPreVal\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00286\ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00288\ \ \ \ \ \textcolor{keyword}{event}.eventSquares[chosenNode].isPrintPreVal\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00290\ \ \ \ \ events.emplace\_back(event);}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00292\ \ \ \ \ \textcolor{keywordflow}{return}\ events;}
+\DoxyCodeLine{00293\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/lib\+Scene/\mbox{\hyperlink{StaticArrayScene_8hpp}{Static\+Array\+Scene.\+hpp}}\item 
+include/lib\+Scene/\mbox{\hyperlink{StaticArrayScene_8cpp}{Static\+Array\+Scene.\+cpp}}\end{DoxyCompactItemize}

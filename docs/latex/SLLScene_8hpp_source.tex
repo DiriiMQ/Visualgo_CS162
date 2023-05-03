@@ -1,0 +1,40 @@
+\hypertarget{SLLScene_8hpp_source}{}\doxysection{SLLScene.\+hpp}
+\label{SLLScene_8hpp_source}\index{include/libScene/SLLScene.hpp@{include/libScene/SLLScene.hpp}}
+\mbox{\hyperlink{SLLScene_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ dirii\ on\ 26/03/2023.}}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#ifndef\ VISUALGO\_CS162\_SLLSCENE\_HPP}}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#define\ VISUALGO\_CS162\_SLLSCENE\_HPP}}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{BaseScene_8hpp}{BaseScene.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{MenuLinkedList_8hpp}{MenuLinkedList.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{LinkedList_8hpp}{core/LinkedList.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00012}\mbox{\hyperlink{classSLLScene}{00012}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSLLScene}{SLLScene}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBaseScene}{BaseScene}}\ \{}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00013}00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00014}00014\ \ \ \ \ \mbox{\hyperlink{classMenuLinkedList}{MenuLinkedList}}*\ menu;}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00015}00015\ \ \ \ \ \mbox{\hyperlink{classLinkedList}{LinkedList}}*\ linkedList;}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordtype}{void}\ init();}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00019}00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classSLLScene}{SLLScene}}(sf::RenderWindow*\ \mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}});}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSLLScene_aba0a1fefb064285972afc5d3bba934f0}{reset}}();}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSLLScene_a605c80b79628556e9b2e0d9444804e65}{pollEvent}}(sf::Event\ event,\ sf::Vector2f\ mousePosView)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSLLScene_a353bbab8ef95b94d7b4b16cfaa9b9247}{update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSLLScene_abb904f9012ca04d0a3b2faabcb6240ce}{render}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00028}00028\ \ \ \ \ std::vector<EventAnimation>\ \mbox{\hyperlink{classSLLScene_a49dc5fd260bd7f02e37adf2bddbe36a7}{addModeEvents}}(\textcolor{keywordtype}{int}\ chosenNode);}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00029}00029\ \ \ \ \ std::vector<EventAnimation>\ \mbox{\hyperlink{classSLLScene_a0d7c47579abd3553867db89289c569a9}{deleteModeEvents}}(\textcolor{keywordtype}{int}\ chosenNode);}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00030}00030\ \ \ \ \ std::vector<EventAnimation>\ \mbox{\hyperlink{classSLLScene_ae0e251f410d734f724416d04e5e38938}{updateModeEvents}}(\textcolor{keywordtype}{int}\ chosenNode);}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00031}00031\ \ \ \ \ std::vector<EventAnimation>\ \mbox{\hyperlink{classSLLScene_a75af6df8b9fd4004bb7ab1fd7548f71a}{searchModeEvents}}(\textcolor{keywordtype}{int}\ chosenNode);}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00032}00032\ \};}
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{SLLScene_8hpp_source_l00034}00034\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//VISUALGO\_CS162\_SLLSCENE\_HPP}}
+
+\end{DoxyCode}

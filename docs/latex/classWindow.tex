@@ -1,0 +1,222 @@
+\hypertarget{classWindow}{}\doxysection{Window Class Reference}
+\label{classWindow}\index{Window@{Window}}
+
+
+{\ttfamily \#include $<$Window.\+hpp$>$}
+
+Inheritance diagram for Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classWindow}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWindow_a74e6087da23d3c24e9fac0245e5ec92c}{Window}} ()
+\item 
+\mbox{\hyperlink{classWindow_adc361d2d83c3531576b0d7bc1589cdfb}{$\sim$\+Window}} ()=default
+\item 
+const bool \mbox{\hyperlink{classWindow_ae757b932000b466adead23388fc9f53c}{running}} () const
+\item 
+void \mbox{\hyperlink{classWindow_a5abb541ee62c814dc7a7037140af7e8f}{poll\+Event}} ()
+\item 
+void \mbox{\hyperlink{classWindow_a59515fc5a56e86d5a46d771595daac55}{update}} ()
+\item 
+void \mbox{\hyperlink{classWindow_a0a2093bd2ed34740c08a6a2fdfc059c9}{render}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMousePosition}{Mouse\+Position}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMousePosition_a2badbd78fa838f10c717ff338a89ced3}{update\+Mouse\+Position}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{classMousePosition}{Mouse\+Position}}}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Render\+Window $\ast$ \mbox{\hyperlink{classMousePosition_a158113223f148e1d192cf1bd8f17115f}{relative\+Window}}
+\item 
+sf\+::\+Vector2i \mbox{\hyperlink{classMousePosition_ad974371ed87d4584c1a028dbf5e41112}{mouse\+Pos}}
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classMousePosition_ad99cb9a70c3e17f197beef8a36849d3c}{mouse\+Pos\+View}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{Window_8hpp_source_l00015}{15}} of file \mbox{\hyperlink{Window_8hpp_source}{Window.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWindow_a74e6087da23d3c24e9fac0245e5ec92c}\label{classWindow_a74e6087da23d3c24e9fac0245e5ec92c}} 
+\index{Window@{Window}!Window@{Window}}
+\index{Window@{Window}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}}
+{\footnotesize\ttfamily Window\+::\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Window_8cpp_source_l00050}{50}} of file \mbox{\hyperlink{Window_8cpp_source}{Window.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ this-\/>initWindow();}
+\DoxyCodeLine{00052\ \ \ \ \ this-\/>initScenes();}
+\DoxyCodeLine{00053\ \ \ \ \ this-\/>init();}
+\DoxyCodeLine{00054\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classWindow_adc361d2d83c3531576b0d7bc1589cdfb}\label{classWindow_adc361d2d83c3531576b0d7bc1589cdfb}} 
+\index{Window@{Window}!````~Window@{$\sim$Window}}
+\index{````~Window@{$\sim$Window}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{$\sim$Window()}{~Window()}}
+{\footnotesize\ttfamily Window\+::$\sim$\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWindow_a5abb541ee62c814dc7a7037140af7e8f}\label{classWindow_a5abb541ee62c814dc7a7037140af7e8f}} 
+\index{Window@{Window}!pollEvent@{pollEvent}}
+\index{pollEvent@{pollEvent}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{pollEvent()}{pollEvent()}}
+{\footnotesize\ttfamily void Window\+::poll\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Window_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{Window_8cpp_source}{Window.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//\ event\ polling}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordflow}{while}\ (this-\/>window-\/>pollEvent(this-\/>event))\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (this-\/>event.type)\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ sf::Event::Closed:}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>window-\/>close();}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ sf::Event::KeyPressed:}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>event.key.code\ ==\ sf::Keyboard::Q)\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}You\ have\ pressed\ Q!\(\backslash\)n"{}};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>event.key.code\ ==\ sf::Keyboard::W)\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}You\ have\ pressed\ W!\(\backslash\)n"{}};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>submenuButton-\/>\mbox{\hyperlink{classButton_adb6ba11ef7c454ac0aabf2120ac85d7a}{pollEvent}}(this-\/>mousePosView))\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}You\ have\ clicked\ on\ submenu\ button!\(\backslash\)n"{}};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>scenes[this-\/>currentScene]-\/>\mbox{\hyperlink{classBaseScene_ad250cff3475ec4b590afe5ac70597746}{isMenuOpen}}\ =\ (this-\/>submenuButton-\/>\mbox{\hyperlink{classButton_ae667eb964e0180276e0c74141e2bce9b}{getTextString}}()\ ==\ \textcolor{stringliteral}{"{}<"{}});}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>demoCodeButton-\/>\mbox{\hyperlink{classButton_adb6ba11ef7c454ac0aabf2120ac85d7a}{pollEvent}}(this-\/>mousePosView))\ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}You\ have\ clicked\ on\ demo\ code\ button!\(\backslash\)n"{}};}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>scenes[this-\/>currentScene]-\/>\mbox{\hyperlink{classBaseScene_ae6e22961b8642440a160df8723363afa}{isDemoCodeOpen}}\ =\ (this-\/>demoCodeButton-\/>\mbox{\hyperlink{classButton_ae667eb964e0180276e0c74141e2bce9b}{getTextString}}()\ ==\ \textcolor{stringliteral}{"{}>"{}});}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ \mbox{\hyperlink{namespaceconstants_1_1sceneVariables_a5e816797d00e731037893b66f74bdb5f}{constants::sceneVariables::SCENE\_COUNT}};\ i++)\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>scenes[i]-\/>modeButton-\/>pollEvent(this-\/>mousePosView))\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}You\ have\ clicked\ on\ "{}}\ <<\ \mbox{\hyperlink{namespaceconstants_1_1sceneVariables_ad0306e27f0ff4f96d1beaecb80874a01}{constants::sceneVariables::SCENE\_NAMES}}[i]\ <<\ \textcolor{stringliteral}{"{}\ scene!\(\backslash\)n"{}};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>currentScene\ =\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespaceconstants_1_1sceneVariables_acaca02ed9c2f43eff4ef7dd61d693a8f}{constants::sceneVariables::Scene}}\textcolor{keyword}{>}(i);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>scenes[this-\/>currentScene]-\/>\mbox{\hyperlink{classBaseScene_ad250cff3475ec4b590afe5ac70597746}{isMenuOpen}}\ =\ (this-\/>submenuButton-\/>\mbox{\hyperlink{classButton_ae667eb964e0180276e0c74141e2bce9b}{getTextString}}()\ ==\ \textcolor{stringliteral}{"{}<"{}});}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>scenes[this-\/>currentScene]-\/>\mbox{\hyperlink{classBaseScene_ae6e22961b8642440a160df8723363afa}{isDemoCodeOpen}}\ =\ (this-\/>demoCodeButton-\/>\mbox{\hyperlink{classButton_ae667eb964e0180276e0c74141e2bce9b}{getTextString}}()\ ==\ \textcolor{stringliteral}{"{}>"{}});}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ this-\/>scenes[this-\/>currentScene]-\/>\mbox{\hyperlink{classBaseScene_a16dd70d07399fc63d7a3e29fbac516cf}{pollEvent}}(this-\/>event,\ this-\/>\mbox{\hyperlink{classMousePosition_ad99cb9a70c3e17f197beef8a36849d3c}{mousePosView}});}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classWindow_a0a2093bd2ed34740c08a6a2fdfc059c9}\label{classWindow_a0a2093bd2ed34740c08a6a2fdfc059c9}} 
+\index{Window@{Window}!render@{render}}
+\index{render@{render}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Window\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Window_8cpp_source_l00119}{119}} of file \mbox{\hyperlink{Window_8cpp_source}{Window.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00121\ \textcolor{comment}{\ *\ clear\ old\ frames}}
+\DoxyCodeLine{00122\ \textcolor{comment}{\ *\ create\ objects}}
+\DoxyCodeLine{00123\ \textcolor{comment}{\ *\ display\ it}}
+\DoxyCodeLine{00124\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ this-\/>window-\/>clear(sf::Color::White);}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{//\ drawing\ game}}
+\DoxyCodeLine{00129\ \ \ \ \ this-\/>submenuButton-\/>\mbox{\hyperlink{classButton_add4daea65a908027aa5a1593305b9656}{render}}();}
+\DoxyCodeLine{00130\ \ \ \ \ this-\/>demoCodeButton-\/>\mbox{\hyperlink{classButton_add4daea65a908027aa5a1593305b9656}{render}}();}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ \mbox{\hyperlink{namespaceconstants_1_1sceneVariables_a5e816797d00e731037893b66f74bdb5f}{constants::sceneVariables::SCENE\_COUNT}};\ i++)\ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ this-\/>scenes[i]-\/>\mbox{\hyperlink{classBaseScene_acbfb2074648ed5f471ef8e46a60af885}{modeButton}}-\/>\mbox{\hyperlink{classButton_add4daea65a908027aa5a1593305b9656}{render}}();}
+\DoxyCodeLine{00133\ \ \ \ \ \}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ this-\/>scenes[this-\/>currentScene]-\/>\mbox{\hyperlink{classBaseScene_a18694189ddd54cb279e1814869dbe854}{render}}();}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ this-\/>window-\/>display();}
+\DoxyCodeLine{00138\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classWindow_ae757b932000b466adead23388fc9f53c}\label{classWindow_ae757b932000b466adead23388fc9f53c}} 
+\index{Window@{Window}!running@{running}}
+\index{running@{running}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{running()}{running()}}
+{\footnotesize\ttfamily const bool Window\+::running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{Window_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{Window_8cpp_source}{Window.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>window-\/>isOpen();}
+\DoxyCodeLine{00058\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classWindow_a59515fc5a56e86d5a46d771595daac55}\label{classWindow_a59515fc5a56e86d5a46d771595daac55}} 
+\index{Window@{Window}!update@{update}}
+\index{update@{update}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Window\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Window_8cpp_source_l00102}{102}} of file \mbox{\hyperlink{Window_8cpp_source}{Window.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ this-\/>scenes[this-\/>currentScene]-\/>\mbox{\hyperlink{classBaseScene_acbfb2074648ed5f471ef8e46a60af885}{modeButton}}-\/>\mbox{\hyperlink{classButton_a03ef92527b48359feff925347c478dab}{setColor}}(constants::normalGray);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ this-\/>\mbox{\hyperlink{classMousePosition_a2badbd78fa838f10c717ff338a89ced3}{updateMousePosition}}();}
+\DoxyCodeLine{00106\ \ \ \ \ this-\/>\mbox{\hyperlink{classWindow_a5abb541ee62c814dc7a7037140af7e8f}{pollEvent}}();}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ this-\/>submenuButton-\/>\mbox{\hyperlink{classButton_ad8e030c1c8846d43f3126047d4a3667f}{update}}();}
+\DoxyCodeLine{00109\ \ \ \ \ this-\/>demoCodeButton-\/>\mbox{\hyperlink{classButton_ad8e030c1c8846d43f3126047d4a3667f}{update}}();}
+\DoxyCodeLine{00110\ \ \ \ \ this-\/>scenes[this-\/>currentScene]-\/>\mbox{\hyperlink{classBaseScene_acbfb2074648ed5f471ef8e46a60af885}{modeButton}}-\/>\mbox{\hyperlink{classButton_a03ef92527b48359feff925347c478dab}{setColor}}(\mbox{\hyperlink{namespaceconstants_afa6bcc7325b3affd5ecc08a18bcd0d7b}{constants::hoverGreen}});}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ \mbox{\hyperlink{namespaceconstants_1_1sceneVariables_a5e816797d00e731037893b66f74bdb5f}{constants::sceneVariables::SCENE\_COUNT}};\ i++)\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ this-\/>scenes[i]-\/>\mbox{\hyperlink{classBaseScene_acbfb2074648ed5f471ef8e46a60af885}{modeButton}}-\/>\mbox{\hyperlink{classButton_ad8e030c1c8846d43f3126047d4a3667f}{update}}();}
+\DoxyCodeLine{00114\ \ \ \ \ \}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ this-\/>scenes[this-\/>currentScene]-\/>\mbox{\hyperlink{classBaseScene_a269667611675475435d876e0f8f26a79}{update}}();}
+\DoxyCodeLine{00117\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Window_8hpp}{Window.\+hpp}}\item 
+include/\mbox{\hyperlink{Window_8cpp}{Window.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,93 @@
+\hypertarget{classMousePosition}{}\doxysection{Mouse\+Position Class Reference}
+\label{classMousePosition}\index{MousePosition@{MousePosition}}
+
+
+{\ttfamily \#include $<$Mouse\+Position.\+hpp$>$}
+
+Inheritance diagram for Mouse\+Position\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMousePosition}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMousePosition_a2badbd78fa838f10c717ff338a89ced3}{update\+Mouse\+Position}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Render\+Window $\ast$ \mbox{\hyperlink{classMousePosition_a158113223f148e1d192cf1bd8f17115f}{relative\+Window}}
+\item 
+sf\+::\+Vector2i \mbox{\hyperlink{classMousePosition_ad974371ed87d4584c1a028dbf5e41112}{mouse\+Pos}}
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classMousePosition_ad99cb9a70c3e17f197beef8a36849d3c}{mouse\+Pos\+View}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{MousePosition_8hpp_source_l00010}{10}} of file \mbox{\hyperlink{MousePosition_8hpp_source}{Mouse\+Position.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMousePosition_a2badbd78fa838f10c717ff338a89ced3}\label{classMousePosition_a2badbd78fa838f10c717ff338a89ced3}} 
+\index{MousePosition@{MousePosition}!updateMousePosition@{updateMousePosition}}
+\index{updateMousePosition@{updateMousePosition}!MousePosition@{MousePosition}}
+\doxysubsubsection{\texorpdfstring{updateMousePosition()}{updateMousePosition()}}
+{\footnotesize\ttfamily void Mouse\+Position\+::update\+Mouse\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{MousePosition_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{MousePosition_8cpp_source}{Mouse\+Position.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00008\ \ \ \ \ this-\/>\mbox{\hyperlink{classMousePosition_ad974371ed87d4584c1a028dbf5e41112}{mousePos}}\ =\ sf::Mouse::getPosition(*this-\/>\mbox{\hyperlink{classMousePosition_a158113223f148e1d192cf1bd8f17115f}{relativeWindow}});}
+\DoxyCodeLine{00009\ \ \ \ \ this-\/>\mbox{\hyperlink{classMousePosition_ad99cb9a70c3e17f197beef8a36849d3c}{mousePosView}}\ =\ this-\/>\mbox{\hyperlink{classMousePosition_a158113223f148e1d192cf1bd8f17115f}{relativeWindow}}-\/>mapPixelToCoords(this-\/>\mbox{\hyperlink{classMousePosition_ad974371ed87d4584c1a028dbf5e41112}{mousePos}});}
+\DoxyCodeLine{00010\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classMousePosition_ad974371ed87d4584c1a028dbf5e41112}\label{classMousePosition_ad974371ed87d4584c1a028dbf5e41112}} 
+\index{MousePosition@{MousePosition}!mousePos@{mousePos}}
+\index{mousePos@{mousePos}!MousePosition@{MousePosition}}
+\doxysubsubsection{\texorpdfstring{mousePos}{mousePos}}
+{\footnotesize\ttfamily sf\+::\+Vector2i Mouse\+Position\+::mouse\+Pos\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MousePosition_8hpp_source_l00014}{14}} of file \mbox{\hyperlink{MousePosition_8hpp_source}{Mouse\+Position.\+hpp}}.
+
+\mbox{\Hypertarget{classMousePosition_ad99cb9a70c3e17f197beef8a36849d3c}\label{classMousePosition_ad99cb9a70c3e17f197beef8a36849d3c}} 
+\index{MousePosition@{MousePosition}!mousePosView@{mousePosView}}
+\index{mousePosView@{mousePosView}!MousePosition@{MousePosition}}
+\doxysubsubsection{\texorpdfstring{mousePosView}{mousePosView}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Mouse\+Position\+::mouse\+Pos\+View\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MousePosition_8hpp_source_l00015}{15}} of file \mbox{\hyperlink{MousePosition_8hpp_source}{Mouse\+Position.\+hpp}}.
+
+\mbox{\Hypertarget{classMousePosition_a158113223f148e1d192cf1bd8f17115f}\label{classMousePosition_a158113223f148e1d192cf1bd8f17115f}} 
+\index{MousePosition@{MousePosition}!relativeWindow@{relativeWindow}}
+\index{relativeWindow@{relativeWindow}!MousePosition@{MousePosition}}
+\doxysubsubsection{\texorpdfstring{relativeWindow}{relativeWindow}}
+{\footnotesize\ttfamily sf\+::\+Render\+Window$\ast$ Mouse\+Position\+::relative\+Window\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MousePosition_8hpp_source_l00012}{12}} of file \mbox{\hyperlink{MousePosition_8hpp_source}{Mouse\+Position.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{MousePosition_8hpp}{Mouse\+Position.\+hpp}}\item 
+include/\mbox{\hyperlink{MousePosition_8cpp}{Mouse\+Position.\+cpp}}\end{DoxyCompactItemize}

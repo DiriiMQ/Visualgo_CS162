@@ -1,0 +1,106 @@
+\hypertarget{button_8cpp_source}{}\doxysection{button.\+cpp}
+\label{button_8cpp_source}\index{include/stuff/button.cpp@{include/stuff/button.cpp}}
+\mbox{\hyperlink{button_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ dirii\ on\ 25/03/2023.}}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{button_8hpp}{button.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00009}00009\ \textcolor{keywordtype}{void}\ Button::init()\ \{}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00010}00010\ \ \ \ \ this-\/>isHover\ =\ this-\/>isClick\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00012}00012\ \ \ \ \ this-\/>button.\mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a6c768c97f3b1412f8b310c3c64b7cc91}{setSize}}(this-\/>size);}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00013}00013\ \ \ \ \ this-\/>button.setFillColor(this-\/>color);}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00014}00014\ \ \ \ \ this-\/>button.setPosition(this-\/>position);}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{comment}{//\ set\ rounded\ corners}}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00017}00017\ \ \ \ \ this-\/>button.\mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a2c390618b1f93fcd406018c0ed2eaa2f}{setCornerPointCount}}(constants::CORNER\_POINT\_COUNT\_BUTTON);}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00018}00018\ \ \ \ \ this-\/>button.\mbox{\hyperlink{classsf_1_1RoundedRectangleShape_a0ab2eff482d3a0a2444d8fa5178c4af4}{setCornersRadius}}(constants::CORNER\_RADIUS\_BUTTON);}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00021}00021\ \ \ \ \ this-\/>text.setFont(this-\/>font);}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00022}00022\ \ \ \ \ this-\/>text.setString(this-\/>textString);}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00023}00023\ \ \ \ \ this-\/>text.setCharacterSize(this-\/>textSize);}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00024}00024\ \ \ \ \ this-\/>text.setFillColor(this-\/>textColor);}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00025}00025\ \ \ \ \ this-\/>text.setPosition(this-\/>position.x\ +\ this-\/>size.x\ /\ 2.0\ -\/\ this-\/>text.getGlobalBounds().width\ /\ 2.0,}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>position.y\ +\ this-\/>size.y\ /\ 2.0\ -\/\ this-\/>text.getGlobalBounds().height\ /\ 1.1);}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00029}00029\ \mbox{\hyperlink{classButton_a3b36df1ae23c58aedb9e15a713159459}{Button::Button}}(sf::RenderWindow\ *window,\ sf::Vector2f\ position,\ sf::Vector2f\ size,}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ textString,\ std::string\ changedTextString,\ \textcolor{keywordtype}{int}\ textSize,}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Color\ textColor,\ sf::Color\ color,\ sf::Color\ hoverColor,\ sf::Color\ clickColor)\ \{}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00032}00032\ \ \ \ \ this-\/>window\ =\ window;}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00033}00033\ \ \ \ \ this-\/>position\ =\ position;}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00034}00034\ \ \ \ \ this-\/>size\ =\ size;}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00035}00035\ \ \ \ \ this-\/>textString\ =\ std::move(textString);}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00036}00036\ \ \ \ \ this-\/>changedTextString\ =\ std::move(changedTextString);}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00037}00037\ \ \ \ \ this-\/>textSize\ =\ textSize;}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00038}00038\ \ \ \ \ this-\/>color\ =\ color;}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00039}00039\ \ \ \ \ this-\/>textColor\ =\ textColor;}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00040}00040\ \ \ \ \ this-\/>hoverColor\ =\ hoverColor;}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00041}00041\ \ \ \ \ this-\/>clickColor\ =\ clickColor;}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00042}00042\ \ \ \ \ this-\/>font.loadFromFile(\mbox{\hyperlink{namespaceconstants_a23f8c84b0e1ce702055ff67135fbf428}{constants::fontPath}});}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00044}00044\ \ \ \ \ this-\/>init();}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00045}00045\ \}}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00047}00047\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classButton_adb6ba11ef7c454ac0aabf2120ac85d7a}{Button::pollEvent}}(sf::Vector2f\ mousePosView)\{}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasClicked\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>isHover\ and\ this-\/>isClick\ and\ !sf::Mouse::isButtonPressed(sf::Mouse::Left))\ \{}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ hasClicked\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ std::swap(this-\/>textString,\ this-\/>changedTextString);}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00055}00055\ \ \ \ \ this-\/>isHover\ =\ this-\/>button.getGlobalBounds().contains(mousePosView);}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00056}00056\ \ \ \ \ this-\/>isClick\ =\ sf::Mouse::isButtonPressed(sf::Mouse::Left);}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00058}00058\ \ \ \ \ \textcolor{keywordflow}{return}\ hasClicked;}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00059}00059\ \}}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00061}00061\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classButton_ad8e030c1c8846d43f3126047d4a3667f}{Button::update}}()\ \{}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00062}00062\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>isHover)\ \{}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ this-\/>button.setFillColor(this-\/>hoverColor);}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>isClick)\ \{}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>button.setFillColor(this-\/>clickColor);}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00068}00068\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ this-\/>button.setFillColor(this-\/>color);}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00070}00070\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00072}00072\ \ \ \ \ this-\/>text.setString(this-\/>textString);}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00073}00073\ \}}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00075}00075\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classButton_add4daea65a908027aa5a1593305b9656}{Button::render}}()\ \{}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00076}00076\ \ \ \ \ this-\/>window-\/>draw(this-\/>button);}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00077}00077\ \ \ \ \ this-\/>window-\/>draw(this-\/>text);}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00078}00078\ \}}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00080}00080\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classButton_a28c4d8fb3d54afd6d0637b6c4c079b09}{Button::checkClicked}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00081}00081\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>isClick\ and\ this-\/>isHover;}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00082}00082\ \}}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00084}00084\ std::string\ \mbox{\hyperlink{classButton_ae667eb964e0180276e0c74141e2bce9b}{Button::getTextString}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00085}00085\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>textString;}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00086}00086\ \}}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00088}00088\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classButton_a03ef92527b48359feff925347c478dab}{Button::setColor}}(sf::Color\ \_color)\ \{}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00089}00089\ \ \ \ \ this-\/>color\ =\ \_color;}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00090}00090\ \}}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00092}00092\ \mbox{\hyperlink{classButton_a3b36df1ae23c58aedb9e15a713159459}{Button::Button}}()\ \{\}}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00094}00094\ sf::Vector2f\ \mbox{\hyperlink{classButton_a6e52fb176337b00c0241b6f1f0c34261}{Button::getPosition}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00095}00095\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>position;}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00096}00096\ \}}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00098}00098\ sf::Vector2f\ \mbox{\hyperlink{classButton_afe24a9370efdf3079500be1f2b76e12a}{Button::getSize}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00099}00099\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>size;}
+\DoxyCodeLine{\Hypertarget{button_8cpp_source_l00100}00100\ \}}
+
+\end{DoxyCode}

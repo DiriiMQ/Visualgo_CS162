@@ -1,0 +1,86 @@
+\hypertarget{CustomTextbox_8cpp_source}{}\doxysection{Custom\+Textbox.\+cpp}
+\label{CustomTextbox_8cpp_source}\index{include/stuff/CustomTextbox.cpp@{include/stuff/CustomTextbox.cpp}}
+\mbox{\hyperlink{CustomTextbox_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ dirii\ on\ 04/04/2023.}}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{CustomTextbox_8hpp}{CustomTextbox.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00007}\mbox{\hyperlink{classCustomTextbox_a862a9f8bd0c132e7cd081f674b903c96}{00007}}\ \mbox{\hyperlink{classCustomTextbox_a862a9f8bd0c132e7cd081f674b903c96}{CustomTextbox::CustomTextbox}}(sf::RenderWindow\ *window,\ sf::Vector2f\ position,\ \textcolor{keywordtype}{int}\ size,}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00008}00008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \_titleString,\ \textcolor{keywordtype}{int}\ maxLength)\ \{}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00009}00009\ \ \ \ \ this-\/>window\ =\ window;}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00010}00010\ \ \ \ \ this-\/>titleString\ =\ std::move(\_titleString);}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00011}00011\ \ \ \ \ this-\/>position\ =\ position;}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00013}00013\ \ \ \ \ font.loadFromFile(\mbox{\hyperlink{namespaceconstants_a23f8c84b0e1ce702055ff67135fbf428}{constants::fontPath}});}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00014}00014\ \ \ \ \ this-\/>title.setFont(font);}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00015}00015\ \ \ \ \ this-\/>title.setCharacterSize(size);}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00016}00016\ \ \ \ \ this-\/>title.setFillColor(sf::Color::Black);}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00017}00017\ \ \ \ \ this-\/>title.setString(this-\/>titleString);}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00018}00018\ \ \ \ \ this-\/>title.setPosition(this-\/>position);}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{keywordtype}{float}\ width\ =\ this-\/>title.findCharacterPos(this-\/>titleString.size()\ -\/\ 1).x\ -\/\ this-\/>title.findCharacterPos(0).x;}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00022}00022\ \textcolor{comment}{//\ \ \ \ std::cout\ <<\ width\ <<\ '\ '\ <<\ this-\/>title.getString().getSize()\ <<\ std::endl;}}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00024}00024\ \ \ \ \ this-\/>maxLength\ =\ maxLength;}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00026}00026\ \ \ \ \ this-\/>textbox\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classTextBox}{TextBox}}(}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ this-\/>window,}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ sf::Vector2f(this-\/>position.x\ +\ width\ +\ 10,\ this-\/>position.y),}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ 20,}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ sf::Color::Black,}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ sf::Color::White,}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ this-\/>maxLength}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00035}00035\ \ \ \ \ this-\/>goButton\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classButton}{Button}}(}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ this-\/>window,}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ sf::Vector2f(this-\/>textbox-\/>\mbox{\hyperlink{classTextBox_aad20d6bfe62fdfb0e39689c26420a2a2}{getBox}}().getPosition().x\ +\ this-\/>textbox-\/>getBox().getSize().x\ +\ 10,\ this-\/>position.y),}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ constants::goButtonSize,}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Go"{}},}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Go"{}},}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ 20,}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ sf::Color::Black,}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ constants::normalGray,}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_a78ac9ffc7fb0604d34066a637946e88a}{constants::hoverGray}},}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_a65408fa6932d8c031131d5efa7e40776}{constants::clickGray}}}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00048}00048\ \ \ \ \ this-\/>isGoButtonClicked\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00049}00049\ \}}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00051}\mbox{\hyperlink{classCustomTextbox_aec18b36767a71c5a9fb7eae48ef4d9b5}{00051}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCustomTextbox_aec18b36767a71c5a9fb7eae48ef4d9b5}{CustomTextbox::pollEvent}}(sf::Event\ event,\ sf::Vector2f\ mousePosView)\ \{}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00052}00052\ \ \ \ \ this-\/>textbox-\/>\mbox{\hyperlink{classTextBox_a9f2c6d36865f6a6c1b546a9fcff29924}{pollEvent}}(event);}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00053}00053\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>goButton-\/>\mbox{\hyperlink{classButton_adb6ba11ef7c454ac0aabf2120ac85d7a}{pollEvent}}(mousePosView))\ \{}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ this-\/>isGoButtonClicked\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00055}00055\ \textcolor{comment}{//\ \ \ \ \ \ \ \ std::cout\ <<\ "{}Go\ button\ clicked!\(\backslash\)n"{};}}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00057}00057\ \}}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00059}\mbox{\hyperlink{classCustomTextbox_ac8901adc866e8d58c09d77476a51f58d}{00059}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCustomTextbox_ac8901adc866e8d58c09d77476a51f58d}{CustomTextbox::update}}()\ \{}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00060}00060\ \ \ \ \ this-\/>textbox-\/>\mbox{\hyperlink{classTextBox_afa0bba711f542abe6c4d304fe2773cd9}{update}}();}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00061}00061\ \ \ \ \ this-\/>goButton-\/>\mbox{\hyperlink{classButton_ad8e030c1c8846d43f3126047d4a3667f}{update}}();}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00062}00062\ \}}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00064}\mbox{\hyperlink{classCustomTextbox_a8c2246eca63d3095ca1f3dcf4e946eb0}{00064}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCustomTextbox_a8c2246eca63d3095ca1f3dcf4e946eb0}{CustomTextbox::render}}()\ \{}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00065}00065\ \ \ \ \ this-\/>window-\/>draw(this-\/>title);}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00066}00066\ \ \ \ \ this-\/>textbox-\/>\mbox{\hyperlink{classTextBox_a786758eb5ae6caa0ed299bf45d5715a5}{render}}();}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00067}00067\ \ \ \ \ this-\/>goButton-\/>\mbox{\hyperlink{classButton_add4daea65a908027aa5a1593305b9656}{render}}();}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00068}00068\ \}}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00070}\mbox{\hyperlink{classCustomTextbox_a5b725849f4f8c7d795e4c4a1ed809ba2}{00070}}\ std::string\ \mbox{\hyperlink{classCustomTextbox_a5b725849f4f8c7d795e4c4a1ed809ba2}{CustomTextbox::getTextString}}()\{}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00071}00071\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>isGoButtonClicked)\ \{}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ this-\/>isGoButtonClicked\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>textbox-\/>\mbox{\hyperlink{classTextBox_a0b7094d6739337a7c7c2dc1abe6d2a92}{getTextString}}();}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00074}00074\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00075}00075\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00076}00076\ \}}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00078}\mbox{\hyperlink{classCustomTextbox_a724a824af4f1a54252b940048ab79c65}{00078}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCustomTextbox_a724a824af4f1a54252b940048ab79c65}{CustomTextbox::resetInput}}()\ \{}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00079}00079\ \ \ \ \ this-\/>textbox-\/>\mbox{\hyperlink{classTextBox_a8d88d610f8eea49a8c70d18902136185}{resetInput}}();}
+\DoxyCodeLine{\Hypertarget{CustomTextbox_8cpp_source_l00080}00080\ \}}
+
+\end{DoxyCode}

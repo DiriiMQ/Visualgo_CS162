@@ -1,0 +1,214 @@
+\hypertarget{classBaseScene}{}\doxysection{Base\+Scene Class Reference}
+\label{classBaseScene}\index{BaseScene@{BaseScene}}
+
+
+{\ttfamily \#include $<$Base\+Scene.\+hpp$>$}
+
+Inheritance diagram for Base\+Scene\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.000000cm]{classBaseScene}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBaseScene_abe1e5ed8391db6798c313888ae8ad4e9}{Base\+Scene}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}})
+\item 
+void \mbox{\hyperlink{classBaseScene_adc937756bd780e478e6c338251816b91}{create\+Mode\+Button}} (sf\+::\+Vector2f position, std\+::string text\+String)
+\item 
+virtual void \mbox{\hyperlink{classBaseScene_a16dd70d07399fc63d7a3e29fbac516cf}{poll\+Event}} (sf\+::\+Event event, sf\+::\+Vector2f mouse\+Pos\+View)=0
+\item 
+virtual void \mbox{\hyperlink{classBaseScene_a269667611675475435d876e0f8f26a79}{update}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classBaseScene_a18694189ddd54cb279e1814869dbe854}{render}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classButton}{Button}} $\ast$ \mbox{\hyperlink{classBaseScene_acbfb2074648ed5f471ef8e46a60af885}{mode\+Button}} \{\}
+\item 
+bool \mbox{\hyperlink{classBaseScene_ad250cff3475ec4b590afe5ac70597746}{is\+Menu\+Open}} \{\}
+\item 
+bool \mbox{\hyperlink{classBaseScene_ae6e22961b8642440a160df8723363afa}{is\+Demo\+Code\+Open}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBaseScene_a408cafc155677ae764855ce9d16110b5}{set\+Window}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Render\+Window $\ast$ \mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}} \{\}
+\item 
+\mbox{\hyperlink{classControlMenu}{Control\+Menu}} $\ast$ \mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{control\+Menu}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{BaseScene_8hpp_source_l00012}{12}} of file \mbox{\hyperlink{BaseScene_8hpp_source}{Base\+Scene.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBaseScene_abe1e5ed8391db6798c313888ae8ad4e9}\label{classBaseScene_abe1e5ed8391db6798c313888ae8ad4e9}} 
+\index{BaseScene@{BaseScene}!BaseScene@{BaseScene}}
+\index{BaseScene@{BaseScene}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{BaseScene()}{BaseScene()}}
+{\footnotesize\ttfamily Base\+Scene\+::\+Base\+Scene (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Definition at line \mbox{\hyperlink{BaseScene_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{BaseScene_8cpp_source}{Base\+Scene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a408cafc155677ae764855ce9d16110b5}{setWindow}}(\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}});}
+\DoxyCodeLine{00028\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_ad250cff3475ec4b590afe5ac70597746}{isMenuOpen}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00029\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_ae6e22961b8642440a160df8723363afa}{isDemoCodeOpen}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classControlMenu}{ControlMenu}}(this-\/>\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}});}
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBaseScene_adc937756bd780e478e6c338251816b91}\label{classBaseScene_adc937756bd780e478e6c338251816b91}} 
+\index{BaseScene@{BaseScene}!createModeButton@{createModeButton}}
+\index{createModeButton@{createModeButton}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{createModeButton()}{createModeButton()}}
+{\footnotesize\ttfamily void Base\+Scene\+::create\+Mode\+Button (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position,  }\item[{std\+::string}]{text\+String }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{BaseScene_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{BaseScene_8cpp_source}{Base\+Scene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_acbfb2074648ed5f471ef8e46a60af885}{modeButton}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classButton}{Button}}(}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}},}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ position,}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ constants::modeButtonSize,}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ textString,}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ textString,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ constants::sizeTextModeButton,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Color::Black,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ constants::normalGray,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_a78ac9ffc7fb0604d34066a637946e88a}{constants::hoverGray}},}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceconstants_a65408fa6932d8c031131d5efa7e40776}{constants::clickGray}}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00024\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseScene_a16dd70d07399fc63d7a3e29fbac516cf}\label{classBaseScene_a16dd70d07399fc63d7a3e29fbac516cf}} 
+\index{BaseScene@{BaseScene}!pollEvent@{pollEvent}}
+\index{pollEvent@{pollEvent}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{pollEvent()}{pollEvent()}}
+{\footnotesize\ttfamily virtual void Base\+Scene\+::poll\+Event (\begin{DoxyParamCaption}\item[{sf\+::\+Event}]{event,  }\item[{sf\+::\+Vector2f}]{mouse\+Pos\+View }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classCLLScene_a62eb9d2e23ff17e683bf0a3a0f664db0}{CLLScene}}, \mbox{\hyperlink{classDLLScene_a357dccc756c11748c396afb5e60bd02e}{DLLScene}}, \mbox{\hyperlink{classDynamicArrayScene_a525f23f7944992a4fdadb468a204b48e}{Dynamic\+Array\+Scene}}, \mbox{\hyperlink{classMainMenu_a9de27e35991292cf218d144dc6fbddc9}{Main\+Menu}}, \mbox{\hyperlink{classQueueScene_ac9988c17ebd6c1c0e4a54f6a9c4b40d6}{Queue\+Scene}}, \mbox{\hyperlink{classSLLScene_a605c80b79628556e9b2e0d9444804e65}{SLLScene}}, \mbox{\hyperlink{classStackScene_a17a78895e05e5a29250b31e92902d5bc}{Stack\+Scene}}, and \mbox{\hyperlink{classStaticArrayScene_a2793f1182dd1d6dd4ea5506246074ede}{Static\+Array\+Scene}}.
+
+\mbox{\Hypertarget{classBaseScene_a18694189ddd54cb279e1814869dbe854}\label{classBaseScene_a18694189ddd54cb279e1814869dbe854}} 
+\index{BaseScene@{BaseScene}!render@{render}}
+\index{render@{render}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily virtual void Base\+Scene\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classCLLScene_aa7e19b20384750b1fd560c3295c49757}{CLLScene}}, \mbox{\hyperlink{classDLLScene_afc83aa02f5fbed06aed6b1125b6c6be6}{DLLScene}}, \mbox{\hyperlink{classDynamicArrayScene_a184fd5181889e36d8e5caba3b7aad526}{Dynamic\+Array\+Scene}}, \mbox{\hyperlink{classMainMenu_a1ee3711eb4cc53af6e9ee1a7516eaf58}{Main\+Menu}}, \mbox{\hyperlink{classQueueScene_ae51f6358d376e2e190cfd713924b129e}{Queue\+Scene}}, \mbox{\hyperlink{classSLLScene_abb904f9012ca04d0a3b2faabcb6240ce}{SLLScene}}, \mbox{\hyperlink{classStackScene_a3b9bb55d1b6320cbdb01dea71458ecbe}{Stack\+Scene}}, and \mbox{\hyperlink{classStaticArrayScene_ae272d942cd61306c044a7be56b55b422}{Static\+Array\+Scene}}.
+
+\mbox{\Hypertarget{classBaseScene_a408cafc155677ae764855ce9d16110b5}\label{classBaseScene_a408cafc155677ae764855ce9d16110b5}} 
+\index{BaseScene@{BaseScene}!setWindow@{setWindow}}
+\index{setWindow@{setWindow}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{setWindow()}{setWindow()}}
+{\footnotesize\ttfamily void Base\+Scene\+::set\+Window (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{BaseScene_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{BaseScene_8cpp_source}{Base\+Scene.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00008\ \ \ \ \ this-\/>\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}}\ =\ \mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}};}
+\DoxyCodeLine{00009\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBaseScene_a269667611675475435d876e0f8f26a79}\label{classBaseScene_a269667611675475435d876e0f8f26a79}} 
+\index{BaseScene@{BaseScene}!update@{update}}
+\index{update@{update}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Base\+Scene\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classCLLScene_a3028783d2e3bbfb63d982dea6878d37f}{CLLScene}}, \mbox{\hyperlink{classDLLScene_a98d56fa0ba81345c09534a8f06441212}{DLLScene}}, \mbox{\hyperlink{classDynamicArrayScene_ac873d4f98b22c6558a7974f59e0e026d}{Dynamic\+Array\+Scene}}, \mbox{\hyperlink{classMainMenu_a28b9d6e8a8d92a81bc101084983b4080}{Main\+Menu}}, \mbox{\hyperlink{classQueueScene_a130efeaf7de05dfcfe35db725c200e51}{Queue\+Scene}}, \mbox{\hyperlink{classSLLScene_a353bbab8ef95b94d7b4b16cfaa9b9247}{SLLScene}}, \mbox{\hyperlink{classStackScene_a7e883617bc3a48ff47bef6a375106a5b}{Stack\+Scene}}, and \mbox{\hyperlink{classStaticArrayScene_ac4fb24587fff4201fdcf01e28ee7a238}{Static\+Array\+Scene}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}\label{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}} 
+\index{BaseScene@{BaseScene}!controlMenu@{controlMenu}}
+\index{controlMenu@{controlMenu}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{controlMenu}{controlMenu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classControlMenu}{Control\+Menu}}$\ast$ Base\+Scene\+::control\+Menu\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{BaseScene_8hpp_source_l00015}{15}} of file \mbox{\hyperlink{BaseScene_8hpp_source}{Base\+Scene.\+hpp}}.
+
+\mbox{\Hypertarget{classBaseScene_ae6e22961b8642440a160df8723363afa}\label{classBaseScene_ae6e22961b8642440a160df8723363afa}} 
+\index{BaseScene@{BaseScene}!isDemoCodeOpen@{isDemoCodeOpen}}
+\index{isDemoCodeOpen@{isDemoCodeOpen}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{isDemoCodeOpen}{isDemoCodeOpen}}
+{\footnotesize\ttfamily bool Base\+Scene\+::is\+Demo\+Code\+Open \{\}}
+
+
+
+Definition at line \mbox{\hyperlink{BaseScene_8hpp_source_l00020}{20}} of file \mbox{\hyperlink{BaseScene_8hpp_source}{Base\+Scene.\+hpp}}.
+
+\mbox{\Hypertarget{classBaseScene_ad250cff3475ec4b590afe5ac70597746}\label{classBaseScene_ad250cff3475ec4b590afe5ac70597746}} 
+\index{BaseScene@{BaseScene}!isMenuOpen@{isMenuOpen}}
+\index{isMenuOpen@{isMenuOpen}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{isMenuOpen}{isMenuOpen}}
+{\footnotesize\ttfamily bool Base\+Scene\+::is\+Menu\+Open \{\}}
+
+
+
+Definition at line \mbox{\hyperlink{BaseScene_8hpp_source_l00020}{20}} of file \mbox{\hyperlink{BaseScene_8hpp_source}{Base\+Scene.\+hpp}}.
+
+\mbox{\Hypertarget{classBaseScene_acbfb2074648ed5f471ef8e46a60af885}\label{classBaseScene_acbfb2074648ed5f471ef8e46a60af885}} 
+\index{BaseScene@{BaseScene}!modeButton@{modeButton}}
+\index{modeButton@{modeButton}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{modeButton}{modeButton}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classButton}{Button}}$\ast$ Base\+Scene\+::mode\+Button \{\}}
+
+
+
+Definition at line \mbox{\hyperlink{BaseScene_8hpp_source_l00019}{19}} of file \mbox{\hyperlink{BaseScene_8hpp_source}{Base\+Scene.\+hpp}}.
+
+\mbox{\Hypertarget{classBaseScene_acbbe01e69ca27d1959e3863590511f14}\label{classBaseScene_acbbe01e69ca27d1959e3863590511f14}} 
+\index{BaseScene@{BaseScene}!window@{window}}
+\index{window@{window}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily sf\+::\+Render\+Window$\ast$ Base\+Scene\+::window \{\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{BaseScene_8hpp_source_l00014}{14}} of file \mbox{\hyperlink{BaseScene_8hpp_source}{Base\+Scene.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/lib\+Scene/\mbox{\hyperlink{BaseScene_8hpp}{Base\+Scene.\+hpp}}\item 
+include/lib\+Scene/\mbox{\hyperlink{BaseScene_8cpp}{Base\+Scene.\+cpp}}\end{DoxyCompactItemize}

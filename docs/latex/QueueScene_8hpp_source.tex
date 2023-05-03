@@ -1,0 +1,38 @@
+\hypertarget{QueueScene_8hpp_source}{}\doxysection{Queue\+Scene.\+hpp}
+\label{QueueScene_8hpp_source}\index{include/libScene/QueueScene.hpp@{include/libScene/QueueScene.hpp}}
+\mbox{\hyperlink{QueueScene_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ dirii\ on\ 29/03/2023.}}
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#ifndef\ VISUALGO\_CS162\_QUEUESCENE\_HPP}}
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#define\ VISUALGO\_CS162\_QUEUESCENE\_HPP}}
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{BaseScene_8hpp}{BaseScene.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{MenuDataStructure_8hpp}{MenuDataStructure.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{LinkedList_8hpp}{core/LinkedList.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00012}\mbox{\hyperlink{classQueueScene}{00012}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQueueScene}{QueueScene}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBaseScene}{BaseScene}}\{}
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00013}00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00014}00014\ \ \ \ \ \mbox{\hyperlink{classMenuDataStructure}{MenuDataStructure}}*\ menu;}
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00015}00015\ \ \ \ \ \mbox{\hyperlink{classLinkedList}{LinkedList}}*\ linkedList;}
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordtype}{void}\ init();}
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00019}00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classQueueScene}{QueueScene}}(sf::RenderWindow*\ \mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}});}
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueueScene_a590c67b15190fdb391aa5af681740cd3}{reset}}();}
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueueScene_ac9988c17ebd6c1c0e4a54f6a9c4b40d6}{pollEvent}}(sf::Event\ event,\ sf::Vector2f\ mousePosView)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueueScene_a130efeaf7de05dfcfe35db725c200e51}{update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueueScene_ae51f6358d376e2e190cfd713924b129e}{render}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00028}00028\ \ \ \ \ std::vector<EventAnimation>\ \mbox{\hyperlink{classQueueScene_a3aa31f4557011ce626ec060d3ad83780}{pushModeEvents}}(\textcolor{keywordtype}{int}\ chosenNode);}
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00029}00029\ \ \ \ \ std::vector<EventAnimation>\ \mbox{\hyperlink{classQueueScene_a2a9aa6b8df17929793e89b20ef99e499}{popModeEvents}}(\textcolor{keywordtype}{int}\ chosenNode);}
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00030}00030\ \};}
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{QueueScene_8hpp_source_l00032}00032\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//VISUALGO\_CS162\_QUEUESCENE\_HPP}}
+
+\end{DoxyCode}

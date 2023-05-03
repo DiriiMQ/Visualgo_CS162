@@ -1,0 +1,37 @@
+\hypertarget{BaseScene_8hpp_source}{}\doxysection{Base\+Scene.\+hpp}
+\label{BaseScene_8hpp_source}\index{include/libScene/BaseScene.hpp@{include/libScene/BaseScene.hpp}}
+\mbox{\hyperlink{BaseScene_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ dirii\ on\ 23/03/2023.}}
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#ifndef\ VISUALGO\_CS162\_BASESCENE\_HPP}}
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#define\ VISUALGO\_CS162\_BASESCENE\_HPP}}
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{button_8hpp}{stuff/button.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ControlMenu_8hpp}{ControlMenu.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00012}\mbox{\hyperlink{classBaseScene}{00012}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBaseScene}{BaseScene}}\{}
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00013}00013\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00014}\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{00014}}\ \ \ \ \ sf::RenderWindow*\ \mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}}\{\};}
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00015}\mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{00015}}\ \ \ \ \ \mbox{\hyperlink{classControlMenu}{ControlMenu}}*\ \mbox{\hyperlink{classBaseScene_a48ea3de4ac2353f814e893f1e350b3fb}{controlMenu}};}
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBaseScene_a408cafc155677ae764855ce9d16110b5}{setWindow}}(sf::RenderWindow*\ \mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}});}
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00018}00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00019}\mbox{\hyperlink{classBaseScene_acbfb2074648ed5f471ef8e46a60af885}{00019}}\ \ \ \ \ \mbox{\hyperlink{classButton}{Button}}*\ \mbox{\hyperlink{classBaseScene_acbfb2074648ed5f471ef8e46a60af885}{modeButton}}\{\};}
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00020}\mbox{\hyperlink{classBaseScene_ae6e22961b8642440a160df8723363afa}{00020}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBaseScene_ad250cff3475ec4b590afe5ac70597746}{isMenuOpen}}\{\},\ \mbox{\hyperlink{classBaseScene_ae6e22961b8642440a160df8723363afa}{isDemoCodeOpen}}\{\};}
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classBaseScene}{BaseScene}}(sf::RenderWindow*\ \mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}});}
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBaseScene_adc937756bd780e478e6c338251816b91}{createModeButton}}(sf::Vector2f\ position,\ std::string\ textString);}
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00026}\mbox{\hyperlink{classBaseScene_a16dd70d07399fc63d7a3e29fbac516cf}{00026}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBaseScene_a16dd70d07399fc63d7a3e29fbac516cf}{pollEvent}}(sf::Event\ event,\ sf::Vector2f\ mousePosView)\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00027}\mbox{\hyperlink{classBaseScene_a269667611675475435d876e0f8f26a79}{00027}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBaseScene_a269667611675475435d876e0f8f26a79}{update}}()\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00028}\mbox{\hyperlink{classBaseScene_a18694189ddd54cb279e1814869dbe854}{00028}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBaseScene_a18694189ddd54cb279e1814869dbe854}{render}}()\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00029}00029\ \};}
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{BaseScene_8hpp_source_l00031}00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//VISUALGO\_CS162\_BASESCENE\_HPP}}
+
+\end{DoxyCode}
