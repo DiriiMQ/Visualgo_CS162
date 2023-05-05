@@ -31,7 +31,11 @@ The features of this project are followed from [this requirements](./docs/CS162-
   - For Debian users, run the following command:
     - `sudo apt-get install make`
   - For Mac users, `make` is already installed when you run the above command.
-- [SFML](https://www.sfml-dev.org/download/)
+- SFML 2.5+
+  - For Windows users, please download [this version](https://www.sfml-dev.org/download/sfml/2.5.1/#:~:text=GCC%207.3.0%20MinGW%20(SEH)%20%2D%2064%2Dbit).
+  - For Debian users, run the following command:
+    - `sudo apt-get install libsfml-dev`
+  - For Mac users, please follow [this instructions](https://www.sfml-dev.org/tutorials/2.5/start-osx.php#installing-sfml) to install.
 - [Doxygen](https://www.doxygen.nl/download.html) (optional) – for generating documentation
 
 ### Build
@@ -41,7 +45,7 @@ The features of this project are followed from [this requirements](./docs/CS162-
   - `cd Visualgo_CS162`
   - Build the project:
     - for Windows users:
-      - `cmake -G "MinGW Makefiles" -S . -B build`
+      - `cmake -DSFML_DIR:PATH=<path_to_SFML>/lib/cmake/SFML -G"MinGW Makefiles" -S . -B build`
     - for Debian and Mac users:
       - `cmake -S . -B build`
   - `make -C build`
