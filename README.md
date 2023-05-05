@@ -61,6 +61,10 @@ The features of this project are followed from [this requirements](./docs/CS162-
 
 \the user manual that will be written later\
 
+## Program structure
+
+\update soon\
+
 ## Documentation
 
 You can find the documentation [here](https://diriimq.github.io/Visualgo_CS162/html/) and watch the demo [here](https://youtu.be/).
