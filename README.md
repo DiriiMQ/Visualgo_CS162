@@ -1,6 +1,6 @@
 # Visualgo_CS162
 
-This program will visualize some basic data structures, including animations (similar to Visualgo.net). The data structures are:
+This program will visualize some basic data structures, including animations (similar to [Visualgo.net](https://visualgo.net/en/list)). The data structures are:
 - Linked List
   - Singly Linked List
   - Doubly Linked List
