@@ -34,4 +34,7 @@
 # Debug folder
 *debug/
 
+# Release folder
+*release/
+
 .idea

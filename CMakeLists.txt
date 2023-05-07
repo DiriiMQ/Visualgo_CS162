@@ -4,6 +4,7 @@ project(Visualgo_CS162)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_C_COMPILER gcc)
 set(CMAKE_CXX_COMPILER g++)
+set(CMAKE_BUILD_TYPE Release)
 find_package(SFML COMPONENTS audio graphics window system REQUIRED)
 
 include_directories(${CMAKE_SOURCE_DIR}/include)
