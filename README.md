@@ -63,7 +63,16 @@ The features of this project are followed from [this requirements](./docs/CS162-
 
 ## Program structure
 
-\update soon\
+- `assets` – contains the assets used in the program
+- `build` – contains the executable file
+- `docs` – contains the documentation of the program
+  - `html` – contains the html files of the documentation
+  - `latex` – contains the latex files of the documentation
+- `include` – contains the header and source files of the program
+  - `core` – contains the core classes of the program
+  - `draw` - contains the classes that draw objects structures
+  - `libScene` - contains the classes that manage the scenes
+  - `stuff` - contains other classes that are used in the program
 
 ## Documentation
 
