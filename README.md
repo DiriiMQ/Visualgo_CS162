@@ -73,7 +73,7 @@ The features of this project are followed from [this requirements](./docs/CS162-
 
 ![visualize a structure](./assets/preview/visualize_a_structure.png)
 
-- If you choose the other modes, it will show the animation of the operations on the data structure.
+- If you choose the other modes, it will show the animation of the operations on the data structure and demonstrate the demo code at the same time.
 
 ![input_a_mode](./assets/preview/input_a_mode.png)
 
