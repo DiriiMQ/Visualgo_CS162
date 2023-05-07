@@ -59,7 +59,35 @@ The features of this project are followed from [this requirements](./docs/CS162-
 
 ## How to use
 
-\the user manual that will be written later\
+- The program will show the main screen when it starts.
+
+![Main screen](./assets/preview/main_screen.png)
+
+- Select a data structure by clicking on the buttons on the top-left of the screen.
+- Do the operations on the data structure by clicking on the arrow button on the left side of the screen.
+- Read the demo code by clicking on the arrow button on the right side of the screen.
+
+![Select mode](./assets/preview/select_mode.png)
+
+- Example for using the creating mode:
+
+![visualize a structure](./assets/preview/visualize_a_structure.png)
+
+- If you choose the other modes, it will show the animation of the operations on the data structure.
+
+![input_a_mode](./assets/preview/input_a_mode.png)
+
+- Run the animation by clicking on the play/pause button in the controller.
+- Next step by clicking on the next button in the controller.
+- Previous step by clicking on the previous button in the controller.
+
+![controller](./assets/preview/pause_controller.png)
+
+- You can change the speed of the animation by clicking on the speed button in the controller.
+
+![speed](./assets/preview/speed_controller.png)
+
+- In other data structures, it will as same as the above instructions.
 
 ## Program structure
 
