@@ -48,7 +48,7 @@ The features of this project are followed from [this requirements](./docs/CS162-
   - `cd Visualgo_CS162`
   - Build the project:
     - for Windows users:
-      - `cmake -DSFML_DIR:PATH=<path_to_SFML>/lib/cmake/SFML -G"MinGW Makefiles" -S . -B build`
+      - `cmake -G"MSYS Makefiles" -S . -B build`
     - for Debian and Mac users:
       - `cmake -S . -B build`
   - `make -C build`
