@@ -7,13 +7,21 @@
 
 #include <SFML/Graphics.hpp>
 
+/**
+ * @brief A class to get the mouse position
+ * 
+ */
 class MousePosition{
 protected:
-    sf::RenderWindow* relativeWindow;
+    sf::RenderWindow* relativeWindow; // the window to get the mouse position relative to
 
-    sf::Vector2i mousePos;
-    sf::Vector2f mousePosView;
+    sf::Vector2i mousePos; // the mouse position
+    sf::Vector2f mousePosView; // the mouse position relative to the view
 public:
+    /**
+     * @brief Update the mouse position
+     * 
+     */
     void updateMousePosition();
 };
 

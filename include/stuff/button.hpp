@@ -9,6 +9,10 @@
 #include "RoundedRectangleShape.hpp"
 #include "Constants.hpp"
 
+/**
+ * @brief A class to create a button
+ * 
+ */
 class Button{
 private:
     sf::RenderWindow* window;
@@ -27,6 +31,10 @@ private:
     bool isHover;
     bool isClick;
 
+    /**
+     * @brief Initialize the button
+     * 
+     */
     void init();
 
 public:
