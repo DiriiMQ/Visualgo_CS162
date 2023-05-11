@@ -5,6 +5,9 @@
 #ifndef VISUALGO_CS162_LINKEDLIST_HPP
 #define VISUALGO_CS162_LINKEDLIST_HPP
 
+#include <SFML/Graphics.hpp>
+#include <SFML/Window.hpp>
+#include <SFML/System.hpp>
 #include "Random.h"
 #include "draw/NodeInfo.hpp"
 #include "draw/BackArrow.hpp"

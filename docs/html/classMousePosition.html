@@ -98,6 +98,9 @@ $(document).ready(function(){initNavTree('classMousePosition.html',''); initResi
 </div><!--header-->
 <div class="contents">
 
+<p>A class to get the mouse position.  
+ <a href="classMousePosition.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="MousePosition_8hpp_source.html">MousePosition.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for MousePosition:</div>
@@ -105,13 +108,14 @@ Inheritance diagram for MousePosition:</div>
  <div class="center">
   <img src="classMousePosition.png" usemap="#MousePosition_map" alt=""/>
   <map id="MousePosition_map" name="MousePosition_map">
-<area href="classWindow.html" alt="Window" shape="rect" coords="0,56,94,80"/>
+<area href="classWindow.html" title="The main window of the program." alt="Window" shape="rect" coords="0,56,94,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2badbd78fa838f10c717ff338a89ced3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMousePosition.html#a2badbd78fa838f10c717ff338a89ced3">updateMousePosition</a> ()</td></tr>
+<tr class="memdesc:a2badbd78fa838f10c717ff338a89ced3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the mouse position.  <br /></td></tr>
 <tr class="separator:a2badbd78fa838f10c717ff338a89ced3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -124,8 +128,9 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ad99cb9a70c3e17f197beef8a36849d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="MousePosition_8hpp_source.html#l00010">10</a> of file <a class="el" href="MousePosition_8hpp_source.html">MousePosition.hpp</a>.</p>
+<div class="textblock"><p>A class to get the mouse position. </p>
+
+<p class="definition">Definition at line <a class="el" href="MousePosition_8hpp_source.html#l00014">14</a> of file <a class="el" href="MousePosition_8hpp_source.html">MousePosition.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a2badbd78fa838f10c717ff338a89ced3" name="a2badbd78fa838f10c717ff338a89ced3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2badbd78fa838f10c717ff338a89ced3">&#9670;&#160;</a></span>updateMousePosition()</h2>
@@ -142,14 +147,16 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Update the mouse position. </p>
+
 <p class="definition">Definition at line <a class="el" href="MousePosition_8cpp_source.html#l00007">7</a> of file <a class="el" href="MousePosition_8cpp_source.html">MousePosition.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    7</span>                                        {</div>
 <div class="line"><span class="lineno">    8</span>    this-&gt;<a class="code hl_variable" href="classMousePosition.html#ad974371ed87d4584c1a028dbf5e41112">mousePos</a> = sf::Mouse::getPosition(*this-&gt;<a class="code hl_variable" href="classMousePosition.html#a158113223f148e1d192cf1bd8f17115f">relativeWindow</a>);</div>
 <div class="line"><span class="lineno">    9</span>    this-&gt;<a class="code hl_variable" href="classMousePosition.html#ad99cb9a70c3e17f197beef8a36849d3c">mousePosView</a> = this-&gt;<a class="code hl_variable" href="classMousePosition.html#a158113223f148e1d192cf1bd8f17115f">relativeWindow</a>-&gt;mapPixelToCoords(this-&gt;<a class="code hl_variable" href="classMousePosition.html#ad974371ed87d4584c1a028dbf5e41112">mousePos</a>);</div>
 <div class="line"><span class="lineno">   10</span>}</div>
-<div class="ttc" id="aclassMousePosition_html_a158113223f148e1d192cf1bd8f17115f"><div class="ttname"><a href="classMousePosition.html#a158113223f148e1d192cf1bd8f17115f">MousePosition::relativeWindow</a></div><div class="ttdeci">sf::RenderWindow * relativeWindow</div><div class="ttdef"><b>Definition:</b> <a href="MousePosition_8hpp_source.html#l00012">MousePosition.hpp:12</a></div></div>
-<div class="ttc" id="aclassMousePosition_html_ad974371ed87d4584c1a028dbf5e41112"><div class="ttname"><a href="classMousePosition.html#ad974371ed87d4584c1a028dbf5e41112">MousePosition::mousePos</a></div><div class="ttdeci">sf::Vector2i mousePos</div><div class="ttdef"><b>Definition:</b> <a href="MousePosition_8hpp_source.html#l00014">MousePosition.hpp:14</a></div></div>
-<div class="ttc" id="aclassMousePosition_html_ad99cb9a70c3e17f197beef8a36849d3c"><div class="ttname"><a href="classMousePosition.html#ad99cb9a70c3e17f197beef8a36849d3c">MousePosition::mousePosView</a></div><div class="ttdeci">sf::Vector2f mousePosView</div><div class="ttdef"><b>Definition:</b> <a href="MousePosition_8hpp_source.html#l00015">MousePosition.hpp:15</a></div></div>
+<div class="ttc" id="aclassMousePosition_html_a158113223f148e1d192cf1bd8f17115f"><div class="ttname"><a href="classMousePosition.html#a158113223f148e1d192cf1bd8f17115f">MousePosition::relativeWindow</a></div><div class="ttdeci">sf::RenderWindow * relativeWindow</div><div class="ttdef"><b>Definition:</b> <a href="MousePosition_8hpp_source.html#l00016">MousePosition.hpp:16</a></div></div>
+<div class="ttc" id="aclassMousePosition_html_ad974371ed87d4584c1a028dbf5e41112"><div class="ttname"><a href="classMousePosition.html#ad974371ed87d4584c1a028dbf5e41112">MousePosition::mousePos</a></div><div class="ttdeci">sf::Vector2i mousePos</div><div class="ttdef"><b>Definition:</b> <a href="MousePosition_8hpp_source.html#l00018">MousePosition.hpp:18</a></div></div>
+<div class="ttc" id="aclassMousePosition_html_ad99cb9a70c3e17f197beef8a36849d3c"><div class="ttname"><a href="classMousePosition.html#ad99cb9a70c3e17f197beef8a36849d3c">MousePosition::mousePosView</a></div><div class="ttdeci">sf::Vector2f mousePosView</div><div class="ttdef"><b>Definition:</b> <a href="MousePosition_8hpp_source.html#l00019">MousePosition.hpp:19</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -174,7 +181,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MousePosition_8hpp_source.html#l00014">14</a> of file <a class="el" href="MousePosition_8hpp_source.html">MousePosition.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MousePosition_8hpp_source.html#l00018">18</a> of file <a class="el" href="MousePosition_8hpp_source.html">MousePosition.hpp</a>.</p>
 
 </div>
 </div>
@@ -198,7 +205,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MousePosition_8hpp_source.html#l00015">15</a> of file <a class="el" href="MousePosition_8hpp_source.html">MousePosition.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MousePosition_8hpp_source.html#l00019">19</a> of file <a class="el" href="MousePosition_8hpp_source.html">MousePosition.hpp</a>.</p>
 
 </div>
 </div>
@@ -222,7 +229,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MousePosition_8hpp_source.html#l00012">12</a> of file <a class="el" href="MousePosition_8hpp_source.html">MousePosition.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MousePosition_8hpp_source.html#l00016">16</a> of file <a class="el" href="MousePosition_8hpp_source.html">MousePosition.hpp</a>.</p>
 
 </div>
 </div>

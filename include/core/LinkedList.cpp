@@ -10,6 +10,7 @@ LinkedList::LinkedList(sf::RenderWindow* window, TypeLinkedList typeLinkedList) 
     this->highlighter = nullptr;
     this->delayTime = constants::LinkedList::DELAY_TIME;
     this->backArrow = new BackArrow(this->window, {0, 0}, {0, 0});
+    this->size = 0;
 
     if (this->typeLinkedList == TypeLinkedList::CIRCULAR)
         this->backArrow->show();

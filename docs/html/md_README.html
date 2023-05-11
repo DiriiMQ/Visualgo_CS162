@@ -93,7 +93,161 @@ $(document).ready(function(){initNavTree('md_README.html',''); initResizable(); 
   <div class="headertitle"><div class="title">Visualgo_CS162 </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"></div></div><!-- contents -->
+<div class="textblock"><p>This program will visualize some basic data structures, including animations (similar to <a href="https://visualgo.net/en/list">Visualgo.net</a>). The data structures are:</p><ul>
+<li>Linked List<ul>
+<li>Singly Linked List</li>
+<li>Doubly Linked List</li>
+<li>Circular Linked List</li>
+</ul>
+</li>
+<li>Stack</li>
+<li>Queue</li>
+<li><a class="el" href="classArray.html">Array</a><ul>
+<li>Static <a class="el" href="classArray.html">Array</a></li>
+<li>Dynamic <a class="el" href="classArray.html">Array</a></li>
+</ul>
+</li>
+</ul>
+<p>The program is written in C++ and uses SFML library for graphics. The features of this project are followed from <a href="./docs/CS162-CSC10002-Solo%20Project.pdf">this requirements</a>.</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+How to run</h1>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Pre-requisites</h2>
+<ul>
+<li>C++ 17 – GNU GCC 7.3.0+<ul>
+<li>For Windows users, please follow <a href="https://www.msys2.org/#installation">this instruction</a> to install.<ul>
+<li><b>Note</b>: Please install the <code>MinGW 64-bit</code> version. At step 6, please run the following command instead:<ul>
+<li><code>pacman -S mingw-w64-x86_64-gcc</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>For Debian users, run the following command:<ul>
+<li><code>sudo apt-get update &amp;&amp; sudo apt-get install build-essential</code></li>
+</ul>
+</li>
+<li>For Mac users, run the following command:<ul>
+<li><code>xcode-select --install</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://cmake.org/download/">CMake 3.26+</a></li>
+<li>Makefile<ul>
+<li>For Windows users, please open the <code>MSYS2 MinGW 64-bit</code> terminal and run the following command:<ul>
+<li><code>pacman -S make</code></li>
+</ul>
+</li>
+<li>For Debian users, run the following command:<ul>
+<li><code>sudo apt-get install make</code></li>
+</ul>
+</li>
+<li>For Mac users, <code>make</code> is already installed when you run the above command.</li>
+</ul>
+</li>
+<li>SFML 2.5+<ul>
+<li>For Windows users, please open the <code>MSYS2 MinGW 64-bit</code> terminal and run the following command:<ul>
+<li><code>pacman -S mingw-w64-x86_64-sfml</code></li>
+</ul>
+</li>
+<li>For Debian users, run the following command:<ul>
+<li><code>sudo apt-get install libsfml-dev</code></li>
+</ul>
+</li>
+<li>For Mac users, please follow <a href="https://www.sfml-dev.org/tutorials/2.5/start-osx.php#installing-sfml">this instructions</a> to install.</li>
+</ul>
+</li>
+<li><a href="https://www.doxygen.nl/download.html">Doxygen</a> (optional) – for generating documentation</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Build</h2>
+<ul>
+<li>Clone this repository</li>
+<li>Run the following commands:<ul>
+<li><code>cd Visualgo_CS162</code></li>
+<li>Build the project:<ul>
+<li>for Windows users:<ul>
+<li><code>cmake -G"MSYS Makefiles" -S . -B build</code></li>
+</ul>
+</li>
+<li>for Debian and Mac users:<ul>
+<li><code>cmake -S . -B build</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>make -C build</code></li>
+</ul>
+</li>
+<li>The executable file will be in the <code>build</code> folder</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Run</h2>
+<ul>
+<li>Click on the executable file in the folder <code>build</code> to run the program.</li>
+<li>If you want to run the program in the terminal, run the following command:<ul>
+<li><code>cd build &amp;&amp; ./Visualgo_CS162</code></li>
+</ul>
+</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md5"></a>
+How to use</h1>
+<ul>
+<li>The program will show the main screen when it starts.</li>
+</ul>
+<p><img src="./assets/preview/main_screen.png" alt="Main screen" class="inline"/></p>
+<ul>
+<li>Select a data structure by clicking on the buttons on the top-left of the screen.</li>
+<li>Do the operations on the data structure by clicking on the arrow button on the left side of the screen.</li>
+<li>Read the demo code by clicking on the arrow button on the right side of the screen.</li>
+</ul>
+<p><img src="./assets/preview/select_mode.png" alt="Select mode" class="inline"/></p>
+<ul>
+<li>Example for using the creating mode:</li>
+</ul>
+<p><img src="./assets/preview/visualize_a_structure.png" alt="visualize a structure" class="inline"/></p>
+<ul>
+<li>If you choose the other modes, it will show the animation of the operations on the data structure and demonstrate the demo code at the same time.</li>
+</ul>
+<p><img src="./assets/preview/input_a_mode.png" alt="input_a_mode" class="inline"/></p>
+<ul>
+<li>Run the animation by clicking on the play/pause button in the controller.</li>
+<li>Next step by clicking on the next button in the controller.</li>
+<li>Previous step by clicking on the previous button in the controller.</li>
+</ul>
+<p><img src="./assets/preview/pause_controller.png" alt="controller" class="inline"/></p>
+<ul>
+<li>You can change the speed of the animation by clicking on the speed button in the controller.</li>
+</ul>
+<p><img src="./assets/preview/speed_controller.png" alt="speed" class="inline"/></p>
+<ul>
+<li>In other data structures, it will as same as the above instructions.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md6"></a>
+Program structure</h1>
+<ul>
+<li><code>assets</code> – contains the assets used in the program</li>
+<li><code>build</code> – contains the executable file</li>
+<li><code>docs</code> – contains the documentation of the program<ul>
+<li><code>html</code> – contains the html files of the documentation</li>
+<li><code>latex</code> – contains the latex files of the documentation</li>
+</ul>
+</li>
+<li><code>include</code> – contains the header and source files of the program<ul>
+<li><code>core</code> – contains the core classes of the program</li>
+<li><code>draw</code> - contains the classes that draw objects structures</li>
+<li><code>libScene</code> - contains the classes that manage the scenes</li>
+<li><code>stuff</code> - contains other classes that are used in the program</li>
+</ul>
+</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md7"></a>
+Documentation</h1>
+<p>You can find the documentation <a href="https://diriimq.github.io/Visualgo_CS162/html/">here</a> and watch the demo <a href="https://youtu.be/">here</a>.</p>
+<h1><a class="anchor" id="autotoc_md8"></a>
+License</h1>
+<p>This project is licensed under the <code>GPL-3.0 License</code> - see the <a href="./LICENSE">LICENSE</a> file for details. </p>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->

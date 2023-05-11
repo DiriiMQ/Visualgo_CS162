@@ -1,0 +1,164 @@
+This program will visualize some basic data structures, including animations (similar to \href{https://visualgo.net/en/list}{\texttt{ Visualgo.\+net}}). The data structures are\+:
+\begin{DoxyItemize}
+\item Linked List
+\begin{DoxyItemize}
+\item Singly Linked List
+\item Doubly Linked List
+\item Circular Linked List
+\end{DoxyItemize}
+\item Stack
+\item Queue
+\item \mbox{\hyperlink{classArray}{Array}}
+\begin{DoxyItemize}
+\item Static \mbox{\hyperlink{classArray}{Array}}
+\item Dynamic \mbox{\hyperlink{classArray}{Array}}
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+The program is written in C++ and uses SFML library for graphics. The features of this project are followed from \href{./docs/CS162-CSC10002-Solo\%20Project.pdf}{\texttt{ this requirements}}.\hypertarget{md_README_autotoc_md1}{}\doxysection{How to run}\label{md_README_autotoc_md1}
+\hypertarget{md_README_autotoc_md2}{}\doxysubsection{Pre-\/requisites}\label{md_README_autotoc_md2}
+
+\begin{DoxyItemize}
+\item C++ 17 – GNU GCC 7.\+3.\+0+
+\begin{DoxyItemize}
+\item For Windows users, please follow \href{https://www.msys2.org/\#installation}{\texttt{ this instruction}} to install.
+\begin{DoxyItemize}
+\item {\bfseries{Note}}\+: Please install the {\ttfamily Min\+GW 64-\/bit} version. At step 6, please run the following command instead\+:
+\begin{DoxyItemize}
+\item {\ttfamily pacman -\/S mingw-\/w64-\/x86\+\_\+64-\/gcc}
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item For Debian users, run the following command\+:
+\begin{DoxyItemize}
+\item {\ttfamily sudo apt-\/get update \&\& sudo apt-\/get install build-\/essential}
+\end{DoxyItemize}
+\item For Mac users, run the following command\+:
+\begin{DoxyItemize}
+\item {\ttfamily xcode-\/select -\/-\/install}
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item \href{https://cmake.org/download/}{\texttt{ CMake 3.\+26+}}
+\item Makefile
+\begin{DoxyItemize}
+\item For Windows users, please open the {\ttfamily MSYS2 Min\+GW 64-\/bit} terminal and run the following command\+:
+\begin{DoxyItemize}
+\item {\ttfamily pacman -\/S make}
+\end{DoxyItemize}
+\item For Debian users, run the following command\+:
+\begin{DoxyItemize}
+\item {\ttfamily sudo apt-\/get install make}
+\end{DoxyItemize}
+\item For Mac users, {\ttfamily make} is already installed when you run the above command.
+\end{DoxyItemize}
+\item SFML 2.\+5+
+\begin{DoxyItemize}
+\item For Windows users, please open the {\ttfamily MSYS2 Min\+GW 64-\/bit} terminal and run the following command\+:
+\begin{DoxyItemize}
+\item {\ttfamily pacman -\/S mingw-\/w64-\/x86\+\_\+64-\/sfml}
+\end{DoxyItemize}
+\item For Debian users, run the following command\+:
+\begin{DoxyItemize}
+\item {\ttfamily sudo apt-\/get install libsfml-\/dev}
+\end{DoxyItemize}
+\item For Mac users, please follow \href{https://www.sfml-dev.org/tutorials/2.5/start-osx.php\#installing-sfml}{\texttt{ this instructions}} to install.
+\end{DoxyItemize}
+\item \href{https://www.doxygen.nl/download.html}{\texttt{ Doxygen}} (optional) – for generating documentation
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md3}{}\doxysubsection{Build}\label{md_README_autotoc_md3}
+
+\begin{DoxyItemize}
+\item Clone this repository
+\item Run the following commands\+:
+\begin{DoxyItemize}
+\item {\ttfamily cd Visualgo\+\_\+\+CS162}
+\item Build the project\+:
+\begin{DoxyItemize}
+\item for Windows users\+:
+\begin{DoxyItemize}
+\item {\ttfamily cmake -\/G\char`\"{}\+MSYS Makefiles\char`\"{} -\/S . -\/B build}
+\end{DoxyItemize}
+\item for Debian and Mac users\+:
+\begin{DoxyItemize}
+\item {\ttfamily cmake -\/S . -\/B build}
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item {\ttfamily make -\/C build}
+\end{DoxyItemize}
+\item The executable file will be in the {\ttfamily build} folder
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md4}{}\doxysubsection{Run}\label{md_README_autotoc_md4}
+
+\begin{DoxyItemize}
+\item Click on the executable file in the folder {\ttfamily build} to run the program.
+\item If you want to run the program in the terminal, run the following command\+:
+\begin{DoxyItemize}
+\item {\ttfamily cd build \&\& ./\+Visualgo\+\_\+\+CS162}
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md5}{}\doxysection{How to use}\label{md_README_autotoc_md5}
+
+\begin{DoxyItemize}
+\item The program will show the main screen when it starts.
+\end{DoxyItemize}
+
+
+
+
+\begin{DoxyItemize}
+\item Select a data structure by clicking on the buttons on the top-\/left of the screen.
+\item Do the operations on the data structure by clicking on the arrow button on the left side of the screen.
+\item Read the demo code by clicking on the arrow button on the right side of the screen.
+\end{DoxyItemize}
+
+
+
+
+\begin{DoxyItemize}
+\item Example for using the creating mode\+:
+\end{DoxyItemize}
+
+
+
+
+\begin{DoxyItemize}
+\item If you choose the other modes, it will show the animation of the operations on the data structure and demonstrate the demo code at the same time.
+\end{DoxyItemize}
+
+
+
+
+\begin{DoxyItemize}
+\item Run the animation by clicking on the play/pause button in the controller.
+\item Next step by clicking on the next button in the controller.
+\item Previous step by clicking on the previous button in the controller.
+\end{DoxyItemize}
+
+
+
+
+\begin{DoxyItemize}
+\item You can change the speed of the animation by clicking on the speed button in the controller.
+\end{DoxyItemize}
+
+
+
+
+\begin{DoxyItemize}
+\item In other data structures, it will as same as the above instructions.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md6}{}\doxysection{Program structure}\label{md_README_autotoc_md6}
+
+\begin{DoxyItemize}
+\item {\ttfamily assets} – contains the assets used in the program
+\item {\ttfamily build} – contains the executable file
+\item {\ttfamily docs} – contains the documentation of the program
+\begin{DoxyItemize}
+\item {\ttfamily html} – contains the html files of the documentation
+\item {\ttfamily latex} – contains the latex files of the documentation
+\end{DoxyItemize}
+\item {\ttfamily include} – contains the header and source files of the program
+\begin{DoxyItemize}
+\item {\ttfamily core} – contains the core classes of the program
+\item {\ttfamily draw} -\/ contains the classes that draw objects structures
+\item {\ttfamily lib\+Scene} -\/ contains the classes that manage the scenes
+\item {\ttfamily stuff} -\/ contains other classes that are used in the program
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md7}{}\doxysection{Documentation}\label{md_README_autotoc_md7}
+You can find the documentation \href{https://diriimq.github.io/Visualgo_CS162/html/}{\texttt{ here}} and watch the demo \href{https://youtu.be/}{\texttt{ here}}.\hypertarget{md_README_autotoc_md8}{}\doxysection{License}\label{md_README_autotoc_md8}
+This project is licensed under the {\ttfamily GPL-\/3.\+0 License} -\/ see the \href{./LICENSE}{\texttt{ LICENSE}} file for details. 

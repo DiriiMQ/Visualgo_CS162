@@ -104,57 +104,57 @@ $(document).ready(function(){initNavTree('button_8hpp_source.html',''); initResi
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="RoundedRectangleShape_8hpp.html">RoundedRectangleShape.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="Constants_8hpp.html">Constants.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classButton.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="classButton.html">Button</a>{</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    sf::RenderWindow* window;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_class" href="classsf_1_1RoundedRectangleShape.html">sf::RoundedRectangleShape</a> button;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    sf::Text text;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    sf::Font font;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    sf::Color color;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    sf::Color textColor;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    sf::Color hoverColor;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    sf::Color clickColor;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    sf::Vector2f position;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    sf::Vector2f size;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">int</span> textSize;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    std::string textString;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    std::string changedTextString;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">bool</span> isHover;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">bool</span> isClick;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> init();</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classButton.html#a3b36df1ae23c58aedb9e15a713159459">   33</a></span>    <a class="code hl_function" href="classButton.html#a3b36df1ae23c58aedb9e15a713159459">Button</a>();</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classButton.html#a0f8ae4930090b2dd2d9f9cb8441b3108">   34</a></span>    <a class="code hl_function" href="classButton.html#a0f8ae4930090b2dd2d9f9cb8441b3108">Button</a>(</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            sf::RenderWindow* window,</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            sf::Vector2f position,</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            sf::Vector2f size,</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            std::string textString,</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            std::string changedTextString,</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordtype">int</span> textSize,</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            sf::Color textColor,</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            sf::Color color,</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            sf::Color hoverColor,</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            sf::Color clickColor</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            );</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classButton.html#adb6ba11ef7c454ac0aabf2120ac85d7a">   47</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classButton.html#adb6ba11ef7c454ac0aabf2120ac85d7a">pollEvent</a>(sf::Vector2f mousePosView);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classButton.html#ad8e030c1c8846d43f3126047d4a3667f">   48</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classButton.html#ad8e030c1c8846d43f3126047d4a3667f">update</a>();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classButton.html#add4daea65a908027aa5a1593305b9656">   49</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classButton.html#add4daea65a908027aa5a1593305b9656">render</a>();</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classButton.html#a03ef92527b48359feff925347c478dab">   51</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classButton.html#a03ef92527b48359feff925347c478dab">setColor</a>(sf::Color _color);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classButton.html#ae667eb964e0180276e0c74141e2bce9b">   52</a></span>    std::string <a class="code hl_function" href="classButton.html#ae667eb964e0180276e0c74141e2bce9b">getTextString</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classButton.html#a6e52fb176337b00c0241b6f1f0c34261">   53</a></span>    sf::Vector2f <a class="code hl_function" href="classButton.html#a6e52fb176337b00c0241b6f1f0c34261">getPosition</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classButton.html#afe24a9370efdf3079500be1f2b76e12a">   54</a></span>    sf::Vector2f <a class="code hl_function" href="classButton.html#afe24a9370efdf3079500be1f2b76e12a">getSize</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classButton.html#a28c4d8fb3d54afd6d0637b6c4c079b09">   56</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classButton.html#a28c4d8fb3d54afd6d0637b6c4c079b09">checkClicked</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>};</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classButton.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="classButton.html">Button</a>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    sf::RenderWindow* window;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_class" href="classsf_1_1RoundedRectangleShape.html">sf::RoundedRectangleShape</a> button;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    sf::Text text;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    sf::Font font;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    sf::Color color;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    sf::Color textColor;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    sf::Color hoverColor;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    sf::Color clickColor;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    sf::Vector2f position;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    sf::Vector2f size;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">int</span> textSize;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    std::string textString;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    std::string changedTextString;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">bool</span> isHover;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">bool</span> isClick;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> init();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classButton.html#a3b36df1ae23c58aedb9e15a713159459">   41</a></span>    <a class="code hl_function" href="classButton.html#a3b36df1ae23c58aedb9e15a713159459">Button</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classButton.html#a0f8ae4930090b2dd2d9f9cb8441b3108">   42</a></span>    <a class="code hl_function" href="classButton.html#a0f8ae4930090b2dd2d9f9cb8441b3108">Button</a>(</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            sf::RenderWindow* window,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            sf::Vector2f position,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            sf::Vector2f size,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            std::string textString,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            std::string changedTextString,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordtype">int</span> textSize,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            sf::Color textColor,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            sf::Color color,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            sf::Color hoverColor,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            sf::Color clickColor</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            );</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classButton.html#adb6ba11ef7c454ac0aabf2120ac85d7a">   55</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classButton.html#adb6ba11ef7c454ac0aabf2120ac85d7a">pollEvent</a>(sf::Vector2f mousePosView);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classButton.html#ad8e030c1c8846d43f3126047d4a3667f">   56</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classButton.html#ad8e030c1c8846d43f3126047d4a3667f">update</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classButton.html#add4daea65a908027aa5a1593305b9656">   57</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classButton.html#add4daea65a908027aa5a1593305b9656">render</a>();</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif </span><span class="comment">//VISUALGO_CS162_BUTTON_HPP</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classButton.html#a03ef92527b48359feff925347c478dab">   59</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classButton.html#a03ef92527b48359feff925347c478dab">setColor</a>(sf::Color _color);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classButton.html#ae667eb964e0180276e0c74141e2bce9b">   60</a></span>    std::string <a class="code hl_function" href="classButton.html#ae667eb964e0180276e0c74141e2bce9b">getTextString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classButton.html#a6e52fb176337b00c0241b6f1f0c34261">   61</a></span>    sf::Vector2f <a class="code hl_function" href="classButton.html#a6e52fb176337b00c0241b6f1f0c34261">getPosition</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classButton.html#afe24a9370efdf3079500be1f2b76e12a">   62</a></span>    sf::Vector2f <a class="code hl_function" href="classButton.html#afe24a9370efdf3079500be1f2b76e12a">getSize</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classButton.html#a28c4d8fb3d54afd6d0637b6c4c079b09">   64</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classButton.html#a28c4d8fb3d54afd6d0637b6c4c079b09">checkClicked</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#endif </span><span class="comment">//VISUALGO_CS162_BUTTON_HPP</span></div>
 <div class="ttc" id="aConstants_8hpp_html"><div class="ttname"><a href="Constants_8hpp.html">Constants.hpp</a></div></div>
 <div class="ttc" id="aRoundedRectangleShape_8hpp_html"><div class="ttname"><a href="RoundedRectangleShape_8hpp.html">RoundedRectangleShape.hpp</a></div></div>
-<div class="ttc" id="aclassButton_html"><div class="ttname"><a href="classButton.html">Button</a></div><div class="ttdef"><b>Definition:</b> <a href="button_8hpp_source.html#l00012">button.hpp:12</a></div></div>
+<div class="ttc" id="aclassButton_html"><div class="ttname"><a href="classButton.html">Button</a></div><div class="ttdoc">A class to create a button.</div><div class="ttdef"><b>Definition:</b> <a href="button_8hpp_source.html#l00016">button.hpp:16</a></div></div>
 <div class="ttc" id="aclassButton_html_a03ef92527b48359feff925347c478dab"><div class="ttname"><a href="classButton.html#a03ef92527b48359feff925347c478dab">Button::setColor</a></div><div class="ttdeci">void setColor(sf::Color _color)</div></div>
 <div class="ttc" id="aclassButton_html_a0f8ae4930090b2dd2d9f9cb8441b3108"><div class="ttname"><a href="classButton.html#a0f8ae4930090b2dd2d9f9cb8441b3108">Button::Button</a></div><div class="ttdeci">Button(sf::RenderWindow *window, sf::Vector2f position, sf::Vector2f size, std::string textString, std::string changedTextString, int textSize, sf::Color textColor, sf::Color color, sf::Color hoverColor, sf::Color clickColor)</div></div>
 <div class="ttc" id="aclassButton_html_a28c4d8fb3d54afd6d0637b6c4c079b09"><div class="ttname"><a href="classButton.html#a28c4d8fb3d54afd6d0637b6c4c079b09">Button::checkClicked</a></div><div class="ttdeci">bool checkClicked() const</div></div>

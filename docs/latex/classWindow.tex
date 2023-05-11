@@ -2,6 +2,11 @@
 \label{classWindow}\index{Window@{Window}}
 
 
+The main window of the program.  
+
+
+
+
 {\ttfamily \#include $<$Window.\+hpp$>$}
 
 Inheritance diagram for Window\+:\begin{figure}[H]
@@ -14,22 +19,22 @@ Inheritance diagram for Window\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classWindow_a74e6087da23d3c24e9fac0245e5ec92c}{Window}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classWindow}{Window}} object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classWindow_adc361d2d83c3531576b0d7bc1589cdfb}{$\sim$\+Window}} ()=default
-\item 
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classWindow}{Window}} object. \end{DoxyCompactList}\item 
 const bool \mbox{\hyperlink{classWindow_ae757b932000b466adead23388fc9f53c}{running}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Check if the window is running. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classWindow_a5abb541ee62c814dc7a7037140af7e8f}{poll\+Event}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Poll the event. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classWindow_a59515fc5a56e86d5a46d771595daac55}{update}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Update the window. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classWindow_a0a2093bd2ed34740c08a6a2fdfc059c9}{render}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Render the window. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMousePosition}{Mouse\+Position}}}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classMousePosition_a2badbd78fa838f10c717ff338a89ced3}{update\+Mouse\+Position}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Update the mouse position. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 \doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{classMousePosition}{Mouse\+Position}}}
 \begin{DoxyCompactItemize}
@@ -43,9 +48,11 @@ sf\+::\+Vector2f \mbox{\hyperlink{classMousePosition_ad99cb9a70c3e17f197beef8a36
 
 
 \doxysubsection{Detailed Description}
+The main window of the program. 
 
 
-Definition at line \mbox{\hyperlink{Window_8hpp_source_l00015}{15}} of file \mbox{\hyperlink{Window_8hpp_source}{Window.\+hpp}}.
+
+Definition at line \mbox{\hyperlink{Window_8hpp_source_l00019}{19}} of file \mbox{\hyperlink{Window_8hpp_source}{Window.\+hpp}}.
 
 
 
@@ -55,6 +62,10 @@ Definition at line \mbox{\hyperlink{Window_8hpp_source_l00015}{15}} of file \mbo
 \index{Window@{Window}!Window@{Window}}
 \doxysubsubsection{\texorpdfstring{Window()}{Window()}}
 {\footnotesize\ttfamily Window\+::\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classWindow}{Window}} object. 
 
 
 
@@ -77,12 +88,20 @@ Definition at line \mbox{\hyperlink{Window_8cpp_source_l00050}{50}} of file \mbo
 
 
 
+Destroy the \mbox{\hyperlink{classWindow}{Window}} object. 
+
+
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classWindow_a5abb541ee62c814dc7a7037140af7e8f}\label{classWindow_a5abb541ee62c814dc7a7037140af7e8f}} 
 \index{Window@{Window}!pollEvent@{pollEvent}}
 \index{pollEvent@{pollEvent}!Window@{Window}}
 \doxysubsubsection{\texorpdfstring{pollEvent()}{pollEvent()}}
 {\footnotesize\ttfamily void Window\+::poll\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Poll the event. 
 
 
 
@@ -141,6 +160,10 @@ Definition at line \mbox{\hyperlink{Window_8cpp_source_l00060}{60}} of file \mbo
 
 
 
+Render the window. 
+
+
+
 Definition at line \mbox{\hyperlink{Window_8cpp_source_l00119}{119}} of file \mbox{\hyperlink{Window_8cpp_source}{Window.\+cpp}}.
 
 
@@ -175,6 +198,15 @@ Definition at line \mbox{\hyperlink{Window_8cpp_source_l00119}{119}} of file \mb
 
 
 
+Check if the window is running. 
+
+\begin{DoxyReturn}{Returns}
+true if the window is running 
+
+false if the window is not running 
+\end{DoxyReturn}
+
+
 Definition at line \mbox{\hyperlink{Window_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{Window_8cpp_source}{Window.\+cpp}}.
 
 
@@ -189,6 +221,10 @@ Definition at line \mbox{\hyperlink{Window_8cpp_source_l00056}{56}} of file \mbo
 \index{update@{update}!Window@{Window}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
 {\footnotesize\ttfamily void Window\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the window. 
 
 
 
