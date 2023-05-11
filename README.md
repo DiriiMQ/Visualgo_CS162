@@ -107,7 +107,7 @@ The features of this project are followed from [this requirements](./docs/CS162-
 
 ## Documentation
 
-You can find the documentation [here](https://diriimq.github.io/Visualgo_CS162/html/) and watch the demo [here](https://youtu.be/).
+You can find the documentation [here](https://diriimq.github.io/Visualgo_CS162/html/) and watch the demo [here](https://youtu.be/qf8KqMFuTmk).
 
 ## License
 
