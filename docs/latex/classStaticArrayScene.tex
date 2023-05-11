@@ -2,6 +2,11 @@
 \label{classStaticArrayScene}\index{StaticArrayScene@{StaticArrayScene}}
 
 
+Class for static array scene.  
+
+
+
+
 {\ttfamily \#include $<$Static\+Array\+Scene.\+hpp$>$}
 
 Inheritance diagram for Static\+Array\+Scene\+:\begin{figure}[H]
@@ -14,23 +19,23 @@ Inheritance diagram for Static\+Array\+Scene\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classStaticArrayScene_a554fdec7ed44f350a42242c1a14546e0}{Static\+Array\+Scene}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}})
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a new Static \mbox{\hyperlink{classArray}{Array}} Scene object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classStaticArrayScene_af11a29d2439171ddca199e0a3d698c4f}{reset}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Reset the scene. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classStaticArrayScene_a2793f1182dd1d6dd4ea5506246074ede}{poll\+Event}} (sf\+::\+Event event, sf\+::\+Vector2f mouse\+Pos\+View) override
-\item 
+\begin{DoxyCompactList}\small\item\em Poll the event. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classStaticArrayScene_ac4fb24587fff4201fdcf01e28ee7a238}{update}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Update the scene. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classStaticArrayScene_ae272d942cd61306c044a7be56b55b422}{render}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Render the scene. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ \mbox{\hyperlink{classStaticArrayScene_a3214c997e00c989139ea876c67766274}{add\+Mode\+Events}} (int chosen\+Node)
-\item 
+\begin{DoxyCompactList}\small\item\em Generate the event animation for add mode. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ \mbox{\hyperlink{classStaticArrayScene_a70187f0699e67a23bf3f15e8b7d68137}{delete\+Mode\+Events}} (int chosen\+Node)
-\item 
+\begin{DoxyCompactList}\small\item\em Generate the event animation for delete mode. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ \mbox{\hyperlink{classStaticArrayScene_a8b1dd8ee49a9f761102f008a0036ea48}{update\+Mode\+Events}} (int chosen\+Node)
-\item 
+\begin{DoxyCompactList}\small\item\em Generate the event animation for update mode. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ \mbox{\hyperlink{classStaticArrayScene_a989be0bcbb64f9e74f02f0593c7458ca}{search\+Mode\+Events}} (int chosen\+Node)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Generate the event animation for search mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBaseScene}{Base\+Scene}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -69,9 +74,11 @@ sf\+::\+Render\+Window $\ast$ \mbox{\hyperlink{classBaseScene_acbbe01e69ca27d195
 
 
 \doxysubsection{Detailed Description}
+Class for static array scene. 
 
 
-Definition at line \mbox{\hyperlink{StaticArrayScene_8hpp_source_l00012}{12}} of file \mbox{\hyperlink{StaticArrayScene_8hpp_source}{Static\+Array\+Scene.\+hpp}}.
+
+Definition at line \mbox{\hyperlink{StaticArrayScene_8hpp_source_l00016}{16}} of file \mbox{\hyperlink{StaticArrayScene_8hpp_source}{Static\+Array\+Scene.\+hpp}}.
 
 
 
@@ -82,6 +89,15 @@ Definition at line \mbox{\hyperlink{StaticArrayScene_8hpp_source_l00012}{12}} of
 \doxysubsubsection{\texorpdfstring{StaticArrayScene()}{StaticArrayScene()}}
 {\footnotesize\ttfamily Static\+Array\+Scene\+::\+Static\+Array\+Scene (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
+
+
+Construct a new Static \mbox{\hyperlink{classArray}{Array}} Scene object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The window to render \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{StaticArrayScene_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{StaticArrayScene_8cpp_source}{Static\+Array\+Scene.\+cpp}}.
@@ -102,6 +118,18 @@ Definition at line \mbox{\hyperlink{StaticArrayScene_8cpp_source_l00007}{7}} of 
 \doxysubsubsection{\texorpdfstring{addModeEvents()}{addModeEvents()}}
 {\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ Static\+Array\+Scene\+::add\+Mode\+Events (\begin{DoxyParamCaption}\item[{int}]{chosen\+Node }\end{DoxyParamCaption})}
 
+
+
+Generate the event animation for add mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chosen\+Node} & The chosen node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Event\+Animation$>$ The event animation 
+\end{DoxyReturn}
 
 
 Definition at line \mbox{\hyperlink{StaticArrayScene_8cpp_source_l00143}{143}} of file \mbox{\hyperlink{StaticArrayScene_8cpp_source}{Static\+Array\+Scene.\+cpp}}.
@@ -186,6 +214,18 @@ Definition at line \mbox{\hyperlink{StaticArrayScene_8cpp_source_l00143}{143}} o
 
 
 
+Generate the event animation for delete mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chosen\+Node} & The chosen node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Event\+Animation$>$ The event animation 
+\end{DoxyReturn}
+
+
 Definition at line \mbox{\hyperlink{StaticArrayScene_8cpp_source_l00212}{212}} of file \mbox{\hyperlink{StaticArrayScene_8cpp_source}{Static\+Array\+Scene.\+cpp}}.
 
 
@@ -252,6 +292,17 @@ Definition at line \mbox{\hyperlink{StaticArrayScene_8cpp_source_l00212}{212}} o
 
 
 
+Poll the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event \\
+\hline
+{\em mouse\+Pos\+View} & The mouse position \\
+\hline
+\end{DoxyParams}
+
+
 Implements \mbox{\hyperlink{classBaseScene_a16dd70d07399fc63d7a3e29fbac516cf}{Base\+Scene}}.
 
 
@@ -273,6 +324,10 @@ Definition at line \mbox{\hyperlink{StaticArrayScene_8cpp_source_l00127}{127}} o
 \index{render@{render}!StaticArrayScene@{StaticArrayScene}}
 \doxysubsubsection{\texorpdfstring{render()}{render()}}
 {\footnotesize\ttfamily void Static\+Array\+Scene\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Render the scene. 
 
 
 
@@ -304,6 +359,10 @@ Definition at line \mbox{\hyperlink{StaticArrayScene_8cpp_source_l00116}{116}} o
 
 
 
+Reset the scene. 
+
+
+
 Definition at line \mbox{\hyperlink{StaticArrayScene_8cpp_source_l00139}{139}} of file \mbox{\hyperlink{StaticArrayScene_8cpp_source}{Static\+Array\+Scene.\+cpp}}.
 
 
@@ -319,6 +378,18 @@ Definition at line \mbox{\hyperlink{StaticArrayScene_8cpp_source_l00139}{139}} o
 \doxysubsubsection{\texorpdfstring{searchModeEvents()}{searchModeEvents()}}
 {\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ Static\+Array\+Scene\+::search\+Mode\+Events (\begin{DoxyParamCaption}\item[{int}]{chosen\+Node }\end{DoxyParamCaption})}
 
+
+
+Generate the event animation for search mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chosen\+Node} & The chosen node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Event\+Animation$>$ The event animation 
+\end{DoxyReturn}
 
 
 Definition at line \mbox{\hyperlink{StaticArrayScene_8cpp_source_l00295}{295}} of file \mbox{\hyperlink{StaticArrayScene_8cpp_source}{Static\+Array\+Scene.\+cpp}}.
@@ -372,6 +443,10 @@ Definition at line \mbox{\hyperlink{StaticArrayScene_8cpp_source_l00295}{295}} o
 \index{update@{update}!StaticArrayScene@{StaticArrayScene}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
 {\footnotesize\ttfamily void Static\+Array\+Scene\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update the scene. 
 
 
 
@@ -495,6 +570,18 @@ Definition at line \mbox{\hyperlink{StaticArrayScene_8cpp_source_l00011}{11}} of
 \doxysubsubsection{\texorpdfstring{updateModeEvents()}{updateModeEvents()}}
 {\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ Static\+Array\+Scene\+::update\+Mode\+Events (\begin{DoxyParamCaption}\item[{int}]{chosen\+Node }\end{DoxyParamCaption})}
 
+
+
+Generate the event animation for update mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chosen\+Node} & The chosen node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Event\+Animation$>$ The event animation 
+\end{DoxyReturn}
 
 
 Definition at line \mbox{\hyperlink{StaticArrayScene_8cpp_source_l00265}{265}} of file \mbox{\hyperlink{StaticArrayScene_8cpp_source}{Static\+Array\+Scene.\+cpp}}.

@@ -2,7 +2,7 @@
 \label{classButton}\index{Button@{Button}}
 
 
-A class to create a button.  
+Class for creating a button.  
 
 
 
@@ -13,31 +13,31 @@ A class to create a button.
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classButton_a3b36df1ae23c58aedb9e15a713159459}{Button}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classButton}{Button}} object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classButton_a0f8ae4930090b2dd2d9f9cb8441b3108}{Button}} (sf\+::\+Render\+Window $\ast$window, sf\+::\+Vector2f position, sf\+::\+Vector2f size, std\+::string text\+String, std\+::string changed\+Text\+String, int text\+Size, sf\+::\+Color text\+Color, sf\+::\+Color color, sf\+::\+Color hover\+Color, sf\+::\+Color click\+Color)
 \item 
 bool \mbox{\hyperlink{classButton_adb6ba11ef7c454ac0aabf2120ac85d7a}{poll\+Event}} (sf\+::\+Vector2f mouse\+Pos\+View)
-\item 
+\begin{DoxyCompactList}\small\item\em Poll the event. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classButton_ad8e030c1c8846d43f3126047d4a3667f}{update}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Update the button. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classButton_add4daea65a908027aa5a1593305b9656}{render}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Render the button. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classButton_a03ef92527b48359feff925347c478dab}{set\+Color}} (sf\+::\+Color \+\_\+color)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the color. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classButton_ae667eb964e0180276e0c74141e2bce9b}{get\+Text\+String}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the text string. \end{DoxyCompactList}\item 
 sf\+::\+Vector2f \mbox{\hyperlink{classButton_a6e52fb176337b00c0241b6f1f0c34261}{get\+Position}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the position. \end{DoxyCompactList}\item 
 sf\+::\+Vector2f \mbox{\hyperlink{classButton_afe24a9370efdf3079500be1f2b76e12a}{get\+Size}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the size. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classButton_a28c4d8fb3d54afd6d0637b6c4c079b09}{check\+Clicked}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if the button is clicked. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-A class to create a button. 
+Class for creating a button. 
 
-
+This class is used to create a button 
 
 Definition at line \mbox{\hyperlink{button_8hpp_source_l00016}{16}} of file \mbox{\hyperlink{button_8hpp_source}{button.\+hpp}}.
 
@@ -50,6 +50,33 @@ Definition at line \mbox{\hyperlink{button_8hpp_source_l00016}{16}} of file \mbo
 \doxysubsubsection{\texorpdfstring{Button()}{Button()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Button\+::\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Construct a new \mbox{\hyperlink{classButton}{Button}} object. 
+
+This constructor is used to create a button 
+\begin{DoxyParams}{Parameters}
+{\em window} & The window where the button will be rendered \\
+\hline
+{\em position} & The position of the button \\
+\hline
+{\em size} & The size of the button \\
+\hline
+{\em text\+String} & The text of the button \\
+\hline
+{\em changed\+Text\+String} & The text of the button when it is clicked \\
+\hline
+{\em text\+Size} & The size of the text \\
+\hline
+{\em text\+Color} & The color of the text \\
+\hline
+{\em color} & The color of the button \\
+\hline
+{\em hover\+Color} & The color of the button when it is hovered \\
+\hline
+{\em click\+Color} & The color of the button when it is clicked \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classButton_a0f8ae4930090b2dd2d9f9cb8441b3108}\label{classButton_a0f8ae4930090b2dd2d9f9cb8441b3108}} 
 \index{Button@{Button}!Button@{Button}}
 \index{Button@{Button}!Button@{Button}}
@@ -65,42 +92,95 @@ Definition at line \mbox{\hyperlink{button_8hpp_source_l00016}{16}} of file \mbo
 \doxysubsubsection{\texorpdfstring{checkClicked()}{checkClicked()}}
 {\footnotesize\ttfamily bool Button\+::check\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Check if the button is clicked. 
+
+This function is used to check if the button is clicked \begin{DoxyReturn}{Returns}
+True if the button is clicked, false otherwise 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classButton_a6e52fb176337b00c0241b6f1f0c34261}\label{classButton_a6e52fb176337b00c0241b6f1f0c34261}} 
 \index{Button@{Button}!getPosition@{getPosition}}
 \index{getPosition@{getPosition}!Button@{Button}}
 \doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
 {\footnotesize\ttfamily sf\+::\+Vector2f Button\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Get the position. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \mbox{\Hypertarget{classButton_afe24a9370efdf3079500be1f2b76e12a}\label{classButton_afe24a9370efdf3079500be1f2b76e12a}} 
 \index{Button@{Button}!getSize@{getSize}}
 \index{getSize@{getSize}!Button@{Button}}
 \doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
 {\footnotesize\ttfamily sf\+::\+Vector2f Button\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Get the size. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \mbox{\Hypertarget{classButton_ae667eb964e0180276e0c74141e2bce9b}\label{classButton_ae667eb964e0180276e0c74141e2bce9b}} 
 \index{Button@{Button}!getTextString@{getTextString}}
 \index{getTextString@{getTextString}!Button@{Button}}
 \doxysubsubsection{\texorpdfstring{getTextString()}{getTextString()}}
 {\footnotesize\ttfamily std\+::string Button\+::get\+Text\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Get the text string. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \mbox{\Hypertarget{classButton_adb6ba11ef7c454ac0aabf2120ac85d7a}\label{classButton_adb6ba11ef7c454ac0aabf2120ac85d7a}} 
 \index{Button@{Button}!pollEvent@{pollEvent}}
 \index{pollEvent@{pollEvent}!Button@{Button}}
 \doxysubsubsection{\texorpdfstring{pollEvent()}{pollEvent()}}
 {\footnotesize\ttfamily bool Button\+::poll\+Event (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{mouse\+Pos\+View }\end{DoxyParamCaption})}
 
+
+
+Poll the event. 
+
+This function is used to poll the event 
+\begin{DoxyParams}{Parameters}
+{\em mouse\+Pos\+View} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \mbox{\Hypertarget{classButton_add4daea65a908027aa5a1593305b9656}\label{classButton_add4daea65a908027aa5a1593305b9656}} 
 \index{Button@{Button}!render@{render}}
 \index{render@{render}!Button@{Button}}
 \doxysubsubsection{\texorpdfstring{render()}{render()}}
 {\footnotesize\ttfamily void Button\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classButton_a03ef92527b48359feff925347c478dab}\label{classButton_a03ef92527b48359feff925347c478dab}} 
+
+
+Render the button. 
+
+This function is used to render the button \mbox{\Hypertarget{classButton_a03ef92527b48359feff925347c478dab}\label{classButton_a03ef92527b48359feff925347c478dab}} 
 \index{Button@{Button}!setColor@{setColor}}
 \index{setColor@{setColor}!Button@{Button}}
 \doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
 {\footnotesize\ttfamily void Button\+::set\+Color (\begin{DoxyParamCaption}\item[{sf\+::\+Color}]{\+\_\+color }\end{DoxyParamCaption})}
 
+
+
+Set the color. 
+
+This function is used to set the color of the button 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+color} & The color of the button \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classButton_ad8e030c1c8846d43f3126047d4a3667f}\label{classButton_ad8e030c1c8846d43f3126047d4a3667f}} 
 \index{Button@{Button}!update@{update}}
 \index{update@{update}!Button@{Button}}
@@ -108,6 +188,10 @@ Definition at line \mbox{\hyperlink{button_8hpp_source_l00016}{16}} of file \mbo
 {\footnotesize\ttfamily void Button\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
+
+Update the button. 
+
+This function is used to update the button 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

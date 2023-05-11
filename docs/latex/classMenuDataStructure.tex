@@ -8,25 +8,25 @@
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_1_1CreateMode_a5d66241e5ffd8317959de27fbb51ea4e}{constants\+::\+Menu\+Data\+Structure\+::\+Create\+Mode\+::\+Button}} \mbox{\hyperlink{classMenuDataStructure_a1d6d17f9f87c8df6fca719eb893eed8c}{get\+Active\+Create\+Mode}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Get the active create mode. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMenuDataStructure_ad3bc8c90e80e78f6c506c195e3564048}{Menu\+Data\+Structure}} (sf\+::\+Render\+Window $\ast$window)
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a new Menu Data Structure object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMenuDataStructure_abe00c49c8090a74ee5b2ebab464d7059}{$\sim$\+Menu\+Data\+Structure}} ()=default
-\item 
+\begin{DoxyCompactList}\small\item\em Destroy the Menu Data Structure object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classMenuDataStructure_afdd4fe9aa69e11798ab8ee30a372720d}{reset\+Active\+Option\+Menu}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Reset the active option menu. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classMenuDataStructure_a68097c6478bf135df2d2272c326f2f10}{reset\+Active\+Option\+Menu\+Only}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Reset the active option menu only. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classMenuDataStructure_a781e3d35ff840449950ae009d9066a20}{poll\+Events}} (sf\+::\+Event event, sf\+::\+Vector2f mouse\+Pos\+View)
-\item 
+\begin{DoxyCompactList}\small\item\em Poll the event. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classMenuDataStructure_acdee7cf242328cbdee37100144106856}{update}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Update the menu. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classMenuDataStructure_a3e99a6f13dec52f65ecf4cf893d475fb}{render}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Render the menu. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classButton}{Button}} $\ast$ \mbox{\hyperlink{classMenuDataStructure_aa4959e8581011e25a89c267eebd9fef6}{get\+Button}} (int index)
-\item 
+\begin{DoxyCompactList}\small\item\em Get the button. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_aa8f05ab2dbe9d9cd3d31852c4f04e665}{constants\+::\+Menu\+Data\+Structure\+::\+Button}} \mbox{\hyperlink{classMenuDataStructure_a4a29df14a3815829ed6140a27fe52048}{get\+Active\+Option\+Menu}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the active option menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -52,6 +52,15 @@ Definition at line \mbox{\hyperlink{MenuDataStructure_8hpp_source_l00014}{14}} o
 
 
 
+Construct a new Menu Data Structure object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The window \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{MenuDataStructure_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{MenuDataStructure_8cpp_source}{Menu\+Data\+Structure.\+cpp}}.
 
 
@@ -70,6 +79,10 @@ Definition at line \mbox{\hyperlink{MenuDataStructure_8cpp_source_l00007}{7}} of
 
 
 
+Destroy the Menu Data Structure object. 
+
+
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classMenuDataStructure_a1d6d17f9f87c8df6fca719eb893eed8c}\label{classMenuDataStructure_a1d6d17f9f87c8df6fca719eb893eed8c}} 
 \index{MenuDataStructure@{MenuDataStructure}!getActiveCreateMode@{getActiveCreateMode}}
@@ -77,6 +90,13 @@ Definition at line \mbox{\hyperlink{MenuDataStructure_8cpp_source_l00007}{7}} of
 \doxysubsubsection{\texorpdfstring{getActiveCreateMode()}{getActiveCreateMode()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_1_1CreateMode_a5d66241e5ffd8317959de27fbb51ea4e}{constants\+::\+Menu\+Data\+Structure\+::\+Create\+Mode\+::\+Button}} Menu\+Data\+Structure\+::get\+Active\+Create\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Get the active create mode. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_1_1CreateMode_a5d66241e5ffd8317959de27fbb51ea4e}{constants\+::\+Menu\+Data\+Structure\+::\+Create\+Mode\+::\+Button}} The active create mode 
+\end{DoxyReturn}
 
 
 Definition at line \mbox{\hyperlink{MenuDataStructure_8cpp_source_l00094}{94}} of file \mbox{\hyperlink{MenuDataStructure_8cpp_source}{Menu\+Data\+Structure.\+cpp}}.
@@ -96,6 +116,13 @@ Definition at line \mbox{\hyperlink{MenuDataStructure_8cpp_source_l00094}{94}} o
 
 
 
+Get the active option menu. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{namespaceconstants_1_1MenuDataStructure_aa8f05ab2dbe9d9cd3d31852c4f04e665}{constants\+::\+Menu\+Data\+Structure\+::\+Button}} The active option menu 
+\end{DoxyReturn}
+
+
 Definition at line \mbox{\hyperlink{MenuDataStructure_8cpp_source_l00090}{90}} of file \mbox{\hyperlink{MenuDataStructure_8cpp_source}{Menu\+Data\+Structure.\+cpp}}.
 
 
@@ -113,6 +140,18 @@ Definition at line \mbox{\hyperlink{MenuDataStructure_8cpp_source_l00090}{90}} o
 
 
 
+Get the button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Button$\ast$ The button 
+\end{DoxyReturn}
+
+
 Definition at line \mbox{\hyperlink{MenuDataStructure_8cpp_source_l00086}{86}} of file \mbox{\hyperlink{MenuDataStructure_8cpp_source}{Menu\+Data\+Structure.\+cpp}}.
 
 
@@ -128,6 +167,17 @@ Definition at line \mbox{\hyperlink{MenuDataStructure_8cpp_source_l00086}{86}} o
 \doxysubsubsection{\texorpdfstring{pollEvents()}{pollEvents()}}
 {\footnotesize\ttfamily void Menu\+Data\+Structure\+::poll\+Events (\begin{DoxyParamCaption}\item[{sf\+::\+Event}]{event,  }\item[{sf\+::\+Vector2f}]{mouse\+Pos\+View }\end{DoxyParamCaption})}
 
+
+
+Poll the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event \\
+\hline
+{\em mouse\+Pos\+View} & The mouse position \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{MenuDataStructure_8cpp_source_l00041}{41}} of file \mbox{\hyperlink{MenuDataStructure_8cpp_source}{Menu\+Data\+Structure.\+cpp}}.
@@ -161,6 +211,10 @@ Definition at line \mbox{\hyperlink{MenuDataStructure_8cpp_source_l00041}{41}} o
 
 
 
+Render the menu. 
+
+
+
 Definition at line \mbox{\hyperlink{MenuDataStructure_8cpp_source_l00074}{74}} of file \mbox{\hyperlink{MenuDataStructure_8cpp_source}{Menu\+Data\+Structure.\+cpp}}.
 
 
@@ -186,6 +240,10 @@ Definition at line \mbox{\hyperlink{MenuDataStructure_8cpp_source_l00074}{74}} o
 
 
 
+Reset the active option menu. 
+
+
+
 Definition at line \mbox{\hyperlink{MenuDataStructure_8cpp_source_l00239}{239}} of file \mbox{\hyperlink{MenuDataStructure_8cpp_source}{Menu\+Data\+Structure.\+cpp}}.
 
 
@@ -204,6 +262,10 @@ Definition at line \mbox{\hyperlink{MenuDataStructure_8cpp_source_l00239}{239}} 
 
 
 
+Reset the active option menu only. 
+
+
+
 Definition at line \mbox{\hyperlink{MenuDataStructure_8cpp_source_l00244}{244}} of file \mbox{\hyperlink{MenuDataStructure_8cpp_source}{Menu\+Data\+Structure.\+cpp}}.
 
 
@@ -218,6 +280,10 @@ Definition at line \mbox{\hyperlink{MenuDataStructure_8cpp_source_l00244}{244}} 
 \index{update@{update}!MenuDataStructure@{MenuDataStructure}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
 {\footnotesize\ttfamily void Menu\+Data\+Structure\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the menu. 
 
 
 
@@ -252,7 +318,7 @@ Definition at line \mbox{\hyperlink{MenuDataStructure_8cpp_source_l00059}{59}} o
 
 
 
-Definition at line \mbox{\hyperlink{MenuDataStructure_8hpp_source_l00045}{45}} of file \mbox{\hyperlink{MenuDataStructure_8hpp_source}{Menu\+Data\+Structure.\+hpp}}.
+Definition at line \mbox{\hyperlink{MenuDataStructure_8hpp_source_l00087}{87}} of file \mbox{\hyperlink{MenuDataStructure_8hpp_source}{Menu\+Data\+Structure.\+hpp}}.
 
 \mbox{\Hypertarget{classMenuDataStructure_a8d82f726715cf8cff6f9d0c0fa407649}\label{classMenuDataStructure_a8d82f726715cf8cff6f9d0c0fa407649}} 
 \index{MenuDataStructure@{MenuDataStructure}!pushModeValue@{pushModeValue}}
@@ -262,7 +328,7 @@ Definition at line \mbox{\hyperlink{MenuDataStructure_8hpp_source_l00045}{45}} o
 
 
 
-Definition at line \mbox{\hyperlink{MenuDataStructure_8hpp_source_l00049}{49}} of file \mbox{\hyperlink{MenuDataStructure_8hpp_source}{Menu\+Data\+Structure.\+hpp}}.
+Definition at line \mbox{\hyperlink{MenuDataStructure_8hpp_source_l00096}{96}} of file \mbox{\hyperlink{MenuDataStructure_8hpp_source}{Menu\+Data\+Structure.\+hpp}}.
 
 
 

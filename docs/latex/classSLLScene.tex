@@ -2,6 +2,11 @@
 \label{classSLLScene}\index{SLLScene@{SLLScene}}
 
 
+Class for singly linked list scene.  
+
+
+
+
 {\ttfamily \#include $<$SLLScene.\+hpp$>$}
 
 Inheritance diagram for SLLScene\+:\begin{figure}[H]
@@ -14,23 +19,23 @@ Inheritance diagram for SLLScene\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classSLLScene_abf9037ee2b9796dde49e7a460035ce95}{SLLScene}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}})
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a new Singly Linked List Scene object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSLLScene_aba0a1fefb064285972afc5d3bba934f0}{reset}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Reset the scene. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSLLScene_a605c80b79628556e9b2e0d9444804e65}{poll\+Event}} (sf\+::\+Event event, sf\+::\+Vector2f mouse\+Pos\+View) override
-\item 
+\begin{DoxyCompactList}\small\item\em Poll the event. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSLLScene_a353bbab8ef95b94d7b4b16cfaa9b9247}{update}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Update the scene. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSLLScene_abb904f9012ca04d0a3b2faabcb6240ce}{render}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Render the scene. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ \mbox{\hyperlink{classSLLScene_a49dc5fd260bd7f02e37adf2bddbe36a7}{add\+Mode\+Events}} (int chosen\+Node)
-\item 
+\begin{DoxyCompactList}\small\item\em Generate the event animation for add mode. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ \mbox{\hyperlink{classSLLScene_a0d7c47579abd3553867db89289c569a9}{delete\+Mode\+Events}} (int chosen\+Node)
-\item 
+\begin{DoxyCompactList}\small\item\em Generate the event animation for delete mode. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ \mbox{\hyperlink{classSLLScene_ae0e251f410d734f724416d04e5e38938}{update\+Mode\+Events}} (int chosen\+Node)
-\item 
+\begin{DoxyCompactList}\small\item\em Generate the event animation for update mode. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ \mbox{\hyperlink{classSLLScene_a75af6df8b9fd4004bb7ab1fd7548f71a}{search\+Mode\+Events}} (int chosen\+Node)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Generate the event animation for search mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBaseScene}{Base\+Scene}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -69,9 +74,11 @@ sf\+::\+Render\+Window $\ast$ \mbox{\hyperlink{classBaseScene_acbbe01e69ca27d195
 
 
 \doxysubsection{Detailed Description}
+Class for singly linked list scene. 
 
 
-Definition at line \mbox{\hyperlink{SLLScene_8hpp_source_l00012}{12}} of file \mbox{\hyperlink{SLLScene_8hpp_source}{SLLScene.\+hpp}}.
+
+Definition at line \mbox{\hyperlink{SLLScene_8hpp_source_l00016}{16}} of file \mbox{\hyperlink{SLLScene_8hpp_source}{SLLScene.\+hpp}}.
 
 
 
@@ -82,6 +89,15 @@ Definition at line \mbox{\hyperlink{SLLScene_8hpp_source_l00012}{12}} of file \m
 \doxysubsubsection{\texorpdfstring{SLLScene()}{SLLScene()}}
 {\footnotesize\ttfamily SLLScene\+::\+SLLScene (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
+
+
+Construct a new Singly Linked List Scene object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The window to render \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{SLLScene_8cpp_source_l00130}{130}} of file \mbox{\hyperlink{SLLScene_8cpp_source}{SLLScene.\+cpp}}.
@@ -102,6 +118,18 @@ Definition at line \mbox{\hyperlink{SLLScene_8cpp_source_l00130}{130}} of file \
 \doxysubsubsection{\texorpdfstring{addModeEvents()}{addModeEvents()}}
 {\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ SLLScene\+::add\+Mode\+Events (\begin{DoxyParamCaption}\item[{int}]{chosen\+Node }\end{DoxyParamCaption})}
 
+
+
+Generate the event animation for add mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chosen\+Node} & The chosen node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Event\+Animation$>$ The event animation 
+\end{DoxyReturn}
 
 
 Definition at line \mbox{\hyperlink{SLLScene_8cpp_source_l00143}{143}} of file \mbox{\hyperlink{SLLScene_8cpp_source}{SLLScene.\+cpp}}.
@@ -248,6 +276,18 @@ Definition at line \mbox{\hyperlink{SLLScene_8cpp_source_l00143}{143}} of file \
 \doxysubsubsection{\texorpdfstring{deleteModeEvents()}{deleteModeEvents()}}
 {\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ SLLScene\+::delete\+Mode\+Events (\begin{DoxyParamCaption}\item[{int}]{chosen\+Node }\end{DoxyParamCaption})}
 
+
+
+Generate the event animation for delete mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chosen\+Node} & The chosen node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Event\+Animation$>$ The event animation 
+\end{DoxyReturn}
 
 
 Definition at line \mbox{\hyperlink{SLLScene_8cpp_source_l00276}{276}} of file \mbox{\hyperlink{SLLScene_8cpp_source}{SLLScene.\+cpp}}.
@@ -402,6 +442,17 @@ Definition at line \mbox{\hyperlink{SLLScene_8cpp_source_l00276}{276}} of file \
 
 
 
+Poll the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event \\
+\hline
+{\em mouse\+Pos\+View} & The mouse position \\
+\hline
+\end{DoxyParams}
+
+
 Implements \mbox{\hyperlink{classBaseScene_a16dd70d07399fc63d7a3e29fbac516cf}{Base\+Scene}}.
 
 
@@ -423,6 +474,10 @@ Definition at line \mbox{\hyperlink{SLLScene_8cpp_source_l00007}{7}} of file \mb
 \index{render@{render}!SLLScene@{SLLScene}}
 \doxysubsubsection{\texorpdfstring{render()}{render()}}
 {\footnotesize\ttfamily void SLLScene\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Render the scene. 
 
 
 
@@ -454,6 +509,10 @@ Definition at line \mbox{\hyperlink{SLLScene_8cpp_source_l00119}{119}} of file \
 
 
 
+Reset the scene. 
+
+
+
 Definition at line \mbox{\hyperlink{SLLScene_8cpp_source_l00139}{139}} of file \mbox{\hyperlink{SLLScene_8cpp_source}{SLLScene.\+cpp}}.
 
 
@@ -469,6 +528,18 @@ Definition at line \mbox{\hyperlink{SLLScene_8cpp_source_l00139}{139}} of file \
 \doxysubsubsection{\texorpdfstring{searchModeEvents()}{searchModeEvents()}}
 {\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ SLLScene\+::search\+Mode\+Events (\begin{DoxyParamCaption}\item[{int}]{chosen\+Node }\end{DoxyParamCaption})}
 
+
+
+Generate the event animation for search mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chosen\+Node} & The chosen node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Event\+Animation$>$ The event animation 
+\end{DoxyReturn}
 
 
 Definition at line \mbox{\hyperlink{SLLScene_8cpp_source_l00479}{479}} of file \mbox{\hyperlink{SLLScene_8cpp_source}{SLLScene.\+cpp}}.
@@ -546,6 +617,10 @@ Definition at line \mbox{\hyperlink{SLLScene_8cpp_source_l00479}{479}} of file \
 \index{update@{update}!SLLScene@{SLLScene}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
 {\footnotesize\ttfamily void SLLScene\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update the scene. 
 
 
 
@@ -669,6 +744,18 @@ Definition at line \mbox{\hyperlink{SLLScene_8cpp_source_l00014}{14}} of file \m
 \doxysubsubsection{\texorpdfstring{updateModeEvents()}{updateModeEvents()}}
 {\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ SLLScene\+::update\+Mode\+Events (\begin{DoxyParamCaption}\item[{int}]{chosen\+Node }\end{DoxyParamCaption})}
 
+
+
+Generate the event animation for update mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chosen\+Node} & The chosen node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Event\+Animation$>$ The event animation 
+\end{DoxyReturn}
 
 
 Definition at line \mbox{\hyperlink{SLLScene_8cpp_source_l00415}{415}} of file \mbox{\hyperlink{SLLScene_8cpp_source}{SLLScene.\+cpp}}.

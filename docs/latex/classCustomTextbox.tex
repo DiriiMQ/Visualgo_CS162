@@ -2,31 +2,36 @@
 \label{classCustomTextbox}\index{CustomTextbox@{CustomTextbox}}
 
 
+Custom Textbox class.  
+
+
+
+
 {\ttfamily \#include $<$Custom\+Textbox.\+hpp$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classCustomTextbox_a862a9f8bd0c132e7cd081f674b903c96}{Custom\+Textbox}} (sf\+::\+Render\+Window $\ast$window, sf\+::\+Vector2f position, int size, std\+::string title\+String, int max\+Length)
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a new Custom Textbox object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classCustomTextbox_a634572a273f5573ba3ec3bf739afb38f}{$\sim$\+Custom\+Textbox}} ()=default
 \item 
 void \mbox{\hyperlink{classCustomTextbox_aec18b36767a71c5a9fb7eae48ef4d9b5}{poll\+Event}} (sf\+::\+Event event, sf\+::\+Vector2f mouse\+Pos\+View)
-\item 
+\begin{DoxyCompactList}\small\item\em Poll the event. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCustomTextbox_ac8901adc866e8d58c09d77476a51f58d}{update}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Update the text box. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCustomTextbox_a8c2246eca63d3095ca1f3dcf4e946eb0}{render}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Render the text box. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classCustomTextbox_a5b725849f4f8c7d795e4c4a1ed809ba2}{get\+Text\+String}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Get the input string. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCustomTextbox_a724a824af4f1a54252b940048ab79c65}{reset\+Input}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Reset the input. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+Custom Textbox class. 
 
-
-Definition at line \mbox{\hyperlink{CustomTextbox_8hpp_source_l00011}{11}} of file \mbox{\hyperlink{CustomTextbox_8hpp_source}{Custom\+Textbox.\+hpp}}.
+Definition at line \mbox{\hyperlink{CustomTextbox_8hpp_source_l00014}{14}} of file \mbox{\hyperlink{CustomTextbox_8hpp_source}{Custom\+Textbox.\+hpp}}.
 
 
 
@@ -37,6 +42,23 @@ Definition at line \mbox{\hyperlink{CustomTextbox_8hpp_source_l00011}{11}} of fi
 \doxysubsubsection{\texorpdfstring{CustomTextbox()}{CustomTextbox()}}
 {\footnotesize\ttfamily Custom\+Textbox\+::\+Custom\+Textbox (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window,  }\item[{sf\+::\+Vector2f}]{position,  }\item[{int}]{size,  }\item[{std\+::string}]{title\+String,  }\item[{int}]{max\+Length }\end{DoxyParamCaption})}
 
+
+
+Construct a new Custom Textbox object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The window where the text box will be rendered \\
+\hline
+{\em position} & The position of the text box \\
+\hline
+{\em size} & The size of the text box \\
+\hline
+{\em title\+String} & The title of the text box \\
+\hline
+{\em max\+Length} & The maximum length of the text \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{CustomTextbox_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{CustomTextbox_8cpp_source}{Custom\+Textbox.\+cpp}}.
@@ -104,6 +126,13 @@ Definition at line \mbox{\hyperlink{CustomTextbox_8cpp_source_l00007}{7}} of fil
 
 
 
+Get the input string. 
+
+This function is used to get the input string \begin{DoxyReturn}{Returns}
+The input string 
+\end{DoxyReturn}
+
+
 Definition at line \mbox{\hyperlink{CustomTextbox_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{CustomTextbox_8cpp_source}{Custom\+Textbox.\+cpp}}.
 
 
@@ -123,6 +152,17 @@ Definition at line \mbox{\hyperlink{CustomTextbox_8cpp_source_l00070}{70}} of fi
 \doxysubsubsection{\texorpdfstring{pollEvent()}{pollEvent()}}
 {\footnotesize\ttfamily void Custom\+Textbox\+::poll\+Event (\begin{DoxyParamCaption}\item[{sf\+::\+Event}]{event,  }\item[{sf\+::\+Vector2f}]{mouse\+Pos\+View }\end{DoxyParamCaption})}
 
+
+
+Poll the event. 
+
+This function is used to poll the event 
+\begin{DoxyParams}{Parameters}
+{\em event} & The event that will be polled \\
+\hline
+{\em mouse\+Pos\+View} & The position of the mouse \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{CustomTextbox_8cpp_source_l00051}{51}} of file \mbox{\hyperlink{CustomTextbox_8cpp_source}{Custom\+Textbox.\+cpp}}.
@@ -146,6 +186,10 @@ Definition at line \mbox{\hyperlink{CustomTextbox_8cpp_source_l00051}{51}} of fi
 
 
 
+Render the text box. 
+
+This function is used to render the text box 
+
 Definition at line \mbox{\hyperlink{CustomTextbox_8cpp_source_l00064}{64}} of file \mbox{\hyperlink{CustomTextbox_8cpp_source}{Custom\+Textbox.\+cpp}}.
 
 
@@ -165,6 +209,10 @@ Definition at line \mbox{\hyperlink{CustomTextbox_8cpp_source_l00064}{64}} of fi
 
 
 
+Reset the input. 
+
+This function is used to reset the input 
+
 Definition at line \mbox{\hyperlink{CustomTextbox_8cpp_source_l00078}{78}} of file \mbox{\hyperlink{CustomTextbox_8cpp_source}{Custom\+Textbox.\+cpp}}.
 
 
@@ -181,6 +229,10 @@ Definition at line \mbox{\hyperlink{CustomTextbox_8cpp_source_l00078}{78}} of fi
 {\footnotesize\ttfamily void Custom\+Textbox\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
+
+Update the text box. 
+
+This function is used to update the text box 
 
 Definition at line \mbox{\hyperlink{CustomTextbox_8cpp_source_l00059}{59}} of file \mbox{\hyperlink{CustomTextbox_8cpp_source}{Custom\+Textbox.\+cpp}}.
 

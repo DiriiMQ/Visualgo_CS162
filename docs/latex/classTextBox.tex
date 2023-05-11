@@ -2,31 +2,38 @@
 \label{classTextBox}\index{TextBox@{TextBox}}
 
 
+Class for creating a text box.  
+
+
+
+
 {\ttfamily \#include $<$Textbox.\+hpp$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classTextBox_a64c43f684f46258bd2cf36f6c61197c9}{Text\+Box}} (sf\+::\+Render\+Window $\ast$window, sf\+::\+Vector2f position, int size, sf\+::\+Color text\+Color, sf\+::\+Color box\+Color, int max\+Length)
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a new Text Box object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classTextBox_a9f2c6d36865f6a6c1b546a9fcff29924}{poll\+Event}} (sf\+::\+Event event)
-\item 
+\begin{DoxyCompactList}\small\item\em Poll the event. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classTextBox_afa0bba711f542abe6c4d304fe2773cd9}{update}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Update the text box. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classTextBox_a786758eb5ae6caa0ed299bf45d5715a5}{render}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Render the text box. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classTextBox_a0b7094d6739337a7c7c2dc1abe6d2a92}{get\+Text\+String}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the input string. \end{DoxyCompactList}\item 
 sf\+::\+Rectangle\+Shape \mbox{\hyperlink{classTextBox_aad20d6bfe62fdfb0e39689c26420a2a2}{get\+Box}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the box. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classTextBox_a8d88d610f8eea49a8c70d18902136185}{reset\+Input}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the text. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+Class for creating a text box. 
 
+This class is used to create a text box that can be used to get input from the user 
 
-Definition at line \mbox{\hyperlink{Textbox_8hpp_source_l00013}{13}} of file \mbox{\hyperlink{Textbox_8hpp_source}{Textbox.\+hpp}}.
+Definition at line \mbox{\hyperlink{Textbox_8hpp_source_l00017}{17}} of file \mbox{\hyperlink{Textbox_8hpp_source}{Textbox.\+hpp}}.
 
 
 
@@ -37,6 +44,25 @@ Definition at line \mbox{\hyperlink{Textbox_8hpp_source_l00013}{13}} of file \mb
 \doxysubsubsection{\texorpdfstring{TextBox()}{TextBox()}}
 {\footnotesize\ttfamily Text\+Box\+::\+Text\+Box (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window,  }\item[{sf\+::\+Vector2f}]{position,  }\item[{int}]{size,  }\item[{sf\+::\+Color}]{text\+Color,  }\item[{sf\+::\+Color}]{box\+Color,  }\item[{int}]{max\+Length }\end{DoxyParamCaption})}
 
+
+
+Construct a new Text Box object. 
+
+This constructor is used to create a text box 
+\begin{DoxyParams}{Parameters}
+{\em window} & The window where the text box will be rendered \\
+\hline
+{\em position} & The position of the text box \\
+\hline
+{\em size} & The size of the text box \\
+\hline
+{\em text\+Color} & The color of the text \\
+\hline
+{\em box\+Color} & The color of the box \\
+\hline
+{\em max\+Length} & The maximum length of the text \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{Textbox_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{Textbox_8cpp_source}{Textbox.\+cpp}}.
@@ -80,6 +106,13 @@ Definition at line \mbox{\hyperlink{Textbox_8cpp_source_l00007}{7}} of file \mbo
 
 
 
+Get the box. 
+
+This function is used to get the box \begin{DoxyReturn}{Returns}
+The box 
+\end{DoxyReturn}
+
+
 Definition at line \mbox{\hyperlink{Textbox_8cpp_source_l00088}{88}} of file \mbox{\hyperlink{Textbox_8cpp_source}{Textbox.\+cpp}}.
 
 
@@ -97,6 +130,13 @@ Definition at line \mbox{\hyperlink{Textbox_8cpp_source_l00088}{88}} of file \mb
 
 
 
+Get the input string. 
+
+This function is used to get the input string \begin{DoxyReturn}{Returns}
+The input string 
+\end{DoxyReturn}
+
+
 Definition at line \mbox{\hyperlink{Textbox_8cpp_source_l00084}{84}} of file \mbox{\hyperlink{Textbox_8cpp_source}{Textbox.\+cpp}}.
 
 
@@ -112,6 +152,15 @@ Definition at line \mbox{\hyperlink{Textbox_8cpp_source_l00084}{84}} of file \mb
 \doxysubsubsection{\texorpdfstring{pollEvent()}{pollEvent()}}
 {\footnotesize\ttfamily void Text\+Box\+::poll\+Event (\begin{DoxyParamCaption}\item[{sf\+::\+Event}]{event }\end{DoxyParamCaption})}
 
+
+
+Poll the event. 
+
+This function is used to poll the event 
+\begin{DoxyParams}{Parameters}
+{\em event} & The event that will be polled \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{Textbox_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{Textbox_8cpp_source}{Textbox.\+cpp}}.
@@ -156,6 +205,10 @@ Definition at line \mbox{\hyperlink{Textbox_8cpp_source_l00033}{33}} of file \mb
 
 
 
+Render the text box. 
+
+This function is used to render the text box 
+
 Definition at line \mbox{\hyperlink{Textbox_8cpp_source_l00079}{79}} of file \mbox{\hyperlink{Textbox_8cpp_source}{Textbox.\+cpp}}.
 
 
@@ -172,6 +225,13 @@ Definition at line \mbox{\hyperlink{Textbox_8cpp_source_l00079}{79}} of file \mb
 \doxysubsubsection{\texorpdfstring{resetInput()}{resetInput()}}
 {\footnotesize\ttfamily void Text\+Box\+::reset\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Get the text. 
+
+This function is used to get the text \begin{DoxyReturn}{Returns}
+The text 
+\end{DoxyReturn}
 
 
 Definition at line \mbox{\hyperlink{Textbox_8cpp_source_l00092}{92}} of file \mbox{\hyperlink{Textbox_8cpp_source}{Textbox.\+cpp}}.
@@ -191,6 +251,10 @@ Definition at line \mbox{\hyperlink{Textbox_8cpp_source_l00092}{92}} of file \mb
 {\footnotesize\ttfamily void Text\+Box\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
+
+Update the text box. 
+
+This function is used to update the text box 
 
 Definition at line \mbox{\hyperlink{Textbox_8cpp_source_l00062}{62}} of file \mbox{\hyperlink{Textbox_8cpp_source}{Textbox.\+cpp}}.
 

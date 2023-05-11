@@ -8,23 +8,23 @@
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{namespaceconstants_1_1MenuArray_1_1CreateMode_a0d8c7d8013f2920c995917895fb5cc7a}{constants\+::\+Menu\+Array\+::\+Create\+Mode\+::\+Button}} \mbox{\hyperlink{classMenuArray_ad61bdce4bf4159aa9f8d45e4750b484e}{get\+Active\+Create\+Mode}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Get the active create mode. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMenuArray_a6a043171101f95ab7b509bb471971a98}{Menu\+Array}} (sf\+::\+Render\+Window $\ast$window, \mbox{\hyperlink{namespaceconstants_1_1MenuArray_a9a78ad7c059d2ca5962d8be0c602acab}{constants\+::\+Menu\+Array\+::\+Type}} \+\_\+type\+Array)
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a new Menu \mbox{\hyperlink{classArray}{Array}} object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMenuArray_a0b524ea53872e669b10dc03001c669c8}{$\sim$\+Menu\+Array}} ()=default
-\item 
+\begin{DoxyCompactList}\small\item\em Destroy the Menu \mbox{\hyperlink{classArray}{Array}} object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classMenuArray_a56b86d1994e569bf023b0caa49f27585}{reset\+Active\+Option\+Menu}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Reset the active option menu. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classMenuArray_a43c0186f8b2cc58d20b9a6b25407e37a}{poll\+Events}} (sf\+::\+Event event, sf\+::\+Vector2f mouse\+Pos\+View)
-\item 
+\begin{DoxyCompactList}\small\item\em Poll the event. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classMenuArray_a012da56e42d7d804eb5a41b797efe002}{update}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Update the menu array. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classMenuArray_a385fb96e1efd05928ba59fd5028720bb}{render}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Render the menu array. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classButton}{Button}} $\ast$ \mbox{\hyperlink{classMenuArray_a16d92131d2ee087e8f3ff7d42623f04c}{get\+Button}} (int index)
-\item 
+\begin{DoxyCompactList}\small\item\em Get the button. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceconstants_1_1MenuArray_a61dd107410ce3295fffb7071abcf5266}{constants\+::\+Menu\+Array\+::\+Button}} \mbox{\hyperlink{classMenuArray_a2491c2d04c38f48ae8f1ac1f96351b9f}{get\+Active\+Option\+Menu}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the active option menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -58,6 +58,17 @@ Definition at line \mbox{\hyperlink{MenuArray_8hpp_source_l00014}{14}} of file \
 
 
 
+Construct a new Menu \mbox{\hyperlink{classArray}{Array}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The window \\
+\hline
+{\em \+\_\+type\+Array} & The type of array \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{MenuArray_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{MenuArray_8cpp_source}{Menu\+Array.\+cpp}}.
 
 
@@ -77,6 +88,10 @@ Definition at line \mbox{\hyperlink{MenuArray_8cpp_source_l00007}{7}} of file \m
 
 
 
+Destroy the Menu \mbox{\hyperlink{classArray}{Array}} object. 
+
+
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classMenuArray_ad61bdce4bf4159aa9f8d45e4750b484e}\label{classMenuArray_ad61bdce4bf4159aa9f8d45e4750b484e}} 
 \index{MenuArray@{MenuArray}!getActiveCreateMode@{getActiveCreateMode}}
@@ -84,6 +99,13 @@ Definition at line \mbox{\hyperlink{MenuArray_8cpp_source_l00007}{7}} of file \m
 \doxysubsubsection{\texorpdfstring{getActiveCreateMode()}{getActiveCreateMode()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{namespaceconstants_1_1MenuArray_1_1CreateMode_a0d8c7d8013f2920c995917895fb5cc7a}{constants\+::\+Menu\+Array\+::\+Create\+Mode\+::\+Button}} Menu\+Array\+::get\+Active\+Create\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Get the active create mode. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{namespaceconstants_1_1MenuArray_1_1CreateMode_a0d8c7d8013f2920c995917895fb5cc7a}{constants\+::\+Menu\+Array\+::\+Create\+Mode\+::\+Button}} The active create mode 
+\end{DoxyReturn}
 
 
 Definition at line \mbox{\hyperlink{MenuArray_8cpp_source_l00158}{158}} of file \mbox{\hyperlink{MenuArray_8cpp_source}{Menu\+Array.\+cpp}}.
@@ -103,6 +125,13 @@ Definition at line \mbox{\hyperlink{MenuArray_8cpp_source_l00158}{158}} of file 
 
 
 
+Get the active option menu. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{namespaceconstants_1_1MenuArray_a61dd107410ce3295fffb7071abcf5266}{constants\+::\+Menu\+Array\+::\+Button}} The active option menu 
+\end{DoxyReturn}
+
+
 Definition at line \mbox{\hyperlink{MenuArray_8cpp_source_l00154}{154}} of file \mbox{\hyperlink{MenuArray_8cpp_source}{Menu\+Array.\+cpp}}.
 
 
@@ -120,6 +149,18 @@ Definition at line \mbox{\hyperlink{MenuArray_8cpp_source_l00154}{154}} of file 
 
 
 
+Get the button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of button \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Button$\ast$ The button 
+\end{DoxyReturn}
+
+
 Definition at line \mbox{\hyperlink{MenuArray_8cpp_source_l00150}{150}} of file \mbox{\hyperlink{MenuArray_8cpp_source}{Menu\+Array.\+cpp}}.
 
 
@@ -135,6 +176,17 @@ Definition at line \mbox{\hyperlink{MenuArray_8cpp_source_l00150}{150}} of file 
 \doxysubsubsection{\texorpdfstring{pollEvents()}{pollEvents()}}
 {\footnotesize\ttfamily void Menu\+Array\+::poll\+Events (\begin{DoxyParamCaption}\item[{sf\+::\+Event}]{event,  }\item[{sf\+::\+Vector2f}]{mouse\+Pos\+View }\end{DoxyParamCaption})}
 
+
+
+Poll the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event \\
+\hline
+{\em mouse\+Pos\+View} & The mouse position \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{MenuArray_8cpp_source_l00053}{53}} of file \mbox{\hyperlink{MenuArray_8cpp_source}{Menu\+Array.\+cpp}}.
@@ -186,6 +238,10 @@ Definition at line \mbox{\hyperlink{MenuArray_8cpp_source_l00053}{53}} of file \
 
 
 
+Render the menu array. 
+
+
+
 Definition at line \mbox{\hyperlink{MenuArray_8cpp_source_l00121}{121}} of file \mbox{\hyperlink{MenuArray_8cpp_source}{Menu\+Array.\+cpp}}.
 
 
@@ -228,6 +284,10 @@ Definition at line \mbox{\hyperlink{MenuArray_8cpp_source_l00121}{121}} of file 
 
 
 
+Reset the active option menu. 
+
+
+
 Definition at line \mbox{\hyperlink{MenuArray_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{MenuArray_8cpp_source}{Menu\+Array.\+cpp}}.
 
 
@@ -243,6 +303,10 @@ Definition at line \mbox{\hyperlink{MenuArray_8cpp_source_l00048}{48}} of file \
 \index{update@{update}!MenuArray@{MenuArray}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
 {\footnotesize\ttfamily void Menu\+Array\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the menu array. 
 
 
 
@@ -294,7 +358,7 @@ Definition at line \mbox{\hyperlink{MenuArray_8cpp_source_l00089}{89}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{MenuArray_8hpp_source_l00084}{84}} of file \mbox{\hyperlink{MenuArray_8hpp_source}{Menu\+Array.\+hpp}}.
+Definition at line \mbox{\hyperlink{MenuArray_8hpp_source_l00203}{203}} of file \mbox{\hyperlink{MenuArray_8hpp_source}{Menu\+Array.\+hpp}}.
 
 \mbox{\Hypertarget{classMenuArray_aee1c973a176d7f08148637b90c1b18fc}\label{classMenuArray_aee1c973a176d7f08148637b90c1b18fc}} 
 \index{MenuArray@{MenuArray}!allocateModeValue@{allocateModeValue}}
@@ -304,7 +368,7 @@ Definition at line \mbox{\hyperlink{MenuArray_8hpp_source_l00084}{84}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{MenuArray_8hpp_source_l00096}{96}} of file \mbox{\hyperlink{MenuArray_8hpp_source}{Menu\+Array.\+hpp}}.
+Definition at line \mbox{\hyperlink{MenuArray_8hpp_source_l00215}{215}} of file \mbox{\hyperlink{MenuArray_8hpp_source}{Menu\+Array.\+hpp}}.
 
 \mbox{\Hypertarget{classMenuArray_a59f9f7db86933c7bbe1f826632a763e2}\label{classMenuArray_a59f9f7db86933c7bbe1f826632a763e2}} 
 \index{MenuArray@{MenuArray}!createModeValue@{createModeValue}}
@@ -314,7 +378,7 @@ Definition at line \mbox{\hyperlink{MenuArray_8hpp_source_l00096}{96}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{MenuArray_8hpp_source_l00080}{80}} of file \mbox{\hyperlink{MenuArray_8hpp_source}{Menu\+Array.\+hpp}}.
+Definition at line \mbox{\hyperlink{MenuArray_8hpp_source_l00195}{195}} of file \mbox{\hyperlink{MenuArray_8hpp_source}{Menu\+Array.\+hpp}}.
 
 \mbox{\Hypertarget{classMenuArray_a0bd921f7ed6880c65fb4e9ccbb4ab9d9}\label{classMenuArray_a0bd921f7ed6880c65fb4e9ccbb4ab9d9}} 
 \index{MenuArray@{MenuArray}!deleteModeValue@{deleteModeValue}}
@@ -324,7 +388,7 @@ Definition at line \mbox{\hyperlink{MenuArray_8hpp_source_l00080}{80}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{MenuArray_8hpp_source_l00087}{87}} of file \mbox{\hyperlink{MenuArray_8hpp_source}{Menu\+Array.\+hpp}}.
+Definition at line \mbox{\hyperlink{MenuArray_8hpp_source_l00206}{206}} of file \mbox{\hyperlink{MenuArray_8hpp_source}{Menu\+Array.\+hpp}}.
 
 \mbox{\Hypertarget{classMenuArray_a4fd3f92582bf6ec6fc502d7018c96778}\label{classMenuArray_a4fd3f92582bf6ec6fc502d7018c96778}} 
 \index{MenuArray@{MenuArray}!searchModeValue@{searchModeValue}}
@@ -334,7 +398,7 @@ Definition at line \mbox{\hyperlink{MenuArray_8hpp_source_l00087}{87}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{MenuArray_8hpp_source_l00093}{93}} of file \mbox{\hyperlink{MenuArray_8hpp_source}{Menu\+Array.\+hpp}}.
+Definition at line \mbox{\hyperlink{MenuArray_8hpp_source_l00212}{212}} of file \mbox{\hyperlink{MenuArray_8hpp_source}{Menu\+Array.\+hpp}}.
 
 \mbox{\Hypertarget{classMenuArray_a45d6b4d74c1629e5577f20f8c5834084}\label{classMenuArray_a45d6b4d74c1629e5577f20f8c5834084}} 
 \index{MenuArray@{MenuArray}!updateModeValue@{updateModeValue}}
@@ -344,7 +408,7 @@ Definition at line \mbox{\hyperlink{MenuArray_8hpp_source_l00093}{93}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{MenuArray_8hpp_source_l00090}{90}} of file \mbox{\hyperlink{MenuArray_8hpp_source}{Menu\+Array.\+hpp}}.
+Definition at line \mbox{\hyperlink{MenuArray_8hpp_source_l00209}{209}} of file \mbox{\hyperlink{MenuArray_8hpp_source}{Menu\+Array.\+hpp}}.
 
 
 

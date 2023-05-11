@@ -2,6 +2,11 @@
 \label{classStackScene}\index{StackScene@{StackScene}}
 
 
+Class for stack scene.  
+
+
+
+
 {\ttfamily \#include $<$Stack\+Scene.\+hpp$>$}
 
 Inheritance diagram for Stack\+Scene\+:\begin{figure}[H]
@@ -14,19 +19,19 @@ Inheritance diagram for Stack\+Scene\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classStackScene_a2e586880279e8d6716879e00b888b74d}{Stack\+Scene}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classBaseScene_acbbe01e69ca27d1959e3863590511f14}{window}})
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a new Stack Scene object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classStackScene_a8d6026d28780b964c923a4eff415c739}{reset}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Reset the scene. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classStackScene_a17a78895e05e5a29250b31e92902d5bc}{poll\+Event}} (sf\+::\+Event event, sf\+::\+Vector2f mouse\+Pos\+View) override
-\item 
+\begin{DoxyCompactList}\small\item\em Poll the event. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classStackScene_a7e883617bc3a48ff47bef6a375106a5b}{update}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Update the scene. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classStackScene_a3b9bb55d1b6320cbdb01dea71458ecbe}{render}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Render the scene. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ \mbox{\hyperlink{classStackScene_a648cf14c2d9b4253cba36f6cee549389}{push\+Mode\+Events}} (int chosen\+Node)
-\item 
+\begin{DoxyCompactList}\small\item\em Generate the event animation for push mode. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ \mbox{\hyperlink{classStackScene_a9dd8bfd76eecc78aea5316f592dad1d4}{pop\+Mode\+Events}} (int chosen\+Node)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Generate the event animation for pop mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBaseScene}{Base\+Scene}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -65,9 +70,11 @@ sf\+::\+Render\+Window $\ast$ \mbox{\hyperlink{classBaseScene_acbbe01e69ca27d195
 
 
 \doxysubsection{Detailed Description}
+Class for stack scene. 
 
 
-Definition at line \mbox{\hyperlink{StackScene_8hpp_source_l00012}{12}} of file \mbox{\hyperlink{StackScene_8hpp_source}{Stack\+Scene.\+hpp}}.
+
+Definition at line \mbox{\hyperlink{StackScene_8hpp_source_l00016}{16}} of file \mbox{\hyperlink{StackScene_8hpp_source}{Stack\+Scene.\+hpp}}.
 
 
 
@@ -78,6 +85,15 @@ Definition at line \mbox{\hyperlink{StackScene_8hpp_source_l00012}{12}} of file 
 \doxysubsubsection{\texorpdfstring{StackScene()}{StackScene()}}
 {\footnotesize\ttfamily Stack\+Scene\+::\+Stack\+Scene (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
+
+
+Construct a new Stack Scene object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The window to render \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{StackScene_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{StackScene_8cpp_source}{Stack\+Scene.\+cpp}}.
@@ -98,6 +114,17 @@ Definition at line \mbox{\hyperlink{StackScene_8cpp_source_l00007}{7}} of file \
 \doxysubsubsection{\texorpdfstring{pollEvent()}{pollEvent()}}
 {\footnotesize\ttfamily void Stack\+Scene\+::poll\+Event (\begin{DoxyParamCaption}\item[{sf\+::\+Event}]{event,  }\item[{sf\+::\+Vector2f}]{mouse\+Pos\+View }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Poll the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event \\
+\hline
+{\em mouse\+Pos\+View} & The mouse position \\
+\hline
+\end{DoxyParams}
 
 
 Implements \mbox{\hyperlink{classBaseScene_a16dd70d07399fc63d7a3e29fbac516cf}{Base\+Scene}}.
@@ -122,6 +149,18 @@ Definition at line \mbox{\hyperlink{StackScene_8cpp_source_l00111}{111}} of file
 \doxysubsubsection{\texorpdfstring{popModeEvents()}{popModeEvents()}}
 {\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classEventAnimation}{Event\+Animation}} $>$ Stack\+Scene\+::pop\+Mode\+Events (\begin{DoxyParamCaption}\item[{int}]{chosen\+Node }\end{DoxyParamCaption})}
 
+
+
+Generate the event animation for pop mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chosen\+Node} & The chosen node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Event\+Animation$>$ The event animation 
+\end{DoxyReturn}
 
 
 Definition at line \mbox{\hyperlink{StackScene_8cpp_source_l00260}{260}} of file \mbox{\hyperlink{StackScene_8cpp_source}{Stack\+Scene.\+cpp}}.
@@ -276,6 +315,18 @@ Definition at line \mbox{\hyperlink{StackScene_8cpp_source_l00260}{260}} of file
 
 
 
+Generate the event animation for push mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chosen\+Node} & The chosen node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Event\+Animation$>$ The event animation 
+\end{DoxyReturn}
+
+
 Definition at line \mbox{\hyperlink{StackScene_8cpp_source_l00127}{127}} of file \mbox{\hyperlink{StackScene_8cpp_source}{Stack\+Scene.\+cpp}}.
 
 
@@ -422,6 +473,10 @@ Definition at line \mbox{\hyperlink{StackScene_8cpp_source_l00127}{127}} of file
 
 
 
+Render the scene. 
+
+
+
 Implements \mbox{\hyperlink{classBaseScene_a18694189ddd54cb279e1814869dbe854}{Base\+Scene}}.
 
 
@@ -450,6 +505,10 @@ Definition at line \mbox{\hyperlink{StackScene_8cpp_source_l00100}{100}} of file
 
 
 
+Reset the scene. 
+
+
+
 Definition at line \mbox{\hyperlink{StackScene_8cpp_source_l00123}{123}} of file \mbox{\hyperlink{StackScene_8cpp_source}{Stack\+Scene.\+cpp}}.
 
 
@@ -464,6 +523,10 @@ Definition at line \mbox{\hyperlink{StackScene_8cpp_source_l00123}{123}} of file
 \index{update@{update}!StackScene@{StackScene}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
 {\footnotesize\ttfamily void Stack\+Scene\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update the scene. 
 
 
 
