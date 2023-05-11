@@ -10,8 +10,8 @@
 #include "Constants.hpp"
 
 /**
- * @brief A class to create a button
- * 
+ * @brief Class for creating a button
+ * @details This class is used to create a button
  */
 class Button{
 private:
@@ -33,11 +33,25 @@ private:
 
     /**
      * @brief Initialize the button
-     * 
+     * @details This function is used to initialize the button
      */
     void init();
 
 public:
+    /**
+     * @brief Construct a new Button object
+     * @details This constructor is used to create a button
+     * @param window The window where the button will be rendered
+     * @param position The position of the button
+     * @param size The size of the button
+     * @param textString The text of the button
+     * @param changedTextString The text of the button when it is clicked
+     * @param textSize The size of the text
+     * @param textColor The color of the text
+     * @param color The color of the button
+     * @param hoverColor The color of the button when it is hovered
+     * @param clickColor The color of the button when it is clicked
+     */
     Button();
     Button(
             sf::RenderWindow* window,
@@ -52,15 +66,52 @@ public:
             sf::Color clickColor
             );
 
+    /**
+     * @brief Poll the event
+     * @details This function is used to poll the event
+     * @param mousePosView
+     * @return
+     */
     bool pollEvent(sf::Vector2f mousePosView);
+    /**
+     * @brief Update the button
+     * @details This function is used to update the button
+     */
     void update();
+    /**
+     * @brief Render the button
+     * @details This function is used to render the button
+     */
     void render();
 
+    /**
+     * @brief Set the color
+     * @details This function is used to set the color of the button
+     * @param _color The color of the button
+     */
     void setColor(sf::Color _color);
+
+    /**
+     * @brief Get the text string
+     * @return
+     */
     std::string getTextString() const;
+    /**
+     * @brief Get the position
+     * @return
+     */
     sf::Vector2f getPosition() const;
+    /**
+     * @brief Get the size
+     * @return
+     */
     sf::Vector2f getSize() const;
 
+    /**
+     * @brief Check if the button is clicked
+     * @details This function is used to check if the button is clicked
+     * @return True if the button is clicked, false otherwise
+     */
     bool checkClicked() const;
 };
 
